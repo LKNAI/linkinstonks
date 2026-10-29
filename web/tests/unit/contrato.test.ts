@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import {
   acaoSchema,
   acoesDocSchema,
+  acoesVolumeDocSchema,
   bdrSchema,
   bdrsDocSchema,
   eventosDocSchema,
@@ -15,6 +16,7 @@ describe("contrato com o ETL", () => {
   it("os arquivos publicados passam no zod", () => {
     expect(() => acoesDocSchema.parse(publico("acoes.json"))).not.toThrow();
     expect(() => bdrsDocSchema.parse(publico("bdrs.json"))).not.toThrow();
+    expect(() => acoesVolumeDocSchema.parse(publico("acoes_volume.json"))).not.toThrow();
     expect(() => metaSchema.parse(publico("meta.json"))).not.toThrow();
     expect(() => eventosDocSchema.parse(publico("eventos.json"))).not.toThrow();
   });
@@ -62,5 +64,27 @@ describe("contrato com o ETL", () => {
         expect(colors).toContain(`${JSON.stringify(i.nome_curto)}: ${JSON.stringify(i.cor_depositaria)}`);
       }
     }
+  });
+
+  it("zod e JSON Schema de acoes_volume declaram os mesmos campos", () => {
+    const js = schemaJson("acoes_volume");
+    expect(Object.keys(acoesVolumeDocSchema.shape).sort()).toEqual(Object.keys(js.properties).sort());
+    expect([...js.required].sort()).toEqual(Object.keys(js.properties).sort());
+    const item = js.properties.companhias.items.properties;
+    const zodItem = acoesVolumeDocSchema.shape.companhias.def.element.shape;
+    expect(Object.keys(zodItem).sort()).toEqual(Object.keys(item).sort());
+  });
+
+  it("o volume das companhias e o não atribuído reproduzem o total do mercado, mês a mês", () => {
+    const d = acoesVolumeDocSchema.parse(publico("acoes_volume.json"));
+    expect(d.meses).toHaveLength(24);
+    d.companhias.forEach((c) => {
+      expect(c.volume_mensal).toHaveLength(24);
+      expect(c.volume_24m).toBe(c.volume_mensal.reduce((a, b) => a + b, 0));
+    });
+    const mercado = d.meses.map(
+      (_, i) => d.companhias.reduce((a, c) => a + c.volume_mensal[i], 0) + d.nao_atribuido.volume_mensal[i],
+    );
+    expect(mercado.every((v) => v > 0)).toBe(true);
   });
 });

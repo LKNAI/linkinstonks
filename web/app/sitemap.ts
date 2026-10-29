@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     "/acoes/",
     "/acoes/tabela/",
+    "/acoes/volume/",
     "/bdrs/",
     "/instituicoes/",
     "/novidades/",

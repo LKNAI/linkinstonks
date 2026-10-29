@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { GraficoVolumeBdr } from "@/components/charts/GraficoVolumeBdr";
+import { GraficoVolume } from "@/components/charts/GraficoVolume";
 import { FonteVolume } from "@/components/paineis/FonteVolume";
 import { Cartao, Lista, Migalhas } from "@/components/paineis/Detalhe";
 import { corDepositaria } from "@/lib/colors";
@@ -110,7 +110,7 @@ export default async function Page({ params }: Props) {
             />
           </Cartao>
 
-          <GraficoVolumeBdr
+          <GraficoVolume
             ticker={b.ticker}
             fontes={fontes}
             pagina={paginaFonte}

@@ -5,12 +5,15 @@ import { rotuloMes } from "@/lib/format";
 
 export function FonteVolume({
   ticker,
+  como,
   meses,
   mesParcial,
   fontes,
   pagina,
 }: {
   ticker: string;
+  /** Texto de como conferir; por padrão, o de um ticker. */
+  como?: string;
   meses: string[];
   mesParcial: string | null;
   fontes: FontesVolume;
@@ -24,8 +27,8 @@ export function FonteVolume({
       descricao="Cada barra e cada célula de volume mensal leva ao arquivo oficial da B3 de onde o número foi obtido"
     >
       <p style={{ margin: "0 0 10px", fontSize: 13, lineHeight: 1.55, color: "var(--ink-2)" }}>
-        Fonte: B3, <b>Séries Históricas de cotações (COTAHIST)</b>, dados públicos. {comoConferir(ticker)} Os
-        arquivos também estão listados na{" "}
+        Fonte: B3, <b>Séries Históricas de cotações (COTAHIST)</b>, dados públicos.{" "}
+        {como ?? comoConferir(ticker)} Os arquivos também estão listados na{" "}
         <a href={pagina} target="_blank" rel="noopener noreferrer" className="fonte-link">
           página oficial da B3
         </a>

@@ -150,6 +150,12 @@ export default function Page() {
               : BDRs, depositária, fonte e volume mensal em R$ mil.
             </li>
             <li>
+              <a href="/data/downloads/acoes_volume.csv" download>
+                acoes_volume.csv
+              </a>
+              : volume mensal das ações por companhia, em R$ mil.
+            </li>
+            <li>
               <a href="/data/acoes.json" download>
                 acoes.json
               </a>

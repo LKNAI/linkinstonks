@@ -1,7 +1,13 @@
 // Aviso de dados desatualizados (seção 11.4): fonte diária parada há mais de 3 dias úteis, ou semanal há mais de 10 dias.
 import type { Meta } from "@/lib/schemas";
 
-export const FONTES_DIARIAS = ["b3_listed", "b3_cotahist", "b3_bdr_api", "cvm_fca"] as const;
+export const FONTES_DIARIAS = [
+  "b3_listed",
+  "b3_cotahist",
+  "b3_cotahist_acoes",
+  "b3_bdr_api",
+  "cvm_fca",
+] as const;
 export const FONTES_SEMANAIS = ["b3_finservices", "bradesco", "cvm_cad"] as const;
 export const LIMITE_DIARIA_DIAS_UTEIS = 3;
 export const LIMITE_SEMANAL_DIAS = 10;
@@ -9,6 +15,7 @@ export const LIMITE_SEMANAL_DIAS = 10;
 const ROTULO: Record<string, string> = {
   b3_listed: "B3 (empresas listadas)",
   b3_cotahist: "B3 (cotações)",
+  b3_cotahist_acoes: "B3 (cotações, ações)",
   b3_bdr_api: "B3 (BDRs)",
   cvm_fca: "CVM (formulário cadastral)",
   b3_finservices: "Banco B3 (depositárias)",

@@ -12,7 +12,8 @@ import { diasEntre, fontesDesatualizadas, hojeEmBrasilia } from "@/lib/stale";
 const NOME_FONTE: Record<string, string> = {
   b3_listed: "B3 · Empresas listadas",
   b3_bdr_api: "B3 · BDRs (API)",
-  b3_cotahist: "B3 · Cotações (COTAHIST)",
+  b3_cotahist: "B3 · Cotações de BDRs (COTAHIST)",
+  b3_cotahist_acoes: "B3 · Cotações de ações (COTAHIST)",
   b3_finservices: "Banco B3 · programas de BDR",
   bradesco: "Bradesco Custódia",
   cvm_fca: "CVM · Formulário Cadastral",

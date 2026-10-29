@@ -122,6 +122,44 @@ test.describe("página do BDR", () => {
     await expect(celula).toHaveAttribute("aria-label", /Abrir a fonte oficial na B3/);
   });
 
+  test("volume das ações: a barra do mercado abre o arquivo oficial e a companhia leva ao detalhe", async ({
+    page,
+  }) => {
+    await page.goto("/acoes/volume/");
+    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Volume negociado das ações");
+    const barras = page.locator("a.mc");
+    await expect(barras).toHaveCount(25); // 24 meses fechados + mês corrente parcial
+    await expect(barras.nth(23)).toHaveAttribute("href", /\/InstDados\/SerHist\/COTAHIST_M\d{6}\.ZIP$/);
+    await expect(barras.nth(23)).toHaveAttribute(
+      "aria-label",
+      /mercado de ações, .*Abrir a fonte oficial na B3/,
+    );
+    await expect(page.locator(".stats-table tbody tr")).toHaveCount(40);
+    await expect(page.locator(".stats-table tbody tr").first()).toContainText("PETR");
+    await expect(page.locator("section", { hasText: "Fonte do volume e como conferir" })).toContainText(
+      "VOLTOT",
+    );
+    const baixar = await page.request.get("/data/downloads/acoes_volume.csv");
+    expect(baixar.status()).toBe(200);
+    await page.locator(".stats-table tbody a").first().click();
+    await expect(page).toHaveURL(/\/acoes\/\d+\/$/);
+  });
+
+  test("detalhe de companhia mostra o volume mensal dos tickers com link para a fonte (Petrobras)", async ({
+    page,
+  }) => {
+    await page.goto("/acoes/9512/");
+    const grafico = page.locator("section", { hasText: "Volume negociado das ações" }).first();
+    await expect(grafico.locator("a.mc")).toHaveCount(25);
+    await expect(grafico.locator("a.mc").nth(23)).toHaveAttribute(
+      "aria-label",
+      /PETR3 PETR4, .*Abrir a fonte/,
+    );
+    await expect(page.locator("section", { hasText: "Fonte do volume e como conferir" })).toContainText(
+      "PETR4",
+    );
+  });
+
   test("BDR sem depositária explica a ausência", async ({ page }) => {
     const b = bdrs.find((x) => x.depositaria === "Não identificado")!;
     await page.goto(`/bdrs/${b.ticker}/`);
@@ -171,10 +209,10 @@ test.describe("novidades, feed e status", () => {
     expect(xml).toContain("</feed>");
   });
 
-  test("status lista as 7 fontes e os BDRs sem depositária", async ({ page }) => {
+  test("status lista as 8 fontes e os BDRs sem depositária", async ({ page }) => {
     await page.goto("/status/");
     await expect(page.getByRole("heading", { name: "Fontes" })).toBeVisible();
-    await expect(page.getByRole("table").first().locator("tbody tr")).toHaveCount(7);
+    await expect(page.getByRole("table").first().locator("tbody tr")).toHaveCount(8);
     await expect(page.getByRole("link", { name: "INBR34" })).toBeVisible();
   });
 });

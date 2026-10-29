@@ -1,6 +1,6 @@
 "use client";
 
-// Volume mensal de um BDR (24 meses fechados + mês corrente parcial). Componente de cliente: o tooltip e a
+// Volume mensal de um item (BDR, companhia ou o mercado todo): 24 meses fechados + mês corrente parcial. Componente de cliente: o tooltip e a
 // alternativa em tabela são interativos; os dados chegam serializados da página (gerada no build).
 import { ChartCard } from "@/components/charts/ChartCard";
 import { ColunasEmpilhadas } from "@/components/charts/ColunasEmpilhadas";
@@ -9,8 +9,9 @@ import { escalaEixo } from "@/lib/bdrs";
 import { linkDoMes, nomeDoArquivo, origemDoMes, type FontesVolume } from "@/lib/fonte-volume";
 import { abreviaMes, formatDinheiro, rotuloMes } from "@/lib/format";
 
-export function GraficoVolumeBdr({
+export function GraficoVolume({
   ticker,
+  titulo = "Volume financeiro mensal",
   fontes,
   pagina,
   meses,
@@ -20,6 +21,7 @@ export function GraficoVolumeBdr({
   cor,
 }: {
   ticker: string;
+  titulo?: string;
   fontes: FontesVolume;
   pagina: string;
   meses: string[];
@@ -39,7 +41,7 @@ export function GraficoVolumeBdr({
   return (
     <ChartCard
       coluna="c12"
-      titulo="Volume financeiro mensal"
+      titulo={titulo}
       descricao={`Mercado à vista e fracionário somados · clique numa barra para abrir o arquivo oficial da B3${mesParcial ? ` · ${rotuloMes(mesParcial)} é parcial` : ""}`}
       tag={`${formatDinheiro(volumes.reduce((a, b) => a + b, 0))} em 24 meses`}
       tabela={{

@@ -4,6 +4,7 @@ const ROTAS = [
   { rota: "/", pronto: ".kpi" },
   { rota: "/acoes/", pronto: ".kpi" },
   { rota: "/acoes/tabela/", pronto: ".dtable tbody tr" },
+  { rota: "/acoes/volume/", pronto: ".stats-table tbody tr" },
   { rota: "/bdrs/", pronto: ".kpi" },
   { rota: "/instituicoes/", pronto: ".stats-table tbody tr" },
   { rota: "/novidades/", pronto: ".state, .stats-table" },

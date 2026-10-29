@@ -36,3 +36,22 @@ export function comoConferir(ticker: string): string {
     "(fracionário), em todos os pregões do mês."
   );
 }
+
+/** Como reproduzir o volume de uma companhia (soma dos seus tickers de ações). */
+export function comoConferirCompanhia(tickers: readonly string[]): string {
+  const lista = tickers.length ? tickers.join(", ") : "os tickers da companhia";
+  return (
+    `Abra o arquivo, localize as linhas cujo código de negociação (CODNEG, colunas 13 a 24) é ${lista} ` +
+    "(ou o mesmo código com F, do fracionário) e some o campo VOLTOT (colunas 171 a 188, em centavos) dos mercados " +
+    "010 (vista) e 020 (fracionário), em todos os pregões do mês."
+  );
+}
+
+/** Como reproduzir o total do mercado de ações. */
+export function comoConferirMercado(): string {
+  return (
+    "Abra o arquivo e some o campo VOLTOT (colunas 171 a 188, em centavos) das linhas de ações (CODNEG, colunas 13 a 24, " +
+    "com cinco caracteres terminados em 3 a 8, ou terminados em 11 quando a espécie for unit) nos mercados 010 (vista) " +
+    "e 020 (fracionário), em todos os pregões do mês. Companhias e o volume não atribuído somam esse total."
+  );
+}

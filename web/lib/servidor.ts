@@ -6,6 +6,7 @@ import type { ZodMiniType } from "zod/mini";
 import type { FontesVolume } from "@/lib/fonte-volume";
 import {
   acoesDocSchema,
+  acoesVolumeDocSchema,
   bdrsDocSchema,
   historicoDocSchema,
   metaSchema,
@@ -41,6 +42,7 @@ export const todosBdrs = (): {
     paginaFonte: d.pagina_fonte,
   };
 };
+export const acoesVolume = () => lerPublico("acoes_volume.json", acoesVolumeDocSchema);
 export const historicoDe = (codigoCvm: string): Passagem[] =>
   lerPublico("acoes_historico_escrituradores.json", historicoDocSchema).companhias[codigoCvm] ?? [];
 export const metaPublica = () => lerPublico("meta.json", metaSchema);
