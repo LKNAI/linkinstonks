@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Tokens de cor em variáveis CSS (seção 11.3): permitem um modo escuro no futuro.
+   Valores do tema claro do seed (seed/etl/acoes/dash2_template.html). */
+:root {
+  color-scheme: light;
+  --bg: #f4f5fb;
+  --surface: #ffffff;
+  --surface-2: #f8f8fc;
+  --line: #e7e6ef;
+  --ink: #16152b;
+  --ink-2: #4b4a63;
+  --ink-3: #7c7b93;
+  --accent: #6250d6;
+  --accent-2: #4a3aa7;
+  --accent-soft: #efedfc;
+  --gain: #14a06b;
+  --loss: #e0413f;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: clip;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
