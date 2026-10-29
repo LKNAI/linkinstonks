@@ -1,0 +1,6394 @@
+{
+"companhias": {
+"1023": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1900-10-12",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"10456": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1995-06-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2013
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2014-04-17",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2014,
+"ultimo_ano": 2026
+}
+],
+"10880": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1992-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"11070": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-07-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2016
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-02-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2017,
+"ultimo_ano": 2026
+}
+],
+"1120": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1977-07-20",
+"inicio_aproximado": false,
+"instituicao": "Própria empresa",
+"primeiro_ano": 2010,
+"ultimo_ano": 2024
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-11-04",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"11258": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-05-10",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"11398": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1990-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"1155": [
+{
+"fim": "2014-07-11",
+"fonte": "CVM FCA",
+"inicio": "2014-07-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"11592": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-09-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"1171": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-11-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2013
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-12-30",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2014,
+"ultimo_ano": 2026
+}
+],
+"11762": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1985-09-09",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2023
+},
+{
+"fim": "2020-08-31",
+"fonte": "CVM FCA",
+"inicio": "2011-01-03",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2020
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-02-19",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"11932": [
+{
+"fim": "2011-05-31",
+"fonte": "CVM FCA",
+"inicio": "1999-08-27",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2011
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-06-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"11975": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1991-11-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"11991": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"12190": [
+{
+"fim": "1999-11-20",
+"fonte": "CVM FCA",
+"inicio": "2026-09-23",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": "2026-09-22",
+"fonte": "CVM FCA",
+"inicio": "2009-11-20",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"1228": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1988-12-02",
+"inicio_aproximado": false,
+"instituicao": "Banco do Nordeste",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"12572": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1990-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"12653": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1998-11-04",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"12696": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1986-05-06",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2017
+}
+],
+"12823": [
+{
+"fim": "2018-04-05",
+"fonte": "CVM FCA",
+"inicio": "1990-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2018
+},
+{
+"fim": "2019-01-04",
+"fonte": "CVM FCA",
+"inicio": "2019-01-04",
+"inicio_aproximado": false,
+"instituicao": "Bradesco CTVM",
+"primeiro_ano": 2019,
+"ultimo_ano": 2019
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-03-23",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"1309": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1989-12-15",
+"inicio_aproximado": false,
+"instituicao": "Própria empresa",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"1325": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1989-12-15",
+"inicio_aproximado": false,
+"instituicao": "Banco Mercantil do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"13285": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-01-01",
+"inicio_aproximado": true,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"13366": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1992-05-07",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-05-06",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"13439": [
+{
+"fim": "2018-05-30",
+"fonte": "CVM FCA",
+"inicio": "1988-11-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2018
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-09-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"13447": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"13471": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"13765": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1990-09-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"13773": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"13781": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-09-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2021
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-12-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"13854": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-04-15",
+"inicio_aproximado": false,
+"instituicao": "ID CTVM",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"13986": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1993-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"14109": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-05-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-01-04",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2022
+}
+],
+"14176": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1998-09-18",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2017
+},
+{
+"fim": "2024-08-27",
+"fonte": "CVM FCA",
+"inicio": "2018-08-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-09-02",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"14206": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1993-09-24",
+"inicio_aproximado": false,
+"instituicao": "BRB DTVM",
+"primeiro_ano": 2021,
+"ultimo_ano": 2021
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-05-13",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"14214": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2005-11-25",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"14303": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1999-09-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"14311": [
+{
+"fim": "2024-01-18",
+"fonte": "CVM FCA",
+"inicio": "2021-02-08",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2024
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-01-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"14320": [
+{
+"fim": "2013-08-01",
+"fonte": "CVM FCA",
+"inicio": "1991-09-17",
+"inicio_aproximado": false,
+"instituicao": "Bradesco CTVM",
+"primeiro_ano": 2010,
+"ultimo_ano": 2014
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-08-02",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2014,
+"ultimo_ano": 2026
+}
+],
+"14346": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1994-04-13",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"14362": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2001-08-21",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2019
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-02-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"14443": [
+{
+"fim": "2016-11-30",
+"fonte": "CVM FCA",
+"inicio": "1997-06-04",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2016
+},
+{
+"fim": "2025-08-31",
+"fonte": "CVM FCA",
+"inicio": "2016-12-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2016,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-09-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"14451": [
+{
+"fim": "2012-10-21",
+"fonte": "CVM FCA",
+"inicio": "2016-02-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2012-10-22",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2012,
+"ultimo_ano": 2015
+}
+],
+"14460": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-01-04",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-05-02",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"14524": [
+{
+"fim": "2020-02-20",
+"fonte": "CVM FCA",
+"inicio": "2001-08-21",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2020
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-02-21",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"14605": [
+{
+"fim": "2017-12-14",
+"fonte": "CVM FCA",
+"inicio": "1998-02-11",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2018
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-12-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+}
+],
+"14664": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2000-01-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"14826": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-10-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"14869": [
+{
+"fim": "2024-08-27",
+"fonte": "CVM FCA",
+"inicio": "2007-10-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-09-02",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"15091": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-04-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"1520": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1991-11-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"15253": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-09-30",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"15300": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2004-01-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"15369": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-08-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2012,
+"ultimo_ano": 2026
+}
+],
+"15423": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-01-15",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2025
+},
+{
+"fim": "2026-08-12",
+"fonte": "CVM FCA",
+"inicio": "2026-05-21",
+"inicio_aproximado": false,
+"instituicao": "Própria empresa",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"15458": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-12-20",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"15539": [
+{
+"fim": "2020-02-28",
+"fonte": "CVM FCA",
+"inicio": "2001-11-23",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2020
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"1562": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1970-05-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"15636": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1999-07-12",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"1570": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-06-09",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"16101": [
+{
+"fim": "2026-08-06",
+"fonte": "CVM FCA",
+"inicio": "2006-03-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2026-08-12",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"16284": [
+{
+"fim": "2015-01-14",
+"fonte": "CVM FCA",
+"inicio": "2003-07-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Opportunity",
+"primeiro_ano": 2010,
+"ultimo_ano": 2015
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-01-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2015,
+"ultimo_ano": 2026
+}
+],
+"16292": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1997-07-23",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2012
+},
+{
+"fim": "2025-01-31",
+"fonte": "CVM FCA",
+"inicio": "2013-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-02-03",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"16306": [
+{
+"fim": "2025-02-10",
+"fonte": "CVM FCA",
+"inicio": "2006-11-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-02-11",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"16438": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-09-25",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"16527": [
+{
+"fim": "2010-12-31",
+"fonte": "CVM FCA",
+"inicio": "2010-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-01-01",
+"inicio_aproximado": true,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"16586": [
+{
+"fim": "2015-01-14",
+"fonte": "CVM FCA",
+"inicio": "2003-07-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Opportunity",
+"primeiro_ano": 2010,
+"ultimo_ano": 2015
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-01-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2015,
+"ultimo_ano": 2026
+}
+],
+"16608": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"16616": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2003-11-25",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"16632": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1997-11-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+}
+],
+"16659": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-04-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"16748": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1997-11-24",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2020
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1997-11-24",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"16861": [
+{
+"fim": "2012-12-31",
+"fonte": "CVM FCA",
+"inicio": "2007-06-11",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"1694": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2005-05-12",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2016,
+"ultimo_ano": 2026
+}
+],
+"16993": [
+{
+"fim": "2025-10-24",
+"fonte": "CVM FCA",
+"inicio": "2010-01-08",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": "2026-09-30",
+"fonte": "CVM FCA",
+"inicio": "2025-10-27",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2026-10-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"17329": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2004-06-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"17450": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2004-01-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"17485": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1998-01-26",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"17671": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-03-22",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"17884": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2003-07-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Opportunity",
+"primeiro_ano": 2010,
+"ultimo_ano": 2014
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-01-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2015,
+"ultimo_ano": 2026
+}
+],
+"17892": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-10-24",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"17930": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2004-01-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"17949": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1996-12-16",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"17965": [
+{
+"fim": "2015-01-14",
+"fonte": "CVM FCA",
+"inicio": "2003-07-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Opportunity",
+"primeiro_ano": 2010,
+"ultimo_ano": 2015
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-01-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2015,
+"ultimo_ano": 2026
+}
+],
+"17973": [
+{
+"fim": "2014-08-31",
+"fonte": "CVM FCA",
+"inicio": "2023-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": "2023-01-31",
+"fonte": "CVM FCA",
+"inicio": "2014-09-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2014,
+"ultimo_ano": 2026
+}
+],
+"18139": [
+{
+"fim": "2020-02-26",
+"fonte": "CVM FCA",
+"inicio": "2008-05-24",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2020
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-02-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"18309": [
+{
+"fim": "2012-10-30",
+"fonte": "CVM FCA",
+"inicio": "1998-10-14",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2012-11-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"18333": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2003-07-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Opportunity",
+"primeiro_ano": 2010,
+"ultimo_ano": 2014
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-01-16",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2015,
+"ultimo_ano": 2026
+}
+],
+"18368": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1999-03-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"18376": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2005-04-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"18414": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2000-03-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2020
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2000-03-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"18465": [
+{
+"fim": "2019-09-13",
+"fonte": "CVM FCA",
+"inicio": "2025-08-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": "2025-07-31",
+"fonte": "CVM FCA",
+"inicio": "2019-09-16",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2019,
+"ultimo_ano": 2025
+}
+],
+"18597": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2000-01-24",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"18627": [
+{
+"fim": "2019-10-31",
+"fonte": "CVM FCA",
+"inicio": "2010-01-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2019
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2019-11-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2019,
+"ultimo_ano": 2026
+}
+],
+"18660": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2002-01-17",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-01-01",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"18708": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1997-07-21",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"18724": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2000-06-06",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"18775": [
+{
+"fim": "2000-07-11",
+"fonte": "CVM FCA",
+"inicio": "2000-07-12",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"18821": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2002-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"19100": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2005-06-01",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2011
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2012-07-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2012,
+"ultimo_ano": 2026
+}
+],
+"1918": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2019-11-25",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"19232": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-04-04",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"19275": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2000-12-03",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-01-01",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"19305": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2002-01-21",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"19330": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-07-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"19348": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1995-10-31",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"19445": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-11-01",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2012
+},
+{
+"fim": "2021-08-31",
+"fonte": "CVM FCA",
+"inicio": "2013-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-09-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"19453": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2003-11-03",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2011
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2012-01-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2012,
+"ultimo_ano": 2026
+}
+],
+"19550": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2004-03-18",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"19615": [
+{
+"fim": "2020-08-02",
+"fonte": "CVM FCA",
+"inicio": "2009-02-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2020
+},
+{
+"fim": "2025-06-30",
+"fonte": "CVM FCA",
+"inicio": "2020-08-03",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2025
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-07-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"19623": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2004-11-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"19640": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2002-12-16",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"19739": [
+{
+"fim": "2022-06-27",
+"fonte": "CVM FCA",
+"inicio": "2005-05-06",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-06-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"19771": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2005-05-12",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-05-12",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"19836": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-06-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"19879": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-01-13",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"19909": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-04-03",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"19992": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2002-04-08",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20010": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20028": [
+{
+"fim": "2019-01-31",
+"fonte": "CVM FCA",
+"inicio": "2006-04-20",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2019
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2019-02-01",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2019,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-12-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"20036": [
+{
+"fim": "2020-07-24",
+"fonte": "CVM FCA",
+"inicio": "2006-04-25",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2020
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-07-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"20044": [
+{
+"fim": "2024-02-16",
+"fonte": "CVM FCA",
+"inicio": "2006-03-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-02-19",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"20060": [
+{
+"fim": "2024-08-14",
+"fonte": "CVM FCA",
+"inicio": "2006-04-25",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-08-19",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"20087": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-05-23",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-09-02",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"20125": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-09-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20192": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2001-09-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2012,
+"ultimo_ano": 2021
+}
+],
+"20257": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-10-09",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-09-23",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"20338": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-08-23",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-05-02",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"20346": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-09-11",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20362": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-02-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20370": [
+{
+"fim": "2023-03-10",
+"fonte": "CVM FCA",
+"inicio": "2006-11-03",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2024
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-03-13",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"20397": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-12-21",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2012,
+"ultimo_ano": 2012
+}
+],
+"20435": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2020
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-07-16",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2021
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-09-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"20451": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-12-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20478": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-11-16",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20494": [
+{
+"fim": "2007-02-07",
+"fonte": "CVM FCA",
+"inicio": "2007-02-08",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20516": [
+{
+"fim": "2023-09-17",
+"fonte": "CVM FCA",
+"inicio": "2007-01-23",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-09-18",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"20524": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-03-04",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"20532": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-10-07",
+"inicio_aproximado": false,
+"instituicao": "Banco Santander",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"20540": [
+{
+"fim": "2012-12-31",
+"fonte": "CVM FCA",
+"inicio": "2006-12-18",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2013
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+}
+],
+"20567": [
+{
+"fim": "2010-11-26",
+"fonte": "CVM FCA",
+"inicio": "2007-02-15",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-11-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-12-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"20605": [
+{
+"fim": "2015-10-30",
+"fonte": "CVM FCA",
+"inicio": "2007-03-03",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2015
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-11-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2015,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-01-12",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"20613": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-02-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20621": [
+{
+"fim": "2010-12-31",
+"fonte": "CVM FCA",
+"inicio": "2010-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20630": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-04-25",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20648": [
+{
+"fim": "2013-09-30",
+"fonte": "CVM FCA",
+"inicio": "2008-04-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2017
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-10-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2017,
+"ultimo_ano": 2026
+}
+],
+"20702": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-07-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20710": [
+{
+"fim": "2019-10-31",
+"fonte": "CVM FCA",
+"inicio": "2007-05-11",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2019
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2019-11-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2019,
+"ultimo_ano": 2026
+}
+],
+"20729": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-03-05",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20745": [
+{
+"fim": "2025-06-16",
+"fonte": "CVM FCA",
+"inicio": "2007-05-23",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-06-17",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"20770": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-03-21",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-03-21",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"20788": [
+{
+"fim": "2009-03-01",
+"fonte": "CVM FCA",
+"inicio": "2007-06-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2012
+},
+{
+"fim": "2021-06-30",
+"fonte": "CVM FCA",
+"inicio": "2009-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2012,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-07-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"20800": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-05-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20877": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-10-16",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20915": [
+{
+"fim": "2022-11-30",
+"fonte": "CVM FCA",
+"inicio": "2007-07-19",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-12-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"20931": [
+{
+"fim": "2009-01-31",
+"fonte": "CVM FCA",
+"inicio": "2007-07-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2012
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2012,
+"ultimo_ano": 2026
+}
+],
+"20958": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-05-17",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"20982": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-07-26",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2012
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+}
+],
+"20990": [
+{
+"fim": "2007-03-31",
+"fonte": "CVM FCA",
+"inicio": "2022-07-18",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-04-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2014,
+"ultimo_ano": 2021
+}
+],
+"2100": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-08-13",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21008": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-06-04",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21016": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-07-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21032": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-10-13",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2017,
+"ultimo_ano": 2026
+}
+],
+"21040": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-01-04",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21067": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-05-08",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"21091": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-08-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21130": [
+{
+"fim": "2015-01-31",
+"fonte": "CVM FCA",
+"inicio": "2023-06-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2016-02-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2016,
+"ultimo_ano": 2021
+}
+],
+"21148": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2016-11-11",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2016,
+"ultimo_ano": 2019
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2016-11-11",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"21156": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-09-30",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2015,
+"ultimo_ano": 2018
+}
+],
+"21180": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2019-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"2120": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2012-04-26",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2012,
+"ultimo_ano": 2026
+}
+],
+"21237": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-11-05",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21334": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-02-11",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21342": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-11-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21350": [
+{
+"fim": "2021-08-31",
+"fonte": "CVM FCA",
+"inicio": "2022-06-17",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": "2022-06-16",
+"fonte": "CVM FCA",
+"inicio": "2021-09-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"21393": [
+{
+"fim": "2023-08-31",
+"fonte": "CVM FCA",
+"inicio": "2008-08-27",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-09-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"21431": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-01-29",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21440": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-04-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21490": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-10-05",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2012
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-02-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+}
+],
+"21610": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-05-08",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21636": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-06-06",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21733": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-08-29",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21849": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-12-03",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"21881": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-12-02",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21962": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-12-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"21970": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-03-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-03-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"21989": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-03-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-03-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"21997": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-03-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-03-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"22004": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-03-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"22012": [
+{
+"fim": "2025-12-16",
+"fonte": "CVM FCA",
+"inicio": "2010-02-22",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-12-17",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"22020": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-12-14",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"22055": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-12-11",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-10-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"22071": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-04-29",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2019
+}
+],
+"22144": [
+{
+"fim": "2010-03-09",
+"fonte": "CVM FCA",
+"inicio": "2010-03-09",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2020
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-03-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"22179": [
+{
+"fim": "2020-03-03",
+"fonte": "CVM FCA",
+"inicio": "2010-02-12",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2020
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-03-04",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"22187": [
+{
+"fim": "2022-03-01",
+"fonte": "CVM FCA",
+"inicio": "2010-06-08",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"22268": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-10-06",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"22349": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-12-08",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"22357": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-01-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"22411": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-03-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2012,
+"ultimo_ano": 2012
+}
+],
+"22470": [
+{
+"fim": "2024-07-31",
+"fonte": "CVM FCA",
+"inicio": "2005-06-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-08-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"22497": [
+{
+"fim": "2024-10-04",
+"fonte": "CVM FCA",
+"inicio": "2011-05-13",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2011,
+"ultimo_ano": 2024
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-10-07",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"22519": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-06-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"22560": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-05-23",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"22608": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-08-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"22616": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2012-02-27",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2012,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-04-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"22675": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-12-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2016,
+"ultimo_ano": 2026
+}
+],
+"22780": [
+{
+"fim": "2020-11-30",
+"fonte": "CVM FCA",
+"inicio": "2012-04-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2012,
+"ultimo_ano": 2020
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-12-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"2300": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-01-13",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2019,
+"ultimo_ano": 2026
+}
+],
+"23159": [
+{
+"fim": "2013-09-30",
+"fonte": "CVM FCA",
+"inicio": "2013-02-21",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2013,
+"ultimo_ano": 2013
+},
+{
+"fim": "2016-09-30",
+"fonte": "CVM FCA",
+"inicio": "2013-10-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2013,
+"ultimo_ano": 2016
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2016-10-03",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2016,
+"ultimo_ano": 2026
+}
+],
+"23167": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-02-04",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2013,
+"ultimo_ano": 2013
+}
+],
+"23175": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-02-09",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2011,
+"ultimo_ano": 2021
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-11-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"23221": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-08-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+}
+],
+"23248": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": null,
+"inicio_aproximado": true,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2019
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-06-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"23264": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-03-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+}
+],
+"23272": [
+{
+"fim": "2022-10-31",
+"fonte": "CVM FCA",
+"inicio": "2018-11-08",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-11-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"23280": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-07-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2018
+}
+],
+"23302": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-05-06",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+}
+],
+"23310": [
+{
+"fim": "2024-01-07",
+"fonte": "CVM FCA",
+"inicio": "2011-08-24",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2013,
+"ultimo_ano": 2024
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-01-08",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"23329": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-09-16",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+}
+],
+"23426": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-07-27",
+"inicio_aproximado": false,
+"instituicao": "Banco Santander",
+"primeiro_ano": 2015,
+"ultimo_ano": 2016
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-06-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2017,
+"ultimo_ano": 2020
+}
+],
+"23507": [
+{
+"fim": "2018-01-01",
+"fonte": "CVM FCA",
+"inicio": "2014-08-22",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2014,
+"ultimo_ano": 2018
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2018-01-02",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+}
+],
+"23515": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2012-06-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2014,
+"ultimo_ano": 2026
+}
+],
+"23574": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2014-12-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2015,
+"ultimo_ano": 2026
+}
+],
+"23590": [
+{
+"fim": "2021-12-31",
+"fonte": "CVM FCA",
+"inicio": "2014-10-13",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2015,
+"ultimo_ano": 2026
+},
+{
+"fim": "2025-02-09",
+"fonte": "CVM FCA",
+"inicio": "2022-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-02-10",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"23612": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-01-26",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2015,
+"ultimo_ano": 2026
+}
+],
+"23795": [
+{
+"fim": "2021-08-31",
+"fonte": "CVM FCA",
+"inicio": "2015-09-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2015,
+"ultimo_ano": 2026
+},
+{
+"fim": "2026-08-31",
+"fonte": "CVM FCA",
+"inicio": "2021-09-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2026-09-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"23817": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-05-04",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2016,
+"ultimo_ano": 2026
+}
+],
+"23825": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-12-02",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2016,
+"ultimo_ano": 2026
+}
+],
+"23981": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2016-01-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2016,
+"ultimo_ano": 2026
+}
+],
+"24058": [
+{
+"fim": "2026-07-30",
+"fonte": "CVM FCA",
+"inicio": "2016-08-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2016,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2026-07-31",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"24082": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-03-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2025
+}
+],
+"24112": [
+{
+"fim": "2023-01-22",
+"fonte": "CVM FCA",
+"inicio": "2017-02-04",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2017,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-01-23",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"24120": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-05-25",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2018,
+"ultimo_ano": 2024
+}
+],
+"24180": [
+{
+"fim": "2022-10-09",
+"fonte": "CVM FCA",
+"inicio": "1998-06-01",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2017,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-10-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"24228": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-01-31",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2017,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-05-27",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"24236": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-10-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2017,
+"ultimo_ano": 2026
+}
+],
+"24260": [
+{
+"fim": "2020-04-30",
+"fonte": "CVM FCA",
+"inicio": "2018-05-11",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2018,
+"ultimo_ano": 2020
+},
+{
+"fim": "2024-01-31",
+"fonte": "CVM FCA",
+"inicio": "2020-05-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-02-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"24279": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-06-23",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2017,
+"ultimo_ano": 2026
+}
+],
+"2429": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1995-05-04",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"24295": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-12-14",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2017,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-06-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"24317": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-04-06",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2017,
+"ultimo_ano": 2026
+}
+],
+"24341": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2018-03-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"2437": [
+{
+"fim": "2023-06-30",
+"fonte": "CVM FCA",
+"inicio": "2007-10-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-07-03",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"24392": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2018-02-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+}
+],
+"2453": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-11-21",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2012
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-01-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+}
+],
+"24546": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2018-07-11",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+}
+],
+"24600": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2018-11-23",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2018,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-03-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"2461": [
+{
+"fim": "2022-05-31",
+"fonte": "CVM FCA",
+"inicio": "2005-12-05",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-06-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"24627": [
+{
+"fim": "2018-05-22",
+"fonte": "CVM FCA",
+"inicio": "2021-04-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+}
+],
+"24660": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-10-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+}
+],
+"24694": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-11-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2019,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"24716": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2019-03-29",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2019,
+"ultimo_ano": 2026
+}
+],
+"24805": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2019-08-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2019,
+"ultimo_ano": 2026
+}
+],
+"24813": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-06-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"24821": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2019-12-18",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"24830": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-05-18",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2022,
+"ultimo_ano": 2024
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-12-11",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"24848": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2019-08-30",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2019,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-05-15",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"24872": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-11-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2018,
+"ultimo_ano": 2018
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-11-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2019,
+"ultimo_ano": 2026
+}
+],
+"24902": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2019-01-01",
+"inicio_aproximado": true,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2019,
+"ultimo_ano": 2026
+}
+],
+"24910": [
+{
+"fim": "2023-10-15",
+"fonte": "CVM FCA",
+"inicio": "2009-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2019,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-10-16",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"24929": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2019-01-01",
+"inicio_aproximado": true,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2019,
+"ultimo_ano": 2026
+}
+],
+"24937": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2001-11-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2019,
+"ultimo_ano": 2026
+}
+],
+"24953": [
+{
+"fim": "2023-02-14",
+"fonte": "CVM FCA",
+"inicio": "2020-02-05",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-02-15",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"24961": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-01-24",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25003": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-04-24",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25038": [
+{
+"fim": "2023-06-11",
+"fonte": "CVM FCA",
+"inicio": "2020-02-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-06-12",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"25046": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-01-30",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-11-20",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"25062": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-07-07",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25070": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-08-24",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25097": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2010-07-21",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2019,
+"ultimo_ano": 2026
+}
+],
+"25100": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-02-12",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-09-16",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"25119": [
+{
+"fim": "2023-09-29",
+"fonte": "CVM FCA",
+"inicio": "2020-07-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-10-02",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"25127": [
+{
+"fim": "2026-09-23",
+"fonte": "CVM FCA",
+"inicio": "2020-08-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2026-09-24",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"25143": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-08-31",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25160": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-09-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25186": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-01-01",
+"inicio_aproximado": true,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25194": [
+{
+"fim": "2020-11-19",
+"fonte": "CVM FCA",
+"inicio": "2020-09-11",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25208": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25224": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-08-17",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25232": [
+{
+"fim": "2024-12-31",
+"fonte": "CVM FCA",
+"inicio": "2020-08-18",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-01-02",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"2524": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-08-11",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2025
+}
+],
+"25259": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-09-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2020
+},
+{
+"fim": "2026-06-09",
+"fonte": "CVM FCA",
+"inicio": "2021-07-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2026-06-10",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"25275": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-08-10",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25283": [
+{
+"fim": "2025-07-11",
+"fonte": "CVM FCA",
+"inicio": "2020-09-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2025
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-07-14",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"25291": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-10-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25305": [
+{
+"fim": "2021-06-14",
+"fonte": "CVM FCA",
+"inicio": "2020-07-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25330": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-09-09",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25348": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-01-01",
+"inicio_aproximado": true,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25372": [
+{
+"fim": "2024-02-04",
+"fonte": "CVM FCA",
+"inicio": "2021-01-05",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-02-05",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"25402": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-08-14",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25429": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-08-17",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"25437": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-08-27",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2021
+}
+],
+"25445": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-12-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-01-23",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"25453": [
+{
+"fim": "2024-04-28",
+"fonte": "CVM FCA",
+"inicio": "2020-11-11",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-04-29",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"25461": [
+{
+"fim": "2022-11-16",
+"fonte": "CVM FCA",
+"inicio": "2020-12-04",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-11-17",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"25496": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": null,
+"inicio_aproximado": true,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-12-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"25500": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-01-08",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25518": [
+{
+"fim": "2023-05-05",
+"fonte": "CVM FCA",
+"inicio": "2020-12-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-05-08",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"25526": [
+{
+"fim": "2024-11-14",
+"fonte": "CVM FCA",
+"inicio": "2020-09-30",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-11-18",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"25534": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-01-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25542": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2017-12-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2025
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-06-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"25550": [
+{
+"fim": "2024-01-01",
+"fonte": "CVM FCA",
+"inicio": "2020-12-14",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-01-02",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"25585": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-01-01",
+"inicio_aproximado": true,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25607": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-05-26",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"25658": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-12-23",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25674": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-01-12",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"25682": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-01-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"25690": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-01-01",
+"inicio_aproximado": true,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"25704": [
+{
+"fim": "2025-05-02",
+"fonte": "CVM FCA",
+"inicio": "2020-10-16",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-05-05",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"25712": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-02-17",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"25747": [
+{
+"fim": "2023-06-30",
+"fonte": "CVM FCA",
+"inicio": "2021-02-24",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-07-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"25763": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-11-16",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2020,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-07-10",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"2577": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2016-12-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"25771": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-04-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"25780": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-12-08",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25798": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-02-25",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25801": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-02-12",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"25836": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-04-09",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"25852": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-08-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"25860": [
+{
+"fim": "2025-08-31",
+"fonte": "CVM FCA",
+"inicio": "2021-01-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-09-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"25879": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-02-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"25887": [
+{
+"fim": "2023-07-09",
+"fonte": "CVM FCA",
+"inicio": "2021-02-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-07-10",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"25895": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-07-14",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"25917": [
+{
+"fim": "2023-10-15",
+"fonte": "CVM FCA",
+"inicio": "2021-05-31",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-10-16",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"25950": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-02-19",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"25984": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-05-17",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-08-21",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"26000": [
+{
+"fim": "2024-07-26",
+"fonte": "CVM FCA",
+"inicio": "2021-05-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-07-29",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"26026": [
+{
+"fim": "2024-06-21",
+"fonte": "CVM FCA",
+"inicio": "2021-06-09",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2024
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-06-24",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"26034": [
+{
+"fim": "2023-12-17",
+"fonte": "CVM FCA",
+"inicio": "2021-05-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-12-18",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"26050": [
+{
+"fim": "2024-01-14",
+"fonte": "CVM FCA",
+"inicio": "2021-05-06",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-01-15",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"26069": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-10-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"26077": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-05-17",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"26123": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2018-02-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2023
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-11-18",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"26166": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-10-16",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2020,
+"ultimo_ano": 2026
+}
+],
+"26174": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-08-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"26182": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-02-18",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2024
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-04-25",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"26204": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-07-30",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"26271": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-09-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2022
+}
+],
+"26280": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-08-25",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"26379": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-08-06",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"26409": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-07-30",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"26441": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-11-03",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2025
+}
+],
+"26484": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"26522": [
+{
+"fim": "2021-12-06",
+"fonte": "CVM FCA",
+"inicio": "2021-09-30",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2024
+}
+],
+"26620": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-01-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"26700": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-12-03",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"26875": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-01-15",
+"inicio_aproximado": false,
+"instituicao": "Oslo Capital DTVM",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
+"26956": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-02-10",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"26980": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-04-20",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"27030": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-01-01",
+"inicio_aproximado": true,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2021,
+"ultimo_ano": 2021
+}
+],
+"27057": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-11-08",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"27103": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-10-27",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"27154": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2022-10-18",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2022,
+"ultimo_ano": 2022
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-07-27",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2025
+}
+],
+"27189": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-05-31",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"27219": [
+{
+"fim": "2024-05-17",
+"fonte": "CVM FCA",
+"inicio": "2023-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-05-20",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"27227": [
+{
+"fim": "2024-10-31",
+"fonte": "CVM FCA",
+"inicio": "2023-03-13",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-11-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"27324": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-03-31",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"27340": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-10-17",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"27570": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-10-31",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"27626": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-12-23",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"27634": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-10-24",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"27650": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-10-31",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"27677": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-07-25",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"27693": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-07-29",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"27707": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-09-24",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"27740": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2014-04-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2014,
+"ultimo_ano": 2023
+}
+],
+"27766": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-08-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"27820": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-09-15",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"27847": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-04-03",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"27910": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-05-16",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"3050": [
+{
+"fim": "2024-09-27",
+"fonte": "CVM FCA",
+"inicio": "2000-06-23",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-10-01",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2024,
+"ultimo_ano": 2026
+}
+],
+"3069": [
+{
+"fim": "2016-11-30",
+"fonte": "CVM FCA",
+"inicio": "2022-10-03",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": "2022-10-02",
+"fonte": "CVM FCA",
+"inicio": "2016-12-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2016,
+"ultimo_ano": 2026
+}
+],
+"3077": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-01-02",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"3190": [
+{
+"fim": "2015-03-30",
+"fonte": "CVM FCA",
+"inicio": "1982-05-10",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2016
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-03-31",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2016,
+"ultimo_ano": 2026
+}
+],
+"3204": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1997-10-15",
+"inicio_aproximado": false,
+"instituicao": "Bradesco CTVM",
+"primeiro_ano": 2010,
+"ultimo_ano": 2012
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2013-10-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+}
+],
+"3654": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-01-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"3824": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1998-02-16",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-01-01",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"3980": [
+{
+"fim": "2025-06-01",
+"fonte": "CVM FCA",
+"inicio": "1992-03-31",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-06-02",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"4030": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1993-07-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2017
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2018-08-15",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+}
+],
+"4146": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-12-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"4170": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1997-10-10",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"4537": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2024-08-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": "2024-07-31",
+"fonte": "CVM FCA",
+"inicio": "2021-02-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2026
+}
+],
+"4669": [
+{
+"fim": "2018-01-02",
+"fonte": "CVM FCA",
+"inicio": "1992-08-20",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2018-01-03",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"4723": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1992-01-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+}
+],
+"4820": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1991-11-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"5207": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-05-15",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"5258": [
+{
+"fim": "2009-05-13",
+"fonte": "CVM FCA",
+"inicio": "1994-09-30",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2018
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-05-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+}
+],
+"5312": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-12-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": "2025-11-30",
+"fonte": "CVM FCA",
+"inicio": "2012-01-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2012,
+"ultimo_ano": 2025
+}
+],
+"5380": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1990-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"5410": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1989-04-24",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"5762": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1986-11-28",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"5770": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1992-05-07",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2012
+},
+{
+"fim": "2023-10-15",
+"fonte": "CVM FCA",
+"inicio": "2013-08-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2013,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-10-16",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2023,
+"ultimo_ano": 2026
+}
+],
+"6041": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1998-09-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"6173": [
+{
+"fim": "2010-12-31",
+"fonte": "CVM FCA",
+"inicio": "2009-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"6211": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2023-05-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-01-04",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2021,
+"ultimo_ano": 2022
+}
+],
+"6505": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1996-03-22",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"6629": [
+{
+"fim": "2007-09-14",
+"fonte": "CVM FCA",
+"inicio": "2007-09-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2011
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-12-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+},
+{
+"fim": "2025-11-30",
+"fonte": "CVM FCA",
+"inicio": "2012-01-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2012,
+"ultimo_ano": 2025
+}
+],
+"6700": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1980-08-08",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2015,
+"ultimo_ano": 2026
+}
+],
+"701": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-04-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"7510": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1987-07-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"7544": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1991-07-25",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"7595": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-01-15",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"7617": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-11-30",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"7811": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2001-10-29",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"7870": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1990-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"8036": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2006-01-13",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"8133": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2008-10-28",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"8192": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-03-02",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"8397": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1993-04-19",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"8427": [
+{
+"fim": "2018-05-28",
+"fonte": "CVM FCA",
+"inicio": "1992-06-22",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2018
+}
+],
+"8451": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1990-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2021
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2020-10-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2022,
+"ultimo_ano": 2026
+}
+],
+"8575": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2002-08-22",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"8656": [
+{
+"fim": "2025-06-01",
+"fonte": "CVM FCA",
+"inicio": "1990-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2025-06-02",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"8672": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1990-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"8753": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2007-12-18",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"906": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1979-05-25",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"9067": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1990-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"9083": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2011-01-01",
+"inicio_aproximado": true,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"922": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1994-12-05",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"9342": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1977-07-20",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"9393": [
+{
+"fim": "2014-09-30",
+"fonte": "CVM FCA",
+"inicio": "1992-02-14",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2014
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2014-10-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2014,
+"ultimo_ano": 2026
+}
+],
+"94": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-02-01",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"9415": [
+{
+"fim": "2009-08-28",
+"fonte": "CVM FCA",
+"inicio": "2008-08-29",
+"inicio_aproximado": false,
+"instituicao": "Itaú Unibanco",
+"primeiro_ano": 2010,
+"ultimo_ano": 2010
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2015-01-13",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2011,
+"ultimo_ano": 2026
+}
+],
+"9512": [
+{
+"fim": "2018-08-29",
+"fonte": "CVM FCA",
+"inicio": "2004-09-03",
+"inicio_aproximado": false,
+"instituicao": "Banco do Brasil",
+"primeiro_ano": 2010,
+"ultimo_ano": 2018
+},
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2018-08-30",
+"inicio_aproximado": false,
+"instituicao": "Banco Bradesco",
+"primeiro_ano": 2018,
+"ultimo_ano": 2026
+}
+],
+"9539": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2009-03-31",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+],
+"9954": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "1985-07-01",
+"inicio_aproximado": false,
+"instituicao": "Banco Santander",
+"primeiro_ano": 2010,
+"ultimo_ano": 2026
+}
+]
+},
+"schema_version": 1
+}

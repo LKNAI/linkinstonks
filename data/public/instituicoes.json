@@ -1,0 +1,269 @@
+{
+  "instituicoes": [
+    {
+      "cnpjs": [],
+      "cor": "#0B7FA6",
+      "cor_depositaria": null,
+      "id": "banco-b3",
+      "nome": "Banco B3 S.A.",
+      "nome_curto": "Banco B3",
+      "papeis": [
+        "depositaria"
+      ]
+    },
+    {
+      "cnpjs": [
+        "60.746.948/0001-12"
+      ],
+      "cor": "#CC092F",
+      "cor_depositaria": null,
+      "id": "banco-bradesco",
+      "nome": "Banco Bradesco S.A.",
+      "nome_curto": "Banco Bradesco",
+      "papeis": [
+        "escriturador",
+        "depositaria"
+      ]
+    },
+    {
+      "cnpjs": [
+        "00.000.000/0001-91"
+      ],
+      "cor": "#F2C200",
+      "cor_depositaria": null,
+      "id": "banco-do-brasil",
+      "nome": "Banco do Brasil S.A.",
+      "nome_curto": "Banco do Brasil",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "07.237.373/0001-20"
+      ],
+      "cor": "#8E1B3A",
+      "cor_depositaria": null,
+      "id": "banco-do-nordeste",
+      "nome": "Banco do Nordeste do Brasil S.A.",
+      "nome_curto": "Banco do Nordeste",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "17.184.037/0001-10"
+      ],
+      "cor": "#2F80ED",
+      "cor_depositaria": null,
+      "id": "banco-mercantil-do-brasil",
+      "nome": "Banco Mercantil do Brasil S.A.",
+      "nome_curto": "Banco Mercantil do Brasil",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "33.857.830/0001-99"
+      ],
+      "cor": "#334155",
+      "cor_depositaria": null,
+      "id": "banco-opportunity",
+      "nome": "Banco Opportunity S.A.",
+      "nome_curto": "Banco Opportunity",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [],
+      "cor": "#B8962E",
+      "cor_depositaria": null,
+      "id": "banco-safra",
+      "nome": "Safra Serviços de Administração Fiduciária",
+      "nome_curto": "Banco Safra",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "90.400.888/0001-42"
+      ],
+      "cor": "#FF3B30",
+      "cor_depositaria": null,
+      "id": "banco-santander",
+      "nome": "Banco Santander (Brasil) S.A.",
+      "nome_curto": "Banco Santander",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [],
+      "cor": "#00579C",
+      "cor_depositaria": null,
+      "id": "banrisul",
+      "nome": "Banrisul",
+      "nome_curto": "Banrisul",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "61.855.045/0001-32"
+      ],
+      "cor": "#E8607A",
+      "cor_depositaria": null,
+      "id": "bradesco-ctvm",
+      "nome": "Bradesco S.A. Corretora de Títulos e Valores Mobiliários",
+      "nome_curto": "Bradesco CTVM",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "33.850.686/0001-69"
+      ],
+      "cor": "#0EA5E9",
+      "cor_depositaria": null,
+      "id": "brb-dtvm",
+      "nome": "BRB DTVM S.A.",
+      "nome_curto": "BRB DTVM",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "59.281.253/0001-23",
+        "30.306.294/0001-45"
+      ],
+      "cor": "#0B3D91",
+      "cor_depositaria": null,
+      "id": "btg-pactual",
+      "nome": "BTG Pactual Serviços Financeiros S.A. DTVM",
+      "nome_curto": "BTG Pactual",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "16.695.922/0001-09"
+      ],
+      "cor": "#14B8A6",
+      "cor_depositaria": null,
+      "id": "id-ctvm",
+      "nome": "ID Corretora de Títulos e Valores Mobiliários S.A.",
+      "nome_curto": "ID CTVM",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "61.194.353/0001-64"
+      ],
+      "cor": "#EC7000",
+      "cor_depositaria": null,
+      "id": "itau-corretora",
+      "nome": "Itaú Corretora de Valores S.A.",
+      "nome_curto": "Itaú Corretora",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "60.701.190/0001-04"
+      ],
+      "cor": "#F7A04B",
+      "cor_depositaria": "#EC7000",
+      "id": "itau-unibanco",
+      "nome": "Itaú Unibanco S.A.",
+      "nome_curto": "Itaú Unibanco",
+      "papeis": [
+        "escriturador",
+        "depositaria"
+      ]
+    },
+    {
+      "cnpjs": [],
+      "cor": "#B9B8C7",
+      "cor_depositaria": null,
+      "id": "nao-identificado",
+      "nome": "Não identificado",
+      "nome_curto": "Não identificado",
+      "papeis": [
+        "depositaria"
+      ]
+    },
+    {
+      "cnpjs": [],
+      "cor": "#D3D2DE",
+      "cor_depositaria": null,
+      "id": "nao-informado",
+      "nome": "Não informado",
+      "nome_curto": "Não informado",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "36.113.876/0001-91"
+      ],
+      "cor": "#00A86B",
+      "cor_depositaria": null,
+      "id": "oliveira-trust",
+      "nome": "Oliveira Trust Distribuidora de Títulos e Valores Mobiliários S.A.",
+      "nome_curto": "Oliveira Trust",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "13.673.855/0001-25"
+      ],
+      "cor": "#94A3B8",
+      "cor_depositaria": null,
+      "id": "oslo-capital-dtvm",
+      "nome": "Oslo Capital Distribuidora de Títulos e Valores Mobiliários S.A.",
+      "nome_curto": "Oslo Capital DTVM",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [],
+      "cor": "#5B6B82",
+      "cor_depositaria": null,
+      "id": "propria-empresa",
+      "nome": "Própria empresa",
+      "nome_curto": "Própria empresa",
+      "papeis": [
+        "escriturador"
+      ]
+    },
+    {
+      "cnpjs": [
+        "22.610.500/0001-88"
+      ],
+      "cor": "#7B2FF7",
+      "cor_depositaria": null,
+      "id": "vortx-dtvm",
+      "nome": "Vórtx Distribuidora de Títulos e Valores Mobiliários Ltda.",
+      "nome_curto": "Vórtx DTVM",
+      "papeis": [
+        "escriturador"
+      ]
+    }
+  ],
+  "schema_version": 1
+}

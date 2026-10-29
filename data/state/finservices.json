@@ -1,0 +1,5358 @@
+{
+  "programas": {
+    "DRN": [
+      [
+        "A1AP34",
+        "Advance Auto Parts Inc",
+        false
+      ],
+      [
+        "A1CR34",
+        "Amcor PLC",
+        false
+      ],
+      [
+        "A1DC34",
+        "Agree Realty Corp",
+        false
+      ],
+      [
+        "A1DI34",
+        "Analog Devices Inc",
+        false
+      ],
+      [
+        "A1DM34",
+        "Archer-Daniels-Midland Co",
+        false
+      ],
+      [
+        "A1EE34",
+        "Ameren Corp",
+        false
+      ],
+      [
+        "A1EG34",
+        "Aegon Ltd.",
+        false
+      ],
+      [
+        "A1EN34",
+        "Alliant Energy Corp",
+        false
+      ],
+      [
+        "A1EP34",
+        "American Electric Power Co Inc",
+        false
+      ],
+      [
+        "A1ES34",
+        "AES Corp",
+        false
+      ],
+      [
+        "A1FL34",
+        "Aflac Inc",
+        false
+      ],
+      [
+        "A1GI34",
+        "Agilent Technologies Inc",
+        false
+      ],
+      [
+        "A1GN34",
+        "Allegion PLC",
+        false
+      ],
+      [
+        "A1GT34",
+        "AGNT, INC",
+        false
+      ],
+      [
+        "A1HR34",
+        "American Healthcare REIT Inc",
+        false
+      ],
+      [
+        "A1IV34",
+        "Apartment Investment & Management Co",
+        false
+      ],
+      [
+        "A1JG34",
+        "Arthur J Gallagher & Co",
+        false
+      ],
+      [
+        "A1KA34",
+        "Akamai Technologies Inc",
+        false
+      ],
+      [
+        "A1LB34",
+        "Albemarle Corp",
+        false
+      ],
+      [
+        "A1LG34",
+        "Align Technology Inc",
+        false
+      ],
+      [
+        "A1LK34",
+        "Alaska Air Group Inc",
+        false
+      ],
+      [
+        "A1LL34",
+        "Bread Financial Holdings, Inc.",
+        false
+      ],
+      [
+        "A1LN34",
+        "Alnylam Pharmaceuticals Inc",
+        false
+      ],
+      [
+        "A1MD34",
+        "Advanced Micro Devices Inc",
+        false
+      ],
+      [
+        "A1ME34",
+        "AMETEK Inc",
+        false
+      ],
+      [
+        "A1MP34",
+        "Ameriprise Financial Inc",
+        false
+      ],
+      [
+        "A1MT34",
+        "Applied Materials Inc",
+        false
+      ],
+      [
+        "A1NE34",
+        "Arista Networks Inc",
+        false
+      ],
+      [
+        "A1ON34",
+        "Aon PLC",
+        false
+      ],
+      [
+        "A1OS34",
+        "AO Smith Corp",
+        false
+      ],
+      [
+        "A1PA34",
+        "APA CORP",
+        false
+      ],
+      [
+        "A1PD34",
+        "Air Products & Chemicals Inc",
+        false
+      ],
+      [
+        "A1PH34",
+        "Amphenol Corp",
+        false
+      ],
+      [
+        "A1PL34",
+        "Applied Digital Corp",
+        false
+      ],
+      [
+        "A1PO34",
+        "Apollo Global Management Inc",
+        false
+      ],
+      [
+        "A1PP34",
+        "AppLovin Corp",
+        false
+      ],
+      [
+        "A1RC34",
+        "Arcos Dorados Holdings Inc",
+        false
+      ],
+      [
+        "A1RE34",
+        "Alexandria Real Estate Equities Inc",
+        false
+      ],
+      [
+        "A1RG34",
+        "Argenx SE",
+        false
+      ],
+      [
+        "A1SN34",
+        "Ascendis Pharma A/S",
+        false
+      ],
+      [
+        "A1SU34",
+        "Assurant Inc",
+        false
+      ],
+      [
+        "A1TH34",
+        "Autohome Inc",
+        false
+      ],
+      [
+        "A1TM34",
+        "Atmos Energy Corp",
+        false
+      ],
+      [
+        "A1TT34",
+        "Allstate Corp",
+        false
+      ],
+      [
+        "A1UT34",
+        "Autodesk Inc",
+        false
+      ],
+      [
+        "A1VY34",
+        "Avery Dennison Corp",
+        false
+      ],
+      [
+        "A1WK34",
+        "American Water Works Co Inc",
+        false
+      ],
+      [
+        "A1ZN34",
+        "AstraZeneca PLC",
+        false
+      ],
+      [
+        "A2FY34",
+        "Afya Ltd",
+        false
+      ],
+      [
+        "A2LC34",
+        "Alcon Inc",
+        false
+      ],
+      [
+        "A2MB34",
+        "Ambarella Inc",
+        false
+      ],
+      [
+        "A2RE34",
+        "Ares Management Corp",
+        false
+      ],
+      [
+        "A2RR34",
+        "Arrowhead Pharmaceuticals Inc",
+        false
+      ],
+      [
+        "A2RW34",
+        "Arrow Electronics Inc",
+        false
+      ],
+      [
+        "A2SO34",
+        "Academy Sports & Outdoors Inc",
+        false
+      ],
+      [
+        "A2XO34",
+        "Axon Enterprise Inc",
+        false
+      ],
+      [
+        "A2ZT34",
+        "Azenta Inc",
+        false
+      ],
+      [
+        "AALL34",
+        "American Airlines Group Inc.",
+        false
+      ],
+      [
+        "AAPL34",
+        "Apple Inc.",
+        false
+      ],
+      [
+        "ABBV34",
+        "Abbvie Inc.",
+        false
+      ],
+      [
+        "ABTT34",
+        "Abbott Laboratories",
+        false
+      ],
+      [
+        "ABUD34",
+        "Anheuser-Busch InBev SA/NV",
+        false
+      ],
+      [
+        "ADBE34",
+        "Adobe Inc",
+        false
+      ],
+      [
+        "ADPR34",
+        "Automatic Data Processing Inc",
+        false
+      ],
+      [
+        "AIRB34",
+        "Airbnb Inc",
+        false
+      ],
+      [
+        "AMGN34",
+        "Amgen Inc.",
+        false
+      ],
+      [
+        "AMLG34",
+        "Aston Martin Lagonda Global Holdings PLC",
+        false
+      ],
+      [
+        "APTV34",
+        "Aptiv Plc",
+        false
+      ],
+      [
+        "ARMT34",
+        "Arcelormittal",
+        false
+      ],
+      [
+        "ARNC34",
+        "Howmet Aerospace Inc.",
+        false
+      ],
+      [
+        "ASML34",
+        "ASML Holding NV",
+        false
+      ],
+      [
+        "AVGO34",
+        "Broadcom Inc",
+        false
+      ],
+      [
+        "AWII34",
+        "Armstrong World Industries Inc",
+        false
+      ],
+      [
+        "AZOI34",
+        "Autozone Inc",
+        false
+      ],
+      [
+        "B1AM34",
+        "Brookfield Corporation",
+        false
+      ],
+      [
+        "B1AX34",
+        "Baxter International Inc",
+        false
+      ],
+      [
+        "B1BT34",
+        "Truist Financial Corporation",
+        false
+      ],
+      [
+        "B1BW34",
+        "Bath & Body Works, Inc.",
+        false
+      ],
+      [
+        "B1CS34",
+        "Barclays PLC",
+        false
+      ],
+      [
+        "B1DX34",
+        "Becton Dickinson and Co",
+        false
+      ],
+      [
+        "B1FC34",
+        "Brown Forman Corp",
+        false
+      ],
+      [
+        "B1IL34",
+        "Bilibili Inc",
+        false
+      ],
+      [
+        "B1KR34",
+        "Baker Hughes Co",
+        false
+      ],
+      [
+        "B1LL34",
+        "Ball Corp",
+        false
+      ],
+      [
+        "B1ME34",
+        "BeOne Medicines Ltd",
+        false
+      ],
+      [
+        "B1MR34",
+        "BioMarin Pharmaceutical Inc",
+        false
+      ],
+      [
+        "B1NT34",
+        "BioNTech SE",
+        false
+      ],
+      [
+        "B1PP34",
+        "BP PLC",
+        false
+      ],
+      [
+        "B1RF34",
+        "Broadridge Financial Solutions Inc",
+        false
+      ],
+      [
+        "B1SA34",
+        "Banco Santander Chile",
+        false
+      ],
+      [
+        "B1SX34",
+        "Boston Scientific Corp",
+        false
+      ],
+      [
+        "B1TI34",
+        "British American Tobacco PLC",
+        false
+      ],
+      [
+        "B1WA34",
+        "BorgWarner Inc",
+        false
+      ],
+      [
+        "B1ZE34",
+        "Braze Inc",
+        false
+      ],
+      [
+        "B2AH34",
+        "Booz Allen Hamilton Holding Corp",
+        false
+      ],
+      [
+        "B2AP34",
+        "Credicorp Ltd",
+        false
+      ],
+      [
+        "B2HI34",
+        "BILL Holdings, Inc.",
+        false
+      ],
+      [
+        "B2LN34",
+        "Blackline Inc",
+        false
+      ],
+      [
+        "B2MB34",
+        "Bumble Inc",
+        false
+      ],
+      [
+        "B2RK34",
+        "Bruker Corp",
+        false
+      ],
+      [
+        "B2UR34",
+        "Burlington Stores Inc",
+        false
+      ],
+      [
+        "B2YN34",
+        "Beyond Meat Inc",
+        false
+      ],
+      [
+        "BABA34",
+        "Alibaba Group Holding Ltd",
+        false
+      ],
+      [
+        "BBYY34",
+        "Best Buy Co., Inc.",
+        false
+      ],
+      [
+        "BCSA34",
+        "Banco Santander SA",
+        false
+      ],
+      [
+        "BHVN34",
+        "Biohaven Ltd",
+        false
+      ],
+      [
+        "BIDU34",
+        "Baidu Inc",
+        false
+      ],
+      [
+        "BIIB34",
+        "Biogen Inc.",
+        false
+      ],
+      [
+        "BILB34",
+        "Banco Bilbao Vizcaya Argentaria SA",
+        false
+      ],
+      [
+        "BKNG34",
+        "Booking Holdings Inc",
+        false
+      ],
+      [
+        "BLAK34",
+        "Blackrock, Inc.",
+        false
+      ],
+      [
+        "BOAC34",
+        "Bank Of America Corporation",
+        false
+      ],
+      [
+        "BOXP34",
+        "BXP, Inc",
+        false
+      ],
+      [
+        "C1AB34",
+        "Cable One Inc",
+        false
+      ],
+      [
+        "C1AG34",
+        "Conagra Brands Inc",
+        false
+      ],
+      [
+        "C1AH34",
+        "Cardinal Health Inc",
+        false
+      ],
+      [
+        "C1BL34",
+        "Chubb Ltd",
+        false
+      ],
+      [
+        "C1BO34",
+        "Cboe Global Markets Inc",
+        false
+      ],
+      [
+        "C1BR34",
+        "CBRE Group Inc",
+        false
+      ],
+      [
+        "C1CI34",
+        "Crown Castle Inc.",
+        false
+      ],
+      [
+        "C1CJ34",
+        "Cameco Corp",
+        false
+      ],
+      [
+        "C1CL34",
+        "Carnival Corporation Ltd",
+        false
+      ],
+      [
+        "C1CO34",
+        "Cencora Inc",
+        false
+      ],
+      [
+        "C1DN34",
+        "Cadence Design Systems Inc",
+        false
+      ],
+      [
+        "C1DP34",
+        "COPT Defense Properties",
+        false
+      ],
+      [
+        "C1DW34",
+        "CDW Corporation",
+        false
+      ],
+      [
+        "C1FG34",
+        "Citizens Financial Group Inc",
+        false
+      ],
+      [
+        "C1FI34",
+        "CF Industries Holdings Inc",
+        false
+      ],
+      [
+        "C1GP34",
+        "CoStar Group Inc",
+        false
+      ],
+      [
+        "C1HK34",
+        "Check Point Software Technologies Ltd",
+        false
+      ],
+      [
+        "C1HR34",
+        "CH Robinson Worldwide Inc",
+        false
+      ],
+      [
+        "C1HT34",
+        "Chunghwa Telecom Co Ltd",
+        false
+      ],
+      [
+        "C1IC34",
+        "The Cigna Group",
+        false
+      ],
+      [
+        "C1MG34",
+        "Chipotle Mexican Grill Inc",
+        false
+      ],
+      [
+        "C1MI34",
+        "Cummins Inc",
+        false
+      ],
+      [
+        "C1MS34",
+        "CMS Energy Corp",
+        false
+      ],
+      [
+        "C1NC34",
+        "Centene Corp",
+        false
+      ],
+      [
+        "C1NP34",
+        "CenterPoint Energy Inc",
+        false
+      ],
+      [
+        "C1NS34",
+        "Celanese Corp",
+        false
+      ],
+      [
+        "C1OO34",
+        "Cooper Companies Inc",
+        false
+      ],
+      [
+        "C1PB34",
+        "The Campbell’s Company",
+        false
+      ],
+      [
+        "C1PR34",
+        "Copart Inc",
+        false
+      ],
+      [
+        "C1RB34",
+        "Cerebras Systems Inc",
+        false
+      ],
+      [
+        "C1RH34",
+        "CRH PLC",
+        false
+      ],
+      [
+        "C1RR34",
+        "Carrier Global Corporation",
+        false
+      ],
+      [
+        "C1TA34",
+        "Cintas Corp",
+        false
+      ],
+      [
+        "C1TV34",
+        "Corteva Inc",
+        false
+      ],
+      [
+        "C2AC34",
+        "CACI International Inc",
+        false
+      ],
+      [
+        "C2CA34",
+        "Coca-Cola Femsa SAB de CV",
+        false
+      ],
+      [
+        "C2EM34",
+        "Cemex SAB de CV",
+        false
+      ],
+      [
+        "C2GN34",
+        "Cognex Corp",
+        false
+      ],
+      [
+        "C2HD34",
+        "Churchill Downs Inc",
+        false
+      ],
+      [
+        "C2HP34",
+        "ChargePoint Holdings Inc",
+        false
+      ],
+      [
+        "C2OI34",
+        "Coinbase Global Inc",
+        false
+      ],
+      [
+        "C2OL34",
+        "Grupo Cibest S.A",
+        false
+      ],
+      [
+        "C2OU34",
+        "Coursera Inc",
+        false
+      ],
+      [
+        "C2PR34",
+        "Cousins Properties Inc",
+        false
+      ],
+      [
+        "C2PT34",
+        "Camden Property Trust",
+        false
+      ],
+      [
+        "C2RN34",
+        "Cerence Inc",
+        false
+      ],
+      [
+        "C2RS34",
+        "CRISPR Therapeutics AG",
+        false
+      ],
+      [
+        "C2RW34",
+        "Crowdstrike Holdings Inc",
+        false
+      ],
+      [
+        "C2SW34",
+        "Columbia Sportswear Co",
+        false
+      ],
+      [
+        "C2ZR34",
+        "Caesars Entertainment Inc",
+        false
+      ],
+      [
+        "CAON34",
+        "Capital One Financial Corp",
+        false
+      ],
+      [
+        "CAPH34",
+        "Capri Holdings Ltd",
+        false
+      ],
+      [
+        "CEGG34",
+        "Constellation Energy Corp",
+        false
+      ],
+      [
+        "CHCM34",
+        "Charter Communications Inc",
+        false
+      ],
+      [
+        "CHDC34",
+        "Church & Dwight Co Inc",
+        false
+      ],
+      [
+        "CHME34",
+        "CME Group Inc.",
+        false
+      ],
+      [
+        "CINF34",
+        "Cincinnati Financial Corp",
+        false
+      ],
+      [
+        "CLXC34",
+        "Clorox Company",
+        false
+      ],
+      [
+        "CMCS34",
+        "Comcast Corporation",
+        false
+      ],
+      [
+        "CNIC34",
+        "Canadian National Railway Co",
+        false
+      ],
+      [
+        "COLD34",
+        "Americold Realty Trust Inc",
+        false
+      ],
+      [
+        "COPH34",
+        "Conocophillips",
+        false
+      ],
+      [
+        "COTY34",
+        "Coty, Inc.",
+        false
+      ],
+      [
+        "COWC34",
+        "Costco Wholesale Corporation",
+        false
+      ],
+      [
+        "CPAY34",
+        "Corpay Inc.",
+        false
+      ],
+      [
+        "CPRL34",
+        "Canadian Pacific Kansas City Limited",
+        false
+      ],
+      [
+        "CRDA34",
+        "Credit Acceptance Corp",
+        false
+      ],
+      [
+        "CRIN34",
+        "Carters Inc",
+        false
+      ],
+      [
+        "CRIP34",
+        "Trip.com Group Limited",
+        false
+      ],
+      [
+        "CSCO34",
+        "Cisco Systems, Inc.",
+        false
+      ],
+      [
+        "CSXC34",
+        "CSX Corp",
+        false
+      ],
+      [
+        "CTGP34",
+        "Citigroup Inc.",
+        false
+      ],
+      [
+        "CTSH34",
+        "Cognizant Technology Solutions",
+        false
+      ],
+      [
+        "CVSH34",
+        "Cvs Health Corporation",
+        false
+      ],
+      [
+        "D1DG34",
+        "Datadog Inc",
+        false
+      ],
+      [
+        "D1EL34",
+        "Dell Technologies Inc",
+        false
+      ],
+      [
+        "D1EX34",
+        "DexCom Inc",
+        false
+      ],
+      [
+        "D1HI34",
+        "DR Horton Inc",
+        false
+      ],
+      [
+        "D1LR34",
+        "Digital Realty Trust Inc",
+        false
+      ],
+      [
+        "D1OC34",
+        "DocuSign Inc",
+        false
+      ],
+      [
+        "D1OM34",
+        "Dominion Energy Inc",
+        false
+      ],
+      [
+        "D1OV34",
+        "Dover Corp",
+        false
+      ],
+      [
+        "D1OW34",
+        "Dow Inc",
+        false
+      ],
+      [
+        "D1RI34",
+        "Darden Restaurants Inc",
+        false
+      ],
+      [
+        "D1TE34",
+        "DTE Energy Co",
+        false
+      ],
+      [
+        "D1VN34",
+        "Devon Energy Corp",
+        false
+      ],
+      [
+        "D1XC34",
+        "DXC Technology Co",
+        false
+      ],
+      [
+        "D2AR34",
+        "Darling Ingredients Inc",
+        false
+      ],
+      [
+        "D2AS34",
+        "DoorDash Inc",
+        false
+      ],
+      [
+        "D2KN34",
+        "DraftKings Inc",
+        false
+      ],
+      [
+        "D2KS34",
+        "Dicks Sporting Goods Inc",
+        false
+      ],
+      [
+        "D2NL34",
+        "Denali Therapeutics Inc",
+        false
+      ],
+      [
+        "D2OC34",
+        "Doximity Inc",
+        false
+      ],
+      [
+        "D2OX34",
+        "Amdocs Ltd",
+        false
+      ],
+      [
+        "D2PZ34",
+        "Domino s Pizza Inc",
+        false
+      ],
+      [
+        "D2TC34",
+        "Dynatrace Inc",
+        false
+      ],
+      [
+        "DBAG34",
+        "Deutsche Bank Aktiengesellschaft",
+        false
+      ],
+      [
+        "DEAI34",
+        "Delta Air Lines, Inc.",
+        false
+      ],
+      [
+        "DEEC34",
+        "Deere & Co",
+        false
+      ],
+      [
+        "DEOP34",
+        "Diageo PLC",
+        false
+      ],
+      [
+        "DGCO34",
+        "Dollar General Corp",
+        false
+      ],
+      [
+        "DHER34",
+        "Danaher Corporation",
+        false
+      ],
+      [
+        "DLTR34",
+        "Dollar Tree Inc",
+        false
+      ],
+      [
+        "DUOL34",
+        "Duolingo Inc",
+        false
+      ],
+      [
+        "DVAI34",
+        "Davita Inc",
+        false
+      ],
+      [
+        "E1CL34",
+        "Ecolab Inc",
+        false
+      ],
+      [
+        "E1CO34",
+        "Ecopetrol SA",
+        false
+      ],
+      [
+        "E1DI34",
+        "Consolidated Edison Inc",
+        false
+      ],
+      [
+        "E1DU34",
+        "New Oriental Education & Technology Group Inc",
+        false
+      ],
+      [
+        "E1IX34",
+        "Edison International",
+        false
+      ],
+      [
+        "E1LV34",
+        "Elevance Health, Inc.",
+        false
+      ],
+      [
+        "E1MN34",
+        "Eastman Chemical Co",
+        false
+      ],
+      [
+        "E1MR34",
+        "Emerson Electric Co",
+        false
+      ],
+      [
+        "E1OG34",
+        "EOG Resources Inc",
+        false
+      ],
+      [
+        "E1QN34",
+        "Equinor ASA",
+        false
+      ],
+      [
+        "E1RI34",
+        "Ericsson LM Telephone Co",
+        false
+      ],
+      [
+        "E1SE34",
+        "Eversource Energy",
+        false
+      ],
+      [
+        "E1SS34",
+        "Essex Property Trust Inc",
+        false
+      ],
+      [
+        "E1TN34",
+        "Eaton Corp PLC",
+        false
+      ],
+      [
+        "E1TR34",
+        "Entergy Corp",
+        false
+      ],
+      [
+        "E1VE34",
+        "Everest Group Ltd",
+        false
+      ],
+      [
+        "E1VR34",
+        "Evergy Inc",
+        false
+      ],
+      [
+        "E1WL34",
+        "Edwards Lifesciences Corp",
+        false
+      ],
+      [
+        "E1XC34",
+        "Exelon Corp",
+        false
+      ],
+      [
+        "E1XP34",
+        "Expeditors International of Washington Inc",
+        false
+      ],
+      [
+        "E1XR34",
+        "Extra Space Storage Inc",
+        false
+      ],
+      [
+        "E2AG34",
+        "Eagle Materials Inc",
+        false
+      ],
+      [
+        "E2EF34",
+        "Euronet Worldwide Inc",
+        false
+      ],
+      [
+        "E2LS34",
+        "Equity LifeStyle Properties Inc",
+        false
+      ],
+      [
+        "E2NO34",
+        "Enovis Corporation",
+        false
+      ],
+      [
+        "E2NP34",
+        "Enphase Energy Inc",
+        false
+      ],
+      [
+        "E2NT34",
+        "Entegris Inc",
+        false
+      ],
+      [
+        "E2PA34",
+        "EPAM Systems Inc",
+        false
+      ],
+      [
+        "E2ST34",
+        "Elastic NV",
+        false
+      ],
+      [
+        "E2TS34",
+        "Etsy Inc",
+        false
+      ],
+      [
+        "E2XA34",
+        "Exact Sciences Corp",
+        false
+      ],
+      [
+        "E2XE34",
+        "Exelixis Inc",
+        false
+      ],
+      [
+        "EBAY34",
+        "Ebay Inc.",
+        false
+      ],
+      [
+        "ELCI34",
+        "Estee Lauder Companies Inc",
+        false
+      ],
+      [
+        "EQIX34",
+        "Equinix Inc",
+        false
+      ],
+      [
+        "EXGR34",
+        "Expedia Group Inc",
+        false
+      ],
+      [
+        "EXXO34",
+        "ExxonMobil Holdings Corporation",
+        false
+      ],
+      [
+        "F1AN34",
+        "Diamondback Energy Inc",
+        false
+      ],
+      [
+        "F1BH34",
+        "Fortune Brands Innovations, Inc.",
+        false
+      ],
+      [
+        "F1EC34",
+        "FirstEnergy Corp",
+        false
+      ],
+      [
+        "F1FI34",
+        "F5, Inc.",
+        false
+      ],
+      [
+        "F1IS34",
+        "Fiserv Inc",
+        false
+      ],
+      [
+        "F1LS34",
+        "Flowserve Corp",
+        false
+      ],
+      [
+        "F1MC34",
+        "FMC Corp",
+        false
+      ],
+      [
+        "F1NI34",
+        "Fidelity National Information Services Inc",
+        false
+      ],
+      [
+        "F1RA34",
+        "Franklin Templeton Inc",
+        false
+      ],
+      [
+        "F1SL34",
+        "Fastly Inc",
+        false
+      ],
+      [
+        "F1TN34",
+        "Fortinet Inc",
+        false
+      ],
+      [
+        "F1TV34",
+        "Fortive Corp",
+        false
+      ],
+      [
+        "F1UN34",
+        "Six Flags Entertainment Corp",
+        false
+      ],
+      [
+        "F2IC34",
+        "Fair Isaac Corp",
+        false
+      ],
+      [
+        "F2IV34",
+        "Five9 Inc",
+        false
+      ],
+      [
+        "F2NV34",
+        "Franco-Nevada Corp",
+        false
+      ],
+      [
+        "F2RS34",
+        "Freshworks Inc",
+        false
+      ],
+      [
+        "F2RT34",
+        "First Industrial Realty Trust Inc",
+        false
+      ],
+      [
+        "F2VR34",
+        "Fiverr International Ltd",
+        false
+      ],
+      [
+        "FASL34",
+        "Fastenal Co",
+        false
+      ],
+      [
+        "FCXO34",
+        "Freeport-McMoran Inc.",
+        false
+      ],
+      [
+        "FDMO34",
+        "Ford Motors Company",
+        false
+      ],
+      [
+        "FFTD34",
+        "Fifth Third Bancorp",
+        false
+      ],
+      [
+        "FMSC34",
+        "Fresenius Medical Care AG",
+        false
+      ],
+      [
+        "FOXC34",
+        "Fox Corporation",
+        false
+      ],
+      [
+        "FSLR34",
+        "First Solar, Inc",
+        false
+      ],
+      [
+        "G1AM34",
+        "Gaming and Leisure Properties Inc",
+        false
+      ],
+      [
+        "G1AR34",
+        "Gartner Inc",
+        false
+      ],
+      [
+        "G1DS34",
+        "GDS Holdings Ltd",
+        false
+      ],
+      [
+        "G1FI34",
+        "Gold Fields Ltd",
+        false
+      ],
+      [
+        "G1LL34",
+        "Globe Life Inc",
+        false
+      ],
+      [
+        "G1LO34",
+        "Globant SA",
+        false
+      ],
+      [
+        "G1LW34",
+        "Corning Inc",
+        false
+      ],
+      [
+        "G1MI34",
+        "General Mills Inc",
+        false
+      ],
+      [
+        "G1PC34",
+        "Genuine Parts Co",
+        false
+      ],
+      [
+        "G1PI34",
+        "Global Payments Inc",
+        false
+      ],
+      [
+        "G1RM34",
+        "Garmin Ltd",
+        false
+      ],
+      [
+        "G1SK34",
+        "GSK PLC.",
+        false
+      ],
+      [
+        "G1WW34",
+        "WW Grainger Inc",
+        false
+      ],
+      [
+        "G2DD34",
+        "GoDaddy Inc",
+        false
+      ],
+      [
+        "G2EV34",
+        "GE Vernova Inc",
+        false
+      ],
+      [
+        "G2ME34",
+        "Globus Medical Inc",
+        false
+      ],
+      [
+        "G2NT34",
+        "Gentex Corp",
+        false
+      ],
+      [
+        "G2WR34",
+        "Guidewire Software Inc",
+        false
+      ],
+      [
+        "GEHC34",
+        "GE HealthCare Technologies Inc",
+        false
+      ],
+      [
+        "GEOO34",
+        "GE Aerospace",
+        false
+      ],
+      [
+        "GGAL34",
+        "Grupo Financiero Galicia SA",
+        false
+      ],
+      [
+        "GILD34",
+        "Gilead Sciences, Inc.",
+        false
+      ],
+      [
+        "GMCO34",
+        "General Motors Company",
+        false
+      ],
+      [
+        "GOGL34",
+        "Alphabet Inc.",
+        false
+      ],
+      [
+        "GOGL35",
+        "Alphabet Inc. (Class C)",
+        false
+      ],
+      [
+        "GPRK34",
+        "Geopark Ltd",
+        false
+      ],
+      [
+        "GPRO34",
+        "Gopro, Inc.",
+        false
+      ],
+      [
+        "GPSI34",
+        "The Gap, Inc.",
+        false
+      ],
+      [
+        "GSGI34",
+        "Goldman Sachs Group Inc.",
+        false
+      ],
+      [
+        "H1AS34",
+        "Hasbro Inc",
+        false
+      ],
+      [
+        "H1BA34",
+        "Huntington Bancshares Inc",
+        false
+      ],
+      [
+        "H1CA34",
+        "HCA Healthcare Inc",
+        false
+      ],
+      [
+        "H1DB34",
+        "HDFC Bank Ltd",
+        false
+      ],
+      [
+        "H1EI34",
+        "HEICO Corporation",
+        false
+      ],
+      [
+        "H1FC34",
+        "HF Sinclair Corporation",
+        false
+      ],
+      [
+        "H1HH34",
+        "Howard Hughes Holdings Inc",
+        false
+      ],
+      [
+        "H1IG34",
+        "The Hartford Insurance Group, Inc.",
+        false
+      ],
+      [
+        "H1II34",
+        "Huntington Ingalls Industries Inc",
+        false
+      ],
+      [
+        "H1LT34",
+        "Hilton Worldwide Holdings Inc",
+        false
+      ],
+      [
+        "H1OG34",
+        "Harley-Davidson Inc",
+        false
+      ],
+      [
+        "H1PE34",
+        "Hewlett Packard Enterprise Co",
+        false
+      ],
+      [
+        "H1RB34",
+        "H&R Block Inc",
+        false
+      ],
+      [
+        "H1RL34",
+        "Hormel Foods Corp",
+        false
+      ],
+      [
+        "H1SB34",
+        "HSBC Holdings PLC",
+        false
+      ],
+      [
+        "H1SI34",
+        "Henry Schein Inc",
+        false
+      ],
+      [
+        "H1ST34",
+        "Host Hotels & Resorts Inc",
+        false
+      ],
+      [
+        "H1TH34",
+        "H World Group Limited",
+        false
+      ],
+      [
+        "H1UM34",
+        "Humana Inc",
+        false
+      ],
+      [
+        "H2AI34",
+        "The Hain Celestial Group Inc",
+        false
+      ],
+      [
+        "H2TA34",
+        "Healthcare Realty Trust Incorporated",
+        false
+      ],
+      [
+        "H2UB34",
+        "HubSpot Inc",
+        false
+      ],
+      [
+        "HALI34",
+        "Halliburton Company",
+        false
+      ],
+      [
+        "HIWP34",
+        "Highwoods Properties Inc",
+        false
+      ],
+      [
+        "HOME34",
+        "The Home Depot, Inc.",
+        false
+      ],
+      [
+        "HOND34",
+        "Honda Motor Co Ltd",
+        false
+      ],
+      [
+        "HSHY34",
+        "The Hershey Company",
+        false
+      ],
+      [
+        "I1BN34",
+        "ICICI Bank Ltd",
+        false
+      ],
+      [
+        "I1CE34",
+        "Intercontinental Exchange Inc",
+        false
+      ],
+      [
+        "I1DX34",
+        "IDEXX Laboratories Inc",
+        false
+      ],
+      [
+        "I1EX34",
+        "IDEX Corporation",
+        false
+      ],
+      [
+        "I1FF34",
+        "International Flavors & Fragrances Inc",
+        false
+      ],
+      [
+        "I1FO34",
+        "Infosys Ltd",
+        false
+      ],
+      [
+        "I1HG34",
+        "InterContinental Hotels Group PLC",
+        false
+      ],
+      [
+        "I1LM34",
+        "Illumina Inc",
+        false
+      ],
+      [
+        "I1NC34",
+        "Incyte Corp",
+        false
+      ],
+      [
+        "I1PC34",
+        "International Paper Co",
+        false
+      ],
+      [
+        "I1PG34",
+        "IPG Photonics Corp",
+        false
+      ],
+      [
+        "I1QV34",
+        "IQVIA Holdings Inc",
+        false
+      ],
+      [
+        "I1QY34",
+        "iQIYI Inc",
+        false
+      ],
+      [
+        "I1RM34",
+        "Iron Mountain Inc",
+        false
+      ],
+      [
+        "I1RP34",
+        "Trane Technologies Plc",
+        false
+      ],
+      [
+        "I1SR34",
+        "Intuitive Surgical Inc",
+        false
+      ],
+      [
+        "I1TW34",
+        "Illinois Tool Works Inc",
+        false
+      ],
+      [
+        "I1VZ34",
+        "Invesco Ltd",
+        false
+      ],
+      [
+        "I1XC34",
+        "ORIX Corp",
+        false
+      ],
+      [
+        "I2ND34",
+        "indie Semiconductor Inc",
+        false
+      ],
+      [
+        "I2NG34",
+        "Ingredion Incorporated",
+        false
+      ],
+      [
+        "I2NV34",
+        "Invitation Homes Inc",
+        false
+      ],
+      [
+        "I2RS34",
+        "Ingersoll Rand Inc",
+        false
+      ],
+      [
+        "IBKR34",
+        "Interactive Brokers Group Inc",
+        false
+      ],
+      [
+        "ICLR34",
+        "ICON PLC",
+        false
+      ],
+      [
+        "INGG34",
+        "ING Groep NV",
+        false
+      ],
+      [
+        "INTU34",
+        "Intuit Inc",
+        false
+      ],
+      [
+        "ITLC34",
+        "Intel Corporation",
+        false
+      ],
+      [
+        "J1BH34",
+        "JB Hunt Transport Services Inc",
+        false
+      ],
+      [
+        "J1CI34",
+        "Johnson Controls International plc",
+        false
+      ],
+      [
+        "J1EF34",
+        "Jefferies Financial Group Inc",
+        false
+      ],
+      [
+        "J1EG34",
+        "Jacobs Solutions Inc.",
+        false
+      ],
+      [
+        "J1KH34",
+        "Jack Henry & Associates Inc",
+        false
+      ],
+      [
+        "J2AZ34",
+        "Jazz Pharmaceuticals PLC",
+        false
+      ],
+      [
+        "J2BL34",
+        "Jabil Inc",
+        false
+      ],
+      [
+        "J2WA34",
+        "John Wiley & Sons Inc",
+        false
+      ],
+      [
+        "JDCO34",
+        "JD.com Inc",
+        false
+      ],
+      [
+        "JPMC34",
+        "Jpmorgan Chase & Co.",
+        false
+      ],
+      [
+        "K1BF34",
+        "KB Financial Group Inc",
+        false
+      ],
+      [
+        "K1EY34",
+        "KeyCorp",
+        false
+      ],
+      [
+        "K1IM34",
+        "Kimco Realty Corporation",
+        false
+      ],
+      [
+        "K1LA34",
+        "KLA Corp",
+        false
+      ],
+      [
+        "K1MX34",
+        "CarMax Inc",
+        false
+      ],
+      [
+        "K1RC34",
+        "Kroger Co",
+        false
+      ],
+      [
+        "K1RG34",
+        "Kite Realty Group Trust",
+        false
+      ],
+      [
+        "K1SG34",
+        "Keysight Technologies Inc",
+        false
+      ],
+      [
+        "K1SS34",
+        "Kohls Corp",
+        false
+      ],
+      [
+        "K1TC34",
+        "KT Corp",
+        false
+      ],
+      [
+        "K1YS34",
+        "Krystal Biotech Inc",
+        false
+      ],
+      [
+        "K2CG34",
+        "Kingsoft Cloud Holdings Ltd",
+        false
+      ],
+      [
+        "K2RC34",
+        "Kilroy Realty Corp",
+        false
+      ],
+      [
+        "KMIC34",
+        "Kinder Morgan Inc",
+        false
+      ],
+      [
+        "KMPR34",
+        "Kemper Corp",
+        false
+      ],
+      [
+        "L1AM34",
+        "Lamar Advertising Co",
+        false
+      ],
+      [
+        "L1CA34",
+        "Labcorp Holdings Inc.",
+        false
+      ],
+      [
+        "L1DO34",
+        "Leidos Holdings Inc",
+        false
+      ],
+      [
+        "L1EN34",
+        "Lennar Corp",
+        false
+      ],
+      [
+        "L1HX34",
+        "L3Harris Technologies Inc",
+        false
+      ],
+      [
+        "L1KQ34",
+        "LKQ Corp",
+        false
+      ],
+      [
+        "L1MN34",
+        "Lumen Technologies, Inc",
+        false
+      ],
+      [
+        "L1NC34",
+        "Lincoln National Corp",
+        false
+      ],
+      [
+        "L1NE34",
+        "Lineage Inc",
+        false
+      ],
+      [
+        "L1OE34",
+        "Loews Corp",
+        false
+      ],
+      [
+        "L1RC34",
+        "Lam Research Corp",
+        false
+      ],
+      [
+        "L1TM34",
+        "LATAM Airlines Group S.A.",
+        false
+      ],
+      [
+        "L1UL34",
+        "Lululemon Athletica Inc",
+        false
+      ],
+      [
+        "L1VS34",
+        "Las Vegas Sands Corporation",
+        false
+      ],
+      [
+        "L1WH34",
+        "Lamb Weston Holdings Inc",
+        false
+      ],
+      [
+        "L1YB34",
+        "LyondellBasell Industries NV",
+        false
+      ],
+      [
+        "L1YG34",
+        "Lloyds Banking Group PLC",
+        false
+      ],
+      [
+        "L1YV34",
+        "Live Nation Entertainment Inc",
+        false
+      ],
+      [
+        "L2IV34",
+        "LivaNova PLC",
+        false
+      ],
+      [
+        "L2PL34",
+        "LPL Financial Holdings Inc",
+        false
+      ],
+      [
+        "L2RN34",
+        "Stride Inc",
+        false
+      ],
+      [
+        "L2SC34",
+        "Lattice Semiconductor Corp",
+        false
+      ],
+      [
+        "LILY34",
+        "Eli Lilly And Company",
+        false
+      ],
+      [
+        "LKFT34",
+        "Lakefront  Biotherapeutics NV",
+        false
+      ],
+      [
+        "LOWC34",
+        "Lowes Companies Inc",
+        false
+      ],
+      [
+        "M1AA34",
+        "Mid-America Apartment Communities Inc",
+        false
+      ],
+      [
+        "M1AS34",
+        "Masco Corp",
+        false
+      ],
+      [
+        "M1BT34",
+        "Mobile TeleSystems Public Joint Stock Co.",
+        false
+      ],
+      [
+        "M1CB34",
+        "Molson Coors Brewing Co",
+        false
+      ],
+      [
+        "M1CH34",
+        "Microchip Technology Inc",
+        false
+      ],
+      [
+        "M1CK34",
+        "McKesson Corp",
+        false
+      ],
+      [
+        "M1DB34",
+        "MongoDB Inc",
+        false
+      ],
+      [
+        "M1GM34",
+        "MGM Resorts International",
+        false
+      ],
+      [
+        "M1HK34",
+        "Mohawk Industries Inc",
+        false
+      ],
+      [
+        "M1KC34",
+        "McCormick & Co Inc",
+        false
+      ],
+      [
+        "M1KT34",
+        "MarketAxess Holdings Inc",
+        false
+      ],
+      [
+        "M1LC34",
+        "Melco Resorts & Entertainment Ltd",
+        false
+      ],
+      [
+        "M1LM34",
+        "Martin Marietta Materials Inc",
+        false
+      ],
+      [
+        "M1MC34",
+        "Marsh & McLennan Cos Inc",
+        false
+      ],
+      [
+        "M1NS34",
+        "Monster Beverage Corp",
+        false
+      ],
+      [
+        "M1PC34",
+        "Marathon Petroleum Corp",
+        false
+      ],
+      [
+        "M1RN34",
+        "Moderna Inc",
+        false
+      ],
+      [
+        "M1SC34",
+        "MSCI Inc",
+        false
+      ],
+      [
+        "M1SI34",
+        "Motorola Solutions Inc",
+        false
+      ],
+      [
+        "M1TA34",
+        "Meta Platforms, Inc.",
+        false
+      ],
+      [
+        "M1TB34",
+        "M&T Bank Corp",
+        false
+      ],
+      [
+        "M1TC34",
+        "Match Group Inc",
+        false
+      ],
+      [
+        "M1TD34",
+        "Mettler-Toledo International Inc",
+        false
+      ],
+      [
+        "M1TT34",
+        "Marriott International Inc",
+        false
+      ],
+      [
+        "M1UF34",
+        "Mitsubishi UFJ Financial Group Inc",
+        false
+      ],
+      [
+        "M2KS34",
+        "MKS Inc.",
+        false
+      ],
+      [
+        "M2PM34",
+        "MP Materials Corp",
+        false
+      ],
+      [
+        "M2PR34",
+        "Monolithic Power Systems Inc",
+        false
+      ],
+      [
+        "M2PT34",
+        "Medical Properties Trust Inc",
+        false
+      ],
+      [
+        "M2RV34",
+        "Marvell Technology Inc",
+        false
+      ],
+      [
+        "M2ST34",
+        "Strategy Inc",
+        false
+      ],
+      [
+        "MACY34",
+        "MacyS Inc.",
+        false
+      ],
+      [
+        "MCDC34",
+        "Mcdonalds Corp",
+        false
+      ],
+      [
+        "MCOR34",
+        "Moodys Corp",
+        false
+      ],
+      [
+        "MDLZ34",
+        "Mondelez International, Inc",
+        false
+      ],
+      [
+        "MDTC34",
+        "Medtronic Public Limited Company",
+        false
+      ],
+      [
+        "MELI34",
+        "Mercadolibre Inc",
+        false
+      ],
+      [
+        "MKLC34",
+        "Markel Group Inc",
+        false
+      ],
+      [
+        "MMMC34",
+        "3M Company",
+        false
+      ],
+      [
+        "MNDY34",
+        "Monday.com Ltd",
+        false
+      ],
+      [
+        "MOOO34",
+        "Altria Group, Inc.",
+        false
+      ],
+      [
+        "MOSC34",
+        "The Mosaic Company",
+        false
+      ],
+      [
+        "MRCK34",
+        "Merck & Co., Inc.",
+        false
+      ],
+      [
+        "MSFT34",
+        "Microsoft Corporation",
+        false
+      ],
+      [
+        "MUTC34",
+        "Micron Technology Inc",
+        false
+      ],
+      [
+        "N1BI34",
+        "Neurocrine Biosciences Inc",
+        false
+      ],
+      [
+        "N1CL34",
+        "Norwegian Cruise Line Holdings Ltd",
+        false
+      ],
+      [
+        "N1DA34",
+        "Nasdaq Inc",
+        false
+      ],
+      [
+        "N1EM34",
+        "Newmont Corp",
+        false
+      ],
+      [
+        "N1GG34",
+        "National Grid PLC",
+        false
+      ],
+      [
+        "N1IC34",
+        "Nice Ltd",
+        false
+      ],
+      [
+        "N1IS34",
+        "NiSource Inc",
+        false
+      ],
+      [
+        "N1MR34",
+        "Newmark Group Inc",
+        false
+      ],
+      [
+        "N1OV34",
+        "NOV Inc",
+        false
+      ],
+      [
+        "N1OW34",
+        "ServiceNow Inc",
+        false
+      ],
+      [
+        "N1RG34",
+        "NRG Energy Inc",
+        false
+      ],
+      [
+        "N1SC34",
+        "Norfolk Southern Corp",
+        false
+      ],
+      [
+        "N1TA34",
+        "NetApp Inc",
+        false
+      ],
+      [
+        "N1TR34",
+        "Northern Trust Corp",
+        false
+      ],
+      [
+        "N1UE34",
+        "Nucor Corp",
+        false
+      ],
+      [
+        "N1VO34",
+        "Novo Nordisk A/S",
+        false
+      ],
+      [
+        "N1VR34",
+        "NVR Inc",
+        false
+      ],
+      [
+        "N1VS34",
+        "Novartis AG",
+        false
+      ],
+      [
+        "N1WG34",
+        "Natwest Group PLC",
+        false
+      ],
+      [
+        "N1WL34",
+        "Newell Brands Inc",
+        false
+      ],
+      [
+        "N1WS34",
+        "News Corp",
+        false
+      ],
+      [
+        "N1WS35",
+        "News Corp",
+        false
+      ],
+      [
+        "N1XP34",
+        "NXP Semiconductors NV",
+        false
+      ],
+      [
+        "N2ET34",
+        "Cloudflare Inc",
+        false
+      ],
+      [
+        "N2LY34",
+        "Annaly Capital Management Inc",
+        false
+      ],
+      [
+        "N2TN34",
+        "Nutanix Inc",
+        false
+      ],
+      [
+        "N2VC34",
+        "Novocure Ltd",
+        false
+      ],
+      [
+        "NETE34",
+        "NetEase Inc",
+        false
+      ],
+      [
+        "NEXT34",
+        "Nextera Energy Inc",
+        false
+      ],
+      [
+        "NFLX34",
+        "Netflix, Inc.",
+        false
+      ],
+      [
+        "NMRH34",
+        "Nomura Holdings Inc",
+        false
+      ],
+      [
+        "NOCG34",
+        "Northrop Grumman Corp",
+        false
+      ],
+      [
+        "NOKI34",
+        "Nokia Corporation",
+        false
+      ],
+      [
+        "NTST34",
+        "NETSTREIT Corp",
+        false
+      ],
+      [
+        "NVDC34",
+        "Nvidia Corp",
+        false
+      ],
+      [
+        "O1DF34",
+        "Old Dominion Freight Line Inc",
+        false
+      ],
+      [
+        "O1KE34",
+        "ONEOK Inc",
+        false
+      ],
+      [
+        "O1KT34",
+        "Okta Inc",
+        false
+      ],
+      [
+        "O1MC34",
+        "Omnicom Group Inc",
+        false
+      ],
+      [
+        "O1TI34",
+        "Otis Worldwide Corporation",
+        false
+      ],
+      [
+        "O1UT34",
+        "Outfront Media Inc",
+        false
+      ],
+      [
+        "O2HI34",
+        "Omega Healthcare Investors Inc",
+        false
+      ],
+      [
+        "O2LE34",
+        "Universal Display Corp",
+        false
+      ],
+      [
+        "O2NS34",
+        "ON Semiconductor Corp",
+        false
+      ],
+      [
+        "ORLY34",
+        "OReilly Automotive Inc",
+        false
+      ],
+      [
+        "OXYP34",
+        "Occidental Petroleum Corp",
+        false
+      ],
+      [
+        "P1AC34",
+        "PACCAR Inc",
+        false
+      ],
+      [
+        "P1AY34",
+        "Paychex Inc",
+        false
+      ],
+      [
+        "P1DD34",
+        "PDD Holdings Inc.",
+        false
+      ],
+      [
+        "P1DT34",
+        "Prudential Financial Inc",
+        false
+      ],
+      [
+        "P1EA34",
+        "Healthpeak Properties Inc",
+        false
+      ],
+      [
+        "P1EG34",
+        "Public Service Enterprise Group Inc",
+        false
+      ],
+      [
+        "P1FG34",
+        "Principal Financial Group Inc",
+        false
+      ],
+      [
+        "P1GR34",
+        "The Progressive Corp",
+        false
+      ],
+      [
+        "P1HC34",
+        "Parker-Hannifin Corp",
+        false
+      ],
+      [
+        "P1HM34",
+        "PulteGroup Inc",
+        false
+      ],
+      [
+        "P1KG34",
+        "Packaging Corp of America",
+        false
+      ],
+      [
+        "P1KX34",
+        "POSCO Holdings Inc.",
+        false
+      ],
+      [
+        "P1LD34",
+        "Prologis Inc",
+        false
+      ],
+      [
+        "P1NR34",
+        "Pentair PLC",
+        false
+      ],
+      [
+        "P1NW34",
+        "Pinnacle West Capital Corp",
+        false
+      ],
+      [
+        "P1PG34",
+        "PPG Industries Inc",
+        false
+      ],
+      [
+        "P1PL34",
+        "PPL Corp",
+        false
+      ],
+      [
+        "P1RG34",
+        "Perrigo Co PLC",
+        false
+      ],
+      [
+        "P1SA34",
+        "Public Storage",
+        false
+      ],
+      [
+        "P1SX34",
+        "Phillips 66",
+        false
+      ],
+      [
+        "P1UK34",
+        "Prudential PLC",
+        false
+      ],
+      [
+        "P1VH34",
+        "PVH Corp",
+        false
+      ],
+      [
+        "P1YC34",
+        "Paycom Software Inc",
+        false
+      ],
+      [
+        "P2AN34",
+        "Palo Alto Networks Inc",
+        false
+      ],
+      [
+        "P2AT34",
+        "UiPath Inc",
+        false
+      ],
+      [
+        "P2AX34",
+        "Patria Investments Ltd",
+        false
+      ],
+      [
+        "P2CF34",
+        "Grupo Aeroportuario del Pacifico SAB de CV",
+        false
+      ],
+      [
+        "P2CO34",
+        "Procore Technologies Inc",
+        false
+      ],
+      [
+        "P2CY34",
+        "Paylocity Holding Corp",
+        false
+      ],
+      [
+        "P2EG34",
+        "Pegasystems Inc",
+        false
+      ],
+      [
+        "P2EN34",
+        "PENN Entertainment Inc",
+        false
+      ],
+      [
+        "P2IN34",
+        "Pinterest Inc",
+        false
+      ],
+      [
+        "P2LN34",
+        "Planet Fitness Inc",
+        false
+      ],
+      [
+        "P2LT34",
+        "Palantir Technologies Inc",
+        false
+      ],
+      [
+        "P2NB34",
+        "Penumbra Inc",
+        false
+      ],
+      [
+        "P2OD34",
+        "Insulet Corp",
+        false
+      ],
+      [
+        "P2OS34",
+        "Post Holdings Inc",
+        false
+      ],
+      [
+        "P2ST34",
+        "Everpure, Inc",
+        false
+      ],
+      [
+        "P2TC34",
+        "PTC Inc",
+        false
+      ],
+      [
+        "PAGS34",
+        "Pagseguro Digital Ltd",
+        false
+      ],
+      [
+        "PFIZ34",
+        "Pfizer Inc.",
+        false
+      ],
+      [
+        "PGCO34",
+        "Procter & Gamble Company",
+        false
+      ],
+      [
+        "PHGN34",
+        "Koninklijke Philips NV",
+        false
+      ],
+      [
+        "PHMO34",
+        "Philip Morris International Inc",
+        false
+      ],
+      [
+        "PNCS34",
+        "PNC Financial Services Group Inc",
+        false
+      ],
+      [
+        "PPLI34",
+        "People Incorporated",
+        false
+      ],
+      [
+        "PYPL34",
+        "Paypal Holdings Inc",
+        false
+      ],
+      [
+        "Q1UA34",
+        "Quanta Services Inc",
+        false
+      ],
+      [
+        "Q1UE34",
+        "Quest Diagnostics Inc",
+        false
+      ],
+      [
+        "Q2SC34",
+        "QuantumScape Corp",
+        false
+      ],
+      [
+        "QCOM34",
+        "Qualcomm Inc.",
+        false
+      ],
+      [
+        "QUBT34",
+        "Quantum Computing Inc",
+        false
+      ],
+      [
+        "R1CL34",
+        "Royal Caribbean Group",
+        false
+      ],
+      [
+        "R1DY34",
+        "Dr Reddys Laboratories Ltd",
+        false
+      ],
+      [
+        "R1EG34",
+        "Regency Centers Corp",
+        false
+      ],
+      [
+        "R1EL34",
+        "RELX PLC",
+        false
+      ],
+      [
+        "R1FC34",
+        "Regions Financial Corp",
+        false
+      ],
+      [
+        "R1HI34",
+        "Robert Half Inc.",
+        false
+      ],
+      [
+        "R1HP34",
+        "Ryman Hospitality Properties Inc",
+        false
+      ],
+      [
+        "R1IN34",
+        "Realty Income Corp",
+        false
+      ],
+      [
+        "R1JF34",
+        "Raymond James Financial Inc",
+        false
+      ],
+      [
+        "R1KU34",
+        "Roku Inc",
+        false
+      ],
+      [
+        "R1LC34",
+        "Ralph Lauren Corp",
+        false
+      ],
+      [
+        "R1MD34",
+        "ResMed Inc",
+        false
+      ],
+      [
+        "R1OK34",
+        "Rockwell Automation Inc",
+        false
+      ],
+      [
+        "R1OL34",
+        "Rollins Inc",
+        false
+      ],
+      [
+        "R1OP34",
+        "Roper Technologies Inc",
+        false
+      ],
+      [
+        "R1SG34",
+        "Republic Services Inc",
+        false
+      ],
+      [
+        "R1VT34",
+        "Revvity, Inc",
+        false
+      ],
+      [
+        "R1YA34",
+        "Ryanair Holdings PLC",
+        false
+      ],
+      [
+        "R2AR34",
+        "Ultragenyx Pharmaceutical Inc",
+        false
+      ],
+      [
+        "R2BL34",
+        "Roblox Corporation",
+        false
+      ],
+      [
+        "R2GE34",
+        "Repligen Corp",
+        false
+      ],
+      [
+        "R2HH34",
+        "RH",
+        false
+      ],
+      [
+        "R2NG34",
+        "RingCentral Inc",
+        false
+      ],
+      [
+        "R2PD34",
+        "Rapid7 Inc",
+        false
+      ],
+      [
+        "R2RX34",
+        "Regal Rexnord Corp",
+        false
+      ],
+      [
+        "REGN34",
+        "Regeneron Pharmaceuticals Inc",
+        false
+      ],
+      [
+        "RGTI34",
+        "Rigetti Computing Inc",
+        false
+      ],
+      [
+        "RIGG34",
+        "Transocean Ltd.",
+        false
+      ],
+      [
+        "RIOT34",
+        "Rio Tinto PLC",
+        false
+      ],
+      [
+        "ROST34",
+        "Ross Stores, Inc.",
+        false
+      ],
+      [
+        "S1AK34",
+        "Shake Shack Inc",
+        false
+      ],
+      [
+        "S1BA34",
+        "SBA Communications Corp",
+        false
+      ],
+      [
+        "S1BS34",
+        "Sibanye Stillwater Ltd",
+        false
+      ],
+      [
+        "S1HW34",
+        "The Sherwin-Williams Co",
+        false
+      ],
+      [
+        "S1JM34",
+        "The JM Smucker Co",
+        false
+      ],
+      [
+        "S1KM34",
+        "SK Telecom Co Ltd",
+        false
+      ],
+      [
+        "S1KT34",
+        "Tanger Inc",
+        false
+      ],
+      [
+        "S1LG34",
+        "SL Green Realty Corp",
+        false
+      ],
+      [
+        "S1MF34",
+        "Sumitomo Mitsui Financial Group Inc",
+        false
+      ],
+      [
+        "S1NA34",
+        "Snap-on Inc",
+        false
+      ],
+      [
+        "S1NN34",
+        "Smith & Nephew PLC",
+        false
+      ],
+      [
+        "S1NP34",
+        "Synopsys Inc",
+        false
+      ],
+      [
+        "S1OU34",
+        "Southwest Airlines Co",
+        false
+      ],
+      [
+        "S1PO34",
+        "Spotify Technology SA",
+        false
+      ],
+      [
+        "S1RE34",
+        "Sempra",
+        false
+      ],
+      [
+        "S1RP34",
+        "Sarepta Therapeutics Inc",
+        false
+      ],
+      [
+        "S1SL34",
+        "Skyworks Solutions Inc",
+        false
+      ],
+      [
+        "S1SN34",
+        "SS&C Technologies Holdings Inc",
+        false
+      ],
+      [
+        "S1TE34",
+        "STERIS PLC",
+        false
+      ],
+      [
+        "S1TT34",
+        "State Street Corp",
+        false
+      ],
+      [
+        "S1TX34",
+        "Seagate Technology Holdings Plc",
+        false
+      ],
+      [
+        "S1WK34",
+        "Stanley Black & Decker Inc",
+        false
+      ],
+      [
+        "S1YF34",
+        "Synchrony Financial",
+        false
+      ],
+      [
+        "S1YK34",
+        "Stryker Corp",
+        false
+      ],
+      [
+        "S1YM34",
+        "Gen Digital Inc.",
+        false
+      ],
+      [
+        "S1YY34",
+        "Sysco Corp",
+        false
+      ],
+      [
+        "S2CH34",
+        "Sociedad Quimica y Minera de Chile SA",
+        false
+      ],
+      [
+        "S2EA34",
+        "Sea Ltd",
+        false
+      ],
+      [
+        "S2ED34",
+        "SolarEdge Technologies Inc",
+        false
+      ],
+      [
+        "S2EI34",
+        "SEI Investments Co",
+        false
+      ],
+      [
+        "S2FM34",
+        "Sprouts Farmers Market Inc",
+        false
+      ],
+      [
+        "S2GI34",
+        "Somnigroup International Inc",
+        false
+      ],
+      [
+        "S2GM34",
+        "Sigma Lithium Corp",
+        false
+      ],
+      [
+        "S2HO34",
+        "Shopify Inc",
+        false
+      ],
+      [
+        "S2LA34",
+        "Silicon Laboratories Inc",
+        false
+      ],
+      [
+        "S2MP34",
+        "Simply Good Foods Co/The",
+        false
+      ],
+      [
+        "S2NA34",
+        "Snap Inc",
+        false
+      ],
+      [
+        "S2NW34",
+        "Snowflake Inc",
+        false
+      ],
+      [
+        "S2RE34",
+        "Grupo Aeroportuario del Sureste SAB de CV",
+        false
+      ],
+      [
+        "S2TA34",
+        "STAG Industrial Inc",
+        false
+      ],
+      [
+        "S2TW34",
+        "Starwood Property Trust Inc",
+        false
+      ],
+      [
+        "S2UI34",
+        "Sun Communities Inc",
+        false
+      ],
+      [
+        "S2YN34",
+        "Synaptics Inc",
+        false
+      ],
+      [
+        "SAPP34",
+        "SAP SE",
+        false
+      ],
+      [
+        "SCCO34",
+        "Southern Copper Corp",
+        false
+      ],
+      [
+        "SCHW34",
+        "The Charles Schwab Corporation",
+        false
+      ],
+      [
+        "SIMN34",
+        "Simon Property Group Inc",
+        false
+      ],
+      [
+        "SK1D34",
+        "Skydance Corporation",
+        false
+      ],
+      [
+        "SKHY34",
+        "SK Hynix Inc",
+        false
+      ],
+      [
+        "SNEC34",
+        "Sony Group Corporation",
+        false
+      ],
+      [
+        "SPCX34",
+        "Space Exploration Technologies Corp",
+        false
+      ],
+      [
+        "SPGI34",
+        "S&P Global Inc",
+        false
+      ],
+      [
+        "SSFO34",
+        "Salesforce, Inc.",
+        false
+      ],
+      [
+        "STMN34",
+        "STMicroelectronics NV",
+        false
+      ],
+      [
+        "STZB34",
+        "Constellation Brands Inc",
+        false
+      ],
+      [
+        "T1AL34",
+        "TAL Education Group",
+        false
+      ],
+      [
+        "T1AM34",
+        "Atlassian Corporation PLC",
+        false
+      ],
+      [
+        "T1CH34",
+        "Bio-Techne Corporation",
+        false
+      ],
+      [
+        "T1DG34",
+        "TransDigm Group Inc",
+        false
+      ],
+      [
+        "T1EC34",
+        "TechnipFMC PLC",
+        false
+      ],
+      [
+        "T1EL34",
+        "TE Connectivity plc",
+        false
+      ],
+      [
+        "T1EV34",
+        "Teva Pharmaceutical Industries Ltd",
+        false
+      ],
+      [
+        "T1FX34",
+        "Teleflex Inc",
+        false
+      ],
+      [
+        "T1LK34",
+        "PT Telekomunikasi Indonesia Persero Tbk",
+        false
+      ],
+      [
+        "T1MU34",
+        "T-Mobile US Inc",
+        false
+      ],
+      [
+        "T1OW34",
+        "American Tower Corp",
+        false
+      ],
+      [
+        "T1RI34",
+        "TripAdvisor Inc",
+        false
+      ],
+      [
+        "T1RO34",
+        "T Rowe Price Group Inc",
+        false
+      ],
+      [
+        "T1SC34",
+        "Tractor Supply Co",
+        false
+      ],
+      [
+        "T1SO34",
+        "The Southern Co",
+        false
+      ],
+      [
+        "T1SS34",
+        "Tenaris SA",
+        false
+      ],
+      [
+        "T1TW34",
+        "Take-Two Interactive Software Inc",
+        false
+      ],
+      [
+        "T1WL34",
+        "Twilio Inc",
+        false
+      ],
+      [
+        "T1XT34",
+        "Textron Inc",
+        false
+      ],
+      [
+        "T2DH34",
+        "Teladoc Health Inc",
+        false
+      ],
+      [
+        "T2ER34",
+        "Teradyne Inc",
+        false
+      ],
+      [
+        "T2ND34",
+        "Tandem Diabetes Care Inc",
+        false
+      ],
+      [
+        "T2RE34",
+        "Trex Co Inc",
+        false
+      ],
+      [
+        "T2RM34",
+        "Trimble Inc",
+        false
+      ],
+      [
+        "T2TD34",
+        "The Trade Desk Inc",
+        false
+      ],
+      [
+        "T2YL34",
+        "Tyler Technologies Inc",
+        false
+      ],
+      [
+        "TAKP34",
+        "Takeda Pharmaceutical Co Ltd",
+        false
+      ],
+      [
+        "THGI34",
+        "Hanover Insurance Group Inc",
+        false
+      ],
+      [
+        "TJXC34",
+        "TJX Companies Inc",
+        false
+      ],
+      [
+        "TMCO34",
+        "Toyota Motor Corp.",
+        false
+      ],
+      [
+        "TMOS34",
+        "Thermo Fisher Scientific, Inc.",
+        false
+      ],
+      [
+        "TOST34",
+        "Toast Inc",
+        false
+      ],
+      [
+        "TPRY34",
+        "Tapestry Inc",
+        false
+      ],
+      [
+        "TRVC34",
+        "The Travelers Companies, Inc",
+        false
+      ],
+      [
+        "TSLA34",
+        "Tesla, Inc",
+        false
+      ],
+      [
+        "TSMC34",
+        "Taiwan Semiconductor Manufacturing Co Ltd",
+        false
+      ],
+      [
+        "TSNF34",
+        "Tyson Foods Inc",
+        false
+      ],
+      [
+        "TXSA34",
+        "Ternium SA",
+        false
+      ],
+      [
+        "U1AI34",
+        "Under Armour Inc",
+        false
+      ],
+      [
+        "U1AL34",
+        "United Airlines Holdings Inc",
+        false
+      ],
+      [
+        "U1BE34",
+        "Uber Technologies Inc",
+        false
+      ],
+      [
+        "U1DR34",
+        "UDR Inc",
+        false
+      ],
+      [
+        "U1HS34",
+        "Universal Health Services Inc",
+        false
+      ],
+      [
+        "U1LT34",
+        "Ulta Beauty Inc",
+        false
+      ],
+      [
+        "U1MH34",
+        "UMH Properties Inc",
+        false
+      ],
+      [
+        "U1NM34",
+        "Unum Group",
+        false
+      ],
+      [
+        "U1RI34",
+        "United Rentals Inc",
+        false
+      ],
+      [
+        "U2NF34",
+        "United Natural Foods Inc",
+        false
+      ],
+      [
+        "U2PS34",
+        "Upstart Holdings Inc",
+        false
+      ],
+      [
+        "U2PW34",
+        "Upwork Inc",
+        false
+      ],
+      [
+        "U2ST34",
+        "Unity Software Inc",
+        false
+      ],
+      [
+        "U2TH34",
+        "United Therapeutics Corp",
+        false
+      ],
+      [
+        "UBSG34",
+        "Ubs Group Ag",
+        false
+      ],
+      [
+        "ULEV34",
+        "Unilever PLC",
+        false
+      ],
+      [
+        "UNHH34",
+        "Unitedhealth Group Inc",
+        false
+      ],
+      [
+        "UPAC34",
+        "Union Pacific Corporation",
+        false
+      ],
+      [
+        "UPSS34",
+        "United Parcel Service, Inc.",
+        false
+      ],
+      [
+        "V1IP34",
+        "Vipshop Holdings Ltd",
+        false
+      ],
+      [
+        "V1MC34",
+        "Vulcan Materials Co",
+        false
+      ],
+      [
+        "V1NO34",
+        "Vornado Realty Trust",
+        false
+      ],
+      [
+        "V1OD34",
+        "Vodafone Group Public LTD Company",
+        false
+      ],
+      [
+        "V1RS34",
+        "Verisk Analytics Inc",
+        false
+      ],
+      [
+        "V1RT34",
+        "Vertiv Holdings Co",
+        false
+      ],
+      [
+        "V1ST34",
+        "Vistra Corp",
+        false
+      ],
+      [
+        "V1TA34",
+        "Ventas Inc",
+        false
+      ],
+      [
+        "V2EE34",
+        "Veeva Systems Inc",
+        false
+      ],
+      [
+        "V2RN34",
+        "Varonis Systems Inc",
+        false
+      ],
+      [
+        "V2TX34",
+        "VTEX",
+        false
+      ],
+      [
+        "VERZ34",
+        "Verizon Communications Inc.",
+        false
+      ],
+      [
+        "VFCO34",
+        "VF Corp",
+        false
+      ],
+      [
+        "VLOE34",
+        "Valero Energy Corporation",
+        false
+      ],
+      [
+        "VLYB34",
+        "Valley National Bancorp",
+        false
+      ],
+      [
+        "VMRK34",
+        "Vivmark Residential",
+        false
+      ],
+      [
+        "VRSN34",
+        "Verisign Inc",
+        false
+      ],
+      [
+        "VRTX34",
+        "Vertex Pharmaceuticals Inc",
+        false
+      ],
+      [
+        "W1AB34",
+        "Wabtec Corp",
+        false
+      ],
+      [
+        "W1BO34",
+        "Weibo Corp",
+        false
+      ],
+      [
+        "W1DA34",
+        "Workday Inc",
+        false
+      ],
+      [
+        "W1DC34",
+        "Western Digital Corp",
+        false
+      ],
+      [
+        "W1EC34",
+        "WEC Energy Group Inc",
+        false
+      ],
+      [
+        "W1EL34",
+        "Welltower Inc",
+        false
+      ],
+      [
+        "W1HR34",
+        "Whirlpool Corp",
+        false
+      ],
+      [
+        "W1IX34",
+        "Wix.com Ltd",
+        false
+      ],
+      [
+        "W1LT34",
+        "Willis Towers Watson PLC",
+        false
+      ],
+      [
+        "W1MB34",
+        "The Williams Cos Inc",
+        false
+      ],
+      [
+        "W1MC34",
+        "Waste Management Inc",
+        false
+      ],
+      [
+        "W1MG34",
+        "Warner Music Group Corporation",
+        false
+      ],
+      [
+        "W1PP34",
+        "WPP PLC",
+        false
+      ],
+      [
+        "W1RB34",
+        "WR Berkley Corporation",
+        false
+      ],
+      [
+        "W1SO34",
+        "Watsco Inc",
+        false
+      ],
+      [
+        "W1YC34",
+        "Weyerhaeuser Co",
+        false
+      ],
+      [
+        "W1YN34",
+        "Wynn Resorts Ltd",
+        false
+      ],
+      [
+        "W2EX34",
+        "WEX Inc",
+        false
+      ],
+      [
+        "W2ST34",
+        "West Pharmaceutical Services Inc",
+        false
+      ],
+      [
+        "W2YF34",
+        "Wayfair Inc",
+        false
+      ],
+      [
+        "WABC34",
+        "Western Alliance Bancorporation",
+        false
+      ],
+      [
+        "WALM34",
+        "Walmart Inc.",
+        false
+      ],
+      [
+        "WATC34",
+        "Waters Corp",
+        false
+      ],
+      [
+        "WFCO34",
+        "Wells Fargo Company",
+        false
+      ],
+      [
+        "WUNI34",
+        "The Western Union Company",
+        false
+      ],
+      [
+        "X1EL34",
+        "Xcel Energy Inc",
+        false
+      ],
+      [
+        "X1YL34",
+        "Xylem Inc",
+        false
+      ],
+      [
+        "X1YZ34",
+        "Block, Inc.",
+        false
+      ],
+      [
+        "XRAY34",
+        "Dentsply Sirona Inc",
+        false
+      ],
+      [
+        "Y2PF34",
+        "YPF SA",
+        false
+      ],
+      [
+        "YUMR34",
+        "Yum Brands Inc",
+        false
+      ],
+      [
+        "Z1BH34",
+        "Zimmer Biomet Holdings Inc",
+        false
+      ],
+      [
+        "Z1BR34",
+        "Zebra Technologies Corporation",
+        false
+      ],
+      [
+        "Z1IO34",
+        "Zions Bancorporation NA",
+        false
+      ],
+      [
+        "Z1OM34",
+        "Zoom Communications Inc",
+        false
+      ],
+      [
+        "Z1TA34",
+        "Zeta Global Holdings Corp",
+        false
+      ],
+      [
+        "Z1TO34",
+        "ZTO Express Cayman Inc",
+        false
+      ],
+      [
+        "Z1TS34",
+        "Zoetis Inc",
+        false
+      ],
+      [
+        "Z2DV34",
+        "Ziff Davis Inc",
+        false
+      ],
+      [
+        "Z2IT34",
+        "ZoomInfo Technologies Inc",
+        false
+      ],
+      [
+        "Z2LL34",
+        "Zillow Group Inc",
+        false
+      ],
+      [
+        "Z2LL35",
+        "Zillow Group Inc",
+        false
+      ],
+      [
+        "Z2SC34",
+        "Zscaler Inc",
+        false
+      ]
+    ],
+    "ETF": [
+      [
+        "AADA39",
+        "21Shares Cardano ETP",
+        false
+      ],
+      [
+        "ABGD39",
+        "abrdn Physical Gold Shares ETF",
+        false
+      ],
+      [
+        "ACWX39",
+        "iShares MSCI ACWI ex U.S. ETF",
+        false
+      ],
+      [
+        "AETH39",
+        "21Shares Ethereum Staking ETP",
+        false
+      ],
+      [
+        "ARGT39",
+        "Global X MSCI Argentina ETF",
+        false
+      ],
+      [
+        "AXRP39",
+        "21Shares XRP ETP",
+        false
+      ],
+      [
+        "BAAX39",
+        "iShares MSCI All Country Asia ex Japan ETF",
+        false
+      ],
+      [
+        "BACW39",
+        "iShares MSCI ACWI ETF",
+        false
+      ],
+      [
+        "BAER39",
+        "iShares US Aerospace & Defense ETF",
+        false
+      ],
+      [
+        "BAGG39",
+        "iShares Core U.S. Aggregate Bond ETF",
+        false
+      ],
+      [
+        "BAGY39",
+        "WisdomTree Yield Enhanced US Aggregate Bond Fund",
+        false
+      ],
+      [
+        "BAIQ39",
+        "Global X Artificial Intelligence & Technology ETF",
+        false
+      ],
+      [
+        "BAIR39",
+        "First Trust RBA American Indl Renaissance ETF",
+        false
+      ],
+      [
+        "BAOA39",
+        "iShares Core 80/20 Aggressive Allocation ETF",
+        false
+      ],
+      [
+        "BAOK39",
+        "iShares Core 30/70 Conservative Allocation ETF",
+        false
+      ],
+      [
+        "BAOM39",
+        "iShares Core 40/60 Moderate Allocation ETF",
+        false
+      ],
+      [
+        "BAOR39",
+        "iShares Core 60/40 Balanced Allocation ETF",
+        false
+      ],
+      [
+        "BARY39",
+        "iShares Future AI & Tech ETF",
+        false
+      ],
+      [
+        "BASK39",
+        "21Shares Crypto Basket Index ETP",
+        false
+      ],
+      [
+        "BBAX39",
+        "JPMorgan BetaBuilders Dev Asia Pacific-ex JPN ETF",
+        false
+      ],
+      [
+        "BBCA39",
+        "JPMorgan BetaBuilders Canada ETF",
+        false
+      ],
+      [
+        "BBEU39",
+        "JPMorgan BetaBuilders Europe ETF",
+        false
+      ],
+      [
+        "BBGR39",
+        "iShares USD Green Bond ETF",
+        false
+      ],
+      [
+        "BBIL39",
+        "JPMorgan BetaBuilders International Equity ETF",
+        false
+      ],
+      [
+        "BBJP39",
+        "JPMorgan BetaBuilders Japan ETF",
+        false
+      ],
+      [
+        "BBMC39",
+        "JPMorgan BetaBuilders US Mid Cap Equity ETF",
+        false
+      ],
+      [
+        "BBMR39",
+        "JPMorgan BetaBuilders MSCI US REIT ETF",
+        false
+      ],
+      [
+        "BBUG39",
+        "Global X Cybersecurity ETF",
+        false
+      ],
+      [
+        "BBUS39",
+        "JPMorgan BetaBuilders US Equity ETF",
+        false
+      ],
+      [
+        "BCAT39",
+        "Global X S&P 500 Catholic Values ETF",
+        false
+      ],
+      [
+        "BCHA39",
+        "Xtrackers MSCI China UCITS ETF",
+        true
+      ],
+      [
+        "BCHI39",
+        "iShares MSCI China ETF",
+        false
+      ],
+      [
+        "BCHQ39",
+        "Global X MSCI China Consumer Discretionary ETF",
+        false
+      ],
+      [
+        "BCIR39",
+        "First Trust Nasdaq Cybersecurity ETF",
+        false
+      ],
+      [
+        "BCLO39",
+        "Global X Cloud Computing ETF",
+        false
+      ],
+      [
+        "BCNY39",
+        "iShares MSCI China A ETF",
+        false
+      ],
+      [
+        "BCOM39",
+        "iShares GSCI Commodity Dynamic Roll Strategy ETF",
+        false
+      ],
+      [
+        "BCPX39",
+        "Global X Copper Miners ETF",
+        false
+      ],
+      [
+        "BCRB39",
+        "iShares Low Carbon Optimized MSCI ACWI ETF",
+        false
+      ],
+      [
+        "BCRP39",
+        "PIMCO Investment Grade Corp Bond Index Exch-TF",
+        false
+      ],
+      [
+        "BCTE39",
+        "Global X ClimateTech ETF",
+        false
+      ],
+      [
+        "BCWV39",
+        "iShares MSCI Global Min Vol Factor ETF",
+        false
+      ],
+      [
+        "BDRE39",
+        "JPMorgan Diversified Return US SmallCap Equity ETF",
+        false
+      ],
+      [
+        "BDRI39",
+        "Global X Autonomous & Electric Vehicles ETF",
+        false
+      ],
+      [
+        "BDVD39",
+        "Global X SuperDividend US ETF",
+        false
+      ],
+      [
+        "BDVE39",
+        "iShares Emerging Markets Dividend ETF",
+        false
+      ],
+      [
+        "BDVY39",
+        "iShares Select Dividend ETF",
+        false
+      ],
+      [
+        "BEAG39",
+        "iShares ESG Aware US Aggregate Bond ETF",
+        false
+      ],
+      [
+        "BECH39",
+        "iShares MSCI Chile ETF",
+        false
+      ],
+      [
+        "BEEM39",
+        "iShares MSCI Emerging Markets ETF",
+        false
+      ],
+      [
+        "BEFA39",
+        "iShares MSCI EAFE ETF",
+        false
+      ],
+      [
+        "BEFG39",
+        "iShares MSCI EAFE Growth ETF",
+        false
+      ],
+      [
+        "BEFV39",
+        "iShares MSCI EAFE Value ETF",
+        false
+      ],
+      [
+        "BEGD39",
+        "iShares ESG Aware MSCI EAFE ETF",
+        false
+      ],
+      [
+        "BEGE39",
+        "iShares ESG Aware MSCI EM ETF",
+        false
+      ],
+      [
+        "BEGU39",
+        "iShares ESG Aware MSCI USA ETF",
+        false
+      ],
+      [
+        "BEIS39",
+        "iShares MSCI Israel ETF",
+        false
+      ],
+      [
+        "BEMC39",
+        "iShares MSCI Emerging Markets ex China ETF",
+        false
+      ],
+      [
+        "BEME39",
+        "Xtrackers MSCI Emerging Markets UCITS ETF",
+        true
+      ],
+      [
+        "BEMV39",
+        "iShares MSCI Emerging Markets Min Vol Factor ETF",
+        false
+      ],
+      [
+        "BEPP39",
+        "iShares MSCI Pacific ex Japan ETF",
+        false
+      ],
+      [
+        "BEPU39",
+        "iShares MSCI Peru and Global Exposure ETF",
+        false
+      ],
+      [
+        "BEQW39",
+        "Xtrackers S&P 500 Equal Weight UCITS ETF",
+        true
+      ],
+      [
+        "BERU39",
+        "iShares MSCI Russia ETF",
+        false
+      ],
+      [
+        "BEUA39",
+        "Xtrackers MSCI USA UCITS ETF",
+        true
+      ],
+      [
+        "BEUF39",
+        "iShares MSCI Europe Financials ETF",
+        false
+      ],
+      [
+        "BEUR39",
+        "Xtrackers MSCI Europe UCITS ETF",
+        true
+      ],
+      [
+        "BEUW39",
+        "iShares MSCI USA Equal Weighted ETF",
+        false
+      ],
+      [
+        "BEWA39",
+        "iShares MSCI Australia ETF",
+        false
+      ],
+      [
+        "BEWC39",
+        "iShares MSCI Canada ETF",
+        false
+      ],
+      [
+        "BEWD39",
+        "iShares MSCI Sweden ETF",
+        false
+      ],
+      [
+        "BEWG39",
+        "iShares MSCI Germany ETF",
+        false
+      ],
+      [
+        "BEWH39",
+        "iShares MSCI Hong Kong ETF",
+        false
+      ],
+      [
+        "BEWI39",
+        "iShares MSCI Italy ETF",
+        false
+      ],
+      [
+        "BEWJ39",
+        "iShares MSCI Japan ETF",
+        false
+      ],
+      [
+        "BEWL39",
+        "iShares MSCI Switzerland ETF",
+        false
+      ],
+      [
+        "BEWM39",
+        "iShares MSCI Malaysia ETF",
+        false
+      ],
+      [
+        "BEWN39",
+        "iShares MSCI Netherlands ETF",
+        false
+      ],
+      [
+        "BEWO39",
+        "iShares MSCI Austria ETF",
+        false
+      ],
+      [
+        "BEWP39",
+        "iShares MSCI Spain ETF",
+        false
+      ],
+      [
+        "BEWQ39",
+        "iShares MSCI France ETF",
+        false
+      ],
+      [
+        "BEWS39",
+        "iShares MSCI Singapore ETF",
+        false
+      ],
+      [
+        "BEWT39",
+        "iShares MSCI Taiwan ETF",
+        false
+      ],
+      [
+        "BEWU39",
+        "iShares MSCI United Kingdom ETF",
+        false
+      ],
+      [
+        "BEWW39",
+        "iShares MSCI Mexico ETF",
+        false
+      ],
+      [
+        "BEWY39",
+        "iShares MSCI South Korea ETF",
+        false
+      ],
+      [
+        "BEWZ39",
+        "iShares MSCI Brazil ETF",
+        false
+      ],
+      [
+        "BEZA39",
+        "iShares MSCI South Africa ETF",
+        false
+      ],
+      [
+        "BEZU39",
+        "iShares MSCI Eurozone ETF",
+        false
+      ],
+      [
+        "BFAL39",
+        "iShares Fallen Angels USD Bond ETF",
+        false
+      ],
+      [
+        "BFAV39",
+        "iShares MSCI EAFE Min Vol Factor ETF",
+        false
+      ],
+      [
+        "BFBI39",
+        "First Trust NYSE Arca Biotechnology Index Fund",
+        false
+      ],
+      [
+        "BFCG39",
+        "First Trust Natural Gas ETF",
+        false
+      ],
+      [
+        "BFDA39",
+        "First Trust Rising Dividend Achievers ETF",
+        false
+      ],
+      [
+        "BFDL39",
+        "First Trust Morningstar Dividend Leaders Index",
+        false
+      ],
+      [
+        "BFDN39",
+        "First Trust Dow Jones Internet Index Fund",
+        false
+      ],
+      [
+        "BFEM39",
+        "First Trust Emerging Markets AlphaDEX Fund",
+        false
+      ],
+      [
+        "BFIW39",
+        "First Trust Water ETF",
+        false
+      ],
+      [
+        "BFLO39",
+        "iShares Floating Rate Bond ETF",
+        false
+      ],
+      [
+        "BFNX39",
+        "Global X FinTech ETF",
+        false
+      ],
+      [
+        "BFPI39",
+        "First Trust International Equity Opportunities ETF",
+        false
+      ],
+      [
+        "BFPX39",
+        "First Trust US Equity Opportunities ETF",
+        false
+      ],
+      [
+        "BFTA39",
+        "First Trust Technology AlphaDEX Fund",
+        false
+      ],
+      [
+        "BFTC39",
+        "First Trust Large Cap Growth AlphaDEX Fund",
+        false
+      ],
+      [
+        "BFTG39",
+        "First Trust Growth Strength ETF",
+        false
+      ],
+      [
+        "BFTS39",
+        "First Trust Capital Strength ETF",
+        false
+      ],
+      [
+        "BFVD39",
+        "First Trust Value Line Dividend Index Fund",
+        false
+      ],
+      [
+        "BFXH39",
+        "First Trust Health Care AlphaDEX Fund",
+        false
+      ],
+      [
+        "BFXI39",
+        "iShares China Large-Cap ETF",
+        false
+      ],
+      [
+        "BGAR39",
+        "iShares MSCI USA Quality GARP ETF",
+        false
+      ],
+      [
+        "BGLC39",
+        "iShares Global 100 ETF",
+        false
+      ],
+      [
+        "BGNO39",
+        "Global X Genomics & Biotechnology ETF",
+        false
+      ],
+      [
+        "BGOV39",
+        "iShares US Treasury Bond ETF",
+        false
+      ],
+      [
+        "BGOZ39",
+        "Ishares 25+ Year Treasury STRIPS Bond ETF",
+        false
+      ],
+      [
+        "BGRI39",
+        "First Trust NASDAQ CleanEdge Smart Grid Infra Fund",
+        false
+      ],
+      [
+        "BGRT39",
+        "iShares Global REIT ETF",
+        false
+      ],
+      [
+        "BGWH39",
+        "iShares Core Dividend Growth ETF",
+        false
+      ],
+      [
+        "BHDV39",
+        "iShares Core High Dividend ETF",
+        false
+      ],
+      [
+        "BHEF39",
+        "iShares Currency Hedged MSCI EAFE ETF",
+        false
+      ],
+      [
+        "BHER39",
+        "Global X Video Games & Esports ETF",
+        false
+      ],
+      [
+        "BHEW39",
+        "iShares Currency Hedged MSCI Japan ETF",
+        false
+      ],
+      [
+        "BHEZ39",
+        "iShares Currency Hedged MSCI Eurozone ETF",
+        false
+      ],
+      [
+        "BHYC39",
+        "iShares 0-5 Year High Yield Corporate Bond ETF",
+        false
+      ],
+      [
+        "BHYG39",
+        "iShares iBoxx High Yield Corporate Bond ETF",
+        false
+      ],
+      [
+        "BHYS39",
+        "PIMCO 0-5 Year High Yield Corp Bond Index Exch-TF",
+        false
+      ],
+      [
+        "BIAG39",
+        "iShares Core International Aggregate Bond ETF",
+        false
+      ],
+      [
+        "BIAI39",
+        "iShares US BrokerDealer & Securities Exchanges ETF",
+        false
+      ],
+      [
+        "BIAK39",
+        "iShares U.S. Insurance ETF",
+        false
+      ],
+      [
+        "BIAT39",
+        "iShares U.S. Regional Banks ETF",
+        false
+      ],
+      [
+        "BIAU39",
+        "iShares Gold Trust",
+        false
+      ],
+      [
+        "BIBB39",
+        "iShares Biotechnology ETF",
+        false
+      ],
+      [
+        "BICL39",
+        "iShares Global Clean Energy ETF",
+        false
+      ],
+      [
+        "BICV39",
+        "iShares Convertible Bond ETF",
+        false
+      ],
+      [
+        "BIDN39",
+        "iShares Genomics Immunology and Healthcare ETF",
+        false
+      ],
+      [
+        "BIDR39",
+        "iShares Self-Driving EV and Tech ETF",
+        false
+      ],
+      [
+        "BIDV39",
+        "iShares International Select Dividend ETF",
+        false
+      ],
+      [
+        "BIEF39",
+        "iShares Core MSCI EAFE ETF",
+        false
+      ],
+      [
+        "BIEI39",
+        "iShares 3-7 Year Treasury Bond ETF",
+        false
+      ],
+      [
+        "BIEM39",
+        "iShares Core MSCI Emerging Markets ETF",
+        false
+      ],
+      [
+        "BIEO39",
+        "iShares US Oil & Gas Exploration & Production ETF",
+        false
+      ],
+      [
+        "BIET39",
+        "iShares Expanded Tech-Software Sector ETF",
+        false
+      ],
+      [
+        "BIEU39",
+        "iShares Core MSCI Europe ETF",
+        false
+      ],
+      [
+        "BIEV39",
+        "iShares Europe ETF",
+        false
+      ],
+      [
+        "BIEZ39",
+        "iShares U.S. Oil Equipment & Services ETF",
+        false
+      ],
+      [
+        "BIFR39",
+        "iShares US Infrastructure ETF",
+        false
+      ],
+      [
+        "BIGE39",
+        "iShares North American Natural Resources ETF",
+        false
+      ],
+      [
+        "BIGF39",
+        "iShares Global Infrastructure ETF",
+        false
+      ],
+      [
+        "BIGL39",
+        "iShares 10+ Year Investm Grade Corporate Bond ETF",
+        false
+      ],
+      [
+        "BIGO39",
+        "iShares International Treasury Bond ETF",
+        false
+      ],
+      [
+        "BIGS39",
+        "iShares 1-5 Year Investm Grade Corporate Bond ETF",
+        false
+      ],
+      [
+        "BIHA39",
+        "iShares Cybersecurity and Tech ETF",
+        false
+      ],
+      [
+        "BIHE39",
+        "iShares US Pharmaceuticals ETF",
+        false
+      ],
+      [
+        "BIHF39",
+        "iShares U.S. Healthcare Providers ETF",
+        false
+      ],
+      [
+        "BIHI39",
+        "iShares U.S. Medical Devices ETF",
+        false
+      ],
+      [
+        "BIJH39",
+        "iShares Core S&P Mid-Cap ETF",
+        false
+      ],
+      [
+        "BIJR39",
+        "iShares Core S&P Small-Cap ETF",
+        false
+      ],
+      [
+        "BIJS39",
+        "iShares S&P Small-Cap 600 Value ETF",
+        false
+      ],
+      [
+        "BIJT39",
+        "iShares S&P Small-Cap 600 Growth ETF",
+        false
+      ],
+      [
+        "BILF39",
+        "iShares Latin America 40 ETF",
+        false
+      ],
+      [
+        "BIPC39",
+        "iShares Core MSCI Pacific ETF",
+        false
+      ],
+      [
+        "BIPZ39",
+        "PIMCO Broad U.S. TIPS Index Exchange-TF",
+        false
+      ],
+      [
+        "BITB39",
+        "iShares U.S. Home Construction ETF",
+        false
+      ],
+      [
+        "BITO39",
+        "iShares Core S&P Total US Stock Market ETF",
+        false
+      ],
+      [
+        "BIUS39",
+        "iShares Core Universal USD Bond ETF",
+        false
+      ],
+      [
+        "BIVB39",
+        "iShares Core S&P 500 ETF",
+        false
+      ],
+      [
+        "BIVE39",
+        "iShares S&P 500 Value ETF",
+        false
+      ],
+      [
+        "BIVW39",
+        "iShares S&P 500 Growth ETF",
+        false
+      ],
+      [
+        "BIWD39",
+        "iShares Russell 1000 Value ETF",
+        false
+      ],
+      [
+        "BIWF39",
+        "iShares Russell 1000 Growth ETF",
+        false
+      ],
+      [
+        "BIWM39",
+        "iShares Russell 2000 ETF",
+        false
+      ],
+      [
+        "BIXC39",
+        "iShares Global Energy ETF",
+        false
+      ],
+      [
+        "BIXG39",
+        "iShares Global Financials ETF",
+        false
+      ],
+      [
+        "BIXJ39",
+        "iShares Global Healthcare ETF",
+        false
+      ],
+      [
+        "BIXN39",
+        "iShares Global Tech ETF",
+        false
+      ],
+      [
+        "BIXU39",
+        "iShares Core MSCI Total International Stock ETF",
+        false
+      ],
+      [
+        "BIYC39",
+        "iShares US Consumer Discretionary ETF",
+        false
+      ],
+      [
+        "BIYE39",
+        "iShares U.S. Energy ETF",
+        false
+      ],
+      [
+        "BIYF39",
+        "iShares US Financials ETF",
+        false
+      ],
+      [
+        "BIYG39",
+        "iShares U.S. Financial Services ETF",
+        false
+      ],
+      [
+        "BIYJ39",
+        "iShares U.S. Industrials ETF",
+        false
+      ],
+      [
+        "BIYK39",
+        "iShares US Consumer Staples ETF",
+        false
+      ],
+      [
+        "BIYM39",
+        "iShares U.S. Basic Materials ETF",
+        false
+      ],
+      [
+        "BIYP39",
+        "iShares US Transportation ETF",
+        false
+      ],
+      [
+        "BIYT39",
+        "iShares 7-10 Year Treasury Bond ETF",
+        false
+      ],
+      [
+        "BIYW39",
+        "iShares US Technology ETF",
+        false
+      ],
+      [
+        "BIYZ39",
+        "iShares U.S. Telecommunications ETF",
+        false
+      ],
+      [
+        "BJAP39",
+        "Xtrackers MSCI Japan UCITS ETF",
+        true
+      ],
+      [
+        "BKBA39",
+        "KraneShares Bosera MSCI China A 50 Connect Idx ETF",
+        false
+      ],
+      [
+        "BKCH39",
+        "Global X Blockchain ETF",
+        false
+      ],
+      [
+        "BKSA39",
+        "iShares MSCI Saudi Arabia ETF",
+        false
+      ],
+      [
+        "BKWB39",
+        "KraneShares CSI China Internet ETF",
+        false
+      ],
+      [
+        "BKXI39",
+        "iShares Global Consumer Staples ETF",
+        false
+      ],
+      [
+        "BKYY39",
+        "First Trust Cloud Computing ETF",
+        false
+      ],
+      [
+        "BLBT39",
+        "Global X Lithium & Battery Tech ETF",
+        false
+      ],
+      [
+        "BLPA39",
+        "Global X MLP ETF",
+        false
+      ],
+      [
+        "BLPX39",
+        "Global X MLP & Energy Infrastructure ETF",
+        false
+      ],
+      [
+        "BLQD39",
+        "iShares iBoxx Investment Grade Corporate Bond ETF",
+        false
+      ],
+      [
+        "BLTP39",
+        "PIMCO 15 Year U.S. TIPS Index Exchange-TF",
+        false
+      ],
+      [
+        "BLUZ39",
+        "Xtrackers MSCI World Energy UCITS ETF",
+        true
+      ],
+      [
+        "BMBB39",
+        "iShares MBS ETF",
+        false
+      ],
+      [
+        "BMFE39",
+        "PIMCO RAFI Dynamic Multi-Factor EME ETF",
+        false
+      ],
+      [
+        "BMIL39",
+        "Global X Millennial Consumer ETF",
+        false
+      ],
+      [
+        "BMRE39",
+        "iShares Mortgage Real Estate ETF",
+        false
+      ],
+      [
+        "BMTU39",
+        "iShares MSCI USA Momentum Factor ETF",
+        false
+      ],
+      [
+        "BNDA39",
+        "iShares MSCI India ETF",
+        false
+      ],
+      [
+        "BOEF39",
+        "iShares S&P 100 ETF",
+        false
+      ],
+      [
+        "BOTZ39",
+        "Global X Robotics & Artificial Intelligence ETF",
+        false
+      ],
+      [
+        "BPFR39",
+        "Global X US Preferred ETF",
+        false
+      ],
+      [
+        "BPFV39",
+        "Global X Variable Rate Preferred ETF",
+        false
+      ],
+      [
+        "BPIC39",
+        "iShares MSCI Global Metals & Mining Producers ETF",
+        false
+      ],
+      [
+        "BPVE39",
+        "Global X US Infrastructure Development ETF",
+        false
+      ],
+      [
+        "BQCL39",
+        "First Trust Nasdaq Clean Edge Green Energy Index",
+        false
+      ],
+      [
+        "BQLT39",
+        "iShares Aaa - A Rated Corporate Bond ETF",
+        false
+      ],
+      [
+        "BQQW39",
+        "First Trust Nasdaq-100 Select Equal Weight ETF",
+        false
+      ],
+      [
+        "BQTC39",
+        "First Trust NASDAQ-100-Technology Sector Index",
+        false
+      ],
+      [
+        "BQUA39",
+        "iShares MSCI USA Quality Factor ETF",
+        false
+      ],
+      [
+        "BQYL39",
+        "Global X Nasdaq 100 Covered Call ETF",
+        false
+      ],
+      [
+        "BREZ39",
+        "iShares Residential Multisector Real Estate ETF",
+        false
+      ],
+      [
+        "BROB39",
+        "First Trust Nasdaq AI and Robotics ETF",
+        false
+      ],
+      [
+        "BSCZ39",
+        "iShares MSCI EAFE Small-Cap ETF",
+        false
+      ],
+      [
+        "BSDG39",
+        "iShares MSCI Global Sustainable Develop Goals ETF",
+        false
+      ],
+      [
+        "BSDV39",
+        "Global X SuperDividend ETF",
+        false
+      ],
+      [
+        "BSDY39",
+        "First Trust SMID Cap Rising Dividend Achievers ETF",
+        false
+      ],
+      [
+        "BSHV39",
+        "iShares 0-1 Year Treasury Bond ETF",
+        false
+      ],
+      [
+        "BSHY39",
+        "iShares 1-3 Year Treasury Bond ETF",
+        false
+      ],
+      [
+        "BSIL39",
+        "Global X Silver Miners ETF",
+        false
+      ],
+      [
+        "BSIZ39",
+        "iShares MSCI USA Size Factor ETF",
+        false
+      ],
+      [
+        "BSLV39",
+        "iShares Silver Trust",
+        false
+      ],
+      [
+        "BSNS39",
+        "Global X Internet of Things ETF",
+        false
+      ],
+      [
+        "BSOC39",
+        "Global X Social Media ETF",
+        false
+      ],
+      [
+        "BSOX39",
+        "iShares Semiconductor ETF",
+        false
+      ],
+      [
+        "BSRE39",
+        "Global X SuperDividend REIT ETF",
+        false
+      ],
+      [
+        "BSTI39",
+        "iShares 0-5 Year TIPS Bond ETF",
+        false
+      ],
+      [
+        "BSTP39",
+        "PIMCO 1to5 Year U.S. TIPS Index Exchange-TF",
+        false
+      ],
+      [
+        "BSUC39",
+        "iShares ESG Aware USD Corporate Bond ETF",
+        false
+      ],
+      [
+        "BSUS39",
+        "iShares ESG MSCI USA Leaders ETF",
+        false
+      ],
+      [
+        "BTCV39",
+        "Valour Bitcoin (BTC) Zero SEK",
+        false
+      ],
+      [
+        "BTFL39",
+        "iShares Treasury Floating Rate Bond ETF",
+        false
+      ],
+      [
+        "BTHD39",
+        "iShares MSCI Thailand ETF",
+        false
+      ],
+      [
+        "BTIP39",
+        "iShares TIPS Bond ETF",
+        false
+      ],
+      [
+        "BTLH39",
+        "iShares 10-20 Year Treasury Bond ETF",
+        false
+      ],
+      [
+        "BTLT39",
+        "iShares 20 Year Treasury Bond ETF",
+        false
+      ],
+      [
+        "BTWO39",
+        "Xtrackers Russell 2000 UCITS ETF",
+        true
+      ],
+      [
+        "BUAE39",
+        "iShares MSCI UAE ETF",
+        false
+      ],
+      [
+        "BUFF39",
+        "Xtrackers MSCI World Value UCITS ETF",
+        true
+      ],
+      [
+        "BURA39",
+        "Global X Uranium ETF",
+        false
+      ],
+      [
+        "BURT39",
+        "iShares MSCI World ETF",
+        false
+      ],
+      [
+        "BUSA39",
+        "iShares ESG Optimized MSCI USA ETF",
+        false
+      ],
+      [
+        "BUSF39",
+        "WisdomTree Floating Rate Treasury Fund",
+        false
+      ],
+      [
+        "BUSM39",
+        "iShares MSCI USA Min Vol Factor ETF",
+        false
+      ],
+      [
+        "BUSR39",
+        "iShares Core US REIT ETF",
+        false
+      ],
+      [
+        "BUTL39",
+        "iShares US Utilities ETF",
+        false
+      ],
+      [
+        "BVEG39",
+        "iShares MSCI Agriculture Producers ETF",
+        false
+      ],
+      [
+        "BVLU39",
+        "iShares MSCI USA Value Factor ETF",
+        false
+      ],
+      [
+        "BWCL39",
+        "WisdomTree Cloud Computing Fund",
+        false
+      ],
+      [
+        "BWOR39",
+        "Xtrackers MSCI World UCITS ETF",
+        true
+      ],
+      [
+        "BXTC39",
+        "iShares Future Exponential Technologies ETF",
+        false
+      ],
+      [
+        "BZRO39",
+        "PIMCO 25 Year Zero Coupon US Treasur Index Exch-TF",
+        false
+      ],
+      [
+        "CBTC39",
+        "21Shares Bitcoin Core ETP",
+        false
+      ],
+      [
+        "CHPX39",
+        "Global X AI Semiconductor & Quantum ETF",
+        false
+      ],
+      [
+        "COLO39",
+        "Global X MSCI Colombia ETF",
+        false
+      ],
+      [
+        "DOLL39",
+        "iShares 0-3 Month Treasury Bond ETF",
+        false
+      ],
+      [
+        "DTCR39",
+        "Global X Data Center & Digital Infrastructure ETF",
+        false
+      ],
+      [
+        "EART39",
+        "Global X Rare Earth & Critical Materials ETF",
+        false
+      ],
+      [
+        "EDEN39",
+        "iShares MSCI Denmark ETF",
+        false
+      ],
+      [
+        "EIDO39",
+        "iShares MSCI Indonesia ETF",
+        false
+      ],
+      [
+        "EPHE39",
+        "iShares MSCI Philippines ETF",
+        false
+      ],
+      [
+        "EPOL39",
+        "iShares MSCI Poland ETF",
+        false
+      ],
+      [
+        "ETHA39",
+        "iShares Ethereum Trust ETF",
+        false
+      ],
+      [
+        "ETHV39",
+        "Valour Ethereum (ETH) Zero SEK",
+        false
+      ],
+      [
+        "EWJV39",
+        "iShares MSCI Japan Value ETF",
+        false
+      ],
+      [
+        "EZBC39",
+        "Franklin Bitcoin ETF",
+        false
+      ],
+      [
+        "EZET39",
+        "Franklin Ethereum ETF",
+        false
+      ],
+      [
+        "FLTW39",
+        "Franklin FTSE Taiwan ETF",
+        false
+      ],
+      [
+        "FTIN39",
+        "Franklin FTSE India ETF",
+        false
+      ],
+      [
+        "G1TR39",
+        "abrdn Physical Precious Metals Basket Shares ETF",
+        false
+      ],
+      [
+        "GOEX39",
+        "Global X Gold Explorers ETF",
+        false
+      ],
+      [
+        "IBIT39",
+        "iShares Bitcoin Trust",
+        false
+      ],
+      [
+        "JEMA39",
+        "JPMorgan ActiveBuilders Emerging Markets Equity ETF",
+        false
+      ],
+      [
+        "JEPI39",
+        "JPMorgan Equity Premium Income ETF",
+        false
+      ],
+      [
+        "JGLO39",
+        "JPMorgan Global Select Equity ETF",
+        false
+      ],
+      [
+        "JIVE39",
+        "JPMorgan International Value ETF",
+        false
+      ],
+      [
+        "JMOM39",
+        "JPMorgan US Momentum Factor ETF",
+        false
+      ],
+      [
+        "JPEM39",
+        "JPMorgan Diversified Return Emerg Markt Equity ETF",
+        false
+      ],
+      [
+        "JPHY39",
+        "JPMorgan Active High Yield ETF",
+        false
+      ],
+      [
+        "JPIE39",
+        "JPMorgan Income ETF",
+        false
+      ],
+      [
+        "JPIN39",
+        "JPMorgan Diversified Return Internation Equity ETF",
+        false
+      ],
+      [
+        "JPME39",
+        "JPMorgan Diversified Return US Mid Cap Equity ETF",
+        false
+      ],
+      [
+        "JPST39",
+        "JPMorgan Ultra-Short Income ETF",
+        false
+      ],
+      [
+        "JPUS39",
+        "JPMorgan Diversified Return US Equity ETF",
+        false
+      ],
+      [
+        "JQUA39",
+        "JPMorgan US Quality Factor ETF",
+        false
+      ],
+      [
+        "JTEK39",
+        "JPMorgan US Tech Leaders ETF",
+        false
+      ],
+      [
+        "JUSG39",
+        "JPMorgan Active Growth ETF",
+        false
+      ],
+      [
+        "JVAL39",
+        "JPMorgan US Value Factor ETF",
+        false
+      ],
+      [
+        "ORBX39",
+        "Global X Space Tech ETF",
+        false
+      ],
+      [
+        "QTOP39",
+        "iShares Nasdaq Top 30 Stocks ETF",
+        false
+      ],
+      [
+        "RSSL39",
+        "Global X Russell 2000 ETF",
+        false
+      ],
+      [
+        "SHLD39",
+        "Global X Defense Tech ETF",
+        false
+      ],
+      [
+        "SIVR39",
+        "abrdn Physical Silver Shares ETF",
+        false
+      ],
+      [
+        "SMIN39",
+        "iShares MSCI India Small-Cap ETF",
+        false
+      ],
+      [
+        "SOLN39",
+        "21Shares Solana Staking ETP",
+        false
+      ],
+      [
+        "TBIL39",
+        "Global X 1-3 Month T-Bill ETF",
+        false
+      ],
+      [
+        "TOPB39",
+        "iShares Top 20 US Stocks ETF",
+        false
+      ],
+      [
+        "TURK39",
+        "iShares MSCI Turkey ETF",
+        false
+      ],
+      [
+        "USIG39",
+        "iShares Broad USD Investment Grade Corp Bond ETF",
+        false
+      ],
+      [
+        "USPX39",
+        "Franklin U.S. Equity Index ETF",
+        false
+      ],
+      [
+        "VSOL39",
+        "Valour Solana (SOL) SEK",
+        false
+      ],
+      [
+        "VSUI39",
+        "Valour SUI (SUI) SEK",
+        false
+      ],
+      [
+        "XRPV39",
+        "Valour Ripple (XRP) SEK",
+        false
+      ]
+    ]
+  }
+}

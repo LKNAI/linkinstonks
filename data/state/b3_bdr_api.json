@@ -1,0 +1,1629 @@
+{
+  "itens": {
+    "50000": {
+      "dep": "BRADESCO",
+      "nome": "VANECK J.P. MORGAN EM LOCAL CURRENCY BOND ETF",
+      "ticker": "EMLC39"
+    },
+    "50001": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES USD GREEN BOND ETF",
+      "ticker": "BBGR39"
+    },
+    "50004": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CONVERTIBLE BOND ETF",
+      "ticker": "BICV39"
+    },
+    "50005": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MBS ETF",
+      "ticker": "BMBB39"
+    },
+    "50006": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES ESG AWARE US AGGREGATE BOND ETF",
+      "ticker": "BEAG39"
+    },
+    "50007": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES FALLEN ANGELS USD BOND ETF",
+      "ticker": "BFAL39"
+    },
+    "50009": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE 80/20 AGGRESSIVE ALLOCATION ETF",
+      "ticker": "BAOA39"
+    },
+    "50010": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE 30/70 CONSERVATIVE ALLOCATION ETF",
+      "ticker": "BAOK39"
+    },
+    "50011": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES EMERGING MARKETS DIVIDEND ETF",
+      "ticker": "BDVE39"
+    },
+    "50012": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI EMERGING MARKETS EX CHINA ETF",
+      "ticker": "BEMC39"
+    },
+    "50013": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES TREASURY FLOATING RATE BOND ETF",
+      "ticker": "BTFL39"
+    },
+    "50014": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES AAA - A RATED CORPORATE BOND ETF",
+      "ticker": "BQLT39"
+    },
+    "50015": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE U.S. AGGREGATE BOND ETF",
+      "ticker": "BAGG39"
+    },
+    "50017": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X US INFRASTRUCTURE DEVELOPMENT ETF",
+      "ticker": "BPVE39"
+    },
+    "50018": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 0-5 YEAR TIPS BOND ETF",
+      "ticker": "BSTI39"
+    },
+    "50019": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES TIPS BOND ETF",
+      "ticker": "BTIP39"
+    },
+    "50020": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GSCI COMMODITY DYNAMIC ROLL STRATEGY ETF",
+      "ticker": "BCOM39"
+    },
+    "50021": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES INTERNATIONAL SELECT DIVIDEND ETF",
+      "ticker": "BIDV39"
+    },
+    "50022": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE 60/40 BALANCED ALLOCATION ETF",
+      "ticker": "BAOR39"
+    },
+    "50023": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE 40/60 MODERATE ALLOCATION ETF",
+      "ticker": "BAOM39"
+    },
+    "50025": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X LITHIUM & BATTERY TECH ETF",
+      "ticker": "BLBT39"
+    },
+    "50031": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "WISDOMTREE FLOATING RATE TREASURY FUND",
+      "ticker": "BUSF39"
+    },
+    "50033": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X VIDEO GAMES & ESPORTS ETF",
+      "ticker": "BHER39"
+    },
+    "50034": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "WISDOMTREE YIELD ENHANCED US AGGREGATE BOND FUND",
+      "ticker": "BAGY39"
+    },
+    "50035": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X ARTIFICIAL INTELLIGENCE & TECHNOLOGY ETF",
+      "ticker": "BAIQ39"
+    },
+    "50036": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES BITCOIN TRUST",
+      "ticker": "IBIT39"
+    },
+    "50037": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES ETHEREUM TRUST ETF",
+      "ticker": "ETHA39"
+    },
+    "50038": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X 1-3 MONTH T-BILL ETF",
+      "ticker": "TBIL39"
+    },
+    "50039": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST SMID CAP RISING DIVIDEND ACHIEVERS ETF",
+      "ticker": "BSDY39"
+    },
+    "50041": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X MLP & ENERGY INFRASTRUCTURE ETF",
+      "ticker": "BLPX39"
+    },
+    "50042": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST NASDAQ CLEANEDGE SMART GRID INFRA FUND",
+      "ticker": "BGRI39"
+    },
+    "50043": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST RBA AMERICAN INDL RENAISSANCE ETF",
+      "ticker": "BAIR39"
+    },
+    "50044": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "KRANESHARES CSI CHINA INTERNET ETF",
+      "ticker": "BKWB39"
+    },
+    "50045": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "KRANESHARES BOSERA MSCI CHINA A 50 CONNECT IDX ETF",
+      "ticker": "BKBA39"
+    },
+    "50046": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST NASDAQ AI AND ROBOTICS ETF",
+      "ticker": "BROB39"
+    },
+    "50047": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST WATER ETF",
+      "ticker": "BFIW39"
+    },
+    "50048": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 10-20 YEAR TREASURY BOND ETF",
+      "ticker": "BTLH39"
+    },
+    "50049": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 25 YEAR TREASURY STRIPS BOND ETF",
+      "ticker": "BGOZ39"
+    },
+    "50050": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE INTERNATIONAL AGGREGATE BOND ETF",
+      "ticker": "BIAG39"
+    },
+    "50052": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES INTERNATIONAL TREASURY BOND ETF",
+      "ticker": "BIGO39"
+    },
+    "50053": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 10 YEAR INVESTM GRADE CORPORATE BOND ETF",
+      "ticker": "BIGL39"
+    },
+    "50054": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES U.S. REGIONAL BANKS ETF",
+      "ticker": "BIAT39"
+    },
+    "50055": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI USA EQUAL WEIGHTED ETF",
+      "ticker": "BEUW39"
+    },
+    "50056": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE MSCI TOTAL INTERNATIONAL STOCK ETF",
+      "ticker": "BIXU39"
+    },
+    "50057": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GLOBAL 100 ETF",
+      "ticker": "BGLC39"
+    },
+    "50058": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI CHILE ETF",
+      "ticker": "BECH39"
+    },
+    "50060": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST EMERGING MARKETS ALPHADEX FUND",
+      "ticker": "BFEM39"
+    },
+    "50061": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST GROWTH STRENGTH ETF",
+      "ticker": "BFTG39"
+    },
+    "50062": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ABRDN PHYSICAL PRECIOUS METALS BASKET SHARES ETF",
+      "ticker": "G1TR39"
+    },
+    "50063": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES TOP 20 US STOCKS ETF",
+      "ticker": "TOPB39"
+    },
+    "50064": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES NASDAQ TOP 30 STOCKS ETF",
+      "ticker": "QTOP39"
+    },
+    "50065": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES S&P SMALL-CAP 600 GROWTH ETF",
+      "ticker": "BIJT39"
+    },
+    "50066": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI USA QUALITY GARP ETF",
+      "ticker": "BGAR39"
+    },
+    "50068": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X MLP ETF",
+      "ticker": "BLPA39"
+    },
+    "50069": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US BROKERDEALER & SECURITIES EXCHANGES ETF",
+      "ticker": "BIAI39"
+    },
+    "50070": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES U.S. INSURANCE ETF",
+      "ticker": "BIAK39"
+    },
+    "50071": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES U.S. OIL EQUIPMENT & SERVICES ETF",
+      "ticker": "BIEZ39"
+    },
+    "50072": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES U.S. TELECOMMUNICATIONS ETF",
+      "ticker": "BIYZ39"
+    },
+    "50073": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI ACWI EX U.S. ETF",
+      "ticker": "ACWX39"
+    },
+    "50074": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES RUSSELL 1000 VALUE ETF",
+      "ticker": "BIWD39"
+    },
+    "50076": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X AUTONOMOUS & ELECTRIC VEHICLES ETF",
+      "ticker": "BDRI39"
+    },
+    "50077": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI DENMARK ETF",
+      "ticker": "EDEN39"
+    },
+    "50078": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI INDONESIA ETF",
+      "ticker": "EIDO39"
+    },
+    "50079": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI ISRAEL ETF",
+      "ticker": "BEIS39"
+    },
+    "50080": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI PHILIPPINES ETF",
+      "ticker": "EPHE39"
+    },
+    "50081": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI POLAND ETF",
+      "ticker": "EPOL39"
+    },
+    "50082": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI PERU AND GLOBAL EXPOSURE ETF",
+      "ticker": "BEPU39"
+    },
+    "50084": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X COPPER MINERS ETF",
+      "ticker": "BCPX39"
+    },
+    "50085": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI SWEDEN ETF",
+      "ticker": "BEWD39"
+    },
+    "50086": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI ITALY ETF",
+      "ticker": "BEWI39"
+    },
+    "50087": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI JAPAN VALUE ETF",
+      "ticker": "EWJV39"
+    },
+    "50088": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI MALAYSIA ETF",
+      "ticker": "BEWM39"
+    },
+    "50089": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI NETHERLANDS ETF",
+      "ticker": "BEWN39"
+    },
+    "50090": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI AUSTRIA ETF",
+      "ticker": "BEWO39"
+    },
+    "50092": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X SUPERDIVIDEND ETF",
+      "ticker": "BSDV39"
+    },
+    "50093": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI SINGAPORE ETF",
+      "ticker": "BEWS39"
+    },
+    "50094": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI SOUTH AFRICA ETF",
+      "ticker": "BEZA39"
+    },
+    "50095": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI INDIA SMALL-CAP ETF",
+      "ticker": "SMIN39"
+    },
+    "50096": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI THAILAND ETF",
+      "ticker": "BTHD39"
+    },
+    "50097": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI TURKEY ETF",
+      "ticker": "TURK39"
+    },
+    "50098": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI UAE ETF",
+      "ticker": "BUAE39"
+    },
+    "50099": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES BROAD USD INVESTMENT GRADE CORP BOND ETF",
+      "ticker": "USIG39"
+    },
+    "50101": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "21SHARES CRYPTO BASKET INDEX ETP",
+      "ticker": "BASK39"
+    },
+    "50102": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "21SHARES ETHEREUM STAKING ETP",
+      "ticker": "AETH39"
+    },
+    "50103": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "21SHARES SOLANA STAKING ETP",
+      "ticker": "SOLN39"
+    },
+    "50104": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "21SHARES CARDANO ETP",
+      "ticker": "AADA39"
+    },
+    "50106": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X SILVER MINERS ETF",
+      "ticker": "BSIL39"
+    },
+    "50107": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "21SHARES XRP ETP",
+      "ticker": "AXRP39"
+    },
+    "50109": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN EQUITY PREMIUM INCOME ETF",
+      "ticker": "JEPI39"
+    },
+    "50110": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "21SHARES BITCOIN CORE ETP",
+      "ticker": "CBTC39"
+    },
+    "50114": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X FINTECH ETF",
+      "ticker": "BFNX39"
+    },
+    "50118": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X DEFENSE TECH ETF",
+      "ticker": "SHLD39"
+    },
+    "50119": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X GOLD EXPLORERS ETF",
+      "ticker": "GOEX39"
+    },
+    "50120": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X MSCI COLOMBIA ETF",
+      "ticker": "COLO39"
+    },
+    "50122": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X CLOUD COMPUTING ETF",
+      "ticker": "BCLO39"
+    },
+    "50123": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN US TECH LEADERS ETF",
+      "ticker": "JTEK39"
+    },
+    "50124": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FRANKLIN FTSE TAIWAN ETF",
+      "ticker": "FLTW39"
+    },
+    "50125": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FRANKLIN FTSE INDIA ETF",
+      "ticker": "FTIN39"
+    },
+    "50126": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FRANKLIN BITCOIN ETF",
+      "ticker": "EZBC39"
+    },
+    "50127": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FRANKLIN ETHEREUM ETF",
+      "ticker": "EZET39"
+    },
+    "50128": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FRANKLIN U.S. EQUITY INDEX ETF",
+      "ticker": "USPX39"
+    },
+    "50129": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X AI SEMICONDUCTOR & QUANTUM ETF",
+      "ticker": "CHPX39"
+    },
+    "50131": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X ROBOTICS & ARTIFICIAL INTELLIGENCE ETF",
+      "ticker": "BOTZ39"
+    },
+    "50132": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X RARE EARTH & CRITICAL MATERIALS ETF",
+      "ticker": "EART39"
+    },
+    "50133": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X SPACE TECH ETF",
+      "ticker": "ORBX39"
+    },
+    "50134": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN ACTIVE GROWTH ETF",
+      "ticker": "JUSG39"
+    },
+    "50135": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN ACTIVE HIGH YIELD ETF",
+      "ticker": "JPHY39"
+    },
+    "50136": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN GLOBAL SELECT EQUITY ETF",
+      "ticker": "JGLO39"
+    },
+    "50137": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN INCOME ETF",
+      "ticker": "JPIE39"
+    },
+    "50138": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN INTERNATIONAL VALUE ETF",
+      "ticker": "JIVE39"
+    },
+    "50139": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN ULTRA-SHORT INCOME ETF",
+      "ticker": "JPST39"
+    },
+    "50140": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN ACTIVEBUILDERS EMERGING MARKETS EQUITY ET",
+      "ticker": "JEMA39"
+    },
+    "50149": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X NASDAQ 100 COVERED CALL ETF",
+      "ticker": "BQYL39"
+    },
+    "50157": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X SOCIAL MEDIA ETF",
+      "ticker": "BSOC39"
+    },
+    "50165": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X CYBERSECURITY ETF",
+      "ticker": "BBUG39"
+    },
+    "50173": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X URANIUM ETF",
+      "ticker": "BURA39"
+    },
+    "50181": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X MSCI CHINA CONSUMER DISCRETIONARY ETF",
+      "ticker": "BCHQ39"
+    },
+    "50191": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X SUPERDIVIDEND US ETF",
+      "ticker": "BDVD39"
+    },
+    "50203": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST NASDAQ CLEAN EDGE GREEN ENERGY INDEX",
+      "ticker": "BQCL39"
+    },
+    "50211": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES IBOXX HIGH YIELD CORPORATE BOND ETF",
+      "ticker": "BHYG39"
+    },
+    "50221": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE UNIVERSAL USD BOND ETF",
+      "ticker": "BIUS39"
+    },
+    "50238": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES IBOXX INVESTMENT GRADE CORPORATE BOND ETF",
+      "ticker": "BLQD39"
+    },
+    "50246": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES ESG AWARE USD CORPORATE BOND ETF",
+      "ticker": "BSUC39"
+    },
+    "50254": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES FLOATING RATE BOND ETF",
+      "ticker": "BFLO39"
+    },
+    "50262": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US TREASURY BOND ETF",
+      "ticker": "BGOV39"
+    },
+    "50271": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 7-10 YEAR TREASURY BOND ETF",
+      "ticker": "BIYT39"
+    },
+    "50289": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 3-7 YEAR TREASURY BOND ETF",
+      "ticker": "BIEI39"
+    },
+    "50297": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 0-1 YEAR TREASURY BOND ETF",
+      "ticker": "BSHV39"
+    },
+    "50301": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 1-3 YEAR TREASURY BOND ETF",
+      "ticker": "BSHY39"
+    },
+    "50319": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 20 YEAR TREASURY BOND ETF",
+      "ticker": "BTLT39"
+    },
+    "50327": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ABRDN PHYSICAL SILVER SHARES ETF",
+      "ticker": "SIVR39"
+    },
+    "50335": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ABRDN PHYSICAL GOLD SHARES ETF",
+      "ticker": "ABGD39"
+    },
+    "50343": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "PIMCO 1TO5 YEAR U.S. TIPS INDEX EXCHANGE-TF",
+      "ticker": "BSTP39"
+    },
+    "50344": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "PIMCO BROAD U.S. TIPS INDEX EXCHANGE-TF",
+      "ticker": "BIPZ39"
+    },
+    "50345": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "PIMCO 15 YEAR U.S. TIPS INDEX EXCHANGE-TF",
+      "ticker": "BLTP39"
+    },
+    "50346": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "PIMCO INVESTMENT GRADE CORP BOND INDEX EXCH-TF",
+      "ticker": "BCRP39"
+    },
+    "50347": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "PIMCO 0-5 YEAR HIGH YIELD CORP BOND INDEX EXCH-TF",
+      "ticker": "BHYS39"
+    },
+    "50348": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "PIMCO 25 YEAR ZERO COUPON US TREASUR INDEX EXCH-TF",
+      "ticker": "BZRO39"
+    },
+    "50408": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE HIGH DIVIDEND ETF",
+      "ticker": "BHDV39"
+    },
+    "50416": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GLOBAL CONSUMER STAPLES ETF",
+      "ticker": "BKXI39"
+    },
+    "50424": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI CHINA A ETF",
+      "ticker": "BCNY39"
+    },
+    "50432": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI SAUDI ARABIA ETF",
+      "ticker": "BKSA39"
+    },
+    "50441": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES S&P SMALL-CAP 600 VALUE ETF",
+      "ticker": "BIJS39"
+    },
+    "50459": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US CONSUMER DISCRETIONARY ETF",
+      "ticker": "BIYC39"
+    },
+    "50467": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CYBERSECURITY AND TECH ETF",
+      "ticker": "BIHA39"
+    },
+    "50475": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MORTGAGE REAL ESTATE ETF",
+      "ticker": "BMRE39"
+    },
+    "50483": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI EUROPE FINANCIALS ETF",
+      "ticker": "BEUF39"
+    },
+    "50491": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES RESIDENTIAL MULTISECTOR REAL ESTATE ETF",
+      "ticker": "BREZ39"
+    },
+    "50505": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES SELF-DRIVING EV AND TECH ETF",
+      "ticker": "BIDR39"
+    },
+    "50513": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US CONSUMER STAPLES ETF",
+      "ticker": "BIYK39"
+    },
+    "50521": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GENOMICS IMMUNOLOGY AND HEALTHCARE ETF",
+      "ticker": "BIDN39"
+    },
+    "50531": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES LOW CARBON OPTIMIZED MSCI ACWI ETF",
+      "ticker": "BCRB39"
+    },
+    "50548": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI GLOBAL METALS & MINING PRODUCERS ETF",
+      "ticker": "BPIC39"
+    },
+    "50556": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES FUTURE AI & TECH ETF",
+      "ticker": "BARY39"
+    },
+    "50564": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI GLOBAL SUSTAINABLE DEVELOP GOALS ETF",
+      "ticker": "BSDG39"
+    },
+    "50572": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US INFRASTRUCTURE ETF",
+      "ticker": "BIFR39"
+    },
+    "50581": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US UTILITIES ETF",
+      "ticker": "BUTL39"
+    },
+    "50611": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X SUPERDIVIDEND REIT ETF",
+      "ticker": "BSRE39"
+    },
+    "50696": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN BETABUILDERS CANADA ETF",
+      "ticker": "BBCA39"
+    },
+    "50701": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN BETABUILDERS MSCI US REIT ETF",
+      "ticker": "BBMR39"
+    },
+    "50718": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN DIVERSIFIED RETURN INTERNATION EQUITY ETF",
+      "ticker": "JPIN39"
+    },
+    "50726": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN BETABUILDERS US MID CAP EQUITY ETF",
+      "ticker": "BBMC39"
+    },
+    "50734": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN BETABUILDERS US EQUITY ETF",
+      "ticker": "BBUS39"
+    },
+    "50742": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN US QUALITY FACTOR ETF",
+      "ticker": "JQUA39"
+    },
+    "50751": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN DIVERSIFIED RETURN US EQUITY ETF",
+      "ticker": "JPUS39"
+    },
+    "50769": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN DIVERSIFIED RETURN EMERG MARKT EQUITY ETF",
+      "ticker": "JPEM39"
+    },
+    "50777": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN US VALUE FACTOR ETF",
+      "ticker": "JVAL39"
+    },
+    "50785": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN DIVERSIFIED RETURN US MID CAP EQUITY ETF",
+      "ticker": "JPME39"
+    },
+    "50793": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN US MOMENTUM FACTOR ETF",
+      "ticker": "JMOM39"
+    },
+    "50807": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN DIVERSIFIED RETURN US SMALLCAP EQUITY ETF",
+      "ticker": "BDRE39"
+    },
+    "50808": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X BLOCKCHAIN ETF",
+      "ticker": "BKCH39"
+    },
+    "50809": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X CLIMATETECH ETF",
+      "ticker": "BCTE39"
+    },
+    "50810": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "PIMCO RAFI DYNAMIC MULTI-FACTOR EME ETF",
+      "ticker": "BMFE39"
+    },
+    "50811": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "WISDOMTREE CLOUD COMPUTING FUND",
+      "ticker": "BWCL39"
+    },
+    "50812": {
+      "dep": "BRADESCO",
+      "nome": "VANECK EMERGING MARKETS HIGH YIELD BOND ETF",
+      "ticker": "HYEM39"
+    },
+    "50813": {
+      "dep": "BRADESCO",
+      "nome": "VANECK FALLEN ANGEL HIGH YIELD BOND ETF",
+      "ticker": "ANGV39"
+    },
+    "50815": {
+      "dep": "BRADESCO",
+      "nome": "VANECK PREFERRED SECURITIES EX FINANCIALS ETF",
+      "ticker": "PFXF39"
+    },
+    "50816": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X US PREFERRED ETF",
+      "ticker": "BPFR39"
+    },
+    "50817": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X VARIABLE RATE PREFERRED ETF",
+      "ticker": "BPFV39"
+    },
+    "50818": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X S&P 500 CATHOLIC VALUES ETF",
+      "ticker": "BCAT39"
+    },
+    "50820": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 1-5 YEAR INVESTM GRADE CORPORATE BOND ETF",
+      "ticker": "BIGS39"
+    },
+    "50821": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 0-3 MONTH TREASURY BOND ETF",
+      "ticker": "DOLL39"
+    },
+    "50823": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES NORTH AMERICAN NATURAL RESOURCES ETF",
+      "ticker": "BIGE39"
+    },
+    "50825": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES EXPANDED TECH-SOFTWARE SECTOR ETF",
+      "ticker": "BIET39"
+    },
+    "50826": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES 0-5 YEAR HIGH YIELD CORPORATE BOND ETF",
+      "ticker": "BHYC39"
+    },
+    "50827": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GLOBAL ENERGY ETF",
+      "ticker": "BIXC39"
+    },
+    "50828": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES U.S. HOME CONSTRUCTION ETF",
+      "ticker": "BITB39"
+    },
+    "50829": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE MSCI PACIFIC ETF",
+      "ticker": "BIPC39"
+    },
+    "50831": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES U.S. INDUSTRIALS ETF",
+      "ticker": "BIYJ39"
+    },
+    "50832": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US PHARMACEUTICALS ETF",
+      "ticker": "BIHE39"
+    },
+    "50833": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES U.S. BASIC MATERIALS ETF",
+      "ticker": "BIYM39"
+    },
+    "50834": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES U.S. HEALTHCARE PROVIDERS ETF",
+      "ticker": "BIHF39"
+    },
+    "50835": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI AGRICULTURE PRODUCERS ETF",
+      "ticker": "BVEG39"
+    },
+    "50836": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US OIL & GAS EXPLORATION & PRODUCTION ETF",
+      "ticker": "BIEO39"
+    },
+    "50837": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI PACIFIC EX JAPAN ETF",
+      "ticker": "BEPP39"
+    },
+    "50838": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CURRENCY HEDGED MSCI EUROZONE ETF",
+      "ticker": "BHEZ39"
+    },
+    "50839": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CURRENCY HEDGED MSCI JAPAN ETF",
+      "ticker": "BHEW39"
+    },
+    "50840": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US TRANSPORTATION ETF",
+      "ticker": "BIYP39"
+    },
+    "50843": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "XTRACKERS MSCI CHINA UCITS ETF",
+      "ticker": "BCHA39"
+    },
+    "50844": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "XTRACKERS MSCI EMERGING MARKETS UCITS ETF",
+      "ticker": "BEME39"
+    },
+    "50845": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "XTRACKERS MSCI EUROPE UCITS ETF",
+      "ticker": "BEUR39"
+    },
+    "50846": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "XTRACKERS MSCI JAPAN UCITS ETF",
+      "ticker": "BJAP39"
+    },
+    "50847": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "XTRACKERS MSCI USA UCITS ETF",
+      "ticker": "BEUA39"
+    },
+    "50848": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "XTRACKERS MSCI WORLD ENERGY UCITS ETF",
+      "ticker": "BLUZ39"
+    },
+    "50850": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "XTRACKERS MSCI WORLD UCITS ETF",
+      "ticker": "BWOR39"
+    },
+    "50851": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "XTRACKERS MSCI WORLD VALUE UCITS ETF",
+      "ticker": "BUFF39"
+    },
+    "50852": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "XTRACKERS S&P 500 EQUAL WEIGHT UCITS ETF",
+      "ticker": "BEQW39"
+    },
+    "50854": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "XTRACKERS RUSSELL 2000 UCITS ETF",
+      "ticker": "BTWO39"
+    },
+    "53732": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X DATA CENTER & DIGITAL INFRASTRUCTURE ETF",
+      "ticker": "DTCR39"
+    },
+    "56197": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X MSCI ARGENTINA ETF",
+      "ticker": "ARGT39"
+    },
+    "56200": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X RUSSELL 2000 ETF",
+      "ticker": "RSSL39"
+    },
+    "57746": {
+      "dep": "ITAUBANCO - ACOES",
+      "nome": "XP INC.",
+      "ticker": "XPBR31"
+    },
+    "59390": {
+      "dep": "ITAUBANCO - ACOES",
+      "nome": "EQUIFAX INC.",
+      "ticker": "EFXB31"
+    },
+    "59391": {
+      "dep": "ITAUBANCO - ACOES",
+      "nome": "EVERTEC INC",
+      "ticker": "EVTC31"
+    },
+    "59420": {
+      "dep": "ITAUBANCO - ACOES",
+      "nome": "EXPERIAN PLC",
+      "ticker": "EXPB31"
+    },
+    "59422": {
+      "dep": "BRADESCO",
+      "nome": "EVE HOLDING. INC.",
+      "ticker": "EVEB31"
+    },
+    "59434": {
+      "dep": "BRADESCO",
+      "nome": "BRAZIL POTASH CORP.",
+      "ticker": "GROP31"
+    },
+    "59436": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "DEFI TECHNOLOGIES INC",
+      "ticker": "DEFT31"
+    },
+    "59441": {
+      "dep": "ITAUBANCO - ACOES",
+      "nome": "PROSUS N.V.",
+      "ticker": "PRXB31"
+    },
+    "59445": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "HOMERUN RESOURCES INC",
+      "ticker": "HMRN31"
+    },
+    "79006": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GOLD TRUST",
+      "ticker": "BIAU39"
+    },
+    "79014": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI EAFE ETF",
+      "ticker": "BEFA39"
+    },
+    "79022": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI EMERGING MARKETS ETF",
+      "ticker": "BEEM39"
+    },
+    "79030": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI ALL COUNTRY ASIA EX JAPAN ETF",
+      "ticker": "BAAX39"
+    },
+    "79049": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES SELECT DIVIDEND ETF",
+      "ticker": "BDVY39"
+    },
+    "79057": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES SILVER TRUST",
+      "ticker": "BSLV39"
+    },
+    "79065": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES RUSSELL 2000 ETF",
+      "ticker": "BIWM39"
+    },
+    "79073": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE S&P TOTAL US STOCK MARKET ETF",
+      "ticker": "BITO39"
+    },
+    "79081": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI USA MIN VOL FACTOR ETF",
+      "ticker": "BUSM39"
+    },
+    "79090": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI UNITED KINGDOM ETF",
+      "ticker": "BEWU39"
+    },
+    "79103": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI GERMANY ETF",
+      "ticker": "BEWG39"
+    },
+    "79111": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI MEXICO ETF",
+      "ticker": "BEWW39"
+    },
+    "79120": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI SPAIN ETF",
+      "ticker": "BEWP39"
+    },
+    "79138": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US AEROSPACE & DEFENSE ETF",
+      "ticker": "BAER39"
+    },
+    "79146": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES LATIN AMERICA 40 ETF",
+      "ticker": "BILF39"
+    },
+    "79154": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE S&P 500 ETF",
+      "ticker": "BIVB39"
+    },
+    "79162": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI ACWI ETF",
+      "ticker": "BACW39"
+    },
+    "79170": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE MSCI EAFE ETF",
+      "ticker": "BIEF39"
+    },
+    "79189": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE MSCI EMERGING MARKETS ETF",
+      "ticker": "BIEM39"
+    },
+    "79197": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US TECHNOLOGY ETF",
+      "ticker": "BIYW39"
+    },
+    "79200": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI JAPAN ETF",
+      "ticker": "BEWJ39"
+    },
+    "79219": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES US FINANCIALS ETF",
+      "ticker": "BIYF39"
+    },
+    "79227": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI CHINA ETF",
+      "ticker": "BCHI39"
+    },
+    "79235": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GLOBAL INFRASTRUCTURE ETF",
+      "ticker": "BIGF39"
+    },
+    "79243": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES FUTURE EXPONENTIAL TECHNOLOGIES ETF",
+      "ticker": "BXTC39"
+    },
+    "79251": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES ESG AWARE MSCI USA ETF",
+      "ticker": "BEGU39"
+    },
+    "79260": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES ESG AWARE MSCI EAFE ETF",
+      "ticker": "BEGD39"
+    },
+    "79278": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES ESG AWARE MSCI EM ETF",
+      "ticker": "BEGE39"
+    },
+    "79286": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES BIOTECHNOLOGY ETF",
+      "ticker": "BIBB39"
+    },
+    "79294": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE S&P MID-CAP ETF",
+      "ticker": "BIJH39"
+    },
+    "79308": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE S&P SMALL-CAP ETF",
+      "ticker": "BIJR39"
+    },
+    "79324": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GLOBAL HEALTHCARE ETF",
+      "ticker": "BIXJ39"
+    },
+    "79332": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GLOBAL TECH ETF",
+      "ticker": "BIXN39"
+    },
+    "79340": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI SOUTH KOREA ETF",
+      "ticker": "BEWY39"
+    },
+    "79359": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI HONG KONG ETF",
+      "ticker": "BEWH39"
+    },
+    "79367": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI TAIWAN ETF",
+      "ticker": "BEWT39"
+    },
+    "79375": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI INDIA ETF",
+      "ticker": "BNDA39"
+    },
+    "79383": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI BRAZIL ETF",
+      "ticker": "BEWZ39"
+    },
+    "79391": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI EUROZONE ETF",
+      "ticker": "BEZU39"
+    },
+    "79405": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE MSCI EUROPE ETF",
+      "ticker": "BIEU39"
+    },
+    "79430": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES EUROPE ETF",
+      "ticker": "BIEV39"
+    },
+    "79448": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES S&P 500 VALUE ETF",
+      "ticker": "BIVE39"
+    },
+    "79456": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES S&P 500 GROWTH ETF",
+      "ticker": "BIVW39"
+    },
+    "79464": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI EAFE MIN VOL FACTOR ETF",
+      "ticker": "BFAV39"
+    },
+    "79472": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CURRENCY HEDGED MSCI EAFE ETF",
+      "ticker": "BHEF39"
+    },
+    "79480": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI USA MOMENTUM FACTOR ETF",
+      "ticker": "BMTU39"
+    },
+    "79499": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI EMERGING MARKETS MIN VOL FACTOR ETF",
+      "ticker": "BEMV39"
+    },
+    "79502": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI USA QUALITY FACTOR ETF",
+      "ticker": "BQUA39"
+    },
+    "79510": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI USA SIZE FACTOR ETF",
+      "ticker": "BSIZ39"
+    },
+    "79529": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES U.S. MEDICAL DEVICES ETF",
+      "ticker": "BIHI39"
+    },
+    "79537": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI EAFE GROWTH ETF",
+      "ticker": "BEFG39"
+    },
+    "79545": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI USA VALUE FACTOR ETF",
+      "ticker": "BVLU39"
+    },
+    "79553": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES U.S. FINANCIAL SERVICES ETF",
+      "ticker": "BIYG39"
+    },
+    "79561": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI EAFE VALUE ETF",
+      "ticker": "BEFV39"
+    },
+    "79570": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES RUSSELL 1000 GROWTH ETF",
+      "ticker": "BIWF39"
+    },
+    "79588": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE DIVIDEND GROWTH ETF",
+      "ticker": "BGWH39"
+    },
+    "79596": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI GLOBAL MIN VOL FACTOR ETF",
+      "ticker": "BCWV39"
+    },
+    "79600": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CHINA LARGE-CAP ETF",
+      "ticker": "BFXI39"
+    },
+    "79618": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI CANADA ETF",
+      "ticker": "BEWC39"
+    },
+    "79626": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI AUSTRALIA ETF",
+      "ticker": "BEWA39"
+    },
+    "79634": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI SWITZERLAND ETF",
+      "ticker": "BEWL39"
+    },
+    "79642": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI FRANCE ETF",
+      "ticker": "BEWQ39"
+    },
+    "79650": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES CORE US REIT ETF",
+      "ticker": "BUSR39"
+    },
+    "79669": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GLOBAL REIT ETF",
+      "ticker": "BGRT39"
+    },
+    "79677": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES ESG MSCI USA LEADERS ETF",
+      "ticker": "BSUS39"
+    },
+    "79685": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST US EQUITY OPPORTUNITIES ETF",
+      "ticker": "BFPX39"
+    },
+    "79693": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST INTERNATIONAL EQUITY OPPORTUNITIES ETF",
+      "ticker": "BFPI39"
+    },
+    "79707": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST MORNINGSTAR DIVIDEND LEADERS INDEX",
+      "ticker": "BFDL39"
+    },
+    "79715": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST NASDAQ CYBERSECURITY ETF",
+      "ticker": "BCIR39"
+    },
+    "79723": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST NATURAL GAS ETF",
+      "ticker": "BFCG39"
+    },
+    "79731": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST LARGE CAP GROWTH ALPHADEX FUND",
+      "ticker": "BFTC39"
+    },
+    "79740": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST CAPITAL STRENGTH ETF",
+      "ticker": "BFTS39"
+    },
+    "79758": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST NASDAQ-100 SELECT EQUAL WEIGHT ETF",
+      "ticker": "BQQW39"
+    },
+    "79766": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST NASDAQ-100-TECHNOLOGY SECTOR INDEX",
+      "ticker": "BQTC39"
+    },
+    "79774": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST RISING DIVIDEND ACHIEVERS ETF",
+      "ticker": "BFDA39"
+    },
+    "79782": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST CLOUD COMPUTING ETF",
+      "ticker": "BKYY39"
+    },
+    "79790": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST NYSE ARCA BIOTECHNOLOGY INDEX FUND",
+      "ticker": "BFBI39"
+    },
+    "79804": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST DOW JONES INTERNET INDEX FUND",
+      "ticker": "BFDN39"
+    },
+    "79805": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN BETABUILDERS EUROPE ETF",
+      "ticker": "BBEU39"
+    },
+    "79806": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN BETABUILDERS JAPAN ETF",
+      "ticker": "BBJP39"
+    },
+    "79807": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN BETABUILDERS INTERNATIONAL EQUITY ETF",
+      "ticker": "BBIL39"
+    },
+    "79808": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "JPMORGAN BETABUILDERS DEV ASIA PACIFIC-EX JPN ETF",
+      "ticker": "BBAX39"
+    },
+    "79809": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X INTERNET OF THINGS ETF",
+      "ticker": "BSNS39"
+    },
+    "79810": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X GENOMICS & BIOTECHNOLOGY ETF",
+      "ticker": "BGNO39"
+    },
+    "79811": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "GLOBAL X MILLENNIAL CONSUMER ETF",
+      "ticker": "BMIL39"
+    },
+    "79812": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST VALUE LINE DIVIDEND INDEX FUND",
+      "ticker": "BFVD39"
+    },
+    "79820": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST HEALTH CARE ALPHADEX FUND",
+      "ticker": "BFXH39"
+    },
+    "79839": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "FIRST TRUST TECHNOLOGY ALPHADEX FUND",
+      "ticker": "BFTA39"
+    },
+    "79847": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES S&P 100 ETF",
+      "ticker": "BOEF39"
+    },
+    "79855": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GLOBAL FINANCIALS ETF",
+      "ticker": "BIXG39"
+    },
+    "79863": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES U.S. ENERGY ETF",
+      "ticker": "BIYE39"
+    },
+    "79871": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI RUSSIA ETF",
+      "ticker": "BERU39"
+    },
+    "79880": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI EAFE SMALL-CAP ETF",
+      "ticker": "BSCZ39"
+    },
+    "79898": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES SEMICONDUCTOR ETF",
+      "ticker": "BSOX39"
+    },
+    "79901": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES GLOBAL CLEAN ENERGY ETF",
+      "ticker": "BICL39"
+    },
+    "79910": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES MSCI WORLD ETF",
+      "ticker": "BURT39"
+    },
+    "79928": {
+      "dep": "BANCO B3 S.A.",
+      "nome": "ISHARES ESG OPTIMIZED MSCI USA ETF",
+      "ticker": "BUSA39"
+    },
+    "79944": {
+      "dep": "BRADESCO",
+      "nome": "VANECK STEEL ETF",
+      "ticker": "SLXB39"
+    },
+    "79979": {
+      "dep": "BRADESCO",
+      "nome": "VANECK SOCIAL SENTIMENT ETF",
+      "ticker": "BUZZ39"
+    },
+    "79987": {
+      "dep": "BRADESCO",
+      "nome": "VANECK MORNINGSTAR WIDE MOAT ETF",
+      "ticker": "MOTB39"
+    },
+    "79995": {
+      "dep": "BRADESCO",
+      "nome": "VANECK GOLD MINERS ETF",
+      "ticker": "GDXB39"
+    },
+    "80152": {
+      "dep": "BRADESCO",
+      "nome": "PPLA PARTICIPATIONS LTD.",
+      "ticker": "PPLA11"
+    },
+    "80187": {
+      "dep": "BRADESCO",
+      "nome": "AURA MINERALS INC.",
+      "ticker": "AURA33"
+    },
+    "80195": {
+      "dep": "BRADESCO",
+      "nome": "G2D INVESTMENTS LTD",
+      "ticker": "G2DI33"
+    },
+    "80233": {
+      "dep": "BRADESCO",
+      "nome": "JBS N.V.",
+      "ticker": "JBSS32"
+    }
+  }
+}
