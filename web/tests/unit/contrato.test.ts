@@ -31,9 +31,7 @@ describe("contrato com o ETL", () => {
     expect(Object.keys(acaoSchema.shape).sort()).toEqual(Object.keys(comp.properties).sort());
     expect([...comp.required].sort()).toEqual(Object.keys(comp.properties).sort());
     const cvm = comp.properties.escriturador_cvm.oneOf[1].properties;
-    const zodCvm = (
-      acaoSchema.shape.escriturador_cvm.unwrap() as unknown as { shape: Record<string, unknown> }
-    ).shape;
+    const zodCvm = acaoSchema.shape.escriturador_cvm.def.innerType.shape;
     expect(Object.keys(zodCvm).sort()).toEqual(Object.keys(cvm).sort());
   });
 

@@ -3,7 +3,8 @@ import { corEscriturador } from "@/lib/colors";
 import { montarCsv } from "@/lib/csv";
 import { formatDate, formatInt, formatPct } from "@/lib/format";
 import { HISTORICO, HISTORICO_COR, SEGMENTO_COR, SEGMENTO_NOME, type Historico } from "@/lib/palette";
-import { CLASSES, type Acao } from "@/lib/schemas";
+import { CLASSES } from "@/lib/constantes";
+import type { Acao } from "@/lib/schemas";
 
 export const SEM_INFORMACAO = "Não informado";
 export const ANO_INICIAL = 2010;

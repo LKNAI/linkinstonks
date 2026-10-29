@@ -1,16 +1,16 @@
 // Contrato com o ETL (seção 10 do prompt). Espelha os JSON Schemas de `schemas/`; um teste garante que
 // os dois não divergem. Todo dado é validado aqui no carregamento.
-import { z } from "zod";
+import * as z from "zod/mini";
 
 // A CSP do site proíbe `eval`. Sem isto o zod v4 tenta compilar os schemas com `new Function` (JIT) e o
 // navegador registra uma violação em toda página. Com ~1.700 registros o custo do modo interpretado é desprezível.
 z.config({ jitless: true });
 
-const nomeOuNulo = z.string().nullable();
+const nomeOuNulo = z.nullable(z.string());
 
-export const SEGMENTOS = ["NM", "N2", "N1", "MP", "B", "SO", "BN", "?"] as const;
-export const CLASSES = ["ON", "PN", "PNA", "PNB", "PNC", "PND", "Units", "Outros"] as const;
-export const TIPOS_BDR = ["DRN", "DRE", "DR1", "DR2", "DR3"] as const;
+import { CLASSES, SEGMENTOS, TIPOS_BDR } from "@/lib/constantes";
+
+export { CLASSES, SEGMENTOS, TIPOS_BDR };
 
 export const acaoSchema = z.object({
   codigo_cvm: z.string(),
@@ -29,18 +29,18 @@ export const acaoSchema = z.object({
     bruto_pn: z.string(),
   }),
   detalhe_b3: z.boolean(),
-  escriturador_cvm: z
-    .object({
+  escriturador_cvm: z.nullable(
+    z.object({
       atual: z.string(),
       inicio: z.string(),
       inicio_aproximado: z.boolean(),
       anterior: nomeOuNulo,
       anterior_inicio: nomeOuNulo,
       anterior_fim: nomeOuNulo,
-      anterior_ultimo_ano: z.number().int().nullable(),
-      n_escrituradores: z.number().int(),
-    })
-    .nullable(),
+      anterior_ultimo_ano: z.nullable(z.int()),
+      n_escrituradores: z.int(),
+    }),
+  ),
   divergente_b3_cvm: z.boolean(),
   situacao_cvm: nomeOuNulo,
 });
@@ -59,33 +59,33 @@ export const bdrSchema = z.object({
   fonte_depositaria: z.string(),
   categoria: z.string(),
   qualificado: z.boolean(),
-  primeiro_pregao: z.string().nullable(),
+  primeiro_pregao: z.nullable(z.string()),
   ultimo_pregao: z.string(),
   ultimo_preco: z.number(),
-  negocios_24m: z.number().int(),
-  volume_24m: z.number().int(),
-  volume_mensal: z.array(z.number().int()),
-  volume_mes_parcial: z.number().int().nullable(),
+  negocios_24m: z.int(),
+  volume_24m: z.int(),
+  volume_mensal: z.array(z.int()),
+  volume_mes_parcial: z.nullable(z.int()),
 });
 
 export const bdrsDocSchema = z.object({
   schema_version: z.literal(1),
   meses: z.array(z.string()),
-  mes_parcial: z.string().nullable(),
+  mes_parcial: z.nullable(z.string()),
   bdrs: z.array(bdrSchema),
 });
 
 export const metaSchema = z.object({
   schema_version: z.literal(1),
-  datasets: z.record(z.string(), z.object({ atualizado_em: z.string(), contagem: z.number().int() })),
+  datasets: z.record(z.string(), z.object({ atualizado_em: z.string(), contagem: z.int() })),
   fontes: z.record(
     z.string(),
     z.object({
       status: z.enum(["ok", "desatualizado", "erro"]),
-      ultimo_sucesso: z.string().nullable(),
-      contagem: z.number().int().optional(),
-      ultimo_pregao: z.string().optional(),
-      mensagem: z.string().optional(),
+      ultimo_sucesso: z.nullable(z.string()),
+      contagem: z.optional(z.int()),
+      ultimo_pregao: z.optional(z.string()),
+      mensagem: z.optional(z.string()),
     }),
   ),
 });
@@ -115,8 +115,8 @@ export const passagemSchema = z.object({
   inicio: nomeOuNulo,
   inicio_aproximado: z.boolean(),
   fim: nomeOuNulo,
-  primeiro_ano: z.number().int(),
-  ultimo_ano: z.number().int(),
+  primeiro_ano: z.int(),
+  ultimo_ano: z.int(),
   fonte: z.string(),
 });
 

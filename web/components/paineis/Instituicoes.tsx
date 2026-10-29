@@ -12,7 +12,7 @@ import { derivarBdrs } from "@/lib/bdrs";
 import { corDepositaria } from "@/lib/colors";
 import { useDados } from "@/lib/data";
 import { formatDinheiro, formatInt, formatPct } from "@/lib/format";
-import { acoesDocSchema, bdrsDocSchema } from "@/lib/schemas";
+
 import { hojeEmBrasilia } from "@/lib/stale";
 
 const PERIODOS = [
@@ -22,8 +22,8 @@ const PERIODOS = [
 ];
 
 export function Instituicoes() {
-  const a = useDados("acoes.json", acoesDocSchema);
-  const b = useDados("bdrs.json", bdrsDocSchema);
+  const a = useDados("acoes.json");
+  const b = useDados("bdrs.json");
   const [periodo, setPeriodo] = useState("2010");
   const anoRef = Number(hojeEmBrasilia().slice(0, 4));
 

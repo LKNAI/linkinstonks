@@ -11,7 +11,7 @@ import { Donut } from "@/components/charts/Donut";
 import { TipConteudo } from "@/components/charts/Tooltip";
 import { Alternador, Busca, Chips } from "@/components/filters/Controles";
 import { Carregando, ErroDados, Hero, KpiGrid } from "@/components/layout/Pagina";
-import { DataTable } from "@/components/table/DataTable";
+import { DataTable } from "@/components/table/DataTableLazy";
 import {
   DIMS,
   FILTROS_PADRAO,
@@ -39,7 +39,7 @@ import { baixarCsv } from "@/lib/csv";
 import { useDados } from "@/lib/data";
 import { formatDate, formatInt, formatPct } from "@/lib/format";
 import { SEGMENTO_NOME } from "@/lib/palette";
-import { acoesDocSchema, type Acao } from "@/lib/schemas";
+import { type Acao } from "@/lib/schemas";
 import { hojeEmBrasilia } from "@/lib/stale";
 import { useEstadoUrl, type Codec } from "@/lib/url-state";
 import { colunasAcoes } from "./celulas-acoes";
@@ -70,7 +70,7 @@ const ORDEM_MARCAS = Object.keys(COR_ESCRITURADOR);
 const COLUNAS = colunasAcoes(false);
 
 export function PainelAcoes() {
-  const d = useDados("acoes.json", acoesDocSchema);
+  const d = useDados("acoes.json");
   if (d.estado === "carregando") return <Carregando />;
   if (d.estado === "erro") return <ErroDados mensagem={d.mensagem} />;
   return <Conteudo acoes={d.dados.companhias} />;

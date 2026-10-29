@@ -4,13 +4,13 @@
 import { useMemo } from "react";
 import { Alternador, Busca, Seletor } from "@/components/filters/Controles";
 import { Carregando, ErroDados } from "@/components/layout/Pagina";
-import { DataTable } from "@/components/table/DataTable";
+import { DataTable } from "@/components/table/DataTableLazy";
 import { NOME_ARQUIVO_CSV_ACOES, csvAcoes, derivar, ordenar, type AcaoRow, type Ordem } from "@/lib/acoes";
 import { baixarCsv } from "@/lib/csv";
 import { useDados } from "@/lib/data";
 import { formatInt } from "@/lib/format";
 import { HISTORICO, SEGMENTO_COR, SEGMENTO_NOME } from "@/lib/palette";
-import { acoesDocSchema } from "@/lib/schemas";
+
 import { useEstadoUrl, type Codec } from "@/lib/url-state";
 import { colunasAcoes } from "./celulas-acoes";
 
@@ -70,7 +70,7 @@ const contar = (
 const COLUNAS = colunasAcoes(true);
 
 export function TabelaAcoes() {
-  const d = useDados("acoes.json", acoesDocSchema);
+  const d = useDados("acoes.json");
   if (d.estado === "carregando") return <Carregando />;
   if (d.estado === "erro") return <ErroDados mensagem={d.mensagem} />;
   return <Conteudo acoes={d.dados.companhias} />;

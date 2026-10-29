@@ -6,7 +6,7 @@ import { Carregando, ErroDados } from "@/components/layout/Pagina";
 import { Migalhas } from "@/components/paineis/Detalhe";
 import { useDados } from "@/lib/data";
 import { formatDate, formatDinheiro, formatInt } from "@/lib/format";
-import { bdrsDocSchema, metaSchema } from "@/lib/schemas";
+
 import { diasEntre, fontesDesatualizadas, hojeEmBrasilia } from "@/lib/stale";
 
 const NOME_FONTE: Record<string, string> = {
@@ -20,8 +20,8 @@ const NOME_FONTE: Record<string, string> = {
 };
 
 export function Status() {
-  const meta = useDados("meta.json", metaSchema);
-  const bdrs = useDados("bdrs.json", bdrsDocSchema);
+  const meta = useDados("meta.json");
+  const bdrs = useDados("bdrs.json");
   if (meta.estado === "erro") return <ErroDados mensagem={meta.mensagem} />;
   if (bdrs.estado === "erro") return <ErroDados mensagem={bdrs.mensagem} />;
   if (meta.estado !== "ok" || bdrs.estado !== "ok") return <Carregando />;

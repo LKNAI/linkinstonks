@@ -6,7 +6,7 @@ import { Logo } from "./Logo";
 import { usePathname } from "next/navigation";
 import { useDados } from "@/lib/data";
 import { formatDate } from "@/lib/format";
-import { metaSchema } from "@/lib/schemas";
+
 import { fontesDesatualizadas, hojeEmBrasilia, ultimaAtualizacao } from "@/lib/stale";
 
 const LINKS = [
@@ -49,7 +49,7 @@ export function SiteHeader() {
 }
 
 export function StaleBanner() {
-  const meta = useDados("meta.json", metaSchema);
+  const meta = useDados("meta.json");
   if (meta.estado !== "ok") return null;
   const atrasos = fontesDesatualizadas(meta.dados, hojeEmBrasilia());
   if (!atrasos.length) return null;
@@ -62,7 +62,7 @@ export function StaleBanner() {
 }
 
 export function SiteFooter() {
-  const meta = useDados("meta.json", metaSchema);
+  const meta = useDados("meta.json");
   const data = meta.estado === "ok" ? ultimaAtualizacao(meta.dados) : null;
   return (
     <footer className="site-footer">

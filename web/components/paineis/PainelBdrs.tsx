@@ -11,7 +11,8 @@ import { Sparkline } from "@/components/charts/Sparkline";
 import { TipConteudo } from "@/components/charts/Tooltip";
 import { Busca, Chips, Segmentado } from "@/components/filters/Controles";
 import { Carregando, ErroDados, Hero, KpiGrid } from "@/components/layout/Pagina";
-import { DataTable, type ColunaSpec } from "@/components/table/DataTable";
+import { DataTable } from "@/components/table/DataTableLazy";
+import type { ColunaSpec } from "@/components/table/DataTable";
 import {
   COLUNAS_TEXTO,
   DIMS_BDR,
@@ -51,7 +52,7 @@ import {
   variacao,
 } from "@/lib/format";
 import { TIPO_GRUPO_COR, TIPO_GRUPO_NOME, type TipoGrupo } from "@/lib/palette";
-import { bdrsDocSchema } from "@/lib/schemas";
+
 import { useEstadoUrl, type Codec } from "@/lib/url-state";
 
 export const codecBdrs: Codec<FiltrosBdrs> = {
@@ -83,7 +84,7 @@ export const codecBdrs: Codec<FiltrosBdrs> = {
 };
 
 export function PainelBdrs() {
-  const d = useDados("bdrs.json", bdrsDocSchema);
+  const d = useDados("bdrs.json");
   if (d.estado === "carregando") return <Carregando />;
   if (d.estado === "erro") return <ErroDados mensagem={d.mensagem} />;
   return <Conteudo meses={d.dados.meses} bdrs={d.dados.bdrs} />;

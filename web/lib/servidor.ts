@@ -2,7 +2,7 @@
 // Lê web/public/data (copiado de data/public pelo `prebuild`), sem sair da pasta web.
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import type { ZodType } from "zod";
+import type { ZodMiniType } from "zod/mini";
 import {
   acoesDocSchema,
   bdrsDocSchema,
@@ -15,7 +15,7 @@ import {
 
 const cache = new Map<string, unknown>();
 
-export function lerPublico<T>(arquivo: string, schema: ZodType<T>): T {
+export function lerPublico<T>(arquivo: string, schema: ZodMiniType<T>): T {
   if (!cache.has(arquivo)) {
     const bruto = readFileSync(join(process.cwd(), "public", "data", arquivo), "utf8");
     cache.set(arquivo, schema.parse(JSON.parse(bruto)));

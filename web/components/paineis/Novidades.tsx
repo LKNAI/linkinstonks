@@ -9,7 +9,7 @@ import { Migalhas } from "@/components/paineis/Detalhe";
 import { useDados } from "@/lib/data";
 import { formatDate, formatInt } from "@/lib/format";
 import { diasEntre, hojeEmBrasilia } from "@/lib/stale";
-import { eventosDocSchema, type Evento } from "@/lib/schemas";
+import { type Evento } from "@/lib/schemas";
 
 export const ROTULO_TIPO: Record<string, string> = {
   nova_listagem: "Nova listagem",
@@ -36,7 +36,7 @@ function linkDoEvento(e: Evento): string {
 }
 
 export function Novidades() {
-  const d = useDados("eventos.json", eventosDocSchema);
+  const d = useDados("eventos.json");
   const [tipo, setTipo] = useState("");
   const [dataset, setDataset] = useState("");
   const [periodo, setPeriodo] = useState("");

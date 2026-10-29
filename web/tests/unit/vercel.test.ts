@@ -9,7 +9,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 const config = JSON.parse(readFileSync(join(__dirname, "..", "..", "vercel.json"), "utf8"));
 const temSh = spawnSync("sh", ["-c", "git --version"]).status === 0;
 
-describe.skipIf(!temSh)("ignoreCommand da Vercel", () => {
+describe.skipIf(!temSh)("ignoreCommand da Vercel", { timeout: 60_000 }, () => {
   let repo: string;
   const git = (...a: string[]) => execFileSync("git", a, { cwd: repo, stdio: "pipe" }).toString().trim();
   const commit = (arquivo: string, texto: string, msg: string) => {

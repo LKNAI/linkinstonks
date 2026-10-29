@@ -7,7 +7,7 @@ import { derivar, kpisAcoes, type Kpi } from "@/lib/acoes";
 import { derivarBdrs, kpisBdrs } from "@/lib/bdrs";
 import { useDados } from "@/lib/data";
 import { formatDate, formatInt } from "@/lib/format";
-import { acoesDocSchema, bdrsDocSchema, eventosDocSchema, metaSchema } from "@/lib/schemas";
+
 import { hojeEmBrasilia } from "@/lib/stale";
 
 const NOME_FONTE: Record<string, string> = {
@@ -21,10 +21,10 @@ const NOME_FONTE: Record<string, string> = {
 };
 
 export function Capa() {
-  const acoes = useDados("acoes.json", acoesDocSchema);
-  const bdrs = useDados("bdrs.json", bdrsDocSchema);
-  const meta = useDados("meta.json", metaSchema);
-  const eventos = useDados("eventos.json", eventosDocSchema);
+  const acoes = useDados("acoes.json");
+  const bdrs = useDados("bdrs.json");
+  const meta = useDados("meta.json");
+  const eventos = useDados("eventos.json");
   const erro = [acoes, bdrs, meta].find((e) => e.estado === "erro");
   if (erro?.estado === "erro") return <ErroDados mensagem={erro.mensagem} />;
   if (acoes.estado !== "ok" || bdrs.estado !== "ok" || meta.estado !== "ok") return <Carregando />;
