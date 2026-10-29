@@ -43,7 +43,7 @@ export function Capa() {
     <div className="dash">
       <Hero
         selo="B3 + CVM · dados abertos"
-        titulo="Painel B3: escrituradores e BDRs"
+        titulo="linkinstonks: escrituradores e BDRs"
         texto="Quem escritura cada ação listada na B3 e qual banco é depositário de cada BDR, com histórico de trocas e volume mensal. Os dados se atualizam sozinhos a partir das fontes oficiais."
       />
       <div className="wrap">

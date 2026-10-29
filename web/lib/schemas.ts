@@ -105,3 +105,20 @@ export type Acao = z.infer<typeof acaoSchema>;
 export type Bdr = z.infer<typeof bdrSchema>;
 export type Meta = z.infer<typeof metaSchema>;
 export type Evento = z.infer<typeof eventoSchema>;
+
+export const passagemSchema = z.object({
+  instituicao: z.string(),
+  inicio: nomeOuNulo,
+  inicio_aproximado: z.boolean(),
+  fim: nomeOuNulo,
+  primeiro_ano: z.number().int(),
+  ultimo_ano: z.number().int(),
+  fonte: z.string(),
+});
+
+export const historicoDocSchema = z.object({
+  schema_version: z.literal(1),
+  companhias: z.record(z.string(), z.array(passagemSchema)),
+});
+
+export type Passagem = z.infer<typeof passagemSchema>;

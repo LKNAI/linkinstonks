@@ -38,6 +38,12 @@ const rotas = [
   ["acoes", "/acoes/"],
   ["acoes-tabela", "/acoes/tabela/"],
   ["bdrs", "/bdrs/"],
+  ["acao-detalhe", "/acoes/9512/"],
+  ["bdr-detalhe", "/bdrs/TSLA34/"],
+  ["instituicoes", "/instituicoes/"],
+  ["novidades", "/novidades/"],
+  ["status", "/status/"],
+  ["sobre", "/sobre/"],
 ];
 const telas = [
   ["1440", { width: 1440, height: 900 }],
@@ -55,7 +61,7 @@ for (const [tela, viewport] of telas) {
     pagina.on("pageerror", (e) => problemas.push(e.message));
     pagina.on("response", (r) => r.status() === 404 && problemas.push(`404 ${r.url()}`));
     await pagina.goto(`http://127.0.0.1:${porta}${rota}`, { waitUntil: "networkidle" });
-    await pagina.waitForSelector(".kpi, .dtable", { timeout: 15000 });
+    await pagina.waitForSelector(".kpi, .dtable, .stats-table, .prose, .state, .tl, .mcols, .dl", { timeout: 15000 });
     await pagina.waitForTimeout(600);
     const larg = await pagina.evaluate(() => [
       document.documentElement.scrollWidth,

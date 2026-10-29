@@ -1,6 +1,7 @@
 "use client";
 
 // /bdrs: paridade total com seed/html/dashboard_bdrs_b3.html.
+import Link from "next/link";
 import { useMemo } from "react";
 import { BarList } from "@/components/charts/BarList";
 import { ChartCard } from "@/components/charts/ChartCard";
@@ -104,7 +105,9 @@ function colunas(meses: readonly string[], showM: boolean, inicioJanela: string)
       fixa: true,
       celula: (d) => (
         <div className="co">
-          <span className="tk">{d.ticker}</span>
+          <Link href={`/bdrs/${d.ticker}/`} prefetch={false} className="tk">
+            {d.ticker}
+          </Link>
           {d.qualificado ? (
             <span className="qual" title="Restrito a investidores qualificados">
               QUALIF.

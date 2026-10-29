@@ -13,6 +13,10 @@ const LINKS = [
   { href: "/acoes/", texto: "Ações" },
   { href: "/acoes/tabela/", texto: "Tabela de ações" },
   { href: "/bdrs/", texto: "BDRs" },
+  { href: "/instituicoes/", texto: "Instituições" },
+  { href: "/novidades/", texto: "Novidades" },
+  { href: "/status/", texto: "Status" },
+  { href: "/sobre/", texto: "Sobre" },
 ];
 
 export function SiteHeader() {
@@ -23,7 +27,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-x-6 gap-y-1 px-4 py-2.5 sm:px-7">
         <Link prefetch={false} href="/" className="text-[15px] font-extrabold tracking-tight">
-          Painel B3
+          linkinstonks
         </Link>
         <nav aria-label="Principal" className="flex flex-wrap gap-x-4 gap-y-1 text-[13px] font-semibold">
           {LINKS.map((l) => (

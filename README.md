@@ -9,7 +9,7 @@ Site público, em português, com dois painéis:
 
 Os dados vêm de fontes públicas da **B3** e da **CVM** e se atualizam sozinhos pelo GitHub Actions. Custo zero: site estático na Vercel, ETL no GitHub Actions, dados versionados neste repositório. Uso não comercial. Não é recomendação de investimento.
 
-> **Estado:** Fases 0 a 4 concluídas (a 4 aguarda revisão). O ETL de ações e de BDRs funciona contra as fontes vivas e reproduz o protótipo (`seed/`), e o site tem a capa, `/acoes`, `/acoes/tabela` e `/bdrs` com paridade com os dashboards do seed. Faltam as páginas novas (Fase 5), a automação e o deploy (Fase 6). Plano em `PROMPT_PAINEL_B3.md`, decisões em `docs/`.
+> **Estado:** Fases 0 a 5 concluídas (a 5 aguarda revisão). O ETL de ações e de BDRs funciona contra as fontes vivas e reproduz o protótipo (`seed/`), e o site tem os painéis com paridade com o seed, a página de cada companhia e de cada BDR, instituições, novidades (com feed Atom), status e sobre. Faltam a automação e o deploy (Fase 6). Plano em `PROMPT_PAINEL_B3.md`, decisões em `docs/`.
 
 ## Como rodar
 Requisitos: [uv](https://docs.astral.sh/uv/), [pnpm](https://pnpm.io/) e Node 20.19+.

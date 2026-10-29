@@ -9,7 +9,7 @@ const jakarta = Plus_Jakarta_Sans({ variable: "--font-jakarta", subsets: ["latin
 const jetbrains = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: { default: "Painel B3", template: "%s · Painel B3" },
+  title: { default: "linkinstonks", template: "%s · linkinstonks" },
   description:
     "Escrituradores de ações e depositárias de BDRs na B3, a partir de dados públicos da B3 e da CVM.",
 };

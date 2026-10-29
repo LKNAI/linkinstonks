@@ -5,6 +5,12 @@ const ROTAS = [
   { rota: "/acoes/", pronto: ".kpi" },
   { rota: "/acoes/tabela/", pronto: ".dtable tbody tr" },
   { rota: "/bdrs/", pronto: ".kpi" },
+  { rota: "/instituicoes/", pronto: ".stats-table tbody tr" },
+  { rota: "/novidades/", pronto: ".state, .stats-table" },
+  { rota: "/status/", pronto: ".stats-table tbody tr" },
+  { rota: "/sobre/", pronto: ".prose" },
+  { rota: "/acoes/9512/", pronto: ".tl li" },
+  { rota: "/bdrs/TSLA34/", pronto: ".mcols .mc" },
 ];
 
 function ouvirErros(page: Page): string[] {

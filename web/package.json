@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/copy-data.mjs && node scripts/gen-colors.mjs",
+    "prebuild": "node scripts/copy-data.mjs && node scripts/gen-colors.mjs && node scripts/gen-feed.mjs",
     "build": "next build",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",

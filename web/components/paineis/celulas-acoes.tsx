@@ -1,4 +1,5 @@
 // Colunas da tabela de ações, compartilhadas por /acoes e /acoes/tabela (paridade com o seed).
+import Link from "next/link";
 import type { ColunaSpec } from "@/components/table/DataTable";
 import { detalheAnterior, textoDesde, type AcaoRow } from "@/lib/acoes";
 import { corEscriturador } from "@/lib/colors";
@@ -17,7 +18,11 @@ export function Banco({ nome }: { nome: string | null | undefined }) {
 function CelulaEmpresa({ d }: { d: AcaoRow }) {
   return (
     <div className="co">
-      <b>{d.pregao}</b>
+      <b>
+        <Link href={`/acoes/${d.codigo_cvm}/`} prefetch={false}>
+          {d.pregao}
+        </Link>
+      </b>
       <div>{d.razao_social}</div>
       <span className="cd">{d.emissor}</span>
     </div>
