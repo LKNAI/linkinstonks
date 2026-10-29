@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="linkinstonks-grad" x1="2" y1="2" x2="46" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b2bc4" />
+      <stop offset="0.55" stop-color="#6250d6" />
+      <stop offset="1" stop-color="#b444b5" />
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="13" fill="url(#linkinstonks-grad)" />
+  <path d="M11 34 L19.5 25.5 L26 31 L36.5 15.5" fill="none" stroke="#ffffff" stroke-opacity="0.95" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M29.5 14.5 H37 V22" fill="none" stroke="#ffffff" stroke-opacity="0.95" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="11" cy="34" r="3.6" fill="#ffffff" />
+  <circle cx="19.5" cy="25.5" r="3.6" fill="#ffffff" />
+  <circle cx="26" cy="31" r="3.6" fill="#fde68a" stroke="#fbbf24" stroke-width="0.8" />
+</svg>

@@ -2,6 +2,7 @@
 
 // Cabeçalho, faixa de dados desatualizados e rodapé (com a data real do meta.json) de todas as páginas.
 import Link from "next/link";
+import { Logo } from "./Logo";
 import { usePathname } from "next/navigation";
 import { useDados } from "@/lib/data";
 import { formatDate } from "@/lib/format";
@@ -26,8 +27,8 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-x-6 gap-y-1 px-4 py-2.5 sm:px-7">
-        <Link prefetch={false} href="/" className="text-[15px] font-extrabold tracking-tight">
-          linkinstonks
+        <Link prefetch={false} href="/" aria-label="linkinstonks" className="inline-flex items-center">
+          <Logo />
         </Link>
         <nav aria-label="Principal" className="flex flex-wrap gap-x-4 gap-y-1 text-[13px] font-semibold">
           {LINKS.map((l) => (
