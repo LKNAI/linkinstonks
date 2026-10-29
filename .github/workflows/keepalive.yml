@@ -1,0 +1,36 @@
+# O GitHub desativa workflows agendados em repositório público após 60 dias sem atividade (um push conta).
+# Os commits de dados do ETL já contam; este workflow só age se o repositório ficar parado (ex.: fontes fora do ar).
+name: keepalive
+
+on:
+  schedule:
+    - cron: "17 6 15 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Commit vazio se o último commit tem mais de 45 dias
+        run: |
+          idade=$(( ( $(date +%s) - $(git log -1 --format=%ct) ) / 86400 ))
+          echo "Último commit há ${idade} dias."
+          if [ "$idade" -gt 45 ]; then
+            git config user.name "painel-b3-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git commit --allow-empty -m "chore: keepalive (sem atividade há ${idade} dias)"
+            git push
+          fi
+      - name: Garantir que os agendamentos estão ativos
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for w in etl-daily.yml etl-weekly.yml etl-monthly.yml; do
+            gh workflow enable "$w" || echo "não foi possível reativar $w"
+          done

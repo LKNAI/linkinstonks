@@ -1,0 +1,123 @@
+# Workflow reutilizável do ETL. Os agendamentos (etl-daily, etl-weekly, etl-monthly) só o chamam.
+# Fluxo: roda o ETL -> valida os JSON Schemas -> commita só se houver mudança em data/ -> resumo e Issues.
+# A concorrência (group: etl) fica nos chamadores: repetir o mesmo grupo aqui causaria impasse.
+name: etl
+
+on:
+  workflow_call:
+    inputs:
+      dataset:
+        type: string
+        default: all
+      weekly:
+        type: boolean
+        default: false
+      monthly:
+        type: boolean
+        default: false
+      date:
+        type: string
+        default: ""
+      timeout:
+        type: number
+        default: 30
+
+jobs:
+  etl:
+    runs-on: ubuntu-latest
+    timeout-minutes: ${{ inputs.timeout }}
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          enable-cache: true
+          cache-dependency-glob: etl/uv.lock
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .cache/raw
+          key: etl-raw-${{ github.run_id }}
+          restore-keys: etl-raw-
+      - name: Instalar dependências do ETL
+        working-directory: etl
+        run: uv sync --frozen
+
+      - name: Rodar o ETL
+        id: etl
+        working-directory: etl
+        env:
+          DATASET: ${{ inputs.dataset }}
+          WEEKLY: ${{ inputs.weekly }}
+          MONTHLY: ${{ inputs.monthly }}
+          DATA: ${{ inputs.date }}
+        run: |
+          # O código de saída vai para um output: o commit dos dados bons e as Issues acontecem mesmo se uma fonte falhar.
+          set +e
+          args=(--report-json ../.cache/report.json --summary-md ../.cache/summary.md)
+          [ -n "$DATA" ] && args+=(--date "$DATA")
+          if [ "$MONTHLY" = "true" ]; then
+            uv run painel-etl monthly "${args[@]}"
+          else
+            [ "$WEEKLY" = "true" ] && args+=(--weekly)
+            uv run painel-etl run --dataset "$DATASET" "${args[@]}"
+          fi
+          echo "codigo=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Validar os arquivos publicados (JSON Schema)
+        id: validar
+        continue-on-error: true
+        working-directory: etl
+        run: uv run painel-etl validate
+
+      - name: Commitar se houve mudança em data/
+        if: steps.validar.outcome == 'success'
+        env:
+          DATA: ${{ inputs.date }}
+        run: |
+          git config user.name "painel-b3-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data
+          if git diff --cached --quiet; then
+            echo "Sem mudanças em data/: nenhum commit."
+            exit 0
+          fi
+          msg=$(cd etl && uv run painel-etl commit-message --report ../.cache/report.json)
+          git commit -m "$msg"
+          for tentativa in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && exit 0
+            sleep $((tentativa * 5))
+          done
+          echo "::error::Não foi possível enviar o commit de dados"
+          exit 1
+
+      - name: Resumo da execução
+        if: always()
+        working-directory: etl
+        run: |
+          [ -f ../.cache/summary.md ] && cat ../.cache/summary.md >> "$GITHUB_STEP_SUMMARY"
+          uv run painel-etl report >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: Issues de qualidade (uma por fonte)
+        if: always()
+        working-directory: etl
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f ../.cache/report.json ]; then
+            uv run painel-etl issues --report ../.cache/report.json
+          else
+            echo "Sem relatório da execução; nenhuma Issue alterada."
+          fi
+
+      - name: Falhar o job se o ETL ou a validação falharam
+        if: always()
+        env:
+          CODIGO: ${{ steps.etl.outputs.codigo }}
+          VALIDACAO: ${{ steps.validar.outcome }}
+        run: |
+          if [ "${CODIGO:-1}" != "0" ] || [ "$VALIDACAO" != "success" ]; then
+            echo "::error::ETL (código ${CODIGO:-?}) ou validação (${VALIDACAO}) falhou; veja o resumo e as Issues data-quality."
+            exit 1
+          fi

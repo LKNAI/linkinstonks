@@ -46,6 +46,8 @@ jobs:
       - run: uv run mypy
       # Os testes nunca acessam a rede (conftest.py bloqueia sockets).
       - run: uv run pytest --cov --cov-report=term-missing
+      # Os dados publicados em data/public têm de respeitar os JSON Schemas
+      - run: uv run painel-etl validate
 
   web:
     runs-on: ubuntu-latest

@@ -1,0 +1,32 @@
+# Mensal, dia 5 ~08h07 BRT: reconcilia o COTAHIST do mês fechado (arquivo oficial M) e guarda o snapshot mensal.
+name: etl-monthly
+
+on:
+  schedule:
+    - cron: "7 11 5 * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Data de referência AAAA-MM-DD; o mês reconciliado é o anterior a ela (vazio = hoje)"
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: etl
+  cancel-in-progress: false
+
+jobs:
+  etl:
+    permissions:
+      contents: write
+      issues: write
+    uses: ./.github/workflows/etl.yml
+    with:
+      dataset: all
+      weekly: true
+      monthly: true
+      date: ${{ inputs.date || '' }}
+      timeout: 60

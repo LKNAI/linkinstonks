@@ -1,0 +1,41 @@
+# Diário, de segunda a sexta ~22h23 BRT (01:23 UTC de terça a sábado). O COTAHIST do dia sai por volta de 20h30 BRT.
+name: etl-daily
+
+on:
+  schedule:
+    - cron: "23 1 * * 2-6"
+  workflow_dispatch:
+    inputs:
+      dataset:
+        description: "Dataset a atualizar"
+        type: choice
+        options: [all, acoes, bdrs]
+        default: all
+      date:
+        description: "Data de referência AAAA-MM-DD (vazio = hoje em Brasília)"
+        type: string
+        default: ""
+      weekly:
+        description: "Rodar também a rotina semanal (revisita todos os detalhes e as listas de depositárias)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: etl
+  cancel-in-progress: false
+
+jobs:
+  etl:
+    permissions:
+      contents: write
+      issues: write
+    uses: ./.github/workflows/etl.yml
+    with:
+      dataset: ${{ inputs.dataset || 'all' }}
+      weekly: ${{ inputs.weekly || false }}
+      monthly: false
+      date: ${{ inputs.date || '' }}
+      timeout: 30
