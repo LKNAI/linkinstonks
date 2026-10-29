@@ -2,6 +2,12 @@
 
 Guia para colocar o linkinstonks no ar e mantê-lo. A Parte 1 são os passos que **você** executa (eu não tenho como criar o repositório nem o projeto na Vercel por você). A Parte 2 é o runbook do dia a dia.
 
+## Estado atual (2026-10-29)
+- **Repositório criado e publicado:** https://github.com/LKNAI/linkinstonks (público). Permissões do Actions em "leitura e escrita", Issues ligadas. A pasta local `various/` ficou fora do Git (`.git/info/exclude`).
+- **CI:** o primeiro CI real no GitHub passou inteiro (ETL em 17 s; lint, tipos, testes, build e e2e do site).
+- **Acesso às fontes a partir do GitHub (`probe`):** todas responderam como esperado, sem precisar do plano B da seção 9.4: B3 (lista, detalhes, BDRs, COTAHIST diário e mensal), CVM (FCA e cadastro), Banco B3 e Bradesco. **Novidade: a página de BDR do Itaú respondeu 200 no runner do GitHub** (daqui, do computador local, dava 403). A subpágina com a lista (`/investmentservices/escrituracao/bdr/programas-nao-patrocinados/`) ainda não foi consultada; a decisão de manter o Itaú só por curadoria manual pode ser revista.
+- **Pendente:** conectar a Vercel (Parte 1, passo 3) e rodar a semana simulada (passo 4).
+
 ## Parte 1. Passos para publicar
 
 ### 1. Criar o repositório (uma vez)
