@@ -59,6 +59,26 @@ class Resultado:
     erro: str = ""
     avisos: list[str] = field(default_factory=list)
     fontes: dict[str, dict[str, Any]] = field(default_factory=dict)
+    nao_mapeados: list[str] = field(default_factory=list)
+
+    def como_dict(self) -> dict[str, Any]:
+        """Forma serializável para o relatório da execução (`--report-json`)."""
+        q = self.relatorio
+        return {
+            "dataset": self.dataset,
+            "publicado": self.publicado,
+            "mudou": self.mudou,
+            "contagem": self.contagem,
+            "eventos": self.eventos,
+            "erro": self.erro,
+            "avisos": self.avisos,
+            "fontes": self.fontes,
+            "nao_mapeados": self.nao_mapeados,
+            "qualidade": {
+                "erros": [{"codigo": i.codigo, "mensagem": i.mensagem} for i in q.erros] if q else [],
+                "avisos": [{"codigo": i.codigo, "mensagem": i.mensagem} for i in q.avisos] if q else [],
+            },
+        }
 
 
 def _listadas(ctx: Contexto) -> list[ListedCompany]:
@@ -125,6 +145,7 @@ def run_acoes(ctx: Contexto) -> Resultado:
     companhias, historico, nao_mapeados = ds_acoes.construir(
         acoes_b3, detalhes, cvm_fca.carregar_historico(), cad, reg, previo
     )
+    res.nao_mapeados = nao_mapeados
     if nao_mapeados:
         res.avisos.append(f"escrituradores não mapeados (incluir em config/instituicoes.yaml): {nao_mapeados}")
 
@@ -268,6 +289,7 @@ def run_bdrs(ctx: Contexto) -> Resultado:
         particoes, meses, parcial_ok, etfs=etfs, deps_api=deps_api, nomes_api=nomes_api, finservices=fin,
         overrides=ds_bdrs.ler_overrides(), reg=reg,
     )  # fmt: skip
+    res.nao_mapeados = nao_mapeados
     if nao_mapeados:
         res.avisos.append(f"depositárias da API não mapeadas (incluir em config/instituicoes.yaml): {nao_mapeados}")
     rel = ds_bdrs.validar(bdrs, len(previo) or None, ctx.hoje)
@@ -386,3 +408,43 @@ def run(ctx: Contexto, datasets: list[str]) -> list[Resultado]:
     publicar_eventos(ctx)
     atualizar_meta(ctx, resultados)
     return resultados
+
+
+def relatorio_execucao(ctx: Contexto, resultados: list[Resultado]) -> dict[str, Any]:
+    """Relatório da execução, lido pelos passos seguintes do workflow (commit, Issues, resumo)."""
+    return {"data": ctx.hoje.isoformat(), "resultados": [r.como_dict() for r in resultados]}
+
+
+def mensal(ctx: Contexto) -> Resultado:
+    """Rotina mensal: reconcilia o COTAHIST do mês fechado (arquivo oficial `M`) e guarda um snapshot imutável."""
+    import gzip
+
+    res = Resultado("mensal")
+    anterior = ctx.hoje.replace(day=1) - dt.timedelta(days=1)
+    mes = f"{anterior:%Y-%m}"
+    try:
+        parte = b3_cotahist.ler_particao(mes, ctx.raiz / "history" / "bdr_volume")
+        if parte is None or parte["fonte"] != "mensal":
+            m = b3_cotahist.processar_mensal(
+                ctx.http("b3_cotahist"),
+                anterior.year,
+                anterior.month,
+                cache=ctx.cache / "b3_cotahist",
+                pasta=ctx.raiz / "history" / "bdr_volume",
+            )
+            res.fontes["b3_cotahist"] = {"status": "ok" if m["status"] == "ok" else "desatualizado"}
+            if m["status"] != "ok":
+                res.avisos.append(f"COTAHIST mensal de {mes} ainda não publicado")
+            elif m.get("alerta"):
+                res.avisos.append(f"COTAHIST {mes}: diário e mensal diferem {m['diferenca_vs_diario']:.2%} (> 0,5%)")
+            res.mudou |= bool(m.get("mudou"))
+        snap = ctx.raiz / "history" / "snapshots" / mes
+        for nome in ("acoes", "bdrs"):
+            origem = pub(ctx.raiz) / "downloads" / f"{nome}.csv"
+            destino = snap / f"{nome}.csv.gz"
+            if origem.exists() and not destino.exists():  # snapshot é imutável: só cria se não existir
+                res.mudou |= pio.write_bytes(destino, gzip.compress(origem.read_bytes(), compresslevel=9, mtime=0))
+        res.publicado = True
+    except Exception as e:
+        res.erro = f"{type(e).__name__}: {e}"
+    return res
