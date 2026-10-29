@@ -3,7 +3,7 @@
 Guia para agentes (e pessoas) neste repositório. `CLAUDE.md` aponta para este arquivo. Mantenha-o atualizado com os comandos reais.
 
 ## O que é
-Painel B3: site estático (Next.js, Vercel) que mostra escrituradores de ações e depositárias de BDRs, alimentado por um ETL em Python que roda no GitHub Actions a partir de fontes públicas da B3 e da CVM. Especificação completa: `PROMPT_PAINEL_B3.md`. Estado e decisões: `docs/`.
+linkinstonks (antigo Painel B3): site estático (Next.js, Vercel) que mostra escrituradores de ações e depositárias de BDRs, alimentado por um ETL em Python que roda no GitHub Actions a partir de fontes públicas da B3 e da CVM. Especificação completa: `PROMPT_PAINEL_B3.md`. Estado e decisões: `docs/`.
 
 ## Regras que não se negociam
 - **`seed/` é somente leitura.** Nunca editar nem apagar (o CI falha em PR que a altere). Também não reescrever `data/history/`; `data/events/` é append-only.
@@ -33,7 +33,8 @@ docs/  arquitetura, fontes, paridade, decisoes/ (ADRs)
 | testes web | `cd web && pnpm test` |
 | lint/tipos web | `cd web && pnpm lint && pnpm typecheck && pnpm format:check` |
 | build estático | `cd web && pnpm build` (roda `prebuild`: copia `data/public` → `web/public/data`) |
-| e2e | `cd web && pnpm test:e2e` (precisa do build; `pnpm exec playwright install chromium` na 1ª vez) |
+| e2e | `cd web && pnpm test:e2e` (precisa do build; `pnpm exec playwright install chromium` na 1ª vez; inclui acessibilidade com axe) |
+| orçamento de JS | `cd web && pnpm build && pnpm budget` (≤ 200 KB gzip por rota; roda no CI) |
 | sondar fontes | `cd etl && uv run painel-etl probe [fonte]` (usa a rede; regrava fixtures) |
 | rodar o ETL | `cd etl && uv run painel-etl run [--dataset acoes\|bdrs\|all] [--weekly] [--dry-run] [--date AAAA-MM-DD]` (usa a rede; `--weekly` revisita todos os detalhes e atualiza as listas de depositárias) |
 | carga histórica | `painel-etl backfill cotahist --from 2024-10` · `painel-etl backfill fca --from 2010` |
@@ -62,4 +63,4 @@ Sem `make` (Windows): rode os comandos da tabela.
 - A chave confiável de BDR na API da B3 é `typeBDR`, não `type`.
 
 ## Fases
-0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade ✅ · 5 páginas novas ✅ · 6 automação e deploy ✅ (em revisão) · 7 endurecimento. Cada fase termina com relatório; só avançar com autorização do dono.
+0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade ✅ · 5 páginas novas ✅ · 6 automação e deploy ✅ · 7 endurecimento (em andamento: ver `docs/qualidade.md`). Cada fase termina com relatório; só avançar com autorização do dono.

@@ -108,7 +108,7 @@ export function Chips({
 }) {
   return (
     <>
-      <div className="chips" aria-label="Filtros ativos">
+      <div className="chips" role="group" aria-label="Filtros ativos">
         {chips.map((c) => (
           <button
             key={c.id}

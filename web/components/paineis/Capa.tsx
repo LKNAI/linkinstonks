@@ -2,7 +2,7 @@
 
 // Capa: KPIs dos dois painéis, data da última atualização por fonte, últimos eventos e atalhos.
 import Link from "next/link";
-import { Carregando, ErroDados, Hero, KpiGrid } from "@/components/layout/Pagina";
+import { Carregando, ErroDados, KpiGrid, PaginaComHero, type HeroProps } from "@/components/layout/Pagina";
 import { derivar, kpisAcoes, type Kpi } from "@/lib/acoes";
 import { derivarBdrs, kpisBdrs } from "@/lib/bdrs";
 import { useDados } from "@/lib/data";
@@ -20,6 +20,13 @@ const NOME_FONTE: Record<string, string> = {
   cvm_cad: "CVM · Cadastro de companhias",
 };
 
+const HERO: HeroProps = {
+  selo: "B3 + CVM · dados abertos",
+  titulo: "linkinstonks: escrituradores e BDRs",
+  texto:
+    "Quem escritura cada ação listada na B3 e qual banco é depositário de cada BDR, com histórico de trocas e volume mensal. Os dados se atualizam sozinhos a partir das fontes oficiais.",
+};
+
 export function Capa() {
   const acoes = useDados("acoes.json");
   const bdrs = useDados("bdrs.json");
@@ -27,7 +34,12 @@ export function Capa() {
   const eventos = useDados("eventos.json");
   const erro = [acoes, bdrs, meta].find((e) => e.estado === "erro");
   if (erro?.estado === "erro") return <ErroDados mensagem={erro.mensagem} />;
-  if (acoes.estado !== "ok" || bdrs.estado !== "ok" || meta.estado !== "ok") return <Carregando />;
+  if (acoes.estado !== "ok" || bdrs.estado !== "ok" || meta.estado !== "ok")
+    return (
+      <PaginaComHero hero={HERO}>
+        <Carregando comHero />
+      </PaginaComHero>
+    );
 
   const linhasA = derivar(acoes.dados.companhias);
   const linhasB = derivarBdrs(bdrs.dados.bdrs);
@@ -40,12 +52,7 @@ export function Capa() {
   }));
 
   return (
-    <div className="dash">
-      <Hero
-        selo="B3 + CVM · dados abertos"
-        titulo="linkinstonks: escrituradores e BDRs"
-        texto="Quem escritura cada ação listada na B3 e qual banco é depositário de cada BDR, com histórico de trocas e volume mensal. Os dados se atualizam sozinhos a partir das fontes oficiais."
-      />
+    <PaginaComHero hero={HERO}>
       <div className="wrap">
         <KpiGrid kpis={destaques} />
         <div className="grid" style={{ marginTop: 24 }}>
@@ -111,6 +118,6 @@ export function Capa() {
           </section>
         </div>
       </div>
-    </div>
+    </PaginaComHero>
   );
 }

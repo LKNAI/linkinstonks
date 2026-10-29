@@ -10,7 +10,7 @@ import { Donut } from "@/components/charts/Donut";
 import { Sparkline } from "@/components/charts/Sparkline";
 import { TipConteudo } from "@/components/charts/Tooltip";
 import { Busca, Chips, Segmentado } from "@/components/filters/Controles";
-import { Carregando, ErroDados, Hero, KpiGrid } from "@/components/layout/Pagina";
+import { Carregando, ErroDados, KpiGrid, PaginaComHero, type HeroProps } from "@/components/layout/Pagina";
 import { DataTable } from "@/components/table/DataTableLazy";
 import { linkDoMes, origemDoMes, type FontesVolume } from "@/lib/fonte-volume";
 import type { ColunaSpec } from "@/components/table/DataTable";
@@ -52,7 +52,13 @@ import {
   rotuloMes,
   variacao,
 } from "@/lib/format";
-import { TIPO_GRUPO_COR, TIPO_GRUPO_NOME, type TipoGrupo } from "@/lib/palette";
+import {
+  TIPO_GRUPO_COR,
+  TIPO_GRUPO_NOME,
+  legivelSobreBranco,
+  textoSobre,
+  type TipoGrupo,
+} from "@/lib/palette";
 
 import { useEstadoUrl, type Codec } from "@/lib/url-state";
 
@@ -84,17 +90,29 @@ export const codecBdrs: Codec<FiltrosBdrs> = {
   },
 };
 
+const HERO: HeroProps = {
+  selo: "Dados abertos B3",
+  titulo: "BDRs na B3: quem emite e quanto negocia",
+  texto:
+    "Todos os BDRs com negócios nos últimos 24 meses: tickers, tipo de programa, instituição depositária (o banco emissor) e volume financeiro mensal. Clique nos gráficos para filtrar o painel inteiro.",
+};
+
 export function PainelBdrs() {
   const d = useDados("bdrs.json");
-  if (d.estado === "carregando") return <Carregando />;
   if (d.estado === "erro") return <ErroDados mensagem={d.mensagem} />;
+  if (d.estado === "carregando")
+    return (
+      <PaginaComHero hero={HERO}>
+        <Carregando comHero />
+      </PaginaComHero>
+    );
+  const m = d.dados.meses;
   return (
-    <Conteudo
-      meses={d.dados.meses}
-      bdrs={d.dados.bdrs}
-      fontes={d.dados.fontes_volume}
-      pagina={d.dados.pagina_fonte}
-    />
+    <PaginaComHero
+      hero={{ ...HERO, selo: `Dados abertos B3 · ${rotuloMes(m[0])} – ${rotuloMes(m[m.length - 1])}` }}
+    >
+      <Conteudo meses={m} bdrs={d.dados.bdrs} fontes={d.dados.fontes_volume} pagina={d.dados.pagina_fonte} />
+    </PaginaComHero>
   );
 }
 
@@ -137,7 +155,10 @@ function colunas(
       titulo: "Tipo",
       celula: (d) => (
         <>
-          <span className="type" style={{ background: TIPO_GRUPO_COR[d.T] }}>
+          <span
+            className="type"
+            style={{ background: TIPO_GRUPO_COR[d.T], color: textoSobre(TIPO_GRUPO_COR[d.T]) }}
+          >
             {d.tipo}
           </span>
           {d.C ? (
@@ -327,12 +348,7 @@ function Conteudo({
   const tipos: TipoGrupo[] = ["DRN", "DRE", "SPO"];
 
   return (
-    <div className="dash">
-      <Hero
-        selo={`Dados abertos B3 · ${rotuloMes(meses[0])} – ${rot}`}
-        titulo="BDRs na B3: quem emite e quanto negocia"
-        texto="Todos os BDRs com negócios nos últimos 24 meses: tickers, tipo de programa, instituição depositária (o banco emissor) e volume financeiro mensal. Clique nos gráficos para filtrar o painel inteiro."
-      />
+    <>
       <div className="wrap">
         <KpiGrid kpis={kpis} />
 
@@ -573,7 +589,7 @@ function Conteudo({
               </div>
               {conc.cortes.map((c) => (
                 <div className="cstat" key={c.n}>
-                  <b style={{ color: c.cor }}>
+                  <b style={{ color: legivelSobreBranco(c.cor) }}>
                     {(c.parte * 100).toLocaleString("pt-BR", { maximumFractionDigits: 1 })}%
                   </b>
                   <span>do volume {c.n === 1 ? "no maior BDR" : `nos ${c.n} maiores BDRs`}</span>
@@ -665,7 +681,7 @@ function Conteudo({
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

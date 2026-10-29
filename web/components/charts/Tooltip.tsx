@@ -71,7 +71,14 @@ export function TooltipProvider({ children }: { children: ReactNode }) {
   return (
     <Ctx.Provider value={api}>
       {children}
-      <div id="tip" ref={ref} role="tooltip" className={e.on ? "on" : ""} style={{ left: e.x, top: e.y }}>
+      <div
+        id="tip"
+        ref={ref}
+        role={e.on ? "tooltip" : undefined}
+        aria-hidden={e.on ? undefined : true}
+        className={e.on ? "on" : ""}
+        style={{ left: e.x, top: e.y }}
+      >
         {e.conteudo}
       </div>
     </Ctx.Provider>

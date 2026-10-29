@@ -99,7 +99,7 @@ function Conteudo({ acoes }: { acoes: Parameters<typeof derivar>[0] }) {
     [todas.length, "empresas emissoras de ações", "#6250d6"],
     [todas.filter((d) => d.tickers.length).length, "com ticker de ações", "#0B3D91"],
     [tickers, "tickers no total", "#EC7000"],
-    [comCvm.length, "com histórico na CVM", "#1baf7a"],
+    [comCvm.length, "com histórico na CVM", "#0a7a50"],
     [trocaram, "trocaram de escriturador desde 2010", "#CC092F"],
   ];
   const bancos = contar(todas, (d) => d.b);

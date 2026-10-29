@@ -2,6 +2,7 @@
 // (CSP, cache...), para que os testes rodem sob a política de segurança real.
 // Uso: node scripts/serve.mjs [porta]
 import { createReadStream, existsSync, readFileSync, statSync } from "node:fs";
+import { createGzip } from "node:zlib";
 import { createServer } from "node:http";
 import { dirname, extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -45,6 +46,15 @@ const servidor = createServer((req, res) => {
   if (!achou) arq = join(raiz, "404.html");
   const cab = { "content-type": tipos[extname(arq)] ?? "application/octet-stream" };
   for (const r of regras) if (r.re.test(url)) for (const h of r.headers) cab[h.key.toLowerCase()] = h.value;
+  // A Vercel comprime texto; aqui também, para que Lighthouse e tamanhos de transferência sejam fiéis.
+  const comprimivel = /^(text\/|application\/(json|xml|javascript))/.test(cab["content-type"]);
+  if (comprimivel && /gzip/.test(req.headers["accept-encoding"] ?? "")) {
+    cab["content-encoding"] = "gzip";
+    cab["vary"] = "Accept-Encoding";
+    res.writeHead(achou ? 200 : 404, cab);
+    createReadStream(arq).pipe(createGzip()).pipe(res);
+    return;
+  }
   res.writeHead(achou ? 200 : 404, cab);
   createReadStream(arq).pipe(res);
 });

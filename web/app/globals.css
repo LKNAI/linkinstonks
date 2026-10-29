@@ -10,12 +10,12 @@
   --line: #e7e6ef;
   --ink: #16152b;
   --ink-2: #4b4a63;
-  --ink-3: #7c7b93;
+  --ink-3: #66657f; /* AA (>= 4,5:1) sobre todos os fundos do site; era #7c7b93 (3,8:1) */
   --accent: #6250d6;
   --accent-2: #4a3aa7;
   --accent-soft: #efedfc;
-  --gain: #14a06b;
-  --loss: #e0413f;
+  --gain: #0a7a50; /* texto de variação positiva, AA; era #14a06b (3,3:1) */
+  --loss: #c62a28; /* texto de variação negativa, AA; era #e0413f (4,2:1) */
 }
 
 @theme inline {

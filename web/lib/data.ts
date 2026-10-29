@@ -1,7 +1,7 @@
 // Carregamento dos JSON de /data com validação por zod. Cada arquivo é buscado uma vez por sessão.
 "use client";
 
-import { useEffect, useState } from "react";
+import { startTransition, useEffect, useState } from "react";
 import type { ZodMiniType } from "zod/mini";
 
 // Os schemas (zod) são baixados sob demanda, em paralelo com o fetch do JSON: ficam fora do JS inicial
@@ -41,7 +41,9 @@ export function useDados<A extends Arquivo>(arquivo: A): Estado<Doc<A>> {
   useEffect(() => {
     let vivo = true;
     carregar(arquivo).then(
-      (dados) => vivo && setEstado({ estado: "ok", dados }),
+      // Em transição o React renderiza o painel em fatias de ~5 ms, sem monopolizar a thread principal
+      // (tarefas longas pesam no TBT do Lighthouse); o "carregando" continua visível até a troca.
+      (dados) => vivo && startTransition(() => setEstado({ estado: "ok", dados })),
       (e: unknown) =>
         vivo && setEstado({ estado: "erro", mensagem: e instanceof Error ? e.message : String(e) }),
     );

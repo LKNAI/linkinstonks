@@ -166,3 +166,6 @@ Diferenças deliberadas em relação ao seed:
 - `web/tests/e2e` (Playwright, sobre o build estático): 23 testes. Cada rota sem erro de console e sem resposta HTTP de erro; 360 px sem rolagem horizontal (inclusive no `body`); filtro cruzado alterando KPIs, gráficos e tabela; estado na URL sobrevivendo a recarregar; CSV baixado com as linhas da visão filtrada; mês do ranking; 24 meses na tabela; virtualização; teclado.
 - Capturas de tela em 1440 px e 390 px: `docs/capturas/` (geradas por `web/scripts/capturas.mjs`).
 - **Não verificado ainda** (Fase 7): Lighthouse, contraste de cor WCAG e tamanho do JS por rota.
+
+## Divergências de cor por acessibilidade (Fase 7)
+Para atender WCAG 2.2 AA (contraste ≥ 4,5:1 em texto), três tons de texto ficaram mais escuros que no seed: `--ink-3` `#7c7b93` → `#66657f`, `--gain` `#14a06b` → `#0a7a50`, `--loss` `#e0413f` → `#c62a28`. Chips de categoria claros (patrocinado `#eda100`, N2 `#8f80e6`, ETF `#1baf7a`) usam texto grafite em vez de branco. Cores de gráficos, de segmentos e de marca das instituições não mudaram. Detalhes em `docs/qualidade.md`.

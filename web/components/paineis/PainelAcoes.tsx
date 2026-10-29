@@ -10,7 +10,7 @@ import { Divergentes } from "@/components/charts/Divergentes";
 import { Donut } from "@/components/charts/Donut";
 import { TipConteudo } from "@/components/charts/Tooltip";
 import { Alternador, Busca, Chips } from "@/components/filters/Controles";
-import { Carregando, ErroDados, Hero, KpiGrid } from "@/components/layout/Pagina";
+import { Carregando, ErroDados, KpiGrid, PaginaComHero, type HeroProps } from "@/components/layout/Pagina";
 import { DataTable } from "@/components/table/DataTableLazy";
 import {
   DIMS,
@@ -69,11 +69,21 @@ export const codecAcoes: Codec<FiltrosAcoes> = {
 const ORDEM_MARCAS = Object.keys(COR_ESCRITURADOR);
 const COLUNAS = colunasAcoes(false);
 
+const HERO: HeroProps = {
+  selo: "B3 + CVM · dados abertos",
+  titulo: "Ações na B3: quem escritura cada empresa",
+  texto:
+    "Escriturador atual de cada companhia emissora de ações (B3), com data de início e escriturador anterior segundo o Formulário Cadastral entregue à CVM. Clique nos gráficos para filtrar todo o painel.",
+};
+
 export function PainelAcoes() {
   const d = useDados("acoes.json");
-  if (d.estado === "carregando") return <Carregando />;
   if (d.estado === "erro") return <ErroDados mensagem={d.mensagem} />;
-  return <Conteudo acoes={d.dados.companhias} />;
+  return (
+    <PaginaComHero hero={HERO}>
+      {d.estado === "carregando" ? <Carregando comHero /> : <Conteudo acoes={d.dados.companhias} />}
+    </PaginaComHero>
+  );
 }
 
 function Conteudo({ acoes }: { acoes: Acao[] }) {
@@ -110,12 +120,7 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
   }));
 
   return (
-    <div className="dash">
-      <Hero
-        selo="B3 + CVM · dados abertos"
-        titulo="Ações na B3: quem escritura cada empresa"
-        texto="Escriturador atual de cada companhia emissora de ações (B3), com data de início e escriturador anterior segundo o Formulário Cadastral entregue à CVM. Clique nos gráficos para filtrar todo o painel."
-      />
+    <>
       <div className="wrap">
         <KpiGrid kpis={kpisAcoes(base, todas.length, anoRef)} />
 
@@ -172,7 +177,10 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
             coluna="c3"
             titulo="Histórico na CVM"
             descricao="Troca de escriturador desde 2010"
-            tabela={{ cabecalho: ["Histórico", "Empresas"], linhas: doHistorico.map((i) => [i.label, i.n]) }}
+            tabela={{
+              cabecalho: ["Histórico", "Empresas"],
+              linhas: doHistorico.map((i) => [i.label, i.n]),
+            }}
           >
             <Donut
               itens={doHistorico}
@@ -362,8 +370,8 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
         <div className="notes" role="note">
           <p>
             <b>Escriturador atual:</b> B3 · Empresas Listadas (<code>GetInitialCompanies</code> e{" "}
-            <code>GetDetail</code>, campos <code>institutionCommon</code>/<code>institutionPreferred</code>),
-            emissores do tipo “ações”.
+            <code>GetDetail</code>, campos <code>institutionCommon</code>/<code>institutionPreferred</code>
+            ), emissores do tipo “ações”.
           </p>
           <p>
             <b>Escriturador desde / anterior:</b> CVM · Formulário Cadastral (
@@ -385,7 +393,7 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

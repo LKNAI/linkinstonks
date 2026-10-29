@@ -38,9 +38,41 @@ export function KpiGrid({ kpis }: { kpis: Kpi[] }) {
   );
 }
 
-export function Carregando({ rotulo = "Carregando dados…" }: { rotulo?: string }) {
+export interface HeroProps {
+  selo: string;
+  titulo: string;
+  texto: string;
+}
+
+/**
+ * Página com cabeçalho persistente. O texto de apresentação é o maior elemento de texto da página: ele já está
+ * no primeiro quadro e é o MESMO elemento do DOM antes e depois dos dados chegarem (se fosse recriado, o LCP
+ * só seria registrado quando o painel terminasse de montar).
+ */
+export function PaginaComHero({ hero, children }: { hero: HeroProps; children: ReactNode }) {
   return (
-    <div className="wrap" style={{ paddingTop: 40 }} role="status" aria-live="polite">
+    <div className="dash">
+      <Hero {...hero} />
+      {children}
+    </div>
+  );
+}
+
+/** Estado de carregamento. A área reserva a altura da tela para o rodapé não pular quando os dados chegam (CLS). */
+export function Carregando({
+  rotulo = "Carregando dados…",
+  comHero = false,
+}: {
+  rotulo?: string;
+  comHero?: boolean;
+}) {
+  return (
+    <div
+      className="wrap"
+      style={{ paddingTop: comHero ? 16 : 40, minHeight: "100vh" }}
+      role="status"
+      aria-live="polite"
+    >
       <p className="sr-only">{rotulo}</p>
       <div className="skeleton" />
       <div className="skeleton" style={{ marginTop: 16, height: 320 }} />

@@ -1236,7 +1236,7 @@
 .seg.N2 {
   background: var(--v4);
   border-color: var(--v4);
-  color: #fff;
+  color: var(--ink); /* texto escuro: branco sobre --v4 dá 3,3:1 */
 }
 .seg.N1 {
   background: var(--v2);
@@ -1259,7 +1259,7 @@
   font-weight: 800;
   padding: 2px 8px;
   border-radius: 999px;
-  color: #fff;
+  color: #fff; /* sobrescrito inline por textoSobre() quando o branco não passa em AA */
 }
 .dep {
   display: inline-flex;
@@ -1668,4 +1668,10 @@ a.mc:focus-visible {
 }
 .fonte-tab td:nth-child(2) {
   white-space: nowrap;
+}
+.fonte-tab .fonte-link {
+  display: inline-block;
+  min-height: 24px; /* WCAG 2.2: alvo de toque de pelo menos 24 px */
+  padding: 3px 0;
+  margin-right: 14px;
 }
