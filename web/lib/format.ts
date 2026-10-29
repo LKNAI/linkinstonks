@@ -34,3 +34,37 @@ export function formatDateTime(isoUtc: string): string {
   );
   return `${p.day}/${p.month}/${p.year} ${p.hour}:${p.minute}`;
 }
+
+const MESES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"] as const;
+
+/** "2026-09" -> "set/26". */
+export const rotuloMes = (mes: string): string => `${MESES[Number(mes.slice(5, 7)) - 1]}/${mes.slice(2, 4)}`;
+export const abreviaMes = (mes: string): string => MESES[Number(mes.slice(5, 7)) - 1];
+
+const decimal1 = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 1 });
+const decimal0 = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 0 });
+const brl = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
+
+/** Moeda compacta (valor em R$): "R$ 1,2 bi", "R$ 34,5 mi", "R$ 120 mil", "< R$ 1 mil" ou "—". */
+export function formatDinheiro(reais: number): string {
+  const a = Math.abs(reais);
+  if (a >= 1e9)
+    return `R$ ${new Intl.NumberFormat("pt-BR", { maximumFractionDigits: a >= 1e11 ? 0 : 1 }).format(reais / 1e9)} bi`;
+  if (a >= 1e6) return `R$ ${decimal1.format(reais / 1e6)} mi`;
+  if (a >= 1e3) return `R$ ${decimal0.format(reais / 1e3)} mil`;
+  return a ? "< R$ 1 mil" : "—";
+}
+
+export const formatBRL = (n: number): string => brl.format(n);
+
+export interface Variacao {
+  tipo: "novo" | "alta" | "queda" | "nenhuma";
+  texto: string;
+}
+
+/** Variação de `a` sobre `b`: "novo" se `b` é zero e `a` não; ▲/▼ com percentual inteiro. */
+export function variacao(a: number, b: number): Variacao {
+  if (!b) return a ? { tipo: "novo", texto: "novo" } : { tipo: "nenhuma", texto: "" };
+  const r = (a / b - 1) * 100;
+  return { tipo: r >= 0 ? "alta" : "queda", texto: `${r >= 0 ? "▲" : "▼"} ${decimal0.format(Math.abs(r))}%` };
+}

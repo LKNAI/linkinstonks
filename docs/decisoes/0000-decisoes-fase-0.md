@@ -7,3 +7,4 @@
 | 3 | HELBOR (HBOR3) | **Mudança real** de segmento; a API é a verdade | Sem override. Registrar em `docs/paridade.md` como divergência justificada |
 | 4 | Categoria dos ETFs | Rótulos **da API** (Renda Variável, Renda Fixa, Commodities, Moeda) | Sem mapa próprio; `CAT_LINE` do seed é descartado |
 | 5 | Repositório | **Público** | Minutos do Actions gratuitos; Vercel Hobby segue exigindo uso não comercial |
+| 6 | Nome do projeto | **linkinstonks**: repositório `LKNAI/linkinstonks` e projeto Vercel `linkinstonks` (`linkinstonks.vercel.app`). Livres na checagem de 2026-10-29 (a confirmação final do subdomínio é ao criar o projeto). `painel-b3` e `radar-b3` já estão ocupados no `vercel.app`. | O repositório local ainda se chama P5 e os pacotes internos seguem `painel-etl`/`web`; o nome público aparece no README e na criação do repositório (Fase 6). O título do site continua "Painel B3" até haver outra decisão. |

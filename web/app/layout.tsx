@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
-import { Footer } from "@/components/layout/Footer";
+import { TooltipProvider } from "@/components/charts/Tooltip";
+import { SiteFooter, SiteHeader, StaleBanner } from "@/components/layout/SiteChrome";
+import "./dashboard.css";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({ variable: "--font-jakarta", subsets: ["latin"], display: "swap" });
@@ -16,8 +18,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR" className={`${jakarta.variable} ${jetbrains.variable}`}>
       <body className="flex min-h-screen flex-col">
-        <div className="flex-1">{children}</div>
-        <Footer />
+        <TooltipProvider>
+          <SiteHeader />
+          <StaleBanner />
+          <div className="flex-1">{children}</div>
+          <SiteFooter />
+        </TooltipProvider>
       </body>
     </html>
   );
