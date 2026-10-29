@@ -36,8 +36,8 @@ docs/  arquitetura, fontes, paridade, decisoes/ (ADRs)
 | e2e | `cd web && pnpm test:e2e` (precisa do build; `pnpm exec playwright install chromium` na 1ª vez; inclui acessibilidade com axe) |
 | orçamento de JS | `cd web && pnpm build && pnpm budget` (≤ 200 KB gzip por rota; roda no CI) |
 | sondar fontes | `cd etl && uv run painel-etl probe [fonte]` (usa a rede; regrava fixtures) |
-| rodar o ETL | `cd etl && uv run painel-etl run [--dataset acoes\|bdrs\|all] [--weekly] [--dry-run] [--date AAAA-MM-DD]` (usa a rede; `--weekly` revisita todos os detalhes e atualiza as listas de depositárias) |
-| carga histórica | `painel-etl backfill cotahist --from 2024-10` · `painel-etl backfill fca --from 2010` |
+| rodar o ETL | `cd etl && uv run painel-etl run [--dataset acoes\|bdrs\|acoes_volume\|all] [--weekly] [--dry-run] [--date AAAA-MM-DD]` (usa a rede; `--weekly` revisita todos os detalhes e atualiza as listas de depositárias) |
+| carga histórica | `painel-etl backfill cotahist --from 2024-10 [--categoria bdr|acao]` · `painel-etl backfill fca --from 2010` |
 | rotina mensal e automacao | `painel-etl monthly` (reconcilia o COTAHIST do mes fechado + snapshot) · `painel-etl commit-message --report R.json` · `painel-etl issues --report R.json [--dry-run]`; os workflows em `.github/workflows` so orquestram esses comandos (ver `docs/operacao.md`) |
 | validar / resumir | `painel-etl validate` (JSON Schema de `data/public`) · `painel-etl report` (Markdown) |
 | carga inicial do seed | `painel-etl seed-import` (só para ter dados; um `run` normal os substitui) |
@@ -47,7 +47,7 @@ docs/  arquitetura, fontes, paridade, decisoes/ (ADRs)
 Sem `make` (Windows): rode os comandos da tabela.
 
 ## Convenções
-- **ETL:** `ruff` (linha 120), `mypy --strict`, `pydantic` v2 nos modelos. Um módulo por fonte em `sources/` (`fetch` + `parse`); datasets em `datasets/`. Novo dataset = módulo + schema + rota + entrada em `sources.yaml` (`docs/adicionar-dataset.md`, Fase 7).
+- **ETL:** `ruff` (linha 120), `mypy --strict`, `pydantic` v2 nos modelos. Um módulo por fonte em `sources/` (`fetch` + `parse`); datasets em `datasets/`. Novo dataset = módulo + schema + rota + entrada em `sources.yaml` (`docs/adicionar-dataset.md`; exemplo real: `acoes_volume`).
 - **Web:** Prettier (linha 110), ESLint do Next. Números `Intl.NumberFormat('pt-BR')`, datas `dd/mm/aaaa`, fuso `America/Sao_Paulo` (`web/lib/format.ts`). Componentes de gráfico/tabela genéricos, sem lógica de domínio.
 - **Next.js 16:** a versão tem diferenças em relação ao que se conhece; a documentação oficial vem no pacote em `web/node_modules/next/dist/docs/` (ver `web/AGENTS.md`). `headers`/`redirects`/`rewrites` do Next **não** funcionam com `output: 'export'`; cabeçalhos ficam no `vercel.json`.
 - **GitHub Actions:** actions de terceiros fixadas por **SHA** (com a versão em comentário). Resolver o SHA com `gh api`, nunca de memória.

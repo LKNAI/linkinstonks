@@ -25,6 +25,9 @@ Lighthouse 13.5.0, mobile (4× de CPU e rede 4G simulados), nesta máquina de de
 | `/status/` | 65 | 98 | 4,4 s | 0,70 s | 0 |
 | `/sobre/` (sem dados) | 71 | 98 | 3,6 s | 0,66 s | 0 |
 
+### Medição no site em produção (Vercel)
+Mesma máquina e mesmo Lighthouse, contra `https://linkinstonks.vercel.app` (compressão e CDN reais): `/sobre/` **89**, `/` 79, `/bdrs/{ticker}` 76, `/acoes/` 67, `/bdrs/` 64; Acessibilidade 94 a 98, Melhores Práticas 100, SEO 100, CLS 0. A página sem dados chega perto de 90; os painéis com dados ficam entre 64 e 79.
+
 ## Por que o Desempenho não chegou a 90
 - **O piso do framework já é ~75 a 82 nesta medição.** `/sobre/`, uma página de texto sem nenhum dado, marca TBT de 420 a 660 ms, por uma tarefa de ~570 ms que só carrega React e o cliente do Next (App Router).
 - **Os painéis ficam 10 a 20 pontos acima desse piso**, por montar gráficos e tabelas depois de baixar os JSON (`bdrs.json` tem 640 KB, 140 KB em gzip).
