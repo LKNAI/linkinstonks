@@ -123,3 +123,20 @@ Resumo: ✅ funciona como o prompt descreve · ⚠️ funciona com diferença ·
 | finservices | HTML Liferay | queda > 20% de itens bloqueia a publicação |
 | Bradesco | API AEM não documentada | idem + fallback para overrides |
 | Itaú | bloqueio anti-bot | só overrides manuais |
+
+---
+
+## Notas de implementação (Fases 2 e 3)
+
+| tema | como ficou |
+|---|---|
+| Tickers de ações | `otherCodes[].code` do `GetDetail`, sem códigos com hífen (debêntures, como `PETR-DEB62`), em ordenação natural (`SANB3`, `SANB4`, `SANB11`). |
+| Segmento | `marketIndicator` da lista da B3 (tabela em `config/sources.yaml`); detalhe vazio => `?`. Guardado também em `indicador_mercado`. |
+| `GetDetail` em produção | Diário: companhias novas, alteradas na lista e o rodízio de 1/7 (`codigo_cvm % 7 == dia % 7`). Semanal (`--weekly`): todas. Quem não foi revisitado herda os dados da publicação anterior. |
+| FCA | O ano corrente é verificado por `HEAD`/ETag; só o que mudou é baixado. Cada ano vira `data/history/fca/AAAA.csv.gz` (maior versão de cada documento, só as colunas necessárias, ~15 KB por ano). As regras estão no ADR 0003. |
+| COTAHIST | Backfill pelos arquivos mensais `M` (os anuais `A` não foram usados: 89 MB cada, sem ganho em relação aos 12 mensais). Diário acumula na partição do mês; o mensal oficial a substitui e mede a diferença (alerta se > 0,5%). Um 404 em dia útil espera 3 dias antes de virar "sem pregão". |
+| Volume | Em R$ inteiros (soma em centavos, arredondada por ticker e mês). `downloads/bdrs.csv` segue em R$ mil, como o seed. |
+| Mês corrente | `volume_mes_parcial` por BDR e `mes_parcial` no cabeçalho; os 24 meses de `volume_mensal` são sempre meses fechados. |
+| Depositária | API B3 (patrocinados **e ETFs**) > Banco B3 (finservices) > `config/overrides/depositarias.csv` > "Não identificado". O Bradesco só serve de detector de mudança (avisos no `run --weekly`). |
+| finservices | `selectolax` (backend `lexbor`). Queda de mais de 20% nos itens mantém a lista anterior e avisa. |
+| `meta.json` | Só guarda dados estáveis por fonte (status, contagem, último sucesso). Contadores por execução ficam de fora para que um dia sem mudança não gere commit; sem mudança, é regravado a cada 3 dias (batimento) para o site distinguir "sem novidade" de "fonte parada". |

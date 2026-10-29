@@ -16,7 +16,7 @@ Painel B3: site estático (Next.js, Vercel) que mostra escrituradores de ações
 
 ## Estrutura
 ```
-etl/   Python 3.12 (uv). Pacote painel_etl: cli, core/, sources/, datasets/, normalize/, probe.py
+etl/   Python 3.12 (uv). Pacote painel_etl: cli, pipeline, seed_import, core/, sources/, datasets/, normalize/, probe.py
 web/   Next.js 16 + TypeScript strict + Tailwind 4 (pnpm). Export estático em web/out
 data/  public/ (contrato com o site) · history/ · events/ · state/
 config/  instituicoes.yaml · sources.yaml · overrides/*.csv
@@ -35,6 +35,11 @@ docs/  arquitetura, fontes, paridade, decisoes/ (ADRs)
 | build estático | `cd web && pnpm build` (roda `prebuild`: copia `data/public` → `web/public/data`) |
 | e2e | `cd web && pnpm test:e2e` (precisa do build; `pnpm exec playwright install chromium` na 1ª vez) |
 | sondar fontes | `cd etl && uv run painel-etl probe [fonte]` (usa a rede; regrava fixtures) |
+| rodar o ETL | `cd etl && uv run painel-etl run [--dataset acoes\|bdrs\|all] [--weekly] [--dry-run] [--date AAAA-MM-DD]` (usa a rede; `--weekly` revisita todos os detalhes e atualiza as listas de depositárias) |
+| carga histórica | `painel-etl backfill cotahist --from 2024-10` · `painel-etl backfill fca --from 2010` |
+| validar / resumir | `painel-etl validate` (JSON Schema de `data/public`) · `painel-etl report` (Markdown) |
+| carga inicial do seed | `painel-etl seed-import` (só para ter dados; um `run` normal os substitui) |
+| testes golden | `cd etl && uv run pytest tests/golden` (paridade com o seed, sem rede) |
 | tudo do CI | `make check` |
 
 Sem `make` (Windows): rode os comandos da tabela.
@@ -50,8 +55,10 @@ Sem `make` (Windows): rode os comandos da tabela.
 - `GetDetail` e `GetCategoryBDRETF` da B3 devolvem **JSON dentro de string**: decodificar duas vezes.
 - FCA e CAD da CVM e o COTAHIST são **ISO-8859-1**; COTAHIST usa `\r\n` e 245 colunas.
 - No FCA, um documento pode ter **mais de uma linha** de escriturador; o "atual" é o sem `Data_Fim_Atuacao`. CNPJ e nome nem sempre concordam: comparar pela raiz do CNPJ e, em conflito, vale o nome (`docs/decisoes/0000-decisoes-fase-0.md`).
+- O fuso `America/Sao_Paulo` exige o pacote `tzdata` no Windows (já é dependência). `selectolax` 1.0 só tem o backend `lexbor`.
+- No JSON bruto do Bradesco `<` e `>` vêm escapados (`>`): decodificar antes de aplicar regex.
 - Itaú bloqueia clientes não-navegador (403): sem scraper; curadoria manual em `config/overrides/depositarias.csv`. **Não** tentar contornar o bloqueio.
 - A chave confiável de BDR na API da B3 é `typeBDR`, não `type`.
 
 ## Fases
-0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações · 3 ETL de BDRs · 4 front com paridade · 5 páginas novas · 6 automação e deploy · 7 endurecimento. Cada fase termina com relatório; só avançar com autorização do dono.
+0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade · 5 páginas novas · 6 automação e deploy · 7 endurecimento. Cada fase termina com relatório; só avançar com autorização do dono.

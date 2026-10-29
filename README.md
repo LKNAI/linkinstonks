@@ -7,7 +7,7 @@ Site público, em português, com dois painéis:
 
 Os dados vêm de fontes públicas da **B3** e da **CVM** e se atualizam sozinhos pelo GitHub Actions. Custo zero: site estático na Vercel, ETL no GitHub Actions, dados versionados neste repositório. Uso não comercial. Não é recomendação de investimento.
 
-> **Estado:** Fase 1 concluída (esqueleto e CI). Ainda não há dados nem painéis; veja o plano em `PROMPT_PAINEL_B3.md` e as decisões em `docs/`.
+> **Estado:** Fases 0 a 3 concluídas. O ETL de ações e de BDRs funciona contra as fontes vivas e reproduz o protótipo (`seed/`); `data/public/` já tem os dados. O site ainda é uma casca (Fases 4 e 5). Plano em `PROMPT_PAINEL_B3.md`, decisões em `docs/`.
 
 ## Como rodar
 Requisitos: [uv](https://docs.astral.sh/uv/), [pnpm](https://pnpm.io/) e Node 20.19+.
@@ -19,6 +19,10 @@ make lint         # ruff, mypy, eslint, tsc, prettier
 make web          # servidor de desenvolvimento
 make build        # build estático em web/out
 make probe        # sonda as fontes e regrava os fixtures (usa a rede)
+
+cd etl
+uv run painel-etl run --weekly      # busca, normaliza, valida e publica em data/public (usa a rede)
+uv run painel-etl validate          # confere data/public contra os JSON Schemas
 ```
 
 Sem `make` (Windows), veja a tabela de comandos em [`AGENTS.md`](AGENTS.md).

@@ -107,9 +107,46 @@ Referências: **A** = `dashboard_acoes_b3.html` → rota `/acoes` · **T** = `em
 | todos | sem estado na URL | querystring (requisito 11.4) |
 | todos | sem "ver como tabela" nem navegação por teclado nos SVGs | requisito 11.4 (acessibilidade) |
 
-## 5. Divergências de dados (golden) — preencher na Fase 2/3
+## 5. Divergências de dados (golden) — Fases 2 e 3
+
+Entradas congeladas em `etl/tests/golden/` (dados reais de 29/10/2026) contra o seed (23/10 e 28/10). Testes: `etl/tests/golden/test_acoes_golden.py` e `test_bdrs_golden.py`. A mesma comparação foi refeita sobre a publicação real (`data/public/`, pipeline contra as fontes vivas): resultados idênticos.
+
+### Ações (meta do prompt: 568 companhias; atual e anterior iguais em >= 99%)
+| métrica | resultado |
+|---|---|
+| companhias, mesmo conjunto | 568 de 568 |
+| escriturador B3 (ON/PN, texto cru) | 568 de 568 (100%) |
+| escriturador CVM atual | 427 de 427 (100%) |
+| escriturador CVM anterior | 427 de 427 (100%) |
+| início do escriturador atual | 99,8% |
+| nº de escrituradores no histórico | 99,3% |
+| divergências B3 × CVM (selo "CVM indica…") | 59 de 59 |
+
 | item | seed | pipeline novo | justificativa |
 |---|---|---|---|
-| _(vazio na Fase 0)_ | | | |
+| HELBOR (20877): segmento | `NM` | `B` | A B3 mudou o `marketIndicator` entre 23/10 e 29/10. Decisão da Fase 0: mudança real, vale a API. |
+| BIOMM (19305): tickers | inclui `BIOM12` | sem `BIOM12` | Ticker deixou de constar no `GetDetail` desde a coleta do seed. |
+| EMAE (16993): tickers | `EMAE3`, `EMAE4` | sem eles | Idem. |
+| debêntures em `otherCodes` (`PETR-DEB62`…) | excluídas | excluídas | Mesma regra: código com hífen não é ação. |
+| ordem dos tickers | ordem da API | ordenação natural (`SANB3`, `SANB4`, `SANB11`) | Saída determinística. |
+| início do atual (1 caso) e nº de escrituradores (3 casos) | | | Casos isolados em que o seed escolhe outra linha do histórico do FCA; a regra exata do seed não é conhecida (ver `docs/decisoes/0003-historico-de-escrituradores.md`). |
+| `pn` | igual ao ON quando coincide | `null` quando não há PN distinto | Contrato mais explícito; o front compara com `on`. |
 
-Achados da Fase 0 que já devem aparecer aqui (ver relatório): HELBOR (`NM` no seed × `marketIndicator=1` na API de 29/10; decidido: mudança real, ver `docs/decisoes/0000-decisoes-fase-0.md`); regra do escriturador atual com documentos de múltiplas linhas; conflito nome × CNPJ em linhas do FCA.
+### BDRs (meta: 1.143 BDRs; depositárias ±1%; volume total de 24 meses ≤ 0,1%)
+| métrica | resultado |
+|---|---|
+| BDRs do seed presentes | 1.143 de 1.143 |
+| depositária (Banco B3 / não identificado / Bradesco / Itaú) | 1.026 / 56 / 46 / 15, igual ao seed ticker a ticker |
+| volume total de 24 meses | diferença de 0,00002% (R$ 538,27 bi) |
+| volume mensal por ticker | no máximo R$ 0,5 mil de diferença (arredondamento do seed) |
+| negócios, tipo, ISIN, último pregão, categoria do ETF, qualificado | iguais |
+
+| item | seed | pipeline novo | justificativa |
+|---|---|---|---|
+| universo | 1.143 | 1.152 na publicação real | 9 BDRs sem nenhum volume nos 24 meses fechados e com negócios só em out/2026 (BBCA39, BFTC39, CEGG34, INBR34, JGLO39, JIVE39, L1TM34, S1AK34, SK1D34): têm volume só no mês parcial. |
+| categoria do ETF | `Renda variável`, `Renda fixa`, `Commodities / cripto` | `Renda Variável`, `Renda Fixa`, `Commodities` | Decisão da Fase 0: rótulos da API. |
+| `fonte_depositaria` dos ETFs | `Banco B3 (finservices)` / `Bradesco Custódia` | `API B3 (GetDetail)` | A API informa a depositária dos ETFs e tem prioridade. A depositária resultante é a mesma. |
+| unidade do volume | R$ mil | R$ (inteiro) | `downloads/bdrs.csv` mantém R$ mil e os mesmos cabeçalhos do seed. |
+| mês corrente | ausente | `volume_mes_parcial` (COTAHIST diário) | Novo: o site mostra o mês em andamento. |
+
+Pendência observada na publicação real: **INBR34** (Inter&Co, estreou em out/2026 com R$ 937 mi no mês) está sem depositária identificada. O seed só conhece INBR32 (Bradesco). Não será atribuída sem fonte.
