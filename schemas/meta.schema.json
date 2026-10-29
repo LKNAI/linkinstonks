@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "meta.schema.json",
+  "title": "meta.json: saúde e data de cada fonte e dataset",
+  "type": "object",
+  "required": ["schema_version", "datasets", "fontes"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "datasets": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["atualizado_em", "contagem"],
+        "additionalProperties": false,
+        "properties": {
+          "atualizado_em": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "contagem": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "fontes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["status", "ultimo_sucesso"],
+        "properties": {
+          "status": { "enum": ["ok", "desatualizado", "erro"] },
+          "ultimo_sucesso": { "type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "contagem": { "type": "integer" },
+          "ultimo_pregao": { "type": "string" },
+          "mensagem": { "type": "string" }
+        }
+      }
+    }
+  }
+}

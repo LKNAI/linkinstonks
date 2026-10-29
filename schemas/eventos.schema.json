@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "eventos.schema.json",
+  "title": "eventos.json: os 500 eventos mais recentes (de data/events/*.jsonl)",
+  "type": "object",
+  "required": ["schema_version", "eventos"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "eventos": {
+      "type": "array",
+      "maxItems": 500,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["data", "dataset", "tipo", "chave", "de", "para", "fonte"],
+        "properties": {
+          "data": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "dataset": { "enum": ["acoes", "bdrs"] },
+          "tipo": {
+            "enum": [
+              "nova_listagem", "deslistagem", "troca_escriturador", "divergencia_b3_cvm", "ticker_novo",
+              "ticker_removido", "mudanca_segmento", "novo_bdr", "bdr_cancelado", "troca_depositaria"
+            ]
+          },
+          "chave": { "type": "string" },
+          "de": { "type": ["string", "null"] },
+          "para": { "type": ["string", "null"] },
+          "fonte": { "type": "string" }
+        }
+      }
+    }
+  }
+}

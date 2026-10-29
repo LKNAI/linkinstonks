@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "acoes.schema.json",
+  "title": "acoes.json: companhias com ações listadas na B3",
+  "type": "object",
+  "required": ["schema_version", "companhias"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "companhias": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/companhia" }
+    }
+  },
+  "$defs": {
+    "nomeOuNulo": { "type": ["string", "null"] },
+    "companhia": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "codigo_cvm", "pregao", "razao_social", "emissor", "cnpj", "setor", "indicador_mercado", "segmento",
+        "tickers", "escriturador_b3", "detalhe_b3", "escriturador_cvm", "divergente_b3_cvm", "situacao_cvm"
+      ],
+      "properties": {
+        "codigo_cvm": { "type": "string", "pattern": "^[0-9]+$" },
+        "pregao": { "type": "string", "minLength": 1 },
+        "razao_social": { "type": "string", "minLength": 1 },
+        "emissor": { "type": "string", "minLength": 1 },
+        "cnpj": { "type": "string", "pattern": "^[0-9]{2}\\.[0-9]{3}\\.[0-9]{3}/[0-9]{4}-[0-9]{2}$" },
+        "setor": { "type": "string" },
+        "indicador_mercado": { "type": "string" },
+        "segmento": { "enum": ["NM", "N2", "N1", "MP", "B", "SO", "BN", "?"] },
+        "tickers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["ticker", "classe"],
+            "properties": {
+              "ticker": { "type": "string", "pattern": "^[A-Z0-9]{4}[0-9]{1,2}[A-Z]?$" },
+              "classe": { "enum": ["ON", "PN", "PNA", "PNB", "PNC", "PND", "Units", "Outros"] }
+            }
+          }
+        },
+        "escriturador_b3": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["on", "pn", "bruto_on", "bruto_pn"],
+          "properties": {
+            "on": { "$ref": "#/$defs/nomeOuNulo" },
+            "pn": { "$ref": "#/$defs/nomeOuNulo" },
+            "bruto_on": { "type": "string" },
+            "bruto_pn": { "type": "string" }
+          }
+        },
+        "detalhe_b3": { "type": "boolean" },
+        "escriturador_cvm": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "atual", "inicio", "inicio_aproximado", "anterior", "anterior_inicio", "anterior_fim",
+                "anterior_ultimo_ano", "n_escrituradores"
+              ],
+              "properties": {
+                "atual": { "type": "string", "minLength": 1 },
+                "inicio": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+                "inicio_aproximado": { "type": "boolean" },
+                "anterior": { "$ref": "#/$defs/nomeOuNulo" },
+                "anterior_inicio": { "$ref": "#/$defs/nomeOuNulo" },
+                "anterior_fim": { "$ref": "#/$defs/nomeOuNulo" },
+                "anterior_ultimo_ano": { "type": ["integer", "null"] },
+                "n_escrituradores": { "type": "integer", "minimum": 1 }
+              }
+            }
+          ]
+        },
+        "divergente_b3_cvm": { "type": "boolean" },
+        "situacao_cvm": { "$ref": "#/$defs/nomeOuNulo" }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "acoes_historico_escrituradores.schema.json",
+  "title": "Linha do tempo completa de escrituradores por companhia (FCA)",
+  "type": "object",
+  "required": ["schema_version", "companhias"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 1 },
+    "companhias": {
+      "type": "object",
+      "propertyNames": { "pattern": "^[0-9]+$" },
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["instituicao", "inicio", "inicio_aproximado", "fim", "primeiro_ano", "ultimo_ano", "fonte"],
+          "properties": {
+            "instituicao": { "type": "string", "minLength": 1 },
+            "inicio": { "type": ["string", "null"] },
+            "inicio_aproximado": { "type": "boolean" },
+            "fim": { "type": ["string", "null"] },
+            "primeiro_ano": { "type": "integer" },
+            "ultimo_ano": { "type": "integer" },
+            "fonte": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

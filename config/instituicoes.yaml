@@ -1,0 +1,171 @@
+# Instituições canônicas: escrituradores (B3/CVM) e depositárias de BDR. FONTE ÚNICA de nomes, aliases, CNPJs e cores.
+#
+# - cnpjs: extraídos do campo CNPJ_Escriturador do FCA (2010-2026), nunca de memória. Só entram CNPJs cuja
+#   instituição é a titular (o FCA tem CNPJs trocados entre empresas do mesmo grupo; ver docs/fontes.md).
+# - aliases: nomes exatos, comparados sem acento/caixa/pontuação.
+# - padroes: regex sobre o nome normalizado ("itau corretora de valores s a"), avaliados NA ORDEM DESTE ARQUIVO.
+#   Por isso Itaú Corretora vem antes de Itaú Unibanco e Bradesco CTVM antes de Banco Bradesco.
+# - cor: identidade de marca (tabela da seção 11.3 do prompt). cor_depositaria: cor usada no painel de BDRs quando
+#   o seed usa outra (Itaú Unibanco). Nunca gerar cor aleatória.
+# - ids reservados (não precisam de padrão): propria-empresa, nao-informado, nao-identificado.
+
+- id: itau-corretora
+  nome: Itaú Corretora de Valores S.A.
+  nome_curto: Itaú Corretora
+  cnpjs: ["61.194.353/0001-64"]
+  padroes: ["itau (s a |sa )?corret", "itaucor", "iatucor"]
+  cor: "#EC7000"
+  papeis: [escriturador]
+
+- id: itau-unibanco
+  nome: Itaú Unibanco S.A.
+  nome_curto: Itaú Unibanco
+  cnpjs: ["60.701.190/0001-04"]
+  padroes: ["banco itau", "itau unibanco", "itaubanco", "^itau s a$", "^itau sa$", "^itau$"]
+  cor: "#F7A04B"
+  cor_depositaria: "#EC7000"
+  papeis: [escriturador, depositaria]
+
+- id: bradesco-ctvm
+  nome: Bradesco S.A. Corretora de Títulos e Valores Mobiliários
+  nome_curto: Bradesco CTVM
+  cnpjs: ["61.855.045/0001-32"]
+  padroes: ["bradesco s a (ctvm|corretora)"]
+  cor: "#E8607A"
+  papeis: [escriturador]
+
+- id: banco-bradesco
+  nome: Banco Bradesco S.A.
+  nome_curto: Banco Bradesco
+  cnpjs: ["60.746.948/0001-12"]
+  padroes: ["bradesco", "banco brasileiro de descontos"]
+  cor: "#CC092F"
+  papeis: [escriturador, depositaria]
+
+- id: btg-pactual
+  nome: BTG Pactual Serviços Financeiros S.A. DTVM
+  nome_curto: BTG Pactual
+  cnpjs: ["59.281.253/0001-23", "30.306.294/0001-45"]
+  padroes: ["btg"]
+  cor: "#0B3D91"
+  papeis: [escriturador]
+
+- id: banco-do-brasil
+  nome: Banco do Brasil S.A.
+  nome_curto: Banco do Brasil
+  cnpjs: ["00.000.000/0001-91"]
+  aliases: ["brasil", "722 071 677 04"]
+  padroes: ["banco do brasil", "bando do brasil"]
+  cor: "#F2C200"
+  papeis: [escriturador]
+
+- id: banco-santander
+  nome: Banco Santander (Brasil) S.A.
+  nome_curto: Banco Santander
+  cnpjs: ["90.400.888/0001-42"]
+  padroes: ["santander"]
+  cor: "#FF3B30"
+  papeis: [escriturador]
+
+- id: banco-opportunity
+  nome: Banco Opportunity S.A.
+  nome_curto: Banco Opportunity
+  cnpjs: ["33.857.830/0001-99"]
+  padroes: ["opportunity"]
+  cor: "#334155"
+  papeis: [escriturador]
+
+- id: brb-dtvm
+  nome: BRB DTVM S.A.
+  nome_curto: BRB DTVM
+  cnpjs: ["33.850.686/0001-69"]
+  padroes: ["\\bbrb\\b"]
+  cor: "#0EA5E9"
+  papeis: [escriturador]
+
+- id: id-ctvm
+  nome: ID Corretora de Títulos e Valores Mobiliários S.A.
+  nome_curto: ID CTVM
+  cnpjs: ["16.695.922/0001-09"]
+  padroes: ["^id (ctvm|corretora)"]
+  cor: "#14B8A6"
+  papeis: [escriturador]
+
+- id: banco-mercantil-do-brasil
+  nome: Banco Mercantil do Brasil S.A.
+  nome_curto: Banco Mercantil do Brasil
+  cnpjs: ["17.184.037/0001-10"]
+  padroes: ["banco mercantil do brasil"]
+  cor: "#2F80ED"
+  papeis: [escriturador]
+
+- id: banco-do-nordeste
+  nome: Banco do Nordeste do Brasil S.A.
+  nome_curto: Banco do Nordeste
+  cnpjs: ["07.237.373/0001-20"]
+  padroes: ["nordeste"]
+  cor: "#8E1B3A"
+  papeis: [escriturador]
+
+- id: oslo-capital-dtvm
+  nome: Oslo Capital Distribuidora de Títulos e Valores Mobiliários S.A.
+  nome_curto: Oslo Capital DTVM
+  cnpjs: ["13.673.855/0001-25"]
+  padroes: ["oslo capital"]
+  cor: "#94A3B8"
+  papeis: [escriturador]
+
+- id: oliveira-trust
+  nome: Oliveira Trust Distribuidora de Títulos e Valores Mobiliários S.A.
+  nome_curto: Oliveira Trust
+  cnpjs: ["36.113.876/0001-91"]
+  padroes: ["oliveira tr"]
+  cor: "#00A86B"
+  papeis: [escriturador]
+
+- id: vortx-dtvm
+  nome: Vórtx Distribuidora de Títulos e Valores Mobiliários Ltda.
+  nome_curto: Vórtx DTVM
+  cnpjs: ["22.610.500/0001-88"]
+  padroes: ["vortx"]
+  cor: "#7B2FF7"
+  papeis: [escriturador]
+
+- id: banrisul
+  nome: Banrisul
+  nome_curto: Banrisul
+  padroes: ["banrisul"]
+  cor: "#00579C"
+  papeis: [escriturador]
+
+- id: banco-safra
+  nome: Safra Serviços de Administração Fiduciária
+  nome_curto: Banco Safra
+  padroes: ["safra"]
+  cor: "#B8962E"
+  papeis: [escriturador]
+
+- id: banco-b3
+  nome: Banco B3 S.A.
+  nome_curto: Banco B3
+  padroes: ["banco b3"]
+  cor: "#0B7FA6"
+  papeis: [depositaria]
+
+- id: propria-empresa
+  nome: Própria empresa
+  nome_curto: Própria empresa
+  cor: "#5B6B82"
+  papeis: [escriturador]
+
+- id: nao-informado
+  nome: Não informado
+  nome_curto: Não informado
+  cor: "#D3D2DE"
+  papeis: [escriturador]
+
+- id: nao-identificado
+  nome: Não identificado
+  nome_curto: Não identificado
+  cor: "#B9B8C7"
+  papeis: [depositaria]
