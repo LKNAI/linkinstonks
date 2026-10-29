@@ -12,6 +12,7 @@ import { TipConteudo } from "@/components/charts/Tooltip";
 import { Busca, Chips, Segmentado } from "@/components/filters/Controles";
 import { Carregando, ErroDados, Hero, KpiGrid } from "@/components/layout/Pagina";
 import { DataTable } from "@/components/table/DataTableLazy";
+import { linkDoMes, origemDoMes, type FontesVolume } from "@/lib/fonte-volume";
 import type { ColunaSpec } from "@/components/table/DataTable";
 import {
   COLUNAS_TEXTO,
@@ -87,7 +88,14 @@ export function PainelBdrs() {
   const d = useDados("bdrs.json");
   if (d.estado === "carregando") return <Carregando />;
   if (d.estado === "erro") return <ErroDados mensagem={d.mensagem} />;
-  return <Conteudo meses={d.dados.meses} bdrs={d.dados.bdrs} />;
+  return (
+    <Conteudo
+      meses={d.dados.meses}
+      bdrs={d.dados.bdrs}
+      fontes={d.dados.fontes_volume}
+      pagina={d.dados.pagina_fonte}
+    />
+  );
 }
 
 function Variacao({ a, b }: { a: number; b: number }) {
@@ -96,7 +104,13 @@ function Variacao({ a, b }: { a: number; b: number }) {
   return <span className={`delta ${v.tipo === "queda" ? "down" : "up"}`}>{v.texto}</span>;
 }
 
-function colunas(meses: readonly string[], showM: boolean, inicioJanela: string): ColunaSpec<BdrRow>[] {
+function colunas(
+  meses: readonly string[],
+  showM: boolean,
+  inicioJanela: string,
+  fontes: FontesVolume,
+  pagina: string,
+): ColunaSpec<BdrRow>[] {
   const ult = meses.length - 1;
   const rotUlt = rotuloMes(meses[ult] ?? "");
   const base: ColunaSpec<BdrRow>[] = [
@@ -229,12 +243,36 @@ function colunas(meses: readonly string[], showM: boolean, inicioJanela: string)
       titulo: rotuloMes(m),
       classeTh: "r m",
       classeTd: (d) => `m r num${d.volume_mensal[i] ? "" : " z"}`,
-      celula: (d) => (d.volume_mensal[i] ? formatDinheiro(d.volume_mensal[i]).replace("R$ ", "") : "·"),
+      celula: (d) =>
+        d.volume_mensal[i] ? (
+          <a
+            className="fonte-cel"
+            href={linkDoMes(fontes, m, pagina)}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={`Fonte: ${origemDoMes(fontes, m)}. Clique para abrir o arquivo oficial.`}
+            aria-label={`${d.ticker}, ${rotuloMes(m)}: ${formatDinheiro(d.volume_mensal[i])}. Abrir a fonte oficial na B3 (nova aba)`}
+          >
+            {formatDinheiro(d.volume_mensal[i]).replace("R$ ", "")}
+          </a>
+        ) : (
+          "·"
+        ),
     })),
   ];
 }
 
-function Conteudo({ bdrs, meses }: { bdrs: Parameters<typeof derivarBdrs>[0]; meses: string[] }) {
+function Conteudo({
+  bdrs,
+  meses,
+  fontes,
+  pagina,
+}: {
+  bdrs: Parameters<typeof derivarBdrs>[0];
+  meses: string[];
+  fontes: FontesVolume;
+  pagina: string;
+}) {
   const todos = useMemo(() => derivarBdrs(bdrs), [bdrs]);
   const [f, setF] = useEstadoUrl(FILTROS_BDR_PADRAO, codecBdrs);
   const rot = rotuloMes(meses[meses.length - 1]);
@@ -263,7 +301,10 @@ function Conteudo({ bdrs, meses }: { bdrs: Parameters<typeof derivarBdrs>[0]; me
       ),
     [todos],
   );
-  const colunasTabela = useMemo(() => colunas(meses, f.showM, inicioJanela), [meses, f.showM, inicioJanela]);
+  const colunasTabela = useMemo(
+    () => colunas(meses, f.showM, inicioJanela, fontes, pagina),
+    [meses, f.showM, inicioJanela, fontes, pagina],
+  );
 
   const chips = [
     ...DIMS_BDR.filter((k) => f[k] != null).map((k) => ({
@@ -602,7 +643,9 @@ function Conteudo({ bdrs, meses }: { bdrs: Parameters<typeof derivarBdrs>[0]; me
             <b>Volumes, preços e negócios:</b> B3 · Séries históricas de cotações (<code>COTAHIST</code>),{" "}
             {rotuloMes(meses[0])} a {rot}, mercados à vista (010) e fracionário (020) somados por ticker;
             papéis com especificação DR1, DR2, DR3, DRE e DRN. Não inclui opções, termo e BDRs em units. O mês
-            corrente aparece à parte quando há pregões processados.
+            corrente aparece à parte quando há pregões processados. <b>Rastreabilidade:</b> cada volume mensal
+            da tabela é um link para o arquivo oficial da B3 daquele mês; a página de cada BDR mostra também
+            como conferir o número no arquivo.
           </p>
           <p>
             <b>Instituição depositária:</b> API Empresas Listadas da B3 (<code>GetDetail</code>) para BDRs

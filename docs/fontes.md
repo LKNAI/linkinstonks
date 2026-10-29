@@ -140,3 +140,10 @@ Resumo: ✅ funciona como o prompt descreve · ⚠️ funciona com diferença ·
 | Depositária | API B3 (patrocinados **e ETFs**) > Banco B3 (finservices) > `config/overrides/depositarias.csv` > "Não identificado". O Bradesco só serve de detector de mudança (avisos no `run --weekly`). |
 | finservices | `selectolax` (backend `lexbor`). Queda de mais de 20% nos itens mantém a lista anterior e avisa. |
 | `meta.json` | Só guarda dados estáveis por fonte (status, contagem, último sucesso). Contadores por execução ficam de fora para que um dia sem mudança não gere commit; sem mudança, é regravado a cada 3 dias (batimento) para o site distinguir "sem novidade" de "fonte parada". |
+
+## Rastreabilidade do volume (Fase 7)
+Cada volume mensal de BDR publicado aponta para o arquivo oficial da B3 de onde foi obtido. O ETL grava em `data/public/bdrs.json`:
+- `fontes_volume`: mês (`AAAA-MM`) → `{tipo, arquivos}`. `tipo: "mensal"` é o `COTAHIST_MMAAAA.ZIP` oficial (um arquivo); `tipo: "diario"` é o mês corrente, somado a partir dos `COTAHIST_DDMMAAAA.ZIP` já processados (um arquivo por pregão, em ordem). A origem vem da partição em `data/history/bdr_volume/` (`fonte` e `pregoes`), então o link sempre corresponde ao que foi de fato somado.
+- `pagina_fonte`: página oficial de séries históricas da B3 (`https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/mercado-a-vista/series-historicas/`), verificada em 2026-10-29 (HTTP 200, "Séries Históricas | B3").
+
+No site, a barra do gráfico (`/bdrs/{ticker}`) e a célula do volume mensal na tabela (`/bdrs`) são links para o arquivo do mês; no mês parcial, que soma vários arquivos, o link vai à página oficial e os arquivos diários ficam listados no bloco "Fonte do volume e como conferir". Como reproduzir o número: no arquivo, somar `VOLTOT` (colunas 171 a 188, 2 casas implícitas) das linhas cujo `CODNEG` (colunas 13 a 24) é o ticker ou o ticker com `F`, com `TPMERC` (colunas 25 a 27) `010` ou `020`.

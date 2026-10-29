@@ -22,6 +22,8 @@ export interface ColunaEmpilhada {
   partes: ParteColuna[];
   dica: () => ReactNode;
   rotuloAria: string;
+  /** Se informado, a coluna é um link (abre em nova aba) em vez de um botão de seleção: usado para a fonte do dado. */
+  href?: string;
 }
 
 export function ColunasEmpilhadas({
@@ -58,33 +60,53 @@ export function ColunasEmpilhadas({
             <span>{g.rotulo}</span>
           </div>
         ))}
-        {colunas.map((c) => (
-          <button
-            key={c.id}
-            type="button"
-            className={`${anos ? "yr" : "mc"}${selecionada === c.id ? " sel" : ""}`}
-            aria-pressed={selecionada === c.id}
-            aria-label={c.rotuloAria}
-            disabled={anos && !c.total}
-            onClick={() => onSelecionar(c.id)}
-            {...tip(c.dica)}
-          >
-            {anos ? <span className="v">{c.topo ?? ""}</span> : null}
-            <span className="stk">
-              {c.partes
-                .filter((p) => p.valor)
-                .map((p) => (
-                  <span
-                    key={p.nome}
-                    style={{
-                      height: Math.max(minimo, (p.valor / escalaMax) * altura - 2),
-                      background: p.cor,
-                    }}
-                  />
-                ))}
-            </span>
-          </button>
-        ))}
+        {colunas.map((c) => {
+          const barra = (
+            <>
+              {anos ? <span className="v">{c.topo ?? ""}</span> : null}
+              <span className="stk">
+                {c.partes
+                  .filter((p) => p.valor)
+                  .map((p) => (
+                    <span
+                      key={p.nome}
+                      style={{
+                        height: Math.max(minimo, (p.valor / escalaMax) * altura - 2),
+                        background: p.cor,
+                      }}
+                    />
+                  ))}
+              </span>
+            </>
+          );
+          const classe = `${anos ? "yr" : "mc"}${selecionada === c.id ? " sel" : ""}`;
+          return c.href ? (
+            <a
+              key={c.id}
+              href={c.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${classe} link`}
+              aria-label={`${c.rotuloAria}. Abrir a fonte oficial na B3 (nova aba)`}
+              {...tip(c.dica)}
+            >
+              {barra}
+            </a>
+          ) : (
+            <button
+              key={c.id}
+              type="button"
+              className={classe}
+              aria-pressed={selecionada === c.id}
+              aria-label={c.rotuloAria}
+              disabled={anos && !c.total}
+              onClick={() => onSelecionar(c.id)}
+              {...tip(c.dica)}
+            >
+              {barra}
+            </button>
+          );
+        })}
       </div>
       <div className={anos ? "yx" : "mx"} aria-hidden="true">
         {colunas.map((c) => (

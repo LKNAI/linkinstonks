@@ -68,10 +68,17 @@ export const bdrSchema = z.object({
   volume_mes_parcial: z.nullable(z.int()),
 });
 
+export const fonteVolumeSchema = z.object({
+  tipo: z.enum(["mensal", "diario"]),
+  arquivos: z.array(z.string()),
+});
+
 export const bdrsDocSchema = z.object({
   schema_version: z.literal(1),
   meses: z.array(z.string()),
   mes_parcial: z.nullable(z.string()),
+  pagina_fonte: z.string(),
+  fontes_volume: z.record(z.string(), fonteVolumeSchema),
   bdrs: z.array(bdrSchema),
 });
 

@@ -5,7 +5,7 @@ import { useId, useState, type ReactNode } from "react";
 
 export interface TabelaAlternativa {
   cabecalho: string[];
-  linhas: (string | number)[][];
+  linhas: (string | number | ReactNode)[][];
 }
 
 export function ChartCard({

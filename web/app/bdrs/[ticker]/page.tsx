@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GraficoVolumeBdr } from "@/components/charts/GraficoVolumeBdr";
+import { FonteVolume } from "@/components/paineis/FonteVolume";
 import { Cartao, Lista, Migalhas } from "@/components/paineis/Detalhe";
 import { corDepositaria } from "@/lib/colors";
 import { formatBRL, formatDate, formatDinheiro, formatInt, rotuloMes } from "@/lib/format";
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Page({ params }: Props) {
   const b = buscar((await params).ticker);
   if (!b) notFound();
-  const { meses, mesParcial } = todosBdrs();
+  const { meses, mesParcial, fontes, paginaFonte } = todosBdrs();
   const cor = corDepositaria(b.depositaria);
   const grupo = grupoDoTipo(b.tipo);
 
@@ -110,11 +111,21 @@ export default async function Page({ params }: Props) {
           </Cartao>
 
           <GraficoVolumeBdr
+            ticker={b.ticker}
+            fontes={fontes}
+            pagina={paginaFonte}
             meses={meses}
             volumes={b.volume_mensal}
             mesParcial={mesParcial}
             volumeParcial={b.volume_mes_parcial}
             cor={cor}
+          />
+          <FonteVolume
+            ticker={b.ticker}
+            meses={meses}
+            mesParcial={mesParcial}
+            fontes={fontes}
+            pagina={paginaFonte}
           />
         </div>
         <div style={{ height: 40 }} />

@@ -65,8 +65,61 @@ test.describe("página do BDR", () => {
     await expect(page.getByText("Banco B3 (finservices)")).toBeVisible();
     await expect(page.locator(".mcols .mc")).toHaveCount(25); // 24 meses fechados + mês corrente parcial
     await page.getByRole("button", { name: "Ver como tabela" }).click();
-    await expect(page.locator(".alt-table tbody tr")).toHaveCount(25);
+    const grafico = page.locator("section", { hasText: "Volume financeiro mensal" });
+    await expect(grafico.locator(".alt-table tbody tr")).toHaveCount(25);
     expect(erros).toEqual([]);
+  });
+
+  test("a barra do volume mensal abre o arquivo oficial da B3 daquele mês (rastreabilidade)", async ({
+    page,
+  }) => {
+    await page.goto("/bdrs/TSLA34/");
+    const barras = page.locator("a.mc");
+    await expect(barras).toHaveCount(25);
+    const mensal = barras.nth(23); // último mês fechado
+    await expect(mensal).toHaveAttribute("href", /\/InstDados\/SerHist\/COTAHIST_M\d{6}\.ZIP$/);
+    await expect(mensal).toHaveAttribute("target", "_blank");
+    await expect(mensal).toHaveAttribute("rel", /noopener/);
+    await expect(mensal).toHaveAttribute("aria-label", /TSLA34, .*Abrir a fonte oficial na B3/);
+    // o mês parcial soma arquivos diários: o clique vai à página oficial da B3
+    await expect(barras.nth(24)).toHaveAttribute("href", /^https:\/\/www\.b3\.com\.br\//);
+    // o clique de fato abre uma nova aba com a URL da fonte
+    // (o pedido ao domínio da B3 é interceptado: o teste não sai da máquina, e um ZIP viraria download)
+    await page
+      .context()
+      .route("**/COTAHIST_*.ZIP", (r) =>
+        r.fulfill({ status: 200, contentType: "text/html", body: "arquivo oficial" }),
+      );
+    const [aba] = await Promise.all([page.waitForEvent("popup"), mensal.click()]);
+    await aba.waitForLoadState();
+    expect(aba.url()).toMatch(/COTAHIST_M\d{6}\.ZIP$/);
+    await aba.close();
+  });
+
+  test("o bloco Fonte do volume lista os arquivos de cada mês e como conferir", async ({ page }) => {
+    await page.goto("/bdrs/TSLA34/");
+    const bloco = page.locator("section", { hasText: "Fonte do volume e como conferir" });
+    await expect(bloco).toContainText("VOLTOT");
+    await expect(bloco).toContainText("TSLA34F");
+    await bloco.getByText(/Arquivos de origem por mês/).click();
+    await expect(bloco.locator("tbody tr")).toHaveCount(25);
+    await expect(bloco.locator("tbody a[href*='COTAHIST_M']").first()).toBeVisible();
+    await page.getByRole("button", { name: "Ver como tabela" }).click();
+    await expect(page.locator(".alt-table a.fonte-link").first()).toHaveAttribute(
+      "href",
+      /COTAHIST|b3\.com\.br/,
+    );
+  });
+
+  test("na tabela de BDRs, a célula do volume mensal é um link para a fonte oficial", async ({ page }) => {
+    await page.goto("/bdrs/");
+    await expect(page.locator(".dtable tbody tr").first()).toBeVisible();
+    await page.getByRole("button", { name: "Mostrar os 24 meses" }).click();
+    const celula = page.locator(".dtable tbody a.fonte-cel").first();
+    await expect(celula).toBeVisible();
+    await expect(celula).toHaveAttribute("href", /COTAHIST_M\d{6}\.ZIP$/);
+    await expect(celula).toHaveAttribute("target", "_blank");
+    await expect(celula).toHaveAttribute("aria-label", /Abrir a fonte oficial na B3/);
   });
 
   test("BDR sem depositária explica a ausência", async ({ page }) => {
