@@ -66,3 +66,48 @@ test("a página ativa é marcada no menu", async ({ page }) => {
   await page.goto("/bdrs/");
   await expect(page.getByRole("link", { name: "BDRs" })).toHaveAttribute("aria-current", "page");
 });
+
+test.describe("cabeçalhos de segurança e cache (vercel.json)", () => {
+  test("a CSP e os demais cabeçalhos estão presentes e o cache dos dados é curto", async ({ request }) => {
+    const h = (await request.get("/acoes/")).headers();
+    expect(h["content-security-policy"]).toContain("default-src 'self'");
+    expect(h["content-security-policy"]).toContain("frame-ancestors 'none'");
+    expect(h["content-security-policy"]).toContain("object-src 'none'");
+    expect(h["x-content-type-options"]).toBe("nosniff");
+    expect(h["referrer-policy"]).toBe("strict-origin-when-cross-origin");
+    expect(h["permissions-policy"]).toContain("camera=()");
+    expect((await request.get("/data/acoes.json")).headers()["cache-control"]).toBe(
+      "public, max-age=300, stale-while-revalidate=3600",
+    );
+    expect((await request.get("/feed.xml")).headers()["cache-control"]).toContain("max-age=300");
+  });
+
+  for (const rota of [
+    "/",
+    "/acoes/",
+    "/acoes/tabela/",
+    "/bdrs/",
+    "/acoes/9512/",
+    "/bdrs/TSLA34/",
+    "/status/",
+  ]) {
+    test(`${rota} roda sem nenhuma violação da CSP, inclusive no download de CSV`, async ({ page }) => {
+      await page.addInitScript(() => {
+        (window as unknown as { __csp: string[] }).__csp = [];
+        document.addEventListener("securitypolicyviolation", (e) =>
+          (window as unknown as { __csp: string[] }).__csp.push(`${e.violatedDirective} ${e.blockedURI}`),
+        );
+      });
+      await page.goto(rota);
+      await expect(page.locator(".kpi, .tl li, .mcols, .stats-table tbody tr").first()).toBeVisible();
+      if (rota === "/acoes/tabela/") {
+        const [d] = await Promise.all([
+          page.waitForEvent("download"),
+          page.getByRole("button", { name: "Exportar CSV" }).click(),
+        ]);
+        expect(d.suggestedFilename()).toBe("escrituradores_b3_cvm.csv");
+      }
+      expect(await page.evaluate(() => (window as unknown as { __csp: string[] }).__csp)).toEqual([]);
+    });
+  }
+});

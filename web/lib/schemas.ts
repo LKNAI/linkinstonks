@@ -2,6 +2,10 @@
 // os dois não divergem. Todo dado é validado aqui no carregamento.
 import { z } from "zod";
 
+// A CSP do site proíbe `eval`. Sem isto o zod v4 tenta compilar os schemas com `new Function` (JIT) e o
+// navegador registra uma violação em toda página. Com ~1.700 registros o custo do modo interpretado é desprezível.
+z.config({ jitless: true });
+
 const nomeOuNulo = z.string().nullable();
 
 export const SEGMENTOS = ["NM", "N2", "N1", "MP", "B", "SO", "BN", "?"] as const;
