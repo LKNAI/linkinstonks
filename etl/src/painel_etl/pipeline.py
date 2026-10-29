@@ -296,7 +296,14 @@ def run_bdrs(ctx: Contexto) -> Resultado:
     res.relatorio, res.contagem = rel, len(bdrs)
     if not rel.ok:
         return res
-    doc = {"bdrs": bdrs, "mes_parcial": parcial_ok, "meses": meses, "schema_version": SCHEMA_VERSION}
+    doc = {
+        "bdrs": bdrs,
+        "fontes_volume": ds_bdrs.fontes_volume(particoes, meses, parcial_ok),
+        "mes_parcial": parcial_ok,
+        "meses": meses,
+        "pagina_fonte": b3_cotahist.PAGINA_FONTE,
+        "schema_version": SCHEMA_VERSION,
+    }
     schema.validar("bdrs", doc)
     eventos = diff.diff_bdrs(previo, _indexar(bdrs, "ticker"), ctx.hoje)
     if not ctx.dry_run:

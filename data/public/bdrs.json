@@ -48385,6 +48385,176 @@
 "volume_mes_parcial": 48595517
 }
 ],
+"fontes_volume": {
+"2024-10": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M102024.ZIP"
+],
+"tipo": "mensal"
+},
+"2024-11": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M112024.ZIP"
+],
+"tipo": "mensal"
+},
+"2024-12": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M122024.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-01": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M012025.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-02": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M022025.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-03": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M032025.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-04": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M042025.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-05": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M052025.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-06": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M062025.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-07": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M072025.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-08": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M082025.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-09": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M092025.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-10": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M102025.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-11": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M112025.ZIP"
+],
+"tipo": "mensal"
+},
+"2025-12": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M122025.ZIP"
+],
+"tipo": "mensal"
+},
+"2026-01": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M012026.ZIP"
+],
+"tipo": "mensal"
+},
+"2026-02": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M022026.ZIP"
+],
+"tipo": "mensal"
+},
+"2026-03": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M032026.ZIP"
+],
+"tipo": "mensal"
+},
+"2026-04": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M042026.ZIP"
+],
+"tipo": "mensal"
+},
+"2026-05": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M052026.ZIP"
+],
+"tipo": "mensal"
+},
+"2026-06": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M062026.ZIP"
+],
+"tipo": "mensal"
+},
+"2026-07": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M072026.ZIP"
+],
+"tipo": "mensal"
+},
+"2026-08": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M082026.ZIP"
+],
+"tipo": "mensal"
+},
+"2026-09": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M092026.ZIP"
+],
+"tipo": "mensal"
+},
+"2026-10": {
+"arquivos": [
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D01102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D02102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D05102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D06102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D07102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D08102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D09102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D13102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D14102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D15102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D16102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D19102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D20102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D21102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D22102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D23102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D26102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D27102026.ZIP",
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D28102026.ZIP"
+],
+"tipo": "diario"
+}
+},
 "mes_parcial": "2026-10",
 "meses": [
 "2024-10",
@@ -48412,5 +48582,6 @@
 "2026-08",
 "2026-09"
 ],
+"pagina_fonte": "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/mercado-a-vista/series-historicas/",
 "schema_version": 1
 }

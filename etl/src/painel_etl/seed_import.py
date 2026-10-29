@@ -13,6 +13,7 @@ from typing import Any
 from painel_etl import paths
 from painel_etl.core import io as pio
 from painel_etl.core import schema
+from painel_etl.sources import b3_cotahist
 
 SCHEMA_VERSION = 1
 # O seed usa rótulos próprios; decisão da Fase 0: valem os da API da B3.
@@ -93,10 +94,15 @@ def bdrs_do_seed(seed: Path) -> dict[str, Any]:
                 "volume_mes_parcial": None,
             }
         )
+    meses = j["meta"]["months"]
     return {
         "bdrs": sorted(saida, key=lambda x: x["ticker"]),
+        # Premissa só da carga inicial: os 24 meses do seed são fechados e vêm do COTAHIST mensal. A primeira
+        # coleta real regrava isto a partir das partições, com a fonte efetiva de cada mês.
+        "fontes_volume": {m: b3_cotahist.fonte_do_mes(m, {"fonte": "mensal", "pregoes": []}) for m in meses},
         "mes_parcial": None,
-        "meses": j["meta"]["months"],
+        "meses": meses,
+        "pagina_fonte": b3_cotahist.PAGINA_FONTE,
         "schema_version": SCHEMA_VERSION,
     }
 

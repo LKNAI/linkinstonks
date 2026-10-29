@@ -251,3 +251,16 @@ class TestBdrs:
         esperado = bdrs.csv_cabecalho(meses)
         # o seed chama o 1º/último pregão de "primeiro_pregao_24m"/"ultimo_pregao": mesmos nomes e mesma ordem
         assert esperado == cab
+
+
+def test_fontes_volume_cobre_todos_os_meses_e_o_parcial() -> None:
+    particoes = {
+        "2026-08": {"fonte": "mensal", "pregoes": []},
+        "2026-09": {"fonte": "mensal", "pregoes": []},
+        "2026-10": {"fonte": "diario", "pregoes": ["2026-10-01", "2026-10-02"]},
+    }
+    f = bdrs.fontes_volume(particoes, ["2026-08", "2026-09"], "2026-10")
+    assert list(f) == ["2026-08", "2026-09", "2026-10"]
+    assert [v["tipo"] for v in f.values()] == ["mensal", "mensal", "diario"]
+    assert len(f["2026-10"]["arquivos"]) == 2
+    assert list(bdrs.fontes_volume(particoes, ["2026-08", "2026-09"], None)) == ["2026-08", "2026-09"]

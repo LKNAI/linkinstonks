@@ -319,6 +319,31 @@ class TestCotahist:
 
 
 # ------------------------------------------------------------------------------------------ listas de depositárias
+class TestRastreabilidadeDoVolume:
+    """Cada volume mensal publicado aponta para o arquivo oficial da B3 que o sustenta."""
+
+    def test_mes_oficial_aponta_para_o_cotahist_mensal(self) -> None:
+        f = b3_cotahist.fonte_do_mes("2026-09", {"fonte": "mensal", "pregoes": ["2026-09-01"]})
+        assert f == {
+            "arquivos": ["https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M092026.ZIP"],
+            "tipo": "mensal",
+        }
+
+    def test_mes_parcial_aponta_para_cada_arquivo_diario_somado_em_ordem(self) -> None:
+        f = b3_cotahist.fonte_do_mes("2026-10", {"fonte": "diario", "pregoes": ["2026-10-02", "2026-10-01"]})
+        assert f["tipo"] == "diario"
+        assert f["arquivos"] == [
+            "https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D01102026.ZIP",
+            "https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D02102026.ZIP",
+        ]
+
+    def test_as_urls_usam_o_mesmo_padrao_que_o_download(self) -> None:
+        assert b3_cotahist.fonte_do_mes("2024-01", {"fonte": "mensal", "pregoes": []})["arquivos"] == [
+            b3_cotahist.url_mensal(2024, 1)
+        ]
+        assert b3_cotahist.PAGINA_FONTE.startswith("https://www.b3.com.br/") and b3_cotahist.PAGINA_FONTE.endswith("/")
+
+
 class TestDepositarias:
     def test_finservices_drn_e_etf(self, fixtures: Path) -> None:
         drn = b3_finservices.parse(

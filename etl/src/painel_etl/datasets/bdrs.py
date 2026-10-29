@@ -20,6 +20,7 @@ from typing import Any
 from painel_etl import paths
 from painel_etl.core import quality
 from painel_etl.normalize.instituicoes import NAO_IDENTIFICADO, NAO_MAPEADO, Registro
+from painel_etl.sources import b3_cotahist
 from painel_etl.sources.b3_finservices import Programa
 from painel_etl.sources.b3_listed import EtfRow
 
@@ -115,6 +116,13 @@ def construir(
             }
         )
     return saida, sorted(nao_mapeados)
+
+
+def fontes_volume(
+    particoes: Mapping[str, Mapping[str, Any]], meses: Sequence[str], parcial: str | None
+) -> dict[str, dict[str, Any]]:
+    """Mês -> arquivos oficiais da B3 que sustentam o volume (cada valor do site aponta para eles)."""
+    return {m: b3_cotahist.fonte_do_mes(m, dict(particoes[m])) for m in [*meses, *([parcial] if parcial else [])]}
 
 
 def validar(

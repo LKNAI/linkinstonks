@@ -26,6 +26,11 @@ from painel_etl.core.state import State
 from painel_etl.normalize.tickers import base_ticker, is_bdr_ticker
 
 BASE = "https://bvmf.bmfbovespa.com.br/InstDados/SerHist"
+#: Página oficial da B3 onde os arquivos COTAHIST são listados (para o leitor conferir a origem do volume).
+PAGINA_FONTE = (
+    "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/"
+    "mercado-a-vista/series-historicas/"
+)
 TIPOS_MERCADO = {"010": 1, "020": 0}  # vista (preço de referência) e fracionário
 TOLERANCIA_RECONCILIACAO = 0.005
 DIAS_DE_ESPERA = 3
@@ -54,6 +59,14 @@ def url_mensal(ano: int, mes: int) -> str:
 
 def url_anual(ano: int) -> str:
     return f"{BASE}/COTAHIST_A{ano}.ZIP"
+
+
+def fonte_do_mes(mes: str, particao: dict[str, Any]) -> dict[str, Any]:
+    """Arquivos oficiais da B3 de onde veio o volume de um mês (rastreabilidade): o `M` oficial, ou os `D` somados."""
+    if particao["fonte"] == "mensal":
+        ano, m = (int(x) for x in mes.split("-"))
+        return {"arquivos": [url_mensal(ano, m)], "tipo": "mensal"}
+    return {"arquivos": [url_diario(dt.date.fromisoformat(d)) for d in sorted(particao["pregoes"])], "tipo": "diario"}
 
 
 def parse_linha(linha: str) -> Cotacao | None:
