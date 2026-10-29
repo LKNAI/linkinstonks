@@ -1,0 +1,83 @@
+# RASCUNHO da Fase 0: URLs e parâmetros confirmados por sondagem em 2026-10-29.
+# Frequências, limites de qualidade e timeouts são os do prompt (seções 7-9); revisar na Fase 2.
+# `status`: ok | atencao | bloqueado (ver docs/fontes.md).
+defaults:
+  user_agent: "painel-b3/0.1 (projeto de dados abertos, uso nao comercial)"
+  timeout_connect_s: 10
+  timeout_read_s: 60
+  max_retries: 5
+  queda_maxima_registros: 0.10      # portão de qualidade geral (seção 8)
+  queda_maxima_scraper: 0.20        # scrapers de HTML/JSON não documentado (seção 7.5)
+
+sources:
+  b3_listed:
+    status: atencao
+    base: "https://sistemaswebb3-listados.b3.com.br/listedCompaniesProxy/CompanyCall/"
+    param_encoding: "base64(json utf-8)"
+    frequencia: diaria (lista) + rodizio 1/7 (GetDetail); revisita completa semanal
+    page_size: 120
+    concorrencia: 3
+    pausa_ms: [300, 800]
+    metodos:
+      GetInitialCompanies: {params: [language, pageNumber, pageSize], registros_2026_10_29: 3549, paginas: 30}
+      GetDetail:           {params: [codeCVM, language], resposta: "JSON dentro de string (decodificar 2x)", vazio: '"{}"'}
+      GetCompaniesBDR:    {params: [language, pageNumber, pageSize, codeCategoryBVMF, company], registros_2026_10_29: 321}
+      GetCategoryBDRETF:  {params: [language]}
+    # chave confiável para BDR é typeBDR (type=4 mistura DRE e DR1; ver docs/fontes.md)
+    segmento_por_marketIndicator:   # derivado do seed + confirmado nas 568 companhias; detalhe vazio => "?"
+      "18": NM
+      "17": N2
+      "16": N1
+      "32": MP
+      "1": B
+      "7": SO
+      "8": BN
+
+  cvm_fca:
+    status: atencao
+    url: "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FCA/DADOS/fca_cia_aberta_{ano}.zip"
+    arquivo: "fca_cia_aberta_escriturador_{ano}.csv"
+    encoding: iso-8859-1
+    separador: ";"
+    anos: {de: 2010, ate: corrente}      # 2009 e 2027 => 404
+    frequencia: diaria (HEAD + ETag, só ano corrente); anos fechados só em backfill
+
+  cvm_cad:
+    status: ok
+    url: "https://dados.cvm.gov.br/dados/CIA_ABERTA/CAD/DADOS/cad_cia_aberta.csv"
+    encoding: iso-8859-1
+    separador: ";"
+    frequencia: semanal
+
+  b3_cotahist:
+    status: ok
+    base: "https://bvmf.bmfbovespa.com.br/InstDados/SerHist/"
+    diario:  "COTAHIST_D{DD}{MM}{AAAA}.ZIP"   # confirmado; publicado ~20:30 BRT
+    mensal:  "COTAHIST_M{MM}{AAAA}.ZIP"       # ~10 MB zip, ~90 MB texto
+    anual:   "COTAHIST_A{AAAA}.ZIP"           # ~89 MB zip
+    encoding: iso-8859-1
+    largura_registro: 245
+    timeout_read_s: 180
+    frequencia: diaria (D) + mensal (M, reconciliacao)
+    filtro_bdr: {regex_ticker: '^[A-Z0-9]{4}3[1-59]F?$', tpmerc: ["010", "020"], excluir_especi_contem: ["UNT"]}
+
+  b3_finservices:
+    status: ok
+    drn: "https://finservices.b3.com.br/bdr-nao-patrocinado/programas?delta=1000&start=1"
+    etf: "https://finservices.b3.com.br/bdr-de-etf/programa?delta=1000&start=1"
+    parser: "tabela HTML: Empresa | Codigo de Negociacao | Acoes; '*' no nome = investidor qualificado"
+    frequencia: semanal
+    esperado_2026_10_29: {drn: 761, etf: 309}
+
+  bradesco:
+    status: atencao
+    modelo_pagina: "https://custodia.bradesco/content/custodia/pt.model.json"
+    etf: "https://custodia.bradesco/content/custodia/pt/bdr-de-etf.model.json"
+    acoes_nao_patrocinadas: "https://custodia.bradesco/graphql/execute.json/banco-bradesco/custodia-get-bdr-by-path;path=/content/dam/banco-bradesco/custodia/conteudos/pt/arquivo/brazilian-depositary-receipt"
+    limitacao: "so nome da empresa, sem ticker; usar como detector de mudanca + overrides"
+    frequencia: semanal
+
+  itau:
+    status: bloqueado
+    url: "https://www.itau.com.br/investmentservices/escrituracao/bdr"
+    limitacao: "HTTP 403 (Akamai) para cliente nao-navegador; manter apenas overrides manuais"
