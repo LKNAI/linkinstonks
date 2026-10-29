@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 import pytest
 from typer.testing import CliRunner
 
-from painel_etl import __version__
-from painel_etl.cli import NOT_YET, app
+from painel_etl import __version__, seed_import
+from painel_etl.cli import app
 
 runner = CliRunner()
 
@@ -22,13 +24,18 @@ def test_help_lista_os_comandos() -> None:
         assert cmd in r.stdout
 
 
-@pytest.mark.parametrize("args", [["run"], ["backfill", "cotahist"], ["validate"], ["report"], ["seed-import"]])
-def test_comandos_futuros_avisam_e_saem_com_codigo_3(args: list[str]) -> None:
-    r = runner.invoke(app, args)
-    assert r.exit_code == NOT_YET
-    assert "Fase" in r.output
+def test_backfill_tem_subcomandos() -> None:
+    r = runner.invoke(app, ["backfill", "--help"])
+    assert r.exit_code == 0
+    assert "cotahist" in r.stdout and "fca" in r.stdout
 
 
-def test_probe_rejeita_fonte_desconhecida() -> None:
-    r = runner.invoke(app, ["probe", "inexistente"])
-    assert r.exit_code != 0
+@pytest.mark.parametrize("args", [["probe", "inexistente"], ["run", "--dataset", "fiis"]])
+def test_argumentos_invalidos_sao_rejeitados(args: list[str]) -> None:
+    assert runner.invoke(app, args).exit_code != 0
+
+
+def test_seed_import_gera_arquivos_validos_no_schema(tmp_path: Path) -> None:
+    r = seed_import.importar(destino=tmp_path)
+    assert r == {"acoes": 568, "bdrs": 1143}
+    assert (tmp_path / "acoes.json").exists() and (tmp_path / "bdrs.json").exists()
