@@ -22,6 +22,9 @@
 ## Contrato entre as partes
 `etl/` e `web/` só se falam por `data/public/` (JSON validado por JSON Schema). O `zod` do front e o schema não podem divergir (teste de equivalência, Fase 2/4).
 
+## Automação (Fase 6)
+`etl-daily`, `etl-weekly` e `etl-monthly` chamam o workflow reutilizável `etl.yml`: roda o ETL, valida os JSON Schemas, commita só se `data/` mudou, escreve o resumo e abre/atualiza/fecha as Issues `data-quality` (uma por fonte). `web/vercel.json` define cabeçalhos de segurança, cache e o `ignoreCommand`. Guia completo em [operacao.md](operacao.md).
+
 ## Estado atual (Fase 3)
 - `etl/`: CLI `painel-etl` completa (`run`, `backfill`, `probe`, `validate`, `report`, `seed-import`). `core/` (http com retry e disjuntor, io atômico, qualidade, diff, schema, estado), `sources/` (B3 Listadas, FCA, CAD, COTAHIST, finservices, Bradesco), `datasets/` (`acoes`, `bdrs`, histórico de escrituradores) e `normalize/` (CNPJ, tickers, instituições). Testes unitários, de integração com `respx` e golden contra o seed.
 - `data/`: `public/` (contrato), `history/fca` e `history/bdr_volume` (partições), `state/`, `events/`.
