@@ -1,0 +1,73 @@
+[project]
+name = "painel-etl"
+version = "0.1.0"
+description = "ETL do Painel B3: escrituradores de ações e BDRs (fontes públicas da B3 e da CVM)"
+requires-python = ">=3.12"
+license = { text = "Uso não comercial" }
+dependencies = [
+    "httpx[http2]>=0.28",
+    "tenacity>=9",
+    "pydantic>=2.9",
+    "jsonschema>=4.23",
+    "typer>=0.15",
+    "selectolax>=0.3",
+    "pyyaml>=6",
+]
+
+[project.scripts]
+painel-etl = "painel_etl.cli:app"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=6",
+    "respx>=0.22",
+    "ruff>=0.9",
+    "mypy>=1.14",
+    "types-PyYAML",
+    "types-jsonschema",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/painel_etl"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+# O probe imprime e sonda a rede de propósito; mensagens em pt-BR têm acentos "ambíguos"
+"src/painel_etl/probe.py" = ["RUF001", "RUF002", "RUF003"]
+
+[tool.mypy]
+python_version = "3.12"
+files = ["src"]
+warn_unused_ignores = true
+# Seção 5 do prompt: strict nos módulos core, normalize e datasets. O probe é provisório (stdlib, JSON solto).
+strict = true
+
+[[tool.mypy.overrides]]
+module = "painel_etl.probe"
+disallow_any_generics = false
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = ["golden: paridade com o seed (Fases 2 e 3)"]
+
+[tool.coverage.run]
+source = ["painel_etl"]
+branch = true
+
+[tool.coverage.report]
+# Meta do prompt: >= 80% em core, normalize e datasets (aplicada quando esses módulos existirem)
+exclude_also = ["if __name__ == .__main__.:"]
