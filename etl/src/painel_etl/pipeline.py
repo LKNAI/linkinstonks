@@ -22,6 +22,7 @@ from painel_etl.core import io as pio
 from painel_etl.core.http import Http
 from painel_etl.core.state import State
 from painel_etl.datasets import acoes as ds_acoes
+from painel_etl.datasets import acoes_volume as ds_acoes_volume
 from painel_etl.datasets import bdrs as ds_bdrs
 from painel_etl.normalize.instituicoes import Registro
 from painel_etl.sources import b3_cotahist, b3_finservices, bradesco_bdr, cvm_cad, cvm_fca
@@ -235,25 +236,29 @@ def _bradesco(ctx: Contexto, res: Resultado) -> None:
     res.fontes["bradesco"] = {"status": "ok", "contagem": len(atual.acoes) + len(atual.etfs)}
 
 
-def _cotahist(ctx: Contexto, res: Resultado) -> None:
+def _cotahist(ctx: Contexto, res: Resultado, cat: b3_cotahist.Categoria = b3_cotahist.BDR) -> None:
+    """Atualiza as partições mensais do COTAHIST de uma categoria (BDRs, ações...) a partir dos arquivos da B3."""
     if ctx.dry_run:
         return
-    state = State("cotahist", ctx.raiz / "state")
+    state = State(cat.estado, ctx.raiz / "state")
     http = ctx.http("b3_cotahist")
+    pasta = ctx.raiz / "history" / cat.pasta
     try:
-        b3_cotahist.processar_diario(http, state, ctx.hoje, cache=ctx.cache / "b3_cotahist")
+        b3_cotahist.processar_diario(http, state, ctx.hoje, cache=ctx.cache / "b3_cotahist", pasta=pasta, cat=cat)
         anterior = ctx.hoje.replace(day=1) - dt.timedelta(days=1)
-        parte = b3_cotahist.ler_particao(f"{anterior:%Y-%m}")
+        parte = b3_cotahist.ler_particao(f"{anterior:%Y-%m}", pasta)
         if parte is None or parte["fonte"] != "mensal":  # fecha o mês anterior assim que o arquivo M sair
-            m = b3_cotahist.processar_mensal(http, anterior.year, anterior.month, cache=ctx.cache / "b3_cotahist")
+            m = b3_cotahist.processar_mensal(
+                http, anterior.year, anterior.month, cache=ctx.cache / "b3_cotahist", pasta=pasta, cat=cat
+            )
             if m.get("alerta"):
                 res.avisos.append(
-                    f"COTAHIST {m['mes']}: diário e mensal diferem {m['diferenca_vs_diario']:.2%} (> 0,5%)"
+                    f"COTAHIST {m['mes']} ({cat.nome}): diário e mensal diferem {m['diferenca_vs_diario']:.2%} (> 0,5%)"
                 )
         state.save()
-        res.fontes["b3_cotahist"] = {"status": "ok", "ultimo_pregao": (state.get("processados") or [""])[-1]}
+        res.fontes[cat.fonte] = {"status": "ok", "ultimo_pregao": (state.get("processados") or [""])[-1]}
     except Exception as e:
-        res.fontes["b3_cotahist"] = {"status": "desatualizado", "mensagem": str(e)[:200]}
+        res.fontes[cat.fonte] = {"status": "desatualizado", "mensagem": str(e)[:200]}
         res.avisos.append(f"COTAHIST indisponível; usando as partições existentes: {e}")
 
 
@@ -316,6 +321,54 @@ def run_bdrs(ctx: Contexto) -> Resultado:
     return res
 
 
+def run_acoes_volume(ctx: Contexto) -> Resultado:
+    """Volume mensal das ações por companhia: os mesmos arquivos COTAHIST dos BDRs, outro filtro (seção 13)."""
+    res = Resultado("acoes_volume")
+    destino = pub(ctx.raiz) / "acoes_volume.json"
+    anterior = len(pio.read_json(destino, {"companhias": []})["companhias"])
+    acoes_doc = pio.read_json(pub(ctx.raiz) / "acoes.json")
+    if not acoes_doc:
+        res.erro = "acoes.json ausente: o cadastro de tickers vem do dataset `acoes`"
+        return res
+    _cotahist(ctx, res, b3_cotahist.ACAO)
+    meses = ds_bdrs.meses_fechados(ctx.hoje)
+    parcial = f"{ctx.hoje:%Y-%m}"
+    pasta = ctx.raiz / "history" / b3_cotahist.ACAO.pasta
+    particoes = {m: p for m in [*meses, parcial] if (p := b3_cotahist.ler_particao(m, pasta))}
+    parcial_ok = parcial if parcial in particoes else None
+    faltando = [m for m in meses if m not in particoes]
+    if faltando:
+        res.erro = (
+            f"partições de ações do COTAHIST ausentes: {faltando[:3]}... "
+            "(rode `painel-etl backfill cotahist --categoria acao`)"
+        )
+        return res
+    cias, nao = ds_acoes_volume.construir(particoes, meses, parcial_ok, acoes_doc["companhias"])
+    rel = ds_acoes_volume.validar(cias, nao, anterior or None, ctx.hoje)
+    res.relatorio, res.contagem = rel, len(cias)
+    if not rel.ok:
+        return res
+    doc = {
+        "companhias": cias,
+        "fontes_volume": ds_acoes_volume.fontes_volume(particoes, meses, parcial_ok),
+        "mes_parcial": parcial_ok,
+        "meses": meses,
+        "nao_atribuido": nao,
+        "pagina_fonte": b3_cotahist.PAGINA_FONTE,
+        "schema_version": SCHEMA_VERSION,
+    }
+    schema.validar("acoes_volume", doc)
+    if not ctx.dry_run:
+        res.mudou |= pio.write_json(destino, doc, 0)
+        res.mudou |= pio.write_csv(
+            pub(ctx.raiz) / "downloads" / "acoes_volume.csv",
+            ds_acoes_volume.csv_cabecalho(meses),
+            ds_acoes_volume.csv_linhas(cias),
+        )
+    res.publicado = True
+    return res
+
+
 # ------------------------------------------------------------------------------------------ metadados
 def publicar_instituicoes(ctx: Contexto) -> bool:
     reg = Registro.carregar()
@@ -370,6 +423,7 @@ ARQUIVOS = {
     "eventos.json": "eventos",
     "meta.json": "meta",
     "acoes_historico_escrituradores.json": "acoes_historico_escrituradores",
+    "acoes_volume.json": "acoes_volume",
 }
 
 
@@ -406,7 +460,7 @@ def run(ctx: Contexto, datasets: list[str]) -> list[Resultado]:
     resultados = []
     for nome in datasets:
         try:
-            resultados.append({"acoes": run_acoes, "bdrs": run_bdrs}[nome](ctx))
+            resultados.append({"acoes": run_acoes, "bdrs": run_bdrs, "acoes_volume": run_acoes_volume}[nome](ctx))
         except Exception as e:
             r = Resultado(nome, erro=f"{type(e).__name__}: {e}")
             r.avisos.append(traceback.format_exc(limit=3))
@@ -430,23 +484,25 @@ def mensal(ctx: Contexto) -> Resultado:
     anterior = ctx.hoje.replace(day=1) - dt.timedelta(days=1)
     mes = f"{anterior:%Y-%m}"
     try:
-        parte = b3_cotahist.ler_particao(mes, ctx.raiz / "history" / "bdr_volume")
-        if parte is None or parte["fonte"] != "mensal":
+        for cat in (b3_cotahist.BDR, b3_cotahist.ACAO):
+            pasta = ctx.raiz / "history" / cat.pasta
+            parte = b3_cotahist.ler_particao(mes, pasta)
+            if parte is not None and parte["fonte"] == "mensal":
+                continue
             m = b3_cotahist.processar_mensal(
-                ctx.http("b3_cotahist"),
-                anterior.year,
-                anterior.month,
-                cache=ctx.cache / "b3_cotahist",
-                pasta=ctx.raiz / "history" / "bdr_volume",
-            )
-            res.fontes["b3_cotahist"] = {"status": "ok" if m["status"] == "ok" else "desatualizado"}
+                ctx.http("b3_cotahist"), anterior.year, anterior.month, cache=ctx.cache / "b3_cotahist", pasta=pasta,
+                cat=cat,
+            )  # fmt: skip
+            res.fontes[cat.fonte] = {"status": "ok" if m["status"] == "ok" else "desatualizado"}
             if m["status"] != "ok":
-                res.avisos.append(f"COTAHIST mensal de {mes} ainda não publicado")
+                res.avisos.append(f"COTAHIST mensal de {mes} ({cat.nome}) ainda não publicado")
             elif m.get("alerta"):
-                res.avisos.append(f"COTAHIST {mes}: diário e mensal diferem {m['diferenca_vs_diario']:.2%} (> 0,5%)")
+                res.avisos.append(
+                    f"COTAHIST {mes} ({cat.nome}): diário e mensal diferem {m['diferenca_vs_diario']:.2%} (> 0,5%)"
+                )
             res.mudou |= bool(m.get("mudou"))
         snap = ctx.raiz / "history" / "snapshots" / mes
-        for nome in ("acoes", "bdrs"):
+        for nome in ("acoes", "bdrs", "acoes_volume"):
             origem = pub(ctx.raiz) / "downloads" / f"{nome}.csv"
             destino = snap / f"{nome}.csv.gz"
             if origem.exists() and not destino.exists():  # snapshot é imutável: só cria se não existir

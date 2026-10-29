@@ -9,7 +9,7 @@ on:
       dataset:
         description: "Dataset a atualizar"
         type: choice
-        options: [all, acoes, bdrs]
+        options: [all, acoes, bdrs, acoes_volume]
         default: all
       date:
         description: "Data de referência AAAA-MM-DD (vazio = hoje em Brasília)"

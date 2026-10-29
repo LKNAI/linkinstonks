@@ -81,3 +81,16 @@ sources:
     status: bloqueado
     url: "https://www.itau.com.br/investmentservices/escrituracao/bdr"
     limitacao: "HTTP 403 (Akamai) para cliente nao-navegador; manter apenas overrides manuais"
+
+# Datasets publicados e a fonte de cada um (documentação; o código declara o mesmo em pipeline.py e datasets/).
+datasets:
+  acoes:
+    fontes: [b3_listed, cvm_fca, cvm_cad]
+  bdrs:
+    fontes: [b3_cotahist, b3_listed, b3_finservices, bradesco]
+  acoes_volume:                         # Fase 7: exemplo de escalabilidade, sem fonte nova
+    fontes: [b3_cotahist]               # mesmos arquivos dos BDRs, categoria ACAO (ADR 0004)
+    cadastro: acoes.json                # tickers -> companhia
+    janela_meses: 24
+    queda_maxima_registros: 0.10
+    aviso_volume_sem_companhia: 0.10

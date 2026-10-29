@@ -45,10 +45,9 @@ def zip_dia(*linhas: str) -> bytes:
 
 
 @pytest.fixture
-def cotahist(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
-    """Partição do mês corrente já publicada (boa), estado começando em 28/10 e as partições isoladas em tmp."""
-    pasta = tmp_path / "bdr_volume"
-    monkeypatch.setattr(b3_cotahist, "particao_dir", lambda: pasta)
+def cotahist(tmp_path: Path) -> Path:
+    """Partição do mês corrente já publicada (boa) e estado começando em 28/10, tudo isolado em tmp."""
+    pasta = tmp_path / "history" / "bdr_volume"
     a = b3_cotahist.Agregado("ACME INC", "DRN", "BRACMEBDR001", 100, 1, "2026-10-27", "2026-10-27", 1.0)
     b3_cotahist.gravar_particao("2026-10", {"AAPL34": a}, "diario", ["2026-10-27"], pasta)
     state = State("cotahist", tmp_path / "state")

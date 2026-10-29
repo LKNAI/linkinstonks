@@ -319,6 +319,54 @@ class TestCotahist:
 
 
 # ------------------------------------------------------------------------------------------ listas de depositárias
+class TestCotahistAcoes:
+    """Categoria `ACAO`: o mesmo arquivo da B3 serve a outro dataset, mudando só o filtro."""
+
+    @staticmethod
+    def linhas(fixtures: Path) -> list[str]:
+        txt = (fixtures / "b3_cotahist" / "COTAHIST_D28102026_acoes_extrato.txt").read_bytes().decode("iso-8859-1")
+        return [x for x in txt.split("\r\n") if x]
+
+    def test_extrato_real_separa_acoes_de_bdrs_etfs_bonificacoes_e_direitos(self, fixtures: Path) -> None:
+        ls = self.linhas(fixtures)
+        acoes = [c for c in (b3_cotahist.parse_linha(x, b3_cotahist.ACAO) for x in ls) if c]
+        bdrs = [c for c in (b3_cotahist.parse_linha(x, b3_cotahist.BDR) for x in ls) if c]
+        assert len(acoes) == 34 and len(bdrs) == 2
+        assert {c.especi.split()[0] for c in acoes} >= {"ON", "PN", "PNA", "UNT"}
+        assert {c.mercado for c in acoes} == {"010", "020"}
+        assert not {c.codneg for c in acoes} & {c.codneg for c in bdrs}  # as categorias não se sobrepõem
+        cods = {c.codneg for c in acoes}
+        assert "MRSA3BF" in cods  # série B é ação (fracionário da MRSA3B)
+        assert not any(x in cods for x in ("GFSA12", "PRNR1"))  # bonificação e direito ficam de fora
+
+    def test_fracionario_e_vista_somam_no_ticker_base(self, fixtures: Path) -> None:
+        ag = b3_cotahist.agregar(iter(self.linhas(fixtures)), b3_cotahist.ACAO)
+        assert list(ag) == ["2026-10"]
+        tickers = ag["2026-10"]
+        assert all(not t.endswith("F") for t in tickers)  # PETR4F soma em PETR4
+        assert tickers["PETR4"].negocios > 0 and tickers["PETR4"].tipo == "PN"
+
+    @pytest.mark.parametrize(
+        ("cod", "esp", "esperado"),
+        [
+            ("PETR4", "PN", True), ("VALE3", "ON", True), ("B3SA3", "ON", True), ("ITSA4F", "PN", True),
+            ("TAEE11", "UNT", True), ("MRSA3B", "ON", True), ("BOVA11", "CI", False), ("HGLG11", "CI", False),
+            ("AAPL34", "DRN", False), ("PETR4", "PN", True), ("GFSA12", "BNS", False), ("PRNR1", "DIR", False),
+            ("PETRA10", "OPC", False), ("ABCB", "", False),
+        ],
+    )  # fmt: skip
+    def test_is_acao_ticker(self, cod: str, esp: str, esperado: bool) -> None:
+        from painel_etl.normalize.tickers import is_acao_ticker
+
+        assert is_acao_ticker(cod, esp) is esperado
+
+    def test_o_filtro_de_bdr_continua_igual_e_sem_ações(self, fixtures: Path) -> None:
+        bruto = (fixtures / "b3_cotahist" / "COTAHIST_D28102026_bdr_extrato.txt").read_bytes().decode("iso-8859-1")
+        ls = [x for x in bruto.split("\r\n") if x]
+        assert not any(b3_cotahist.parse_linha(x, b3_cotahist.ACAO) for x in ls)
+        assert sum(1 for x in ls if b3_cotahist.parse_linha(x)) > 500  # categoria padrão = BDR
+
+
 class TestRastreabilidadeDoVolume:
     """Cada volume mensal publicado aponta para o arquivo oficial da B3 que o sustenta."""
 

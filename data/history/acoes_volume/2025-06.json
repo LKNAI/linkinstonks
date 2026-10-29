@@ -1,0 +1,4366 @@
+{
+"fonte": "mensal",
+"mes": "2025-06",
+"pregoes": [
+"2025-06-02",
+"2025-06-03",
+"2025-06-04",
+"2025-06-05",
+"2025-06-06",
+"2025-06-09",
+"2025-06-11",
+"2025-06-12",
+"2025-06-13",
+"2025-06-16",
+"2025-06-20",
+"2025-06-23",
+"2025-06-24",
+"2025-06-25",
+"2025-06-26",
+"2025-06-27",
+"2025-06-30"
+],
+"schema_version": 1,
+"tickers": {
+"AALR3": {
+"isin": "BRAALRACNOR6",
+"negocios": 5392,
+"nome": "ALLIAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.97,
+"ultimo_pregao": "2025-06-30",
+"volume": 5500341
+},
+"ABCB4": {
+"isin": "BRABCBACNPR4",
+"negocios": 75487,
+"nome": "ABC BRASIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 22.39,
+"ultimo_pregao": "2025-06-30",
+"volume": 295588359
+},
+"ABEV3": {
+"isin": "BRABEVACNOR1",
+"negocios": 511976,
+"nome": "AMBEV S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 13.32,
+"ultimo_pregao": "2025-06-30",
+"volume": 7443371525
+},
+"ADMF3": {
+"isin": "BRADMFACNOR3",
+"negocios": 44,
+"nome": "CIABRASF",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 38.24,
+"ultimo_pregao": "2025-06-27",
+"volume": 25203
+},
+"AERI3": {
+"isin": "BRAERIACNOR4",
+"negocios": 24200,
+"nome": "AERIS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.16,
+"ultimo_pregao": "2025-06-30",
+"volume": 17424046
+},
+"AFLT3": {
+"isin": "BRAFLTACNOR1",
+"negocios": 288,
+"nome": "AFLUENTE T",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.01,
+"ultimo_pregao": "2025-06-30",
+"volume": 56998
+},
+"AGRO3": {
+"isin": "BRAGROACNOR7",
+"negocios": 46192,
+"nome": "BRASILAGRO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 19.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 80122817
+},
+"AGXY3": {
+"isin": "BRAGXYACNOR4",
+"negocios": 7963,
+"nome": "AGROGALAXY",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.02,
+"ultimo_pregao": "2025-06-30",
+"volume": 3717752
+},
+"AHEB3": {
+"isin": "BRAHEBACNOR0",
+"negocios": 48,
+"nome": "SPTURIS",
+"primeiro_pregao": "2025-06-03",
+"tipo": "ON",
+"ultimo_preco": 35.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 78255
+},
+"AHEB5": {
+"isin": "BRAHEBACNPA3",
+"negocios": 18,
+"nome": "SPTURIS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 58.0,
+"ultimo_pregao": "2025-06-26",
+"volume": 23500
+},
+"AHEB6": {
+"isin": "BRAHEBACNPB1",
+"negocios": 2,
+"nome": "SPTURIS",
+"primeiro_pregao": "2025-06-05",
+"tipo": "PNB",
+"ultimo_preco": 55.0,
+"ultimo_pregao": "2025-06-20",
+"volume": 1760
+},
+"ALLD3": {
+"isin": "BRALLDACNOR3",
+"negocios": 10899,
+"nome": "ALLIED",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.02,
+"ultimo_pregao": "2025-06-30",
+"volume": 6541885
+},
+"ALOS3": {
+"isin": "BRALOSACNOR5",
+"negocios": 210341,
+"nome": "ALLOS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 22.72,
+"ultimo_pregao": "2025-06-30",
+"volume": 1711464426
+},
+"ALPA3": {
+"isin": "BRALPAACNOR0",
+"negocios": 1422,
+"nome": "ALPARGATAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 8.73,
+"ultimo_pregao": "2025-06-30",
+"volume": 2211147
+},
+"ALPA4": {
+"isin": "BRALPAACNPR7",
+"negocios": 96512,
+"nome": "ALPARGATAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 9.25,
+"ultimo_pregao": "2025-06-30",
+"volume": 371440041
+},
+"ALPK3": {
+"isin": "BRALPKACNOR9",
+"negocios": 7717,
+"nome": "ESTAPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.45,
+"ultimo_pregao": "2025-06-30",
+"volume": 7408387
+},
+"ALUP11": {
+"isin": "BRALUPCDAM15",
+"negocios": 94843,
+"nome": "ALUPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "UNT",
+"ultimo_preco": 30.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 813017636
+},
+"ALUP3": {
+"isin": "BRALUPACNOR8",
+"negocios": 3036,
+"nome": "ALUPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 10.99,
+"ultimo_pregao": "2025-06-30",
+"volume": 1519567
+},
+"ALUP4": {
+"isin": "BRALUPACNPR5",
+"negocios": 5425,
+"nome": "ALUPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 9.97,
+"ultimo_pregao": "2025-06-30",
+"volume": 2389062
+},
+"AMAR3": {
+"isin": "BRAMARACNOR4",
+"negocios": 15813,
+"nome": "LOJAS MARISA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.38,
+"ultimo_pregao": "2025-06-30",
+"volume": 5839001
+},
+"AMBP3": {
+"isin": "BRAMBPACNOR6",
+"negocios": 39580,
+"nome": "AMBIPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 164.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 880985852
+},
+"AMER3": {
+"isin": "BRAMERACNOR6",
+"negocios": 86218,
+"nome": "AMERICANAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 5.67,
+"ultimo_pregao": "2025-06-30",
+"volume": 353366892
+},
+"AMOB3": {
+"isin": "BRAMOBACNOR9",
+"negocios": 24158,
+"nome": "AUTOMOB",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.69,
+"ultimo_pregao": "2025-06-30",
+"volume": 52314059
+},
+"ANIM3": {
+"isin": "BRANIMACNOR6",
+"negocios": 157407,
+"nome": "ANIMA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.24,
+"ultimo_pregao": "2025-06-30",
+"volume": 511073829
+},
+"APTI4": {
+"isin": "BRAPTIACNPR3",
+"negocios": 1,
+"nome": "ALIPERTI",
+"primeiro_pregao": "2025-06-23",
+"tipo": "PN",
+"ultimo_preco": 4000.0,
+"ultimo_pregao": "2025-06-23",
+"volume": 4000
+},
+"ARML3": {
+"isin": "BRARMLACNOR1",
+"negocios": 38307,
+"nome": "ARMAC",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.4,
+"ultimo_pregao": "2025-06-30",
+"volume": 145185894
+},
+"ASAI3": {
+"isin": "BRASAIACNOR0",
+"negocios": 396421,
+"nome": "ASSAI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.26,
+"ultimo_pregao": "2025-06-30",
+"volume": 2607454380
+},
+"ATED3": {
+"isin": "BRATEDACNOR1",
+"negocios": 873,
+"nome": "ATOM EDUC",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.9,
+"ultimo_pregao": "2025-06-30",
+"volume": 589128
+},
+"ATMP3": {
+"isin": "BRATMPACNOR8",
+"negocios": 58,
+"nome": "CONTAX",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.25,
+"ultimo_pregao": "2025-06-04",
+"volume": 6128
+},
+"AURE3": {
+"isin": "BRAUREACNOR9",
+"negocios": 179710,
+"nome": "AUREN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 10.17,
+"ultimo_pregao": "2025-06-30",
+"volume": 809343654
+},
+"AVLL3": {
+"isin": "BRAVLLACNOR5",
+"negocios": 675,
+"nome": "ALPHAVILLE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.72,
+"ultimo_pregao": "2025-06-30",
+"volume": 644833
+},
+"AZEV3": {
+"isin": "BRAZEVACNOR0",
+"negocios": 10430,
+"nome": "AZEVEDO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 0.45,
+"ultimo_pregao": "2025-06-30",
+"volume": 13019360
+},
+"AZEV4": {
+"isin": "BRAZEVACNPR7",
+"negocios": 19579,
+"nome": "AZEVEDO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 0.57,
+"ultimo_pregao": "2025-06-30",
+"volume": 25215722
+},
+"AZTE3": {
+"isin": "BRAZTEACNOR4",
+"negocios": 28127,
+"nome": "AZT ENERGIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 0.54,
+"ultimo_pregao": "2025-06-30",
+"volume": 38006323
+},
+"AZUL4": {
+"isin": "BRAZULACNPR4",
+"negocios": 165452,
+"nome": "AZUL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 0.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 581720695
+},
+"AZZA3": {
+"isin": "BRAZZAACNOR9",
+"negocios": 246816,
+"nome": "AZZAS 2154",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 43.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 2443555347
+},
+"B3SA3": {
+"isin": "BRB3SAACNOR6",
+"negocios": 814849,
+"nome": "B3",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 14.58,
+"ultimo_pregao": "2025-06-30",
+"volume": 11082033074
+},
+"BALM3": {
+"isin": "BRBALMACNOR5",
+"negocios": 85,
+"nome": "BAUMER",
+"primeiro_pregao": "2025-06-03",
+"tipo": "ON",
+"ultimo_preco": 19.99,
+"ultimo_pregao": "2025-06-30",
+"volume": 43734
+},
+"BALM4": {
+"isin": "BRBALMACNPR2",
+"negocios": 167,
+"nome": "BAUMER",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 15.45,
+"ultimo_pregao": "2025-06-30",
+"volume": 304343
+},
+"BAUH4": {
+"isin": "BRBAUHACNPR3",
+"negocios": 24,
+"nome": "EXCELSIOR",
+"primeiro_pregao": "2025-06-04",
+"tipo": "PN",
+"ultimo_preco": 84.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 340109
+},
+"BAZA3": {
+"isin": "BRBAZAACNOR0",
+"negocios": 5046,
+"nome": "AMAZONIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 74.41,
+"ultimo_pregao": "2025-06-30",
+"volume": 19407263
+},
+"BBAS3": {
+"isin": "BRBBASACNOR3",
+"negocios": 2092711,
+"nome": "BRASIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 22.09,
+"ultimo_pregao": "2025-06-30",
+"volume": 14999512956
+},
+"BBDC3": {
+"isin": "BRBBDCACNOR1",
+"negocios": 262699,
+"nome": "BRADESCO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 14.51,
+"ultimo_pregao": "2025-06-30",
+"volume": 3088973330
+},
+"BBDC4": {
+"isin": "BRBBDCACNPR8",
+"negocios": 851836,
+"nome": "BRADESCO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 16.83,
+"ultimo_pregao": "2025-06-30",
+"volume": 10694324565
+},
+"BBSE3": {
+"isin": "BRBBSEACNOR5",
+"negocios": 541952,
+"nome": "BBSEGURIDADE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 35.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 4129368694
+},
+"BDLL3": {
+"isin": "BRBDLLACNOR1",
+"negocios": 34,
+"nome": "BARDELLA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 8.98,
+"ultimo_pregao": "2025-06-27",
+"volume": 15120
+},
+"BDLL4": {
+"isin": "BRBDLLACNPR8",
+"negocios": 43,
+"nome": "BARDELLA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 7.4,
+"ultimo_pregao": "2025-06-27",
+"volume": 41458
+},
+"BEEF3": {
+"isin": "BRBEEFACNOR6",
+"negocios": 272310,
+"nome": "MINERVA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.9,
+"ultimo_pregao": "2025-06-30",
+"volume": 1430050029
+},
+"BEES3": {
+"isin": "BRBEESACNOR9",
+"negocios": 8586,
+"nome": "BANESTES",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 8.48,
+"ultimo_pregao": "2025-06-30",
+"volume": 2621566
+},
+"BEES4": {
+"isin": "BRBEESACNPR6",
+"negocios": 3645,
+"nome": "BANESTES",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 8.53,
+"ultimo_pregao": "2025-06-30",
+"volume": 898893
+},
+"BGIP3": {
+"isin": "BRBGIPACNOR1",
+"negocios": 55,
+"nome": "BANESE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 35.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 22208
+},
+"BGIP4": {
+"isin": "BRBGIPACNPR8",
+"negocios": 1263,
+"nome": "BANESE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 28.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 1495777
+},
+"BHIA3": {
+"isin": "BRBHIAACNOR1",
+"negocios": 104587,
+"nome": "CASAS BAHIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.11,
+"ultimo_pregao": "2025-06-30",
+"volume": 399101079
+},
+"BIED3": {
+"isin": "BRBIEDACNOR2",
+"negocios": 899,
+"nome": "BIOMA EDUC",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 715875
+},
+"BIOM3": {
+"isin": "BRBIOMACNOR2",
+"negocios": 11331,
+"nome": "BIOMM",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.29,
+"ultimo_pregao": "2025-06-30",
+"volume": 12784984
+},
+"BLAU3": {
+"isin": "BRBLAUACNOR8",
+"negocios": 33392,
+"nome": "BLAU",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 13.79,
+"ultimo_pregao": "2025-06-30",
+"volume": 67471205
+},
+"BMEB3": {
+"isin": "BRBMEBACNOR8",
+"negocios": 208,
+"nome": "MERCANTIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 34.48,
+"ultimo_pregao": "2025-06-30",
+"volume": 348986
+},
+"BMEB4": {
+"isin": "BRBMEBACNPR5",
+"negocios": 2751,
+"nome": "MERCANTIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 40.44,
+"ultimo_pregao": "2025-06-30",
+"volume": 9665587
+},
+"BMGB4": {
+"isin": "BRBMGBACNPR0",
+"negocios": 52447,
+"nome": "BANCO BMG",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 3.69,
+"ultimo_pregao": "2025-06-30",
+"volume": 39372021
+},
+"BMIN3": {
+"isin": "BRBMINACNOR4",
+"negocios": 39,
+"nome": "MERC INVEST",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 18.5,
+"ultimo_pregao": "2025-06-30",
+"volume": 4200
+},
+"BMIN4": {
+"isin": "BRBMINACNPR1",
+"negocios": 245,
+"nome": "MERC INVEST",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 17.49,
+"ultimo_pregao": "2025-06-30",
+"volume": 23846
+},
+"BMKS3": {
+"isin": "BRBMKSACNOR9",
+"negocios": 188,
+"nome": "BIC MONARK",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 400.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 833423
+},
+"BMOB3": {
+"isin": "BRBMOBACNOR7",
+"negocios": 38065,
+"nome": "BEMOBI TECH",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 20.54,
+"ultimo_pregao": "2025-06-30",
+"volume": 175883612
+},
+"BNBR3": {
+"isin": "BRBNBRACNOR8",
+"negocios": 367,
+"nome": "NORD BRASIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 93.01,
+"ultimo_pregao": "2025-06-30",
+"volume": 613618
+},
+"BOBR4": {
+"isin": "BRBOBRACNPR3",
+"negocios": 1695,
+"nome": "BOMBRIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 1.56,
+"ultimo_pregao": "2025-06-30",
+"volume": 362506
+},
+"BPAC11": {
+"isin": "BRBPACUNT006",
+"negocios": 438885,
+"nome": "BTGP BANCO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "UNT",
+"ultimo_preco": 42.25,
+"ultimo_pregao": "2025-06-30",
+"volume": 5625804668
+},
+"BPAC3": {
+"isin": "BRBPACACNOR7",
+"negocios": 1829,
+"nome": "BTGP BANCO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 23.12,
+"ultimo_pregao": "2025-06-30",
+"volume": 1427771
+},
+"BPAC5": {
+"isin": "BRBPACACNPA0",
+"negocios": 1003,
+"nome": "BTGP BANCO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 9.48,
+"ultimo_pregao": "2025-06-30",
+"volume": 630841
+},
+"BPAN4": {
+"isin": "BRBPANACNPR1",
+"negocios": 68294,
+"nome": "BANCO PAN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 8.09,
+"ultimo_pregao": "2025-06-30",
+"volume": 298642915
+},
+"BRAP3": {
+"isin": "BRBRAPACNOR5",
+"negocios": 12799,
+"nome": "BRADESPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 14.69,
+"ultimo_pregao": "2025-06-30",
+"volume": 19866961
+},
+"BRAP4": {
+"isin": "BRBRAPACNPR2",
+"negocios": 182959,
+"nome": "BRADESPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 15.7,
+"ultimo_pregao": "2025-06-30",
+"volume": 1290843232
+},
+"BRAV3": {
+"isin": "BRBRAVACNOR3",
+"negocios": 331642,
+"nome": "BRAVA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 17.4,
+"ultimo_pregao": "2025-06-30",
+"volume": 3645564223
+},
+"BRBI11": {
+"isin": "BRBRBICDAM10",
+"negocios": 40827,
+"nome": "BR PARTNERS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "UNT",
+"ultimo_preco": 15.51,
+"ultimo_pregao": "2025-06-30",
+"volume": 61926837
+},
+"BRFS3": {
+"isin": "BRBRFSACNOR8",
+"negocios": 345855,
+"nome": "BRF SA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 20.14,
+"ultimo_pregao": "2025-06-30",
+"volume": 4114251765
+},
+"BRKM3": {
+"isin": "BRBRKMACNOR1",
+"negocios": 10061,
+"nome": "BRASKEM",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 9.6,
+"ultimo_pregao": "2025-06-30",
+"volume": 5515592
+},
+"BRKM5": {
+"isin": "BRBRKMACNPA4",
+"negocios": 150003,
+"nome": "BRASKEM",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 9.07,
+"ultimo_pregao": "2025-06-30",
+"volume": 671135346
+},
+"BRKM6": {
+"isin": "BRBRKMACNPB2",
+"negocios": 122,
+"nome": "BRASKEM",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNB",
+"ultimo_preco": 8.23,
+"ultimo_pregao": "2025-06-30",
+"volume": 25718
+},
+"BRSR3": {
+"isin": "BRBRSRACNOR3",
+"negocios": 2556,
+"nome": "BANRISUL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.97,
+"ultimo_pregao": "2025-06-30",
+"volume": 1087640
+},
+"BRSR5": {
+"isin": "BRBRSRACNPA6",
+"negocios": 170,
+"nome": "BANRISUL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 14.64,
+"ultimo_pregao": "2025-06-30",
+"volume": 26792
+},
+"BRSR6": {
+"isin": "BRBRSRACNPB4",
+"negocios": 65351,
+"nome": "BANRISUL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNB",
+"ultimo_preco": 11.57,
+"ultimo_pregao": "2025-06-30",
+"volume": 280050536
+},
+"BRST3": {
+"isin": "BRBRSTACNOR9",
+"negocios": 17806,
+"nome": "BRISANET",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 10717375
+},
+"BSLI3": {
+"isin": "BRBSLIACNOR5",
+"negocios": 640,
+"nome": "BRB BANCO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 8.03,
+"ultimo_pregao": "2025-06-30",
+"volume": 271118
+},
+"BSLI4": {
+"isin": "BRBSLIACNPR2",
+"negocios": 921,
+"nome": "BRB BANCO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 8.56,
+"ultimo_pregao": "2025-06-30",
+"volume": 492752
+},
+"CALI3": {
+"isin": "BRCALIACNOR1",
+"negocios": 11,
+"nome": "CONST A LIND",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 23.75,
+"ultimo_pregao": "2025-06-30",
+"volume": 919
+},
+"CAMB3": {
+"isin": "BRCAMBACNOR4",
+"negocios": 2921,
+"nome": "CAMBUCI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 10.49,
+"ultimo_pregao": "2025-06-30",
+"volume": 5060211
+},
+"CAML3": {
+"isin": "BRCAMLACNOR3",
+"negocios": 59149,
+"nome": "CAMIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 5.12,
+"ultimo_pregao": "2025-06-30",
+"volume": 138454431
+},
+"CASH3": {
+"isin": "BRCASHACNOR8",
+"negocios": 106765,
+"nome": "MELIUZ",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.13,
+"ultimo_pregao": "2025-06-30",
+"volume": 457261711
+},
+"CBAV3": {
+"isin": "BRCBAVACNOR5",
+"negocios": 153538,
+"nome": "CBA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.81,
+"ultimo_pregao": "2025-06-30",
+"volume": 448954310
+},
+"CBEE3": {
+"isin": "BRCBEEACNOR3",
+"negocios": 65,
+"nome": "AMPLA ENERG",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 9.77,
+"ultimo_pregao": "2025-06-30",
+"volume": 19353
+},
+"CCTY3": {
+"isin": "BRCCTYACNOR7",
+"negocios": 880,
+"nome": "RDVC CITY",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 17.97,
+"ultimo_pregao": "2025-06-30",
+"volume": 216358
+},
+"CEAB3": {
+"isin": "BRCEABACNOR1",
+"negocios": 163585,
+"nome": "CEA MODAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 19.66,
+"ultimo_pregao": "2025-06-30",
+"volume": 919026334
+},
+"CEBR3": {
+"isin": "BRCEBRACNOR5",
+"negocios": 1507,
+"nome": "CEB",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 19.32,
+"ultimo_pregao": "2025-06-30",
+"volume": 2337576
+},
+"CEBR5": {
+"isin": "BRCEBRACNPA8",
+"negocios": 734,
+"nome": "CEB",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 19.55,
+"ultimo_pregao": "2025-06-30",
+"volume": 1673639
+},
+"CEBR6": {
+"isin": "BRCEBRACNPB6",
+"negocios": 1197,
+"nome": "CEB",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNB",
+"ultimo_preco": 21.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 2581676
+},
+"CEDO3": {
+"isin": "BRCEDOACNOR8",
+"negocios": 40,
+"nome": "CEDRO",
+"primeiro_pregao": "2025-06-03",
+"tipo": "ON",
+"ultimo_preco": 22.15,
+"ultimo_pregao": "2025-06-27",
+"volume": 38511
+},
+"CEDO4": {
+"isin": "BRCEDOACNPR5",
+"negocios": 137,
+"nome": "CEDRO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 17.5,
+"ultimo_pregao": "2025-06-30",
+"volume": 392904
+},
+"CEEB3": {
+"isin": "BRCEEBACNOR3",
+"negocios": 349,
+"nome": "COELBA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 36.94,
+"ultimo_pregao": "2025-06-30",
+"volume": 178291
+},
+"CEEB5": {
+"isin": "BRCEEBACNPA6",
+"negocios": 37,
+"nome": "COELBA",
+"primeiro_pregao": "2025-06-04",
+"tipo": "PNA",
+"ultimo_preco": 41.4,
+"ultimo_pregao": "2025-06-30",
+"volume": 22721
+},
+"CEED3": {
+"isin": "BRCEEDACNOR9",
+"negocios": 33,
+"nome": "CEEE-D",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 0.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 2705
+},
+"CEED4": {
+"isin": "BRCEEDACNPR6",
+"negocios": 7,
+"nome": "CEEE-D",
+"primeiro_pregao": "2025-06-06",
+"tipo": "PN",
+"ultimo_preco": 19.24,
+"ultimo_pregao": "2025-06-27",
+"volume": 255
+},
+"CEGR3": {
+"isin": "BRCEGRACNOR4",
+"negocios": 9,
+"nome": "CEG",
+"primeiro_pregao": "2025-06-05",
+"tipo": "ON",
+"ultimo_preco": 77.5,
+"ultimo_pregao": "2025-06-13",
+"volume": 2293
+},
+"CGAS3": {
+"isin": "BRCGASACNOR0",
+"negocios": 453,
+"nome": "COMGAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 120.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 306325
+},
+"CGAS5": {
+"isin": "BRCGASACNPA3",
+"negocios": 1212,
+"nome": "COMGAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 126.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 1769796
+},
+"CGRA3": {
+"isin": "BRCGRAACNOR2",
+"negocios": 1510,
+"nome": "GRAZZIOTIN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 28.98,
+"ultimo_pregao": "2025-06-30",
+"volume": 3627112
+},
+"CGRA4": {
+"isin": "BRCGRAACNPR9",
+"negocios": 4535,
+"nome": "GRAZZIOTIN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 28.58,
+"ultimo_pregao": "2025-06-30",
+"volume": 10539448
+},
+"CLSC3": {
+"isin": "BRCLSCACNOR6",
+"negocios": 212,
+"nome": "CELESC",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 98.25,
+"ultimo_pregao": "2025-06-30",
+"volume": 225759
+},
+"CLSC4": {
+"isin": "BRCLSCACNPR3",
+"negocios": 1614,
+"nome": "CELESC",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 103.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 9422417
+},
+"CMIG3": {
+"isin": "BRCMIGACNOR6",
+"negocios": 48961,
+"nome": "CEMIG",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 15.28,
+"ultimo_pregao": "2025-06-30",
+"volume": 119833688
+},
+"CMIG4": {
+"isin": "BRCMIGACNPR3",
+"negocios": 517893,
+"nome": "CEMIG",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 10.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 2395116441
+},
+"CMIN3": {
+"isin": "BRCMINACNOR2",
+"negocios": 227544,
+"nome": "CSNMINERACAO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.96,
+"ultimo_pregao": "2025-06-30",
+"volume": 643006710
+},
+"COCE3": {
+"isin": "BRCOCEACNOR0",
+"negocios": 73,
+"nome": "COELCE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 24.25,
+"ultimo_pregao": "2025-06-30",
+"volume": 139412
+},
+"COCE5": {
+"isin": "BRCOCEACNPA3",
+"negocios": 1228,
+"nome": "COELCE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 26.88,
+"ultimo_pregao": "2025-06-30",
+"volume": 2035930
+},
+"COGN3": {
+"isin": "BRCOGNACNOR2",
+"negocios": 329038,
+"nome": "COGNA ON",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.81,
+"ultimo_pregao": "2025-06-30",
+"volume": 1975654091
+},
+"CPFE3": {
+"isin": "BRCPFEACNOR0",
+"negocios": 126510,
+"nome": "CPFL ENERGIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 40.86,
+"ultimo_pregao": "2025-06-30",
+"volume": 908038191
+},
+"CPLE3": {
+"isin": "BRCPLEACNOR8",
+"negocios": 183210,
+"nome": "COPEL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.66,
+"ultimo_pregao": "2025-06-30",
+"volume": 1348542646
+},
+"CPLE5": {
+"isin": "BRCPLEACNPA1",
+"negocios": 414,
+"nome": "COPEL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 15.32,
+"ultimo_pregao": "2025-06-30",
+"volume": 117214
+},
+"CPLE6": {
+"isin": "BRCPLEACNPB9",
+"negocios": 374003,
+"nome": "COPEL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNB",
+"ultimo_preco": 12.46,
+"ultimo_pregao": "2025-06-30",
+"volume": 2968029707
+},
+"CRPG3": {
+"isin": "BRCRPGACNOR0",
+"negocios": 9,
+"nome": "CRISTAL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 18.5,
+"ultimo_pregao": "2025-06-26",
+"volume": 8121
+},
+"CRPG5": {
+"isin": "BRCRPGACNPA3",
+"negocios": 1032,
+"nome": "CRISTAL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 17.15,
+"ultimo_pregao": "2025-06-30",
+"volume": 1230411
+},
+"CRPG6": {
+"isin": "BRCRPGACNPB1",
+"negocios": 88,
+"nome": "CRISTAL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNB",
+"ultimo_preco": 18.49,
+"ultimo_pregao": "2025-06-30",
+"volume": 81944
+},
+"CSAN3": {
+"isin": "BRCSANACNOR6",
+"negocios": 440179,
+"nome": "COSAN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.86,
+"ultimo_pregao": "2025-06-30",
+"volume": 2817281141
+},
+"CSED3": {
+"isin": "BRCSEDACNOR9",
+"negocios": 23130,
+"nome": "CRUZEIRO EDU",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 5.16,
+"ultimo_pregao": "2025-06-30",
+"volume": 35231435
+},
+"CSMG3": {
+"isin": "BRCSMGACNOR5",
+"negocios": 219270,
+"nome": "COPASA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 27.97,
+"ultimo_pregao": "2025-06-30",
+"volume": 1276125598
+},
+"CSNA3": {
+"isin": "BRCSNAACNOR6",
+"negocios": 240908,
+"nome": "SID NACIONAL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.44,
+"ultimo_pregao": "2025-06-30",
+"volume": 1456949381
+},
+"CSUD3": {
+"isin": "BRCSUDACNOR5",
+"negocios": 5992,
+"nome": "CSU DIGITAL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 19.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 9749620
+},
+"CTAX3": {
+"isin": "BRCTAXACNOR3",
+"negocios": 363,
+"nome": "CONTAX",
+"primeiro_pregao": "2025-06-05",
+"tipo": "ON",
+"ultimo_preco": 1.11,
+"ultimo_pregao": "2025-06-30",
+"volume": 239975
+},
+"CTKA3": {
+"isin": "BRCTKAACNOR0",
+"negocios": 45,
+"nome": "KARSTEN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 34.18,
+"ultimo_pregao": "2025-06-30",
+"volume": 17550
+},
+"CTKA4": {
+"isin": "BRCTKAACNPR7",
+"negocios": 37,
+"nome": "KARSTEN",
+"primeiro_pregao": "2025-06-03",
+"tipo": "PN",
+"ultimo_preco": 38.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 135209
+},
+"CTSA3": {
+"isin": "BRCTSAACNOR3",
+"negocios": 120,
+"nome": "SANTANENSE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.52,
+"ultimo_pregao": "2025-06-30",
+"volume": 55949
+},
+"CTSA4": {
+"isin": "BRCTSAACNPR0",
+"negocios": 276,
+"nome": "SANTANENSE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 2.28,
+"ultimo_pregao": "2025-06-30",
+"volume": 118276
+},
+"CURY3": {
+"isin": "BRCURYACNOR3",
+"negocios": 202256,
+"nome": "CURY S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 29.52,
+"ultimo_pregao": "2025-06-30",
+"volume": 1305231402
+},
+"CVCB3": {
+"isin": "BRCVCBACNOR1",
+"negocios": 138038,
+"nome": "CVC BRASIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.4,
+"ultimo_pregao": "2025-06-30",
+"volume": 626425886
+},
+"CXSE3": {
+"isin": "BRCXSEACNOR7",
+"negocios": 415281,
+"nome": "CAIXA SEGURI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 14.69,
+"ultimo_pregao": "2025-06-30",
+"volume": 1528584975
+},
+"CYRE3": {
+"isin": "BRCYREACNOR7",
+"negocios": 288817,
+"nome": "CYRELA REALT",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 26.14,
+"ultimo_pregao": "2025-06-30",
+"volume": 2099361551
+},
+"DASA3": {
+"isin": "BRDASAACNOR1",
+"negocios": 38836,
+"nome": "DASA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.31,
+"ultimo_pregao": "2025-06-30",
+"volume": 34032614
+},
+"DESK3": {
+"isin": "BRDESKACNOR2",
+"negocios": 15481,
+"nome": "DESKTOP",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 9.82,
+"ultimo_pregao": "2025-06-30",
+"volume": 32156559
+},
+"DEXP3": {
+"isin": "BRDEXPACNOR1",
+"negocios": 12102,
+"nome": "DEXXOS PAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 9.25,
+"ultimo_pregao": "2025-06-30",
+"volume": 16872575
+},
+"DEXP4": {
+"isin": "BRDEXPACNPR8",
+"negocios": 765,
+"nome": "DEXXOS PAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 9.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 2018681
+},
+"DIRR3": {
+"isin": "BRDIRRACNOR0",
+"negocios": 201436,
+"nome": "DIRECIONAL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 40.82,
+"ultimo_pregao": "2025-06-30",
+"volume": 1371997025
+},
+"DMVF3": {
+"isin": "BRDMVFACNOR9",
+"negocios": 8610,
+"nome": "D1000VFARMA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 5.19,
+"ultimo_pregao": "2025-06-30",
+"volume": 7908373
+},
+"DOHL3": {
+"isin": "BRDOHLACNOR2",
+"negocios": 25,
+"nome": "DOHLER",
+"primeiro_pregao": "2025-06-03",
+"tipo": "ON",
+"ultimo_preco": 5.74,
+"ultimo_pregao": "2025-06-27",
+"volume": 3350
+},
+"DOHL4": {
+"isin": "BRDOHLACNPR9",
+"negocios": 209,
+"nome": "DOHLER",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 3.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 94105
+},
+"DOTZ3": {
+"isin": "BRDOTZACNOR7",
+"negocios": 4975,
+"nome": "DOTZ SA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.65,
+"ultimo_pregao": "2025-06-30",
+"volume": 3935249
+},
+"DTCY3": {
+"isin": "BRDTCYACNOR5",
+"negocios": 101,
+"nome": "DTCOM-DIRECT",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.8,
+"ultimo_pregao": "2025-06-27",
+"volume": 136505
+},
+"DXCO3": {
+"isin": "BRDXCOACNOR8",
+"negocios": 99813,
+"nome": "DEXCO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 5.67,
+"ultimo_pregao": "2025-06-30",
+"volume": 309325195
+},
+"EALT3": {
+"isin": "BREALTACNOR4",
+"negocios": 163,
+"nome": "ACO ALTONA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 15.2,
+"ultimo_pregao": "2025-06-30",
+"volume": 263797
+},
+"EALT4": {
+"isin": "BREALTACNPR1",
+"negocios": 1543,
+"nome": "ACO ALTONA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 14.55,
+"ultimo_pregao": "2025-06-30",
+"volume": 2952537
+},
+"ECOR3": {
+"isin": "BRECORACNOR8",
+"negocios": 159259,
+"nome": "ECORODOVIAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.49,
+"ultimo_pregao": "2025-06-30",
+"volume": 633038139
+},
+"EGIE3": {
+"isin": "BREGIEACNOR9",
+"negocios": 181186,
+"nome": "ENGIE BRASIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 45.41,
+"ultimo_pregao": "2025-06-30",
+"volume": 1402004987
+},
+"EKTR3": {
+"isin": "BREKTRACNOR0",
+"negocios": 87,
+"nome": "ELEKTRO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 35.21,
+"ultimo_pregao": "2025-06-27",
+"volume": 63596
+},
+"EKTR4": {
+"isin": "BREKTRACNPR7",
+"negocios": 314,
+"nome": "ELEKTRO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 47.02,
+"ultimo_pregao": "2025-06-30",
+"volume": 427933
+},
+"ELET3": {
+"isin": "BRELETACNOR6",
+"negocios": 432839,
+"nome": "ELETROBRAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 40.22,
+"ultimo_pregao": "2025-06-30",
+"volume": 5752621610
+},
+"ELET5": {
+"isin": "BRELETACNPA9",
+"negocios": 35,
+"nome": "ELETROBRAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 82.56,
+"ultimo_pregao": "2025-06-30",
+"volume": 22389
+},
+"ELET6": {
+"isin": "BRELETACNPB7",
+"negocios": 119516,
+"nome": "ELETROBRAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNB",
+"ultimo_preco": 44.41,
+"ultimo_pregao": "2025-06-30",
+"volume": 1001344746
+},
+"ELMD3": {
+"isin": "BRELMDACNOR3",
+"negocios": 1307,
+"nome": "ELETROMIDIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 31.0,
+"ultimo_pregao": "2025-06-12",
+"volume": 6238335
+},
+"EMAE3": {
+"isin": "BREMAEACNOR4",
+"negocios": 1,
+"nome": "EMAE",
+"primeiro_pregao": "2025-06-05",
+"tipo": "ON",
+"ultimo_preco": 70.1,
+"ultimo_pregao": "2025-06-05",
+"volume": 210
+},
+"EMAE4": {
+"isin": "BREMAEACNPR1",
+"negocios": 723,
+"nome": "EMAE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 30.49,
+"ultimo_pregao": "2025-06-30",
+"volume": 2714961
+},
+"EMBR3": {
+"isin": "BREMBRACNOR4",
+"negocios": 432210,
+"nome": "EMBRAER",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 77.01,
+"ultimo_pregao": "2025-06-30",
+"volume": 6714932356
+},
+"ENEV3": {
+"isin": "BRENEVACNOR8",
+"negocios": 259763,
+"nome": "ENEVA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 13.65,
+"ultimo_pregao": "2025-06-30",
+"volume": 2109162512
+},
+"ENGI11": {
+"isin": "BRENGICDAM16",
+"negocios": 215329,
+"nome": "ENERGISA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "UNT",
+"ultimo_preco": 48.32,
+"ultimo_pregao": "2025-06-30",
+"volume": 2344594974
+},
+"ENGI3": {
+"isin": "BRENGIACNOR0",
+"negocios": 2044,
+"nome": "ENERGISA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 12.25,
+"ultimo_pregao": "2025-06-30",
+"volume": 838628
+},
+"ENGI4": {
+"isin": "BRENGIACNPR7",
+"negocios": 1987,
+"nome": "ENERGISA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 9.09,
+"ultimo_pregao": "2025-06-30",
+"volume": 953984
+},
+"ENJU3": {
+"isin": "BRENJUACNOR9",
+"negocios": 16779,
+"nome": "ENJOEI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.17,
+"ultimo_pregao": "2025-06-30",
+"volume": 24294102
+},
+"ENMT3": {
+"isin": "BRENMTACNOR5",
+"negocios": 200,
+"nome": "ENERGISA MT",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 65.9,
+"ultimo_pregao": "2025-06-30",
+"volume": 776802
+},
+"ENMT4": {
+"isin": "BRENMTACNPR2",
+"negocios": 34,
+"nome": "ENERGISA MT",
+"primeiro_pregao": "2025-06-03",
+"tipo": "PN",
+"ultimo_preco": 63.99,
+"ultimo_pregao": "2025-06-23",
+"volume": 30601
+},
+"EPAR3": {
+"isin": "BREPARACNOR9",
+"negocios": 2412,
+"nome": "EMBPAR S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.96,
+"ultimo_pregao": "2025-06-30",
+"volume": 566411
+},
+"EQMA3B": {
+"isin": "BREQMAACNOR8",
+"negocios": 96,
+"nome": "EQTLMARANHAO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 27.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 100215
+},
+"EQPA3": {
+"isin": "BREQPAACNOR1",
+"negocios": 1106,
+"nome": "EQTL PARA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 5.65,
+"ultimo_pregao": "2025-06-30",
+"volume": 749496
+},
+"EQPA5": {
+"isin": "BREQPAACNPA4",
+"negocios": 1,
+"nome": "EQTL PARA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 6.79,
+"ultimo_pregao": "2025-06-02",
+"volume": 7
+},
+"EQPA7": {
+"isin": "BREQPAACNPC0",
+"negocios": 6,
+"nome": "EQTL PARA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNC",
+"ultimo_preco": 7.5,
+"ultimo_pregao": "2025-06-30",
+"volume": 4127
+},
+"EQTL3": {
+"isin": "BREQTLACNOR0",
+"negocios": 381551,
+"nome": "EQUATORIAL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 35.96,
+"ultimo_pregao": "2025-06-30",
+"volume": 5791288980
+},
+"ESPA3": {
+"isin": "BRESPAACNOR7",
+"negocios": 5163,
+"nome": "ESPACOLASER",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.08,
+"ultimo_pregao": "2025-06-30",
+"volume": 6861804
+},
+"ESTR3": {
+"isin": "BRESTRACNOR3",
+"negocios": 2,
+"nome": "ESTRELA",
+"primeiro_pregao": "2025-06-23",
+"tipo": "ON",
+"ultimo_preco": 5.0,
+"ultimo_pregao": "2025-06-23",
+"volume": 10
+},
+"ESTR4": {
+"isin": "BRESTRACNPR0",
+"negocios": 66,
+"nome": "ESTRELA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 3.1,
+"ultimo_pregao": "2025-06-30",
+"volume": 8759
+},
+"ETER3": {
+"isin": "BRETERACNOR3",
+"negocios": 7769,
+"nome": "ETERNIT",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 5718414
+},
+"EUCA3": {
+"isin": "BREUCAACNOR1",
+"negocios": 685,
+"nome": "EUCATEX",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 20.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 501048
+},
+"EUCA4": {
+"isin": "BREUCAACNPR8",
+"negocios": 10026,
+"nome": "EUCATEX",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 18.84,
+"ultimo_pregao": "2025-06-30",
+"volume": 24449081
+},
+"EVEN3": {
+"isin": "BREVENACNOR8",
+"negocios": 42324,
+"nome": "EVEN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.46,
+"ultimo_pregao": "2025-06-30",
+"volume": 91578680
+},
+"EZTC3": {
+"isin": "BREZTCACNOR0",
+"negocios": 87490,
+"nome": "EZTEC",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 13.92,
+"ultimo_pregao": "2025-06-30",
+"volume": 291604121
+},
+"FESA3": {
+"isin": "BRFESAACNOR8",
+"negocios": 331,
+"nome": "FERBASA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.51,
+"ultimo_pregao": "2025-06-30",
+"volume": 55775
+},
+"FESA4": {
+"isin": "BRFESAACNPR5",
+"negocios": 41703,
+"nome": "FERBASA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 6.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 67011997
+},
+"FHER3": {
+"isin": "BRFHERACNOR5",
+"negocios": 3861,
+"nome": "FER HERINGER",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.83,
+"ultimo_pregao": "2025-06-30",
+"volume": 3807957
+},
+"FICT3": {
+"isin": "BRFICTACNOR3",
+"negocios": 3485,
+"nome": "FICTORALIMEN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.55,
+"ultimo_pregao": "2025-06-30",
+"volume": 1650351
+},
+"FIEI3": {
+"isin": "BRFIEIACNOR2",
+"negocios": 34,
+"nome": "FICA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.97,
+"ultimo_pregao": "2025-06-25",
+"volume": 652181
+},
+"FIQE3": {
+"isin": "BRFIQEACNOR5",
+"negocios": 26411,
+"nome": "UNIFIQUE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.83,
+"ultimo_pregao": "2025-06-30",
+"volume": 16156128
+},
+"FLRY3": {
+"isin": "BRFLRYACNOR5",
+"negocios": 194152,
+"nome": "FLEURY",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 13.02,
+"ultimo_pregao": "2025-06-30",
+"volume": 705818665
+},
+"FRAS3": {
+"isin": "BRFRASACNOR0",
+"negocios": 35925,
+"nome": "FRAS-LE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 27.33,
+"ultimo_pregao": "2025-06-30",
+"volume": 205142486
+},
+"FRIO3": {
+"isin": "BRFRIOACNOR2",
+"negocios": 127,
+"nome": "METALFRIO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 220.0,
+"ultimo_pregao": "2025-06-27",
+"volume": 1531858
+},
+"GEPA3": {
+"isin": "BRGEPAACNOR2",
+"negocios": 315,
+"nome": "GER PARANAP",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 35.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 120265
+},
+"GEPA4": {
+"isin": "BRGEPAACNPR9",
+"negocios": 744,
+"nome": "GER PARANAP",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 35.89,
+"ultimo_pregao": "2025-06-30",
+"volume": 528925
+},
+"GFSA3": {
+"isin": "BRGFSAACNOR3",
+"negocios": 40859,
+"nome": "GAFISA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 20.9,
+"ultimo_pregao": "2025-06-30",
+"volume": 188567849
+},
+"GGBR3": {
+"isin": "BRGGBRACNOR1",
+"negocios": 11830,
+"nome": "GERDAU",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 14.56,
+"ultimo_pregao": "2025-06-30",
+"volume": 16866534
+},
+"GGBR4": {
+"isin": "BRGGBRACNPR8",
+"negocios": 423009,
+"nome": "GERDAU",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 16.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 4026418693
+},
+"GGPS3": {
+"isin": "BRGGPSACNOR9",
+"negocios": 151329,
+"nome": "GPS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 15.81,
+"ultimo_pregao": "2025-06-30",
+"volume": 828471701
+},
+"GMAT3": {
+"isin": "BRGMATACNOR7",
+"negocios": 101838,
+"nome": "GRUPO MATEUS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 8.17,
+"ultimo_pregao": "2025-06-30",
+"volume": 549297964
+},
+"GOAU3": {
+"isin": "BRGOAUACNOR1",
+"negocios": 7255,
+"nome": "GERDAU MET",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 8.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 5721623
+},
+"GOAU4": {
+"isin": "BRGOAUACNPR8",
+"negocios": 197239,
+"nome": "GERDAU MET",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 8.93,
+"ultimo_pregao": "2025-06-30",
+"volume": 1532547409
+},
+"GOLL4": {
+"isin": "BRGOLLACNPR4",
+"negocios": 63367,
+"nome": "GOL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 0.79,
+"ultimo_pregao": "2025-06-11",
+"volume": 284745775
+},
+"GPAR3": {
+"isin": "BRGPARACNOR4",
+"negocios": 23,
+"nome": "CELGPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 22.9,
+"ultimo_pregao": "2025-06-30",
+"volume": 2245
+},
+"GRND3": {
+"isin": "BRGRNDACNOR3",
+"negocios": 81009,
+"nome": "GRENDENE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 5.5,
+"ultimo_pregao": "2025-06-30",
+"volume": 305879979
+},
+"GSHP3": {
+"isin": "BRGSHPACNOR7",
+"negocios": 154,
+"nome": "GENERALSHOPP",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.65,
+"ultimo_pregao": "2025-06-27",
+"volume": 165814
+},
+"GUAR3": {
+"isin": "BRGUARACNOR4",
+"negocios": 55781,
+"nome": "GUARARAPES",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 8.55,
+"ultimo_pregao": "2025-06-30",
+"volume": 119406036
+},
+"HAGA3": {
+"isin": "BRHAGAACNOR7",
+"negocios": 189,
+"nome": "HAGA S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.96,
+"ultimo_pregao": "2025-06-30",
+"volume": 44037
+},
+"HAGA4": {
+"isin": "BRHAGAACNPR4",
+"negocios": 522,
+"nome": "HAGA S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 1.18,
+"ultimo_pregao": "2025-06-30",
+"volume": 215373
+},
+"HAPV3": {
+"isin": "BRHAPVACNOR4",
+"negocios": 394516,
+"nome": "HAPVIDA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 36.85,
+"ultimo_pregao": "2025-06-30",
+"volume": 4213733730
+},
+"HBOR3": {
+"isin": "BRHBORACNOR3",
+"negocios": 37352,
+"nome": "HELBOR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.56,
+"ultimo_pregao": "2025-06-30",
+"volume": 83889889
+},
+"HBRE3": {
+"isin": "BRHBREACNOR4",
+"negocios": 10835,
+"nome": "HBR REALTY",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.51,
+"ultimo_pregao": "2025-06-30",
+"volume": 25610434
+},
+"HBSA3": {
+"isin": "BRHBSAACNOR0",
+"negocios": 80044,
+"nome": "HIDROVIAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.6,
+"ultimo_pregao": "2025-06-30",
+"volume": 215537834
+},
+"HBTS5": {
+"isin": "BRHBTSACNPA3",
+"negocios": 35,
+"nome": "HABITASUL",
+"primeiro_pregao": "2025-06-03",
+"tipo": "PNA",
+"ultimo_preco": 29.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 15335
+},
+"HETA3": {
+"isin": "BRHETAACNOR2",
+"negocios": 1,
+"nome": "HERCULES",
+"primeiro_pregao": "2025-06-05",
+"tipo": "ON",
+"ultimo_preco": 57.88,
+"ultimo_pregao": "2025-06-05",
+"volume": 58
+},
+"HETA4": {
+"isin": "BRHETAACNPR9",
+"negocios": 9,
+"nome": "HERCULES",
+"primeiro_pregao": "2025-06-09",
+"tipo": "PN",
+"ultimo_preco": 5.36,
+"ultimo_pregao": "2025-06-30",
+"volume": 1795
+},
+"HOOT4": {
+"isin": "BRHOOTACNPR9",
+"negocios": 290,
+"nome": "HOTEIS OTHON",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 3.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 910984
+},
+"HYPE3": {
+"isin": "BRHYPEACNOR0",
+"negocios": 260751,
+"nome": "HYPERA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 27.19,
+"ultimo_pregao": "2025-06-30",
+"volume": 1915430142
+},
+"IFCM3": {
+"isin": "BRIFCMACNOR8",
+"negocios": 31709,
+"nome": "INFRACOMM",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 0.06,
+"ultimo_pregao": "2025-06-30",
+"volume": 16669290
+},
+"IGTI11": {
+"isin": "BRIGTICDAM16",
+"negocios": 224991,
+"nome": "IGUATEMI S.A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "UNT",
+"ultimo_preco": 23.19,
+"ultimo_pregao": "2025-06-30",
+"volume": 1373408109
+},
+"IGTI3": {
+"isin": "BRIGTIACNOR8",
+"negocios": 5751,
+"nome": "IGUATEMI S.A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.83,
+"ultimo_pregao": "2025-06-30",
+"volume": 3486108
+},
+"IGTI4": {
+"isin": "BRIGTIACNPR5",
+"negocios": 23,
+"nome": "IGUATEMI S.A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 10.03,
+"ultimo_pregao": "2025-06-30",
+"volume": 2861
+},
+"INEP3": {
+"isin": "BRINEPACNOR1",
+"negocios": 1626,
+"nome": "INEPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.26,
+"ultimo_pregao": "2025-06-30",
+"volume": 1373549
+},
+"INEP4": {
+"isin": "BRINEPACNPR8",
+"negocios": 1143,
+"nome": "INEPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 1.61,
+"ultimo_pregao": "2025-06-30",
+"volume": 1361138
+},
+"INTB3": {
+"isin": "BRINTBACNOR9",
+"negocios": 162368,
+"nome": "INTELBRAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 15.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 747563880
+},
+"IRBR3": {
+"isin": "BRIRBRACNOR4",
+"negocios": 106128,
+"nome": "IRBBRASIL RE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 45.24,
+"ultimo_pregao": "2025-06-30",
+"volume": 858405519
+},
+"ISAE3": {
+"isin": "BRISAEACNOR2",
+"negocios": 3805,
+"nome": "ISA ENERGIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 30.31,
+"ultimo_pregao": "2025-06-30",
+"volume": 2426098
+},
+"ISAE4": {
+"isin": "BRISAEACNPR9",
+"negocios": 163211,
+"nome": "ISA ENERGIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 23.18,
+"ultimo_pregao": "2025-06-30",
+"volume": 777912194
+},
+"ITSA3": {
+"isin": "BRITSAACNOR0",
+"negocios": 29696,
+"nome": "ITAUSA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 10.93,
+"ultimo_pregao": "2025-06-30",
+"volume": 23591421
+},
+"ITSA4": {
+"isin": "BRITSAACNPR7",
+"negocios": 620464,
+"nome": "ITAUSA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 10.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 5629777392
+},
+"ITUB3": {
+"isin": "BRITUBACNOR4",
+"negocios": 64536,
+"nome": "ITAUUNIBANCO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 32.99,
+"ultimo_pregao": "2025-06-30",
+"volume": 346432392
+},
+"ITUB4": {
+"isin": "BRITUBACNPR1",
+"negocios": 701016,
+"nome": "ITAUUNIBANCO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 36.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 14774140833
+},
+"JALL3": {
+"isin": "BRJALLACNOR0",
+"negocios": 28783,
+"nome": "JALLESMACHAD",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.85,
+"ultimo_pregao": "2025-06-30",
+"volume": 43105354
+},
+"JBSS3": {
+"isin": "BRJBSSACNOR8",
+"negocios": 212444,
+"nome": "JBS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 39.03,
+"ultimo_pregao": "2025-06-06",
+"volume": 6789371649
+},
+"JFEN3": {
+"isin": "BRJFENACNOR0",
+"negocios": 649,
+"nome": "JOAO FORTES",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.9,
+"ultimo_pregao": "2025-06-30",
+"volume": 281664
+},
+"JHSF3": {
+"isin": "BRJHSFACNOR2",
+"negocios": 101252,
+"nome": "JHSF PART",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 5.33,
+"ultimo_pregao": "2025-06-30",
+"volume": 293680925
+},
+"JOPA3": {
+"isin": "BRJOPAACNOR5",
+"negocios": 17,
+"nome": "JOSAPAR",
+"primeiro_pregao": "2025-06-06",
+"tipo": "ON",
+"ultimo_preco": 20.11,
+"ultimo_pregao": "2025-06-27",
+"volume": 87300
+},
+"JOPA4": {
+"isin": "BRJOPAACNPR2",
+"negocios": 7,
+"nome": "JOSAPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 22.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 352
+},
+"JSLG3": {
+"isin": "BRJSLGACNOR2",
+"negocios": 34777,
+"nome": "JSL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 77625768
+},
+"KEPL3": {
+"isin": "BRKEPLACNOR1",
+"negocios": 79294,
+"nome": "KEPLER WEBER",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 8.14,
+"ultimo_pregao": "2025-06-30",
+"volume": 178067922
+},
+"KLBN11": {
+"isin": "BRKLBNCDAM18",
+"negocios": 253570,
+"nome": "KLABIN S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "UNT",
+"ultimo_preco": 18.45,
+"ultimo_pregao": "2025-06-30",
+"volume": 1991185469
+},
+"KLBN3": {
+"isin": "BRKLBNACNOR2",
+"negocios": 68110,
+"nome": "KLABIN S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 35506206
+},
+"KLBN4": {
+"isin": "BRKLBNACNPR9",
+"negocios": 199398,
+"nome": "KLABIN S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 3.66,
+"ultimo_pregao": "2025-06-30",
+"volume": 161740824
+},
+"LAND3": {
+"isin": "BRLANDACNOR9",
+"negocios": 3934,
+"nome": "TERRASANTAPA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 10.1,
+"ultimo_pregao": "2025-06-30",
+"volume": 12038868
+},
+"LAVV3": {
+"isin": "BRLAVVACNOR4",
+"negocios": 43390,
+"nome": "LAVVI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 12.46,
+"ultimo_pregao": "2025-06-30",
+"volume": 122016059
+},
+"LEVE3": {
+"isin": "BRLEVEACNOR2",
+"negocios": 48932,
+"nome": "METAL LEVE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 30.21,
+"ultimo_pregao": "2025-06-30",
+"volume": 154112546
+},
+"LIGT3": {
+"isin": "BRLIGTACNOR2",
+"negocios": 65998,
+"nome": "LIGHT S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.46,
+"ultimo_pregao": "2025-06-30",
+"volume": 181185836
+},
+"LIPR3": {
+"isin": "BRLIPRACNOR7",
+"negocios": 24,
+"nome": "ELETROPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 35.89,
+"ultimo_pregao": "2025-06-13",
+"volume": 3376
+},
+"LJQQ3": {
+"isin": "BRLJQQACNOR5",
+"negocios": 53624,
+"nome": "QUERO-QUERO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.63,
+"ultimo_pregao": "2025-06-30",
+"volume": 120150801
+},
+"LOGG3": {
+"isin": "BRLOGGACNOR7",
+"negocios": 32240,
+"nome": "LOG COM PROP",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 20.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 93396295
+},
+"LOGN3": {
+"isin": "BRLOGNACNOR3",
+"negocios": 1308,
+"nome": "LOG-IN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 26.47,
+"ultimo_pregao": "2025-06-30",
+"volume": 6478549
+},
+"LPSB3": {
+"isin": "BRLPSBACNOR0",
+"negocios": 3644,
+"nome": "LOPES BRASIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.6,
+"ultimo_pregao": "2025-06-30",
+"volume": 2346836
+},
+"LREN3": {
+"isin": "BRLRENACNOR1",
+"negocios": 524276,
+"nome": "LOJAS RENNER",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 19.68,
+"ultimo_pregao": "2025-06-30",
+"volume": 4277682104
+},
+"LUPA3": {
+"isin": "BRLUPAACNOR8",
+"negocios": 1415,
+"nome": "LUPATECH",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.2,
+"ultimo_pregao": "2025-06-30",
+"volume": 1210134
+},
+"LUXM4": {
+"isin": "BRLUXMACNPR4",
+"negocios": 162,
+"nome": "TREVISA",
+"primeiro_pregao": "2025-06-03",
+"tipo": "PN",
+"ultimo_preco": 5.2,
+"ultimo_pregao": "2025-06-30",
+"volume": 68769
+},
+"LVTC3": {
+"isin": "BRLVTCACNOR4",
+"negocios": 4102,
+"nome": "WDC NETWORKS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.53,
+"ultimo_pregao": "2025-06-30",
+"volume": 12122074
+},
+"LWSA3": {
+"isin": "BRLWSAACNOR8",
+"negocios": 171187,
+"nome": "LWSA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 590778048
+},
+"MAPT3": {
+"isin": "BRMAPTACNOR8",
+"negocios": 6,
+"nome": "CEMEPE",
+"primeiro_pregao": "2025-06-11",
+"tipo": "ON",
+"ultimo_preco": 3.4,
+"ultimo_pregao": "2025-06-26",
+"volume": 129
+},
+"MAPT4": {
+"isin": "BRMAPTACNPR5",
+"negocios": 447,
+"nome": "CEMEPE",
+"primeiro_pregao": "2025-06-03",
+"tipo": "PN",
+"ultimo_preco": 4.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 209313
+},
+"MATD3": {
+"isin": "BRMATDACNOR4",
+"negocios": 18923,
+"nome": "MATER DEI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.71,
+"ultimo_pregao": "2025-06-30",
+"volume": 22273810
+},
+"MBLY3": {
+"isin": "BRMBLYACNOR5",
+"negocios": 161,
+"nome": "MOBLY",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 0.99,
+"ultimo_pregao": "2025-06-02",
+"volume": 257005
+},
+"MDIA3": {
+"isin": "BRMDIAACNOR7",
+"negocios": 54067,
+"nome": "M.DIASBRANCO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 24.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 258586447
+},
+"MDNE3": {
+"isin": "BRMDNEACNOR9",
+"negocios": 90766,
+"nome": "MOURA DUBEUX",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 23.06,
+"ultimo_pregao": "2025-06-30",
+"volume": 380057953
+},
+"MEAL3": {
+"isin": "BRMEALACNOR9",
+"negocios": 5213,
+"nome": "IMC S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.21,
+"ultimo_pregao": "2025-06-30",
+"volume": 6404575
+},
+"MELK3": {
+"isin": "BRMELKACNOR8",
+"negocios": 22861,
+"nome": "MELNICK",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.37,
+"ultimo_pregao": "2025-06-30",
+"volume": 27141639
+},
+"MERC4": {
+"isin": "BRMERCACNPR9",
+"negocios": 30,
+"nome": "MERC FINANC",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 9.11,
+"ultimo_pregao": "2025-06-30",
+"volume": 884
+},
+"MGEL4": {
+"isin": "BRMGELACNPR3",
+"negocios": 200,
+"nome": "MANGELS INDL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 4.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 208626
+},
+"MGLU3": {
+"isin": "BRMGLUACNOR2",
+"negocios": 539699,
+"nome": "MAGAZ LUIZA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 9.85,
+"ultimo_pregao": "2025-06-30",
+"volume": 6233817738
+},
+"MILS3": {
+"isin": "BRMILSACNOR2",
+"negocios": 35004,
+"nome": "MILLS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 163029849
+},
+"MLAS3": {
+"isin": "BRMLASACNOR9",
+"negocios": 26212,
+"nome": "MULTILASER",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.08,
+"ultimo_pregao": "2025-06-30",
+"volume": 37086594
+},
+"MNDL3": {
+"isin": "BRMNDLACNOR4",
+"negocios": 145,
+"nome": "MUNDIAL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 18.01,
+"ultimo_pregao": "2025-06-30",
+"volume": 519394
+},
+"MNPR3": {
+"isin": "BRMNPRACNOR5",
+"negocios": 295,
+"nome": "MINUPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 25.5,
+"ultimo_pregao": "2025-06-30",
+"volume": 782560
+},
+"MOAR3": {
+"isin": "BRMOARACNOR5",
+"negocios": 709,
+"nome": "MONT ARANHA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 145.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 1522585
+},
+"MOTV3": {
+"isin": "BRMOTVACNOR7",
+"negocios": 237478,
+"nome": "MOTIVA SA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 13.79,
+"ultimo_pregao": "2025-06-30",
+"volume": 1662077241
+},
+"MOVI3": {
+"isin": "BRMOVIACNOR0",
+"negocios": 223627,
+"nome": "MOVIDA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.01,
+"ultimo_pregao": "2025-06-30",
+"volume": 1210832222
+},
+"MRFG3": {
+"isin": "BRMRFGACNOR0",
+"negocios": 337410,
+"nome": "MARFRIG",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 22.9,
+"ultimo_pregao": "2025-06-30",
+"volume": 3091689164
+},
+"MRSA3B": {
+"isin": "BRMRSAACNOR6",
+"negocios": 36,
+"nome": "MRS LOGIST",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 25.94,
+"ultimo_pregao": "2025-06-26",
+"volume": 30087
+},
+"MRSA5B": {
+"isin": "BRMRSAACNPA9",
+"negocios": 8,
+"nome": "MRS LOGIST",
+"primeiro_pregao": "2025-06-09",
+"tipo": "PNA",
+"ultimo_preco": 26.45,
+"ultimo_pregao": "2025-06-13",
+"volume": 7868
+},
+"MRSA6B": {
+"isin": "BRMRSAACNPB7",
+"negocios": 9,
+"nome": "MRS LOGIST",
+"primeiro_pregao": "2025-06-09",
+"tipo": "PNB",
+"ultimo_preco": 24.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 7746
+},
+"MRVE3": {
+"isin": "BRMRVEACNOR2",
+"negocios": 283801,
+"nome": "MRV",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.37,
+"ultimo_pregao": "2025-06-30",
+"volume": 1457224432
+},
+"MSPA3": {
+"isin": "BRMSPAACNOR0",
+"negocios": 2,
+"nome": "MELHOR SP",
+"primeiro_pregao": "2025-06-25",
+"tipo": "ON",
+"ultimo_preco": 46.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 94
+},
+"MTRE3": {
+"isin": "BRMTREACNOR6",
+"negocios": 32118,
+"nome": "MITRE REALTY",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 50766135
+},
+"MTSA3": {
+"isin": "BRMTSAACNOR2",
+"negocios": 3,
+"nome": "METISA",
+"primeiro_pregao": "2025-06-16",
+"tipo": "ON",
+"ultimo_preco": 76.0,
+"ultimo_pregao": "2025-06-23",
+"volume": 22600
+},
+"MTSA4": {
+"isin": "BRMTSAACNPR9",
+"negocios": 999,
+"nome": "METISA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 44.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 4623850
+},
+"MULT3": {
+"isin": "BRMULTACNOR5",
+"negocios": 360215,
+"nome": "MULTIPLAN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 27.21,
+"ultimo_pregao": "2025-06-30",
+"volume": 2052883013
+},
+"MWET3": {
+"isin": "BRMWETACNOR6",
+"negocios": 25,
+"nome": "WETZEL S/A",
+"primeiro_pregao": "2025-06-06",
+"tipo": "ON",
+"ultimo_preco": 12.24,
+"ultimo_pregao": "2025-06-26",
+"volume": 3853
+},
+"MWET4": {
+"isin": "BRMWETACNPR3",
+"negocios": 73,
+"nome": "WETZEL S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 12.37,
+"ultimo_pregao": "2025-06-30",
+"volume": 63649
+},
+"MYPK3": {
+"isin": "BRMYPKACNOR7",
+"negocios": 66489,
+"nome": "IOCHP-MAXION",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 13.35,
+"ultimo_pregao": "2025-06-30",
+"volume": 209333561
+},
+"NEOE3": {
+"isin": "BRNEOEACNOR3",
+"negocios": 89756,
+"nome": "NEOENERGIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 25.56,
+"ultimo_pregao": "2025-06-30",
+"volume": 524788402
+},
+"NEXP3": {
+"isin": "BRNEXPACNOR0",
+"negocios": 221,
+"nome": "NEXPE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.81,
+"ultimo_pregao": "2025-06-30",
+"volume": 61063
+},
+"NGRD3": {
+"isin": "BRNGRDACNOR3",
+"negocios": 4027,
+"nome": "NEOGRID",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 26.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 4927932
+},
+"NORD3": {
+"isin": "BRNORDACNOR7",
+"negocios": 259,
+"nome": "NORDON MET",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.25,
+"ultimo_pregao": "2025-06-27",
+"volume": 92036
+},
+"NTCO3": {
+"isin": "BRNTCOACNOR5",
+"negocios": 275264,
+"nome": "GRUPO NATURA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 1409278608
+},
+"NUTR3": {
+"isin": "BRNUTRACNOR0",
+"negocios": 658,
+"nome": "NUTRIPLANT",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.36,
+"ultimo_pregao": "2025-06-30",
+"volume": 287888
+},
+"ODER4": {
+"isin": "BRODERACNPR3",
+"negocios": 2,
+"nome": "ODERICH",
+"primeiro_pregao": "2025-06-25",
+"tipo": "PN",
+"ultimo_preco": 86.99,
+"ultimo_pregao": "2025-06-25",
+"volume": 174
+},
+"ODPV3": {
+"isin": "BRODPVACNOR4",
+"negocios": 122581,
+"nome": "ODONTOPREV",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.72,
+"ultimo_pregao": "2025-06-30",
+"volume": 438714203
+},
+"OFSA3": {
+"isin": "BROFSAACNOR7",
+"negocios": 1078,
+"nome": "OUROFINO S/A",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 24.13,
+"ultimo_pregao": "2025-06-30",
+"volume": 2582326
+},
+"OIBR3": {
+"isin": "BROIBRACNOR1",
+"negocios": 26343,
+"nome": "OI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 0.64,
+"ultimo_pregao": "2025-06-30",
+"volume": 51066078
+},
+"OIBR4": {
+"isin": "BROIBRACNPR8",
+"negocios": 5857,
+"nome": "OI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 9.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 7361745
+},
+"ONCO3": {
+"isin": "BRONCOACNOR6",
+"negocios": 45995,
+"nome": "ONCOCLINICAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 5.13,
+"ultimo_pregao": "2025-06-30",
+"volume": 182486207
+},
+"OPCT3": {
+"isin": "BROPCTACNOR0",
+"negocios": 25776,
+"nome": "OCEANPACT",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 64547189
+},
+"ORVR3": {
+"isin": "BRORVRACNOR0",
+"negocios": 45501,
+"nome": "ORIZON",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 53.87,
+"ultimo_pregao": "2025-06-30",
+"volume": 456765487
+},
+"OSXB3": {
+"isin": "BROSXBACNOR8",
+"negocios": 347,
+"nome": "OSX BRASIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.75,
+"ultimo_pregao": "2025-06-30",
+"volume": 90573
+},
+"PATI3": {
+"isin": "BRPATIACNOR6",
+"negocios": 281,
+"nome": "PANATLANTICA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 37.31,
+"ultimo_pregao": "2025-06-30",
+"volume": 184745
+},
+"PATI4": {
+"isin": "BRPATIACNPR3",
+"negocios": 131,
+"nome": "PANATLANTICA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 34.76,
+"ultimo_pregao": "2025-06-30",
+"volume": 115823
+},
+"PCAR3": {
+"isin": "BRPCARACNOR3",
+"negocios": 104760,
+"nome": "P.ACUCAR-CBD",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.08,
+"ultimo_pregao": "2025-06-30",
+"volume": 446761960
+},
+"PDGR3": {
+"isin": "BRPDGRACNOR8",
+"negocios": 13786,
+"nome": "PDG REALT",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 0.29,
+"ultimo_pregao": "2025-06-30",
+"volume": 13447497
+},
+"PDTC3": {
+"isin": "BRPDTCACNOR3",
+"negocios": 1995,
+"nome": "PADTEC",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 922280
+},
+"PEAB3": {
+"isin": "BRPEABACNOR3",
+"negocios": 59,
+"nome": "PAR AL BAHIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 39.14,
+"ultimo_pregao": "2025-06-30",
+"volume": 567723
+},
+"PEAB4": {
+"isin": "BRPEABACNPR0",
+"negocios": 26,
+"nome": "PAR AL BAHIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 45.65,
+"ultimo_pregao": "2025-06-30",
+"volume": 54688
+},
+"PETR3": {
+"isin": "BRPETRACNOR9",
+"negocios": 444814,
+"nome": "PETROBRAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 34.09,
+"ultimo_pregao": "2025-06-30",
+"volume": 8251563917
+},
+"PETR4": {
+"isin": "BRPETRACNPR6",
+"negocios": 1608087,
+"nome": "PETROBRAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 31.38,
+"ultimo_pregao": "2025-06-30",
+"volume": 27767252094
+},
+"PETZ3": {
+"isin": "BRPETZACNOR2",
+"negocios": 174091,
+"nome": "PETZ",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.91,
+"ultimo_pregao": "2025-06-30",
+"volume": 670448622
+},
+"PFRM3": {
+"isin": "BRPFRMACNOR1",
+"negocios": 16130,
+"nome": "PROFARMA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 8.94,
+"ultimo_pregao": "2025-06-30",
+"volume": 26076305
+},
+"PGMN3": {
+"isin": "BRPGMNACNOR8",
+"negocios": 35832,
+"nome": "PAGUE MENOS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.45,
+"ultimo_pregao": "2025-06-30",
+"volume": 53101314
+},
+"PINE3": {
+"isin": "BRPINEACNOR1",
+"negocios": 897,
+"nome": "PINE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.1,
+"ultimo_pregao": "2025-06-30",
+"volume": 413242
+},
+"PINE4": {
+"isin": "BRPINEACNPR8",
+"negocios": 14331,
+"nome": "PINE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 6.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 29786472
+},
+"PLAS3": {
+"isin": "BRPLASACNOR2",
+"negocios": 65,
+"nome": "PLASCAR PART",
+"primeiro_pregao": "2025-06-05",
+"tipo": "ON",
+"ultimo_preco": 5.12,
+"ultimo_pregao": "2025-06-30",
+"volume": 22301
+},
+"PLPL3": {
+"isin": "BRPLPLACNOR5",
+"negocios": 88653,
+"nome": "PLANOEPLANO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 15.7,
+"ultimo_pregao": "2025-06-30",
+"volume": 349922170
+},
+"PMAM3": {
+"isin": "BRPMAMACNOR3",
+"negocios": 13605,
+"nome": "PARANAPANEMA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 20135151
+},
+"PNVL3": {
+"isin": "BRPNVLACNOR9",
+"negocios": 37339,
+"nome": "DIMED",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 9.5,
+"ultimo_pregao": "2025-06-30",
+"volume": 100647736
+},
+"POMO3": {
+"isin": "BRPOMOACNOR0",
+"negocios": 14412,
+"nome": "MARCOPOLO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.5,
+"ultimo_pregao": "2025-06-30",
+"volume": 29138696
+},
+"POMO4": {
+"isin": "BRPOMOACNPR7",
+"negocios": 375948,
+"nome": "MARCOPOLO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 7.96,
+"ultimo_pregao": "2025-06-30",
+"volume": 1471005934
+},
+"PORT3": {
+"isin": "BRPORTACNOR8",
+"negocios": 31793,
+"nome": "WILSON SONS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 17.45,
+"ultimo_pregao": "2025-06-30",
+"volume": 414109606
+},
+"POSI3": {
+"isin": "BRPOSIACNOR9",
+"negocios": 60490,
+"nome": "POSITIVO TEC",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.51,
+"ultimo_pregao": "2025-06-30",
+"volume": 105353787
+},
+"PPLA11": {
+"isin": "BRPPLAUNT007",
+"negocios": 185,
+"nome": "PPLA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "UNT",
+"ultimo_preco": 0.95,
+"ultimo_pregao": "2025-06-30",
+"volume": 5894
+},
+"PRIO3": {
+"isin": "BRPRIOACNOR1",
+"negocios": 619778,
+"nome": "PETRORIO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 42.4,
+"ultimo_pregao": "2025-06-30",
+"volume": 9017508694
+},
+"PRNR3": {
+"isin": "BRPRNRACNOR4",
+"negocios": 23627,
+"nome": "PRINER",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 15.25,
+"ultimo_pregao": "2025-06-30",
+"volume": 71863196
+},
+"PSSA3": {
+"isin": "BRPSSAACNOR7",
+"negocios": 213875,
+"nome": "PORTO SEGURO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 55.2,
+"ultimo_pregao": "2025-06-30",
+"volume": 2015443411
+},
+"PTBL3": {
+"isin": "BRPTBLACNOR8",
+"negocios": 23719,
+"nome": "PORTOBELLO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.63,
+"ultimo_pregao": "2025-06-30",
+"volume": 40756021
+},
+"PTNT3": {
+"isin": "BRPTNTACNOR6",
+"negocios": 92,
+"nome": "PETTENATI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 9.08,
+"ultimo_pregao": "2025-06-30",
+"volume": 55992
+},
+"PTNT4": {
+"isin": "BRPTNTACNPR3",
+"negocios": 1115,
+"nome": "PETTENATI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 4.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 1982734
+},
+"QUAL3": {
+"isin": "BRQUALACNOR6",
+"negocios": 45621,
+"nome": "QUALICORP",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.89,
+"ultimo_pregao": "2025-06-30",
+"volume": 80043207
+},
+"RADL3": {
+"isin": "BRRADLACNOR0",
+"negocios": 453391,
+"nome": "RAIADROGASIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 15.12,
+"ultimo_pregao": "2025-06-30",
+"volume": 3773866967
+},
+"RAIL3": {
+"isin": "BRRAILACNOR9",
+"negocios": 389108,
+"nome": "RUMO S.A.",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 18.53,
+"ultimo_pregao": "2025-06-30",
+"volume": 4363853402
+},
+"RAIZ4": {
+"isin": "BRRAIZACNPR6",
+"negocios": 289364,
+"nome": "RAIZEN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 1.65,
+"ultimo_pregao": "2025-06-30",
+"volume": 523310560
+},
+"RANI3": {
+"isin": "BRRANIACNOR5",
+"negocios": 69731,
+"nome": "IRANI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.27,
+"ultimo_pregao": "2025-06-30",
+"volume": 107443606
+},
+"RAPT3": {
+"isin": "BRRAPTACNOR7",
+"negocios": 8277,
+"nome": "RANDON PART",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 8.41,
+"ultimo_pregao": "2025-06-30",
+"volume": 6013350
+},
+"RAPT4": {
+"isin": "BRRAPTACNPR4",
+"negocios": 135371,
+"nome": "RANDON PART",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 8.91,
+"ultimo_pregao": "2025-06-30",
+"volume": 594034450
+},
+"RCSL3": {
+"isin": "BRRCSLACNOR4",
+"negocios": 12551,
+"nome": "RECRUSUL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.38,
+"ultimo_pregao": "2025-06-30",
+"volume": 13033865
+},
+"RCSL4": {
+"isin": "BRRCSLACNPR1",
+"negocios": 42328,
+"nome": "RECRUSUL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 0.96,
+"ultimo_pregao": "2025-06-30",
+"volume": 46775317
+},
+"RDNI3": {
+"isin": "BRRDNIACNOR9",
+"negocios": 1121,
+"nome": "RNI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.47,
+"ultimo_pregao": "2025-06-30",
+"volume": 464611
+},
+"RDOR3": {
+"isin": "BRRDORACNOR8",
+"negocios": 364111,
+"nome": "REDE D OR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 35.42,
+"ultimo_pregao": "2025-06-30",
+"volume": 4352121628
+},
+"REAG3": {
+"isin": "BRREAGACNOR8",
+"negocios": 1011,
+"nome": "REAGINVEST",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.65,
+"ultimo_pregao": "2025-06-30",
+"volume": 934855
+},
+"RECV3": {
+"isin": "BRRECVACNOR3",
+"negocios": 164957,
+"nome": "PETRORECSA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 14.33,
+"ultimo_pregao": "2025-06-30",
+"volume": 880528157
+},
+"REDE3": {
+"isin": "BRREDEACNOR7",
+"negocios": 977,
+"nome": "REDE ENERGIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.75,
+"ultimo_pregao": "2025-06-30",
+"volume": 225755
+},
+"RENT3": {
+"isin": "BRRENTACNOR4",
+"negocios": 506112,
+"nome": "LOCALIZA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 40.52,
+"ultimo_pregao": "2025-06-30",
+"volume": 8002870272
+},
+"RNEW11": {
+"isin": "BRRNEWCDAM15",
+"negocios": 1290,
+"nome": "RENOVA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "UNT",
+"ultimo_preco": 2.6,
+"ultimo_pregao": "2025-06-30",
+"volume": 615416
+},
+"RNEW3": {
+"isin": "BRRNEWACNOR8",
+"negocios": 4323,
+"nome": "RENOVA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 0.85,
+"ultimo_pregao": "2025-06-30",
+"volume": 2074525
+},
+"RNEW4": {
+"isin": "BRRNEWACNPR5",
+"negocios": 6511,
+"nome": "RENOVA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 0.89,
+"ultimo_pregao": "2025-06-30",
+"volume": 4356819
+},
+"ROMI3": {
+"isin": "BRROMIACNOR8",
+"negocios": 23513,
+"nome": "ROMI",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 8.92,
+"ultimo_pregao": "2025-06-30",
+"volume": 24476330
+},
+"RPAD3": {
+"isin": "BRRPADACNOR1",
+"negocios": 44,
+"nome": "ALFA HOLDING",
+"primeiro_pregao": "2025-06-03",
+"tipo": "ON",
+"ultimo_preco": 4.16,
+"ultimo_pregao": "2025-06-30",
+"volume": 7010
+},
+"RPAD5": {
+"isin": "BRRPADACNPA4",
+"negocios": 111,
+"nome": "ALFA HOLDING",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 6.3,
+"ultimo_pregao": "2025-06-26",
+"volume": 11464
+},
+"RPAD6": {
+"isin": "BRRPADACNPB2",
+"negocios": 8,
+"nome": "ALFA HOLDING",
+"primeiro_pregao": "2025-06-16",
+"tipo": "PNB",
+"ultimo_preco": 4.04,
+"ultimo_pregao": "2025-06-27",
+"volume": 10216
+},
+"RPMG3": {
+"isin": "BRRPMGACNOR9",
+"negocios": 507,
+"nome": "PET MANGUINH",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.98,
+"ultimo_pregao": "2025-06-30",
+"volume": 355897
+},
+"RSID3": {
+"isin": "BRRSIDACNOR8",
+"negocios": 4778,
+"nome": "ROSSI RESID",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 2.06,
+"ultimo_pregao": "2025-06-30",
+"volume": 1630294
+},
+"RSUL4": {
+"isin": "BRRSULACNPR3",
+"negocios": 330,
+"nome": "RIOSULENSE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 69.84,
+"ultimo_pregao": "2025-06-30",
+"volume": 1617828
+},
+"RVEE3": {
+"isin": "BRRVEEACNOR9",
+"negocios": 138,
+"nome": "REVEE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 70.0,
+"ultimo_pregao": "2025-06-30",
+"volume": 251343
+},
+"SANB11": {
+"isin": "BRSANBCDAM13",
+"negocios": 183907,
+"nome": "SANTANDER BR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "UNT",
+"ultimo_preco": 29.69,
+"ultimo_pregao": "2025-06-30",
+"volume": 1485236381
+},
+"SANB3": {
+"isin": "BRSANBACNOR8",
+"negocios": 17039,
+"nome": "SANTANDER BR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 13.99,
+"ultimo_pregao": "2025-06-30",
+"volume": 25410734
+},
+"SANB4": {
+"isin": "BRSANBACNPR5",
+"negocios": 16761,
+"nome": "SANTANDER BR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 15.41,
+"ultimo_pregao": "2025-06-30",
+"volume": 26295153
+},
+"SAPR11": {
+"isin": "BRSAPRCDAM13",
+"negocios": 172247,
+"nome": "SANEPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "UNT",
+"ultimo_preco": 38.09,
+"ultimo_pregao": "2025-06-30",
+"volume": 1160646852
+},
+"SAPR3": {
+"isin": "BRSAPRACNOR9",
+"negocios": 40835,
+"nome": "SANEPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.88,
+"ultimo_pregao": "2025-06-30",
+"volume": 38062811
+},
+"SAPR4": {
+"isin": "BRSAPRACNPR6",
+"negocios": 109812,
+"nome": "SANEPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 7.55,
+"ultimo_pregao": "2025-06-30",
+"volume": 220338816
+},
+"SBFG3": {
+"isin": "BRSBFGACNOR1",
+"negocios": 96146,
+"nome": "GRUPO SBF",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 12.2,
+"ultimo_pregao": "2025-06-30",
+"volume": 428013481
+},
+"SBSP3": {
+"isin": "BRSBSPACNOR5",
+"negocios": 264392,
+"nome": "SABESP",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 119.13,
+"ultimo_pregao": "2025-06-30",
+"volume": 5767739379
+},
+"SCAR3": {
+"isin": "BRSCARACNOR7",
+"negocios": 1921,
+"nome": "SAO CARLOS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 17.76,
+"ultimo_pregao": "2025-06-30",
+"volume": 6482208
+},
+"SEER3": {
+"isin": "BRSEERACNOR5",
+"negocios": 67773,
+"nome": "SER EDUCA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 9.12,
+"ultimo_pregao": "2025-06-30",
+"volume": 149165465
+},
+"SEQL3": {
+"isin": "BRSEQLACNOR2",
+"negocios": 22274,
+"nome": "SEQUOIA LOG",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 0.94,
+"ultimo_pregao": "2025-06-30",
+"volume": 19739026
+},
+"SHOW3": {
+"isin": "BRSHOWACNOR7",
+"negocios": 4387,
+"nome": "TIME FOR FUN",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.99,
+"ultimo_pregao": "2025-06-30",
+"volume": 3157431
+},
+"SHUL4": {
+"isin": "BRSHULACNPR4",
+"negocios": 24112,
+"nome": "SCHULZ",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 5.39,
+"ultimo_pregao": "2025-06-30",
+"volume": 43378519
+},
+"SIMH3": {
+"isin": "BRSIMHACNOR0",
+"negocios": 148398,
+"nome": "SIMPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 5.08,
+"ultimo_pregao": "2025-06-30",
+"volume": 709277985
+},
+"SLCE3": {
+"isin": "BRSLCEACNOR2",
+"negocios": 152112,
+"nome": "SLC AGRICOLA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 17.87,
+"ultimo_pregao": "2025-06-30",
+"volume": 762331593
+},
+"SMFT3": {
+"isin": "BRSMFTACNOR1",
+"negocios": 263570,
+"nome": "SMART FIT",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 24.84,
+"ultimo_pregao": "2025-06-30",
+"volume": 1856303075
+},
+"SMTO3": {
+"isin": "BRSMTOACNOR3",
+"negocios": 151844,
+"nome": "SAO MARTINHO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 17.57,
+"ultimo_pregao": "2025-06-30",
+"volume": 719267790
+},
+"SNSY3": {
+"isin": "BRSNSYACNOR2",
+"negocios": 61,
+"nome": "SANSUY",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.19,
+"ultimo_pregao": "2025-06-27",
+"volume": 63428
+},
+"SNSY5": {
+"isin": "BRSNSYACNPA5",
+"negocios": 194,
+"nome": "SANSUY",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 4.03,
+"ultimo_pregao": "2025-06-30",
+"volume": 174535
+},
+"SNSY6": {
+"isin": "BRSNSYACNPB3",
+"negocios": 3,
+"nome": "SANSUY",
+"primeiro_pregao": "2025-06-06",
+"tipo": "PNB",
+"ultimo_preco": 11.0,
+"ultimo_pregao": "2025-06-24",
+"volume": 55
+},
+"SOJA3": {
+"isin": "BRSOJAACNOR9",
+"negocios": 50809,
+"nome": "BOA SAFRA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.5,
+"ultimo_pregao": "2025-06-30",
+"volume": 96279901
+},
+"SOND3": {
+"isin": "BRSONDACNOR5",
+"negocios": 2,
+"nome": "SONDOTECNICA",
+"primeiro_pregao": "2025-06-11",
+"tipo": "ON",
+"ultimo_preco": 35.0,
+"ultimo_pregao": "2025-06-11",
+"volume": 210
+},
+"SOND5": {
+"isin": "BRSONDACNPA8",
+"negocios": 9,
+"nome": "SONDOTECNICA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 44.96,
+"ultimo_pregao": "2025-06-11",
+"volume": 11888
+},
+"SOND6": {
+"isin": "BRSONDACNPB6",
+"negocios": 22,
+"nome": "SONDOTECNICA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNB",
+"ultimo_preco": 45.91,
+"ultimo_pregao": "2025-06-27",
+"volume": 50910
+},
+"SRNA3": {
+"isin": "BRSRNAACNOR4",
+"negocios": 64051,
+"nome": "SERENA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.68,
+"ultimo_pregao": "2025-06-30",
+"volume": 1593159836
+},
+"STBP3": {
+"isin": "BRSTBPACNOR3",
+"negocios": 65018,
+"nome": "SANTOS BRP",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 13.83,
+"ultimo_pregao": "2025-06-30",
+"volume": 1095974516
+},
+"SUZB3": {
+"isin": "BRSUZBACNOR0",
+"negocios": 453521,
+"nome": "SUZANO S.A.",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 51.21,
+"ultimo_pregao": "2025-06-30",
+"volume": 7110686110
+},
+"SYNE3": {
+"isin": "BRSYNEACNOR2",
+"negocios": 48177,
+"nome": "SYN PROP TEC",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.53,
+"ultimo_pregao": "2025-06-30",
+"volume": 55542534
+},
+"TAEE11": {
+"isin": "BRTAEECDAM10",
+"negocios": 185910,
+"nome": "TAESA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "UNT",
+"ultimo_preco": 34.93,
+"ultimo_pregao": "2025-06-30",
+"volume": 1118434474
+},
+"TAEE3": {
+"isin": "BRTAEEACNOR9",
+"negocios": 28834,
+"nome": "TAESA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 11.55,
+"ultimo_pregao": "2025-06-30",
+"volume": 15598634
+},
+"TAEE4": {
+"isin": "BRTAEEACNPR6",
+"negocios": 48071,
+"nome": "TAESA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 11.58,
+"ultimo_pregao": "2025-06-30",
+"volume": 31236180
+},
+"TASA3": {
+"isin": "BRTASAACNOR7",
+"negocios": 5252,
+"nome": "TAURUS ARMAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.4,
+"ultimo_pregao": "2025-06-30",
+"volume": 1619569
+},
+"TASA4": {
+"isin": "BRTASAACNPR4",
+"negocios": 36712,
+"nome": "TAURUS ARMAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 6.86,
+"ultimo_pregao": "2025-06-30",
+"volume": 34386395
+},
+"TCSA3": {
+"isin": "BRTCSAACNOR3",
+"negocios": 5253,
+"nome": "TECNISA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.72,
+"ultimo_pregao": "2025-06-30",
+"volume": 5393029
+},
+"TECN3": {
+"isin": "BRTECNACNOR6",
+"negocios": 5364,
+"nome": "TECHNOS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.15,
+"ultimo_pregao": "2025-06-30",
+"volume": 9593303
+},
+"TELB3": {
+"isin": "BRTELBACNOR2",
+"negocios": 371,
+"nome": "TELEBRAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 12.83,
+"ultimo_pregao": "2025-06-30",
+"volume": 443537
+},
+"TELB4": {
+"isin": "BRTELBACNPR9",
+"negocios": 257,
+"nome": "TELEBRAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 8.72,
+"ultimo_pregao": "2025-06-30",
+"volume": 182221
+},
+"TEND3": {
+"isin": "BRTENDACNOR4",
+"negocios": 157841,
+"nome": "TENDA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 24.4,
+"ultimo_pregao": "2025-06-30",
+"volume": 917424418
+},
+"TFCO4": {
+"isin": "BRTFCOACNPR8",
+"negocios": 32615,
+"nome": "TRACK FIELD",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 14.94,
+"ultimo_pregao": "2025-06-30",
+"volume": 113337203
+},
+"TGMA3": {
+"isin": "BRTGMAACNOR7",
+"negocios": 34302,
+"nome": "TEGMA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 35.12,
+"ultimo_pregao": "2025-06-30",
+"volume": 214377588
+},
+"TIMS3": {
+"isin": "BRTIMSACNOR5",
+"negocios": 350483,
+"nome": "TIM",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 22.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 2833950961
+},
+"TKNO3": {
+"isin": "BRTKNOACNOR8",
+"negocios": 6,
+"nome": "TEKNO",
+"primeiro_pregao": "2025-06-03",
+"tipo": "ON",
+"ultimo_preco": 89.99,
+"ultimo_pregao": "2025-06-25",
+"volume": 1170
+},
+"TKNO4": {
+"isin": "BRTKNOACNPR5",
+"negocios": 29,
+"nome": "TEKNO",
+"primeiro_pregao": "2025-06-03",
+"tipo": "PN",
+"ultimo_preco": 72.5,
+"ultimo_pregao": "2025-06-30",
+"volume": 74660
+},
+"TOKY3": {
+"isin": "BRTOKYACNOR5",
+"negocios": 4169,
+"nome": "GRUPO TOKY",
+"primeiro_pregao": "2025-06-03",
+"tipo": "ON",
+"ultimo_preco": 0.91,
+"ultimo_pregao": "2025-06-30",
+"volume": 4549695
+},
+"TOTS3": {
+"isin": "BRTOTSACNOR8",
+"negocios": 239661,
+"nome": "TOTVS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 42.21,
+"ultimo_pregao": "2025-06-30",
+"volume": 2328264859
+},
+"TPIS3": {
+"isin": "BRTPISACNOR8",
+"negocios": 1211,
+"nome": "TRIUNFO PART",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.99,
+"ultimo_pregao": "2025-06-30",
+"volume": 809128
+},
+"TRAD3": {
+"isin": "BRTRADACNOR3",
+"negocios": 5108,
+"nome": "TC",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.83,
+"ultimo_pregao": "2025-06-30",
+"volume": 5397071
+},
+"TRIS3": {
+"isin": "BRTRISACNOR4",
+"negocios": 29461,
+"nome": "TRISUL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.2,
+"ultimo_pregao": "2025-06-30",
+"volume": 75075655
+},
+"TTEN3": {
+"isin": "BRTTENACNOR0",
+"negocios": 150641,
+"nome": "3TENTOS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 15.11,
+"ultimo_pregao": "2025-06-30",
+"volume": 663254898
+},
+"TUPY3": {
+"isin": "BRTUPYACNOR1",
+"negocios": 48221,
+"nome": "TUPY",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 18.22,
+"ultimo_pregao": "2025-06-30",
+"volume": 148135670
+},
+"TXRX3": {
+"isin": "BRTXRXACNOR3",
+"negocios": 17,
+"nome": "TEX RENAUX",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 9.98,
+"ultimo_pregao": "2025-06-30",
+"volume": 2628
+},
+"TXRX4": {
+"isin": "BRTXRXACNPR0",
+"negocios": 59,
+"nome": "TEX RENAUX",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 1.81,
+"ultimo_pregao": "2025-06-30",
+"volume": 9516
+},
+"UCAS3": {
+"isin": "BRUCASACNOR1",
+"negocios": 2599,
+"nome": "UNICASA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.41,
+"ultimo_pregao": "2025-06-30",
+"volume": 732076
+},
+"UGPA3": {
+"isin": "BRUGPAACNOR8",
+"negocios": 272893,
+"nome": "ULTRAPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 17.54,
+"ultimo_pregao": "2025-06-30",
+"volume": 1583140995
+},
+"UNIP3": {
+"isin": "BRUNIPACNOR7",
+"negocios": 4044,
+"nome": "UNIPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 52.22,
+"ultimo_pregao": "2025-06-30",
+"volume": 4650617
+},
+"UNIP5": {
+"isin": "BRUNIPACNPA0",
+"negocios": 282,
+"nome": "UNIPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 55.02,
+"ultimo_pregao": "2025-06-30",
+"volume": 305115
+},
+"UNIP6": {
+"isin": "BRUNIPACNPB8",
+"negocios": 29666,
+"nome": "UNIPAR",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNB",
+"ultimo_preco": 58.14,
+"ultimo_pregao": "2025-06-30",
+"volume": 152431361
+},
+"USIM3": {
+"isin": "BRUSIMACNOR3",
+"negocios": 27129,
+"nome": "USIMINAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.14,
+"ultimo_pregao": "2025-06-30",
+"volume": 54737992
+},
+"USIM5": {
+"isin": "BRUSIMACNPA6",
+"negocios": 314952,
+"nome": "USIMINAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNA",
+"ultimo_preco": 4.12,
+"ultimo_pregao": "2025-06-30",
+"volume": 1518393827
+},
+"USIM6": {
+"isin": "BRUSIMACNPB4",
+"negocios": 44,
+"nome": "USIMINAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PNB",
+"ultimo_preco": 7.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 2797
+},
+"VALE3": {
+"isin": "BRVALEACNOR0",
+"negocios": 994268,
+"nome": "VALE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 52.65,
+"ultimo_pregao": "2025-06-30",
+"volume": 22729658154
+},
+"VAMO3": {
+"isin": "BRVAMOACNOR7",
+"negocios": 315517,
+"nome": "VAMOS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.18,
+"ultimo_pregao": "2025-06-30",
+"volume": 1608777210
+},
+"VBBR3": {
+"isin": "BRVBBRACNOR1",
+"negocios": 432664,
+"nome": "VIBRA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 21.66,
+"ultimo_pregao": "2025-06-30",
+"volume": 4220210669
+},
+"VITT3": {
+"isin": "BRVITTACNOR4",
+"negocios": 19966,
+"nome": "VITTIA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.97,
+"ultimo_pregao": "2025-06-30",
+"volume": 26568325
+},
+"VIVA3": {
+"isin": "BRVIVAACNOR0",
+"negocios": 256608,
+"nome": "VIVARA S.A.",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 27.03,
+"ultimo_pregao": "2025-06-30",
+"volume": 1502502353
+},
+"VIVR3": {
+"isin": "BRVIVRACNOR4",
+"negocios": 1719,
+"nome": "VIVER",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 0.87,
+"ultimo_pregao": "2025-06-30",
+"volume": 385762
+},
+"VIVT3": {
+"isin": "BRVIVTACNOR0",
+"negocios": 480549,
+"nome": "TELEF BRASIL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 30.89,
+"ultimo_pregao": "2025-06-30",
+"volume": 4347922651
+},
+"VLID3": {
+"isin": "BRVLIDACNOR5",
+"negocios": 39194,
+"nome": "VALID",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 25.61,
+"ultimo_pregao": "2025-06-30",
+"volume": 158136289
+},
+"VSTE3": {
+"isin": "BRVSTEACNOR5",
+"negocios": 6366,
+"nome": "VESTE",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 6.05,
+"ultimo_pregao": "2025-06-30",
+"volume": 5019296
+},
+"VTRU3": {
+"isin": "BRVTRUACNOR3",
+"negocios": 21026,
+"nome": "VITRUEDUCA",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 9.55,
+"ultimo_pregao": "2025-06-30",
+"volume": 75653815
+},
+"VULC3": {
+"isin": "BRVULCACNOR2",
+"negocios": 56310,
+"nome": "VULCABRAS",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 21.09,
+"ultimo_pregao": "2025-06-30",
+"volume": 228654966
+},
+"VVEO3": {
+"isin": "BRVVEOACNOR0",
+"negocios": 16486,
+"nome": "VIVEO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 1.17,
+"ultimo_pregao": "2025-06-30",
+"volume": 20026461
+},
+"WEGE3": {
+"isin": "BRWEGEACNOR0",
+"negocios": 477052,
+"nome": "WEG",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 42.78,
+"ultimo_pregao": "2025-06-30",
+"volume": 5995503185
+},
+"WEST3": {
+"isin": "BRWESTACNOR3",
+"negocios": 736,
+"nome": "WESTWING",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.6,
+"ultimo_pregao": "2025-06-30",
+"volume": 503837
+},
+"WHRL3": {
+"isin": "BRWHRLACNOR5",
+"negocios": 1372,
+"nome": "WHIRLPOOL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 4.52,
+"ultimo_pregao": "2025-06-30",
+"volume": 642322
+},
+"WHRL4": {
+"isin": "BRWHRLACNPR2",
+"negocios": 2227,
+"nome": "WHIRLPOOL",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 4.99,
+"ultimo_pregao": "2025-06-30",
+"volume": 1629304
+},
+"WIZC3": {
+"isin": "BRWIZCACNOR5",
+"negocios": 40305,
+"nome": "WIZ CO",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 7.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 71696189
+},
+"WLMM3": {
+"isin": "BRWLMMACNOR6",
+"negocios": 26,
+"nome": "WLM IND COM",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 24.8,
+"ultimo_pregao": "2025-06-30",
+"volume": 4102
+},
+"WLMM4": {
+"isin": "BRWLMMACNPR3",
+"negocios": 275,
+"nome": "WLM IND COM",
+"primeiro_pregao": "2025-06-02",
+"tipo": "PN",
+"ultimo_preco": 24.5,
+"ultimo_pregao": "2025-06-30",
+"volume": 917696
+},
+"YDUQ3": {
+"isin": "BRYDUQACNOR3",
+"negocios": 213829,
+"nome": "YDUQS PART",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 16.49,
+"ultimo_pregao": "2025-06-30",
+"volume": 1138582651
+},
+"ZAMP3": {
+"isin": "BRZAMPACNOR5",
+"negocios": 21455,
+"nome": "ZAMP S.A.",
+"primeiro_pregao": "2025-06-02",
+"tipo": "ON",
+"ultimo_preco": 3.41,
+"ultimo_pregao": "2025-06-30",
+"volume": 48442680
+}
+}
+}

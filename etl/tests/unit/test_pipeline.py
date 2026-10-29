@@ -52,6 +52,18 @@ class TestValidacao:
         pio.write_json(
             tmp_path / "public" / "acoes_historico_escrituradores.json", {"schema_version": 1, "companhias": {}}, 0
         )
+        meses = [f"2024-{m:02d}" for m in range(11, 13)] + [f"2025-{m:02d}" for m in range(1, 13)] + [
+            f"2026-{m:02d}" for m in range(1, 11)
+        ]  # fmt: skip
+        pio.write_json(
+            tmp_path / "public" / "acoes_volume.json",
+            {
+                "schema_version": 1, "meses": meses[:24], "mes_parcial": None, "companhias": [],
+                "pagina_fonte": "https://www.b3.com.br/", "nao_atribuido": {"tickers": 0, "volume_mensal": [0] * 24},
+                "fontes_volume": {m: {"tipo": "mensal", "arquivos": ["https://exemplo.test/x.zip"]} for m in meses[:24]},
+            },
+            0,
+        )  # fmt: skip
         assert pipeline.validar_publicados(tmp_path) == []
 
         doc = pio.read_json(tmp_path / "public" / "bdrs.json")

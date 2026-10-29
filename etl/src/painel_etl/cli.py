@@ -21,7 +21,7 @@ app = typer.Typer(help="ETL do Painel B3 (escrituradores de ações e BDRs).", n
 backfill_app = typer.Typer(help="Carga histórica.", no_args_is_help=True)
 app.add_typer(backfill_app, name="backfill")
 
-DATASETS = ("acoes", "bdrs")
+DATASETS = ("acoes", "bdrs", "acoes_volume")
 
 
 def _gravar_relatorio(
@@ -106,19 +106,25 @@ def backfill_cotahist(
     start: Annotated[str, typer.Option("--from", help="Mês inicial AAAA-MM.")],
     end: Annotated[str | None, typer.Option("--to", help="Mês final AAAA-MM (padrão: mês anterior ao atual).")] = None,
     force: Annotated[bool, typer.Option(help="Rebaixa meses cuja partição já é a oficial (mensal).")] = False,
+    categoria: Annotated[str, typer.Option(help="Recorte do COTAHIST: bdr ou acao.")] = "bdr",
 ) -> None:
-    """Carrega partições mensais do COTAHIST (arquivos `M`) para `data/history/bdr_volume/`."""
+    """Carrega partições mensais do COTAHIST (arquivos `M`) para `data/history/<categoria>_volume/`."""
     _utf8()
     hoje = _hoje()
     fim = end or f"{(hoje.replace(day=1) - dt.timedelta(days=1)):%Y-%m}"
+    cats = {"bdr": b3_cotahist.BDR, "acao": b3_cotahist.ACAO}
+    if categoria not in cats:
+        raise typer.BadParameter(f"categoria deve ser uma de {sorted(cats)}")
+    cat = cats[categoria]
+    pasta = paths.data_dir() / "history" / cat.pasta
     http = Http("b3_cotahist")
     for ano, mes in b3_cotahist.meses_entre(start, fim):
         chave = f"{ano}-{mes:02d}"
-        atual = b3_cotahist.ler_particao(chave)
+        atual = b3_cotahist.ler_particao(chave, pasta)
         if atual and atual["fonte"] == "mensal" and not force:
             typer.echo(f"{chave}: já oficial, pulando")
             continue
-        r = b3_cotahist.processar_mensal(http, ano, mes, cache=paths.cache_dir() / "b3_cotahist")
+        r = b3_cotahist.processar_mensal(http, ano, mes, cache=paths.cache_dir() / "b3_cotahist", pasta=pasta, cat=cat)
         typer.echo(f"{chave}: {r['status']} ({r.get('tickers', 0)} tickers)")
 
 

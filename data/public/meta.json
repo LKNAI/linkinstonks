@@ -4,6 +4,10 @@
       "atualizado_em": "2026-10-29",
       "contagem": 568
     },
+    "acoes_volume": {
+      "atualizado_em": "2026-10-29",
+      "contagem": 313
+    },
     "bdrs": {
       "atualizado_em": "2026-10-29",
       "contagem": 1152
@@ -16,6 +20,11 @@
       "ultimo_sucesso": "2026-10-29"
     },
     "b3_cotahist": {
+      "status": "ok",
+      "ultimo_pregao": "2026-10-28",
+      "ultimo_sucesso": "2026-10-29"
+    },
+    "b3_cotahist_acoes": {
       "status": "ok",
       "ultimo_pregao": "2026-10-28",
       "ultimo_sucesso": "2026-10-29"

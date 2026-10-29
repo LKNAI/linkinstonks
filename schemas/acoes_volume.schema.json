@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "acoes_volume.schema.json",
+  "title": "acoes_volume.json: volume financeiro mensal das ações por companhia",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "meses",
+    "mes_parcial",
+    "pagina_fonte",
+    "fontes_volume",
+    "nao_atribuido",
+    "companhias"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "meses": {
+      "description": "Os 24 meses fechados, alinhados com volume_mensal (R$ inteiros)",
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]{4}-[0-9]{2}$"
+      }
+    },
+    "mes_parcial": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{4}-[0-9]{2}$"
+    },
+    "pagina_fonte": {
+      "description": "Página oficial da B3 (Séries Históricas) onde os arquivos COTAHIST são publicados",
+      "type": "string",
+      "format": "uri"
+    },
+    "fontes_volume": {
+      "description": "Mês (AAAA-MM) -> arquivos oficiais da B3 que sustentam o volume daquele mês: o COTAHIST mensal oficial (`mensal`) ou os diários somados (`diario`, mês corrente)",
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[0-9]{4}-[0-9]{2}$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "tipo",
+          "arquivos"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "tipo": {
+            "enum": [
+              "mensal",
+              "diario"
+            ]
+          },
+          "arquivos": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      }
+    },
+    "nao_atribuido": {
+      "description": "Volume que não casa com nenhuma companhia do cadastro (ex.: ticker de empresa deslistada). Companhias + não atribuído = total do mercado nos arquivos da B3.",
+      "type": "object",
+      "required": [
+        "tickers",
+        "volume_mensal"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tickers": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "volume_mensal": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "companhias": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "codigo_cvm",
+          "pregao",
+          "tickers",
+          "negocios_24m",
+          "volume_24m",
+          "volume_mensal",
+          "volume_mes_parcial"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "codigo_cvm": {
+            "type": "string",
+            "pattern": "^[0-9]+$"
+          },
+          "pregao": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tickers": {
+            "description": "Tickers da companhia que tiveram volume no período",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "negocios_24m": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "volume_24m": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "volume_mensal": {
+            "description": "R$ inteiros por mês fechado, alinhados com `meses`",
+            "type": "array",
+            "minItems": 24,
+            "maxItems": 24,
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "volume_mes_parcial": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import datetime as dt
 import zipfile
-from collections.abc import Iterator
+from collections.abc import Callable, Iterator
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -23,7 +23,7 @@ from painel_etl import paths
 from painel_etl.core import io as pio
 from painel_etl.core.http import READ_TIMEOUT_COTAHIST, Http
 from painel_etl.core.state import State
-from painel_etl.normalize.tickers import base_ticker, is_bdr_ticker
+from painel_etl.normalize.tickers import base_ticker, is_acao_ticker, is_bdr_ticker
 
 BASE = "https://bvmf.bmfbovespa.com.br/InstDados/SerHist"
 #: Página oficial da B3 onde os arquivos COTAHIST são listados (para o leitor conferir a origem do volume).
@@ -34,6 +34,25 @@ PAGINA_FONTE = (
 TIPOS_MERCADO = {"010": 1, "020": 0}  # vista (preço de referência) e fracionário
 TOLERANCIA_RECONCILIACAO = 0.005
 DIAS_DE_ESPERA = 3
+
+
+@dataclass(frozen=True)
+class Categoria:
+    """Um recorte do COTAHIST que vira um dataset (BDRs, ações...): o que entra, onde ficam as partições e o estado.
+
+    Os arquivos da B3 são os mesmos para todas as categorias; só muda o filtro. Acrescentar uma categoria é
+    declarar uma `Categoria` aqui (ver `docs/adicionar-dataset.md`).
+    """
+
+    nome: str
+    fonte: str  # chave em `meta.fontes`
+    pasta: str  # data/history/<pasta>/AAAA-MM.json
+    estado: str  # data/state/<estado>.json
+    aceita: Callable[[str, str], bool]  # (CODNEG, ESPECI) -> entra?
+
+
+BDR = Categoria("bdr", "b3_cotahist", "bdr_volume", "cotahist", lambda c, e: is_bdr_ticker(c) and "UNT" not in e)
+ACAO = Categoria("acao", "b3_cotahist_acoes", "acoes_volume", "cotahist_acoes", is_acao_ticker)
 
 
 @dataclass(frozen=True)
@@ -69,16 +88,14 @@ def fonte_do_mes(mes: str, particao: dict[str, Any]) -> dict[str, Any]:
     return {"arquivos": [url_diario(dt.date.fromisoformat(d)) for d in sorted(particao["pregoes"])], "tipo": "diario"}
 
 
-def parse_linha(linha: str) -> Cotacao | None:
-    """Cotação de BDR (vista ou fracionário), ou None. Posições 1-indexadas e inclusivas da seção 7.4."""
+def parse_linha(linha: str, cat: Categoria = BDR) -> Cotacao | None:
+    """Cotação da categoria (vista ou fracionário), ou None. Posições 1-indexadas e inclusivas da seção 7.4."""
     if linha[:2] != "01":
         return None
     mercado = linha[24:27]
     codneg = linha[12:24].strip()
-    if mercado not in TIPOS_MERCADO or not is_bdr_ticker(codneg):
-        return None
     especi = linha[39:49].strip()
-    if "UNT" in especi:
+    if mercado not in TIPOS_MERCADO or not cat.aceita(codneg, especi):
         return None
     d = linha[2:10]
     return Cotacao(
@@ -136,11 +153,11 @@ class Agregado:
         }
 
 
-def agregar(linhas: Iterator[str]) -> dict[str, dict[str, Agregado]]:
+def agregar(linhas: Iterator[str], cat: Categoria = BDR) -> dict[str, dict[str, Agregado]]:
     """mês (AAAA-MM) -> ticker-base -> agregado. O fracionário soma no ticker-base."""
     meses: dict[str, dict[str, Agregado]] = {}
     for linha in linhas:
-        c = parse_linha(linha)
+        c = parse_linha(linha, cat)
         if c:
             meses.setdefault(c.data[:7], {}).setdefault(base_ticker(c.codneg), Agregado()).somar(c)
     return meses
@@ -192,7 +209,9 @@ def volume_total(tickers: dict[str, Any]) -> float:
 
 
 # ---------------------------------------------------------------------------- mensal / backfill
-def processar_mensal(http: Http, ano: int, mes: int, *, cache: Path, pasta: Path | None = None) -> dict[str, Any]:
+def processar_mensal(
+    http: Http, ano: int, mes: int, *, cache: Path, pasta: Path | None = None, cat: Categoria = BDR
+) -> dict[str, Any]:
     """Baixa o arquivo `M` de um mês fechado e (re)grava a partição. Devolve um resumo para o relatório."""
     chave = f"{ano}-{mes:02d}"
     destino = cache / f"COTAHIST_M{mes:02d}{ano}.ZIP"
@@ -200,7 +219,7 @@ def processar_mensal(http: Http, ano: int, mes: int, *, cache: Path, pasta: Path
     if r.status_code == 404:
         return {"mes": chave, "status": "indisponivel"}
     r.raise_for_status()
-    agregados = agregar(linhas_do_zip(destino))
+    agregados = agregar(linhas_do_zip(destino), cat)
     novo = agregados.get(chave, {})
     antigo = ler_particao(chave, pasta)
     diff_pct = None
@@ -235,7 +254,7 @@ def dias_uteis(de: dt.date, ate: dt.date) -> list[dt.date]:
 
 
 def processar_diario(
-    http: Http, state: State, hoje: dt.date, *, cache: Path, pasta: Path | None = None
+    http: Http, state: State, hoje: dt.date, *, cache: Path, pasta: Path | None = None, cat: Categoria = BDR
 ) -> dict[str, Any]:
     """Processa os pregões pendentes até `hoje` e acumula na partição do mês.
 
@@ -263,7 +282,7 @@ def processar_diario(
                 pendentes.append(iso)
             continue
         r.raise_for_status()
-        for mes, tickers in agregar(linhas_do_zip(destino)).items():
+        for mes, tickers in agregar(linhas_do_zip(destino), cat).items():
             destino_mes = mes_processado.setdefault(
                 mes, _a_partir_da_particao(p) if (p := ler_particao(mes, pasta)) else {}
             )
