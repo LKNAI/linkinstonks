@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /etl
+    schedule: {interval: weekly}
+    groups:
+      python: {patterns: ["*"]}
+  - package-ecosystem: npm
+    directory: /web
+    schedule: {interval: weekly}
+    groups:
+      npm: {patterns: ["*"]}
+    # Vitest 5 e jsdom 30 exigem Node >= 22; ficamos nas majors que ainda rodam no Node 20 local.
+    ignore:
+      - {dependency-name: vitest, update-types: ["version-update:semver-major"]}
+      - {dependency-name: jsdom, update-types: ["version-update:semver-major"]}
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: {interval: weekly}
+    groups:
+      actions: {patterns: ["*"]}

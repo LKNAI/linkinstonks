@@ -1,0 +1,33 @@
+# Fase 0: teste manual para saber se B3, CVM e bancos aceitam os IPs do GitHub (seção 9.4 do prompt).
+# Rodar em: Actions > probe > Run workflow. Não commita nada; os fixtures saem como artefato.
+name: probe
+
+on:
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: "Fontes separadas por espaço (vazio = todas): b3_listed cvm_fca cvm_cad b3_cotahist b3_finservices bradesco itau"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Sondar fontes
+        env:
+          SOURCES: ${{ inputs.sources }}
+        # `|| true`: o resultado fica no resumo; fonte bloqueada não deve esconder as demais
+        run: python3 etl/src/painel_etl/probe.py $SOURCES --out probe-out --report probe-out/probe_report.json || true
+      - name: IP de saída do runner (para comparar com bloqueios)
+        run: curl -s https://api.ipify.org || echo "indisponível"
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: probe-fixtures
+          path: probe-out
+          retention-days: 7
