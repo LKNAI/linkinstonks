@@ -29,7 +29,7 @@ Guia para colocar o linkinstonks no ar e mantê-lo. A Parte 1 são os passos que
 2. **Project Name:** `linkinstonks`. **Root Directory:** `web`.
 3. Ative **"Include source files outside of the Root Directory in the Build Step"**. É necessário: o `prebuild` lê `../data/public`.
 4. Framework Preset: Next.js (já vem do `web/vercel.json`, que também define install, build, `outputDirectory: out`, cabeçalhos e o `ignoreCommand`). Não precisa de variável de ambiente; se usar outro domínio, defina `SITE_URL` (sitemap, `robots.txt` e feed).
-5. **Deploy.** Se `linkinstonks.vercel.app` não estiver disponível, a Vercel sugere outro nome; nesse caso defina `SITE_URL` com o endereço final.
+5. **Deploy.** O primeiro deploy nunca é pulado: o `ignoreCommand` compara com o último commit *já implantado* (`VERCEL_GIT_PREVIOUS_SHA`, vazio no primeiro deploy). Uma versão anterior comparava `HEAD^ HEAD` e cancelou o primeiro deploy ("Ignored Build Step ... exit code 0") quando o último commit era só de documentação; foi corrigida e tem teste (`web/tests/unit/vercel.test.ts`). Se `linkinstonks.vercel.app` não estiver disponível, a Vercel sugere outro nome; nesse caso defina `SITE_URL` com o endereço final.
 6. Depois do primeiro deploy, abra `/acoes/` e `/bdrs/` e **verifique o console do navegador**: o Next 16 gera arquivos de pré-busca em pastas e o cliente os pede com pontos (ver ADR 0002). Os links do menu já desligam a pré-busca; se aparecer 404 de `__next.*.txt`, adicione um `rewrites` no `web/vercel.json`.
 
 ### 4. Primeira coleta automática e "semana simulada"
