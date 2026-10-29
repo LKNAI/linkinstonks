@@ -25,7 +25,10 @@ Lighthouse 13.5.0, mobile (4× de CPU e rede 4G simulados), nesta máquina de de
 | `/status/` | 65 | 98 | 4,4 s | 0,70 s | 0 |
 | `/sobre/` (sem dados) | 71 | 98 | 3,6 s | 0,66 s | 0 |
 
-### Medição no site em produção (Vercel)
+### Medição oficial no PageSpeed Insights (hardware de referência)
+Em 2026-10-29, pagespeed.web.dev (Lighthouse 13.6.0, Moto G Power emulado, 4G lento) na **home**: **Desempenho 100**, Acessibilidade 98, Práticas recomendadas 100, SEO 100 (LCP 0,9 s, TBT 30 ms, CLS 0). No computador: 100, 98, 100, 100. O TBT de 30 ms contra 700 a 1.800 ms nas medições locais mostra que a máquina de desenvolvimento distorcia o Desempenho para bem pior. A única observação de acessibilidade era a falta do landmark `<main>`, corrigida (um `<main>` por página, verificado em `tests/e2e/acessibilidade.spec.ts`). Os painéis `/bdrs/` e `/acoes/` ainda não foram medidos no PageSpeed.
+
+### Medição local no site em produção (Vercel)
 Mesma máquina e mesmo Lighthouse, contra `https://linkinstonks.vercel.app` (compressão e CDN reais): `/sobre/` **89**, `/` 79, `/bdrs/{ticker}` 76, `/acoes/` 67, `/bdrs/` 64; Acessibilidade 94 a 98, Melhores Práticas 100, SEO 100, CLS 0. A página sem dados chega perto de 90; os painéis com dados ficam entre 64 e 79.
 
 ## Por que o Desempenho não chegou a 90
