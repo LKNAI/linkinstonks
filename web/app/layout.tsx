@@ -21,7 +21,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <TooltipProvider>
           <SiteHeader />
           <StaleBanner />
-          <div className="flex-1">{children}</div>
+          <main id="conteudo" className="flex-1">
+            {children}
+          </main>
           <SiteFooter />
         </TooltipProvider>
       </body>

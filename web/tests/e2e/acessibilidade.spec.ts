@@ -34,6 +34,7 @@ for (const { rota, pronto } of ROTAS) {
   test(`${rota} não tem violações de WCAG 2.2 AA`, async ({ page }) => {
     await page.goto(rota);
     await page.locator(pronto).first().waitFor();
+    await expect(page.getByRole("main")).toHaveCount(1); // um ponto de referência principal por página
     expect(await auditar(page)).toEqual([]);
   });
 }
