@@ -210,7 +210,7 @@ function Conteudo({ acoes }: { acoes: Parameters<typeof derivar>[0] }) {
           larguraMinima={1380}
         />
 
-        <footer className="notes">
+        <div className="notes" role="note">
           <p>
             <b>Escriturador atual:</b> B3 · Empresas Listadas (<code>GetInitialCompanies</code> e{" "}
             <code>GetDetail</code>). Passe o mouse sobre o nome para ver o valor original da API.
@@ -226,7 +226,7 @@ function Conteudo({ acoes }: { acoes: Parameters<typeof derivar>[0] }) {
             {formatInt(todas.filter((d) => !d.escriturador_cvm).length)} empresas, em geral de balcão não
             organizado, não têm FCA com escriturador. As datas são as declaradas pelas companhias.
           </p>
-        </footer>
+        </div>
       </div>
     </div>
   );

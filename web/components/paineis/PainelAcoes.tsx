@@ -359,7 +359,7 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
           </section>
         </div>
 
-        <footer className="notes">
+        <div className="notes" role="note">
           <p>
             <b>Escriturador atual:</b> B3 · Empresas Listadas (<code>GetInitialCompanies</code> e{" "}
             <code>GetDetail</code>, campos <code>institutionCommon</code>/<code>institutionPreferred</code>),
@@ -383,7 +383,7 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
             <b>Cores:</b> cada instituição usa a cor da sua identidade visual; as datas são as informadas
             pelas companhias e não foram verificadas em outras fontes.
           </p>
-        </footer>
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,6 @@
-# Painel B3
+# linkinstonks
+
+Painel B3: escrituradores de ações e depositárias de BDRs. Repositório previsto: `LKNAI/linkinstonks`; site previsto: `linkinstonks.vercel.app`.
 
 Site público, em português, com dois painéis:
 
@@ -7,7 +9,7 @@ Site público, em português, com dois painéis:
 
 Os dados vêm de fontes públicas da **B3** e da **CVM** e se atualizam sozinhos pelo GitHub Actions. Custo zero: site estático na Vercel, ETL no GitHub Actions, dados versionados neste repositório. Uso não comercial. Não é recomendação de investimento.
 
-> **Estado:** Fases 0 a 3 concluídas. O ETL de ações e de BDRs funciona contra as fontes vivas e reproduz o protótipo (`seed/`); `data/public/` já tem os dados. O site ainda é uma casca (Fases 4 e 5). Plano em `PROMPT_PAINEL_B3.md`, decisões em `docs/`.
+> **Estado:** Fases 0 a 4 concluídas (a 4 aguarda revisão). O ETL de ações e de BDRs funciona contra as fontes vivas e reproduz o protótipo (`seed/`), e o site tem a capa, `/acoes`, `/acoes/tabela` e `/bdrs` com paridade com os dashboards do seed. Faltam as páginas novas (Fase 5), a automação e o deploy (Fase 6). Plano em `PROMPT_PAINEL_B3.md`, decisões em `docs/`.
 
 ## Como rodar
 Requisitos: [uv](https://docs.astral.sh/uv/), [pnpm](https://pnpm.io/) e Node 20.19+.

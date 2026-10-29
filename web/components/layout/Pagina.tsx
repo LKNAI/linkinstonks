@@ -60,5 +60,9 @@ export function ErroDados({ mensagem }: { mensagem: string }) {
 }
 
 export function Notas({ children }: { children: ReactNode }) {
-  return <footer className="notes">{children}</footer>;
+  return (
+    <div className="notes" role="note">
+      {children}
+    </div>
+  );
 }

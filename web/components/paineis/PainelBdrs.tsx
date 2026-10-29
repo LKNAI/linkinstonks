@@ -593,7 +593,7 @@ function Conteudo({ bdrs, meses }: { bdrs: Parameters<typeof derivarBdrs>[0]; me
           </section>
         </div>
 
-        <footer className="notes">
+        <div className="notes" role="note">
           <p>
             <b>Volumes, preços e negócios:</b> B3 · Séries históricas de cotações (<code>COTAHIST</code>),{" "}
             {rotuloMes(meses[0])} a {rot}, mercados à vista (010) e fracionário (020) somados por ticker;
@@ -616,7 +616,7 @@ function Conteudo({ bdrs, meses }: { bdrs: Parameters<typeof derivarBdrs>[0]; me
             I, II e III. BDRs marcados com <span className="qual">QUALIF.</span> são restritos a investidores
             qualificados. Classe dos ETFs conforme a categoria da B3.
           </p>
-        </footer>
+        </div>
       </div>
     </div>
   );

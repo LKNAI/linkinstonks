@@ -25,6 +25,8 @@ Páginas de detalhe (`/acoes/[codigoCvm]`, `/bdrs/[ticker]`) usam `generateStati
 - (−) O `prebuild` lê `../data/public`, fora da pasta `web`. Na Vercel, manter ligada a opção "Include source files outside of the Root Directory in the Build Step" (padrão em projetos novos). Se não for possível, mover a cópia para a raiz do repositório.
 - (−) Fontes (`next/font/google`) são baixadas **na build** (e ficam self-hosted no export); a build precisa de rede.
 
+- (−) **Pré-busca de rotas (Fase 4):** o Next 16 gera os arquivos de pré-busca do export em pastas (`acoes/__next.acoes/__PAGE__.txt`), mas o cliente os pede com pontos (`acoes/__next.acoes.__PAGE__.txt`), o que dá 404 em um servidor estático simples, com ou sem `trailingSlash`. Os links do menu usam `prefetch={false}` e a navegação por clique foi testada (e2e). **A confirmar na Vercel (Fase 6)**; se necessário, um `rewrites` no `vercel.json` resolve.
+
 ## Alternativas descartadas
 - **SSR/ISR com funções serverless:** sai do custo zero e cria dependência de cotas.
 - **API em Edge Config/KV para os dados:** exige serviço pago/cadastro de cartão.

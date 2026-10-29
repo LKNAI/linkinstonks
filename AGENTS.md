@@ -61,4 +61,4 @@ Sem `make` (Windows): rode os comandos da tabela.
 - A chave confiável de BDR na API da B3 é `typeBDR`, não `type`.
 
 ## Fases
-0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade · 5 páginas novas · 6 automação e deploy · 7 endurecimento. Cada fase termina com relatório; só avançar com autorização do dono.
+0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade ✅ (em revisão) · 5 páginas novas · 6 automação e deploy · 7 endurecimento. Cada fase termina com relatório; só avançar com autorização do dono.

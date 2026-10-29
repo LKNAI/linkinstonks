@@ -6,3 +6,4 @@ public/data
 playwright-report
 test-results
 AGENTS.md
+lib/colors.ts
