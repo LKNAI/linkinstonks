@@ -1,0 +1,30 @@
+# ETL
+.cache/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+etl/dist/
+
+# Web
+node_modules/
+web/.next/
+web/out/
+web/public/data/
+web/public/feed.xml
+web/tsconfig.tsbuildinfo
+web/next-env.d.ts
+web/playwright-report/
+web/test-results/
+
+# Local
+.env
+.env.*
+.DS_Store
+Thumbs.db
+probe-out/
+.claude/

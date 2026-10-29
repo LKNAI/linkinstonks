@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.csv text eol=lf
+*.jsonl text eol=lf
+*.zip binary
+*.gz binary
+*.png binary
+# COTAHIST usa CRLF e ISO-8859-1: nunca normalizar
+etl/tests/fixtures/b3_cotahist/*.txt -text
+etl/tests/fixtures/cvm_fca/*.csv -text
+etl/tests/fixtures/cvm_cad/*.csv -text

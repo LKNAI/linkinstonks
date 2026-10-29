@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empresas com ações na B3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f4f5fb;--surface:#fff;--surface-2:#f8f8fc;--line:#e7e6ef;--line-2:#d9d8e4;--ink:#16152b;--ink-2:#4b4a63;--ink-3:#7c7b93;--accent:#6250d6;--accent-2:#4a3aa7;--accent-soft:#efedfc;--v2:#d4cdf6;--v3:#b3a8ef;--v4:#8f80e6;--v6:#4a3aa7;--v7:#33287a;--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--shadow:0 1px 2px rgba(22,21,43,.04),0 8px 24px -12px rgba(40,30,120,.18)}
+*{box-sizing:border-box}
+html,body{margin:0;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+button,select,input{font:inherit;color:inherit}
+.wrap{max-width:1480px;margin:0 auto;padding:0 24px}
+header{padding:28px 0 6px}
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-2)}
+h1{margin:6px 0 6px;font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em}
+.lead{margin:0;color:var(--ink-2);max-width:860px}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 4px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;box-shadow:var(--shadow);min-width:150px;position:relative;overflow:hidden}
+.stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c,var(--accent))}
+.stat b{display:block;font-size:22px;font-weight:800;font-variant-numeric:tabular-nums}
+.stat span{font-size:12px;color:var(--ink-3)}
+.controls{position:sticky;top:0;z-index:5;background:rgba(244,245,251,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:10px 0}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px;box-shadow:var(--shadow)}
+.bar input[type=search]{flex:2 1 300px;min-width:240px;border:1px solid var(--line);background:var(--surface-2);border-radius:9px;padding:8px 12px;outline:0}
+.bar input[type=search]:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.bar select{flex:0 1 auto;border:1px solid var(--line);background:var(--surface);border-radius:9px;padding:8px 10px;max-width:190px}
+.bar label{display:flex;gap:6px;align-items:center;font-size:13px;font-weight:600;color:var(--ink-2);padding:0 6px}
+.bar input[type=checkbox]{accent-color:var(--accent);width:16px;height:16px}
+.count{margin-left:auto;font-size:13px;font-weight:600;color:var(--ink-2);padding:0 6px}
+.count b{color:var(--accent-2)}
+.btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-2);background:var(--surface);border-radius:9px;padding:7px 12px;font-weight:700;font-size:12.5px;cursor:pointer;color:var(--ink-2)}
+.btn:hover{border-color:var(--accent);color:var(--accent-2);background:var(--accent-soft)}
+main{padding:6px 0 24px}
+.tbl-wrap{overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);max-height:calc(100vh - 120px)}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:1320px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;z-index:1;background:var(--surface-2);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:700;cursor:pointer;user-select:none;white-space:nowrap}
+th:hover{color:var(--ink)}
+th.trace{background:#f0edfd;color:var(--accent-2)}
+th[aria-sort=ascending]::after{content:" ↑";color:var(--accent)}th[aria-sort=descending]::after{content:" ↓";color:var(--accent)}
+td.trace{background:#fcfbff}
+tbody tr:hover td{background:#f7f6ff}
+tbody tr:last-child td{border-bottom:0}
+.co{min-width:220px}.co b{font-weight:700}.co div{font-size:12px;color:var(--ink-3);max-width:300px}
+.cd{font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.mono{font-family:var(--mono);font-size:12px;white-space:nowrap}
+.tk{display:inline-flex;align-items:center;gap:4px;margin:0 4px 4px 0;padding:2px 7px;border-radius:6px;font:600 12px var(--mono);background:var(--surface-2);border:1px solid var(--line)}
+.tk i{font-style:normal;font-size:10px;font-weight:700;color:var(--ink-3);font-family:"Plus Jakarta Sans",sans-serif}
+.bk{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:13px}
+.bk .dot{width:10px;height:10px;border-radius:3px;flex:none}
+.small{font-size:11.5px;color:var(--ink-3);margin-top:3px}
+.warn{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#9a5b00;background:#fff4dc;border:1px solid #f6d68f;padding:1px 6px;border-radius:5px;margin-top:5px}
+.date{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.date.ax{color:var(--ink-3);font-weight:600}
+.when{font-size:11.5px;color:var(--ink-3);margin-top:3px;white-space:nowrap}
+.muted{color:var(--ink-3);font-weight:500}
+.seg{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;border:1px solid var(--line-2);color:var(--ink-2);background:var(--surface)}
+.seg.NM{background:var(--v6);border-color:var(--v6);color:#fff}.seg.N2{background:var(--v4);border-color:var(--v4);color:#fff}.seg.N1{background:var(--v2);border-color:var(--v3);color:var(--v7)}
+.sec{font-size:12.5px;color:var(--ink-2);max-width:170px}
+.empty{padding:40px;text-align:center;color:var(--ink-3)}
+footer{padding:4px 0 40px;color:var(--ink-3);font-size:12.5px}
+footer p{margin:5px 0;max-width:1000px}
+footer code{font-family:var(--mono);font-size:11.5px;background:var(--surface);border:1px solid var(--line);padding:1px 5px;border-radius:4px}
+@media (max-width:640px){.wrap{padding:0 14px}.count{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">B3 + CVM · dados abertos · 23/10/2026</div>
+  <h1>Empresas com ações registradas na B3</h1>
+  <p class="lead">Tickers, escriturador atual (B3) e rastreabilidade do escriturador — data de início e escriturador anterior — segundo o Formulário Cadastral entregue à CVM.</p>
+  <div class="stats" id="stats"></div>
+</header>
+</div>
+<div class="controls"><div class="wrap"><div class="bar">
+  <input type="search" id="q" placeholder="Buscar empresa, ticker, CNPJ, setor ou escriturador…" aria-label="Buscar">
+  <select id="fBank" aria-label="Escriturador atual"><option value="">Todos os escrituradores</option></select>
+  <select id="fPrev" aria-label="Escriturador anterior"><option value="">Qualquer escriturador anterior</option></select>
+  <select id="fHist" aria-label="Histórico"><option value="">Todo o histórico</option><option>Trocou de escriturador</option><option>Sem troca registrada</option><option>Sem dados na CVM</option></select>
+  <select id="fSeg" aria-label="Segmento"><option value="">Todos os segmentos</option></select>
+  <label><input type="checkbox" id="onlyT" checked> Somente com ticker</label>
+  <span class="count" id="count"></span>
+  <button class="btn" id="csv"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Exportar CSV</button>
+</div></div></div>
+<div class="wrap">
+<main>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th data-k="p">Empresa</th>
+        <th data-k="t">Tickers</th>
+        <th data-k="b">Escriturador atual</th>
+        <th data-k="since" class="trace">Escriturador desde</th>
+        <th data-k="prev" class="trace">Escriturador anterior</th>
+        <th data-k="m">Segmento</th>
+        <th data-k="s">Setor</th>
+        <th data-k="c">CNPJ</th>
+        <th data-k="v">Cód. CVM</th>
+      </tr></thead>
+      <tbody id="tb"></tbody>
+    </table>
+  </div>
+</main>
+<footer>
+  <p><b>Escriturador atual:</b> B3 · Empresas Listadas (<code>GetInitialCompanies</code> e <code>GetDetail</code>, campos <code>institutionCommon</code>/<code>institutionPreferred</code>), emissores do tipo “ações”. Passe o mouse sobre o nome para ver o valor original da API.</p>
+  <p><b>Escriturador desde / anterior:</b> CVM · Formulário Cadastral (<code>fca_cia_aberta_escriturador</code>, 2010–2026, última versão de cada ano), campos <code>Data_Inicio_Atuacao</code> e <code>Data_Fim_Atuacao</code>, cruzados pelo CNPJ. Datas com “~” não foram informadas no FCA e indicam o primeiro formulário com aquele escriturador. Sem data de saída, mostra-se o último FCA em que o anterior consta.</p>
+  <p><b>Selo “CVM indica…”:</b> o FCA mais recente aponta outro escriturador que a B3 (FCA desatualizado ou outra entidade do mesmo grupo). 141 empresas, em geral de balcão não organizado, não têm FCA com escriturador. As datas são as declaradas pelas companhias.</p>
+</footer>
+</div>
+<script>
+const DATA=/*__DATA__*/[];
+const MKT=/*__MKT__*/{};
+const BRAND={"Itaú Corretora":"#EC7000","Itaú Unibanco":"#F7A04B","Banco Bradesco":"#CC092F","Bradesco CTVM":"#E8607A","BTG Pactual":"#0B3D91","Banco do Brasil":"#F2C200","Banco Santander":"#FF3B30","Própria empresa":"#5B6B82","Oliveira Trust":"#00A86B","Vórtx DTVM":"#7B2FF7","Banco Mercantil do Brasil":"#2F80ED","Banrisul":"#00579C","Banco do Nordeste":"#8E1B3A","Banco Safra":"#B8962E","ID CTVM":"#14B8A6","Banco Opportunity":"#334155","BRB DTVM":"#0EA5E9","Oslo Capital DTVM":"#94A3B8","Não informado":"#D3D2DE"};
+const colorOf=k=>BRAND[k]||"#A3A2B5";
+const fmt=n=>n.toLocaleString("pt-BR");
+const fmtD=s=>s?s.slice(8,10)+"/"+s.slice(5,7)+"/"+s.slice(0,4):"";
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=s=>s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+DATA.forEach(d=>{d.hist=!d.f?"Sem dados na CVM":(d.f.prev?"Trocou de escriturador":"Sem troca registrada");d.since=d.f?d.f.ini:"";
+  d.ix=norm([d.p,d.r,d.e,d.t.map(x=>x[0]).join(" "),d.c,d.c.replace(/\D/g,""),d.s,d.b,d.pn,d.onr,d.pnr,MKT[d.m]||"",d.f?d.f.cur+" "+d.f.prev:""].join(" "))});
+
+/* filter options */
+const count=(f)=>{const c={};DATA.forEach(d=>{const k=f(d);if(k)c[k]=(c[k]||0)+1});return Object.entries(c).sort((a,b)=>b[1]-a[1])};
+const fill=(id,pairs,lab=k=>k)=>{const s=document.getElementById(id);pairs.forEach(([k,n])=>s.insertAdjacentHTML("beforeend",`<option value="${esc(k)}">${esc(lab(k))} (${n})</option>`))};
+fill("fBank",count(d=>d.b));fill("fPrev",count(d=>d.f&&d.f.prev));
+fill("fSeg",Object.keys(MKT).map(k=>[k,DATA.filter(d=>d.m===k).length]).filter(x=>x[1]),k=>MKT[k]);
+
+/* stats */
+(function(){const cvm=DATA.filter(d=>d.f),sw=cvm.filter(d=>d.f.prev).length,tk=DATA.reduce((a,d)=>a+d.t.length,0);
+  const S=[[DATA.length,"empresas emissoras de ações","#6250d6"],[DATA.filter(d=>d.t.length).length,"com ticker de ações","#0B3D91"],[tk,"tickers no total","#EC7000"],[cvm.length,"com histórico na CVM","#1baf7a"],[sw,"trocaram de escriturador desde 2010","#CC092F"]];
+  document.getElementById("stats").innerHTML=S.map(([v,l,c])=>`<div class="stat" style="--c:${c}"><b>${fmt(v)}</b><span>${l}</span></div>`).join("")})();
+
+const st={sort:{k:"p",dir:1}};
+const el=id=>document.getElementById(id);
+function filtered(){
+  const q=norm(el("q").value.trim()),b=el("fBank").value,p=el("fPrev").value,h=el("fHist").value,m=el("fSeg").value,t=el("onlyT").checked;
+  const r=DATA.filter(d=>(!t||d.t.length)&&(!q||d.ix.includes(q))&&(!b||d.b===b)&&(!p||(d.f&&d.f.prev===p))&&(!h||d.hist===h)&&(!m||d.m===m));
+  const {k,dir}=st.sort;
+  const val=d=>k==="t"?(d.t[0]?d.t[0][0]:"~"):k==="m"?Object.keys(MKT).indexOf(d.m):k==="since"?(d.since||"9999"):k==="prev"?(d.f&&d.f.prev||"~"):(d[k]||"~");
+  return r.sort((a,b)=>{const x=val(a),y=val(b);return (typeof x==="number"?x-y:String(x).localeCompare(String(y),"pt",{numeric:true}))*dir});
+}
+const bk=n=>n?`<span class="bk"><span class="dot" style="background:${colorOf(n)}"></span>${esc(n)}</span>`:`<span class="muted">—</span>`;
+function since(d){if(!d.f)return `<span class="muted">Sem dados na CVM</span>`;if(!d.f.ini)return `<span class="muted">Não informada</span>`;
+  return d.f.ax?`<span class="date ax" title="Data não informada no FCA; primeiro formulário com este escriturador">~${fmtD(d.f.ini).slice(3)}</span>`:`<span class="date">${fmtD(d.f.ini)}</span>`}
+function prev(d){if(!d.f)return `<span class="muted">—</span>`;if(!d.f.prev)return `<span class="muted">Sem troca registrada</span>`;
+  const when=d.f.pfim?`até ${fmtD(d.f.pfim)}`:`consta até o FCA de ${d.f.plast}`,from=d.f.pini?`desde ${fmtD(d.f.pini)} · `:"";
+  return `${bk(d.f.prev)}<div class="when">${from}${when}</div>${d.f.n>2?`<div class="small">${d.f.n} escrituradores desde 2010</div>`:""}`}
+function render(){
+  const r=filtered(),{k,dir}=st.sort;
+  document.querySelectorAll("th").forEach(th=>th.setAttribute("aria-sort",th.dataset.k===k?(dir>0?"ascending":"descending"):"none"));
+  el("count").innerHTML=`<b>${fmt(r.length)}</b> de ${fmt(DATA.length)}`;
+  if(!r.length){el("tb").innerHTML=`<tr><td colspan="9" class="empty">Nenhuma empresa corresponde aos filtros.</td></tr>`;return}
+  el("tb").innerHTML=r.map(d=>`<tr>
+    <td class="co"><b>${esc(d.p)}</b><div>${esc(d.r)}</div><span class="cd">${esc(d.e)}</span></td>
+    <td>${d.t.length?d.t.map(([t,c])=>`<span class="tk">${esc(t)}<i>${c==="Outros"?"":c}</i></span>`).join(""):'<span class="muted">sem ticker</span>'}</td>
+    <td><span title="${esc(d.onr||d.pnr)}">${bk(d.b)}</span>${d.pn&&d.pn!==d.b?`<div class="small">PN: ${esc(d.pn)}</div>`:""}${d.f&&d.f.cur!==d.b?`<div class="warn" title="Escriturador no FCA mais recente">⚠ CVM indica ${esc(d.f.cur)}</div>`:""}</td>
+    <td class="trace">${since(d)}</td>
+    <td class="trace">${prev(d)}</td>
+    <td><span class="seg ${d.m==="?"?"":d.m}">${esc(MKT[d.m]||d.m)}</span></td>
+    <td class="sec">${esc(d.s)}</td>
+    <td class="mono">${d.c}</td>
+    <td class="mono">${esc(d.v)}</td></tr>`).join("");
+}
+document.querySelectorAll("th").forEach(th=>th.onclick=()=>{const k=th.dataset.k;st.sort={k,dir:st.sort.k===k?-st.sort.dir:1};render()});
+["q","fBank","fPrev","fHist","fSeg","onlyT"].forEach(id=>el(id).addEventListener("input",render));
+el("csv").onclick=()=>{
+  const H=["Empresa","Razão social","Código","CNPJ","Código CVM","Tickers","Segmento","Setor","Escriturador atual (B3)","Escriturador ON (B3, original)","Escriturador PN (B3, original)","Escriturador no FCA (CVM)","Escriturador desde (CVM)","Data aproximada","Escriturador anterior (CVM)","Anterior desde","Anterior até","Anterior consta até FCA de","Nº escrituradores desde 2010"];
+  const q=v=>{v=String(v??"");return /[;"\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};
+  const L=[H.join(";")].concat(filtered().map(d=>[d.p,d.r,d.e,d.c,d.v,d.t.map(x=>x[0]).join(" "),MKT[d.m]||d.m,d.s,d.b,d.onr,d.pnr,d.f?d.f.cur:"",d.f?fmtD(d.f.ini):"",d.f&&d.f.ax?"sim":"",d.f?d.f.prev:"",d.f?fmtD(d.f.pini):"",d.f?fmtD(d.f.pfim):"",d.f&&d.f.prev?d.f.plast:"",d.f?d.f.n:""].map(q).join(";")));
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["﻿"+L.join("\n")],{type:"text/csv;charset=utf-8"}));a.download="escrituradores_b3_cvm.csv";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+};
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ações na B3 · Escrituradores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f4f5fb; --surface:#ffffff; --surface-2:#f8f8fc; --line:#e7e6ef; --line-2:#d9d8e4;
+  --ink:#16152b; --ink-2:#4b4a63; --ink-3:#7c7b93;
+  --accent:#6250d6; --accent-2:#4a3aa7; --accent-soft:#efedfc;
+  --gain:#14a06b; --loss:#e0413f; --gain-soft:#e3f6ee; --loss-soft:#fde8e8;
+  --v2:#d4cdf6; --v3:#b3a8ef; --v4:#8f80e6; --v5:#6250d6; --v6:#4a3aa7; --v7:#33287a;
+  --hero: linear-gradient(118deg,#3b2bc4 0%,#6250d6 34%,#b444b5 68%,#ec7000 100%);
+  --radius:16px; --shadow:0 1px 2px rgba(22,21,43,.04),0 8px 24px -12px rgba(40,30,120,.18);
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit}
+.wrap{max-width:1440px;margin:0 auto;padding:0 28px}
+
+/* hero */
+.hero{background:var(--hero);color:#fff;padding:34px 0 96px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(600px 240px at 85% 10%,rgba(255,255,255,.18),transparent 70%),radial-gradient(500px 300px at 10% 120%,rgba(255,255,255,.12),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:5px 12px;border-radius:999px}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:#7dffc8;box-shadow:0 0 0 3px rgba(125,255,200,.25)}
+h1{font-size:clamp(26px,3.4vw,40px);line-height:1.1;margin:16px 0 8px;font-weight:800;letter-spacing:-.02em}
+.hero p{margin:0;max-width:780px;color:rgba(255,255,255,.88);font-size:15px}
+
+/* KPIs */
+.kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin-top:-68px;position:relative;z-index:2}
+.kpi{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 18px 16px;position:relative;overflow:hidden;border:1px solid var(--line)}
+.kpi::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--c,var(--accent))}
+.kpi .lbl{font-size:12px;color:var(--ink-2);font-weight:600}
+.kpi .val{font-size:30px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-top:4px;line-height:1.1}
+.kpi .sub{font-size:12px;color:var(--ink-3);margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi .bar{height:6px;border-radius:99px;background:var(--surface-2);margin-top:10px;overflow:hidden;border:1px solid var(--line)}
+.kpi .bar span{display:block;height:100%;background:var(--c,var(--accent));border-radius:99px;transition:width .4s}
+
+/* filter bar */
+.filters{position:sticky;top:0;z-index:20;margin-top:18px;padding:10px 0;background:rgba(244,245,251,.86);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px)}
+.fbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:var(--shadow)}
+.search{flex:1 1 280px;display:flex;align-items:center;gap:8px;padding:0 12px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line)}
+.search svg{flex:none;color:var(--ink-3)}
+.search input{border:0;outline:0;background:transparent;font:inherit;color:var(--ink);padding:9px 0;width:100%}
+.search:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.toggle{display:inline-flex;align-items:center;gap:10px;padding:7px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-weight:600;font-size:13px;color:var(--ink-2)}
+.toggle .sw{width:34px;height:20px;border-radius:99px;background:var(--line-2);position:relative;transition:background .2s}
+.toggle .sw::after{content:"";position:absolute;left:3px;top:3px;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2);transition:transform .2s}
+.toggle[aria-pressed=true]{color:var(--accent-2);border-color:var(--v3);background:var(--accent-soft)}
+.toggle[aria-pressed=true] .sw{background:var(--accent)}
+.toggle[aria-pressed=true] .sw::after{transform:translateX(14px)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 8px 6px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-2);font-size:12.5px;font-weight:600;border:1px solid var(--v2);cursor:pointer}
+.chip b{font-weight:500;color:var(--ink-2)}
+.chip .x{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:rgba(98,80,214,.14);font-size:12px;line-height:1}
+.chip:hover .x{background:var(--accent);color:#fff}
+.clear{border:0;background:none;color:var(--ink-3);font-weight:600;font-size:12.5px;cursor:pointer;padding:6px 8px;border-radius:8px}
+.clear:hover{color:var(--ink);background:var(--surface-2)}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;margin-top:8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 20px 18px;min-width:0}
+.c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c8{grid-column:span 8}.c12{grid-column:span 12}
+.card h2{font-size:15px;margin:0;font-weight:700;letter-spacing:-.005em}
+.card .desc{font-size:12.5px;color:var(--ink-3);margin:2px 0 14px}
+.card-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.tag{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2);border:1px solid var(--line);padding:3px 8px;border-radius:6px;white-space:nowrap}
+
+/* donut */
+.donut{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.donut.stack{flex-direction:column;align-items:stretch}
+.donut svg{flex:none;display:block;margin:0 auto;overflow:visible}
+.donut path{cursor:pointer;transition:opacity .2s,transform .15s;transform-origin:center;transform-box:view-box}
+.donut path:hover{transform:scale(1.035)}
+.donut.has-sel path:not(.sel){opacity:.25}
+.donut .ctr-n{font-size:28px;font-weight:800;fill:var(--ink);letter-spacing:-.02em}
+.donut .ctr-l{font-size:11px;font-weight:600;fill:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
+.lg{flex:1;min-width:170px;display:flex;flex-direction:column;gap:1px;max-height:260px;overflow:auto;padding-right:2px}
+.lg button{display:grid;grid-template-columns:12px 1fr auto auto;gap:8px;align-items:center;border:0;background:none;padding:5px 8px;border-radius:8px;cursor:pointer;text-align:left;font-size:12.5px}
+.lg button:hover{background:var(--surface-2)}
+.lg button.sel{background:var(--accent-soft)}
+.lg.has-sel button:not(.sel){opacity:.45}
+.lg .sq{width:12px;height:12px;border-radius:4px}
+.lg .nm{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lg .n{font-weight:700;font-variant-numeric:tabular-nums}
+.lg .pc{color:var(--ink-3);font-variant-numeric:tabular-nums;min-width:44px;text-align:right}
+
+/* bars */
+.bars{display:flex;flex-direction:column;gap:4px}
+.brow{display:grid;grid-template-columns:minmax(96px,200px) minmax(0,1fr) 86px;gap:12px;align-items:center;padding:5px 8px;margin:0 -8px;border-radius:9px;cursor:pointer;border:0;background:none;text-align:left;width:calc(100% + 16px)}
+.brow:hover{background:var(--surface-2)}
+.brow .nm{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brow .track{height:14px;position:relative}
+.brow .fill{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0;min-width:2px;transition:width .45s cubic-bezier(.2,.8,.2,1),opacity .2s}
+.brow .num{font-size:13px;font-weight:700;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.brow .num em{font-style:normal;font-weight:500;color:var(--ink-3);font-size:12px;margin-left:4px}
+.bars.has-sel .brow:not(.sel) .fill{opacity:.28}
+.bars.has-sel .brow:not(.sel) .nm{color:var(--ink-3)}
+.brow.sel{background:var(--accent-soft)}
+
+/* stacked columns (years) */
+.yrs{display:flex;align-items:flex-end;gap:6px;height:230px;padding-top:24px;border-bottom:1px solid var(--line-2);position:relative}
+.yr{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;cursor:pointer;border:0;background:none;padding:0;min-width:0}
+.yr .v{font-size:11.5px;font-weight:700;margin-bottom:4px;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.yr .stk{width:100%;max-width:38px;display:flex;flex-direction:column-reverse;gap:2px;transition:opacity .2s}
+.yr .stk span{display:block;width:100%;transition:height .4s}
+.yr .stk span:last-child{border-radius:4px 4px 0 0}
+.yrs.has-sel .yr:not(.sel) .stk{opacity:.25}
+.yr:hover .stk{filter:brightness(1.07)}
+.yx{display:flex;gap:6px;margin-top:6px}
+.yx span{flex:1;text-align:center;font-size:11px;font-weight:600;color:var(--ink-3);min-width:0}
+.mini-lg{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;font-size:12px;color:var(--ink-2);font-weight:600}
+.mini-lg span{display:inline-flex;align-items:center;gap:6px}
+.mini-lg i{width:10px;height:10px;border-radius:3px}
+
+/* diverging (saldo) */
+.dv{display:flex;flex-direction:column;gap:3px}
+.dv-h{display:grid;grid-template-columns:1fr 128px 1fr;gap:8px;font-size:11px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em;padding-bottom:6px}
+.dv-h span:first-child{text-align:right}.dv-h span:last-child{text-align:left}
+.dvr{display:grid;grid-template-columns:1fr 128px 1fr;gap:8px;align-items:center}
+.dvr .nm{font-size:12.5px;font-weight:700;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center;justify-content:center;gap:6px}
+.dvr .nm i{width:9px;height:9px;border-radius:3px;flex:none}
+.side{display:flex;align-items:center;gap:6px;height:24px;border:0;background:none;padding:0;cursor:pointer;border-radius:6px}
+.side.l{flex-direction:row-reverse}
+.side .bb{height:16px;border-radius:4px;min-width:0;transition:width .4s,opacity .2s}
+.side.l .bb{background:var(--loss)}.side.r .bb{background:var(--gain)}
+.side .t{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.side.l .t{color:var(--loss)}.side.r .t{color:var(--gain)}
+.side:hover{background:var(--surface-2)}
+.side.sel{background:var(--accent-soft)}
+.dv.has-sel .side:not(.sel) .bb{opacity:.25}
+.net{font-size:11px;color:var(--ink-3);text-align:center}
+
+/* class columns */
+.cols{display:flex;align-items:flex-end;gap:10px;height:200px;padding-top:22px;border-bottom:1px solid var(--line-2)}
+.col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;cursor:pointer;border:0;background:none;padding:0}
+.col .v{font-size:12.5px;font-weight:700;margin-bottom:4px;font-variant-numeric:tabular-nums}
+.col .b{width:100%;max-width:44px;border-radius:5px 5px 0 0;transition:height .45s,opacity .2s;min-height:2px;background:var(--accent)}
+.cols.has-sel .col:not(.sel) .b{opacity:.28}
+.xl{display:flex;gap:10px;margin-top:8px}
+.xl span{flex:1;text-align:center;font-size:12px;font-weight:600;color:var(--ink-2)}
+.note{font-size:12px;color:var(--ink-3);margin-top:12px}
+
+/* table */
+.tbl-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.tbl-tools{display:flex;align-items:center;gap:12px}
+.count{font-size:13px;color:var(--ink-2);font-weight:600}
+.count b{color:var(--accent-2)}
+.btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-2);background:var(--surface);border-radius:9px;padding:7px 12px;font-weight:700;font-size:12.5px;cursor:pointer;color:var(--ink-2)}
+.btn:hover{border-color:var(--accent);color:var(--accent-2);background:var(--accent-soft)}
+.tbl-wrap{overflow:auto;max-height:680px;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:1280px}
+.sec{max-width:170px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;background:var(--surface-2);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:700;cursor:pointer;user-select:none;white-space:nowrap;z-index:1}
+th:hover{color:var(--ink)}
+th.trace{background:#f3f1fe;color:var(--accent-2)}
+th[aria-sort=ascending]::after{content:" ↑";color:var(--accent)} th[aria-sort=descending]::after{content:" ↓";color:var(--accent)}
+td.trace{background:#fcfbff}
+tbody tr:hover td{background:#f7f6ff}
+tbody tr:last-child td{border-bottom:0}
+.co b{font-weight:700}
+.co{min-width:220px}.co div{font-size:12px;color:var(--ink-3);max-width:300px}
+.co .cd{font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.mono{font-family:var(--mono);font-size:12px;white-space:nowrap}
+.tk{display:inline-flex;align-items:center;gap:4px;margin:0 4px 4px 0;padding:2px 7px;border-radius:6px;font:600 12px var(--mono);background:var(--surface-2);border:1px solid var(--line);color:var(--ink)}
+.tk i{font-style:normal;font-size:10px;font-weight:700;color:var(--ink-3);font-family:"Plus Jakarta Sans",sans-serif}
+.bk{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:13px}
+.bk .dot{width:10px;height:10px;border-radius:3px;flex:none}
+.small{font-size:11.5px;color:var(--ink-3);margin-top:3px}
+.warn{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#9a5b00;background:#fff4dc;border:1px solid #f6d68f;padding:1px 6px;border-radius:5px;margin-top:5px}
+.date{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.date.ax{color:var(--ink-3);font-weight:600}
+.prev .when{font-size:11.5px;color:var(--ink-3);margin-top:3px;white-space:nowrap}
+.muted{color:var(--ink-3);font-weight:500}
+.seg{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;border:1px solid var(--line-2);color:var(--ink-2);background:var(--surface)}
+.seg.NM{background:var(--v6);border-color:var(--v6);color:#fff}
+.seg.N2{background:var(--v4);border-color:var(--v4);color:#fff}
+.seg.N1{background:var(--v2);border-color:var(--v3);color:var(--v7)}
+.sec{font-size:12.5px;color:var(--ink-2)}
+.empty{padding:40px;text-align:center;color:var(--ink-3)}
+
+footer{padding:26px 0 48px;color:var(--ink-3);font-size:12.5px}
+footer p{margin:5px 0;max-width:1000px}
+footer code{font-family:var(--mono);font-size:11.5px;background:var(--surface);border:1px solid var(--line);padding:1px 5px;border-radius:4px}
+
+#tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:#fff;font-size:12.5px;padding:9px 11px;border-radius:10px;box-shadow:0 10px 30px -10px rgba(0,0,0,.45);max-width:290px;opacity:0;transform:translateY(4px);transition:opacity .12s,transform .12s}
+#tip.on{opacity:1;transform:none}
+#tip .t{font-weight:700;margin-bottom:3px;display:flex;align-items:center;gap:6px}
+#tip .t i{width:9px;height:9px;border-radius:3px}
+#tip .r{display:flex;justify-content:space-between;gap:18px;color:rgba(255,255,255,.8)}
+#tip .r b{color:#fff;font-variant-numeric:tabular-nums}
+
+@media (max-width:1180px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.c3,.c4,.c5,.c8{grid-column:span 12}}
+@media (max-width:640px){.wrap{padding:0 16px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi .val{font-size:24px}.card{padding:16px}.brow{grid-template-columns:110px minmax(0,1fr) 70px}.dvr,.dv-h{grid-template-columns:1fr 96px 1fr}.yx span:nth-child(even){visibility:hidden}}
+</style>
+</head>
+<body>
+<div id="tip" role="tooltip"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><i></i>B3 + CVM · dados abertos · 23/10/2026</span>
+    <h1>Ações na B3: quem escritura cada empresa</h1>
+    <p>Escriturador atual de cada companhia emissora de ações (B3), com data de início e escriturador anterior segundo o Formulário Cadastral entregue à CVM. Clique nos gráficos para filtrar todo o painel.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="kpis" id="kpis"></div>
+
+  <div class="filters">
+    <div class="fbar">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Buscar empresa, ticker, CNPJ, setor ou escriturador…" autocomplete="off">
+      </label>
+      <button class="toggle" id="onlyT" aria-pressed="true"><span class="sw"></span>Somente negociadas (com ticker)</button>
+      <div class="chips" id="chips"></div>
+      <button class="clear" id="clear" hidden>Limpar filtros</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <section class="card c5">
+      <div class="card-head"><div><h2>Participação por escriturador</h2><p class="desc">Escriturador atual das ações ON, segundo a B3</p></div></div>
+      <div class="donut" id="dBank"></div>
+    </section>
+    <section class="card c4">
+      <div class="card-head"><div><h2>Segmento de listagem</h2><p class="desc">Nível de governança na B3</p></div></div>
+      <div class="donut" id="dSeg"></div>
+    </section>
+    <section class="card c3">
+      <div class="card-head"><div><h2>Histórico na CVM</h2><p class="desc">Troca de escriturador desde 2010</p></div></div>
+      <div class="donut stack" id="dHist"></div>
+    </section>
+
+    <section class="card c8">
+      <div class="card-head"><div><h2>Trocas de escriturador por ano</h2><p class="desc">Ano em que o escriturador atual assumiu, nas empresas que trocaram · cor = novo escriturador</p></div><span class="tag" id="yrTot"></span></div>
+      <div class="yrs" id="yrs"></div>
+      <div class="yx" id="yx"></div>
+      <div class="mini-lg" id="yrLg"></div>
+    </section>
+    <section class="card c4">
+      <div class="card-head"><div><h2>Saldo de trocas</h2><p class="desc">Empresas perdidas e conquistadas por instituição</p></div></div>
+      <div class="dv" id="dv"></div>
+    </section>
+
+    <section class="card c8">
+      <div class="card-head"><div><h2>Setores com mais empresas</h2><p class="desc">Classificação setorial da B3 · 10 maiores no filtro atual</p></div></div>
+      <div class="bars" id="secs"></div>
+    </section>
+    <section class="card c4">
+      <div class="card-head"><div><h2>Tickers por classe</h2><p class="desc">Quantidade de códigos de negociação</p></div></div>
+      <div class="cols" id="cls"></div>
+      <div class="xl" id="clsx"></div>
+      <p class="note">“Outros” reúne direitos, recibos e bônus de subscrição e códigos temporários.</p>
+    </section>
+
+    <section class="card c12">
+      <div class="tbl-head">
+        <div><h2>Empresas e rastreabilidade do escriturador</h2><p class="desc" style="margin-bottom:0">Colunas em roxo vêm do Formulário Cadastral (FCA) da CVM · clique no cabeçalho para ordenar</p></div>
+        <div class="tbl-tools"><span class="count" id="count"></span><button class="btn" id="csv"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Exportar CSV</button></div>
+      </div>
+      <div class="tbl-wrap">
+        <table id="t">
+          <thead><tr>
+            <th data-k="p">Empresa</th>
+            <th data-k="t">Tickers</th>
+            <th data-k="b">Escriturador atual</th>
+            <th data-k="since" class="trace">Escriturador desde</th>
+            <th data-k="prev" class="trace">Escriturador anterior</th>
+            <th data-k="m">Segmento</th>
+            <th data-k="s">Setor</th>
+            <th data-k="c">CNPJ</th>
+          </tr></thead>
+          <tbody id="tb"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p><b>Escriturador atual:</b> B3 · Empresas Listadas (<code>GetInitialCompanies</code> e <code>GetDetail</code>, campos <code>institutionCommon</code>/<code>institutionPreferred</code>), emissores do tipo “ações”.</p>
+    <p><b>Escriturador desde / anterior:</b> CVM · Formulário Cadastral (<code>fca_cia_aberta_escriturador</code>, 2010–2026, última versão de cada ano), campos <code>Data_Inicio_Atuacao</code> e <code>Data_Fim_Atuacao</code>, cruzados pelo CNPJ. Os nomes informados pelas companhias foram padronizados por instituição. Datas com “~” não foram informadas no FCA: indicam o primeiro formulário em que o escriturador aparece. Quando o escriturador anterior não tem data de saída, mostra-se o último ano em que ele consta.</p>
+    <p><b>Diferenças B3 × CVM:</b> o selo “CVM indica…” aparece quando o escriturador do FCA mais recente difere do informado pela B3 (o FCA pode estar desatualizado ou a B3 informar outra entidade do mesmo grupo). 141 empresas, em geral de balcão não organizado, não têm FCA com escriturador e aparecem como “Sem dados na CVM”.</p>
+    <p><b>Cores:</b> cada instituição usa a cor da sua identidade visual; as datas são as informadas pelas companhias e não foram verificadas em outras fontes.</p>
+  </footer>
+</div>
+
+<script>
+const DATA=/*__DATA__*/[];
+const MKT=/*__MKT__*/{};
+
+/* ---------- brand colors (fixed per institution) ---------- */
+const BRAND={
+  "Itaú Corretora":"#EC7000","Itaú Unibanco":"#F7A04B","Banco Bradesco":"#CC092F","Bradesco CTVM":"#E8607A",
+  "BTG Pactual":"#0B3D91","Banco do Brasil":"#F2C200","Banco Santander":"#FF3B30","Própria empresa":"#5B6B82",
+  "Oliveira Trust":"#00A86B","Vórtx DTVM":"#7B2FF7","Banco Mercantil do Brasil":"#2F80ED","Banrisul":"#00579C",
+  "Banco do Nordeste":"#8E1B3A","Banco Safra":"#B8962E","ID CTVM":"#14B8A6","Banco Opportunity":"#334155",
+  "BRB DTVM":"#0EA5E9","Oslo Capital DTVM":"#94A3B8","Não informado":"#D3D2DE"
+};
+const colorOf=k=>BRAND[k]||"#A3A2B5";
+const SEGC={"NM":"#4a3aa7","N2":"#8f80e6","N1":"#c4bcf3","MP":"#e87ba4","B":"#1baf7a","SO":"#eda100","BN":"#9aa3b5","?":"#d3d2de"};
+const HISTC={"Trocou de escriturador":"#6250d6","Sem troca registrada":"#1baf7a","Sem dados na CVM":"#d3d2de"};
+
+/* ---------- derived fields ---------- */
+const rank={};DATA.forEach(d=>rank[d.b]=(rank[d.b]||0)+1);
+const ENT_ORDER=Object.keys(BRAND).concat(Object.keys(rank).filter(k=>!BRAND[k])).sort((a,b)=>(rank[b]||0)-(rank[a]||0));
+const fmtD=s=>s?s.slice(8,10)+"/"+s.slice(5,7)+"/"+s.slice(0,4):"";
+DATA.forEach(d=>{
+  d.sec=/^n[aã]o classificad/i.test(d.s)?"Não classificado":d.s;
+  d.cls=[...new Set(d.t.map(x=>x[1]))];
+  d.hist=!d.f?"Sem dados na CVM":(d.f.prev?"Trocou de escriturador":"Sem troca registrada");
+  d.yr=d.f&&d.f.prev&&!d.f.ax&&d.f.ini?(d.f.ini.slice(0,4)<"2010"?"2010":d.f.ini.slice(0,4)):null;
+  d.inE=d.f&&d.f.prev?d.f.cur:null; d.outE=d.f&&d.f.prev?d.f.prev:null;
+  d.since=d.f?d.f.ini:"";
+  d.ix=[d.p,d.r,d.e,d.t.map(x=>x[0]).join(" "),d.c,d.c.replace(/\D/g,""),d.s,d.b,d.pn,d.onr,d.pnr,MKT[d.m]||"",d.f?d.f.cur+" "+d.f.prev:""].join(" ").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+});
+const CLS=["ON","PN","PNA","PNB","PNC","PND","Units","Outros"];
+
+/* ---------- state & filtering ---------- */
+const S={q:"",onlyT:true,bank:null,mkt:null,cls:null,sec:null,hist:null,yr:null,inE:null,outE:null,sort:{k:"p",dir:1}};
+const DIMS=["bank","mkt","cls","sec","hist","yr","inE","outE"];
+const DIM={bank:d=>d.b,mkt:d=>d.m,cls:d=>d.cls,sec:d=>d.sec,hist:d=>d.hist,yr:d=>d.yr,inE:d=>d.inE,outE:d=>d.outE};
+const LABEL={bank:"Escriturador",mkt:"Segmento",cls:"Classe",sec:"Setor",hist:"Histórico",yr:"Troca em",inE:"Conquistou",outE:"Perdeu"};
+function pass(d,except){
+  if(S.onlyT&&!d.t.length)return false;
+  if(S.q&&!d.ix.includes(S.q))return false;
+  for(const k of DIMS){if(k===except||(Array.isArray(except)&&except.includes(k))||S[k]==null)continue;const v=DIM[k](d);if(Array.isArray(v)?!v.includes(S[k]):v!==S[k])return false;}
+  return true;
+}
+const rows=except=>DATA.filter(d=>pass(d,except));
+const fmt=n=>n.toLocaleString("pt-BR");
+const pct=(a,b)=>b?(a/b*100).toLocaleString("pt-BR",{maximumFractionDigits:1})+"%":"0%";
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function toggle(k,v){S[k]=S[k]===v?null:v;render();}
+
+/* ---------- tooltip ---------- */
+const tip=document.getElementById("tip");
+function moveTip(e){const r=tip.getBoundingClientRect();let x=e.clientX+14,y=e.clientY+14;if(x+r.width>innerWidth-8)x=e.clientX-r.width-14;if(y+r.height>innerHeight-8)y=e.clientY-r.height-14;tip.style.left=x+"px";tip.style.top=y+"px"}
+function bindTip(el,fn){el.addEventListener("mouseenter",e=>{tip.innerHTML=fn();tip.classList.add("on");moveTip(e)});el.addEventListener("mousemove",moveTip);el.addEventListener("mouseleave",()=>tip.classList.remove("on"))}
+const tipH=(title,color,lines)=>`<div class="t">${color?`<i style="background:${color}"></i>`:""}${esc(title)}</div>`+lines.map(([a,b])=>`<div class="r"><span>${a}</span><b>${b}</b></div>`).join("");
+
+/* ---------- donut ---------- */
+function donut(el,items,{key,total,center,size=190,legend=true}){
+  const R=size/2,r=R*0.62,cx=R,cy=R,sum=items.reduce((a,i)=>a+i.n,0)||1;
+  const sel=S[key];
+  el.classList.toggle("has-sel",sel!=null);
+  let a0=-Math.PI/2,paths="";
+  const gap=items.length>1?0.012:0;
+  items.forEach((it,i)=>{
+    const frac=it.n/sum,a1=a0+frac*2*Math.PI;
+    let s=a0+gap/2,e=a1-gap/2;if(e<=s){s=a0;e=a1}
+    let d;
+    if(frac>=0.9999){d=`M${cx} ${cy-R}A${R} ${R} 0 1 1 ${cx-0.01} ${cy-R}L${cx-0.01} ${cy-r}A${r} ${r} 0 1 0 ${cx} ${cy-r}Z`}
+    else{const lg=(e-s)>Math.PI?1:0,p=(rad,a)=>[cx+rad*Math.cos(a),cy+rad*Math.sin(a)];
+      const [x0,y0]=p(R,s),[x1,y1]=p(R,e),[x2,y2]=p(r,e),[x3,y3]=p(r,s);
+      d=`M${x0} ${y0}A${R} ${R} 0 ${lg} 1 ${x1} ${y1}L${x2} ${y2}A${r} ${r} 0 ${lg} 0 ${x3} ${y3}Z`}
+    paths+=`<path data-i="${i}" class="${sel===it.k?"sel":""}" d="${d}" fill="${it.color}" stroke="#fff" stroke-width="1.5"></path>`;
+    a0=a1;
+  });
+  const selIt=items.find(i=>i.k===sel);
+  const cN=selIt?selIt.n:sum,cL=selIt?pct(selIt.n,sum):center;
+  const svg=`<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" role="img" aria-label="${esc(center)}">${paths}<text class="ctr-n" x="${cx}" y="${cy+4}" text-anchor="middle">${fmt(cN)}</text><text class="ctr-l" x="${cx}" y="${cy+22}" text-anchor="middle">${esc(cL)}</text></svg>`;
+  const lg=legend?`<div class="lg ${sel!=null?"has-sel":""}">${items.map((it,i)=>`<button data-i="${i}" class="${sel===it.k?"sel":""}"><span class="sq" style="background:${it.color}"></span><span class="nm" title="${esc(it.label)}">${esc(it.label)}</span><span class="n">${fmt(it.n)}</span><span class="pc">${pct(it.n,sum)}</span></button>`).join("")}</div>`:"";
+  el.innerHTML=svg+lg;
+  el.querySelectorAll("[data-i]").forEach(node=>{const it=items[+node.dataset.i];node.addEventListener("click",()=>toggle(key,it.k));
+    bindTip(node,()=>tipH(it.label,it.color,[["Empresas",fmt(it.n)],["Participação",pct(it.n,sum)],...(it.extra||[])]))});
+}
+
+function dBank(){
+  const r=rows("bank"),c={},tk={};r.forEach(d=>{c[d.b]=(c[d.b]||0)+1;tk[d.b]=(tk[d.b]||0)+d.t.length});
+  const items=Object.keys(c).sort((a,b)=>c[b]-c[a]).map(k=>({k,label:k,n:c[k],color:colorOf(k),extra:[["Tickers",fmt(tk[k])]]}));
+  donut(document.getElementById("dBank"),items,{key:"bank",center:"empresas"});
+}
+function dSeg(){
+  const r=rows("mkt"),c={};r.forEach(d=>c[d.m]=(c[d.m]||0)+1);
+  const items=Object.keys(MKT).filter(k=>c[k]).map(k=>({k,label:MKT[k],n:c[k],color:SEGC[k]}));
+  donut(document.getElementById("dSeg"),items,{key:"mkt",center:"empresas",size:160});
+}
+function dHist(){
+  const r=rows("hist"),c={};r.forEach(d=>c[d.hist]=(c[d.hist]||0)+1);
+  const items=Object.keys(HISTC).filter(k=>c[k]).map(k=>({k,label:k,n:c[k],color:HISTC[k]}));
+  donut(document.getElementById("dHist"),items,{key:"hist",center:"empresas",size:170});
+}
+
+/* ---------- KPIs ---------- */
+function kpis(){
+  const r=rows(),withT=r.filter(d=>d.t.length).length,tk=r.reduce((a,d)=>a+d.t.length,0);
+  const cvm=r.filter(d=>d.f),sw=cvm.filter(d=>d.f.prev).length,rec=r.filter(d=>d.yr&&d.yr>="2023").length;
+  const bc={};r.forEach(d=>bc[d.b]=(bc[d.b]||0)+1);
+  const lead=Object.entries(bc).sort((a,b)=>b[1]-a[1])[0];
+  const K=[
+    {l:"Empresas no filtro",v:fmt(r.length),s:`de ${fmt(DATA.length)} emissoras de ações`,c:"var(--accent)",p:r.length/DATA.length},
+    {l:"Negociadas (com ticker)",v:fmt(withT),s:fmt(tk)+" tickers de ações",c:"#0B3D91",p:r.length?withT/r.length:0},
+    {l:"Com histórico na CVM",v:fmt(cvm.length),s:pct(cvm.length,r.length)+" das empresas filtradas",c:"#1baf7a",p:r.length?cvm.length/r.length:0},
+    {l:"Trocaram de escriturador",v:pct(sw,cvm.length),s:fmt(sw)+" empresas desde 2010",c:"#6250d6",p:cvm.length?sw/cvm.length:0},
+    {l:"Trocas desde 2023",v:fmt(rec),s:"escriturador atual assumiu em 2023+",c:"#e0413f"},
+    {l:"Maior escriturador",v:lead?pct(lead[1],r.length):"—",s:lead?lead[0]+" · "+fmt(lead[1]):"sem dados",c:lead?colorOf(lead[0]):"#A3A2B5",p:lead&&r.length?lead[1]/r.length:0},
+  ];
+  document.getElementById("kpis").innerHTML=K.map(k=>`<div class="kpi" style="--c:${k.c}"><div class="lbl">${k.l}</div><div class="val">${k.v}</div><div class="sub" title="${esc(k.s)}">${esc(k.s)}</div>${k.p!=null?`<div class="bar"><span style="width:${(k.p*100).toFixed(1)}%"></span></div>`:""}</div>`).join("");
+}
+
+/* ---------- trocas por ano ---------- */
+function years(){
+  const r=rows("yr").filter(d=>d.yr);
+  const ys=[];for(let y=2010;y<=2026;y++)ys.push(String(y));
+  const early=r.some(d=>d.f.ini.slice(0,4)<"2010");
+  const by={};ys.forEach(y=>by[y]={});r.forEach(d=>{const y=d.yr;by[y][d.f.cur]=(by[y][d.f.cur]||0)+1});
+  const tot=y=>Object.values(by[y]).reduce((a,b)=>a+b,0);
+  const max=Math.max(1,...ys.map(tot)),H=170;
+  const ents=[...new Set(r.map(d=>d.f.cur))].sort((a,b)=>ENT_ORDER.indexOf(a)-ENT_ORDER.indexOf(b));
+  const el=document.getElementById("yrs");el.classList.toggle("has-sel",S.yr!=null);el.innerHTML="";
+  ys.forEach(y=>{
+    const t=tot(y),b=document.createElement("button");b.className="yr"+(S.yr===y?" sel":"");
+    b.innerHTML=`<span class="v">${t||""}</span><span class="stk">${ents.filter(e=>by[y][e]).map(e=>`<span style="height:${Math.max(2,by[y][e]/max*H-2)}px;background:${colorOf(e)}"></span>`).join("")}</span>`;
+    b.onclick=()=>{if(t)toggle("yr",y)};
+    bindTip(b,()=>tipH((y==="2010"&&early?"Até ":"")+y,null,[["Trocas",fmt(t)],...ents.filter(e=>by[y][e]).sort((a,c)=>by[y][c]-by[y][a]).map(e=>[`<span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${colorOf(e)};margin-right:6px"></span>${esc(e)}`,fmt(by[y][e])])]));
+    el.appendChild(b);
+  });
+  document.getElementById("yx").innerHTML=ys.map(y=>`<span>${y==="2010"&&early?"≤10":"’"+y.slice(2)}</span>`).join("");
+  document.getElementById("yrLg").innerHTML=ents.map(e=>`<span><i style="background:${colorOf(e)}"></i>${esc(e)}</span>`).join("");
+  document.getElementById("yrTot").textContent=fmt(r.length)+" trocas";
+}
+
+/* ---------- saldo (diverging) ---------- */
+function saldo(){
+  const r=rows(["inE","outE"]).filter(d=>d.f&&d.f.prev);
+  const g={},l={};r.forEach(d=>{g[d.f.cur]=(g[d.f.cur]||0)+1;l[d.f.prev]=(l[d.f.prev]||0)+1});
+  const ents=[...new Set([...Object.keys(g),...Object.keys(l)])].sort((a,b)=>((g[b]||0)-(l[b]||0))-((g[a]||0)-(l[a]||0)));
+  const max=Math.max(1,...ents.map(e=>Math.max(g[e]||0,l[e]||0)));
+  const el=document.getElementById("dv");el.classList.toggle("has-sel",S.inE!=null||S.outE!=null);
+  el.innerHTML=`<div class="dv-h"><span>Perdeu</span><span style="text-align:center">Instituição</span><span>Conquistou</span></div>`;
+  ents.forEach(e=>{
+    const gi=g[e]||0,lo=l[e]||0,row=document.createElement("div");row.className="dvr";
+    row.innerHTML=`<button class="side l ${S.outE===e?"sel":""}"><span class="bb" style="width:${lo/max*100}%"></span><span class="t">${lo?"−"+lo:""}</span></button><div class="nm" title="${esc(e)}"><i style="background:${colorOf(e)}"></i>${esc(e)}</div><button class="side r ${S.inE===e?"sel":""}"><span class="bb" style="width:${gi/max*100}%"></span><span class="t">${gi?"+"+gi:""}</span></button>`;
+    const [L,,Rb]=row.children;
+    L.onclick=()=>{if(lo){S.inE=null;toggle("outE",e)}};Rb.onclick=()=>{if(gi){S.outE=null;toggle("inE",e)}};
+    const t=()=>tipH(e,colorOf(e),[["Conquistou",fmt(gi)],["Perdeu",fmt(lo)],["Saldo",(gi-lo>0?"+":"")+(gi-lo)]]);
+    bindTip(L,t);bindTip(Rb,t);
+    el.appendChild(row);
+  });
+  if(!ents.length)el.insertAdjacentHTML("beforeend",`<p class="note">Nenhuma troca no filtro atual.</p>`);
+}
+
+/* ---------- setores & classes ---------- */
+function secs(){
+  const r=rows("sec"),c={};r.forEach(d=>c[d.sec]=(c[d.sec]||0)+1);
+  let items=Object.entries(c).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([k,n])=>({k,n}));
+  if(S.sec&&!items.find(i=>i.k===S.sec)&&c[S.sec])items.push({k:S.sec,n:c[S.sec]});
+  const max=Math.max(1,...items.map(i=>i.n)),el=document.getElementById("secs");
+  el.classList.toggle("has-sel",S.sec!=null);el.innerHTML="";
+  items.forEach(it=>{const b=document.createElement("button");b.className="brow"+(S.sec===it.k?" sel":"");
+    b.innerHTML=`<span class="nm" title="${esc(it.k)}">${esc(it.k)}</span><span class="track"><span class="fill" style="width:${it.n/max*100}%;background:linear-gradient(90deg,#6250d6,#b444b5)"></span></span><span class="num">${fmt(it.n)}<em>${pct(it.n,r.length)}</em></span>`;
+    b.onclick=()=>toggle("sec",it.k);bindTip(b,()=>tipH(it.k,null,[["Empresas",fmt(it.n)],["Participação",pct(it.n,r.length)]]));el.appendChild(b)});
+}
+function classes(){
+  const r=rows("cls"),c={};CLS.forEach(k=>c[k]=0);r.forEach(d=>d.t.forEach(([,k])=>c[k]++));
+  const tot=Object.values(c).reduce((a,b)=>a+b,0),items=CLS.filter(k=>c[k]||S.cls===k),max=Math.max(1,...items.map(k=>c[k]));
+  const el=document.getElementById("cls");el.classList.toggle("has-sel",S.cls!=null);el.innerHTML="";
+  const x=document.getElementById("clsx");x.innerHTML="";
+  items.forEach(k=>{const b=document.createElement("button");b.className="col"+(S.cls===k?" sel":"");
+    b.innerHTML=`<span class="v">${fmt(c[k])}</span><span class="b" style="height:${c[k]/max*140}px"></span>`;
+    b.onclick=()=>toggle("cls",k);bindTip(b,()=>tipH("Classe "+k,null,[["Tickers",fmt(c[k])],["Participação",pct(c[k],tot)]]));
+    el.appendChild(b);x.insertAdjacentHTML("beforeend",`<span>${k}</span>`)});
+}
+
+/* ---------- chips ---------- */
+function chips(){
+  const el=document.getElementById("chips");el.innerHTML="";let any=!!S.q;
+  for(const k of DIMS){if(S[k]==null)continue;any=true;const v=k==="mkt"?MKT[S[k]]:S[k];
+    const c=document.createElement("button");c.className="chip";c.innerHTML=`<b>${LABEL[k]}:</b>${esc(v)}<span class="x">✕</span>`;c.onclick=()=>{S[k]=null;render()};el.appendChild(c)}
+  document.getElementById("clear").hidden=!any;
+}
+
+/* ---------- table ---------- */
+const bk=n=>n?`<span class="bk"><span class="dot" style="background:${colorOf(n)}"></span>${esc(n)}</span>`:`<span class="muted">—</span>`;
+function sinceCell(d){
+  if(!d.f)return `<span class="muted">Sem dados na CVM</span>`;
+  if(!d.f.ini)return `<span class="muted">Não informada</span>`;
+  return d.f.ax?`<span class="date ax" title="Data não informada no FCA; primeiro formulário com este escriturador">~${fmtD(d.f.ini).slice(3)}</span>`:`<span class="date">${fmtD(d.f.ini)}</span>`;
+}
+function prevCell(d){
+  if(!d.f)return `<span class="muted">—</span>`;
+  if(!d.f.prev)return `<span class="muted">Sem troca registrada</span>`;
+  const when=d.f.pfim?`até ${fmtD(d.f.pfim)}`:`consta até o FCA de ${d.f.plast}`;
+  const from=d.f.pini?`desde ${fmtD(d.f.pini)} · `:"";
+  return `<div class="prev">${bk(d.f.prev)}<div class="when">${from}${when}</div>${d.f.n>2?`<div class="small">${d.f.n} escrituradores desde 2010</div>`:""}</div>`;
+}
+function sorted(){
+  const r=rows(),{k,dir}=S.sort;
+  const val=d=>k==="t"?(d.t[0]?d.t[0][0]:"~"):k==="m"?Object.keys(MKT).indexOf(d.m):k==="since"?(d.since||"9999"):k==="prev"?(d.f&&d.f.prev||"~"):(d[k]||"~");
+  return r.sort((a,b)=>{const x=val(a),y=val(b);return (typeof x==="number"?x-y:String(x).localeCompare(String(y),"pt",{numeric:true}))*dir});
+}
+function table(){
+  const r=sorted(),{k,dir}=S.sort;
+  document.querySelectorAll("th").forEach(th=>th.setAttribute("aria-sort",th.dataset.k===k?(dir>0?"ascending":"descending"):"none"));
+  document.getElementById("count").innerHTML=`<b>${fmt(r.length)}</b> de ${fmt(DATA.length)} empresas`;
+  const tb=document.getElementById("tb");
+  if(!r.length){tb.innerHTML=`<tr><td colspan="8" class="empty">Nenhuma empresa corresponde aos filtros.</td></tr>`;return}
+  tb.innerHTML=r.map(d=>{
+    const pnDiff=d.pn&&d.pn!==d.b?`<div class="small">PN: ${esc(d.pn)}</div>`:"";
+    const div=d.f&&d.f.cur!==d.b?`<div class="warn" title="Escriturador no FCA mais recente">⚠ CVM indica ${esc(d.f.cur)}</div>`:"";
+    return `<tr>
+    <td class="co"><b>${esc(d.p)}</b><div>${esc(d.r)}</div><span class="cd">${esc(d.e)}</span></td>
+    <td>${d.t.length?d.t.map(([t,c])=>`<span class="tk">${esc(t)}<i>${c==="Outros"?"":c}</i></span>`).join(""):'<span class="muted">sem ticker</span>'}</td>
+    <td><span title="${esc(d.onr||d.pnr)}">${bk(d.b)}</span>${pnDiff}${div}</td>
+    <td class="trace">${sinceCell(d)}</td>
+    <td class="trace">${prevCell(d)}</td>
+    <td><span class="seg ${d.m==="?"?"":d.m}">${esc(MKT[d.m]||d.m)}</span></td>
+    <td class="sec">${esc(d.s)}</td>
+    <td class="mono">${d.c}</td></tr>`}).join("");
+}
+document.querySelectorAll("th").forEach(th=>th.onclick=()=>{const k=th.dataset.k;S.sort={k,dir:S.sort.k===k?-S.sort.dir:1};table()});
+
+/* ---------- CSV export ---------- */
+document.getElementById("csv").onclick=()=>{
+  const H=["Empresa","Razão social","Código","CNPJ","Tickers","Segmento","Setor","Escriturador atual (B3)","Escriturador ON (B3, original)","Escriturador PN (B3, original)","Escriturador no FCA (CVM)","Escriturador desde (CVM)","Data aproximada","Escriturador anterior (CVM)","Anterior desde","Anterior até","Anterior consta até FCA de","Nº escrituradores desde 2010"];
+  const q=v=>{v=String(v??"");return /[;"\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};
+  const lines=[H.join(";")].concat(sorted().map(d=>[d.p,d.r,d.e,d.c,d.t.map(x=>x[0]).join(" "),MKT[d.m]||d.m,d.s,d.b,d.onr,d.pnr,d.f?d.f.cur:"",d.f?fmtD(d.f.ini):"",d.f&&d.f.ax?"sim":"",d.f?d.f.prev:"",d.f?fmtD(d.f.pini):"",d.f?fmtD(d.f.pfim):"",d.f&&d.f.prev?d.f.plast:"",d.f?d.f.n:""].map(q).join(";")));
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["﻿"+lines.join("\n")],{type:"text/csv;charset=utf-8"}));a.download="escrituradores_b3_cvm.csv";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+};
+
+/* ---------- wiring ---------- */
+function render(){kpis();dBank();dSeg();dHist();years();saldo();secs();classes();chips();table();}
+let to;document.getElementById("q").addEventListener("input",e=>{clearTimeout(to);to=setTimeout(()=>{S.q=e.target.value.trim().normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();render()},120)});
+const tg=document.getElementById("onlyT");tg.onclick=()=>{S.onlyT=!S.onlyT;tg.setAttribute("aria-pressed",S.onlyT);render()};
+document.getElementById("clear").onclick=()=>{DIMS.forEach(k=>S[k]=null);S.q="";document.getElementById("q").value="";render()};
+render();
+</script>
+</body>
+</html>

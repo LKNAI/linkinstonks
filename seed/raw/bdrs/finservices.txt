@@ -1,0 +1,1072 @@
+DRN
+THGI34|Hanover Insurance Group Inc
+H1OG34|Harley-Davidson Inc
+H1IG34|The Hartford Insurance Group, Inc.
+H1AS34|Hasbro Inc
+H1CA34|HCA Healthcare Inc
+H1DB34|HDFC Bank Ltd
+H2TA34|Healthcare Realty Trust Incorporated
+P1EA34|Healthpeak Properties Inc
+H1EI34|HEICO Corporation
+H1SI34|Henry Schein Inc
+H1PE34|Hewlett Packard Enterprise Co
+H1FC34|HF Sinclair Corporation
+HIWP34|Highwoods Properties Inc
+H1LT34|Hilton Worldwide Holdings Inc
+HOND34|Honda Motor Co Ltd
+H1RL34|Hormel Foods Corp
+H1ST34|Host Hotels & Resorts Inc
+ARNC34|Howmet Aerospace Inc.
+H1SB34|HSBC Holdings PLC
+H2UB34|HubSpot Inc
+H1UM34|Humana Inc
+H1BA34|Huntington Bancshares Inc
+H1II34|Huntington Ingalls Industries Inc
+PPLI34|People Incorporated
+I1BN34|ICICI Bank Ltd
+I1EX34|IDEX Corporation
+I1DX34|IDEXX Laboratories Inc
+I1TW34|Illinois Tool Works Inc
+I1LM34|Illumina Inc
+I1NC34|Incyte Corp
+I2ND34|indie Semiconductor Inc
+I1FO34|Infosys Ltd
+INGG34|ING Groep NV
+I2RS34|Ingersoll Rand Inc
+I2NG34|Ingredion Incorporated
+P2OD34|Insulet Corp
+ITLC34|Intel Corporation
+I1CE34|Intercontinental Exchange Inc
+I1HG34|InterContinental Hotels Group PLC
+I1FF34|International Flavors & Fragrances Inc
+I1PC34|International Paper Co
+INTU34|Intuit Inc
+I1SR34|Intuitive Surgical Inc
+I1VZ34|Invesco Ltd
+I2NV34|Invitation Homes Inc
+I1PG34|IPG Photonics Corp
+I1QY34|iQIYI Inc
+I1QV34|IQVIA Holdings Inc
+I1RM34|Iron Mountain Inc
+J2BL34|Jabil Inc
+J1KH34|Jack Henry & Associates Inc
+J1EG34|Jacobs Solutions Inc.
+J2AZ34|Jazz Pharmaceuticals PLC
+J1BH34|JB Hunt Transport Services Inc
+JDCO34|JD.com Inc
+J1EF34|Jefferies Financial Group Inc
+J2WA34|John Wiley & Sons Inc
+J1CI34|Johnson Controls International plc
+JPMC34|Jpmorgan Chase & Co.
+K1BF34|KB Financial Group Inc
+KMPR34|Kemper Corp
+K1EY34|KeyCorp
+K1SG34|Keysight Technologies Inc
+K2RC34|Kilroy Realty Corp
+K1IM34|Kimco Realty Corporation
+KMIC34|Kinder Morgan Inc
+K2CG34|Kingsoft Cloud Holdings Ltd
+K1LA34|KLA Corp
+K1SS34|Kohls Corp
+PHGN34|Koninklijke Philips NV
+K1RC34|Kroger Co
+K1TC34|KT Corp
+L1HX34|L3Harris Technologies Inc
+L1CA34|Labcorp Holdings Inc.
+L1RC34|Lam Research Corp
+L1WH34|Lamb Weston Holdings Inc
+L1VS34|Las Vegas Sands Corporation
+L2SC34|Lattice Semiconductor Corp
+L1DO34|Leidos Holdings Inc
+L1EN34|Lennar Corp
+L1NC34|Lincoln National Corp
+L2IV34|LivaNova PLC
+L1YV34|Live Nation Entertainment Inc
+L1KQ34|LKQ Corp
+L1YG34|Lloyds Banking Group PLC
+L1OE34|Loews Corp
+LOWC34|Lowes Companies Inc
+L2PL34|LPL Financial Holdings Inc
+L1UL34|Lululemon Athletica Inc
+L1MN34|Lumen Technologies, Inc
+L1YB34|LyondellBasell Industries NV
+M1TB34|M&T Bank Corp
+MACY34|MacyS Inc.
+M1PC34|Marathon Petroleum Corp
+MKLC34|Markel Group Inc
+M1KT34|MarketAxess Holdings Inc
+M1TT34|Marriott International Inc
+M1MC34|Marsh & McLennan Cos Inc
+M1LM34|Martin Marietta Materials Inc
+M2RV34|Marvell Technology Inc
+M1AS34|Masco Corp
+M1TC34|Match Group Inc
+M1KC34|McCormick & Co Inc
+MCDC34|Mcdonalds Corp
+M1CK34|McKesson Corp
+M2PT34|Medical Properties Trust Inc
+MDTC34|Medtronic Public Limited Company
+M1LC34|Melco Resorts & Entertainment Ltd
+MELI34|Mercadolibre Inc
+MRCK34|Merck & Co., Inc.
+M1TA34|Meta Platforms, Inc.
+M1TD34|Mettler-Toledo International Inc
+M1GM34|MGM Resorts International
+M1CH34|Microchip Technology Inc
+MUTC34|Micron Technology Inc
+MSFT34|Microsoft Corporation
+M2ST34|Strategy Inc
+M1AA34|Mid-America Apartment Communities Inc
+M1UF34|Mitsubishi UFJ Financial Group Inc
+M2KS34|MKS Inc.
+M1BT34|Mobile TeleSystems Public Joint Stock Co.
+M1RN34|Moderna Inc
+M1HK34|Mohawk Industries Inc
+M1CB34|Molson Coors Brewing Co
+MDLZ34|Mondelez International, Inc
+M1DB34|MongoDB Inc
+M2PR34|Monolithic Power Systems Inc
+M1NS34|Monster Beverage Corp
+MCOR34|Moodys Corp
+M1SI34|Motorola Solutions Inc
+M2PM34|MP Materials Corp
+M1SC34|MSCI Inc
+N1DA34|Nasdaq Inc
+N1GG34|National Grid PLC
+N1WG34|Natwest Group PLC
+N1TA34|NetApp Inc
+NETE34|NetEase Inc
+NFLX34|Netflix, Inc.
+NTST34|NETSTREIT Corp
+N1BI34|Neurocrine Biosciences Inc
+E1DU34|New Oriental Education & Technology Group Inc
+N1WL34|Newell Brands Inc
+N1EM34|Newmont Corp
+N1WS35|News Corp
+N1WS34|News Corp
+NEXT34|Nextera Energy Inc
+N1IC34|Nice Ltd
+N1IS34|NiSource Inc
+NOKI34|Nokia Corporation
+NMRH34|Nomura Holdings Inc
+N1SC34|Norfolk Southern Corp
+N1TR34|Northern Trust Corp
+NOCG34|Northrop Grumman Corp
+N1CL34|Norwegian Cruise Line Holdings Ltd
+N1OV34|NOV Inc
+N1VS34|Novartis AG
+N1VO34|Novo Nordisk A/S
+N2VC34|Novocure Ltd
+N1RG34|NRG Energy Inc
+N1UE34|Nucor Corp
+N2TN34|Nutanix Inc
+NVDC34|Nvidia Corp
+N1VR34|NVR Inc
+N1XP34|NXP Semiconductors NV
+OXYP34|Occidental Petroleum Corp
+O1KT34|Okta Inc
+O1DF34|Old Dominion Freight Line Inc
+O2HI34|Omega Healthcare Investors Inc
+O1MC34|Omnicom Group Inc
+O2NS34|ON Semiconductor Corp
+O1KE34|ONEOK Inc
+ORLY34|OReilly Automotive Inc
+I1XC34|ORIX Corp
+O1TI34|Otis Worldwide Corporation
+P1AC34|PACCAR Inc
+P1KG34|Packaging Corp of America
+PAGS34|Pagseguro Digital Ltd
+P2LT34|Palantir Technologies Inc
+P2AN34|Palo Alto Networks Inc
+P1HC34|Parker-Hannifin Corp
+P2AX34|Patria Investments Ltd
+P1AY34|Paychex Inc
+P1YC34|Paycom Software Inc
+P2CY34|Paylocity Holding Corp
+PYPL34|Paypal Holdings Inc
+P1DD34|PDD Holdings Inc.
+P2EG34|Pegasystems Inc
+P2EN34|PENN Entertainment Inc
+P1NR34|Pentair PLC
+P2NB34|Penumbra Inc
+P1RG34|Perrigo Co PLC
+PFIZ34|Pfizer Inc.
+PHMO34|Philip Morris International Inc
+P1SX34|Phillips 66
+P1NW34|Pinnacle West Capital Corp
+P2IN34|Pinterest Inc
+P2LN34|Planet Fitness Inc
+PNCS34|PNC Financial Services Group Inc
+P1KX34|POSCO Holdings Inc.
+P2OS34|Post Holdings Inc
+P1PG34|PPG Industries Inc
+P1PL34|PPL Corp
+P1FG34|Principal Financial Group Inc
+P2CO34|Procore Technologies Inc
+PGCO34|Procter & Gamble Company
+P1LD34|Prologis Inc
+P1DT34|Prudential Financial Inc
+P1UK34|Prudential PLC
+T1LK34|PT Telekomunikasi Indonesia Persero Tbk
+P2TC34|PTC Inc
+P1EG34|Public Service Enterprise Group Inc
+P1SA34|Public Storage
+P1HM34|PulteGroup Inc
+P2ST34|Everpure, Inc
+P1VH34|PVH Corp
+QCOM34|Qualcomm Inc.
+Q1UA34|Quanta Services Inc
+Q2SC34|QuantumScape Corp
+Q1UE34|Quest Diagnostics Inc
+R1LC34|Ralph Lauren Corp
+R2PD34|Rapid7 Inc
+R1JF34|Raymond James Financial Inc
+R1IN34|Realty Income Corp
+R2RX34|Regal Rexnord Corp
+R1EG34|Regency Centers Corp
+REGN34|Regeneron Pharmaceuticals Inc
+R1FC34|Regions Financial Corp
+R1EL34|RELX PLC
+R2GE34|Repligen Corp
+R1SG34|Republic Services Inc
+R1MD34|ResMed Inc
+R1VT34|Revvity, Inc
+R2HH34|RH
+R2NG34|RingCentral Inc
+RIOT34|Rio Tinto PLC
+R1HI34|Robert Half Inc.
+R2BL34|Roblox Corporation
+R1OK34|Rockwell Automation Inc
+R1KU34|Roku Inc
+R1OL34|Rollins Inc
+R1OP34|Roper Technologies Inc
+ROST34|Ross Stores, Inc.
+R1CL34|Royal Caribbean Group
+R1YA34|Ryanair Holdings PLC
+SPGI34|S&P Global Inc
+SSFO34|Salesforce, Inc.
+SAPP34|SAP SE
+S1RP34|Sarepta Therapeutics Inc
+S1BA34|SBA Communications Corp
+S2EA34|Sea Ltd
+S1TX34|Seagate Technology Holdings Plc
+S2EI34|SEI Investments Co
+S1RE34|Sempra
+N1OW34|ServiceNow Inc
+S2HO34|Shopify Inc
+S1BS34|Sibanye Stillwater Ltd
+S2GM34|Sigma Lithium Corp
+S2LA34|Silicon Laboratories Inc
+SIMN34|Simon Property Group Inc
+S2MP34|Simply Good Foods Co/The
+S1KM34|SK Telecom Co Ltd
+S1SL34|Skyworks Solutions Inc
+S1LG34|SL Green Realty Corp
+S1NN34|Smith & Nephew PLC
+S2NA34|Snap Inc
+S1NA34|Snap-on Inc
+S2NW34|Snowflake Inc
+S2CH34|Sociedad Quimica y Minera de Chile SA
+S2ED34|SolarEdge Technologies Inc
+SNEC34|Sony Group Corporation
+S1OU34|Southwest Airlines Co
+S1PO34|Spotify Technology SA
+S2FM34|Sprouts Farmers Market Inc
+S1SN34|SS&C Technologies Holdings Inc
+S2TA34|STAG Industrial Inc
+S1WK34|Stanley Black & Decker Inc
+S2TW34|Starwood Property Trust Inc
+S1TT34|State Street Corp
+S1TE34|STERIS PLC
+STMN34|STMicroelectronics NV
+L2RN34|Stride Inc
+S1YK34|Stryker Corp
+S1MF34|Sumitomo Mitsui Financial Group Inc
+S2UI34|Sun Communities Inc
+S2YN34|Synaptics Inc
+S1YF34|Synchrony Financial
+S1NP34|Synopsys Inc
+S1YY34|Sysco Corp
+T1RO34|T Rowe Price Group Inc
+T1MU34|T-Mobile US Inc
+TSMC34|Taiwan Semiconductor Manufacturing Co Ltd
+T1TW34|Take-Two Interactive Software Inc
+TAKP34|Takeda Pharmaceutical Co Ltd
+T1AL34|TAL Education Group
+T2ND34|Tandem Diabetes Care Inc
+TPRY34|Tapestry Inc
+T1EL34|TE Connectivity plc
+T1EC34|TechnipFMC PLC
+T2DH34|Teladoc Health Inc
+T1FX34|Teleflex Inc
+S2GI34|Somnigroup International Inc
+T1SS34|Tenaris SA
+T2ER34|Teradyne Inc
+TXSA34|Ternium SA
+TSLA34|Tesla, Inc
+T1EV34|Teva Pharmaceutical Industries Ltd
+T1XT34|Textron Inc
+SCHW34|The Charles Schwab Corporation
+C1IC34|The Cigna Group
+GPSI34|The Gap, Inc.
+H2AI34|The Hain Celestial Group Inc
+HSHY34|The Hershey Company
+HOME34|The Home Depot, Inc.
+S1JM34|The JM Smucker Co
+MOSC34|The Mosaic Company
+P1GR34|The Progressive Corp
+S1HW34|The Sherwin-Williams Co
+T1SO34|The Southern Co
+T2TD34|The Trade Desk Inc
+TRVC34|The Travelers Companies, Inc
+WUNI34|The Western Union Company
+W1MB34|The Williams Cos Inc
+TMOS34|Thermo Fisher Scientific, Inc.
+TJXC34|TJX Companies Inc
+TMCO34|Toyota Motor Corp.
+T1SC34|Tractor Supply Co
+I1RP34|Trane Technologies Plc
+T1DG34|TransDigm Group Inc
+RIGG34|Transocean Ltd.
+T2RE34|Trex Co Inc
+T2RM34|Trimble Inc
+CRIP34|Trip.com Group Limited
+T1RI34|TripAdvisor Inc
+B1BT34|Truist Financial Corporation
+T1WL34|Twilio Inc
+T2YL34|Tyler Technologies Inc
+TSNF34|Tyson Foods Inc
+U1BE34|Uber Technologies Inc
+UBSG34|Ubs Group Ag
+U1DR34|UDR Inc
+P2AT34|UiPath Inc
+U1LT34|Ulta Beauty Inc
+R2AR34|Ultragenyx Pharmaceutical Inc
+U1AI34|Under Armour Inc
+ULEV34|Unilever PLC
+UPAC34|Union Pacific Corporation
+U1AL34|United Airlines Holdings Inc
+U2NF34|United Natural Foods Inc
+UPSS34|United Parcel Service, Inc.
+U1RI34|United Rentals Inc
+U2TH34|United Therapeutics Corp
+UNHH34|Unitedhealth Group Inc
+U2ST34|Unity Software Inc
+O2LE34|Universal Display Corp
+U1HS34|Universal Health Services Inc
+U1NM34|Unum Group
+U2PS34|Upstart Holdings Inc
+U2PW34|Upwork Inc
+MMMC34|3M Company
+VLOE34|Valero Energy Corporation
+VLYB34|Valley National Bancorp
+V2RN34|Varonis Systems Inc
+V2EE34|Veeva Systems Inc
+V1TA34|Ventas Inc
+VRSN34|Verisign Inc
+V1RS34|Verisk Analytics Inc
+VERZ34|Verizon Communications Inc.
+VRTX34|Vertex Pharmaceuticals Inc
+VFCO34|VF Corp
+V1IP34|Vipshop Holdings Ltd
+V1OD34|Vodafone Group Public LTD Company
+V1NO34|Vornado Realty Trust
+V2TX34|VTEX
+V1MC34|Vulcan Materials Co
+W1AB34|Wabtec Corp
+WALM34|Walmart Inc.
+W1MG34|Warner Music Group Corporation
+W1MC34|Waste Management Inc
+WATC34|Waters Corp
+W1SO34|Watsco Inc
+W2YF34|Wayfair Inc
+W1EC34|WEC Energy Group Inc
+W1BO34|Weibo Corp
+WFCO34|Wells Fargo Company
+W1EL34|Welltower Inc
+W2ST34|West Pharmaceutical Services Inc
+WABC34|Western Alliance Bancorporation
+W1DC34|Western Digital Corp
+W2EX34|WEX Inc
+W1YC34|Weyerhaeuser Co
+W1HR34|Whirlpool Corp
+W1LT34|Willis Towers Watson PLC
+W1IX34|Wix.com Ltd
+W1DA34|Workday Inc
+W1PP34|WPP PLC
+W1RB34|WR Berkley Corporation
+G1WW34|WW Grainger Inc
+W1YN34|Wynn Resorts Ltd
+X1EL34|Xcel Energy Inc
+X1YL34|Xylem Inc
+Y2PF34|YPF SA
+YUMR34|Yum Brands Inc
+Z1BR34|Zebra Technologies Corporation
+Z2DV34|Ziff Davis Inc
+Z2LL35|Zillow Group Inc
+Z2LL34|Zillow Group Inc
+Z1BH34|Zimmer Biomet Holdings Inc
+Z1IO34|Zions Bancorporation NA
+Z1TS34|Zoetis Inc
+Z1OM34|Zoom Communications Inc
+Z2IT34|ZoomInfo Technologies Inc
+Z2SC34|Zscaler Inc
+Z1TO34|ZTO Express Cayman Inc
+F1UN34|Six Flags Entertainment Corp
+G1LO34|Globant SA
+G2EV34|GE Vernova Inc
+GEHC34|GE HealthCare Technologies Inc
+A1DC34|Agree Realty Corp
+A1HR34|American Healthcare REIT Inc
+A1PL34|Applied Digital Corp
+C1DP34|COPT Defense Properties
+H1HH34|Howard Hughes Holdings Inc
+K1RG34|Kite Realty Group Trust
+L1AM34|Lamar Advertising Co
+L1NE34|Lineage Inc
+N1MR34|Newmark Group Inc
+O1UT34|Outfront Media Inc
+R1HP34|Ryman Hospitality Properties Inc
+S1KT34|Tanger Inc
+U1MH34|UMH Properties Inc
+A1PO34|Apollo Global Management Inc
+A1PP34|AppLovin Corp
+BHVN34|Biohaven Ltd
+C1CJ34|Cameco Corp
+DUOL34|Duolingo Inc
+ICLR34|ICON PLC
+QUBT34|Quantum Computing Inc
+RGTI34|Rigetti Computing Inc
+V1RT34|Vertiv Holdings Co
+V1ST34|Vistra Corp
+IBKR34|Interactive Brokers Group Inc
+MNDY34|Monday.com Ltd
+S1AK34|Shake Shack Inc
+TOST34|Toast Inc
+Z1TA34|Zeta Global Holdings Corp
+B1ZE34|Braze Inc
+K1YS34|Krystal Biotech Inc
+L1TM34|LATAM Airlines Group S.A.
+SPCX34|Space Exploration Technologies Corp
+C1RB34|Cerebras Systems Inc
+GGAL34|Grupo Financiero Galicia SA
+SCCO34|Southern Copper Corp
+SKHY34|SK Hynix Inc
+CEGG34|Constellation Energy Corp
+A1RC34|Arcos Dorados Holdings Inc
+ABTT34|Abbott Laboratories
+ABBV34|Abbvie Inc.
+A2SO34|Academy Sports & Outdoors Inc
+ADBE34|Adobe Inc
+A1AP34|Advance Auto Parts Inc
+A1MD34|Advanced Micro Devices Inc
+A1EG34|Aegon Ltd.
+A1ES34|AES Corp
+A1FL34|Aflac Inc
+A2FY34|Afya Ltd
+A1GI34|Agilent Technologies Inc
+A1PD34|Air Products & Chemicals Inc
+AIRB34|Airbnb Inc
+A1KA34|Akamai Technologies Inc
+A1LK34|Alaska Air Group Inc
+A1LB34|Albemarle Corp
+A2LC34|Alcon Inc
+A1RE34|Alexandria Real Estate Equities Inc
+BABA34|Alibaba Group Holding Ltd
+A1LG34|Align Technology Inc
+A1GN34|Allegion PLC
+A1EN34|Alliant Energy Corp
+A1TT34|Allstate Corp
+A1LN34|Alnylam Pharmaceuticals Inc
+GOGL34|Alphabet Inc.
+GOGL35|Alphabet Inc. (Class C)
+MOOO34|Altria Group, Inc.
+A2MB34|Ambarella Inc
+A1CR34|Amcor PLC
+D2OX34|Amdocs Ltd
+A1EE34|Ameren Corp
+AALL34|American Airlines Group Inc.
+A1EP34|American Electric Power Co Inc
+T1OW34|American Tower Corp
+A1WK34|American Water Works Co Inc
+COLD34|Americold Realty Trust Inc
+A1MP34|Ameriprise Financial Inc
+A1ME34|AMETEK Inc
+AMGN34|Amgen Inc.
+A1PH34|Amphenol Corp
+A1DI34|Analog Devices Inc
+ABUD34|Anheuser-Busch InBev SA/NV
+N2LY34|Annaly Capital Management Inc
+A1OS34|AO Smith Corp
+A1ON34|Aon PLC
+A1PA34|APA CORP
+A1IV34|Apartment Investment & Management Co
+AAPL34|Apple Inc.
+A1MT34|Applied Materials Inc
+APTV34|Aptiv Plc
+ARMT34|Arcelormittal
+A1DM34|Archer-Daniels-Midland Co
+A2RE34|Ares Management Corp
+A1RG34|Argenx SE
+A1NE34|Arista Networks Inc
+AWII34|Armstrong World Industries Inc
+A2RW34|Arrow Electronics Inc
+A2RR34|Arrowhead Pharmaceuticals Inc
+A1JG34|Arthur J Gallagher & Co
+A1SN34|Ascendis Pharma A/S
+ASML34|ASML Holding NV
+A1SU34|Assurant Inc
+AMLG34|Aston Martin Lagonda Global Holdings PLC
+A1ZN34|AstraZeneca PLC
+T1AM34|Atlassian Corporation PLC
+A1TM34|Atmos Energy Corp
+A1UT34|Autodesk Inc
+A1TH34|Autohome Inc
+ADPR34|Automatic Data Processing Inc
+AZOI34|Autozone Inc
+A1VY34|Avery Dennison Corp
+A2XO34|Axon Enterprise Inc
+A2ZT34|Azenta Inc
+BIDU34|Baidu Inc
+B1KR34|Baker Hughes Co
+B1LL34|Ball Corp
+BILB34|Banco Bilbao Vizcaya Argentaria SA
+B1SA34|Banco Santander Chile
+BCSA34|Banco Santander SA
+C2OL34|Grupo Cibest S.A
+BOAC34|Bank Of America Corporation
+B1CS34|Barclays PLC
+B1BW34|Bath & Body Works, Inc.
+B1AX34|Baxter International Inc
+B1DX34|Becton Dickinson and Co
+B1ME34|BeOne Medicines Ltd
+BBYY34|Best Buy Co., Inc.
+B2YN34|Beyond Meat Inc
+B1IL34|Bilibili Inc
+B2HI34|BILL Holdings, Inc.
+T1CH34|Bio-Techne Corporation
+BIIB34|Biogen Inc.
+B1MR34|BioMarin Pharmaceutical Inc
+B1NT34|BioNTech SE
+B2LN34|Blackline Inc
+BLAK34|Blackrock, Inc.
+X1YZ34|Block, Inc.
+BKNG34|Booking Holdings Inc
+B2AH34|Booz Allen Hamilton Holding Corp
+B1WA34|BorgWarner Inc
+BOXP34|BXP, Inc
+B1SX34|Boston Scientific Corp
+B1PP34|BP PLC
+A1LL34|Bread Financial Holdings, Inc.
+B1TI34|British American Tobacco PLC
+AVGO34|Broadcom Inc
+B1RF34|Broadridge Financial Solutions Inc
+B1AM34|Brookfield Corporation
+B1FC34|Brown Forman Corp
+B2RK34|Bruker Corp
+B2MB34|Bumble Inc
+B2UR34|Burlington Stores Inc
+C1AB34|Cable One Inc
+C2AC34|CACI International Inc
+C1DN34|Cadence Design Systems Inc
+C2ZR34|Caesars Entertainment Inc
+C2PT34|Camden Property Trust
+C1PB34|The Campbell’s Company
+CNIC34|Canadian National Railway Co
+CPRL34|Canadian Pacific Kansas City Limited
+CAON34|Capital One Financial Corp
+CAPH34|Capri Holdings Ltd
+C1AH34|Cardinal Health Inc
+K1MX34|CarMax Inc
+C1CL34|Carnival Corporation Ltd
+C1RR34|Carrier Global Corporation
+CRIN34|Carters Inc
+C1BO34|Cboe Global Markets Inc
+C1BR34|CBRE Group Inc
+C1DW34|CDW Corporation
+C1NS34|Celanese Corp
+C2EM34|Cemex SAB de CV
+C1CO34|Cencora Inc
+C1NC34|Centene Corp
+C1NP34|CenterPoint Energy Inc
+C2RN34|Cerence Inc
+C1FI34|CF Industries Holdings Inc
+C1HR34|CH Robinson Worldwide Inc
+C2HP34|ChargePoint Holdings Inc
+CHCM34|Charter Communications Inc
+C1HK34|Check Point Software Technologies Ltd
+C1MG34|Chipotle Mexican Grill Inc
+C1BL34|Chubb Ltd
+C1HT34|Chunghwa Telecom Co Ltd
+CHDC34|Church & Dwight Co Inc
+C2HD34|Churchill Downs Inc
+CINF34|Cincinnati Financial Corp
+C1TA34|Cintas Corp
+CSCO34|Cisco Systems, Inc.
+CTGP34|Citigroup Inc.
+C1FG34|Citizens Financial Group Inc
+CLXC34|Clorox Company
+N2ET34|Cloudflare Inc
+CHME34|CME Group Inc.
+C1MS34|CMS Energy Corp
+C2CA34|Coca-Cola Femsa SAB de CV
+C2GN34|Cognex Corp
+CTSH34|Cognizant Technology Solutions
+C2OI34|Coinbase Global Inc
+C2SW34|Columbia Sportswear Co
+CMCS34|Comcast Corporation
+C1AG34|Conagra Brands Inc
+COPH34|Conocophillips
+E1DI34|Consolidated Edison Inc
+STZB34|Constellation Brands Inc
+C1OO34|Cooper Companies Inc
+C1PR34|Copart Inc
+G1LW34|Corning Inc
+CPAY34|Corpay Inc.
+C1TV34|Corteva Inc
+C1GP34|CoStar Group Inc
+COWC34|Costco Wholesale Corporation
+COTY34|Coty, Inc.
+C2OU34|Coursera Inc
+C2PR34|Cousins Properties Inc
+B2AP34|Credicorp Ltd
+CRDA34|Credit Acceptance Corp
+C1RH34|CRH PLC
+C2RS34|CRISPR Therapeutics AG
+C2RW34|Crowdstrike Holdings Inc
+C1CI34|Crown Castle Inc.
+CSXC34|CSX Corp
+C1MI34|Cummins Inc
+CVSH34|Cvs Health Corporation
+DHER34|Danaher Corporation
+D1RI34|Darden Restaurants Inc
+D2AR34|Darling Ingredients Inc
+D1DG34|Datadog Inc
+DVAI34|Davita Inc
+DEEC34|Deere & Co
+D1EL34|Dell Technologies Inc
+DEAI34|Delta Air Lines, Inc.
+D2NL34|Denali Therapeutics Inc
+XRAY34|Dentsply Sirona Inc
+DBAG34|Deutsche Bank Aktiengesellschaft
+D1VN34|Devon Energy Corp
+D1EX34|DexCom Inc
+DEOP34|Diageo PLC
+F1AN34|Diamondback Energy Inc
+D2KS34|Dicks Sporting Goods Inc
+D1LR34|Digital Realty Trust Inc
+D1OC34|DocuSign Inc
+DGCO34|Dollar General Corp
+DLTR34|Dollar Tree Inc
+D1OM34|Dominion Energy Inc
+D2PZ34|Domino s Pizza Inc
+D2AS34|DoorDash Inc
+D1OV34|Dover Corp
+D1OW34|Dow Inc
+D2OC34|Doximity Inc
+D1HI34|DR Horton Inc
+R1DY34|Dr Reddys Laboratories Ltd
+D2KN34|DraftKings Inc
+D1TE34|DTE Energy Co
+D1XC34|DXC Technology Co
+D2TC34|Dynatrace Inc
+E2AG34|Eagle Materials Inc
+E1MN34|Eastman Chemical Co
+E1TN34|Eaton Corp PLC
+EBAY34|Ebay Inc.
+E1CL34|Ecolab Inc
+E1CO34|Ecopetrol SA
+E1IX34|Edison International
+E1WL34|Edwards Lifesciences Corp
+E2ST34|Elastic NV
+E1LV34|Elevance Health, Inc.
+LILY34|Eli Lilly And Company
+E1MR34|Emerson Electric Co
+E2NO34|Enovis Corporation
+E2NP34|Enphase Energy Inc
+E2NT34|Entegris Inc
+E1TR34|Entergy Corp
+E1OG34|EOG Resources Inc
+E2PA34|EPAM Systems Inc
+EQIX34|Equinix Inc
+E1QN34|Equinor ASA
+E2LS34|Equity LifeStyle Properties Inc
+VMRK34|Vivmark Residential
+E1RI34|Ericsson LM Telephone Co
+E1SS34|Essex Property Trust Inc
+ELCI34|Estee Lauder Companies Inc
+E2TS34|Etsy Inc
+E2EF34|Euronet Worldwide Inc
+E1VE34|Everest Group Ltd
+E1VR34|Evergy Inc
+E1SE34|Eversource Energy
+E2XA34|Exact Sciences Corp
+E2XE34|Exelixis Inc
+E1XC34|Exelon Corp
+A1GT34|AGNT, INC
+EXGR34|Expedia Group Inc
+E1XP34|Expeditors International of Washington Inc
+E1XR34|Extra Space Storage Inc
+EXXO34|ExxonMobil Holdings Corporation
+F1FI34|F5, Inc.
+F2IC34|Fair Isaac Corp
+FASL34|Fastenal Co
+F1SL34|Fastly Inc
+F1NI34|Fidelity National Information Services Inc
+FFTD34|Fifth Third Bancorp
+F2RT34|First Industrial Realty Trust Inc
+FSLR34|First Solar, Inc
+F1EC34|FirstEnergy Corp
+F1IS34|Fiserv Inc
+F2IV34|Five9 Inc
+F2VR34|Fiverr International Ltd
+F1LS34|Flowserve Corp
+F1MC34|FMC Corp
+FDMO34|Ford Motors Company
+F1TN34|Fortinet Inc
+F1TV34|Fortive Corp
+F1BH34|Fortune Brands Innovations, Inc.
+FOXC34|Fox Corporation
+F2NV34|Franco-Nevada Corp
+F1RA34|Franklin Templeton Inc
+FCXO34|Freeport-McMoran Inc.
+FMSC34|Fresenius Medical Care AG
+F2RS34|Freshworks Inc
+LKFT34|Lakefront  Biotherapeutics NV
+G1AM34|Gaming and Leisure Properties Inc
+G1RM34|Garmin Ltd
+G1AR34|Gartner Inc
+G1DS34|GDS Holdings Ltd
+GEOO34|GE Aerospace
+S1YM34|Gen Digital Inc.
+G1MI34|General Mills Inc
+GMCO34|General Motors Company
+G2NT34|Gentex Corp
+G1PC34|Genuine Parts Co
+GPRK34|Geopark Ltd
+GILD34|Gilead Sciences, Inc.
+G1PI34|Global Payments Inc
+G1LL34|Globe Life Inc
+G2ME34|Globus Medical Inc
+G2DD34|GoDaddy Inc
+G1FI34|Gold Fields Ltd
+GSGI34|Goldman Sachs Group Inc.
+GPRO34|Gopro, Inc.
+P2CF34|Grupo Aeroportuario del Pacifico SAB de CV
+S2RE34|Grupo Aeroportuario del Sureste SAB de CV
+G1SK34|GSK PLC.
+G2WR34|Guidewire Software Inc
+H1TH34|H World Group Limited
+H1RB34|H&R Block Inc
+HALI34|Halliburton Company
+SK1D34|Skydance Corporation
+ETF
+BIGL39|iShares 10+ Year Investm Grade Corporate Bond ETF
+BTLH39|iShares 10-20 Year Treasury Bond ETF
+BGOZ39|Ishares 25+ Year Treasury STRIPS Bond ETF
+BIAG39|iShares Core International Aggregate Bond ETF
+BIXU39|iShares Core MSCI Total International Stock ETF
+BGLC39|iShares Global 100 ETF
+BIGO39|iShares International Treasury Bond ETF
+BECH39|iShares MSCI Chile ETF
+BEUW39|iShares MSCI USA Equal Weighted ETF
+BIAT39|iShares U.S. Regional Banks ETF
+BKBA39|KraneShares Bosera MSCI China A 50 Connect Idx ETF
+BKWB39|KraneShares CSI China Internet ETF
+ETHA39|iShares Ethereum Trust ETF
+TBIL39|Global X 1-3 Month T-Bill ETF
+BFEM39|First Trust Emerging Markets AlphaDEX Fund
+BFIW39|First Trust Water ETF
+BFTG39|First Trust Growth Strength ETF
+BGRI39|First Trust NASDAQ CleanEdge Smart Grid Infra Fund
+BROB39|First Trust Nasdaq AI and Robotics ETF
+BSDY39|First Trust SMID Cap Rising Dividend Achievers ETF
+BAIR39|First Trust RBA American Indl Renaissance ETF
+ARGT39|Global X MSCI Argentina ETF
+RSSL39|Global X Russell 2000 ETF
+DTCR39|Global X Data Center & Digital Infrastructure ETF
+G1TR39|abrdn Physical Precious Metals Basket Shares ETF
+TOPB39|iShares Top 20 US Stocks ETF
+BEWS39|iShares MSCI Singapore ETF
+BIAK39|iShares U.S. Insurance ETF
+BEWD39|iShares MSCI Sweden ETF
+BIEZ39|iShares U.S. Oil Equipment & Services ETF
+BEWI39|iShares MSCI Italy ETF
+EIDO39|iShares MSCI Indonesia ETF
+BIYZ39|iShares U.S. Telecommunications ETF
+BEWM39|iShares MSCI Malaysia ETF
+BIWD39|iShares Russell 1000 Value ETF
+QTOP39|iShares Nasdaq Top 30 Stocks ETF
+BEWN39|iShares MSCI Netherlands ETF
+EDEN39|iShares MSCI Denmark ETF
+BIJT39|iShares S&P Small-Cap 600 Growth ETF
+BEWO39|iShares MSCI Austria ETF
+BUAE39|iShares MSCI UAE ETF
+BEZA39|iShares MSCI South Africa ETF
+BGAR39|iShares MSCI USA Quality GARP ETF
+BIAI39|iShares US BrokerDealer & Securities Exchanges ETF
+BEIS39|iShares MSCI Israel ETF
+TURK39|iShares MSCI Turkey ETF
+EWJV39|iShares MSCI Japan Value ETF
+ACWX39|iShares MSCI ACWI ex U.S. ETF
+SMIN39|iShares MSCI India Small-Cap ETF
+USIG39|iShares Broad USD Investment Grade Corp Bond ETF
+EPHE39|iShares MSCI Philippines ETF
+EPOL39|iShares MSCI Poland ETF
+BEPU39|iShares MSCI Peru and Global Exposure ETF
+BTHD39|iShares MSCI Thailand ETF
+CBTC39|21Shares Bitcoin Core ETP
+AETH39|21Shares Ethereum Staking ETP
+SOLN39|21Shares Solana Staking ETP
+AXRP39|21Shares XRP ETP
+AADA39|21Shares Cardano ETP
+BASK39|21Shares Crypto Basket Index ETP
+BTCV39|Valour Bitcoin (BTC) Zero SEK
+ETHV39|Valour Ethereum (ETH) Zero SEK
+XRPV39|Valour Ripple (XRP) SEK
+VSOL39|Valour Solana (SOL) SEK
+VSUI39|Valour SUI (SUI) SEK
+JEPI39|JPMorgan Equity Premium Income ETF
+COLO39|Global X MSCI Colombia ETF
+SHLD39|Global X Defense Tech ETF
+GOEX39|Global X Gold Explorers ETF
+JTEK39|JPMorgan US Tech Leaders ETF
+EZBC39|Franklin Bitcoin ETF
+EZET39|Franklin Ethereum ETF
+FTIN39|Franklin FTSE India ETF
+FLTW39|Franklin FTSE Taiwan ETF
+USPX39|Franklin U.S. Equity Index ETF
+CHPX39|Global X AI Semiconductor & Quantum ETF
+EART39|Global X Rare Earth & Critical Materials ETF
+ORBX39|Global X Space Tech ETF
+JPHY39|JPMorgan Active High Yield ETF
+JPIE39|JPMorgan Income ETF
+JPST39|JPMorgan Ultra-Short Income ETF
+JUSG39|JPMorgan Active Growth ETF
+JEMA39|JPMorgan ActiveBuilders Emerging Markets Equity ETF
+JGLO39|JPMorgan Global Select Equity ETF
+JIVE39|JPMorgan International Value ETF
+ABGD39|abrdn Physical Gold Shares ETF
+SIVR39|abrdn Physical Silver Shares ETF
+BFTS39|First Trust Capital Strength ETF
+BKYY39|First Trust Cloud Computing ETF
+BFDN39|First Trust Dow Jones Internet Index Fund
+BFXH39|First Trust Health Care AlphaDEX Fund
+BFPI39|First Trust International Equity Opportunities ETF
+BFTC39|First Trust Large Cap Growth AlphaDEX Fund
+BFDL39|First Trust Morningstar Dividend Leaders Index
+BQCL39|First Trust Nasdaq Clean Edge Green Energy Index
+BCIR39|First Trust Nasdaq Cybersecurity ETF
+BQQW39|First Trust Nasdaq-100 Select Equal Weight ETF
+BQTC39|First Trust NASDAQ-100-Technology Sector Index
+BFCG39|First Trust Natural Gas ETF
+BFBI39|First Trust NYSE Arca Biotechnology Index Fund
+BFDA39|First Trust Rising Dividend Achievers ETF
+BFTA39|First Trust Technology AlphaDEX Fund
+BFPX39|First Trust US Equity Opportunities ETF
+BFVD39|First Trust Value Line Dividend Index Fund
+BAIQ39|Global X Artificial Intelligence & Technology ETF
+BDRI39|Global X Autonomous & Electric Vehicles ETF
+BKCH39|Global X Blockchain ETF
+BCTE39|Global X ClimateTech ETF
+BCLO39|Global X Cloud Computing ETF
+BCPX39|Global X Copper Miners ETF
+BBUG39|Global X Cybersecurity ETF
+BFNX39|Global X FinTech ETF
+BGNO39|Global X Genomics & Biotechnology ETF
+BSNS39|Global X Internet of Things ETF
+BLBT39|Global X Lithium & Battery Tech ETF
+BMIL39|Global X Millennial Consumer ETF
+BLPX39|Global X MLP & Energy Infrastructure ETF
+BLPA39|Global X MLP ETF
+BCHQ39|Global X MSCI China Consumer Discretionary ETF
+BQYL39|Global X Nasdaq 100 Covered Call ETF
+BOTZ39|Global X Robotics & Artificial Intelligence ETF
+BCAT39|Global X S&P 500 Catholic Values ETF
+BSIL39|Global X Silver Miners ETF
+BSOC39|Global X Social Media ETF
+BSDV39|Global X SuperDividend ETF
+BSRE39|Global X SuperDividend REIT ETF
+BDVD39|Global X SuperDividend US ETF
+BURA39|Global X Uranium ETF
+BPVE39|Global X US Infrastructure Development ETF
+BPFR39|Global X US Preferred ETF
+BPFV39|Global X Variable Rate Preferred ETF
+BHER39|Global X Video Games & Esports ETF
+DOLL39|iShares 0-3 Month Treasury Bond ETF
+BHYC39|iShares 0-5 Year High Yield Corporate Bond ETF
+BSTI39|iShares 0-5 Year TIPS Bond ETF
+BSHY39|iShares 1-3 Year Treasury Bond ETF
+BIGS39|iShares 1-5 Year Investm Grade Corporate Bond ETF
+BTLT39|iShares 20 Year Treasury Bond ETF
+BIEI39|iShares 3-7 Year Treasury Bond ETF
+BIYT39|iShares 7-10 Year Treasury Bond ETF
+BQLT39|iShares Aaa - A Rated Corporate Bond ETF
+BIBB39|iShares Biotechnology ETF
+IBIT39|iShares Bitcoin Trust
+BFXI39|iShares China Large-Cap ETF
+BICV39|iShares Convertible Bond ETF
+BAOA39|iShares Core 80/20 Aggressive Allocation ETF
+BAOK39|iShares Core 30/70 Conservative Allocation ETF
+BGWH39|iShares Core Dividend Growth ETF
+BAOR39|iShares Core 60/40 Balanced Allocation ETF
+BHDV39|iShares Core High Dividend ETF
+BAOM39|iShares Core 40/60 Moderate Allocation ETF
+BIEF39|iShares Core MSCI EAFE ETF
+BIEM39|iShares Core MSCI Emerging Markets ETF
+BIEU39|iShares Core MSCI Europe ETF
+BIPC39|iShares Core MSCI Pacific ETF
+BIVB39|iShares Core S&P 500 ETF
+BIJH39|iShares Core S&P Mid-Cap ETF
+BIJR39|iShares Core S&P Small-Cap ETF
+BITO39|iShares Core S&P Total US Stock Market ETF
+BIUS39|iShares Core Universal USD Bond ETF
+BAGG39|iShares Core U.S. Aggregate Bond ETF
+BUSR39|iShares Core US REIT ETF
+BHEF39|iShares Currency Hedged MSCI EAFE ETF
+BHEZ39|iShares Currency Hedged MSCI Eurozone ETF
+BHEW39|iShares Currency Hedged MSCI Japan ETF
+BIHA39|iShares Cybersecurity and Tech ETF
+BDVE39|iShares Emerging Markets Dividend ETF
+BEGD39|iShares ESG Aware MSCI EAFE ETF
+BEGE39|iShares ESG Aware MSCI EM ETF
+BEGU39|iShares ESG Aware MSCI USA ETF
+BEAG39|iShares ESG Aware US Aggregate Bond ETF
+BSUC39|iShares ESG Aware USD Corporate Bond ETF
+BSUS39|iShares ESG MSCI USA Leaders ETF
+BIEV39|iShares Europe ETF
+BIET39|iShares Expanded Tech-Software Sector ETF
+BXTC39|iShares Future Exponential Technologies ETF
+BFAL39|iShares Fallen Angels USD Bond ETF
+BFLO39|iShares Floating Rate Bond ETF
+BIDN39|iShares Genomics Immunology and Healthcare ETF
+BICL39|iShares Global Clean Energy ETF
+BKXI39|iShares Global Consumer Staples ETF
+BIXC39|iShares Global Energy ETF
+BIXG39|iShares Global Financials ETF
+BIXJ39|iShares Global Healthcare ETF
+BIGF39|iShares Global Infrastructure ETF
+BGRT39|iShares Global REIT ETF
+BIXN39|iShares Global Tech ETF
+BIAU39|iShares Gold Trust
+BCOM39|iShares GSCI Commodity Dynamic Roll Strategy ETF
+BHYG39|iShares iBoxx High Yield Corporate Bond ETF
+BLQD39|iShares iBoxx Investment Grade Corporate Bond ETF
+BIDV39|iShares International Select Dividend ETF
+BILF39|iShares Latin America 40 ETF
+BMBB39|iShares MBS ETF
+BMRE39|iShares Mortgage Real Estate ETF
+BACW39|iShares MSCI ACWI ETF
+BCRB39|iShares Low Carbon Optimized MSCI ACWI ETF
+BVEG39|iShares MSCI Agriculture Producers ETF
+BAAX39|iShares MSCI All Country Asia ex Japan ETF
+BEWA39|iShares MSCI Australia ETF
+BEWZ39|iShares MSCI Brazil ETF
+BEWC39|iShares MSCI Canada ETF
+BCNY39|iShares MSCI China A ETF
+BCHI39|iShares MSCI China ETF
+BEFA39|iShares MSCI EAFE ETF
+BEFG39|iShares MSCI EAFE Growth ETF
+BFAV39|iShares MSCI EAFE Min Vol Factor ETF
+BSCZ39|iShares MSCI EAFE Small-Cap ETF
+BEFV39|iShares MSCI EAFE Value ETF
+BEEM39|iShares MSCI Emerging Markets ETF
+BEMC39|iShares MSCI Emerging Markets ex China ETF
+BEMV39|iShares MSCI Emerging Markets Min Vol Factor ETF
+BEUF39|iShares MSCI Europe Financials ETF
+BEZU39|iShares MSCI Eurozone ETF
+BEWQ39|iShares MSCI France ETF
+BEWG39|iShares MSCI Germany ETF
+BPIC39|iShares MSCI Global Metals & Mining Producers ETF
+BCWV39|iShares MSCI Global Min Vol Factor ETF
+BSDG39|iShares MSCI Global Sustainable Develop Goals ETF
+BEWH39|iShares MSCI Hong Kong ETF
+BNDA39|iShares MSCI India ETF
+BEWJ39|iShares MSCI Japan ETF
+BEWW39|iShares MSCI Mexico ETF
+BEPP39|iShares MSCI Pacific ex Japan ETF
+BERU39|iShares MSCI Russia ETF
+BKSA39|iShares MSCI Saudi Arabia ETF
+BEWY39|iShares MSCI South Korea ETF
+BEWP39|iShares MSCI Spain ETF
+BEWL39|iShares MSCI Switzerland ETF
+BEWT39|iShares MSCI Taiwan ETF
+BEWU39|iShares MSCI United Kingdom ETF
+BUSA39|iShares ESG Optimized MSCI USA ETF
+BUSM39|iShares MSCI USA Min Vol Factor ETF
+BMTU39|iShares MSCI USA Momentum Factor ETF
+BQUA39|iShares MSCI USA Quality Factor ETF
+BSIZ39|iShares MSCI USA Size Factor ETF
+BVLU39|iShares MSCI USA Value Factor ETF
+BURT39|iShares MSCI World ETF
+BIGE39|iShares North American Natural Resources ETF
+BREZ39|iShares Residential Multisector Real Estate ETF
+BARY39|iShares Future AI & Tech ETF
+BIWF39|iShares Russell 1000 Growth ETF
+BIWM39|iShares Russell 2000 ETF
+BOEF39|iShares S&P 100 ETF
+BIVW39|iShares S&P 500 Growth ETF
+BIVE39|iShares S&P 500 Value ETF
+BIJS39|iShares S&P Small-Cap 600 Value ETF
+BDVY39|iShares Select Dividend ETF
+BIDR39|iShares Self-Driving EV and Tech ETF
+BSOX39|iShares Semiconductor ETF
+BSHV39|iShares 0-1 Year Treasury Bond ETF
+BSLV39|iShares Silver Trust
+BTIP39|iShares TIPS Bond ETF
+BTFL39|iShares Treasury Floating Rate Bond ETF
+BIYM39|iShares U.S. Basic Materials ETF
+BIYE39|iShares U.S. Energy ETF
+BIYG39|iShares U.S. Financial Services ETF
+BIHF39|iShares U.S. Healthcare Providers ETF
+BITB39|iShares U.S. Home Construction ETF
+BIYJ39|iShares U.S. Industrials ETF
+BIHI39|iShares U.S. Medical Devices ETF
+BAER39|iShares US Aerospace & Defense ETF
+BIYC39|iShares US Consumer Discretionary ETF
+BIYK39|iShares US Consumer Staples ETF
+BIYF39|iShares US Financials ETF
+BIFR39|iShares US Infrastructure ETF
+BIEO39|iShares US Oil & Gas Exploration & Production ETF
+BIHE39|iShares US Pharmaceuticals ETF
+BIYW39|iShares US Technology ETF
+BIYP39|iShares US Transportation ETF
+BGOV39|iShares US Treasury Bond ETF
+BUTL39|iShares US Utilities ETF
+BBGR39|iShares USD Green Bond ETF
+BBCA39|JPMorgan BetaBuilders Canada ETF
+BBAX39|JPMorgan BetaBuilders Dev Asia Pacific-ex JPN ETF
+BBEU39|JPMorgan BetaBuilders Europe ETF
+BBIL39|JPMorgan BetaBuilders International Equity ETF
+BBJP39|JPMorgan BetaBuilders Japan ETF
+BBMR39|JPMorgan BetaBuilders MSCI US REIT ETF
+BBUS39|JPMorgan BetaBuilders US Equity ETF
+BBMC39|JPMorgan BetaBuilders US Mid Cap Equity ETF
+JPEM39|JPMorgan Diversified Return Emerg Markt Equity ETF
+JPIN39|JPMorgan Diversified Return Internation Equity ETF
+JPUS39|JPMorgan Diversified Return US Equity ETF
+JPME39|JPMorgan Diversified Return US Mid Cap Equity ETF
+BDRE39|JPMorgan Diversified Return US SmallCap Equity ETF
+JMOM39|JPMorgan US Momentum Factor ETF
+JQUA39|JPMorgan US Quality Factor ETF
+JVAL39|JPMorgan US Value Factor ETF
+BHYS39|PIMCO 0-5 Year High Yield Corp Bond Index Exch-TF
+BLTP39|PIMCO 15 Year U.S. TIPS Index Exchange-TF
+BSTP39|PIMCO 1to5 Year U.S. TIPS Index Exchange-TF
+BZRO39|PIMCO 25 Year Zero Coupon US Treasur Index Exch-TF
+BIPZ39|PIMCO Broad U.S. TIPS Index Exchange-TF
+BCRP39|PIMCO Investment Grade Corp Bond Index Exch-TF
+BMFE39|PIMCO RAFI Dynamic Multi-Factor EME ETF
+BWCL39|WisdomTree Cloud Computing Fund
+BUSF39|WisdomTree Floating Rate Treasury Fund
+BAGY39|WisdomTree Yield Enhanced US Aggregate Bond Fund
+BCHA39|Xtrackers MSCI China UCITS ETF*
+BEME39|Xtrackers MSCI Emerging Markets UCITS ETF*
+BEUR39|Xtrackers MSCI Europe UCITS ETF*
+BJAP39|Xtrackers MSCI Japan UCITS ETF*
+BEUA39|Xtrackers MSCI USA UCITS ETF*
+BLUZ39|Xtrackers MSCI World Energy UCITS ETF*
+BWOR39|Xtrackers MSCI World UCITS ETF*
+BUFF39|Xtrackers MSCI World Value UCITS ETF*
+BTWO39|Xtrackers Russell 2000 UCITS ETF*
+BEQW39|Xtrackers S&P 500 Equal Weight UCITS ETF*
