@@ -47,6 +47,14 @@ test("/design é noindex e fica fora do sitemap", async ({ page, request }) => {
   expect(sitemap).not.toContain("/design");
 });
 
+test("/bdrs/ mostra a régua de marcas com a cor de cada depositária", async ({ page }) => {
+  await page.goto("/bdrs/");
+  const partes = page.locator(".regua span");
+  await partes.first().waitFor();
+  expect(await partes.count()).toBeGreaterThanOrEqual(2);
+  await expect(page.locator(".regua")).toHaveAttribute("aria-label", /Banco B3 \d+,\d%/);
+});
+
 test.describe("estados interativos", () => {
   test("gráfico em modo tabela (BDR) e bloco de fonte aberto", async ({ page }) => {
     await page.goto("/bdrs/TSLA34/");

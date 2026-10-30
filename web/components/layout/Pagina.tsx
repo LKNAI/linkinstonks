@@ -1,6 +1,7 @@
 // Peças comuns das páginas de painel: hero, KPIs e estados de carregando/erro.
 import type { ReactNode } from "react";
 import type { Kpi } from "@/lib/acoes";
+import { ReguaProvider, ReguaSlot } from "./Regua";
 
 export function Hero({ selo, titulo, texto }: { selo: string; titulo: string; texto: string }) {
   return (
@@ -19,16 +20,16 @@ export function KpiGrid({ kpis }: { kpis: Kpi[] }) {
     <div className="kpis" role="list" aria-label="Indicadores">
       {kpis.map((k) => (
         <div className="kpi" role="listitem" key={k.rotulo} style={{ "--c": k.cor } as React.CSSProperties}>
-          <div className="lbl">{k.rotulo}</div>
+          <div className="lbl">
+            {k.cor.startsWith("var(") ? null : (
+              <i className="dot" style={{ background: k.cor }} aria-hidden="true" />
+            )}
+            {k.rotulo}
+          </div>
           <div className="val">{k.valor}</div>
           <div className="sub" title={k.sub}>
             {k.sub}
           </div>
-          {k.p != null ? (
-            <div className="bar" aria-hidden="true">
-              <span style={{ width: `${(k.p * 100).toFixed(1)}%` }} />
-            </div>
-          ) : null}
         </div>
       ))}
     </div>
@@ -48,10 +49,13 @@ export interface HeroProps {
  */
 export function PaginaComHero({ hero, children }: { hero: HeroProps; children: ReactNode }) {
   return (
-    <div className="dash">
-      <Hero {...hero} />
-      {children}
-    </div>
+    <ReguaProvider>
+      <div className="dash">
+        <ReguaSlot />
+        <Hero {...hero} />
+        {children}
+      </div>
+    </ReguaProvider>
   );
 }
 

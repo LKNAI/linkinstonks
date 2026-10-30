@@ -11,6 +11,7 @@ import { Sparkline } from "@/components/charts/Sparkline";
 import { TipConteudo } from "@/components/charts/Tooltip";
 import { Busca, Chips, Segmentado } from "@/components/filters/Controles";
 import { Carregando, ErroDados, KpiGrid, PaginaComHero, type HeroProps } from "@/components/layout/Pagina";
+import { useRegua } from "@/components/layout/Regua";
 import { DataTable } from "@/components/table/DataTableLazy";
 import { linkDoMes, origemDoMes, type FontesVolume } from "@/lib/fonte-volume";
 import type { ColunaSpec } from "@/components/table/DataTable";
@@ -312,6 +313,7 @@ function Conteudo({
   const rk = ranking(base, f);
   const conc = concentracao(rk.todos, rk.total, f);
   const porDep = fatiasDepositaria(filtrarBdrs(todos, f, "dep"));
+  useRegua(fatiasDepositaria(todos).map((i) => ({ nome: i.label, cor: i.color, valor: i.n })));
   const porTipo = fatiasTipo(filtrarBdrs(todos, f, "type"));
   const porCat = fatiasCategoria(filtrarBdrs(todos, f, "cat"));
   // 1º pregão da janela: quem negociou nele já existia antes (como o "antes de out/24" do seed).
@@ -376,7 +378,7 @@ function Conteudo({
 
         <div className="grid">
           <ChartCard
-            coluna="c12"
+            coluna="c8"
             titulo="Volume financeiro mensal"
             descricao="Soma do mercado à vista e fracionário, por tipo de programa · clique num mês para usá-lo como referência no ranking"
             tag={`${formatDinheiro(mensal.reduce((a, m) => a + m.total, 0))} em 24 meses`}
@@ -469,51 +471,7 @@ function Conteudo({
             />
           </ChartCard>
           <ChartCard
-            coluna="c4"
-            titulo="BDRs por tipo de programa"
-            descricao="Quantidade de tickers negociados"
-            tabela={{
-              cabecalho: ["Tipo", "BDRs", "Volume 24m"],
-              linhas: porTipo.map((i) => [i.label, i.n, i.extra?.[0][1] ?? ""]),
-            }}
-          >
-            <Donut
-              itens={porTipo}
-              selecionado={f.type}
-              onSelecionar={(k) => alternar("type", k)}
-              centro="BDRs"
-              rotuloValor="BDRs"
-              tamanho={168}
-              rotuloAria="BDRs por tipo de programa"
-            />
-          </ChartCard>
-          <ChartCard
-            coluna="c4"
-            titulo="BDRs de ETF por classe"
-            descricao="Volume dos BDRs de ETF (DRE) · 24 meses"
-            tabela={{
-              cabecalho: ["Classe", "Volume 24m", "ETFs"],
-              linhas: porCat.map((i) => [i.label, formatDinheiro(i.n), i.extra?.[0][1] ?? ""]),
-            }}
-          >
-            {porCat.length ? (
-              <Donut
-                itens={porCat}
-                selecionado={f.cat}
-                onSelecionar={(k) => alternar("cat", k)}
-                centro="volume 24m"
-                rotuloValor="Volume"
-                formatar={formatDinheiro}
-                tamanho={168}
-                rotuloAria="BDRs de ETF por classe"
-              />
-            ) : (
-              <p className="muted">Nenhum BDR de ETF no filtro atual.</p>
-            )}
-          </ChartCard>
-
-          <ChartCard
-            coluna="c8"
+            coluna="c8 tall"
             titulo="Ranking por volume"
             descricao={`${f.month == null ? "Volume acumulado em 24 meses" : `Volume em ${rotuloMes(meses[f.month])}`} · cor = depositária`}
             tag={f.month == null ? `${rotuloMes(meses[0])} – ${rot}` : rotuloMes(meses[f.month])}
@@ -564,6 +522,50 @@ function Conteudo({
               }))}
             />
           </ChartCard>
+          <ChartCard
+            coluna="c4"
+            titulo="BDRs por tipo de programa"
+            descricao="Quantidade de tickers negociados"
+            tabela={{
+              cabecalho: ["Tipo", "BDRs", "Volume 24m"],
+              linhas: porTipo.map((i) => [i.label, i.n, i.extra?.[0][1] ?? ""]),
+            }}
+          >
+            <Donut
+              itens={porTipo}
+              selecionado={f.type}
+              onSelecionar={(k) => alternar("type", k)}
+              centro="BDRs"
+              rotuloValor="BDRs"
+              tamanho={168}
+              rotuloAria="BDRs por tipo de programa"
+            />
+          </ChartCard>
+          <ChartCard
+            coluna="c4"
+            titulo="BDRs de ETF por classe"
+            descricao="Volume dos BDRs de ETF (DRE) · 24 meses"
+            tabela={{
+              cabecalho: ["Classe", "Volume 24m", "ETFs"],
+              linhas: porCat.map((i) => [i.label, formatDinheiro(i.n), i.extra?.[0][1] ?? ""]),
+            }}
+          >
+            {porCat.length ? (
+              <Donut
+                itens={porCat}
+                selecionado={f.cat}
+                onSelecionar={(k) => alternar("cat", k)}
+                centro="volume 24m"
+                rotuloValor="Volume"
+                formatar={formatDinheiro}
+                tamanho={168}
+                rotuloAria="BDRs de ETF por classe"
+              />
+            ) : (
+              <p className="muted">Nenhum BDR de ETF no filtro atual.</p>
+            )}
+          </ChartCard>
+
           <ChartCard
             coluna="c4"
             titulo="Concentração do volume"
