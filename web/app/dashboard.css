@@ -717,16 +717,39 @@
 }
 .mchart {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
+.plot,
+.rolagem {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+/* área das barras: --alt é a altura mínima; as barras e linhas de grade usam % dela, então o gráfico pode esticar */
 .mcols {
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
   gap: var(--space-1);
-  height: 250px;
-  padding-top: var(--space-6);
+  height: calc(var(--alt) + 1px);
+  margin-top: var(--space-6);
   padding-left: 68px;
   border-bottom: 1px solid var(--border-strong);
   position: relative;
+}
+/* no desktop o gráfico mensal ocupa a altura que sobra no cartão (o vizinho da linha pode ser mais alto) */
+@media (min-width: 641px) {
+  .card.elastico {
+    display: flex;
+    flex-direction: column;
+  }
+  .card.elastico .mcols {
+    height: auto;
+    flex: 1;
+    min-height: calc(var(--alt) + 1px);
+  }
 }
 .gridline {
   position: absolute;
@@ -751,7 +774,6 @@
 .mc {
   flex: 1;
   min-width: 0;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -765,6 +787,7 @@
 }
 .mc .stk {
   max-width: 34px;
+  height: 100%;
 }
 .mc:hover .stk {
   filter: brightness(1.07);
@@ -1877,13 +1900,15 @@ a.mc:focus-visible {
   }
   .plot {
     display: flex;
+    flex-direction: row;
   }
   .eixo-y {
     display: block;
     position: relative;
     flex: none;
     width: var(--eixo-y);
-    height: 250px;
+    height: calc(var(--alt) + 1px);
+    margin-top: var(--space-6);
     border-bottom: 1px solid transparent;
   }
   .eixo-y span {

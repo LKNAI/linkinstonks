@@ -42,6 +42,7 @@ export function GraficoVolume({
     grade.push({ valor: v, rotulo: formatDinheiro(v) });
   return (
     <ChartCard
+      elastico
       coluna={coluna}
       titulo={titulo}
       descricao={`Mercado à vista e fracionário somados · clique numa barra para abrir o arquivo oficial da B3${mesParcial ? ` · ${rotuloMes(mesParcial)} é parcial` : ""}`}
