@@ -90,7 +90,9 @@ export function Donut({
   );
   const dica = (it: FatiaDonut) => () => conteudoDica(it);
   return (
-    <div className={`donut${empilhado ? " stack" : ""}${selecionado != null ? " has-sel" : ""}`}>
+    <div
+      className={`donut${empilhado ? " stack" : ""}${itens.length <= 6 ? " two" : ""}${selecionado != null ? " has-sel" : ""}`}
+    >
       <svg
         width={tamanho}
         height={tamanho}

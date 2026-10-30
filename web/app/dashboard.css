@@ -497,6 +497,50 @@
   text-align: right;
 }
 
+/* legenda do donut ao lado do gráfico (coluna estreita): nome numa linha, valor e % na de baixo, sem truncar */
+.donut.two:not(.stack) .lg button {
+  grid-template-columns: 12px minmax(0, 1fr) auto;
+  column-gap: var(--space-2);
+  row-gap: 0;
+}
+.donut.two:not(.stack) .lg .sq {
+  grid-row: 1 / span 2;
+}
+.donut.two:not(.stack) .lg .nm {
+  grid-column: 2 / 4;
+}
+.donut.two:not(.stack) .lg .n {
+  grid-column: 2;
+  font-weight: var(--fw-medium);
+  color: var(--text-muted);
+}
+.donut.two:not(.stack) .lg .pc {
+  grid-column: 3;
+  min-width: 0;
+}
+
+/* filtros em sheet: no desktop o grupo fica inline; no celular vira botão + sheet inferior */
+.btn.fsheet-btn,
+.fsheet-topo,
+.btn.fsheet-ok {
+  display: none;
+}
+.fsheet,
+.fsheet-corpo {
+  display: contents;
+}
+.fsheet-n {
+  min-width: var(--space-5);
+  padding: 0 var(--space-1);
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  font-weight: var(--fw-bold);
+  text-align: center;
+}
+
 /* barras horizontais */
 .bars {
   display: flex;
@@ -1736,4 +1780,69 @@ a.mc:focus-visible {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
   color: var(--text-subtle);
+}
+@media (max-width: 640px) {
+  .search {
+    flex: 1 1 140px;
+  }
+  .btn.fsheet-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+  .fsheet {
+    display: none;
+  }
+  .fsheet.aberto {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: var(--space-4);
+    background: var(--surface);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    box-shadow: var(--shadow-modal);
+  }
+  .fsheet-fundo {
+    position: fixed;
+    inset: 0;
+    z-index: 59;
+    background: var(--scrim);
+  }
+  .fsheet-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .fsheet-topo h2 {
+    margin: 0;
+    font-size: var(--fs-lg);
+    line-height: var(--lh-lg);
+  }
+  .fsheet-x {
+    display: grid;
+    place-items: center;
+    width: var(--space-10);
+    height: var(--space-10);
+    border: 0;
+    border-radius: var(--radius-md);
+    background: none;
+    cursor: pointer;
+  }
+  .fsheet-corpo {
+    display: grid;
+    gap: var(--space-3);
+  }
+  .fsheet-corpo .seg-ctl {
+    display: grid;
+  }
+  .btn.fsheet-ok {
+    display: block;
+  }
 }

@@ -12,6 +12,7 @@ import { TipConteudo } from "@/components/charts/Tooltip";
 import { Busca, Chips, Segmentado } from "@/components/filters/Controles";
 import { Carregando, ErroDados, KpiGrid, PaginaComHero, type HeroProps } from "@/components/layout/Pagina";
 import { useRegua } from "@/components/layout/Regua";
+import { FiltrosSheet } from "@/components/filters/FiltrosSheet";
 import { DataTable } from "@/components/table/DataTableLazy";
 import { linkDoMes, origemDoMes, type FontesVolume } from "@/lib/fonte-volume";
 import type { ColunaSpec } from "@/components/table/DataTable";
@@ -362,16 +363,18 @@ function Conteudo({
               onChange={(q) => setF((a) => ({ ...a, q }))}
               placeholder="Buscar ticker, empresa, ETF, ISIN ou depositária…"
             />
-            <Segmentado<Situacao>
-              rotulo="Situação"
-              valor={f.st}
-              onChange={(st) => setF((a) => ({ ...a, st }))}
-              opcoes={[
-                { v: "all", texto: "Todas" },
-                { v: "on", texto: `Negociadas em ${rot}` },
-                { v: "off", texto: `Sem negócios em ${rot}` },
-              ]}
-            />
+            <FiltrosSheet ativos={f.st === "all" ? 0 : 1}>
+              <Segmentado<Situacao>
+                rotulo="Situação"
+                valor={f.st}
+                onChange={(st) => setF((a) => ({ ...a, st }))}
+                opcoes={[
+                  { v: "all", texto: "Todas" },
+                  { v: "on", texto: `Negociadas em ${rot}` },
+                  { v: "off", texto: `Sem negócios em ${rot}` },
+                ]}
+              />
+            </FiltrosSheet>
             <Chips chips={chips} mostrarLimpar={temFiltroBdr(f)} onLimpar={limpar} />
           </div>
         </div>

@@ -89,6 +89,7 @@
 
   /* elevação: borda é o padrão; sombra só em elemento flutuante, tingida com o tom do texto */
   --shadow-float: 0 1px 2px rgb(20 26 42 / 0.06), 0 6px 18px -6px rgb(20 26 42 / 0.18);
+  --scrim: rgb(20 26 42 / 0.4); /* fundo atrás de sheet e modal */
   --shadow-modal: 0 16px 40px -12px rgb(20 26 42 / 0.28);
 
   /* movimento: só como resposta a ação */

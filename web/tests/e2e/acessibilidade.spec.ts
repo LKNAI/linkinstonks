@@ -20,8 +20,9 @@ const ROTAS = [
 
 const TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
 
-async function auditar(page: Page) {
-  const r = await new AxeBuilder({ page }).withTags(TAGS).analyze();
+async function auditar(page: Page, incluir?: string) {
+  const construtor = new AxeBuilder({ page }).withTags(TAGS);
+  const r = await (incluir ? construtor.include(incluir) : construtor).analyze();
   return r.violations.map((v) => ({
     regra: v.id,
     impacto: v.impact,
@@ -53,6 +54,37 @@ test("/bdrs/ mostra a régua de marcas com a cor de cada depositária", async ({
   await partes.first().waitFor();
   expect(await partes.count()).toBeGreaterThanOrEqual(2);
   await expect(page.locator(".regua")).toHaveAttribute("aria-label", /Banco B3 \d+,\d%/);
+});
+
+test.describe("filtros em sheet (celular)", () => {
+  test.use({ viewport: { width: 390, height: 844 } });
+
+  test("abre como diálogo modal, não tem violações, filtra, fecha com Esc e devolve o foco", async ({
+    page,
+  }) => {
+    await page.goto("/bdrs/");
+    await page.locator(".dtable tbody tr").first().waitFor();
+    const gatilho = page.getByRole("button", { name: /^Filtros/ });
+    await expect(page.getByRole("group", { name: "Situação" })).toBeHidden();
+    await gatilho.click();
+    const dialogo = page.getByRole("dialog", { name: "Filtros" });
+    await expect(dialogo).toBeVisible();
+    await expect(dialogo.getByRole("button", { name: "Fechar filtros" })).toBeFocused();
+    expect(await auditar(page, "[role=dialog]")).toEqual([]);
+    await dialogo.getByRole("button", { name: /^Sem negócios/ }).click();
+    await page.keyboard.press("Escape");
+    await expect(dialogo).toBeHidden();
+    await expect(gatilho).toBeFocused();
+    await expect(gatilho.locator(".fsheet-n")).toHaveText("1");
+    await expect(page.locator(".dtable tbody tr").first()).toBeVisible();
+  });
+});
+
+test("no desktop os filtros ficam inline e o botão do sheet não aparece", async ({ page }) => {
+  await page.goto("/bdrs/");
+  await page.locator(".dtable tbody tr").first().waitFor();
+  await expect(page.getByRole("button", { name: /^Filtros/ })).toBeHidden();
+  await expect(page.getByRole("group", { name: "Situação" })).toBeVisible();
 });
 
 test.describe("estados interativos", () => {
