@@ -17,6 +17,40 @@ export const ROTULO_TIPO = {
   troca_depositaria: "Troca de depositária",
 };
 
+// Espelha SEGMENTO_NOME de lib/palette.ts (este script roda no Node puro, sem o TypeScript); tests/unit/feed.test.ts confere.
+export const SEGMENTO_NOME = {
+  NM: "Novo Mercado",
+  N2: "Nível 2",
+  N1: "Nível 1",
+  MP: "Bovespa Mais",
+  B: "Tradicional",
+  SO: "Balcão organizado (SOMA)",
+  BN: "Balcão não organizado",
+  "?": "Sem dados",
+};
+
+/** Nome do item: ações pelo nome de pregão (código CVM → ARANDU); BDRs pelo ticker. Mesma regra de lib/rotulos.ts. */
+/** @param {{ dataset: string, chave: string, tipo: string, de?: string | null }} e
+ * @param {{ codigo_cvm: string, pregao: string, razao_social: string }[]} [acoes] */
+export function nomeDoItem(e, acoes = []) {
+  if (e.dataset !== "acoes") return e.chave;
+  const a = acoes.find((c) => c.codigo_cvm === e.chave);
+  if (a) return a.pregao || a.razao_social;
+  if (e.tipo === "deslistagem" && e.de) return e.de;
+  return `CVM ${e.chave}`;
+}
+
+/** "Novo Mercado → Tradicional" na mudança de segmento; "de → para" nos demais; null sem detalhe. */
+export function mudancaDoEvento(e) {
+  if (!e.de && !e.para) return null;
+  if (e.tipo === "mudanca_segmento") {
+    const seg = (x) => (x == null ? "—" : (SEGMENTO_NOME[x] ?? x));
+    return `${seg(e.de)} → ${seg(e.para)}`;
+  }
+  if (e.tipo === "deslistagem") return null;
+  return `${e.de ?? "—"} → ${e.para ?? "—"}`;
+}
+
 export const escaparXml = (s) =>
   String(s ?? "").replace(
     /[&<>"']/g,
@@ -25,12 +59,14 @@ export const escaparXml = (s) =>
 
 const link = (siteUrl, e) => `${siteUrl}/${e.dataset === "acoes" ? "acoes" : "bdrs"}/${e.chave}/`;
 
-export function montarFeed({ eventos, siteUrl, atualizadoEm }) {
+/** @param {{ eventos: any[], siteUrl: string, atualizadoEm: string, acoes?: { codigo_cvm: string, pregao: string, razao_social: string }[] }} args */
+export function montarFeed({ eventos, siteUrl, atualizadoEm, acoes = [] }) {
   const base = siteUrl.replace(/\/$/, "");
   const atualizado = `${eventos[0]?.data ?? atualizadoEm}T00:00:00Z`;
   const entradas = eventos
     .map((e) => {
-      const titulo = `${ROTULO_TIPO[e.tipo] ?? e.tipo}: ${e.chave}${e.de || e.para ? ` (${e.de ?? "—"} → ${e.para ?? "—"})` : ""}`;
+      const mudanca = mudancaDoEvento(e);
+      const titulo = `${ROTULO_TIPO[e.tipo] ?? e.tipo}: ${nomeDoItem(e, acoes)}${mudanca ? ` (${mudanca})` : ""}`;
       const id = `tag:${new URL(base).host},${e.data}:${e.dataset}/${e.tipo}/${e.chave}`;
       return `  <entry>
     <id>${escaparXml(id)}</id>
@@ -63,13 +99,16 @@ function principal() {
   }
   const eventos = JSON.parse(readFileSync(join(pub, "eventos.json"), "utf8")).eventos;
   const meta = JSON.parse(readFileSync(join(pub, "meta.json"), "utf8"));
+  const acoes = existsSync(join(pub, "acoes.json"))
+    ? JSON.parse(readFileSync(join(pub, "acoes.json"), "utf8")).companhias
+    : [];
   const atualizadoEm =
     Object.values(meta.datasets)
       .map((d) => d.atualizado_em)
       .sort()
       .at(-1) ?? "1970-01-01";
   const siteUrl = process.env.SITE_URL ?? "https://linkinstonks.vercel.app";
-  writeFileSync(destino, montarFeed({ eventos, siteUrl, atualizadoEm }));
+  writeFileSync(destino, montarFeed({ eventos, siteUrl, atualizadoEm, acoes }));
   console.log(`gen-feed: ${eventos.length} evento(s) em public/feed.xml`);
 }
 

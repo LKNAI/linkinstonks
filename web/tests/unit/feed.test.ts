@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { escaparXml, montarFeed } from "../../scripts/gen-feed.mjs";
+import { ROTULO_TIPO, SEGMENTO_NOME, escaparXml, montarFeed } from "../../scripts/gen-feed.mjs";
+import { SEGMENTO_NOME as SEGMENTOS_SITE } from "@/lib/palette";
+import { ROTULO_TIPO as ROTULOS_SITE } from "@/lib/rotulos";
 
 const evento = (p: Record<string, unknown> = {}) => ({
   data: "2026-10-29",
@@ -40,9 +42,12 @@ describe("feed Atom", () => {
       ],
       siteUrl: "https://exemplo.test",
       atualizadoEm: "2026-10-01",
+      acoes: [{ codigo_cvm: "9512", pregao: "PETROBRAS", razao_social: "PETROLEO BRASILEIRO S.A." }],
     });
     expect(xml.match(/<entry>/g)).toHaveLength(2);
-    expect(xml).toContain("<title>Troca de escriturador: 9512 (Banco Bradesco → Itaú Corretora)</title>");
+    expect(xml).toContain(
+      "<title>Troca de escriturador: PETROBRAS (Banco Bradesco → Itaú Corretora)</title>",
+    );
     expect(xml).toContain("<title>Novo BDR: AAPL34 (— → Apple Inc)</title>");
     expect(xml).toContain('<link href="https://exemplo.test/acoes/9512/"/>');
     expect(xml).toContain('<link href="https://exemplo.test/bdrs/AAPL34/"/>');
@@ -54,5 +59,26 @@ describe("feed Atom", () => {
     const a = montarFeed({ eventos: [evento()], siteUrl: "https://x.test", atualizadoEm: "2026-10-29" });
     const b = montarFeed({ eventos: [evento()], siteUrl: "https://x.test", atualizadoEm: "2026-10-29" });
     expect(a).toBe(b);
+  });
+
+  it("usa o nome da empresa e o segmento por extenso, não o código CVM nem a sigla", () => {
+    const xml = montarFeed({
+      eventos: [
+        evento({ tipo: "mudanca_segmento", chave: "25887", de: "NM", para: "B" }),
+        evento({ tipo: "deslistagem", chave: "26611", de: "MNLT SA", para: null }),
+      ],
+      siteUrl: "https://x.test",
+      atualizadoEm: "2026-10-29",
+      acoes: [{ codigo_cvm: "25887", pregao: "ARANDU", razao_social: "ARANDU INVESTIMENTOS S.A." }],
+    });
+    expect(xml).toContain("<title>Mudança de segmento: ARANDU (Novo Mercado → Tradicional)</title>");
+    expect(xml).toContain("<title>Deslistagem: MNLT SA</title>");
+    expect(xml).toContain('<link href="https://x.test/acoes/25887/"/>'); // o link segue pelo código
+    expect(xml).not.toContain("25887)");
+  });
+
+  it("os rótulos do feed são os mesmos do site", () => {
+    expect(SEGMENTO_NOME).toEqual(SEGMENTOS_SITE);
+    expect(ROTULO_TIPO).toEqual(ROTULOS_SITE);
   });
 });

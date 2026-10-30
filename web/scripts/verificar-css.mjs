@@ -26,7 +26,7 @@ if (arquivos.length === 0) {
 const css = arquivos.map((a) => readFileSync(a, "utf8").replace(/\/\*[\s\S]*?\*\//g, "")).join("\n");
 
 // Variáveis definidas em `style={{ "--x": ... }}` nos componentes (não aparecem no CSS).
-const definidasNoJsx = ["--n"]; // ColunasEmpilhadas: número de colunas
+const definidasNoJsx = ["--n", "--alt"]; // ColunasEmpilhadas: nº de colunas e altura mínima do gráfico
 
 const definidas = new Set([...css.matchAll(/(--[\w-]+)\s*:/g)].map((m) => m[1]).concat(definidasNoJsx));
 // `@property --x` também define; `var(--x, valor)` tem reserva e dispensa definição.

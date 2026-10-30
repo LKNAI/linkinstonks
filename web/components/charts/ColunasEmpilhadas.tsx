@@ -42,7 +42,7 @@ export function ColunasEmpilhadas({
   variante: "anos" | "meses";
   /** Valor que corresponde à altura total. */
   escalaMax: number;
-  /** Altura em px da área das barras. */
+  /** Altura em px da área das barras (nas colunas mensais, a altura mínima: o gráfico pode crescer). */
   altura: number;
   grade?: { valor: number; rotulo: string }[];
 }) {
@@ -50,6 +50,9 @@ export function ColunasEmpilhadas({
   const anos = variante === "anos";
   const minimo = anos ? 2 : 1.5;
   const rolagem = useRef<HTMLDivElement>(null);
+  // Anos: px fixos. Meses: percentuais da área das barras, que o CSS pode esticar (ver .mcols).
+  const altoDe = (v: number): string | number =>
+    anos ? (v / escalaMax) * altura : `${(v / escalaMax) * 100}%`;
   // No toque, tocar numa coluna-link não pode abrir a página de cara: primeiro mostra o valor e deixa o link explícito.
   const toque = useMedia("(pointer: coarse)");
   const [lida, setLida] = useState<string | null>(null);
@@ -61,13 +64,13 @@ export function ColunasEmpilhadas({
     if (el) el.scrollLeft = el.scrollWidth;
   }, [n]);
   return (
-    <div className={anos ? "ychart" : "mchart"}>
+    <div className={anos ? "ychart" : "mchart"} style={{ "--alt": `${altura}px` } as CSSProperties}>
       <div className="plot">
         {grade?.length ? (
           // valores do eixo Y fora da área que rola (só no celular; no desktop ficam em cada linha de grade)
           <div className="eixo-y" aria-hidden="true">
             {grade.map((g) => (
-              <span key={g.valor} style={{ bottom: (g.valor / escalaMax) * altura }}>
+              <span key={g.valor} style={{ bottom: altoDe(g.valor) }}>
                 {g.rotulo}
               </span>
             ))}
@@ -80,7 +83,7 @@ export function ColunasEmpilhadas({
             aria-label="Colunas selecionáveis"
           >
             {grade?.map((g) => (
-              <div key={g.valor} className="gridline" style={{ bottom: (g.valor / escalaMax) * altura }}>
+              <div key={g.valor} className="gridline" style={{ bottom: altoDe(g.valor) }}>
                 <span>{g.rotulo}</span>
               </div>
             ))}
@@ -95,7 +98,10 @@ export function ColunasEmpilhadas({
                         <span
                           key={p.nome}
                           style={{
-                            height: Math.max(minimo, (p.valor / escalaMax) * altura - 2),
+                            height: anos
+                              ? Math.max(minimo, (p.valor / escalaMax) * altura - 2)
+                              : `calc(${altoDe(p.valor)} - 2px)`,
+                            minHeight: minimo,
                             background: p.cor,
                           }}
                         />
