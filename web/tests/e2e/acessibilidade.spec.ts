@@ -15,6 +15,7 @@ const ROTAS = [
   { rota: "/sobre/", pronto: ".prose" },
   { rota: "/acoes/9512/", pronto: ".tl li" },
   { rota: "/bdrs/TSLA34/", pronto: ".mcols .mc" },
+  { rota: "/design/", pronto: ".ds-marcas li" },
 ];
 
 const TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
@@ -38,6 +39,13 @@ for (const { rota, pronto } of ROTAS) {
     expect(await auditar(page)).toEqual([]);
   });
 }
+
+test("/design é noindex e fica fora do sitemap", async ({ page, request }) => {
+  await page.goto("/design/");
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
+  const sitemap = await (await request.get("/sitemap.xml")).text();
+  expect(sitemap).not.toContain("/design");
+});
 
 test.describe("estados interativos", () => {
   test("gráfico em modo tabela (BDR) e bloco de fonte aberto", async ({ page }) => {

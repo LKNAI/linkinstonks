@@ -75,9 +75,12 @@ export const contraste = (a: string, b: string): number => {
   return (x + 0.05) / (y + 0.05);
 };
 
-/** Cor do texto (branco ou o grafite do site) com contraste AA sobre um fundo de categoria. */
+/**
+ * Cor do texto sobre um fundo de categoria ou de marca: branco, o grafite do site ou, só quando nenhum dos dois
+ * chega a 4,5:1 (azul do Mercantil), preto. Devolve o primeiro que passa em AA.
+ */
 export const textoSobre = (fundo: string): string =>
-  contraste("#ffffff", fundo) >= 4.5 ? "#ffffff" : COR_TEXTO;
+  ["#ffffff", COR_TEXTO, "#000000"].find((t) => contraste(t, fundo) >= 4.5) ?? "#000000";
 
 /** Escurece `hex` (misturando com preto) até atingir `minimo`:1 de contraste sobre branco; devolve a própria cor se já passa. */
 export const legivelSobreBranco = (hex: string, minimo = 3): string => {

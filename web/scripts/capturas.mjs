@@ -44,6 +44,7 @@ const rotas = [
   ["novidades", "/novidades/"],
   ["status", "/status/"],
   ["sobre", "/sobre/"],
+  ["design", "/design/"],
 ];
 const telas = [
   ["1440", { width: 1440, height: 900 }],

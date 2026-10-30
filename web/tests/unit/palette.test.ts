@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { COR_ESCRITURADOR } from "@/lib/colors";
 import { CAT_ALT_COR, CAT_COR, COR_TEXTO, contraste, legivelSobreBranco, textoSobre } from "@/lib/palette";
 
 describe("contraste WCAG", () => {
@@ -16,6 +17,12 @@ describe("contraste WCAG", () => {
     }
     expect(textoSobre(CAT_COR[0])).toBe("#ffffff");
     expect(textoSobre(CAT_COR[3])).toBe(COR_TEXTO);
+  });
+
+  it("textoSobre cobre todas as cores de marca com AA", () => {
+    for (const cor of Object.values(COR_ESCRITURADOR)) {
+      expect(contraste(textoSobre(cor), cor), cor).toBeGreaterThanOrEqual(4.5);
+    }
   });
 
   it("legivelSobreBranco escurece só o necessário", () => {
