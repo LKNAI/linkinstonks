@@ -167,6 +167,12 @@ test.describe("/acoes: filtros da antiga tabela e volume", () => {
     await expect(page.locator(".dtable tbody tr").first()).toContainText("PETROBRAS");
   });
 
+  test("o mês parcial vem com aviso de que não está reconciliado com o arquivo mensal", async ({ page }) => {
+    await expect(
+      page.locator(".card", { hasText: "Volume financeiro mensal" }).locator(".note"),
+    ).toContainText(/é parcial: soma de \d+ arquivos diários/);
+  });
+
   test("ordenar por volume põe o maior primeiro e empresas sem volume mostram traço", async ({ page }) => {
     await page.getByRole("button", { name: /^Volume 24m/ }).dispatchEvent("click");
     await expect(page.getByRole("columnheader", { name: "Volume 24m" })).toHaveAttribute(
