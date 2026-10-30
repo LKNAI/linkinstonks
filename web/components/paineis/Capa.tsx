@@ -62,12 +62,7 @@ export function Capa() {
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "var(--space-3)" }}>
               <li>
                 <Link prefetch={false} className="btn" href="/acoes/">
-                  Ações: escrituradores
-                </Link>
-              </li>
-              <li>
-                <Link prefetch={false} className="btn" href="/acoes/tabela/">
-                  Tabela completa de ações
+                  Ações: escrituradores e volume
                 </Link>
               </li>
               <li>

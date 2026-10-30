@@ -1,7 +1,7 @@
 "use client";
 
 // /bdrs: paridade total com seed/html/dashboard_bdrs_b3.html.
-import Link from "next/link";
+import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import { useMemo } from "react";
 import { BarList } from "@/components/charts/BarList";
 import { ChartCard } from "@/components/charts/ChartCard";
@@ -141,9 +141,9 @@ function colunas(
       fixa: true,
       celula: (d) => (
         <div className="co">
-          <Link href={`/bdrs/${d.ticker}/`} prefetch={false} className="tk">
+          <LinkNovaAba href={`/bdrs/${d.ticker}/`} className="tk">
             {d.ticker}
-          </Link>
+          </LinkNovaAba>
           {d.qualificado ? (
             <span className="qual" title="Restrito a investidores qualificados">
               QUALIF.

@@ -15,9 +15,9 @@ export function Hero({ selo, titulo, texto }: { selo: string; titulo: string; te
   );
 }
 
-export function KpiGrid({ kpis }: { kpis: Kpi[] }) {
+export function KpiGrid({ kpis, rotulo = "Indicadores" }: { kpis: Kpi[]; rotulo?: string }) {
   return (
-    <div className="kpis" role="list" aria-label="Indicadores">
+    <div className="kpis" role="list" aria-label={rotulo}>
       {kpis.map((k) => (
         <div className="kpi" role="listitem" key={k.rotulo} style={{ "--c": k.cor } as React.CSSProperties}>
           <div className="lbl">

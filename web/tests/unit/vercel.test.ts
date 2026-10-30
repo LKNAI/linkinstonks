@@ -58,3 +58,16 @@ describe.skipIf(!temSh)("ignoreCommand da Vercel", { timeout: 60_000 }, () => {
     expect(rodar("0123456789012345678901234567890123456789")).not.toBe(0);
   });
 });
+
+describe("redirects das abas unificadas", () => {
+  const redirects: { source: string; destination: string; permanent: boolean }[] = config.redirects;
+
+  it("/acoes/tabela e /acoes/volume levam para /acoes/, com e sem barra final", () => {
+    for (const origem of ["/acoes/tabela", "/acoes/tabela/", "/acoes/volume", "/acoes/volume/"]) {
+      const r = redirects.find((x) => x.source === origem);
+      expect(r, origem).toBeDefined();
+      expect(r?.destination.startsWith("/acoes/")).toBe(true);
+      expect(r?.permanent).toBe(true);
+    }
+  });
+});

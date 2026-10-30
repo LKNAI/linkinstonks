@@ -18,7 +18,7 @@ Lighthouse 13.5.0, mobile (4× de CPU e rede 4G simulados), nesta máquina de de
 |---|---|---|---|---|---|
 | `/` | 58 | 98 | 4,7 s | 1,25 s | 0 |
 | `/acoes/` | 68 | 95 | 3,6 s | 0,93 s | 0 |
-| `/acoes/tabela/` | 74 | 98 | 3,6 s | 0,60 s | 0 |
+| `/acoes/tabela/` (removida; unida a `/acoes/`) | 74 | 98 | 3,6 s | 0,60 s | 0 |
 | `/bdrs/` | 60 | 95 | 4,4 s | 1,15 s | 0 |
 | `/bdrs/{ticker}` | 74 | 94 | 3,5 s | 0,71 s | 0 |
 | `/acoes/{codigo}` | 76 | 98 | 3,5 s | 0,62 s | 0 |

@@ -12,6 +12,7 @@ import { abreviaMes, formatDinheiro, rotuloMes } from "@/lib/format";
 export function GraficoVolume({
   ticker,
   titulo = "Volume financeiro mensal",
+  coluna = "c12",
   fontes,
   pagina,
   meses,
@@ -22,6 +23,7 @@ export function GraficoVolume({
 }: {
   ticker: string;
   titulo?: string;
+  coluna?: string;
   fontes: FontesVolume;
   pagina: string;
   meses: string[];
@@ -40,7 +42,7 @@ export function GraficoVolume({
     grade.push({ valor: v, rotulo: formatDinheiro(v) });
   return (
     <ChartCard
-      coluna="c12"
+      coluna={coluna}
       titulo={titulo}
       descricao={`Mercado à vista e fracionário somados · clique numa barra para abrir o arquivo oficial da B3${mesParcial ? ` · ${rotuloMes(mesParcial)} é parcial` : ""}`}
       tag={`${formatDinheiro(volumes.reduce((a, b) => a + b, 0))} em 24 meses`}
@@ -77,7 +79,9 @@ export function GraficoVolume({
           total: t.v,
           rotuloAria: `${ticker}, ${rotuloMes(t.mes)}${t.parcial ? " (parcial)" : ""}: ${formatDinheiro(t.v)}`,
           href: linkDoMes(fontes, t.mes, pagina),
-          partes: [{ cor: t.parcial ? `${cor}88` : cor, valor: t.v, nome: t.mes }],
+          partes: [
+            { cor: t.parcial ? `color-mix(in srgb, ${cor} 55%, transparent)` : cor, valor: t.v, nome: t.mes },
+          ],
           dica: () => (
             <TipConteudo
               titulo={rotuloMes(t.mes) + (t.parcial ? " (parcial)" : "")}

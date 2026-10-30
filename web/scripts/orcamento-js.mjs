@@ -35,7 +35,7 @@ for (const html of htmls) {
       .join("/")
       .replace(/index\.html$/, "");
   const chave = rota
-    .replace(/^\/acoes\/[^/]+\/$/, (m) => (m === "/acoes/tabela/" ? m : "/acoes/[codigoCvm]/"))
+    .replace(/^\/acoes\/[^/]+\/$/, "/acoes/[codigoCvm]/")
     .replace(/^\/bdrs\/[^/]+\/$/, "/bdrs/[ticker]/");
   const scripts = [
     ...new Set(

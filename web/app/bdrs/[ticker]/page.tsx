@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import { notFound } from "next/navigation";
 import { GraficoVolume } from "@/components/charts/GraficoVolume";
 import { FonteVolume } from "@/components/paineis/FonteVolume";
@@ -47,13 +47,12 @@ export default async function Page({ params }: Props) {
         <p className="page-sub">
           BDR {TIPO_GRUPO_NOME[grupo].toLowerCase()} ({b.tipo})
           {b.qualificado ? " · restrito a investidores qualificados" : ""} ·{" "}
-          <Link
-            href={`/bdrs/?q=${b.ticker.toLowerCase()}`}
-            prefetch={false}
+          <LinkNovaAba
+            href={`/bdrs/?q=${b.ticker.toLowerCase()}#tabela-bdrs`}
             style={{ color: "var(--accent-hover)", fontWeight: 600 }}
           >
-            ver na tabela
-          </Link>
+            ver na lista
+          </LinkNovaAba>
         </p>
 
         <div className="grid">

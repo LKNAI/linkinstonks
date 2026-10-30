@@ -7,6 +7,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Donut } from "@/components/charts/Donut";
 import { Sparkline } from "@/components/charts/Sparkline";
 import { Alternador, Chips, Segmentado, Seletor } from "@/components/filters/Controles";
+import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import { ErroDados, KpiGrid, Notas } from "@/components/layout/Pagina";
 import { COR_ESCRITURADOR, coresDoConjunto } from "@/lib/colors";
 import { formatInt, formatPct } from "@/lib/format";
@@ -233,6 +234,9 @@ export function Catalogo() {
                 { v: "y", texto: "Banco Bradesco" },
               ]}
             />
+          </div>
+          <div className="ds-fila">
+            <LinkNovaAba href="/acoes/9512/">Link para registro ou fonte (abre em nova aba)</LinkNovaAba>
           </div>
           <div className="ds-fila">
             <Chips

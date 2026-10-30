@@ -8,6 +8,7 @@ import type { ZodMiniType } from "zod/mini";
 // (orçamento de 200 KB gzip por rota) e ninguém espera por eles.
 const SCHEMAS = {
   "acoes.json": () => import("@/lib/schemas").then((m) => m.acoesDocSchema),
+  "acoes_volume.json": () => import("@/lib/schemas").then((m) => m.acoesVolumeDocSchema),
   "bdrs.json": () => import("@/lib/schemas").then((m) => m.bdrsDocSchema),
   "meta.json": () => import("@/lib/schemas").then((m) => m.metaSchema),
   "eventos.json": () => import("@/lib/schemas").then((m) => m.eventosDocSchema),

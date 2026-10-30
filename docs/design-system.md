@@ -24,8 +24,13 @@ O catálogo vivo é a rota `/design` (noindex, fora do sitemap); a fonte dos val
 - Nenhum literal de cor, tamanho de fonte, espaçamento, raio ou sombra fora de `tokens.css`. Exceções: `lib/colors.ts` (gerado), `lib/palette.ts` (espelha os tokens; `tests/unit/palette.test.ts` compara com `tokens.css`), `@media`, geometria de SVG e hairlines de 1–2 px.
 - Cada tema de design vira um commit (`style(web): …`).
 
+## Links
+
+- **Nova aba** (`components/layout/LinkNovaAba.tsx`): registros e fontes (empresa e BDR nas tabelas, "ver na lista" nos detalhes, instituições e as listas já filtradas que elas abrem) e arquivos oficiais da B3. Ícone `ExternalLink` de 14 px e texto `sr-only` "(abre em nova aba)". Cliques em gráficos, chips, filtros e ordenação filtram a própria página; menu, logo, migalhas e botões da Capa ficam na mesma aba.
+- **Divisão de seção** (`.sec-h`): título `--fs-xl` e uma linha de apoio dentro da grade de 12 colunas, para separar blocos de uma mesma tela (por exemplo, "Volume negociado" em `/acoes`).
+
 ## Estado da implementação
 
-Feito: tokens, fontes e cor; escala tipográfica; raio, espaço e movimento; variantes de pares de marcas; catálogo `/design`.
+Feito: tokens, fontes e cor; escala tipográfica; raio, espaço e movimento; variantes de pares de marcas; catálogo `/design`; telas `/bdrs` e `/acoes` (esta já com a Tabela e o Volume de ações unidos, filtros em sheet no celular, régua de marcas e links em nova aba).
 
-A fazer, por tela (ordem): `/bdrs`, `/acoes` (junto da unificação das abas de Ações), `/`, detalhes, `/instituicoes`, `/novidades`, `/status`, `/sobre`. Entram nas telas: régua de marcas de 4 px, KPIs sem cartões, layout de 12 colunas e filtros em sheet no celular.
+A fazer, por tela (ordem): `/`, detalhes, `/instituicoes`, `/novidades`, `/status`, `/sobre`. Entram nelas: régua de marcas de 4 px, KPIs sem cartões, layout de 12 colunas e filtros em sheet no celular.

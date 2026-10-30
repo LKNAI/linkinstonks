@@ -47,10 +47,18 @@ test.describe("página da companhia", () => {
     await expect(page.locator(".tl .badge.ok")).toHaveCount(1);
   });
 
-  test("o nome na tabela leva à página e o código desconhecido dá 404", async ({ page }) => {
-    await page.goto("/acoes/tabela/");
-    await page.locator(".dtable tbody .co a").first().click();
-    await expect(page).toHaveURL(/\/acoes\/\d+\/$/);
+  test("o nome na tabela abre a página da empresa em nova aba e o código desconhecido dá 404", async ({
+    page,
+    context,
+  }) => {
+    await page.goto("/acoes/");
+    await expect(page.locator(".dtable tbody tr").first()).toBeVisible();
+    const [nova] = await Promise.all([
+      context.waitForEvent("page"),
+      page.locator(".dtable tbody .co a").first().click(),
+    ]);
+    await expect(nova).toHaveURL(/\/acoes\/\d+\/$/);
+    await expect(page).toHaveURL(/\/acoes\/$/); // a lista continua aberta
     const r = await page.goto("/acoes/00000/");
     expect(r?.status()).toBe(404);
   });
@@ -122,29 +130,6 @@ test.describe("página do BDR", () => {
     await expect(celula).toHaveAttribute("aria-label", /Abrir a fonte oficial na B3/);
   });
 
-  test("volume das ações: a barra do mercado abre o arquivo oficial e a companhia leva ao detalhe", async ({
-    page,
-  }) => {
-    await page.goto("/acoes/volume/");
-    await expect(page.getByRole("heading", { level: 1 })).toHaveText("Volume negociado das ações");
-    const barras = page.locator("a.mc");
-    await expect(barras).toHaveCount(25); // 24 meses fechados + mês corrente parcial
-    await expect(barras.nth(23)).toHaveAttribute("href", /\/InstDados\/SerHist\/COTAHIST_M\d{6}\.ZIP$/);
-    await expect(barras.nth(23)).toHaveAttribute(
-      "aria-label",
-      /mercado de ações, .*Abrir a fonte oficial na B3/,
-    );
-    await expect(page.locator(".stats-table tbody tr")).toHaveCount(40);
-    await expect(page.locator(".stats-table tbody tr").first()).toContainText("PETR");
-    await expect(page.locator("section", { hasText: "Fonte do volume e como conferir" })).toContainText(
-      "VOLTOT",
-    );
-    const baixar = await page.request.get("/data/downloads/acoes_volume.csv");
-    expect(baixar.status()).toBe(200);
-    await page.locator(".stats-table tbody a").first().click();
-    await expect(page).toHaveURL(/\/acoes\/\d+\/$/);
-  });
-
   test("detalhe de companhia mostra o volume mensal dos tickers com link para a fonte (Petrobras)", async ({
     page,
   }) => {
@@ -166,11 +151,15 @@ test.describe("página do BDR", () => {
     await expect(page.getByText("Não encontrada nas listas consultadas")).toBeVisible();
   });
 
-  test("o ticker na tabela leva à página do BDR", async ({ page }) => {
+  test("o ticker na tabela abre a página do BDR em nova aba", async ({ page, context }) => {
     await page.goto("/bdrs/");
     await expect(page.locator(".dtable tbody tr").first()).toBeVisible();
-    await page.locator(".dtable tbody a.tk").first().click();
-    await expect(page).toHaveURL(/\/bdrs\/[A-Z0-9]+\/$/);
+    const [nova] = await Promise.all([
+      context.waitForEvent("page"),
+      page.locator(".dtable tbody a.tk").first().click(),
+    ]);
+    await expect(nova).toHaveURL(/\/bdrs\/[A-Z0-9]+\/$/);
+    await expect(page).toHaveURL(/\/bdrs\/$/); // a lista continua aberta
   });
 });
 

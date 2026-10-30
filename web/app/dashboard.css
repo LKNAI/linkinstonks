@@ -498,6 +498,9 @@
 }
 
 /* legenda do donut ao lado do gráfico (coluna estreita): nome numa linha, valor e % na de baixo, sem truncar */
+.donut.two:not(.stack) .lg {
+  max-height: none;
+}
 .donut.two:not(.stack) .lg button {
   grid-template-columns: 12px minmax(0, 1fr) auto;
   column-gap: var(--space-2);
@@ -717,7 +720,7 @@
   gap: var(--space-1);
   height: 250px;
   padding-top: var(--space-6);
-  padding-left: 58px;
+  padding-left: 68px;
   border-bottom: 1px solid var(--border-strong);
   position: relative;
 }
@@ -732,7 +735,8 @@
   position: absolute;
   left: 0;
   top: -8px;
-  width: 54px;
+  width: 62px;
+  white-space: nowrap;
   text-align: right;
   font-size: var(--fs-xs);
   color: var(--text-subtle);
@@ -776,7 +780,7 @@
   display: flex;
   gap: var(--space-1);
   margin-top: var(--space-2);
-  padding-left: 58px;
+  padding-left: 68px;
 }
 .mx span {
   flex: 1;
@@ -1472,10 +1476,10 @@ svg.spark {
   }
   .mcols,
   .mx {
-    padding-left: 52px;
+    padding-left: 60px;
   }
   .gridline span {
-    width: 50px;
+    width: 54px;
     font-size: var(--fs-xs);
   }
   .mcols,
@@ -1865,7 +1869,7 @@ a.mc:focus-visible {
 /* colunas de 24 meses/17 anos: no celular cada coluna ganha 32 px (alvo de toque) e o gráfico rola, começando no mais recente */
 @media (max-width: 640px) {
   .mchart {
-    --eixo-y: 52px;
+    --eixo-y: 60px;
   }
   .plot {
     display: flex;
@@ -1915,4 +1919,32 @@ a.mc:focus-visible {
     line-height: var(--lh-xs);
     color: var(--text-subtle);
   }
+}
+
+/* divisão de seção dentro da grade (por exemplo, "Volume negociado" em /acoes) */
+.sec-h {
+  grid-column: span 12;
+  margin-top: var(--space-6);
+}
+.sec-h h2 {
+  margin: 0;
+  font-size: var(--fs-xl);
+  line-height: var(--lh-xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-title);
+}
+.sec-h p {
+  margin: var(--space-1) 0 0;
+  max-width: 72ch;
+  font-size: var(--fs-md);
+  line-height: var(--lh-md);
+  color: var(--text-muted);
+}
+
+/* ícone de "abre em nova aba" ao lado do link */
+.nova-aba {
+  display: inline-block;
+  margin-left: var(--space-1);
+  vertical-align: -2px;
+  color: var(--text-subtle);
 }

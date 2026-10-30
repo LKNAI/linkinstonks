@@ -1,8 +1,9 @@
-// Colunas da tabela de ações, compartilhadas por /acoes e /acoes/tabela (paridade com o seed).
-import Link from "next/link";
+// Colunas da tabela de ações de /acoes (paridade com o seed, mais volume e código CVM).
+import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import type { ColunaSpec } from "@/components/table/DataTable";
 import { detalheAnterior, textoDesde, type AcaoRow } from "@/lib/acoes";
 import { corEscriturador } from "@/lib/colors";
+import { formatDinheiro, rotuloMes } from "@/lib/format";
 import { SEGMENTO_NOME } from "@/lib/palette";
 
 export function Banco({ nome }: { nome: string | null | undefined }) {
@@ -19,9 +20,7 @@ function CelulaEmpresa({ d }: { d: AcaoRow }) {
   return (
     <div className="co">
       <b>
-        <Link href={`/acoes/${d.codigo_cvm}/`} prefetch={false}>
-          {d.pregao}
-        </Link>
+        <LinkNovaAba href={`/acoes/${d.codigo_cvm}/`}>{d.pregao}</LinkNovaAba>
       </b>
       <div>{d.razao_social}</div>
       <span className="cd">{d.emissor}</span>
@@ -87,9 +86,27 @@ function CelulaAnterior({ d }: { d: AcaoRow }) {
   );
 }
 
-export function colunasAcoes(comCodigoCvm: boolean): ColunaSpec<AcaoRow>[] {
-  const colunas: ColunaSpec<AcaoRow>[] = [
-    { id: "pregao", titulo: "Empresa", celula: (d) => <CelulaEmpresa d={d} /> },
+export function colunasAcoes(ultimoMes: string | null): ColunaSpec<AcaoRow>[] {
+  const volume: ColunaSpec<AcaoRow>[] = ultimoMes
+    ? [
+        {
+          id: "v24",
+          titulo: "Volume 24m",
+          classeTh: "r",
+          classeTd: () => "r num",
+          celula: (d) => (d.v24 == null ? <span className="muted">—</span> : <b>{formatDinheiro(d.v24)}</b>),
+        },
+        {
+          id: "vUlt",
+          titulo: `Volume ${rotuloMes(ultimoMes)}`,
+          classeTh: "r",
+          classeTd: () => "r num",
+          celula: (d) => (d.vUlt == null ? <span className="muted">—</span> : formatDinheiro(d.vUlt)),
+        },
+      ]
+    : [];
+  return [
+    { id: "pregao", titulo: "Empresa", fixa: true, celula: (d) => <CelulaEmpresa d={d} /> },
     { id: "tickers", titulo: "Tickers", celula: (d) => <CelulaTickers d={d} /> },
     { id: "b", titulo: "Escriturador atual", celula: (d) => <CelulaEscriturador d={d} /> },
     {
@@ -106,6 +123,7 @@ export function colunasAcoes(comCodigoCvm: boolean): ColunaSpec<AcaoRow>[] {
       classeTd: () => "trace",
       celula: (d) => <CelulaAnterior d={d} />,
     },
+    ...volume,
     {
       id: "segmento",
       titulo: "Segmento",
@@ -117,13 +135,6 @@ export function colunasAcoes(comCodigoCvm: boolean): ColunaSpec<AcaoRow>[] {
     },
     { id: "setor", titulo: "Setor", classeTd: () => "sec", celula: (d) => d.setor },
     { id: "cnpj", titulo: "CNPJ", classeTd: () => "mono", celula: (d) => d.cnpj },
+    { id: "codigo_cvm", titulo: "Cód. CVM", classeTd: () => "mono", celula: (d) => d.codigo_cvm },
   ];
-  if (comCodigoCvm)
-    colunas.push({
-      id: "codigo_cvm",
-      titulo: "Cód. CVM",
-      classeTd: () => "mono",
-      celula: (d) => d.codigo_cvm,
-    });
-  return colunas;
 }

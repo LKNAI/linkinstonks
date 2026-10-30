@@ -9,17 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .map((d) => d.atualizado_em)
     .sort();
   const lastModified = datas.at(-1);
-  const fixas = [
-    "/",
-    "/acoes/",
-    "/acoes/tabela/",
-    "/acoes/volume/",
-    "/bdrs/",
-    "/instituicoes/",
-    "/novidades/",
-    "/status/",
-    "/sobre/",
-  ];
+  const fixas = ["/", "/acoes/", "/bdrs/", "/instituicoes/", "/novidades/", "/status/", "/sobre/"];
   const caminhos = [
     ...fixas,
     ...todasAcoes().map((c) => `/acoes/${c.codigo_cvm}/`),

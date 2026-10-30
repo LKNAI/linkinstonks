@@ -12,8 +12,6 @@ import { fontesDesatualizadas, hojeEmBrasilia, ultimaAtualizacao } from "@/lib/s
 const LINKS = [
   { href: "/", texto: "Capa" },
   { href: "/acoes/", texto: "Ações" },
-  { href: "/acoes/tabela/", texto: "Tabela de ações" },
-  { href: "/acoes/volume/", texto: "Volume de ações" },
   { href: "/bdrs/", texto: "BDRs" },
   { href: "/instituicoes/", texto: "Instituições" },
   { href: "/novidades/", texto: "Novidades" },

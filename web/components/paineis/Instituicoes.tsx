@@ -1,7 +1,7 @@
 "use client";
 
 // /instituicoes: ranking de escrituradores (e ganhos/perdas de clientes no período) e de depositárias de BDR.
-import Link from "next/link";
+import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import { useMemo, useState } from "react";
 import { Carregando, ErroDados } from "@/components/layout/Pagina";
 import { Seletor } from "@/components/filters/Controles";
@@ -103,9 +103,9 @@ export function Instituicoes() {
                     return (
                       <tr key={n}>
                         <td>
-                          <Link href={`/acoes/?bank=${encodeURIComponent(n)}`} prefetch={false}>
+                          <LinkNovaAba href={`/acoes/?bank=${encodeURIComponent(n)}`}>
                             <Banco nome={n} />
-                          </Link>
+                          </LinkNovaAba>
                         </td>
                         <td className="r">{formatInt(porBanco[n] ?? 0)}</td>
                         <td className="r">{formatPct(porBanco[n] ?? 0, comTicker.length)}</td>
@@ -151,12 +151,12 @@ export function Instituicoes() {
                   {deps.map(([n, v]) => (
                     <tr key={n}>
                       <td>
-                        <Link href={`/bdrs/?dep=${encodeURIComponent(n)}`} prefetch={false}>
+                        <LinkNovaAba href={`/bdrs/?dep=${encodeURIComponent(n)}`}>
                           <span className="dep">
                             <i style={{ background: corDepositaria(n) }} />
                             {n}
                           </span>
-                        </Link>
+                        </LinkNovaAba>
                       </td>
                       <td className="r">{formatInt(v.n)}</td>
                       <td className="r">{formatDinheiro(v.vol)}</td>

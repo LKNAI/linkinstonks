@@ -6,6 +6,12 @@
   "outputDirectory": ".next",
   "trailingSlash": true,
   "ignoreCommand": "[ -n \"$VERCEL_GIT_PREVIOUS_SHA\" ] && git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" HEAD -- . ../data/public ../schemas",
+  "redirects": [
+    { "source": "/acoes/tabela", "destination": "/acoes/", "permanent": true },
+    { "source": "/acoes/tabela/", "destination": "/acoes/", "permanent": true },
+    { "source": "/acoes/volume", "destination": "/acoes/#volume", "permanent": true },
+    { "source": "/acoes/volume/", "destination": "/acoes/#volume", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
