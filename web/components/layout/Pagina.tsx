@@ -72,7 +72,7 @@ export function Carregando({
     >
       <p className="sr-only">{rotulo}</p>
       <div className="skeleton" />
-      <div className="skeleton" style={{ marginTop: 16, height: 320 }} />
+      <div className="skeleton" style={{ marginTop: "var(--space-4)", height: 320 }} />
     </div>
   );
 }

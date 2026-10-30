@@ -71,7 +71,7 @@ export default function Page() {
             />
           </Cartao>
           <Cartao coluna="c4" titulo="Baixar" descricao="Dados abertos, em R$ mil">
-            <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55 }}>
+            <p style={{ margin: 0, fontSize: "var(--fs-sm)", lineHeight: 1.55 }}>
               <a href="/data/downloads/acoes_volume.csv" download className="fonte-link">
                 acoes_volume.csv
               </a>{" "}

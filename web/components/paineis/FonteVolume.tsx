@@ -27,7 +27,12 @@ export function FonteVolume({
       descricao="Cada barra e cada célula de volume mensal leva ao arquivo oficial da B3 de onde o número foi obtido"
     >
       <p
-        style={{ margin: "0 0 10px", fontSize: "var(--fs-sm)", lineHeight: 1.55, color: "var(--text-muted)" }}
+        style={{
+          margin: "0 0 var(--space-3)",
+          fontSize: "var(--fs-sm)",
+          lineHeight: 1.55,
+          color: "var(--text-muted)",
+        }}
       >
         Fonte: B3, <b>Séries Históricas de cotações (COTAHIST)</b>, dados públicos.{" "}
         {como ?? comoConferir(ticker)} Os arquivos também estão listados na{" "}
@@ -40,7 +45,7 @@ export function FonteVolume({
         <summary style={{ cursor: "pointer", fontSize: "var(--fs-sm)", fontWeight: "var(--fw-semibold)" }}>
           Arquivos de origem por mês ({todos.length})
         </summary>
-        <div className="tbl-wrap" style={{ maxHeight: 320, marginTop: 8 }}>
+        <div className="tbl-wrap" style={{ maxHeight: 320, marginTop: "var(--space-2)" }}>
           <table className="alt-table fonte-tab">
             <caption className="sr-only">Arquivos oficiais da B3 por mês de volume</caption>
             <thead>
@@ -65,7 +70,7 @@ export function FonteVolume({
                           target="_blank"
                           rel="noopener noreferrer"
                           className="fonte-link"
-                          style={{ marginRight: 10, display: "inline-block" }}
+                          style={{ marginRight: "var(--space-3)", display: "inline-block" }}
                         >
                           {nomeDoArquivo(u)}
                         </a>

@@ -75,7 +75,7 @@ export function Novidades() {
           style={{
             position: "static",
             padding: 0,
-            margin: "0 0 16px",
+            margin: "0 0 var(--space-4)",
             background: "none",
             backdropFilter: "none",
           }}

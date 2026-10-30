@@ -55,11 +55,11 @@ export function Capa() {
     <PaginaComHero hero={HERO}>
       <div className="wrap">
         <KpiGrid kpis={destaques} />
-        <div className="grid" style={{ marginTop: 24 }}>
+        <div className="grid" style={{ marginTop: "var(--space-6)" }}>
           <section className="card c4" aria-labelledby="atalhos">
             <h2 id="atalhos">Painéis</h2>
             <p className="desc">Comece por aqui</p>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 10 }}>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "var(--space-3)" }}>
               <li>
                 <Link prefetch={false} className="btn" href="/acoes/">
                   Ações: escrituradores
@@ -101,7 +101,15 @@ export function Capa() {
             <h2 id="novidades">Últimas mudanças</h2>
             <p className="desc">Trocas de escriturador, novas listagens e outros eventos</p>
             {eventos.estado === "ok" && eventos.dados.eventos.length ? (
-              <ul style={{ margin: 0, paddingLeft: 18, display: "grid", gap: 6, fontSize: "var(--fs-sm)" }}>
+              <ul
+                style={{
+                  margin: 0,
+                  paddingLeft: "var(--space-5)",
+                  display: "grid",
+                  gap: "var(--space-2)",
+                  fontSize: "var(--fs-sm)",
+                }}
+              >
                 {eventos.dados.eventos.slice(0, 6).map((e, i) => (
                   <li key={i}>
                     <b>{formatDate(e.data)}</b> · {e.tipo.replaceAll("_", " ")} · {e.chave}

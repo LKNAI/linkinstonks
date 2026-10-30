@@ -110,14 +110,14 @@ function Conteudo({ acoes }: { acoes: Parameters<typeof derivar>[0] }) {
 
   return (
     <div className="dash">
-      <div className="wrap" style={{ paddingTop: 28 }}>
+      <div className="wrap" style={{ paddingTop: "var(--space-8)" }}>
         <span className="eyebrow">B3 + CVM · dados abertos</span>
         <h1
           style={{
             fontSize: "var(--fs-2xl)",
             fontWeight: "var(--fw-semibold)",
             letterSpacing: "var(--tracking-title)",
-            margin: "12px 0 6px",
+            margin: "var(--space-3) 0 var(--space-2)",
           }}
         >
           Empresas com ações registradas na B3
@@ -126,7 +126,10 @@ function Conteudo({ acoes }: { acoes: Parameters<typeof derivar>[0] }) {
           Tickers, escriturador atual (B3) e rastreabilidade do escriturador — data de início e escriturador
           anterior — segundo o Formulário Cadastral entregue à CVM.
         </p>
-        <div className="kpis" style={{ marginTop: 18, gridTemplateColumns: "repeat(5, minmax(0, 1fr))" }}>
+        <div
+          className="kpis"
+          style={{ marginTop: "var(--space-5)", gridTemplateColumns: "repeat(5, minmax(0, 1fr))" }}
+        >
           {stats.map(([v, l, c]) => (
             <div className="kpi" key={l} style={{ "--c": c } as React.CSSProperties}>
               <div className="val">{formatInt(v)}</div>

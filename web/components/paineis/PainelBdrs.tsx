@@ -419,7 +419,7 @@ function Conteudo({
                               height: 8,
                               borderRadius: 2,
                               background: TIPO_GRUPO_COR[t],
-                              marginRight: 6,
+                              marginRight: "var(--space-2)",
                             }}
                           />
                           {TIPO_GRUPO_NOME[t]}

@@ -240,7 +240,7 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
                                   height: 8,
                                   borderRadius: 2,
                                   background: corEscriturador(e),
-                                  marginRight: 6,
+                                  marginRight: "var(--space-2)",
                                 }}
                               />
                               {e}
