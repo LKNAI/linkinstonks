@@ -725,7 +725,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  border-top: 1px dashed var(--border);
+  border-top: 1px solid var(--border);
   pointer-events: none;
 }
 .gridline span {
@@ -790,6 +790,27 @@
 .mx span.yr {
   color: var(--text-muted);
   font-weight: var(--fw-bold);
+}
+
+.eixo-y {
+  display: none;
+}
+
+/* colunas rolam na horizontal em tela estreita; a dica e a leitura só aparecem onde fazem sentido */
+.rolagem-dica {
+  display: none;
+}
+.leitura {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
 }
 
 /* saldo de trocas (barras divergentes) */
@@ -1449,9 +1470,6 @@ svg.spark {
   .dv-h {
     grid-template-columns: 1fr 96px 1fr;
   }
-  .yx span:nth-child(even) {
-    visibility: hidden;
-  }
   .mcols,
   .mx {
     padding-left: 52px;
@@ -1459,9 +1477,6 @@ svg.spark {
   .gridline span {
     width: 50px;
     font-size: var(--fs-xs);
-  }
-  .mx span:nth-child(odd) {
-    visibility: hidden;
   }
   .mcols,
   .mx {
@@ -1844,5 +1859,60 @@ a.mc:focus-visible {
   }
   .btn.fsheet-ok {
     display: block;
+  }
+}
+
+/* colunas de 24 meses/17 anos: no celular cada coluna ganha 32 px (alvo de toque) e o gráfico rola, começando no mais recente */
+@media (max-width: 640px) {
+  .mchart {
+    --eixo-y: 52px;
+  }
+  .plot {
+    display: flex;
+  }
+  .eixo-y {
+    display: block;
+    position: relative;
+    flex: none;
+    width: var(--eixo-y);
+    height: 250px;
+    border-bottom: 1px solid transparent;
+  }
+  .eixo-y span {
+    position: absolute;
+    right: var(--space-1);
+    margin-bottom: calc(var(--space-2) * -1);
+    font-size: var(--fs-xs);
+    line-height: var(--lh-xs);
+    color: var(--text-subtle);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .rolagem {
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+  .mcols,
+  .mx {
+    width: calc(var(--n) * var(--space-8));
+    min-width: 100%;
+    padding-left: 0;
+  }
+  .yrs,
+  .yx {
+    width: calc(var(--n) * var(--space-8));
+    min-width: 100%;
+  }
+  .gridline span {
+    display: none;
+  }
+  .rolagem-dica {
+    display: block;
+    margin: var(--space-2) 0 0;
+    font-size: var(--fs-xs);
+    line-height: var(--lh-xs);
+    color: var(--text-subtle);
   }
 }

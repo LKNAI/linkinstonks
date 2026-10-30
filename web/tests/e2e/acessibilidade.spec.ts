@@ -80,6 +80,55 @@ test.describe("filtros em sheet (celular)", () => {
   });
 });
 
+test.describe("gráficos de colunas no celular", () => {
+  test.use({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
+
+  for (const rota of ["/bdrs/", "/acoes/", "/bdrs/TSLA34/"]) {
+    test(`${rota} não tem violações de WCAG 2.2 AA em 390 px (alvos de toque ≥ 24 px)`, async ({ page }) => {
+      await page.goto(rota);
+      await page.locator(".mcols .mc, .yrs .yr").first().waitFor();
+      expect(await auditar(page)).toEqual([]);
+    });
+  }
+
+  test("o gráfico mensal rola e começa no mês mais recente, com colunas de pelo menos 32 px", async ({
+    page,
+  }) => {
+    await page.goto("/bdrs/");
+    const rolagem = page.locator(".mchart .rolagem").first();
+    await rolagem.waitFor();
+    const m = await rolagem.evaluate((el) => ({
+      rolavel: el.scrollWidth > el.clientWidth,
+      fim: el.scrollLeft + el.clientWidth >= el.scrollWidth - 1,
+    }));
+    expect(m).toEqual({ rolavel: true, fim: true });
+    const largura = await page
+      .locator(".mcols .mc")
+      .first()
+      .evaluate((el) => el.getBoundingClientRect().width);
+    expect(largura).toBeGreaterThanOrEqual(24);
+  });
+
+  test("no detalhe, tocar numa coluna mostra o valor e só abre a B3 pelo link explícito", async ({
+    page,
+    context,
+  }) => {
+    await page.goto("/bdrs/TSLA34/");
+    const coluna = page.locator(".mcols .mc").last();
+    await coluna.waitFor();
+    let abriu = false;
+    context.on("page", () => (abriu = true));
+    await coluna.tap();
+    const leitura = page.locator(".leitura");
+    await expect(leitura).toBeVisible();
+    await expect(leitura.getByRole("link", { name: /Abrir arquivo oficial da B3/ })).toHaveAttribute(
+      "href",
+      /b3\.com\.br/,
+    );
+    expect(abriu).toBe(false);
+  });
+});
+
 test("no desktop os filtros ficam inline e o botão do sheet não aparece", async ({ page }) => {
   await page.goto("/bdrs/");
   await page.locator(".dtable tbody tr").first().waitFor();

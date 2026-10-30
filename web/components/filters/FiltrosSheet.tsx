@@ -4,21 +4,10 @@
 // na barra de filtros. Como diálogo modal (só no celular): foco vai para dentro, Tab circula, Esc e o fundo fecham,
 // e o foco volta ao botão que abriu.
 import { SlidersHorizontal, X } from "lucide-react";
-import { useCallback, useEffect, useId, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from "react";
+import { useMedia } from "@/lib/use-media";
 
 const CELULAR = "(max-width: 640px)";
-
-function useCelular(): boolean {
-  return useSyncExternalStore(
-    (aviso) => {
-      const m = window.matchMedia(CELULAR);
-      m.addEventListener("change", aviso);
-      return () => m.removeEventListener("change", aviso);
-    },
-    () => window.matchMedia(CELULAR).matches,
-    () => false,
-  );
-}
 
 const FOCAVEIS = 'button:not([disabled]), [href], input, select, [tabindex]:not([tabindex="-1"])';
 
@@ -32,7 +21,7 @@ export function FiltrosSheet({
   rotulo?: string;
   children: ReactNode;
 }) {
-  const celular = useCelular();
+  const celular = useMedia(CELULAR);
   const [aberto, setAberto] = useState(false);
   const painel = useRef<HTMLDivElement>(null);
   const gatilho = useRef<HTMLButtonElement>(null);
