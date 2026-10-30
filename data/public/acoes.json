@@ -1291,10 +1291,10 @@
 "inicio_aproximado": false,
 "n_escrituradores": 2
 },
-"indicador_mercado": "18",
+"indicador_mercado": "1",
 "pregao": "ARANDU",
 "razao_social": "ARANDU INVESTIMENTOS S.A.",
-"segmento": "NM",
+"segmento": "B",
 "setor": "Holdings Diversificadas",
 "situacao_cvm": "ATIVO",
 "tickers": [
@@ -11789,27 +11789,6 @@
 "ticker": "MTRE3"
 }
 ]
-},
-{
-"cnpj": "12.592.831/0001-89",
-"codigo_cvm": "26611",
-"detalhe_b3": true,
-"divergente_b3_cvm": false,
-"emissor": "MNLT",
-"escriturador_b3": {
-"bruto_on": "OLIVEIRA TRUST",
-"bruto_pn": "",
-"on": "Oliveira Trust",
-"pn": null
-},
-"escriturador_cvm": null,
-"indicador_mercado": "8",
-"pregao": "MNLT SA",
-"razao_social": "MNLT S.A.",
-"segmento": "BN",
-"setor": "Não Classificado",
-"situacao_cvm": "CANCELADA",
-"tickers": []
 },
 {
 "cnpj": "02.846.056/0001-97",

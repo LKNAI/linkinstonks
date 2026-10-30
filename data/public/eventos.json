@@ -1,4 +1,23 @@
 {
-"eventos": [],
+"eventos": [
+{
+"chave": "25887",
+"data": "2026-10-30",
+"dataset": "acoes",
+"de": "NM",
+"fonte": "B3",
+"para": "B",
+"tipo": "mudanca_segmento"
+},
+{
+"chave": "26611",
+"data": "2026-10-30",
+"dataset": "acoes",
+"de": "MNLT SA",
+"fonte": "B3",
+"para": null,
+"tipo": "deslistagem"
+}
+],
 "schema_version": 1
 }
