@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import { GraficoVolume } from "@/components/charts/GraficoVolume";
 import { Cartao, LinhaDoTempo, Lista, Migalhas } from "@/components/paineis/Detalhe";
 import { FonteVolume } from "@/components/paineis/FonteVolume";
@@ -46,23 +46,17 @@ export default async function Page({ params }: Props) {
     <div className="dash">
       <div className="wrap">
         <Migalhas
-          itens={[
-            { href: "/", texto: "Início" },
-            { href: "/acoes/", texto: "Ações" },
-            { href: "/acoes/tabela/", texto: "Tabela" },
-            { texto: c.pregao },
-          ]}
+          itens={[{ href: "/", texto: "Início" }, { href: "/acoes/", texto: "Ações" }, { texto: c.pregao }]}
         />
         <h1 className="page-title">{c.pregao}</h1>
         <p className="page-sub">
           {c.razao_social}. CNPJ {c.cnpj} · código CVM {c.codigo_cvm} ·{" "}
-          <Link
-            href={`/acoes/tabela/?q=${encodeURIComponent(normalizar(c.pregao))}`}
-            prefetch={false}
-            style={{ color: "var(--accent-2)", fontWeight: 600 }}
+          <LinkNovaAba
+            href={`/acoes/?q=${encodeURIComponent(normalizar(c.pregao))}#tabela-acoes`}
+            style={{ color: "var(--accent-hover)", fontWeight: 600 }}
           >
-            ver na tabela
-          </Link>
+            ver na lista
+          </LinkNovaAba>
         </p>
 
         <div className="grid">

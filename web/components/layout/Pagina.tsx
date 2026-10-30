@@ -1,15 +1,13 @@
 // Peças comuns das páginas de painel: hero, KPIs e estados de carregando/erro.
 import type { ReactNode } from "react";
 import type { Kpi } from "@/lib/acoes";
+import { ReguaProvider, ReguaSlot } from "./Regua";
 
 export function Hero({ selo, titulo, texto }: { selo: string; titulo: string; texto: string }) {
   return (
     <section className="hero">
       <div className="wrap">
-        <span className="eyebrow">
-          <i />
-          {selo}
-        </span>
+        <span className="eyebrow">{selo}</span>
         <h1>{titulo}</h1>
         <p>{texto}</p>
       </div>
@@ -17,21 +15,21 @@ export function Hero({ selo, titulo, texto }: { selo: string; titulo: string; te
   );
 }
 
-export function KpiGrid({ kpis }: { kpis: Kpi[] }) {
+export function KpiGrid({ kpis, rotulo = "Indicadores" }: { kpis: Kpi[]; rotulo?: string }) {
   return (
-    <div className="kpis" role="list" aria-label="Indicadores">
+    <div className="kpis" role="list" aria-label={rotulo}>
       {kpis.map((k) => (
         <div className="kpi" role="listitem" key={k.rotulo} style={{ "--c": k.cor } as React.CSSProperties}>
-          <div className="lbl">{k.rotulo}</div>
+          <div className="lbl">
+            {k.cor.startsWith("var(") ? null : (
+              <i className="dot" style={{ background: k.cor }} aria-hidden="true" />
+            )}
+            {k.rotulo}
+          </div>
           <div className="val">{k.valor}</div>
           <div className="sub" title={k.sub}>
             {k.sub}
           </div>
-          {k.p != null ? (
-            <div className="bar" aria-hidden="true">
-              <span style={{ width: `${(k.p * 100).toFixed(1)}%` }} />
-            </div>
-          ) : null}
         </div>
       ))}
     </div>
@@ -51,10 +49,13 @@ export interface HeroProps {
  */
 export function PaginaComHero({ hero, children }: { hero: HeroProps; children: ReactNode }) {
   return (
-    <div className="dash">
-      <Hero {...hero} />
-      {children}
-    </div>
+    <ReguaProvider>
+      <div className="dash">
+        <ReguaSlot />
+        <Hero {...hero} />
+        {children}
+      </div>
+    </ReguaProvider>
   );
 }
 
@@ -75,7 +76,7 @@ export function Carregando({
     >
       <p className="sr-only">{rotulo}</p>
       <div className="skeleton" />
-      <div className="skeleton" style={{ marginTop: 16, height: 320 }} />
+      <div className="skeleton" style={{ marginTop: "var(--space-4)", height: 320 }} />
     </div>
   );
 }

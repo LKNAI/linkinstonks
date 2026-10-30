@@ -3,8 +3,6 @@ import { expect, test, type Page } from "@playwright/test";
 const ROTAS = [
   { rota: "/", pronto: ".kpi" },
   { rota: "/acoes/", pronto: ".kpi" },
-  { rota: "/acoes/tabela/", pronto: ".dtable tbody tr" },
-  { rota: "/acoes/volume/", pronto: ".stats-table tbody tr" },
   { rota: "/bdrs/", pronto: ".kpi" },
   { rota: "/instituicoes/", pronto: ".stats-table tbody tr" },
   { rota: "/novidades/", pronto: ".state, .stats-table" },
@@ -83,15 +81,7 @@ test.describe("cabeçalhos de segurança e cache (vercel.json)", () => {
     expect((await request.get("/feed.xml")).headers()["cache-control"]).toContain("max-age=300");
   });
 
-  for (const rota of [
-    "/",
-    "/acoes/",
-    "/acoes/tabela/",
-    "/bdrs/",
-    "/acoes/9512/",
-    "/bdrs/TSLA34/",
-    "/status/",
-  ]) {
+  for (const rota of ["/", "/acoes/", "/bdrs/", "/acoes/9512/", "/bdrs/TSLA34/", "/status/"]) {
     test(`${rota} roda sem nenhuma violação da CSP, inclusive no download de CSV`, async ({ page }) => {
       await page.addInitScript(() => {
         (window as unknown as { __csp: string[] }).__csp = [];
@@ -101,7 +91,7 @@ test.describe("cabeçalhos de segurança e cache (vercel.json)", () => {
       });
       await page.goto(rota);
       await expect(page.locator(".kpi, .tl li, .mcols, .stats-table tbody tr").first()).toBeVisible();
-      if (rota === "/acoes/tabela/") {
+      if (rota === "/acoes/") {
         const [d] = await Promise.all([
           page.waitForEvent("download"),
           page.getByRole("button", { name: "Exportar CSV" }).click(),

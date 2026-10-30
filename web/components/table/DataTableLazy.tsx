@@ -14,7 +14,11 @@ export function DataTable<T extends RowData>(props: Parameters<typeof DataTableR
   return (
     <Suspense
       fallback={
-        <div role="status" className="p-6 text-[13px]" style={{ color: "var(--ink-3)", minHeight: 320 }}>
+        <div
+          role="status"
+          className="p-6 text-[length:var(--fs-sm)]"
+          style={{ color: "var(--text-subtle)", minHeight: 320 }}
+        >
           Carregando tabela…
         </div>
       }

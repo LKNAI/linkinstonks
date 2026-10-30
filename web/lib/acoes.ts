@@ -1,10 +1,17 @@
 // Lógica do painel de ações, portada de seed/etl/acoes/dash2_template.html como funções puras (testáveis).
-import { corEscriturador } from "@/lib/colors";
+import { COR_NEUTRA, coresDoConjunto, corEscriturador } from "@/lib/colors";
 import { montarCsv } from "@/lib/csv";
 import { formatDate, formatInt, formatPct } from "@/lib/format";
-import { HISTORICO, HISTORICO_COR, SEGMENTO_COR, SEGMENTO_NOME, type Historico } from "@/lib/palette";
+import {
+  CAT_COR,
+  HISTORICO,
+  HISTORICO_COR,
+  SEGMENTO_COR,
+  SEGMENTO_NOME,
+  type Historico,
+} from "@/lib/palette";
 import { CLASSES } from "@/lib/constantes";
-import type { Acao } from "@/lib/schemas";
+import type { Acao, VolumeCompanhia } from "@/lib/schemas";
 
 export const SEM_INFORMACAO = "Não informado";
 export const ANO_INICIAL = 2010;
@@ -21,12 +28,19 @@ export interface AcaoRow extends Acao {
   outE: string | null;
   since: string;
   ix: string;
+  /** Volume negociado (acoes_volume.json); null quando a companhia não tem negócios nos 24 meses. */
+  vol: VolumeCompanhia | null;
+  v24: number | null;
+  /** Volume do último mês fechado. */
+  vUlt: number | null;
 }
 
 export const normalizar = (s: string): string => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
-export function derivar(acoes: readonly Acao[]): AcaoRow[] {
+export function derivar(acoes: readonly Acao[], volumes?: readonly VolumeCompanhia[]): AcaoRow[] {
+  const porCvm = new Map((volumes ?? []).map((v) => [v.codigo_cvm, v]));
   return acoes.map((d) => {
+    const vol = porCvm.get(d.codigo_cvm) ?? null;
     const b3 = d.escriturador_b3;
     const f = d.escriturador_cvm;
     const b = b3.on ?? b3.pn ?? SEM_INFORMACAO;
@@ -51,6 +65,9 @@ export function derivar(acoes: readonly Acao[]): AcaoRow[] {
       inE: f?.anterior ? f.atual : null,
       outE: f?.anterior ? f.anterior : null,
       since: f?.inicio ?? "",
+      vol,
+      v24: vol ? vol.volume_24m : null,
+      vUlt: vol ? (vol.volume_mensal.at(-1) ?? 0) : null,
       ix: normalizar(
         [
           d.pregao,
@@ -154,13 +171,14 @@ export function fatiasPorBanco(rows: readonly AcaoRow[]): Fatia[] {
     c[d.b] = (c[d.b] ?? 0) + 1;
     tk[d.b] = (tk[d.b] ?? 0) + d.tickers.length;
   }
+  const cor = coresDoConjunto(Object.keys(c));
   return Object.keys(c)
     .sort((a, b) => c[b] - c[a] || a.localeCompare(b, "pt"))
     .map((k) => ({
       k,
       label: k,
       n: c[k],
-      color: corEscriturador(k),
+      color: cor(k),
       extra: [["Tickers", formatInt(tk[k])]],
     }));
 }
@@ -211,34 +229,34 @@ export function kpisAcoes(rows: readonly AcaoRow[], total: number, anoRef: numbe
       rotulo: "Negociadas (com ticker)",
       valor: formatInt(comTicker),
       sub: `${formatInt(tickers)} tickers de ações`,
-      cor: "#0B3D91",
+      cor: "var(--accent)",
       p: n ? comTicker / n : 0,
     },
     {
       rotulo: "Com histórico na CVM",
       valor: formatInt(cvm.length),
       sub: `${formatPct(cvm.length, n)} das empresas filtradas`,
-      cor: "#1baf7a",
+      cor: "var(--accent)",
       p: n ? cvm.length / n : 0,
     },
     {
       rotulo: "Trocaram de escriturador",
       valor: formatPct(trocaram, cvm.length),
       sub: `${formatInt(trocaram)} empresas desde ${ANO_INICIAL}`,
-      cor: "#6250d6",
+      cor: "var(--accent)",
       p: cvm.length ? trocaram / cvm.length : 0,
     },
     {
       rotulo: `Trocas desde ${anoRecente}`,
       valor: formatInt(recentes),
       sub: `escriturador atual assumiu em ${anoRecente}+`,
-      cor: "#e0413f",
+      cor: "var(--accent)",
     },
     {
       rotulo: "Maior escriturador",
       valor: lider ? formatPct(lider[1], n) : "—",
       sub: lider ? `${lider[0]} · ${formatInt(lider[1])}` : "sem dados",
-      cor: lider ? corEscriturador(lider[0]) : "#A3A2B5",
+      cor: lider ? corEscriturador(lider[0]) : COR_NEUTRA,
       p: lider && n ? lider[1] / n : 0,
     },
   ];
@@ -333,7 +351,113 @@ export function ordemDasInstituicoes(todas: readonly AcaoRow[], conhecidas: read
   return [...new Set([...conhecidas, ...Object.keys(rank)])].sort((a, b) => (rank[b] ?? 0) - (rank[a] ?? 0));
 }
 
+// ------------------------------------------------------------------------------------------- volume
+/** Volume mensal somado das companhias do filtro (24 meses fechados) e do mês corrente parcial. */
+export function volumeMensalDe(
+  rows: readonly AcaoRow[],
+  nMeses: number,
+): { mensal: number[]; parcial: number | null; comVolume: number } {
+  const mensal = Array<number>(nMeses).fill(0);
+  let parcial: number | null = null;
+  let comVolume = 0;
+  for (const d of rows) {
+    if (!d.vol) continue;
+    comVolume++;
+    d.vol.volume_mensal.forEach((v, i) => (mensal[i] += v));
+    if (d.vol.volume_mes_parcial != null) parcial = (parcial ?? 0) + d.vol.volume_mes_parcial;
+  }
+  return { mensal, parcial, comVolume };
+}
+
+/** Volume de 24 meses por escriturador atual (fatias do donut "volume por escriturador"). */
+export function fatiasVolumePorBanco(rows: readonly AcaoRow[]): Fatia[] {
+  const v: Record<string, number> = {};
+  const q: Record<string, number> = {};
+  for (const d of rows) {
+    if (!d.v24) continue;
+    v[d.b] = (v[d.b] ?? 0) + d.v24;
+    q[d.b] = (q[d.b] ?? 0) + 1;
+  }
+  const cor = coresDoConjunto(Object.keys(v));
+  return Object.keys(v)
+    .sort((a, b) => v[b] - v[a] || a.localeCompare(b, "pt"))
+    .map((k) => ({ k, label: k, n: v[k], color: cor(k), extra: [["Empresas", formatInt(q[k])]] }));
+}
+
+/** Volume de 24 meses por segmento de listagem. */
+export function fatiasVolumePorSegmento(rows: readonly AcaoRow[]): Fatia[] {
+  const v: Record<string, number> = {};
+  const q: Record<string, number> = {};
+  for (const d of rows) {
+    if (!d.v24) continue;
+    v[d.segmento] = (v[d.segmento] ?? 0) + d.v24;
+    q[d.segmento] = (q[d.segmento] ?? 0) + 1;
+  }
+  return Object.keys(SEGMENTO_NOME)
+    .filter((k) => v[k])
+    .map((k) => ({
+      k,
+      label: SEGMENTO_NOME[k],
+      n: v[k],
+      color: SEGMENTO_COR[k],
+      extra: [["Empresas", formatInt(q[k])]],
+    }));
+}
+
+/** Companhias de maior volume nos 24 meses; `todas` traz todas as que têm volume, em ordem decrescente. */
+export function rankingVolume(
+  rows: readonly AcaoRow[],
+  n = 15,
+): { itens: { d: AcaoRow; volume: number }[]; todas: { d: AcaoRow; volume: number }[]; total: number } {
+  const todas = rows
+    .filter((d) => d.v24)
+    .map((d) => ({ d, volume: d.v24 as number }))
+    .sort((a, b) => b.volume - a.volume || a.d.pregao.localeCompare(b.d.pregao, "pt"));
+  return { itens: todas.slice(0, n), todas, total: todas.reduce((a, x) => a + x.volume, 0) };
+}
+
+export interface ConcentracaoVolume {
+  cortes: { n: number; cor: string; parte: number }[];
+  precisam80: number;
+  comVolume: number;
+}
+
+/** Quanto do volume cabe nas N maiores companhias (`ordenadas` em ordem decrescente de volume). */
+export function concentracaoVolume(
+  ordenadas: readonly { volume: number }[],
+  total: number,
+): ConcentracaoVolume {
+  const cortes = ([1, 5, 10, 50] as const).map((n, i) => ({
+    n,
+    cor: CAT_COR[i],
+    parte: total ? ordenadas.slice(0, n).reduce((a, x) => a + x.volume, 0) / total : 0,
+  }));
+  let acc = 0;
+  let precisam80 = ordenadas.length;
+  for (let i = 0; i < ordenadas.length; i++) {
+    acc += ordenadas[i].volume;
+    if (acc >= total * 0.8) {
+      precisam80 = i + 1;
+      break;
+    }
+  }
+  return { cortes, precisam80, comVolume: ordenadas.length };
+}
+
 // ------------------------------------------------------------------------------------------- tabela
+/** Colunas que começam em ordem crescente (texto); as demais (números) começam do maior para o menor. */
+export const COLUNAS_TEXTO_ACOES = [
+  "pregao",
+  "tickers",
+  "b",
+  "since",
+  "prev",
+  "segmento",
+  "setor",
+  "cnpj",
+  "codigo_cvm",
+];
+
 export function ordenar(rows: readonly AcaoRow[], { k, dir }: Ordem): AcaoRow[] {
   const val = (d: AcaoRow): string | number => {
     switch (k) {
@@ -353,6 +477,10 @@ export function ordenar(rows: readonly AcaoRow[], { k, dir }: Ordem): AcaoRow[] 
         return d.cnpj || "~";
       case "codigo_cvm":
         return d.codigo_cvm || "~";
+      case "v24":
+        return d.v24 ?? -1;
+      case "vUlt":
+        return d.vUlt ?? -1;
       default:
         return d.pregao || "~";
     }
@@ -415,10 +543,14 @@ const CSV_ACOES = [
   "Nº escrituradores desde 2010",
 ] as const; // fmt: skip
 
-/** CSV da visão filtrada e ordenada. `comCodigoCvm` acrescenta a coluna "Código CVM" (tabela completa). */
-export function csvAcoes(rows: readonly AcaoRow[], comCodigoCvm: boolean): string {
+/**
+ * CSV da visão filtrada e ordenada. `comCodigoCvm` acrescenta a coluna "Código CVM" e `comVolume`, o volume
+ * de 24 meses e o do último mês (em R$; vazio quando a companhia não tem negócios no período).
+ */
+export function csvAcoes(rows: readonly AcaoRow[], comCodigoCvm: boolean, comVolume = false): string {
   const cab: string[] = [...CSV_ACOES];
   if (comCodigoCvm) cab.splice(4, 0, "Código CVM");
+  if (comVolume) cab.push("Volume 24m (R$)", "Volume do último mês (R$)");
   const linhas = rows.map((d) => {
     const f = d.escriturador_cvm;
     const l: unknown[] = [
@@ -442,6 +574,7 @@ export function csvAcoes(rows: readonly AcaoRow[], comCodigoCvm: boolean): strin
       f?.n_escrituradores ?? "",
     ]; // fmt: skip
     if (comCodigoCvm) l.splice(4, 0, d.codigo_cvm);
+    if (comVolume) l.push(d.v24 ?? "", d.vUlt ?? "");
     return l;
   });
   return montarCsv(cab, linhas);

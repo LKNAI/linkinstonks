@@ -1,15 +1,21 @@
-// Cores de categoria (seção 11.3). As cores das INSTITUIÇÕES vêm de lib/colors.ts (gerado do YAML).
+// Cores de categoria (rampa ameixa da direção A). Espelham os tokens `--cat-*` de styles/tokens.css
+// (o teste tests/unit/palette.test.ts garante que não divergem). As cores das INSTITUIÇÕES vêm de lib/colors.ts.
 import type { Bdr } from "@/lib/schemas";
 
+export const CAT_COR = ["#5a265e", "#99419f", "#c175c7", "#c9cfdb"] as const; // --cat-1..3 e --cat-none
+export const CAT_ALT_COR = ["#5b6578", "#7a8499", "#98a1b4", "#b3bacb"] as const; // --cat-alt-1..4
+export const COR_SEM_DADOS = CAT_COR[3];
+export const COR_TEXTO = "#141a2a"; // --text
+
 export const SEGMENTO_COR: Record<string, string> = {
-  NM: "#4a3aa7",
-  N2: "#8f80e6",
-  N1: "#c4bcf3",
-  MP: "#e87ba4",
-  B: "#1baf7a",
-  SO: "#eda100",
-  BN: "#9aa3b5",
-  "?": "#d3d2de",
+  NM: CAT_COR[0],
+  N2: CAT_COR[1],
+  N1: CAT_COR[2],
+  MP: CAT_ALT_COR[0],
+  B: CAT_ALT_COR[1],
+  SO: CAT_ALT_COR[2],
+  BN: CAT_ALT_COR[3],
+  "?": COR_SEM_DADOS,
 };
 
 export const SEGMENTO_NOME: Record<string, string> = {
@@ -26,9 +32,9 @@ export const SEGMENTO_NOME: Record<string, string> = {
 export const HISTORICO = ["Trocou de escriturador", "Sem troca registrada", "Sem dados na CVM"] as const;
 export type Historico = (typeof HISTORICO)[number];
 export const HISTORICO_COR: Record<Historico, string> = {
-  "Trocou de escriturador": "#6250d6",
-  "Sem troca registrada": "#1baf7a",
-  "Sem dados na CVM": "#d3d2de",
+  "Trocou de escriturador": CAT_COR[0],
+  "Sem troca registrada": CAT_COR[2],
+  "Sem dados na CVM": COR_SEM_DADOS,
 };
 
 /** Painel de BDRs agrupa DR1/DR2/DR3 em "Patrocinado" (SPO). */
@@ -38,16 +44,20 @@ export const TIPO_GRUPO_NOME: Record<TipoGrupo, string> = {
   DRE: "ETF",
   SPO: "Patrocinado",
 };
-export const TIPO_GRUPO_COR: Record<TipoGrupo, string> = { DRN: "#6250d6", DRE: "#1baf7a", SPO: "#eda100" };
+export const TIPO_GRUPO_COR: Record<TipoGrupo, string> = {
+  DRN: CAT_COR[0],
+  DRE: CAT_COR[2],
+  SPO: CAT_COR[1],
+};
 export const grupoDoTipo = (t: Bdr["tipo"]): TipoGrupo => (t === "DRN" || t === "DRE" ? t : "SPO");
 
 export const CATEGORIA_SEM = "Sem categoria";
 export const CATEGORIA_COR: Record<string, string> = {
-  "Renda Variável": "#2a78d6",
-  "Renda Fixa": "#e87ba4",
-  Commodities: "#eda100",
-  Moeda: "#14b8a6",
-  [CATEGORIA_SEM]: "#B9B8C7",
+  "Renda Variável": CAT_COR[0],
+  "Renda Fixa": CAT_COR[1],
+  Commodities: CAT_COR[2],
+  Moeda: CAT_ALT_COR[0], // 4ª classe: a rampa foi validada com 3 passos; segue neutro, sempre com rótulo
+  [CATEGORIA_SEM]: COR_SEM_DADOS,
 };
 
 /** Ordem em que as depositárias aparecem no donut. */
@@ -65,9 +75,12 @@ export const contraste = (a: string, b: string): number => {
   return (x + 0.05) / (y + 0.05);
 };
 
-/** Cor do texto (branco ou o grafite do site) com contraste AA sobre um fundo de categoria. */
+/**
+ * Cor do texto sobre um fundo de categoria ou de marca: branco, o grafite do site ou, só quando nenhum dos dois
+ * chega a 4,5:1 (azul do Mercantil), preto. Devolve o primeiro que passa em AA.
+ */
 export const textoSobre = (fundo: string): string =>
-  contraste("#ffffff", fundo) >= 4.5 ? "#ffffff" : "#16152b";
+  ["#ffffff", COR_TEXTO, "#000000"].find((t) => contraste(t, fundo) >= 4.5) ?? "#000000";
 
 /** Escurece `hex` (misturando com preto) até atingir `minimo`:1 de contraste sobre branco; devolve a própria cor se já passa. */
 export const legivelSobreBranco = (hex: string, minimo = 3): string => {

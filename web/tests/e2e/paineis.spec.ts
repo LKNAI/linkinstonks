@@ -107,19 +107,79 @@ test.describe("/acoes", () => {
   });
 });
 
-test.describe("/acoes/tabela", () => {
-  test("filtros independentes e CSV com a coluna Código CVM", async ({ page }) => {
-    await page.goto("/acoes/tabela/");
+test.describe("/acoes: filtros da antiga tabela e volume", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto("/acoes/");
     await expect(page.locator(".dtable tbody tr").first()).toBeVisible();
+  });
+
+  test("os seletores filtram a tabela e o CSV traz Código CVM e volume", async ({ page }) => {
     const todas = await totalDaTabela(page);
     await page.getByRole("combobox", { name: "Histórico" }).selectOption("Trocou de escriturador");
     const trocaram = await totalDaTabela(page);
     expect(trocaram).toBeLessThan(todas);
     await expect(page).toHaveURL(/hist=/);
+    await expect(page.getByRole("button", { name: /Remover filtro Histórico/ })).toBeVisible();
     const linhas = await csvBaixado(page, "Exportar CSV");
-    expect(linhas[0].split(";")).toContain("Código CVM");
+    const cab = linhas[0].split(";");
+    expect(cab).toContain("Código CVM");
+    expect(cab).toContain("Volume 24m (R$)");
     expect(linhas).toHaveLength(trocaram + 1);
     await expect(page.getByRole("columnheader", { name: "Cód. CVM" })).toBeVisible();
+    await expect(page.getByRole("columnheader", { name: "Volume 24m" })).toBeVisible();
+  });
+
+  test("links antigos da tabela (prev, seg) ainda filtram", async ({ page }) => {
+    await page.goto("/acoes/?seg=NM");
+    await expect(page.getByRole("button", { name: /Remover filtro Segmento: Novo Mercado/ })).toBeVisible();
+  });
+
+  test("o volume reage aos filtros: o KPI e o ranking acompanham o escriturador escolhido", async ({
+    page,
+  }) => {
+    const kpi = () => page.getByRole("list", { name: "Indicadores de volume" }).locator(".kpi .val").first();
+    const antes = await kpi().textContent();
+    await page
+      .getByRole("group", { name: /participação por escriturador/i })
+      .getByRole("button", { name: /Banco Bradesco/ })
+      .click();
+    await expect(kpi()).not.toHaveText(antes ?? "");
+    await expect(page.locator(".bars.rank .brow").first()).toBeVisible();
+  });
+
+  test("volume: a barra do gráfico mensal abre a fonte oficial e o ranking filtra a tabela", async ({
+    page,
+  }) => {
+    const barras = page.locator("a.mc");
+    await expect(barras).toHaveCount(25); // 24 meses fechados + mês corrente parcial
+    await expect(barras.nth(23)).toHaveAttribute("href", /\/InstDados\/SerHist\/COTAHIST_M\d{6}\.ZIP$/);
+    await expect(barras.nth(23)).toHaveAttribute(
+      "aria-label",
+      /ações no filtro, .*Abrir a fonte oficial na B3/,
+    );
+    await expect(page.locator(".bars.rank .brow")).toHaveCount(15);
+    await expect(page.locator(".bars.rank .brow").first()).toContainText("PETR");
+    await expect(page.locator("section", { hasText: "Fonte do volume e como conferir" })).toContainText(
+      "VOLTOT",
+    );
+    await page.locator(".bars.rank .brow").first().click();
+    await expect(page).toHaveURL(/q=petro/);
+    await expect(page.locator(".dtable tbody tr").first()).toContainText("PETROBRAS");
+  });
+
+  test("o mês parcial vem com aviso de que não está reconciliado com o arquivo mensal", async ({ page }) => {
+    await expect(
+      page.locator(".card", { hasText: "Volume financeiro mensal" }).locator(".note"),
+    ).toContainText(/é parcial: soma de \d+ arquivos diários/);
+  });
+
+  test("ordenar por volume põe o maior primeiro e empresas sem volume mostram traço", async ({ page }) => {
+    await page.getByRole("button", { name: /^Volume 24m/ }).dispatchEvent("click");
+    await expect(page.getByRole("columnheader", { name: "Volume 24m" })).toHaveAttribute(
+      "aria-sort",
+      "descending",
+    );
+    await expect(page.locator(".dtable tbody tr").first()).toContainText("PETROBRAS");
   });
 });
 

@@ -36,7 +36,6 @@ const porta = servidor.address().port;
 const rotas = [
   ["capa", "/"],
   ["acoes", "/acoes/"],
-  ["acoes-tabela", "/acoes/tabela/"],
   ["bdrs", "/bdrs/"],
   ["acao-detalhe", "/acoes/9512/"],
   ["bdr-detalhe", "/bdrs/TSLA34/"],
@@ -44,6 +43,7 @@ const rotas = [
   ["novidades", "/novidades/"],
   ["status", "/status/"],
   ["sobre", "/sobre/"],
+  ["design", "/design/"],
 ];
 const telas = [
   ["1440", { width: 1440, height: 900 }],

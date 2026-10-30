@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import { TooltipProvider } from "@/components/charts/Tooltip";
 import { SiteFooter, SiteHeader, StaleBanner } from "@/components/layout/SiteChrome";
 import "./dashboard.css";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({ variable: "--font-jakarta", subsets: ["latin"], display: "swap" });
-const jetbrains = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"], display: "swap" });
+const plexSans = IBM_Plex_Sans({
+  variable: "--font-plex-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: { default: "linkinstonks", template: "%s · linkinstonks" },
@@ -16,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${jakarta.variable} ${jetbrains.variable}`}>
+    <html lang="pt-BR" className={`${plexSans.variable} ${plexMono.variable}`}>
       <body className="flex min-h-screen flex-col">
         <TooltipProvider>
           <SiteHeader />

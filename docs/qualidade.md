@@ -18,7 +18,7 @@ Lighthouse 13.5.0, mobile (4× de CPU e rede 4G simulados), nesta máquina de de
 |---|---|---|---|---|---|
 | `/` | 58 | 98 | 4,7 s | 1,25 s | 0 |
 | `/acoes/` | 68 | 95 | 3,6 s | 0,93 s | 0 |
-| `/acoes/tabela/` | 74 | 98 | 3,6 s | 0,60 s | 0 |
+| `/acoes/tabela/` (removida; unida a `/acoes/`) | 74 | 98 | 3,6 s | 0,60 s | 0 |
 | `/bdrs/` | 60 | 95 | 4,4 s | 1,15 s | 0 |
 | `/bdrs/{ticker}` | 74 | 94 | 3,5 s | 0,71 s | 0 |
 | `/acoes/{codigo}` | 76 | 98 | 3,5 s | 0,62 s | 0 |
@@ -38,6 +38,8 @@ Em 2026-10-29, pagespeed.web.dev (Lighthouse 13.6.0, Moto G Power emulado, 4G le
 | `/bdrs/` | computador | 100 | 100 | 100 | 100 | 0,2 s | 30 ms | 0 |
 
 Os relatórios em PDF foram salvos pelo dono em `various/` (fora do Git). A Acessibilidade de 96 a 98 no celular vem do landmark `<main>` ausente na época da medição, corrigido no commit seguinte (`7bda5b3`); convém remedir.
+
+A medição de `/acoes/` acima é anterior à unificação com a Tabela e o Volume de ações (2026-10-30): a página carrega agora também `acoes_volume.json` e mais gráficos (JS de 197,5 KB, Lighthouse local 58 contra 68 antes), então precisa ser remedida no PageSpeed Insights depois do deploy.
 
 ### Medição local no site em produção (Vercel)
 Mesma máquina e mesmo Lighthouse, contra `https://linkinstonks.vercel.app` (compressão e CDN reais): `/sobre/` **89**, `/` 79, `/bdrs/{ticker}` 76, `/acoes/` 67, `/bdrs/` 64; Acessibilidade 94 a 98, Melhores Práticas 100, SEO 100, CLS 0. A página sem dados chega perto de 90; os painéis com dados ficam entre 64 e 79.

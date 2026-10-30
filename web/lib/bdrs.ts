@@ -1,9 +1,10 @@
 // Lógica do painel de BDRs, portada de seed/etl/bdrs/template.html como funções puras (testáveis).
 // Diferença deliberada: volumes chegam em R$ (o seed usava R$ mil) e os 24 meses vêm de `doc.meses`.
-import { corDepositaria } from "@/lib/colors";
+import { COR_NEUTRA, corDepositaria } from "@/lib/colors";
 import { montarCsv } from "@/lib/csv";
 import { formatDinheiro, formatInt, formatPct, rotuloMes, variacao, type Variacao } from "@/lib/format";
 import {
+  CAT_COR,
   CATEGORIA_COR,
   CATEGORIA_SEM,
   DEPOSITARIAS,
@@ -134,31 +135,31 @@ export function kpisBdrs(
         rotulo: "Volume em 24 meses",
         valor: formatDinheiro(total),
         sub: `média de ${formatDinheiro(total / (meses.length || 1))} por mês`,
-        cor: "#2a5bd7",
+        cor: "var(--accent)",
       },
       {
         rotulo: `Volume em ${rot}`,
         valor: formatDinheiro(mesAtual),
         sub: `${vMes.texto} vs ${rotuloMes(meses[ult - 12] ?? "")}`,
-        cor: "#1baf7a",
+        cor: "var(--accent)",
       },
       {
         rotulo: "Últimos 12 × 12 anteriores",
         valor: vAnos.texto || "—",
         sub: `${formatDinheiro(y1)} vs ${formatDinheiro(y0)}`,
-        cor: "#eda100",
+        cor: "var(--accent)",
       },
       {
         rotulo: "Maior depositária",
         valor: lider ? formatPct(lider[1], total) : "—",
         sub: lider ? `${lider[0]} · ${formatDinheiro(lider[1])}` : "",
-        cor: lider ? corDepositaria(lider[0]) : "#B9B8C7",
+        cor: lider ? corDepositaria(lider[0]) : COR_NEUTRA,
       },
       {
         rotulo: "BDR mais negociado",
         valor: topo?.ticker ?? "—",
         sub: topo ? `${topo.nome} · ${formatDinheiro(topo.tot)}` : "",
-        cor: "#b444b5",
+        cor: "var(--accent)",
       },
     ],
   };
@@ -240,7 +241,7 @@ export function fatiasCategoria(rowsSemCat: readonly BdrRow[]): Fatia[] {
     k,
     label: k,
     n: v[k],
-    color: CATEGORIA_COR[k] ?? "#B9B8C7",
+    color: CATEGORIA_COR[k] ?? COR_NEUTRA,
     extra: [["ETFs", formatInt(c[k])]],
   }));
 }
@@ -277,10 +278,10 @@ export interface Concentracao {
 
 export function concentracao(todos: readonly BdrRow[], total: number, f: FiltrosBdrs): Concentracao {
   const cores: [number, string][] = [
-    [1, "#b444b5"],
-    [5, "#6250d6"],
-    [10, "#2a78d6"],
-    [50, "#1baf7a"],
+    [1, CAT_COR[0]],
+    [5, CAT_COR[1]],
+    [10, CAT_COR[2]],
+    [50, CAT_COR[3]],
   ]; // fmt: skip
   const parte = (n: number) =>
     total ? todos.slice(0, n).reduce((a, d) => a + volumeDe(d, f), 0) / total : 0;

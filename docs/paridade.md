@@ -4,7 +4,7 @@ Checklist obrigatório da seção 11.2 do prompt. Origem: leitura integral dos t
 
 Legenda: `[ ]` a portar · `[x]` portado (Fase 4) e coberto por teste unitário ou e2e · **Δ** = comportamento do seed que precisa mudar na versão nova (ver seção 4).
 
-Referências: **A** = `dashboard_acoes_b3.html` → rota `/acoes` · **T** = `empresas_acoes_b3.html` → rota `/acoes/tabela` · **B** = `dashboard_bdrs_b3.html` → rota `/bdrs`.
+Referências: **A** = `dashboard_acoes_b3.html` → rota `/acoes` · **T** = `empresas_acoes_b3.html` → unida a `/acoes` (a rota `/acoes/tabela` redireciona para `/acoes/`) · **B** = `dashboard_bdrs_b3.html` → rota `/bdrs`.
 
 ## 1. Dashboard de ações (A) — `/acoes`
 
@@ -48,13 +48,14 @@ Referências: **A** = `dashboard_acoes_b3.html` → rota `/acoes` · **T** = `em
 - [x] Exportar CSV da visão filtrada **e ordenada** (`;`, BOM UTF-8, 18 colunas, nome `escrituradores_b3_cvm.csv`)
 - [x] Rodapé com fontes e notas metodológicas. **Δ** contém números fixos ("141 empresas")
 
-## 2. Tabela de ações (T) — `/acoes/tabela`
-- [x] Cabeçalho com 5 estatísticas (emissoras, com ticker, tickers, com histórico CVM, trocaram desde 2010)
-- [x] Barra fixa (sticky) de filtros: busca; select de escriturador atual **com contagem**; select de escriturador anterior **com contagem**; select de histórico; select de segmento **com contagem**; "Somente com ticker"
+## 2. Tabela de ações (T) — agora dentro de `/acoes`
+**Δ** Decisão do dono (2026-10-30): a Tabela e o Volume de ações viraram uma só aba, `/acoes`. `/acoes/tabela` e `/acoes/volume` redirecionam (`web/vercel.json`); os links antigos `?prev=` e `?seg=` continuam valendo. O volume (gráfico mensal, KPIs, ranking, concentração e colunas da tabela) reage aos mesmos filtros.
+- [x] ~~Cabeçalho com 5 estatísticas~~ **Δ** saíram: repetiam os KPIs do painel (empresas, negociadas, histórico CVM, trocaram)
+- [x] Filtros: busca; select de escriturador atual **com contagem**; select de escriturador anterior **com contagem**; select de histórico; select de segmento **com contagem**; "Somente com ticker". No celular ficam no sheet de filtros
 - [x] Mesmas colunas de A **mais Cód. CVM** (9 colunas)
 - [x] Mesmas regras de célula, ordenação e selo "CVM indica"
 - [x] CSV com 19 colunas (inclui Código CVM)
-- [x] Os filtros **não** são cruzados com gráficos (não há gráficos); são independentes e combinados com AND
+- [x] **Δ** Os filtros agora **são** cruzados com os gráficos do painel (mesmo estado, na URL), combinados com AND
 
 ## 3. Dashboard de BDRs (B) — `/bdrs`
 

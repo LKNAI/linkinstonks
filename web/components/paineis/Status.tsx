@@ -40,12 +40,14 @@ export function Status() {
       <div className="wrap">
         <Migalhas itens={[{ href: "/", texto: "Início" }, { texto: "Status dos dados" }]} />
         <h1 className="page-title">Status dos dados</h1>
-        <p className="page-sub">
+        <p className="status-resumo">
           {atrasos.length ? (
             <span className="badge warn">⚠ {atrasos.length} fonte(s) com atraso</span>
           ) : (
             <span className="badge ok">Todas as fontes em dia</span>
-          )}{" "}
+          )}
+        </p>
+        <p className="page-sub">
           Atualizado automaticamente pelo GitHub Actions; o histórico das execuções fica na aba Actions do
           repositório.
         </p>

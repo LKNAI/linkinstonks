@@ -48,32 +48,37 @@ export function Capa() {
   const kB = kpisBdrs(linhasB, bdrs.dados.meses).kpis;
   const destaques: Kpi[] = [kA[0], kA[2], kA[3], kB[0], kB[1], kB[4]].map((k, i) => ({
     ...k,
-    rotulo: i < 3 ? `Ações · ${k.rotulo}` : `BDRs · ${k.rotulo}`,
+    // na capa não há filtro: o rótulo e o complemento falam do conjunto inteiro
+    rotulo: `${i < 3 ? "Ações" : "BDRs"} · ${k.rotulo.replace(" no filtro", "")}`,
+    sub: k.sub.replace("das empresas filtradas", "das empresas").replace(/ filtradas?\b/, ""),
   }));
 
   return (
     <PaginaComHero hero={HERO}>
       <div className="wrap">
         <KpiGrid kpis={destaques} />
-        <div className="grid" style={{ marginTop: 24 }}>
+        <div className="grid" style={{ marginTop: "var(--space-6)" }}>
           <section className="card c4" aria-labelledby="atalhos">
             <h2 id="atalhos">Painéis</h2>
             <p className="desc">Comece por aqui</p>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 10 }}>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "var(--space-3)" }}>
               <li>
                 <Link prefetch={false} className="btn" href="/acoes/">
-                  Ações: escrituradores
+                  Ações: escrituradores e volume
                 </Link>
-              </li>
-              <li>
-                <Link prefetch={false} className="btn" href="/acoes/tabela/">
-                  Tabela completa de ações
-                </Link>
+                <p className="hint">Quem escritura cada empresa, trocas desde 2010 e volume em 24 meses.</p>
               </li>
               <li>
                 <Link prefetch={false} className="btn" href="/bdrs/">
                   BDRs: depositárias e volume
                 </Link>
+                <p className="hint">Banco depositário de cada programa e volume financeiro mensal.</p>
+              </li>
+              <li>
+                <Link prefetch={false} className="btn" href="/instituicoes/">
+                  Instituições
+                </Link>
+                <p className="hint">Quem ganhou e quem perdeu clientes, por escriturador e depositária.</p>
               </li>
             </ul>
           </section>
@@ -87,7 +92,7 @@ export function Capa() {
                   .sort((a, b) => a[0].localeCompare(b[0]))
                   .map(([k, f]) => (
                     <tr key={k}>
-                      <th scope="row" style={{ textAlign: "left", fontWeight: 600 }}>
+                      <th scope="row" style={{ textAlign: "left", fontWeight: "var(--fw-semibold)" }}>
                         {NOME_FONTE[k] ?? k}
                       </th>
                       <td>{f.status === "ok" ? formatDate(f.ultimo_sucesso ?? "") : `${f.status}`}</td>
@@ -101,7 +106,15 @@ export function Capa() {
             <h2 id="novidades">Últimas mudanças</h2>
             <p className="desc">Trocas de escriturador, novas listagens e outros eventos</p>
             {eventos.estado === "ok" && eventos.dados.eventos.length ? (
-              <ul style={{ margin: 0, paddingLeft: 18, display: "grid", gap: 6, fontSize: 13 }}>
+              <ul
+                style={{
+                  margin: 0,
+                  paddingLeft: "var(--space-5)",
+                  display: "grid",
+                  gap: "var(--space-2)",
+                  fontSize: "var(--fs-sm)",
+                }}
+              >
                 {eventos.dados.eventos.slice(0, 6).map((e, i) => (
                   <li key={i}>
                     <b>{formatDate(e.data)}</b> · {e.tipo.replaceAll("_", " ")} · {e.chave}

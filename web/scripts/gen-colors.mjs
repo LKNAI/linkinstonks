@@ -25,6 +25,13 @@ const mapa = (campo) =>
     .map((i) => `  ${JSON.stringify(i.nome_curto)}: ${JSON.stringify(i[campo])},`)
     .join("\n");
 
+// Pares de marcas que se confundem lado a lado (ΔE2000 < 15). A cor base do YAML não muda: a variante só vale quando
+// os dois membros aparecem no mesmo gráfico. Valores e validação em docs/design-auditoria.md (seção 5.4).
+const PARES = [
+  { fixo: "Banco Bradesco", ajustado: "Banco Santander", variante: "#FF493E" },
+  { fixo: "Itaú Corretora", ajustado: "Itaú Unibanco", variante: "#F8AB5F" },
+];
+
 const conteudo = `// GERADO por scripts/gen-colors.mjs a partir de config/instituicoes.yaml. Não edite à mão.
 /** Cor de marca de cada instituição como escriturador, pelo nome curto. */
 export const COR_ESCRITURADOR: Record<string, string> = {
@@ -41,6 +48,17 @@ export const COR_NEUTRA = "#A3A2B5";
 
 export const corEscriturador = (nome: string): string => COR_ESCRITURADOR[nome] ?? COR_NEUTRA;
 export const corDepositaria = (nome: string): string => COR_DEPOSITARIA[nome] ?? COR_ESCRITURADOR[nome] ?? COR_NEUTRA;
+
+/** Pares de marcas que se confundem lado a lado; a variante de \`ajustado\` vale só se \`fixo\` está no mesmo gráfico. */
+const PARES_CONFUSOS = ${JSON.stringify(PARES, null, 2)} as const;
+
+/** Cor de cada instituição de UM gráfico: a de marca, com a variante quando o par confuso aparece junto. */
+export function coresDoConjunto(nomes: readonly string[]): (nome: string) => string {
+  const presentes = new Set(nomes);
+  const variantes = new Map<string, string>();
+  for (const p of PARES_CONFUSOS) if (presentes.has(p.fixo) && presentes.has(p.ajustado)) variantes.set(p.ajustado, p.variante);
+  return (nome) => variantes.get(nome) ?? corEscriturador(nome);
+}
 `;
 writeFileSync(destino, conteudo);
 console.log(`gen-colors: ${ordenadas.length} instituições`);

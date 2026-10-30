@@ -93,6 +93,12 @@ export default function Page() {
               corrente aparece à parte, como parcial.
             </li>
             <li>
+              <strong>Volume das ações:</strong> mesma regra, somada por companhia (todos os tickers de ações
+              da empresa, ON, PN, units e demais classes). Tickers que não casam com o cadastro atual, como o
+              de empresas já deslistadas, ficam fora das somas por companhia e aparecem à parte no arquivo{" "}
+              <code>acoes_volume.csv</code>.
+            </li>
+            <li>
               <strong>Depositária:</strong> API da B3 (patrocinados e ETFs) &gt; listas do Banco B3 &gt;
               correções manuais com fonte e data &gt; “Não identificado”.
             </li>

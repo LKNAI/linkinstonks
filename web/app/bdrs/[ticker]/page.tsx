@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import { notFound } from "next/navigation";
 import { GraficoVolume } from "@/components/charts/GraficoVolume";
 import { FonteVolume } from "@/components/paineis/FonteVolume";
@@ -42,18 +42,17 @@ export default async function Page({ params }: Props) {
           itens={[{ href: "/", texto: "Início" }, { href: "/bdrs/", texto: "BDRs" }, { texto: b.ticker }]}
         />
         <h1 className="page-title">
-          {b.ticker} <span style={{ fontWeight: 600, color: "var(--ink-2)" }}>· {b.nome}</span>
+          {b.ticker} <span style={{ fontWeight: 600, color: "var(--text-muted)" }}>· {b.nome}</span>
         </h1>
         <p className="page-sub">
           BDR {TIPO_GRUPO_NOME[grupo].toLowerCase()} ({b.tipo})
           {b.qualificado ? " · restrito a investidores qualificados" : ""} ·{" "}
-          <Link
-            href={`/bdrs/?q=${b.ticker.toLowerCase()}`}
-            prefetch={false}
-            style={{ color: "var(--accent-2)", fontWeight: 600 }}
+          <LinkNovaAba
+            href={`/bdrs/?q=${b.ticker.toLowerCase()}#tabela-bdrs`}
+            style={{ color: "var(--accent-hover)", fontWeight: 600 }}
           >
-            ver na tabela
-          </Link>
+            ver na lista
+          </LinkNovaAba>
         </p>
 
         <div className="grid">
