@@ -50,7 +50,7 @@ export function Logo({ size = 28, variant = "full", className = "" }: LogoProps)
       ) : (
         <span className="leading-none tracking-tight" style={{ fontSize: Math.round(size * 0.58) }}>
           <span className="font-medium">linkin</span>
-          <span className="font-extrabold" style={{ color: "var(--accent-hover)" }}>
+          <span className="font-bold" style={{ color: "var(--accent-hover)" }}>
             stonks
           </span>
         </span>

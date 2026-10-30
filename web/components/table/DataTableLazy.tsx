@@ -16,7 +16,7 @@ export function DataTable<T extends RowData>(props: Parameters<typeof DataTableR
       fallback={
         <div
           role="status"
-          className="p-6 text-[13px]"
+          className="p-6 text-[length:var(--fs-sm)]"
           style={{ color: "var(--text-subtle)", minHeight: 320 }}
         >
           Carregando tabela…

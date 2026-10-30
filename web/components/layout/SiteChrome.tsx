@@ -31,7 +31,10 @@ export function SiteHeader() {
         <Link prefetch={false} href="/" aria-label="linkinstonks" className="inline-flex items-center">
           <Logo />
         </Link>
-        <nav aria-label="Principal" className="flex flex-wrap gap-x-4 gap-y-1 text-[13px] font-semibold">
+        <nav
+          aria-label="Principal"
+          className="flex flex-wrap gap-x-4 gap-y-1 text-[length:var(--fs-sm)] font-semibold"
+        >
           {LINKS.map((l) => (
             <Link
               prefetch={false}

@@ -163,7 +163,7 @@ function colunas(
             {d.tipo}
           </span>
           {d.C ? (
-            <small className="muted" style={{ display: "block", fontSize: 11 }}>
+            <small className="muted" style={{ display: "block", fontSize: "var(--fs-xs)" }}>
               {d.C}
             </small>
           ) : null}
@@ -442,7 +442,7 @@ function Conteudo({
                   {TIPO_GRUPO_NOME[t]}
                 </span>
               ))}
-              <span className="muted" style={{ fontWeight: 500 }}>
+              <span className="muted" style={{ fontWeight: "var(--fw-medium)" }}>
                 Rótulos do eixo: meses; ano em destaque em janeiro
               </span>
             </div>

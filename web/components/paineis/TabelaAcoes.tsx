@@ -111,22 +111,12 @@ function Conteudo({ acoes }: { acoes: Parameters<typeof derivar>[0] }) {
   return (
     <div className="dash">
       <div className="wrap" style={{ paddingTop: 28 }}>
-        <span
-          className="eyebrow"
-          style={{
-            background: "var(--accent-soft)",
-            color: "var(--accent-hover)",
-            borderColor: "var(--cat-3)",
-          }}
-        >
-          <i />
-          B3 + CVM · dados abertos
-        </span>
+        <span className="eyebrow">B3 + CVM · dados abertos</span>
         <h1
           style={{
-            fontSize: "clamp(24px,3vw,34px)",
-            fontWeight: 800,
-            letterSpacing: "-.02em",
+            fontSize: "var(--fs-2xl)",
+            fontWeight: "var(--fw-semibold)",
+            letterSpacing: "var(--tracking-title)",
             margin: "12px 0 6px",
           }}
         >

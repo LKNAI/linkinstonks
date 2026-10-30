@@ -64,7 +64,7 @@ export function Novidades() {
         <p className="page-sub">
           Mudanças detectadas a cada coleta: trocas de escriturador, novas listagens, novos BDRs e outras.
           Acompanhe por leitor de RSS:{" "}
-          <a href="/feed.xml" style={{ color: "var(--accent-hover)", fontWeight: 600 }}>
+          <a href="/feed.xml" style={{ color: "var(--accent-hover)", fontWeight: "var(--fw-semibold)" }}>
             feed Atom
           </a>
           .

@@ -87,7 +87,7 @@ export function Capa() {
                   .sort((a, b) => a[0].localeCompare(b[0]))
                   .map(([k, f]) => (
                     <tr key={k}>
-                      <th scope="row" style={{ textAlign: "left", fontWeight: 600 }}>
+                      <th scope="row" style={{ textAlign: "left", fontWeight: "var(--fw-semibold)" }}>
                         {NOME_FONTE[k] ?? k}
                       </th>
                       <td>{f.status === "ok" ? formatDate(f.ultimo_sucesso ?? "") : `${f.status}`}</td>
@@ -101,7 +101,7 @@ export function Capa() {
             <h2 id="novidades">Últimas mudanças</h2>
             <p className="desc">Trocas de escriturador, novas listagens e outros eventos</p>
             {eventos.estado === "ok" && eventos.dados.eventos.length ? (
-              <ul style={{ margin: 0, paddingLeft: 18, display: "grid", gap: 6, fontSize: 13 }}>
+              <ul style={{ margin: 0, paddingLeft: 18, display: "grid", gap: 6, fontSize: "var(--fs-sm)" }}>
                 {eventos.dados.eventos.slice(0, 6).map((e, i) => (
                   <li key={i}>
                     <b>{formatDate(e.data)}</b> · {e.tipo.replaceAll("_", " ")} · {e.chave}
