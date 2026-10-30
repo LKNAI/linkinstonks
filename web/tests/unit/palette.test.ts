@@ -1,5 +1,7 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { contraste, legivelSobreBranco, textoSobre } from "@/lib/palette";
+import { CAT_ALT_COR, CAT_COR, COR_TEXTO, contraste, legivelSobreBranco, textoSobre } from "@/lib/palette";
 
 describe("contraste WCAG", () => {
   it("calcula as razões de referência", () => {
@@ -9,16 +11,27 @@ describe("contraste WCAG", () => {
   });
 
   it("textoSobre escolhe branco ou grafite com contraste AA sobre cada cor de categoria", () => {
-    for (const fundo of ["#6250d6", "#1baf7a", "#eda100", "#8f80e6", "#4a3aa7", "#e87ba4", "#c4bcf3"]) {
+    for (const fundo of [...CAT_COR, ...CAT_ALT_COR]) {
       expect(contraste(textoSobre(fundo), fundo), fundo).toBeGreaterThanOrEqual(4.5);
     }
-    expect(textoSobre("#6250d6")).toBe("#ffffff");
-    expect(textoSobre("#eda100")).toBe("#16152b");
+    expect(textoSobre(CAT_COR[0])).toBe("#ffffff");
+    expect(textoSobre(CAT_COR[3])).toBe(COR_TEXTO);
   });
 
   it("legivelSobreBranco escurece só o necessário", () => {
     expect(legivelSobreBranco("#1baf7a")).not.toBe("#1baf7a");
     expect(contraste(legivelSobreBranco("#1baf7a"), "#ffffff")).toBeGreaterThanOrEqual(3);
-    expect(legivelSobreBranco("#4a3aa7")).toBe("#4a3aa7"); // já passa
+    expect(legivelSobreBranco(CAT_COR[0])).toBe(CAT_COR[0]); // já passa
+  });
+});
+
+describe("palette.ts espelha styles/tokens.css", () => {
+  const css = readFileSync(join(__dirname, "../../styles/tokens.css"), "utf-8");
+  const token = (nome: string) => css.match(new RegExp(`--${nome}: *(#[0-9a-fA-F]{6})`))?.[1].toLowerCase();
+
+  it("rampa de categorias, neutros e texto", () => {
+    expect(CAT_COR).toEqual([token("cat-1"), token("cat-2"), token("cat-3"), token("cat-none")]);
+    expect(CAT_ALT_COR).toEqual([1, 2, 3, 4].map((i) => token(`cat-alt-${i}`)));
+    expect(COR_TEXTO).toBe(token("text"));
   });
 });

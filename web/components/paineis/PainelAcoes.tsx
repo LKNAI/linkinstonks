@@ -298,7 +298,7 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
                 k: s.k,
                 rotulo: s.k,
                 parte: s.n / maxSetor,
-                fundo: "linear-gradient(90deg,#6250d6,#b444b5)",
+                fundo: "var(--accent)",
                 valor: formatInt(s.n),
                 pct: formatPct(s.n, semSetor.length),
                 rotuloAria: `${s.k}: ${s.n} empresas`,

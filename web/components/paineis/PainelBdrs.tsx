@@ -53,6 +53,7 @@ import {
   variacao,
 } from "@/lib/format";
 import {
+  COR_SEM_DADOS,
   TIPO_GRUPO_COR,
   TIPO_GRUPO_NOME,
   legivelSobreBranco,
@@ -193,7 +194,7 @@ function colunas(
       celula: (d) => (
         <Sparkline
           valores={d.volume_mensal}
-          cor={d.depositaria === "Não identificado" ? "#7c7b93" : corDepositaria(d.depositaria)}
+          cor={d.depositaria === "Não identificado" ? COR_SEM_DADOS : corDepositaria(d.depositaria)}
           rotulo={`Volume mensal de ${d.ticker}, ${meses.length} meses`}
         />
       ),

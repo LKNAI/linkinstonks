@@ -106,7 +106,7 @@ export function Donut({
                 key={f.it.k}
                 d={f.d}
                 fill={f.it.color}
-                stroke="#fff"
+                stroke="var(--surface)"
                 strokeWidth={1.5}
                 className={selecionado === f.it.k ? "sel" : ""}
                 onClick={() => onSelecionar(f.it.k)}

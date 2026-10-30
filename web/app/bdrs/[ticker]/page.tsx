@@ -42,7 +42,7 @@ export default async function Page({ params }: Props) {
           itens={[{ href: "/", texto: "Início" }, { href: "/bdrs/", texto: "BDRs" }, { texto: b.ticker }]}
         />
         <h1 className="page-title">
-          {b.ticker} <span style={{ fontWeight: 600, color: "var(--ink-2)" }}>· {b.nome}</span>
+          {b.ticker} <span style={{ fontWeight: 600, color: "var(--text-muted)" }}>· {b.nome}</span>
         </h1>
         <p className="page-sub">
           BDR {TIPO_GRUPO_NOME[grupo].toLowerCase()} ({b.tipo})
@@ -50,7 +50,7 @@ export default async function Page({ params }: Props) {
           <Link
             href={`/bdrs/?q=${b.ticker.toLowerCase()}`}
             prefetch={false}
-            style={{ color: "var(--accent-2)", fontWeight: 600 }}
+            style={{ color: "var(--accent-hover)", fontWeight: 600 }}
           >
             ver na tabela
           </Link>

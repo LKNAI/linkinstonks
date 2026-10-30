@@ -6,10 +6,7 @@ export function Hero({ selo, titulo, texto }: { selo: string; titulo: string; te
   return (
     <section className="hero">
       <div className="wrap">
-        <span className="eyebrow">
-          <i />
-          {selo}
-        </span>
+        <span className="eyebrow">{selo}</span>
         <h1>{titulo}</h1>
         <p>{texto}</p>
       </div>

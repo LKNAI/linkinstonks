@@ -26,7 +26,7 @@ export function FonteVolume({
       titulo="Fonte do volume e como conferir"
       descricao="Cada barra e cada célula de volume mensal leva ao arquivo oficial da B3 de onde o número foi obtido"
     >
-      <p style={{ margin: "0 0 10px", fontSize: 13, lineHeight: 1.55, color: "var(--ink-2)" }}>
+      <p style={{ margin: "0 0 10px", fontSize: 13, lineHeight: 1.55, color: "var(--text-muted)" }}>
         Fonte: B3, <b>Séries Históricas de cotações (COTAHIST)</b>, dados públicos.{" "}
         {como ?? comoConferir(ticker)} Os arquivos também estão listados na{" "}
         <a href={pagina} target="_blank" rel="noopener noreferrer" className="fonte-link">

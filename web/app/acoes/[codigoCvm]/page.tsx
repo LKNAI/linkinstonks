@@ -59,7 +59,7 @@ export default async function Page({ params }: Props) {
           <Link
             href={`/acoes/tabela/?q=${encodeURIComponent(normalizar(c.pregao))}`}
             prefetch={false}
-            style={{ color: "var(--accent-2)", fontWeight: 600 }}
+            style={{ color: "var(--accent-hover)", fontWeight: 600 }}
           >
             ver na tabela
           </Link>

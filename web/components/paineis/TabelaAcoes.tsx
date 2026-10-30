@@ -96,11 +96,11 @@ function Conteudo({ acoes }: { acoes: Parameters<typeof derivar>[0] }) {
   const trocaram = comCvm.filter((d) => d.escriturador_cvm?.anterior).length;
   const tickers = todas.reduce((a, d) => a + d.tickers.length, 0);
   const stats: [number, string, string][] = [
-    [todas.length, "empresas emissoras de ações", "#6250d6"],
-    [todas.filter((d) => d.tickers.length).length, "com ticker de ações", "#0B3D91"],
-    [tickers, "tickers no total", "#EC7000"],
-    [comCvm.length, "com histórico na CVM", "#0a7a50"],
-    [trocaram, "trocaram de escriturador desde 2010", "#CC092F"],
+    [todas.length, "empresas emissoras de ações", "var(--accent)"],
+    [todas.filter((d) => d.tickers.length).length, "com ticker de ações", "var(--accent)"],
+    [tickers, "tickers no total", "var(--accent)"],
+    [comCvm.length, "com histórico na CVM", "var(--accent)"],
+    [trocaram, "trocaram de escriturador desde 2010", "var(--accent)"],
   ];
   const bancos = contar(todas, (d) => d.b);
   const anteriores = contar(todas, (d) => d.escriturador_cvm?.anterior);
@@ -113,7 +113,11 @@ function Conteudo({ acoes }: { acoes: Parameters<typeof derivar>[0] }) {
       <div className="wrap" style={{ paddingTop: 28 }}>
         <span
           className="eyebrow"
-          style={{ background: "var(--accent-soft)", color: "var(--accent-2)", borderColor: "var(--v2)" }}
+          style={{
+            background: "var(--accent-soft)",
+            color: "var(--accent-hover)",
+            borderColor: "var(--cat-3)",
+          }}
         >
           <i />
           B3 + CVM · dados abertos
@@ -128,7 +132,7 @@ function Conteudo({ acoes }: { acoes: Parameters<typeof derivar>[0] }) {
         >
           Empresas com ações registradas na B3
         </h1>
-        <p style={{ color: "var(--ink-2)", maxWidth: 780, margin: 0 }}>
+        <p style={{ color: "var(--text-muted)", maxWidth: 780, margin: 0 }}>
           Tickers, escriturador atual (B3) e rastreabilidade do escriturador — data de início e escriturador
           anterior — segundo o Formulário Cadastral entregue à CVM.
         </p>

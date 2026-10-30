@@ -1,5 +1,5 @@
 // Lógica do painel de ações, portada de seed/etl/acoes/dash2_template.html como funções puras (testáveis).
-import { corEscriturador } from "@/lib/colors";
+import { COR_NEUTRA, corEscriturador } from "@/lib/colors";
 import { montarCsv } from "@/lib/csv";
 import { formatDate, formatInt, formatPct } from "@/lib/format";
 import { HISTORICO, HISTORICO_COR, SEGMENTO_COR, SEGMENTO_NOME, type Historico } from "@/lib/palette";
@@ -211,34 +211,34 @@ export function kpisAcoes(rows: readonly AcaoRow[], total: number, anoRef: numbe
       rotulo: "Negociadas (com ticker)",
       valor: formatInt(comTicker),
       sub: `${formatInt(tickers)} tickers de ações`,
-      cor: "#0B3D91",
+      cor: "var(--accent)",
       p: n ? comTicker / n : 0,
     },
     {
       rotulo: "Com histórico na CVM",
       valor: formatInt(cvm.length),
       sub: `${formatPct(cvm.length, n)} das empresas filtradas`,
-      cor: "#1baf7a",
+      cor: "var(--accent)",
       p: n ? cvm.length / n : 0,
     },
     {
       rotulo: "Trocaram de escriturador",
       valor: formatPct(trocaram, cvm.length),
       sub: `${formatInt(trocaram)} empresas desde ${ANO_INICIAL}`,
-      cor: "#6250d6",
+      cor: "var(--accent)",
       p: cvm.length ? trocaram / cvm.length : 0,
     },
     {
       rotulo: `Trocas desde ${anoRecente}`,
       valor: formatInt(recentes),
       sub: `escriturador atual assumiu em ${anoRecente}+`,
-      cor: "#e0413f",
+      cor: "var(--accent)",
     },
     {
       rotulo: "Maior escriturador",
       valor: lider ? formatPct(lider[1], n) : "—",
       sub: lider ? `${lider[0]} · ${formatInt(lider[1])}` : "sem dados",
-      cor: lider ? corEscriturador(lider[0]) : "#A3A2B5",
+      cor: lider ? corEscriturador(lider[0]) : COR_NEUTRA,
       p: lider && n ? lider[1] / n : 0,
     },
   ];

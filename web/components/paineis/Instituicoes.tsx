@@ -112,7 +112,7 @@ export function Instituicoes() {
                         <td className="r">{s?.ganhou ? `+${s.ganhou}` : "—"}</td>
                         <td className="r">{s?.perdeu ? `−${s.perdeu}` : "—"}</td>
                         <td className="r">
-                          <b style={{ color: sal > 0 ? "var(--gain)" : sal < 0 ? "var(--loss)" : undefined }}>
+                          <b style={{ color: sal > 0 ? "var(--ok)" : sal < 0 ? "var(--error)" : undefined }}>
                             {sal > 0 ? `+${sal}` : sal < 0 ? `−${-sal}` : "0"}
                           </b>
                         </td>
