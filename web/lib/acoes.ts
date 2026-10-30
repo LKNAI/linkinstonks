@@ -1,5 +1,5 @@
 // Lógica do painel de ações, portada de seed/etl/acoes/dash2_template.html como funções puras (testáveis).
-import { COR_NEUTRA, corEscriturador } from "@/lib/colors";
+import { COR_NEUTRA, coresDoConjunto, corEscriturador } from "@/lib/colors";
 import { montarCsv } from "@/lib/csv";
 import { formatDate, formatInt, formatPct } from "@/lib/format";
 import { HISTORICO, HISTORICO_COR, SEGMENTO_COR, SEGMENTO_NOME, type Historico } from "@/lib/palette";
@@ -154,13 +154,14 @@ export function fatiasPorBanco(rows: readonly AcaoRow[]): Fatia[] {
     c[d.b] = (c[d.b] ?? 0) + 1;
     tk[d.b] = (tk[d.b] ?? 0) + d.tickers.length;
   }
+  const cor = coresDoConjunto(Object.keys(c));
   return Object.keys(c)
     .sort((a, b) => c[b] - c[a] || a.localeCompare(b, "pt"))
     .map((k) => ({
       k,
       label: k,
       n: c[k],
-      color: corEscriturador(k),
+      color: cor(k),
       extra: [["Tickers", formatInt(tk[k])]],
     }));
 }

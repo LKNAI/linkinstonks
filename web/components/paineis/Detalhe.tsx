@@ -1,7 +1,7 @@
 // Peças das páginas de detalhe (renderizadas no build, sem JavaScript para o conteúdo principal).
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { corEscriturador } from "@/lib/colors";
+import { coresDoConjunto } from "@/lib/colors";
 import { formatDate } from "@/lib/format";
 import type { Passagem } from "@/lib/schemas";
 
@@ -60,6 +60,7 @@ export function Lista({ linhas }: { linhas: [string, ReactNode][] }) {
 export function LinhaDoTempo({ passagens, anoFinal }: { passagens: Passagem[]; anoFinal: number }) {
   if (!passagens.length)
     return <p className="muted">Sem histórico de escriturador na CVM para esta companhia.</p>;
+  const cor = coresDoConjunto(passagens.map((p) => p.instituicao));
   const ini = Math.min(...passagens.map((p) => p.primeiro_ano));
   const total = Math.max(1, anoFinal - ini + 1);
   const ultima = passagens.reduce((a, p) => (p.ultimo_ano >= a.ultimo_ano ? p : a), passagens[0]);
@@ -74,7 +75,7 @@ export function LinhaDoTempo({ passagens, anoFinal }: { passagens: Passagem[]; a
               title={`${p.instituicao}: ${p.primeiro_ano}–${fim}`}
               style={{
                 width: `${((fim - p.primeiro_ano + 1) / total) * 100}%`,
-                background: corEscriturador(p.instituicao),
+                background: cor(p.instituicao),
               }}
             />
           );
@@ -87,7 +88,7 @@ export function LinhaDoTempo({ passagens, anoFinal }: { passagens: Passagem[]; a
       <ol className="tl">
         {passagens.map((p) => (
           <li key={p.instituicao + p.primeiro_ano}>
-            <span className="pt" style={{ background: corEscriturador(p.instituicao) }} />
+            <span className="pt" style={{ background: cor(p.instituicao) }} />
             <div>
               <div className="nm">
                 {p.instituicao} {p === ultima ? <span className="badge ok">atual</span> : null}

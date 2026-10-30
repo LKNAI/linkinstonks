@@ -34,7 +34,7 @@ import {
   type Dim,
   type FiltrosAcoes,
 } from "@/lib/acoes"; // fmt: skip
-import { COR_ESCRITURADOR, corEscriturador } from "@/lib/colors";
+import { COR_ESCRITURADOR, coresDoConjunto } from "@/lib/colors";
 import { baixarCsv } from "@/lib/csv";
 import { useDados } from "@/lib/data";
 import { formatDate, formatInt, formatPct } from "@/lib/format";
@@ -107,6 +107,8 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
     ...anos.anos.map((y) => Object.values(anos.porAno[y]).reduce((a, b) => a + b, 0)),
   );
   const saldo = saldoDeTrocas(filtrar(todas, f, ["inE", "outE"]).filter((r) => r.escriturador_cvm?.anterior));
+  const corAno = coresDoConjunto(anos.entidades);
+  const corSaldo = coresDoConjunto(saldo.map((s) => s.entidade));
   const semSetor = filtrar(todas, f, "sec");
   const setores = topSetores(semSetor, f.sec);
   const maxSetor = Math.max(1, ...setores.map((s) => s.n));
@@ -223,7 +225,7 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
                   total,
                   topo: total ? String(total) : "",
                   rotuloAria: `${y}: ${total} trocas`,
-                  partes: ents.map((e) => ({ cor: corEscriturador(e), valor: anos.porAno[y][e], nome: e })),
+                  partes: ents.map((e) => ({ cor: corAno(e), valor: anos.porAno[y][e], nome: e })),
                   dica: () => (
                     <TipConteudo
                       titulo={(y === "2010" && anos.anteDe2010 ? "Até " : "") + y}
@@ -239,7 +241,7 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
                                   width: 8,
                                   height: 8,
                                   borderRadius: 2,
-                                  background: corEscriturador(e),
+                                  background: corAno(e),
                                   marginRight: "var(--space-2)",
                                 }}
                               />
@@ -256,7 +258,7 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
             <div className="mini-lg">
               {anos.entidades.map((e) => (
                 <span key={e}>
-                  <i style={{ background: corEscriturador(e) }} />
+                  <i style={{ background: corAno(e) }} />
                   {e}
                 </span>
               ))}
@@ -274,7 +276,7 @@ function Conteudo({ acoes }: { acoes: Acao[] }) {
             <Divergentes
               linhas={saldo.map((s) => ({
                 nome: s.entidade,
-                cor: corEscriturador(s.entidade),
+                cor: corSaldo(s.entidade),
                 perdeu: s.perdeu,
                 ganhou: s.ganhou,
               }))}

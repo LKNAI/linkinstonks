@@ -34,3 +34,25 @@ export const COR_NEUTRA = "#A3A2B5";
 
 export const corEscriturador = (nome: string): string => COR_ESCRITURADOR[nome] ?? COR_NEUTRA;
 export const corDepositaria = (nome: string): string => COR_DEPOSITARIA[nome] ?? COR_ESCRITURADOR[nome] ?? COR_NEUTRA;
+
+/** Pares de marcas que se confundem lado a lado; a variante de `ajustado` vale só se `fixo` está no mesmo gráfico. */
+const PARES_CONFUSOS = [
+  {
+    "fixo": "Banco Bradesco",
+    "ajustado": "Banco Santander",
+    "variante": "#FF493E"
+  },
+  {
+    "fixo": "Itaú Corretora",
+    "ajustado": "Itaú Unibanco",
+    "variante": "#F8AB5F"
+  }
+] as const;
+
+/** Cor de cada instituição de UM gráfico: a de marca, com a variante quando o par confuso aparece junto. */
+export function coresDoConjunto(nomes: readonly string[]): (nome: string) => string {
+  const presentes = new Set(nomes);
+  const variantes = new Map<string, string>();
+  for (const p of PARES_CONFUSOS) if (presentes.has(p.fixo) && presentes.has(p.ajustado)) variantes.set(p.ajustado, p.variante);
+  return (nome) => variantes.get(nome) ?? corEscriturador(nome);
+}
