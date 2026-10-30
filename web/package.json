@@ -12,7 +12,8 @@
     "format:check": "prettier --check .",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "budget": "node scripts/orcamento-js.mjs"
+    "budget": "node scripts/orcamento-js.mjs",
+    "check:css": "node scripts/verificar-css.mjs"
   },
   "dependencies": {
     "@tanstack/react-table": "^9.3.1",

@@ -71,6 +71,7 @@ jobs:
       - run: pnpm format:check
       - run: pnpm test
       - run: pnpm build
+      - run: pnpm check:css # nenhuma var(--x) sem definição (build com cache antigo)
       - run: pnpm budget # JS inicial <= 200 KB gzip por rota
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:e2e
