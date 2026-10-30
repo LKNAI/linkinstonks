@@ -48,7 +48,9 @@ export function Capa() {
   const kB = kpisBdrs(linhasB, bdrs.dados.meses).kpis;
   const destaques: Kpi[] = [kA[0], kA[2], kA[3], kB[0], kB[1], kB[4]].map((k, i) => ({
     ...k,
-    rotulo: i < 3 ? `Ações · ${k.rotulo}` : `BDRs · ${k.rotulo}`,
+    // na capa não há filtro: o rótulo e o complemento falam do conjunto inteiro
+    rotulo: `${i < 3 ? "Ações" : "BDRs"} · ${k.rotulo.replace(" no filtro", "")}`,
+    sub: k.sub.replace("das empresas filtradas", "das empresas").replace(/ filtradas?\b/, ""),
   }));
 
   return (
@@ -64,11 +66,19 @@ export function Capa() {
                 <Link prefetch={false} className="btn" href="/acoes/">
                   Ações: escrituradores e volume
                 </Link>
+                <p className="hint">Quem escritura cada empresa, trocas desde 2010 e volume em 24 meses.</p>
               </li>
               <li>
                 <Link prefetch={false} className="btn" href="/bdrs/">
                   BDRs: depositárias e volume
                 </Link>
+                <p className="hint">Banco depositário de cada programa e volume financeiro mensal.</p>
+              </li>
+              <li>
+                <Link prefetch={false} className="btn" href="/instituicoes/">
+                  Instituições
+                </Link>
+                <p className="hint">Quem ganhou e quem perdeu clientes, por escriturador e depositária.</p>
               </li>
             </ul>
           </section>

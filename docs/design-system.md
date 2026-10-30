@@ -31,6 +31,6 @@ O catálogo vivo é a rota `/design` (noindex, fora do sitemap); a fonte dos val
 
 ## Estado da implementação
 
-Feito: tokens, fontes e cor; escala tipográfica; raio, espaço e movimento; variantes de pares de marcas; catálogo `/design`; telas `/bdrs` e `/acoes` (esta já com a Tabela e o Volume de ações unidos, filtros em sheet no celular, régua de marcas e links em nova aba).
+Feito: tokens, fontes e cor; escala tipográfica; raio, espaço e movimento; variantes de pares de marcas; catálogo `/design`; todas as telas. `/bdrs` e `/acoes` com régua de marcas, KPIs sem cartões, grade 8+4, filtros em sheet no celular e gráficos mensais rolando no celular; `/acoes` com a Tabela e o Volume de ações unidos e links de registro em nova aba; Capa, detalhes, `/instituicoes`, `/novidades`, `/status` e `/sobre` já nos tokens, com microcopy e espaçamento ajustados.
 
-A fazer, por tela (ordem): `/`, detalhes, `/instituicoes`, `/novidades`, `/status`, `/sobre`. Entram nelas: régua de marcas de 4 px, KPIs sem cartões, layout de 12 colunas e filtros em sheet no celular.
+Verificação final (2026-10-30): axe sem violações em todas as rotas (inclusive 390 px), Lighthouse Acessibilidade 100 em `/acoes/` e `/bdrs/`, orçamento de JS ≤ 197,3 KB por rota, sem literais de cor fora de `tokens.css`. Desempenho local do Lighthouse segue abaixo de 90 (58 a 62 nos painéis, nesta máquina; ver `docs/qualidade.md`); `/acoes/` piorou em relação a antes da unificação (TBT local de 0,9 s para 2,3 s) e precisa de nova medição no PageSpeed Insights depois do deploy.

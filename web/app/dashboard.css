@@ -1948,3 +1948,11 @@ a.mc:focus-visible {
   vertical-align: -2px;
   color: var(--text-subtle);
 }
+
+/* resumo do status logo abaixo do título, antes do texto de apoio */
+.status-resumo {
+  margin: var(--space-2) 0 var(--space-1);
+}
+.prose li + li {
+  margin-top: var(--space-1);
+}
