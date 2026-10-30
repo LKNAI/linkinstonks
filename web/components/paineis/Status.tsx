@@ -6,19 +6,9 @@ import { Carregando, ErroDados } from "@/components/layout/Pagina";
 import { Migalhas } from "@/components/paineis/Detalhe";
 import { useDados } from "@/lib/data";
 import { formatDate, formatDinheiro, formatInt } from "@/lib/format";
+import { NOME_DATASET, NOME_FONTE, ROTULO_STATUS_FONTE } from "@/lib/rotulos";
 
 import { diasEntre, fontesDesatualizadas, hojeEmBrasilia } from "@/lib/stale";
-
-const NOME_FONTE: Record<string, string> = {
-  b3_listed: "B3 · Empresas listadas",
-  b3_bdr_api: "B3 · BDRs (API)",
-  b3_cotahist: "B3 · Cotações de BDRs (COTAHIST)",
-  b3_cotahist_acoes: "B3 · Cotações de ações (COTAHIST)",
-  b3_finservices: "Banco B3 · programas de BDR",
-  bradesco: "Bradesco Custódia",
-  cvm_fca: "CVM · Formulário Cadastral",
-  cvm_cad: "CVM · Cadastro de companhias",
-};
 
 export function Status() {
   const meta = useDados("meta.json");
@@ -69,6 +59,9 @@ export function Status() {
                     <th scope="col" className="r">
                       Itens
                     </th>
+                    <th scope="col" className="r">
+                      Último pregão
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -83,7 +76,7 @@ export function Status() {
                             <span
                               className={`badge ${f.status === "ok" && !atraso ? "ok" : f.status === "erro" ? "err" : "warn"}`}
                             >
-                              {atraso ? "atrasada" : f.status}
+                              {atraso ? "Atrasada" : (ROTULO_STATUS_FONTE[f.status] ?? f.status)}
                             </span>
                             {f.mensagem ? <div className="small">{f.mensagem}</div> : null}
                           </td>
@@ -91,13 +84,8 @@ export function Status() {
                           <td className="r">
                             {f.ultimo_sucesso ? `${diasEntre(f.ultimo_sucesso, hoje)} d` : "—"}
                           </td>
-                          <td className="r">
-                            {f.contagem != null
-                              ? formatInt(f.contagem)
-                              : f.ultimo_pregao
-                                ? formatDate(f.ultimo_pregao)
-                                : "—"}
-                          </td>
+                          <td className="r">{f.contagem != null ? formatInt(f.contagem) : "—"}</td>
+                          <td className="r">{f.ultimo_pregao ? formatDate(f.ultimo_pregao) : "—"}</td>
                         </tr>
                       );
                     })}
@@ -113,7 +101,7 @@ export function Status() {
               <tbody>
                 {Object.entries(meta.dados.datasets).map(([k, d]) => (
                   <tr key={k}>
-                    <th scope="row">{k === "acoes" ? "Ações" : k === "bdrs" ? "BDRs" : k}</th>
+                    <th scope="row">{NOME_DATASET[k] ?? k}</th>
                     <td>{formatDate(d.atualizado_em)}</td>
                     <td className="r">{formatInt(d.contagem)}</td>
                   </tr>

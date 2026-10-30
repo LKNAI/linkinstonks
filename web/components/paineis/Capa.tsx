@@ -7,18 +7,9 @@ import { derivar, kpisAcoes, type Kpi } from "@/lib/acoes";
 import { derivarBdrs, kpisBdrs } from "@/lib/bdrs";
 import { useDados } from "@/lib/data";
 import { formatDate, formatInt } from "@/lib/format";
+import { NOME_FONTE, ROTULO_STATUS_FONTE, ROTULO_TIPO, mudancaDoEvento, nomeDoItem } from "@/lib/rotulos";
 
 import { hojeEmBrasilia } from "@/lib/stale";
-
-const NOME_FONTE: Record<string, string> = {
-  b3_listed: "B3 · Empresas listadas",
-  b3_bdr_api: "B3 · BDRs (API)",
-  b3_cotahist: "B3 · Cotações (COTAHIST)",
-  b3_finservices: "Banco B3 · programas de BDR",
-  bradesco: "Bradesco Custódia",
-  cvm_fca: "CVM · Formulário Cadastral",
-  cvm_cad: "CVM · Cadastro de companhias",
-};
 
 const HERO: HeroProps = {
   selo: "B3 + CVM · dados abertos",
@@ -95,7 +86,11 @@ export function Capa() {
                       <th scope="row" style={{ textAlign: "left", fontWeight: "var(--fw-semibold)" }}>
                         {NOME_FONTE[k] ?? k}
                       </th>
-                      <td>{f.status === "ok" ? formatDate(f.ultimo_sucesso ?? "") : `${f.status}`}</td>
+                      <td>
+                        {f.status === "ok"
+                          ? formatDate(f.ultimo_sucesso ?? "")
+                          : (ROTULO_STATUS_FONTE[f.status] ?? f.status)}
+                      </td>
                     </tr>
                   ))}
               </tbody>
@@ -117,8 +112,9 @@ export function Capa() {
               >
                 {eventos.dados.eventos.slice(0, 6).map((e, i) => (
                   <li key={i}>
-                    <b>{formatDate(e.data)}</b> · {e.tipo.replaceAll("_", " ")} · {e.chave}
-                    {e.de || e.para ? ` (${e.de ?? "—"} → ${e.para ?? "—"})` : ""}
+                    <b>{formatDate(e.data)}</b> · {ROTULO_TIPO[e.tipo] ?? e.tipo} ·{" "}
+                    {nomeDoItem(e, acoes.estado === "ok" ? acoes.dados.companhias : [])}
+                    {mudancaDoEvento(e) ? ` (${mudancaDoEvento(e)})` : ""}
                   </li>
                 ))}
               </ul>

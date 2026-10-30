@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Migalhas } from "@/components/paineis/Detalhe";
+import { todasAcoes } from "@/lib/servidor";
 
 export const metadata: Metadata = {
   title: "Sobre",
@@ -40,6 +41,7 @@ const FONTES: [string, string, string][] = [
 ];
 
 export default function Page() {
+  const semFca = todasAcoes().filter((c) => !c.escriturador_cvm).length;
   return (
     <div className="dash">
       <div className="wrap">
@@ -123,7 +125,7 @@ export default function Page() {
               O FCA é anual: uma troca recente pode demorar a aparecer na CVM, enquanto a B3 já informa o novo
               escriturador (selo de divergência).
             </li>
-            <li>141 empresas, em geral de balcão não organizado, não têm FCA com escriturador.</li>
+            <li>{semFca} empresas, em geral de balcão não organizado, não têm FCA com escriturador.</li>
             <li>
               Alguns BDRs não têm depositária identificada nas fontes públicas (veja{" "}
               <a href="/status/">Status dos dados</a>).
@@ -180,7 +182,7 @@ export default function Page() {
               : os mesmos dados que alimentam o site, em JSON.
             </li>
             <li>
-              <a href="/feed.xml">feed.xml</a>: feed Atom com as últimas mudanças (500 eventos).
+              <a href="/feed.xml">feed.xml</a>: feed Atom com as últimas mudanças (até 500 eventos).
             </li>
           </ul>
         </div>

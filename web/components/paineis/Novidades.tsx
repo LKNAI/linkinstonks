@@ -9,20 +9,8 @@ import { Migalhas } from "@/components/paineis/Detalhe";
 import { useDados } from "@/lib/data";
 import { formatDate, formatInt } from "@/lib/format";
 import { diasEntre, hojeEmBrasilia } from "@/lib/stale";
+import { ROTULO_TIPO, mudancaDoEvento, nomeDoItem } from "@/lib/rotulos";
 import { type Evento } from "@/lib/schemas";
-
-export const ROTULO_TIPO: Record<string, string> = {
-  nova_listagem: "Nova listagem",
-  deslistagem: "Deslistagem",
-  troca_escriturador: "Troca de escriturador",
-  divergencia_b3_cvm: "Divergência B3 × CVM",
-  ticker_novo: "Novo ticker",
-  ticker_removido: "Ticker removido",
-  mudanca_segmento: "Mudança de segmento",
-  novo_bdr: "Novo BDR",
-  bdr_cancelado: "BDR cancelado",
-  troca_depositaria: "Troca de depositária",
-};
 
 const PERIODOS = [
   { v: "", texto: "Todo o período" },
@@ -37,10 +25,12 @@ function linkDoEvento(e: Evento): string {
 
 export function Novidades() {
   const d = useDados("eventos.json");
+  const acoes = useDados("acoes.json");
   const [tipo, setTipo] = useState("");
   const [dataset, setDataset] = useState("");
   const [periodo, setPeriodo] = useState("");
   const hoje = hojeEmBrasilia();
+  const acoesLista = useMemo(() => (acoes.estado === "ok" ? acoes.dados.companhias : []), [acoes]);
 
   const todos = useMemo(() => (d.estado === "ok" ? d.dados.eventos : []), [d]);
   const lista = useMemo(
@@ -127,10 +117,10 @@ export function Novidades() {
                       <td>{ROTULO_TIPO[e.tipo] ?? e.tipo}</td>
                       <td>
                         <Link href={linkDoEvento(e)} prefetch={false}>
-                          {e.chave}
+                          {nomeDoItem(e, acoesLista)}
                         </Link>
                       </td>
-                      <td>{e.de || e.para ? `${e.de ?? "—"} → ${e.para ?? "—"}` : "—"}</td>
+                      <td>{mudancaDoEvento(e) ?? "—"}</td>
                       <td>{e.fonte}</td>
                     </tr>
                   ))}
