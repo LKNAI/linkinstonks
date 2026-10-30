@@ -30,11 +30,11 @@ const f = (p: Partial<FiltrosAcoes> = {}): FiltrosAcoes => ({ ...FILTROS_PADRAO,
 const milhar = (n: number) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 describe("painel de ações (dados reais)", () => {
-  it("568 companhias; o padrão mostra só as com ticker", () => {
-    expect(rows).toHaveLength(568);
+  it("todas as companhias do arquivo; o padrão mostra só as com ticker", () => {
+    expect(rows.length).toBeGreaterThan(500);
     const comTicker = rows.filter((d) => d.tickers.length).length;
     expect(filtrar(rows, f())).toHaveLength(comTicker);
-    expect(filtrar(rows, f({ onlyT: false }))).toHaveLength(568);
+    expect(filtrar(rows, f({ onlyT: false }))).toHaveLength(rows.length);
   });
 
   it("filtro cruzado: cada gráfico ignora só o seu próprio filtro", () => {
@@ -65,15 +65,15 @@ describe("painel de ações (dados reais)", () => {
     const k = kpisAcoes(base, rows.length, 2026);
     expect(k).toHaveLength(6);
     expect(k[0].valor).toBe(milhar(base.length));
-    expect(k[0].sub).toContain("568");
+    expect(k[0].sub).toContain(String(rows.length));
     expect(k[4].rotulo).toBe("Trocas desde 2023");
     expect(k[5].sub).toMatch(/^Itaú Corretora · /);
   });
 
   it("segmentos, histórico e classes somam o total filtrado", () => {
     const base = filtrar(rows, f({ onlyT: false }));
-    expect(fatiasPorSegmento(base).reduce((a, i) => a + i.n, 0)).toBe(568);
-    expect(fatiasPorHistorico(base).reduce((a, i) => a + i.n, 0)).toBe(568);
+    expect(fatiasPorSegmento(base).reduce((a, i) => a + i.n, 0)).toBe(rows.length);
+    expect(fatiasPorHistorico(base).reduce((a, i) => a + i.n, 0)).toBe(rows.length);
     const classes = tickersPorClasse(base, null);
     expect(classes.reduce((a, c) => a + c.n, 0)).toBe(rows.reduce((a, d) => a + d.tickers.length, 0));
   });

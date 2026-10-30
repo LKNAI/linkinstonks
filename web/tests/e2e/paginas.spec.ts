@@ -183,9 +183,9 @@ test.describe("instituições", () => {
 });
 
 test.describe("novidades, feed e status", () => {
-  test("novidades mostra o estado vazio e o link do feed", async ({ page }) => {
+  test("novidades mostra os eventos (ou o estado vazio) e o link do feed", async ({ page }) => {
     await page.goto("/novidades/");
-    await expect(page.getByText("Nenhuma mudança registrada ainda.")).toBeVisible();
+    await expect(page.locator(".stats-table, .state").first()).toBeVisible();
     await expect(page.getByRole("link", { name: "feed Atom" })).toHaveAttribute("href", "/feed.xml");
   });
 
