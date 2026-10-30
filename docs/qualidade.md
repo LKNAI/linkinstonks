@@ -10,7 +10,7 @@ Metas do prompt (seção 11.4): JS inicial ≤ 200 KB gzip por rota, Lighthouse 
 | Lighthouse, Acessibilidade ≥ 90 | 94 a 98 | atingida |
 | Lighthouse, Melhores Práticas ≥ 90 | 100 | atingida |
 | Lighthouse, SEO ≥ 90 | 100 | atingida |
-| Lighthouse, Desempenho ≥ 90 | **58 a 76** | **não atingida** (análise abaixo) |
+| Lighthouse, Desempenho ≥ 90 | **97 a 100** no PageSpeed Insights (celular); 58 a 76 na máquina local | **atingida** (medição oficial abaixo) |
 
 Lighthouse 13.5.0, mobile (4× de CPU e rede 4G simulados), nesta máquina de desenvolvimento (benchmarkIndex 709 a 892, abaixo da referência do Lighthouse):
 
@@ -26,12 +26,23 @@ Lighthouse 13.5.0, mobile (4× de CPU e rede 4G simulados), nesta máquina de de
 | `/sobre/` (sem dados) | 71 | 98 | 3,6 s | 0,66 s | 0 |
 
 ### Medição oficial no PageSpeed Insights (hardware de referência)
-Em 2026-10-29, pagespeed.web.dev (Lighthouse 13.6.0, Moto G Power emulado, 4G lento) na **home**: **Desempenho 100**, Acessibilidade 98, Práticas recomendadas 100, SEO 100 (LCP 0,9 s, TBT 30 ms, CLS 0). No computador: 100, 98, 100, 100. O TBT de 30 ms contra 700 a 1.800 ms nas medições locais mostra que a máquina de desenvolvimento distorcia o Desempenho para bem pior. A única observação de acessibilidade era a falta do landmark `<main>`, corrigida (um `<main>` por página, verificado em `tests/e2e/acessibilidade.spec.ts`). Os painéis `/bdrs/` e `/acoes/` ainda não foram medidos no PageSpeed.
+Em 2026-10-29, pagespeed.web.dev (Lighthouse 13.6.0, Moto G Power emulado, 4G lento) na **home**: **Desempenho 100**, Acessibilidade 98, Práticas recomendadas 100, SEO 100 (LCP 0,9 s, TBT 30 ms, CLS 0). No computador: 100, 98, 100, 100. O TBT de 30 ms contra 700 a 1.800 ms nas medições locais mostra que a máquina de desenvolvimento distorcia o Desempenho para bem pior. A única observação de acessibilidade era a falta do landmark `<main>`, corrigida (um `<main>` por página, verificado em `tests/e2e/acessibilidade.spec.ts`). Os painéis foram medidos depois, também no PageSpeed Insights (2026-10-29), e fecharam acima de 90:
+
+| rota | dispositivo | Desempenho | Acessib. | Práticas | SEO | LCP | TBT | CLS |
+|---|---|---|---|---|---|---|---|---|
+| `/` | celular | 100 | 98 | 100 | 100 | 0,9 s | 30 ms | 0 |
+| `/` | computador | 100 | 98 | 100 | 100 | 0,2 s | 0 ms | 0,018 |
+| `/acoes/` | celular | 97 | 96 | 100 | 100 | 1,5 s | 0 ms | 0 |
+| `/acoes/` | computador | 100 | 100 | 100 | 100 | 0,2 s | 0 ms | 0 |
+| `/bdrs/` | celular | 100 | 96 | 100 | 100 | 0,9 s | 0 ms | 0 |
+| `/bdrs/` | computador | 100 | 100 | 100 | 100 | 0,2 s | 30 ms | 0 |
+
+Os relatórios em PDF foram salvos pelo dono em `various/` (fora do Git). A Acessibilidade de 96 a 98 no celular vem do landmark `<main>` ausente na época da medição, corrigido no commit seguinte (`7bda5b3`); convém remedir.
 
 ### Medição local no site em produção (Vercel)
 Mesma máquina e mesmo Lighthouse, contra `https://linkinstonks.vercel.app` (compressão e CDN reais): `/sobre/` **89**, `/` 79, `/bdrs/{ticker}` 76, `/acoes/` 67, `/bdrs/` 64; Acessibilidade 94 a 98, Melhores Práticas 100, SEO 100, CLS 0. A página sem dados chega perto de 90; os painéis com dados ficam entre 64 e 79.
 
-## Por que o Desempenho não chegou a 90
+## Por que a medição local deu abaixo de 90 (e o PageSpeed não)
 - **O piso do framework já é ~75 a 82 nesta medição.** `/sobre/`, uma página de texto sem nenhum dado, marca TBT de 420 a 660 ms, por uma tarefa de ~570 ms que só carrega React e o cliente do Next (App Router).
 - **Os painéis ficam 10 a 20 pontos acima desse piso**, por montar gráficos e tabelas depois de baixar os JSON (`bdrs.json` tem 640 KB, 140 KB em gzip).
 - **O LCP real é bom** (0,8 a 1,1 s, igual ao FCP: o texto de apresentação está no HTML). O LCP de 3,5 a 4,7 s é a estimativa do simulador do Lighthouse, que multiplica por 4 as tarefas longas de JS anteriores à pintura.
@@ -46,7 +57,7 @@ Mesma máquina e mesmo Lighthouse, contra `https://linkinstonks.vercel.app` (com
 ## O que foi tentado e descartado
 - Montar o painel em etapas (uma seção por tarefa): não reduziu o TBT, então saiu. Não é o painel que domina o TBT; é o piso do framework.
 
-## Opções para chegar a 90 (decisão do dono)
+## Opções para melhorar o Desempenho (não necessárias: a meta foi atingida no PageSpeed Insights)
 1. **Pré-renderizar os painéis no build** (os dados já existem na build): HTML com KPIs e gráficos prontos, hidratação mínima. Maior ganho; exige reestruturar os painéis e inflar o HTML.
 2. **Reduzir o cliente**: separar páginas estáticas (`/sobre`, `/status`) de ilhas interativas, ou trocar o App Router por HTML estático com scripts só onde há interação. Ganho no piso; é troca de arquitetura.
 3. **Reduzir `bdrs.json`**: servir só o necessário para a primeira tela e o resto sob demanda. Ganho moderado.
