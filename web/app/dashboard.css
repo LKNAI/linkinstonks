@@ -511,6 +511,10 @@
 }
 .donut.two:not(.stack) .lg .nm {
   grid-column: 2 / 4;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
 }
 .donut.two:not(.stack) .lg .n {
   grid-column: 2;
