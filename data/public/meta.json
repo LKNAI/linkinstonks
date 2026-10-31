@@ -5,11 +5,11 @@
       "contagem": 567
     },
     "acoes_volume": {
-      "atualizado_em": "2026-10-30",
+      "atualizado_em": "2026-10-31",
       "contagem": 313
     },
     "bdrs": {
-      "atualizado_em": "2026-10-30",
+      "atualizado_em": "2026-10-31",
       "contagem": 1152
     }
   },
@@ -17,17 +17,17 @@
     "b3_bdr_api": {
       "contagem": 325,
       "status": "ok",
-      "ultimo_sucesso": "2026-10-30"
+      "ultimo_sucesso": "2026-10-31"
     },
     "b3_cotahist": {
       "status": "ok",
-      "ultimo_pregao": "2026-10-29",
-      "ultimo_sucesso": "2026-10-30"
+      "ultimo_pregao": "2026-10-30",
+      "ultimo_sucesso": "2026-10-31"
     },
     "b3_cotahist_acoes": {
       "status": "ok",
-      "ultimo_pregao": "2026-10-29",
-      "ultimo_sucesso": "2026-10-30"
+      "ultimo_pregao": "2026-10-30",
+      "ultimo_sucesso": "2026-10-31"
     },
     "b3_finservices": {
       "contagem": 1068,
