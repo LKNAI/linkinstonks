@@ -3297,6 +3297,17 @@
 "ultimo_ano": 2026
 }
 ],
+"23230": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2026-09-15",
+"inicio_aproximado": false,
+"instituicao": "BTG Pactual",
+"primeiro_ano": 2026,
+"ultimo_ano": 2026
+}
+],
 "23248": [
 {
 "fim": null,
@@ -5550,6 +5561,17 @@
 "inicio_aproximado": false,
 "instituicao": "Itaú Corretora",
 "primeiro_ano": 2025,
+"ultimo_ano": 2026
+}
+],
+"27839": [
+{
+"fim": null,
+"fonte": "CVM FCA",
+"inicio": "2021-11-26",
+"inicio_aproximado": false,
+"instituicao": "Itaú Corretora",
+"primeiro_ano": 2026,
 "ultimo_ano": 2026
 }
 ],

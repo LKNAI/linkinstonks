@@ -4004,6 +4004,11 @@
         false
       ],
       [
+        "BCRP39",
+        "PIMCO Investment Grade Corp Bond Exch-TF",
+        false
+      ],
+      [
         "BCTE39",
         "Global X ClimateTech ETF",
         false
@@ -4421,6 +4426,11 @@
       [
         "BHYG39",
         "iShares iBoxx High Yield Corporate Bond ETF",
+        false
+      ],
+      [
+        "BHYS39",
+        "PIMCO 0-5 Year High Yield Corp Bond Exch-TF",
         false
       ],
       [

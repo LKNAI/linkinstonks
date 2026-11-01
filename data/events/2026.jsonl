@@ -1,2 +1,5 @@
 {"chave": "26611", "data": "2026-10-30", "dataset": "acoes", "de": "MNLT SA", "fonte": "B3", "para": null, "tipo": "deslistagem"}
 {"chave": "25887", "data": "2026-10-30", "dataset": "acoes", "de": "NM", "fonte": "B3", "para": "B", "tipo": "mudanca_segmento"}
+{"chave": "23230", "data": "2026-11-01", "dataset": "acoes", "de": "Itaú Corretora", "fonte": "B3/CVM", "para": "BTG Pactual", "tipo": "divergencia_b3_cvm"}
+{"chave": "2437", "data": "2026-11-01", "dataset": "acoes", "de": "AXIA21", "fonte": "B3", "para": null, "tipo": "ticker_removido"}
+{"chave": "27839", "data": "2026-11-01", "dataset": "acoes", "de": "Própria empresa", "fonte": "B3/CVM", "para": "Itaú Corretora", "tipo": "divergencia_b3_cvm"}

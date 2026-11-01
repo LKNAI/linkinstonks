@@ -1905,10 +1905,6 @@
 },
 {
 "classe": "Outros",
-"ticker": "AXIA21"
-},
-{
-"classe": "Outros",
 "ticker": "AXIA98"
 },
 {
@@ -5387,7 +5383,7 @@
 "cnpj": "10.158.356/0001-01",
 "codigo_cvm": "27839",
 "detalhe_b3": true,
-"divergente_b3_cvm": false,
+"divergente_b3_cvm": true,
 "emissor": "CPXD",
 "escriturador_b3": {
 "bruto_on": "EMPRESA",
@@ -5395,7 +5391,16 @@
 "on": "Própria empresa",
 "pn": "Própria empresa"
 },
-"escriturador_cvm": null,
+"escriturador_cvm": {
+"anterior": null,
+"anterior_fim": null,
+"anterior_inicio": null,
+"anterior_ultimo_ano": null,
+"atual": "Itaú Corretora",
+"inicio": "2021-11-26",
+"inicio_aproximado": false,
+"n_escrituradores": 1
+},
 "indicador_mercado": "8",
 "pregao": "CPX DISTRIBU",
 "razao_social": "CPX DISTRIBUIDORA S.A.",
@@ -14143,7 +14148,7 @@
 "cnpj": "08.070.508/0001-78",
 "codigo_cvm": "23230",
 "detalhe_b3": true,
-"divergente_b3_cvm": false,
+"divergente_b3_cvm": true,
 "emissor": "RESA",
 "escriturador_b3": {
 "bruto_on": "ITAU CORRETORA ACOES",
@@ -14151,7 +14156,16 @@
 "on": "Itaú Corretora",
 "pn": "Itaú Corretora"
 },
-"escriturador_cvm": null,
+"escriturador_cvm": {
+"anterior": null,
+"anterior_fim": null,
+"anterior_inicio": null,
+"anterior_ultimo_ano": null,
+"atual": "BTG Pactual",
+"inicio": "2026-09-15",
+"inicio_aproximado": false,
+"n_escrituradores": 1
+},
 "indicador_mercado": "8",
 "pregao": "RAIZEN ENERG",
 "razao_social": "RAIZEN ENERGIA S.A.",

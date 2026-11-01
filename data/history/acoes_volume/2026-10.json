@@ -1,5 +1,5 @@
 {
-"fonte": "diario",
+"fonte": "mensal",
 "mes": "2026-10",
 "pregoes": [
 "2026-10-01",
@@ -11,7 +11,6 @@
 "2026-10-09",
 "2026-10-13",
 "2026-10-14",
-"2026-10-15",
 "2026-10-16",
 "2026-10-19",
 "2026-10-20",
@@ -34,7 +33,7 @@
 "tipo": "ON",
 "ultimo_preco": 2.48,
 "ultimo_pregao": "2026-10-30",
-"volume": 5428370
+"volume": 5428369
 },
 "ABCB4": {
 "isin": "BRABCBACNPR4",
@@ -64,7 +63,7 @@
 "tipo": "ON",
 "ultimo_preco": 1.9,
 "ultimo_pregao": "2026-10-30",
-"volume": 7543628
+"volume": 7543629
 },
 "AFLT3": {
 "isin": "BRAFLTACNOR1",
@@ -74,7 +73,7 @@
 "tipo": "ON",
 "ultimo_preco": 6.4,
 "ultimo_pregao": "2026-10-30",
-"volume": 370313
+"volume": 370312
 },
 "AGRO3": {
 "isin": "BRAGROACNOR7",
@@ -94,7 +93,7 @@
 "tipo": "ON",
 "ultimo_preco": 0.29,
 "ultimo_pregao": "2026-10-30",
-"volume": 385367
+"volume": 385366
 },
 "AHEB3": {
 "isin": "BRAHEBACNOR0",
@@ -124,7 +123,7 @@
 "tipo": "ON",
 "ultimo_preco": 23.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 7525770712
+"volume": 7525770711
 },
 "ALPA3": {
 "isin": "BRALPAACNOR0",
@@ -134,7 +133,7 @@
 "tipo": "ON",
 "ultimo_preco": 10.22,
 "ultimo_pregao": "2026-10-30",
-"volume": 4706110
+"volume": 4706109
 },
 "ALPA4": {
 "isin": "BRALPAACNPR7",
@@ -174,7 +173,7 @@
 "tipo": "ON",
 "ultimo_preco": 10.89,
 "ultimo_pregao": "2026-10-30",
-"volume": 3869753
+"volume": 3869752
 },
 "ALUP4": {
 "isin": "BRALUPACNPR5",
@@ -194,7 +193,7 @@
 "tipo": "ON",
 "ultimo_preco": 0.63,
 "ultimo_pregao": "2026-10-30",
-"volume": 6803563
+"volume": 6803562
 },
 "AMBP3": {
 "isin": "BRAMBPACNOR6",
@@ -204,7 +203,7 @@
 "tipo": "ON",
 "ultimo_preco": 0.14,
 "ultimo_pregao": "2026-10-30",
-"volume": 19982574
+"volume": 19982573
 },
 "AMER3": {
 "isin": "BRAMERACNOR6",
@@ -214,7 +213,7 @@
 "tipo": "ON",
 "ultimo_preco": 4.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 384147837
+"volume": 384147836
 },
 "AMOB3": {
 "isin": "BRAMOBACNOR9",
@@ -234,7 +233,7 @@
 "tipo": "ON",
 "ultimo_preco": 2.29,
 "ultimo_pregao": "2026-10-30",
-"volume": 1310763198
+"volume": 1310763197
 },
 "ARML3": {
 "isin": "BRARMLACNOR1",
@@ -304,7 +303,7 @@
 "tipo": "ON",
 "ultimo_preco": 5.38,
 "ultimo_pregao": "2026-10-30",
-"volume": 102673
+"volume": 102672
 },
 "AXIA3": {
 "isin": "BRAXIAACNOR0",
@@ -404,7 +403,7 @@
 "tipo": "ON",
 "ultimo_preco": 25.49,
 "ultimo_pregao": "2026-10-30",
-"volume": 89557
+"volume": 89558
 },
 "BALM4": {
 "isin": "BRBALMACNPR2",
@@ -414,7 +413,7 @@
 "tipo": "PN",
 "ultimo_preco": 15.05,
 "ultimo_pregao": "2026-10-30",
-"volume": 520950
+"volume": 520951
 },
 "BAUH4": {
 "isin": "BRBAUHACNPR3",
@@ -454,7 +453,7 @@
 "tipo": "ON",
 "ultimo_preco": 12.71,
 "ultimo_pregao": "2026-10-30",
-"volume": 8559478030
+"volume": 8559478031
 },
 "BBDC4": {
 "isin": "BRBBDCACNPR8",
@@ -484,7 +483,7 @@
 "tipo": "ON",
 "ultimo_preco": 4.8,
 "ultimo_pregao": "2026-10-30",
-"volume": 9865
+"volume": 9866
 },
 "BDLL4": {
 "isin": "BRBDLLACNPR8",
@@ -494,7 +493,7 @@
 "tipo": "PN",
 "ultimo_preco": 3.12,
 "ultimo_pregao": "2026-10-30",
-"volume": 58801
+"volume": 58800
 },
 "BEEF3": {
 "isin": "BRBEEFACNOR6",
@@ -514,7 +513,7 @@
 "tipo": "ON",
 "ultimo_preco": 9.17,
 "ultimo_pregao": "2026-10-30",
-"volume": 3773102
+"volume": 3773101
 },
 "BEES4": {
 "isin": "BRBEESACNPR6",
@@ -584,7 +583,7 @@
 "tipo": "ON",
 "ultimo_preco": 9.02,
 "ultimo_pregao": "2026-10-30",
-"volume": 102740070
+"volume": 102740071
 },
 "BMEB3": {
 "isin": "BRBMEBACNOR8",
@@ -614,7 +613,7 @@
 "tipo": "PN",
 "ultimo_preco": 5.11,
 "ultimo_pregao": "2026-10-30",
-"volume": 257366440
+"volume": 257366439
 },
 "BMIN3": {
 "isin": "BRBMINACNOR4",
@@ -654,7 +653,7 @@
 "tipo": "ON",
 "ultimo_preco": 23.51,
 "ultimo_pregao": "2026-10-30",
-"volume": 709875054
+"volume": 709875053
 },
 "BNBR3": {
 "isin": "BRBNBRACNOR8",
@@ -724,7 +723,7 @@
 "tipo": "ON",
 "ultimo_preco": 17.06,
 "ultimo_pregao": "2026-10-30",
-"volume": 48348091
+"volume": 48348090
 },
 "BRAP4": {
 "isin": "BRBRAPACNPR2",
@@ -744,7 +743,7 @@
 "tipo": "ON",
 "ultimo_preco": 18.42,
 "ultimo_pregao": "2026-10-30",
-"volume": 1948446945
+"volume": 1948446944
 },
 "BRBI11": {
 "isin": "BRBRBICDAM10",
@@ -774,7 +773,7 @@
 "tipo": "PNA",
 "ultimo_preco": 2.99,
 "ultimo_pregao": "2026-10-30",
-"volume": 520726891
+"volume": 520726892
 },
 "BRKM6": {
 "isin": "BRBRKMACNPB2",
@@ -794,7 +793,7 @@
 "tipo": "ON",
 "ultimo_preco": 16.77,
 "ultimo_pregao": "2026-10-30",
-"volume": 8379809
+"volume": 8379810
 },
 "BRSR5": {
 "isin": "BRBRSRACNPA6",
@@ -814,7 +813,7 @@
 "tipo": "PNB",
 "ultimo_preco": 12.36,
 "ultimo_pregao": "2026-10-30",
-"volume": 991415024
+"volume": 991415025
 },
 "BRST3": {
 "isin": "BRBRSTACNOR9",
@@ -844,7 +843,7 @@
 "tipo": "PN",
 "ultimo_preco": 2.1,
 "ultimo_pregao": "2026-10-30",
-"volume": 1064306
+"volume": 1064307
 },
 "CALI3": {
 "isin": "BRCALIACNOR1",
@@ -884,7 +883,7 @@
 "tipo": "ON",
 "ultimo_preco": 4.13,
 "ultimo_pregao": "2026-10-30",
-"volume": 192299073
+"volume": 192299074
 },
 "CASN3": {
 "isin": "BRCASNACNOR6",
@@ -934,7 +933,7 @@
 "tipo": "ON",
 "ultimo_preco": 4.25,
 "ultimo_pregao": "2026-10-30",
-"volume": 32879
+"volume": 32880
 },
 "CEAB3": {
 "isin": "BRCEABACNOR1",
@@ -984,7 +983,7 @@
 "tipo": "ON",
 "ultimo_preco": 6.5,
 "ultimo_pregao": "2026-10-29",
-"volume": 15882
+"volume": 15881
 },
 "CEDO4": {
 "isin": "BRCEDOACNPR5",
@@ -1014,7 +1013,7 @@
 "tipo": "PNA",
 "ultimo_preco": 39.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 50138
+"volume": 50139
 },
 "CEED3": {
 "isin": "BRCEEDACNOR9",
@@ -1044,7 +1043,7 @@
 "tipo": "ON",
 "ultimo_preco": 117.49,
 "ultimo_pregao": "2026-10-30",
-"volume": 310075
+"volume": 310076
 },
 "CGAS5": {
 "isin": "BRCGASACNPA3",
@@ -1064,7 +1063,7 @@
 "tipo": "ON",
 "ultimo_preco": 22.38,
 "ultimo_pregao": "2026-10-30",
-"volume": 1210423
+"volume": 1210424
 },
 "CGRA4": {
 "isin": "BRCGRAACNPR9",
@@ -1114,7 +1113,7 @@
 "tipo": "PN",
 "ultimo_preco": 10.07,
 "ultimo_pregao": "2026-10-30",
-"volume": 5438608090
+"volume": 5438608091
 },
 "CMIN3": {
 "isin": "BRCMINACNOR2",
@@ -1164,7 +1163,7 @@
 "tipo": "ON",
 "ultimo_preco": 41.9,
 "ultimo_pregao": "2026-10-30",
-"volume": 2722030954
+"volume": 2722030953
 },
 "CPLE3": {
 "isin": "BRCPLEACNOR8",
@@ -1174,7 +1173,7 @@
 "tipo": "ON",
 "ultimo_preco": 14.32,
 "ultimo_pregao": "2026-10-30",
-"volume": 10677243685
+"volume": 10677243684
 },
 "CRPG3": {
 "isin": "BRCRPGACNOR0",
@@ -1224,7 +1223,7 @@
 "tipo": "ON",
 "ultimo_preco": 4.44,
 "ultimo_pregao": "2026-10-30",
-"volume": 69489039
+"volume": 69489040
 },
 "CSMG3": {
 "isin": "BRCSMGACNOR5",
@@ -1254,7 +1253,7 @@
 "tipo": "ON",
 "ultimo_preco": 13.75,
 "ultimo_pregao": "2026-10-30",
-"volume": 33280141
+"volume": 33280142
 },
 "CTAX3": {
 "isin": "BRCTAXACNOR3",
@@ -1264,7 +1263,7 @@
 "tipo": "ON",
 "ultimo_preco": 0.86,
 "ultimo_pregao": "2026-10-30",
-"volume": 748406
+"volume": 748405
 },
 "CTKA3": {
 "isin": "BRCTKAACNOR0",
@@ -1284,7 +1283,7 @@
 "tipo": "PN",
 "ultimo_preco": 26.38,
 "ultimo_pregao": "2026-10-30",
-"volume": 936132
+"volume": 936133
 },
 "CURY3": {
 "isin": "BRCURYACNOR3",
@@ -1374,7 +1373,7 @@
 "tipo": "PN",
 "ultimo_preco": 7.3,
 "ultimo_pregao": "2026-10-30",
-"volume": 792103
+"volume": 792102
 },
 "DIRR3": {
 "isin": "BRDIRRACNOR0",
@@ -1384,7 +1383,7 @@
 "tipo": "ON",
 "ultimo_preco": 8.06,
 "ultimo_pregao": "2026-10-30",
-"volume": 3954752163
+"volume": 3954752162
 },
 "DMVF3": {
 "isin": "BRDMVFACNOR9",
@@ -1404,7 +1403,7 @@
 "tipo": "ON",
 "ultimo_preco": 6.46,
 "ultimo_pregao": "2026-10-30",
-"volume": 1249
+"volume": 1250
 },
 "DOHL4": {
 "isin": "BRDOHLACNPR9",
@@ -1424,7 +1423,7 @@
 "tipo": "ON",
 "ultimo_preco": 7.16,
 "ultimo_pregao": "2026-10-30",
-"volume": 8015693
+"volume": 8015692
 },
 "DTCY3": {
 "isin": "BRDTCYACNOR5",
@@ -1434,7 +1433,7 @@
 "tipo": "ON",
 "ultimo_preco": 1.91,
 "ultimo_pregao": "2026-10-29",
-"volume": 1717
+"volume": 1716
 },
 "DXCO3": {
 "isin": "BRDXCOACNOR8",
@@ -1444,7 +1443,7 @@
 "tipo": "ON",
 "ultimo_preco": 4.57,
 "ultimo_pregao": "2026-10-30",
-"volume": 1047530546
+"volume": 1047530545
 },
 "EALT3": {
 "isin": "BREALTACNOR4",
@@ -1544,7 +1543,7 @@
 "tipo": "ON",
 "ultimo_preco": 25.7,
 "ultimo_pregao": "2026-10-30",
-"volume": 10407029039
+"volume": 10407029038
 },
 "ENGI11": {
 "isin": "BRENGICDAM16",
@@ -1624,7 +1623,7 @@
 "tipo": "ON",
 "ultimo_preco": 27.99,
 "ultimo_pregao": "2026-10-30",
-"volume": 361584
+"volume": 361585
 },
 "EQPA3": {
 "isin": "BREQPAACNOR1",
@@ -1634,7 +1633,7 @@
 "tipo": "ON",
 "ultimo_preco": 5.05,
 "ultimo_pregao": "2026-10-30",
-"volume": 6671664
+"volume": 6671663
 },
 "EQPA5": {
 "isin": "BREQPAACNPA4",
@@ -1784,7 +1783,7 @@
 "tipo": "PN",
 "ultimo_preco": 5.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 218603646
+"volume": 218603645
 },
 "FHER3": {
 "isin": "BRFHERACNOR5",
@@ -1834,7 +1833,7 @@
 "tipo": "ON",
 "ultimo_preco": 5.28,
 "ultimo_pregao": "2026-10-30",
-"volume": 344430345
+"volume": 344430346
 },
 "FLRY3": {
 "isin": "BRFLRYACNOR5",
@@ -1844,7 +1843,7 @@
 "tipo": "ON",
 "ultimo_preco": 20.47,
 "ultimo_pregao": "2026-10-30",
-"volume": 4107113126
+"volume": 4107113125
 },
 "FRAS3": {
 "isin": "BRFRASACNOR0",
@@ -1854,7 +1853,7 @@
 "tipo": "ON",
 "ultimo_preco": 20.17,
 "ultimo_pregao": "2026-10-30",
-"volume": 277594336
+"volume": 277594337
 },
 "FRIO3": {
 "isin": "BRFRIOACNOR2",
@@ -1874,7 +1873,7 @@
 "tipo": "ON",
 "ultimo_preco": 31.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 87877
+"volume": 87876
 },
 "GEPA4": {
 "isin": "BRGEPAACNPR9",
@@ -1924,7 +1923,7 @@
 "tipo": "ON",
 "ultimo_preco": 10.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 3430401118
+"volume": 3430401117
 },
 "GMAT3": {
 "isin": "BRGMATACNOR7",
@@ -1954,7 +1953,7 @@
 "tipo": "PN",
 "ultimo_preco": 11.11,
 "ultimo_pregao": "2026-10-30",
-"volume": 3880929997
+"volume": 3880929998
 },
 "GPAR3": {
 "isin": "BRGPARACNOR4",
@@ -1964,7 +1963,7 @@
 "tipo": "ON",
 "ultimo_preco": 19.86,
 "ultimo_pregao": "2026-10-30",
-"volume": 11306
+"volume": 11305
 },
 "GRND3": {
 "isin": "BRGRNDACNOR3",
@@ -1974,7 +1973,7 @@
 "tipo": "ON",
 "ultimo_preco": 3.56,
 "ultimo_pregao": "2026-10-30",
-"volume": 368797764
+"volume": 368797763
 },
 "GSHP3": {
 "isin": "BRGSHPACNOR7",
@@ -1984,7 +1983,7 @@
 "tipo": "ON",
 "ultimo_preco": 3.59,
 "ultimo_pregao": "2026-10-30",
-"volume": 70715
+"volume": 70716
 },
 "HAGA3": {
 "isin": "BRHAGAACNOR7",
@@ -2074,7 +2073,7 @@
 "tipo": "PN",
 "ultimo_preco": 6.52,
 "ultimo_pregao": "2026-10-30",
-"volume": 213858
+"volume": 213857
 },
 "HYPE3": {
 "isin": "BRHYPEACNOR0",
@@ -2084,7 +2083,7 @@
 "tipo": "ON",
 "ultimo_preco": 21.27,
 "ultimo_pregao": "2026-10-30",
-"volume": 3224877649
+"volume": 3224877648
 },
 "IFCM3": {
 "isin": "BRIFCMACNOR8",
@@ -2114,7 +2113,7 @@
 "tipo": "ON",
 "ultimo_preco": 2.98,
 "ultimo_pregao": "2026-10-30",
-"volume": 7587822
+"volume": 7587821
 },
 "IGTI4": {
 "isin": "BRIGTIACNPR5",
@@ -2224,7 +2223,7 @@
 "tipo": "PN",
 "ultimo_preco": 38.69,
 "ultimo_pregao": "2026-10-30",
-"volume": 45341658687
+"volume": 45341658686
 },
 "JALL3": {
 "isin": "BRJALLACNOR0",
@@ -2234,7 +2233,7 @@
 "tipo": "ON",
 "ultimo_preco": 2.11,
 "ultimo_pregao": "2026-10-30",
-"volume": 84571979
+"volume": 84571978
 },
 "JFEN3": {
 "isin": "BRJFENACNOR0",
@@ -2294,7 +2293,7 @@
 "tipo": "ON",
 "ultimo_preco": 6.27,
 "ultimo_pregao": "2026-10-30",
-"volume": 380125929
+"volume": 380125928
 },
 "KLBN11": {
 "isin": "BRKLBNCDAM18",
@@ -2344,7 +2343,7 @@
 "tipo": "ON",
 "ultimo_preco": 7.49,
 "ultimo_pregao": "2026-10-30",
-"volume": 510281396
+"volume": 510281397
 },
 "LEVE3": {
 "isin": "BRLEVEACNOR2",
@@ -2354,7 +2353,7 @@
 "tipo": "ON",
 "ultimo_preco": 30.26,
 "ultimo_pregao": "2026-10-30",
-"volume": 426793815
+"volume": 426793814
 },
 "LIGT3": {
 "isin": "BRLIGTACNOR2",
@@ -2374,7 +2373,7 @@
 "tipo": "ON",
 "ultimo_preco": 0.95,
 "ultimo_pregao": "2026-10-30",
-"volume": 356553802
+"volume": 356553801
 },
 "LOGG3": {
 "isin": "BRLOGGACNOR7",
@@ -2384,7 +2383,7 @@
 "tipo": "ON",
 "ultimo_preco": 20.23,
 "ultimo_pregao": "2026-10-30",
-"volume": 620523058
+"volume": 620523057
 },
 "LOGN3": {
 "isin": "BRLOGNACNOR3",
@@ -2404,7 +2403,7 @@
 "tipo": "ON",
 "ultimo_preco": 0.99,
 "ultimo_pregao": "2026-10-30",
-"volume": 17612368
+"volume": 17612369
 },
 "LREN3": {
 "isin": "BRLRENACNOR1",
@@ -2414,7 +2413,7 @@
 "tipo": "ON",
 "ultimo_preco": 8.98,
 "ultimo_pregao": "2026-10-30",
-"volume": 9380742274
+"volume": 9380742275
 },
 "LUPA3": {
 "isin": "BRLUPAACNOR8",
@@ -2434,7 +2433,7 @@
 "tipo": "PN",
 "ultimo_preco": 3.1,
 "ultimo_pregao": "2026-10-30",
-"volume": 370731
+"volume": 370730
 },
 "LWSA3": {
 "isin": "BRLWSAACNOR8",
@@ -2444,7 +2443,7 @@
 "tipo": "ON",
 "ultimo_preco": 3.09,
 "ultimo_pregao": "2026-10-30",
-"volume": 604913468
+"volume": 604913467
 },
 "MAPT3": {
 "isin": "BRMAPTACNOR8",
@@ -2464,7 +2463,7 @@
 "tipo": "PN",
 "ultimo_preco": 2.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 16238
+"volume": 16239
 },
 "MATD3": {
 "isin": "BRMATDACNOR4",
@@ -2474,7 +2473,7 @@
 "tipo": "ON",
 "ultimo_preco": 4.35,
 "ultimo_pregao": "2026-10-30",
-"volume": 47614300
+"volume": 47614301
 },
 "MBRF3": {
 "isin": "BRMBRFACNOR1",
@@ -2534,7 +2533,7 @@
 "tipo": "PN",
 "ultimo_preco": 5.69,
 "ultimo_pregao": "2026-10-30",
-"volume": 609993
+"volume": 609994
 },
 "MGLU3": {
 "isin": "BRMGLUACNOR2",
@@ -2544,7 +2543,7 @@
 "tipo": "ON",
 "ultimo_preco": 5.35,
 "ultimo_pregao": "2026-10-30",
-"volume": 12538890018
+"volume": 12538890017
 },
 "MILS3": {
 "isin": "BRMILSACNOR2",
@@ -2624,7 +2623,7 @@
 "tipo": "PNA",
 "ultimo_preco": 33.41,
 "ultimo_pregao": "2026-10-29",
-"volume": 968
+"volume": 969
 },
 "MRSA6B": {
 "isin": "BRMRSAACNPB7",
@@ -2814,7 +2813,7 @@
 "tipo": "ON",
 "ultimo_preco": 8.98,
 "ultimo_pregao": "2026-10-30",
-"volume": 673759233
+"volume": 673759232
 },
 "ORVR3": {
 "isin": "BRORVRACNOR0",
@@ -2834,7 +2833,7 @@
 "tipo": "ON",
 "ultimo_preco": 2.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 140752
+"volume": 140751
 },
 "PASS3": {
 "isin": "BRPASSACNOR7",
@@ -2854,7 +2853,7 @@
 "tipo": "ON",
 "ultimo_preco": 28.99,
 "ultimo_pregao": "2026-10-30",
-"volume": 155759
+"volume": 155758
 },
 "PATI4": {
 "isin": "BRPATIACNPR3",
@@ -2874,7 +2873,7 @@
 "tipo": "ON",
 "ultimo_preco": 2.08,
 "ultimo_pregao": "2026-10-30",
-"volume": 537293971
+"volume": 537293970
 },
 "PDGR3": {
 "isin": "BRPDGRACNOR8",
@@ -2884,7 +2883,7 @@
 "tipo": "ON",
 "ultimo_preco": 0.18,
 "ultimo_pregao": "2026-10-30",
-"volume": 11798954
+"volume": 11798953
 },
 "PDTC3": {
 "isin": "BRPDTCACNOR3",
@@ -2894,7 +2893,7 @@
 "tipo": "ON",
 "ultimo_preco": 1.56,
 "ultimo_pregao": "2026-10-30",
-"volume": 2910164
+"volume": 2910163
 },
 "PEAB3": {
 "isin": "BRPEABACNOR3",
@@ -2944,7 +2943,7 @@
 "tipo": "ON",
 "ultimo_preco": 6.73,
 "ultimo_pregao": "2026-10-30",
-"volume": 51983956
+"volume": 51983955
 },
 "PGMN3": {
 "isin": "BRPGMNACNOR8",
@@ -3004,7 +3003,7 @@
 "tipo": "ON",
 "ultimo_preco": 0.24,
 "ultimo_pregao": "2026-10-30",
-"volume": 98284743
+"volume": 98284742
 },
 "PNVL3": {
 "isin": "BRPNVLACNOR9",
@@ -3014,7 +3013,7 @@
 "tipo": "ON",
 "ultimo_preco": 10.08,
 "ultimo_pregao": "2026-10-30",
-"volume": 427925532
+"volume": 427925533
 },
 "POMO3": {
 "isin": "BRPOMOACNOR0",
@@ -3034,7 +3033,7 @@
 "tipo": "PN",
 "ultimo_preco": 3.7,
 "ultimo_pregao": "2026-10-30",
-"volume": 2296616327
+"volume": 2296616326
 },
 "POSI3": {
 "isin": "BRPOSIACNOR9",
@@ -3044,7 +3043,7 @@
 "tipo": "ON",
 "ultimo_preco": 2.91,
 "ultimo_pregao": "2026-10-30",
-"volume": 161872784
+"volume": 161872785
 },
 "PPLA11": {
 "isin": "BRPPLAUNT007",
@@ -3074,7 +3073,7 @@
 "tipo": "ON",
 "ultimo_preco": 12.12,
 "ultimo_pregao": "2026-10-30",
-"volume": 463756283
+"volume": 463756282
 },
 "PSSA3": {
 "isin": "BRPSSAACNOR7",
@@ -3084,7 +3083,7 @@
 "tipo": "ON",
 "ultimo_preco": 44.75,
 "ultimo_pregao": "2026-10-30",
-"volume": 2918689345
+"volume": 2918689346
 },
 "PTBL3": {
 "isin": "BRPTBLACNOR8",
@@ -3104,7 +3103,7 @@
 "tipo": "ON",
 "ultimo_preco": 1.32,
 "ultimo_pregao": "2026-10-30",
-"volume": 273174670
+"volume": 273174669
 },
 "RADL3": {
 "isin": "BRRADLACNOR0",
@@ -3124,7 +3123,7 @@
 "tipo": "ON",
 "ultimo_preco": 13.78,
 "ultimo_pregao": "2026-10-30",
-"volume": 7467865943
+"volume": 7467865942
 },
 "RAIZ4": {
 "isin": "BRRAIZACNPR6",
@@ -3154,7 +3153,7 @@
 "tipo": "ON",
 "ultimo_preco": 7.65,
 "ultimo_pregao": "2026-10-30",
-"volume": 9133046
+"volume": 9133047
 },
 "RAPT4": {
 "isin": "BRRAPTACNPR4",
@@ -3234,7 +3233,7 @@
 "tipo": "PN",
 "ultimo_preco": 27.3,
 "ultimo_pregao": "2026-10-30",
-"volume": 246107075
+"volume": 246107076
 },
 "RIAA3": {
 "isin": "BRRIAAACNOR2",
@@ -3244,7 +3243,7 @@
 "tipo": "ON",
 "ultimo_preco": 5.94,
 "ultimo_pregao": "2026-10-30",
-"volume": 758056220
+"volume": 758056221
 },
 "RNEW3": {
 "isin": "BRRNEWACNOR8",
@@ -3264,7 +3263,7 @@
 "tipo": "PN",
 "ultimo_preco": 0.8,
 "ultimo_pregao": "2026-10-30",
-"volume": 1428621
+"volume": 1428620
 },
 "ROMI3": {
 "isin": "BRROMIACNOR8",
@@ -3394,7 +3393,7 @@
 "tipo": "ON",
 "ultimo_preco": 14.1,
 "ultimo_pregao": "2026-10-30",
-"volume": 2913331992
+"volume": 2913331993
 },
 "SBFG3": {
 "isin": "BRSBFGACNOR1",
@@ -3414,7 +3413,7 @@
 "tipo": "ON",
 "ultimo_preco": 24.7,
 "ultimo_pregao": "2026-10-30",
-"volume": 20382836519
+"volume": 20382836520
 },
 "SCAR3": {
 "isin": "BRSCARACNOR7",
@@ -3424,7 +3423,7 @@
 "tipo": "ON",
 "ultimo_preco": 10.97,
 "ultimo_pregao": "2026-10-30",
-"volume": 9160434
+"volume": 9160435
 },
 "SEER3": {
 "isin": "BRSEERACNOR5",
@@ -3494,7 +3493,7 @@
 "tipo": "ON",
 "ultimo_preco": 15.52,
 "ultimo_pregao": "2026-10-30",
-"volume": 7402037934
+"volume": 7402037935
 },
 "SMTO3": {
 "isin": "BRSMTOACNOR3",
@@ -3574,7 +3573,7 @@
 "tipo": "ON",
 "ultimo_preco": 50.14,
 "ultimo_pregao": "2026-10-30",
-"volume": 10235641932
+"volume": 10235641933
 },
 "SYNE3": {
 "isin": "BRSYNEACNOR2",
@@ -3594,7 +3593,7 @@
 "tipo": "UNT",
 "ultimo_preco": 39.59,
 "ultimo_pregao": "2026-10-30",
-"volume": 3097395020
+"volume": 3097395019
 },
 "TAEE3": {
 "isin": "BRTAEEACNOR9",
@@ -3604,7 +3603,7 @@
 "tipo": "ON",
 "ultimo_preco": 12.9,
 "ultimo_pregao": "2026-10-30",
-"volume": 70662257
+"volume": 70662256
 },
 "TAEE4": {
 "isin": "BRTAEEACNPR6",
@@ -3614,7 +3613,7 @@
 "tipo": "PN",
 "ultimo_preco": 13.3,
 "ultimo_pregao": "2026-10-30",
-"volume": 144450923
+"volume": 144450922
 },
 "TASA3": {
 "isin": "BRTASAACNOR7",
@@ -3644,7 +3643,7 @@
 "tipo": "ON",
 "ultimo_preco": 0.57,
 "ultimo_pregao": "2026-10-30",
-"volume": 6039795
+"volume": 6039796
 },
 "TECN3": {
 "isin": "BRTECNACNOR6",
@@ -3694,7 +3693,7 @@
 "tipo": "PN",
 "ultimo_preco": 9.8,
 "ultimo_pregao": "2026-10-30",
-"volume": 601723126
+"volume": 601723127
 },
 "TGMA3": {
 "isin": "BRTGMAACNOR7",
@@ -3704,7 +3703,7 @@
 "tipo": "ON",
 "ultimo_preco": 36.02,
 "ultimo_pregao": "2026-10-30",
-"volume": 574034760
+"volume": 574034759
 },
 "TIMS3": {
 "isin": "BRTIMSACNOR5",
@@ -3714,7 +3713,7 @@
 "tipo": "ON",
 "ultimo_preco": 19.17,
 "ultimo_pregao": "2026-10-30",
-"volume": 4446299568
+"volume": 4446299569
 },
 "TOKY3": {
 "isin": "BRTOKYACNOR5",
@@ -3724,7 +3723,7 @@
 "tipo": "ON",
 "ultimo_preco": 4.35,
 "ultimo_pregao": "2026-10-30",
-"volume": 1170456
+"volume": 1170455
 },
 "TOTS3": {
 "isin": "BRTOTSACNOR8",
@@ -3814,7 +3813,7 @@
 "tipo": "ON",
 "ultimo_preco": 31.76,
 "ultimo_pregao": "2026-10-30",
-"volume": 9697481179
+"volume": 9697481180
 },
 "UNIP3": {
 "isin": "BRUNIPACNOR7",
@@ -3824,7 +3823,7 @@
 "tipo": "ON",
 "ultimo_preco": 50.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 12064122
+"volume": 12064123
 },
 "UNIP5": {
 "isin": "BRUNIPACNPA0",
@@ -3834,7 +3833,7 @@
 "tipo": "PNA",
 "ultimo_preco": 54.7,
 "ultimo_pregao": "2026-10-30",
-"volume": 1187899
+"volume": 1187898
 },
 "UNIP6": {
 "isin": "BRUNIPACNPB8",
@@ -3874,7 +3873,7 @@
 "tipo": "PNB",
 "ultimo_preco": 6.15,
 "ultimo_pregao": "2026-10-30",
-"volume": 5154
+"volume": 5155
 },
 "VALE3": {
 "isin": "BRVALEACNOR0",
@@ -3884,7 +3883,7 @@
 "tipo": "ON",
 "ultimo_preco": 62.02,
 "ultimo_pregao": "2026-10-30",
-"volume": 48938582135
+"volume": 48938582134
 },
 "VAMO3": {
 "isin": "BRVAMOACNOR7",
@@ -3894,7 +3893,7 @@
 "tipo": "ON",
 "ultimo_preco": 2.38,
 "ultimo_pregao": "2026-10-30",
-"volume": 4275321038
+"volume": 4275321037
 },
 "VBBR3": {
 "isin": "BRVBBRACNOR1",
@@ -3914,7 +3913,7 @@
 "tipo": "ON",
 "ultimo_preco": 2.6,
 "ultimo_pregao": "2026-10-30",
-"volume": 27200367
+"volume": 27200368
 },
 "VIVA3": {
 "isin": "BRVIVAACNOR0",
@@ -3924,7 +3923,7 @@
 "tipo": "ON",
 "ultimo_preco": 17.3,
 "ultimo_pregao": "2026-10-30",
-"volume": 2510754129
+"volume": 2510754128
 },
 "VIVR3": {
 "isin": "BRVIVRACNOR4",
@@ -3934,7 +3933,7 @@
 "tipo": "ON",
 "ultimo_preco": 3.13,
 "ultimo_pregao": "2026-10-30",
-"volume": 9815318
+"volume": 9815319
 },
 "VIVT3": {
 "isin": "BRVIVTACNOR0",
@@ -3954,7 +3953,7 @@
 "tipo": "ON",
 "ultimo_preco": 13.76,
 "ultimo_pregao": "2026-10-30",
-"volume": 175781133
+"volume": 175781132
 },
 "VSTE3": {
 "isin": "BRVSTEACNOR5",
@@ -3964,7 +3963,7 @@
 "tipo": "ON",
 "ultimo_preco": 2.4,
 "ultimo_pregao": "2026-10-30",
-"volume": 4108539
+"volume": 4108540
 },
 "VTRU3": {
 "isin": "BRVTRUACNOR3",
@@ -3984,7 +3983,7 @@
 "tipo": "ON",
 "ultimo_preco": 11.53,
 "ultimo_pregao": "2026-10-30",
-"volume": 1017557769
+"volume": 1017557768
 },
 "VVEO3": {
 "isin": "BRVVEOACNOR0",
@@ -4014,7 +4013,7 @@
 "tipo": "ON",
 "ultimo_preco": 48.36,
 "ultimo_pregao": "2026-10-30",
-"volume": 16641154271
+"volume": 16641154270
 },
 "WEST3": {
 "isin": "BRWESTACNOR3",
@@ -4044,7 +4043,7 @@
 "tipo": "PN",
 "ultimo_preco": 3.38,
 "ultimo_pregao": "2026-10-30",
-"volume": 1414864
+"volume": 1414863
 },
 "WIZC3": {
 "isin": "BRWIZCACNOR5",
@@ -4084,7 +4083,7 @@
 "tipo": "ON",
 "ultimo_preco": 8.91,
 "ultimo_pregao": "2026-10-30",
-"volume": 1615507157
+"volume": 1615507156
 }
 }
 }

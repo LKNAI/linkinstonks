@@ -1,5 +1,5 @@
 {
-"fonte": "diario",
+"fonte": "mensal",
 "mes": "2026-10",
 "pregoes": [
 "2026-10-01",
@@ -94,7 +94,7 @@
 "tipo": "DRN",
 "ultimo_preco": 44.64,
 "ultimo_pregao": "2026-10-30",
-"volume": 280391
+"volume": 280390
 },
 "A1EN34": {
 "isin": "BRA1ENBDR008",
@@ -174,7 +174,7 @@
 "tipo": "DRN",
 "ultimo_preco": 8.65,
 "ultimo_pregao": "2026-10-30",
-"volume": 413552
+"volume": 413553
 },
 "A1KA34": {
 "isin": "BRA1KABDR002",
@@ -184,7 +184,7 @@
 "tipo": "DRN",
 "ultimo_preco": 42.16,
 "ultimo_pregao": "2026-10-30",
-"volume": 55833610
+"volume": 55833611
 },
 "A1LB34": {
 "isin": "BRA1LBBDR008",
@@ -204,7 +204,7 @@
 "tipo": "DRN",
 "ultimo_preco": 205.8,
 "ultimo_pregao": "2026-10-29",
-"volume": 36682
+"volume": 36681
 },
 "A1LK34": {
 "isin": "BRA1LKBDR009",
@@ -224,7 +224,7 @@
 "tipo": "DRN",
 "ultimo_preco": 139.72,
 "ultimo_pregao": "2026-10-30",
-"volume": 135952
+"volume": 135951
 },
 "A1LN34": {
 "isin": "BRA1LNBDR003",
@@ -274,7 +274,7 @@
 "tipo": "DRN",
 "ultimo_preco": 210.16,
 "ultimo_pregao": "2026-10-30",
-"volume": 58333836
+"volume": 58333835
 },
 "A1NE34": {
 "isin": "BRA1NEBDR008",
@@ -284,7 +284,7 @@
 "tipo": "DRN",
 "ultimo_preco": 229.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 32330566
+"volume": 32330565
 },
 "A1ON34": {
 "isin": "BRA1ONBDR007",
@@ -344,7 +344,7 @@
 "tipo": "DRN",
 "ultimo_preco": 95.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 4044826
+"volume": 4044827
 },
 "A1PO34": {
 "isin": "BRA1POBDR002",
@@ -364,7 +364,7 @@
 "tipo": "DRN",
 "ultimo_preco": 39.12,
 "ultimo_pregao": "2026-10-30",
-"volume": 1648990
+"volume": 1648989
 },
 "A1RC34": {
 "isin": "BRA1RCBDR003",
@@ -374,7 +374,7 @@
 "tipo": "DRN",
 "ultimo_preco": 37.7,
 "ultimo_pregao": "2026-10-29",
-"volume": 23667
+"volume": 23666
 },
 "A1RE34": {
 "isin": "BRA1REBDR009",
@@ -464,7 +464,7 @@
 "tipo": "DRN",
 "ultimo_preco": 65.77,
 "ultimo_pregao": "2026-10-30",
-"volume": 26263
+"volume": 26262
 },
 "A1ZN34": {
 "isin": "BRA1ZNBDR003",
@@ -484,7 +484,7 @@
 "tipo": "DRN",
 "ultimo_preco": 26.8,
 "ultimo_pregao": "2026-10-30",
-"volume": 8386462
+"volume": 8386461
 },
 "A2LC34": {
 "isin": "BRA2LCBDR004",
@@ -504,7 +504,7 @@
 "tipo": "DRN",
 "ultimo_preco": 13.87,
 "ultimo_pregao": "2026-10-30",
-"volume": 433146
+"volume": 433147
 },
 "A2RE34": {
 "isin": "BRA2REBDR007",
@@ -514,7 +514,7 @@
 "tipo": "DRN",
 "ultimo_preco": 68.25,
 "ultimo_pregao": "2026-10-29",
-"volume": 137178
+"volume": 137179
 },
 "A2RR34": {
 "isin": "BRA2RRBDR009",
@@ -564,7 +564,7 @@
 "tipo": "DRN",
 "ultimo_preco": 17.72,
 "ultimo_pregao": "2026-10-30",
-"volume": 62191
+"volume": 62192
 },
 "AADA39": {
 "isin": "BRAADABDR003",
@@ -574,7 +574,7 @@
 "tipo": "DRE",
 "ultimo_preco": 19.68,
 "ultimo_pregao": "2026-10-29",
-"volume": 60446
+"volume": 60447
 },
 "AALL34": {
 "isin": "BRAALLBDR003",
@@ -644,7 +644,7 @@
 "tipo": "DRN",
 "ultimo_preco": 1408.07,
 "ultimo_pregao": "2026-10-30",
-"volume": 2736907
+"volume": 2736906
 },
 "ACWX39": {
 "isin": "BRACWXBDR001",
@@ -724,7 +724,7 @@
 "tipo": "DRN",
 "ultimo_preco": 65.6,
 "ultimo_pregao": "2026-10-30",
-"volume": 1197861956
+"volume": 1197861957
 },
 "ANGV39": {
 "isin": "BRANGVBDR005",
@@ -754,7 +754,7 @@
 "tipo": "DRE",
 "ultimo_preco": 43.15,
 "ultimo_pregao": "2026-10-30",
-"volume": 1852184
+"volume": 1852185
 },
 "ARMT34": {
 "isin": "BRARMTBDR008",
@@ -774,7 +774,7 @@
 "tipo": "DRN",
 "ultimo_preco": 43.64,
 "ultimo_pregao": "2026-10-30",
-"volume": 990670
+"volume": 990669
 },
 "ASML34": {
 "isin": "BRASMLBDR003",
@@ -794,7 +794,7 @@
 "tipo": "DRN",
 "ultimo_preco": 39.09,
 "ultimo_pregao": "2026-10-30",
-"volume": 2791458
+"volume": 2791457
 },
 "AURA33": {
 "isin": "BRAURABDR001",
@@ -804,7 +804,7 @@
 "tipo": "DR3",
 "ultimo_preco": 121.37,
 "ultimo_pregao": "2026-10-30",
-"volume": 2282753764
+"volume": 2282753763
 },
 "AVGO34": {
 "isin": "BRAVGOBDR003",
@@ -814,7 +814,7 @@
 "tipo": "DRN",
 "ultimo_preco": 25.23,
 "ultimo_pregao": "2026-10-30",
-"volume": 256882511
+"volume": 256882510
 },
 "AWII34": {
 "isin": "BRAWIIBDR009",
@@ -874,7 +874,7 @@
 "tipo": "DRN",
 "ultimo_preco": 62.1,
 "ultimo_pregao": "2026-10-30",
-"volume": 5453
+"volume": 5454
 },
 "B1BT34": {
 "isin": "BRB1BTBDR000",
@@ -934,7 +934,7 @@
 "tipo": "DRN",
 "ultimo_preco": 13.88,
 "ultimo_pregao": "2026-10-30",
-"volume": 94615
+"volume": 94614
 },
 "B1KR34": {
 "isin": "BRB1KRBDR005",
@@ -954,7 +954,7 @@
 "tipo": "DRN",
 "ultimo_preco": 178.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 34788
+"volume": 34787
 },
 "B1ME34": {
 "isin": "BRB1MEBDR009",
@@ -964,7 +964,7 @@
 "tipo": "DRN",
 "ultimo_preco": 80.32,
 "ultimo_pregao": "2026-10-30",
-"volume": 973
+"volume": 972
 },
 "B1MR34": {
 "isin": "BRB1MRBDR001",
@@ -1044,7 +1044,7 @@
 "tipo": "DRN",
 "ultimo_preco": 279.45,
 "ultimo_pregao": "2026-10-30",
-"volume": 2122
+"volume": 2123
 },
 "B1ZE34": {
 "isin": "BRB1ZEBDR001",
@@ -1064,7 +1064,7 @@
 "tipo": "DRN",
 "ultimo_preco": 48.6,
 "ultimo_pregao": "2026-10-30",
-"volume": 1021604
+"volume": 1021603
 },
 "B2AP34": {
 "isin": "BRB2APBDR008",
@@ -1274,7 +1274,7 @@
 "tipo": "DRE",
 "ultimo_preco": 82.56,
 "ultimo_pregao": "2026-10-30",
-"volume": 4327
+"volume": 4326
 },
 "BBGR39": {
 "isin": "BRBBGRBDR006",
@@ -1294,7 +1294,7 @@
 "tipo": "DRE",
 "ultimo_preco": 83.3,
 "ultimo_pregao": "2026-10-29",
-"volume": 5102
+"volume": 5101
 },
 "BBJP39": {
 "isin": "BRBBJPBDR004",
@@ -1314,7 +1314,7 @@
 "tipo": "DRE",
 "ultimo_preco": 83.76,
 "ultimo_pregao": "2026-10-30",
-"volume": 1177
+"volume": 1176
 },
 "BBUG39": {
 "isin": "BRBBUGBDR000",
@@ -1344,7 +1344,7 @@
 "tipo": "DRN",
 "ultimo_preco": 88.92,
 "ultimo_pregao": "2026-10-29",
-"volume": 35990
+"volume": 35991
 },
 "BCAT39": {
 "isin": "BRBCATBDR003",
@@ -1384,7 +1384,7 @@
 "tipo": "DRE",
 "ultimo_preco": 109.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 1075333
+"volume": 1075334
 },
 "BCLO39": {
 "isin": "BRBCLOBDR001",
@@ -1444,7 +1444,7 @@
 "tipo": "DRE",
 "ultimo_preco": 33.99,
 "ultimo_pregao": "2026-10-30",
-"volume": 765621
+"volume": 765620
 },
 "BCWV39": {
 "isin": "BRBCWVBDR003",
@@ -1454,7 +1454,7 @@
 "tipo": "DRE",
 "ultimo_preco": 70.63,
 "ultimo_pregao": "2026-10-30",
-"volume": 232755
+"volume": 232754
 },
 "BDRE39": {
 "isin": "BRBDREBDR007",
@@ -1484,7 +1484,7 @@
 "tipo": "DRE",
 "ultimo_preco": 52.51,
 "ultimo_pregao": "2026-10-30",
-"volume": 457714
+"volume": 457713
 },
 "BDVE39": {
 "isin": "BRBDVEBDR009",
@@ -1524,7 +1524,7 @@
 "tipo": "DRE",
 "ultimo_preco": 55.12,
 "ultimo_pregao": "2026-10-30",
-"volume": 18665113
+"volume": 18665114
 },
 "BEFA39": {
 "isin": "BRBEFABDR008",
@@ -1534,7 +1534,7 @@
 "tipo": "DRE",
 "ultimo_preco": 70.07,
 "ultimo_pregao": "2026-10-30",
-"volume": 655255
+"volume": 655256
 },
 "BEFG39": {
 "isin": "BRBEFGBDR005",
@@ -1644,7 +1644,7 @@
 "tipo": "DRN",
 "ultimo_preco": 147.83,
 "ultimo_pregao": "2026-10-30",
-"volume": 224495731
+"volume": 224495730
 },
 "BEUW39": {
 "isin": "BRBEUWBDR001",
@@ -1664,7 +1664,7 @@
 "tipo": "DRE",
 "ultimo_preco": 53.15,
 "ultimo_pregao": "2026-10-29",
-"volume": 80887
+"volume": 80886
 },
 "BEWC39": {
 "isin": "BRBEWCBDR009",
@@ -1694,7 +1694,7 @@
 "tipo": "DRE",
 "ultimo_preco": 75.83,
 "ultimo_pregao": "2026-10-30",
-"volume": 1255042
+"volume": 1255043
 },
 "BEWH39": {
 "isin": "BRBEWHBDR008",
@@ -1734,7 +1734,7 @@
 "tipo": "DRE",
 "ultimo_preco": 69.65,
 "ultimo_pregao": "2026-10-30",
-"volume": 1729084
+"volume": 1729085
 },
 "BEWM39": {
 "isin": "BRBEWMBDR008",
@@ -1874,7 +1874,7 @@
 "tipo": "DRE",
 "ultimo_preco": 75.68,
 "ultimo_pregao": "2026-10-30",
-"volume": 770927
+"volume": 770928
 },
 "BFCG39": {
 "isin": "BRBFCGBDR009",
@@ -1884,7 +1884,7 @@
 "tipo": "DRE",
 "ultimo_preco": 89.01,
 "ultimo_pregao": "2026-10-30",
-"volume": 314494
+"volume": 314493
 },
 "BFIW39": {
 "isin": "BRBFIWBDR003",
@@ -1924,7 +1924,7 @@
 "tipo": "DRE",
 "ultimo_preco": 35.9,
 "ultimo_pregao": "2026-10-30",
-"volume": 413187
+"volume": 413188
 },
 "BGAR39": {
 "isin": "BRBGARBDR008",
@@ -1964,7 +1964,7 @@
 "tipo": "DRE",
 "ultimo_preco": 40.46,
 "ultimo_pregao": "2026-10-30",
-"volume": 5213611
+"volume": 5213612
 },
 "BGOZ39": {
 "isin": "BRBGOZBDR002",
@@ -1994,7 +1994,7 @@
 "tipo": "DRE",
 "ultimo_preco": 48.05,
 "ultimo_pregao": "2026-10-30",
-"volume": 202846
+"volume": 202847
 },
 "BGWH39": {
 "isin": "BRBGWHBDR003",
@@ -2004,7 +2004,7 @@
 "tipo": "DRE",
 "ultimo_preco": 88.02,
 "ultimo_pregao": "2026-10-30",
-"volume": 413957
+"volume": 413958
 },
 "BHDV39": {
 "isin": "BRBHDVBDR002",
@@ -2014,7 +2014,7 @@
 "tipo": "DRE",
 "ultimo_preco": 16.96,
 "ultimo_pregao": "2026-10-30",
-"volume": 103839
+"volume": 103840
 },
 "BHEF39": {
 "isin": "BRBHEFBDR003",
@@ -2034,7 +2034,7 @@
 "tipo": "DRE",
 "ultimo_preco": 35.79,
 "ultimo_pregao": "2026-10-30",
-"volume": 6112884
+"volume": 6112885
 },
 "BHVN34": {
 "isin": "BRBHVNBDR001",
@@ -2084,7 +2084,7 @@
 "tipo": "DRE",
 "ultimo_preco": 63.48,
 "ultimo_pregao": "2026-10-29",
-"volume": 10700
+"volume": 10701
 },
 "BIAK39": {
 "isin": "BRBIAKBDR009",
@@ -2174,7 +2174,7 @@
 "tipo": "DRE",
 "ultimo_preco": 76.64,
 "ultimo_pregao": "2026-10-29",
-"volume": 174285
+"volume": 174286
 },
 "BIEF39": {
 "isin": "BRBIEFBDR001",
@@ -2184,7 +2184,7 @@
 "tipo": "DRE",
 "ultimo_preco": 65.24,
 "ultimo_pregao": "2026-10-30",
-"volume": 1322343
+"volume": 1322342
 },
 "BIEI39": {
 "isin": "BRBIEIBDR005",
@@ -2204,7 +2204,7 @@
 "tipo": "DRE",
 "ultimo_preco": 67.58,
 "ultimo_pregao": "2026-10-30",
-"volume": 12692789
+"volume": 12692788
 },
 "BIEO39": {
 "isin": "BRBIEOBDR003",
@@ -2294,7 +2294,7 @@
 "tipo": "DRE",
 "ultimo_preco": 56.1,
 "ultimo_pregao": "2026-10-30",
-"volume": 2589668
+"volume": 2589669
 },
 "BIHA39": {
 "isin": "BRBIHABDR005",
@@ -2304,7 +2304,7 @@
 "tipo": "DRE",
 "ultimo_preco": 132.49,
 "ultimo_pregao": "2026-10-30",
-"volume": 64840
+"volume": 64839
 },
 "BIHE39": {
 "isin": "BRBIHEBDR007",
@@ -2314,7 +2314,7 @@
 "tipo": "DRE",
 "ultimo_preco": 32.76,
 "ultimo_pregao": "2026-10-30",
-"volume": 106886
+"volume": 106887
 },
 "BIHF39": {
 "isin": "BRBIHFBDR004",
@@ -2364,7 +2364,7 @@
 "tipo": "DRE",
 "ultimo_preco": 95.58,
 "ultimo_pregao": "2026-10-29",
-"volume": 182771
+"volume": 182772
 },
 "BIJS39": {
 "isin": "BRBIJSBDR003",
@@ -2404,7 +2404,7 @@
 "tipo": "DRE",
 "ultimo_preco": 58.32,
 "ultimo_pregao": "2026-10-30",
-"volume": 1052292
+"volume": 1052293
 },
 "BIPC39": {
 "isin": "BRBIPCBDR004",
@@ -2434,7 +2434,7 @@
 "tipo": "DRE",
 "ultimo_preco": 89.46,
 "ultimo_pregao": "2026-10-30",
-"volume": 1007270
+"volume": 1007269
 },
 "BIVB39": {
 "isin": "BRBIVBBDR004",
@@ -2484,7 +2484,7 @@
 "tipo": "DRE",
 "ultimo_preco": 75.93,
 "ultimo_pregao": "2026-10-30",
-"volume": 4714941
+"volume": 4714940
 },
 "BIXC39": {
 "isin": "BRBIXCBDR008",
@@ -2524,7 +2524,7 @@
 "tipo": "DRE",
 "ultimo_preco": 24.51,
 "ultimo_pregao": "2026-10-30",
-"volume": 1005907
+"volume": 1005906
 },
 "BIXU39": {
 "isin": "BRBIXUBDR000",
@@ -2564,7 +2564,7 @@
 "tipo": "DRE",
 "ultimo_preco": 47.41,
 "ultimo_pregao": "2026-10-30",
-"volume": 12192610
+"volume": 12192611
 },
 "BIYG39": {
 "isin": "BRBIYGBDR007",
@@ -2614,7 +2614,7 @@
 "tipo": "DRE",
 "ultimo_preco": 50.18,
 "ultimo_pregao": "2026-10-30",
-"volume": 44380496
+"volume": 44380495
 },
 "BIYW39": {
 "isin": "BRBIYWBDR004",
@@ -2664,7 +2664,7 @@
 "tipo": "DRE",
 "ultimo_preco": 46.6,
 "ultimo_pregao": "2026-10-30",
-"volume": 273271
+"volume": 273272
 },
 "BKWB39": {
 "isin": "BRBKWBBDR008",
@@ -2674,7 +2674,7 @@
 "tipo": "DRE",
 "ultimo_preco": 123.7,
 "ultimo_pregao": "2026-10-30",
-"volume": 7019172
+"volume": 7019173
 },
 "BKXI39": {
 "isin": "BRBKXIBDR001",
@@ -2704,7 +2704,7 @@
 "tipo": "DRN",
 "ultimo_preco": 94.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 5618537
+"volume": 5618538
 },
 "BLBT39": {
 "isin": "BRBLBTBDR002",
@@ -2784,7 +2784,7 @@
 "tipo": "DRE",
 "ultimo_preco": 76.8,
 "ultimo_pregao": "2026-10-30",
-"volume": 2645793
+"volume": 2645792
 },
 "BMYB34": {
 "isin": "BRBMYBBDR000",
@@ -2834,7 +2834,7 @@
 "tipo": "DRN",
 "ultimo_preco": 937.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 5393642
+"volume": 5393643
 },
 "BONY34": {
 "isin": "BRBONYBDR001",
@@ -2884,7 +2884,7 @@
 "tipo": "DRE",
 "ultimo_preco": 49.25,
 "ultimo_pregao": "2026-10-30",
-"volume": 132623
+"volume": 132624
 },
 "BQCL39": {
 "isin": "BRBQCLBDR006",
@@ -2934,7 +2934,7 @@
 "tipo": "DRE",
 "ultimo_preco": 69.7,
 "ultimo_pregao": "2026-10-30",
-"volume": 875058
+"volume": 875059
 },
 "BQYL39": {
 "isin": "BRBQYLBDR000",
@@ -2944,7 +2944,7 @@
 "tipo": "DRE",
 "ultimo_preco": 32.47,
 "ultimo_pregao": "2026-10-30",
-"volume": 153736
+"volume": 153735
 },
 "BROB39": {
 "isin": "BRBROBBDR000",
@@ -2994,7 +2994,7 @@
 "tipo": "DRE",
 "ultimo_preco": 56.07,
 "ultimo_pregao": "2026-10-30",
-"volume": 13973481
+"volume": 13973482
 },
 "BSIL39": {
 "isin": "BRBSILBDR009",
@@ -3024,7 +3024,7 @@
 "tipo": "DRE",
 "ultimo_preco": 81.1,
 "ultimo_pregao": "2026-10-30",
-"volume": 127947379
+"volume": 127947378
 },
 "BSNS39": {
 "isin": "BRBSNSBDR004",
@@ -3054,7 +3054,7 @@
 "tipo": "DRE",
 "ultimo_preco": 36.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 22660
+"volume": 22661
 },
 "BSTI39": {
 "isin": "BRBSTIBDR002",
@@ -3114,7 +3114,7 @@
 "tipo": "DRE",
 "ultimo_preco": 56.81,
 "ultimo_pregao": "2026-10-29",
-"volume": 1756448
+"volume": 1756447
 },
 "BTLH39": {
 "isin": "BRBTLHBDR009",
@@ -3184,7 +3184,7 @@
 "tipo": "DRE",
 "ultimo_preco": 57.78,
 "ultimo_pregao": "2026-10-30",
-"volume": 64323
+"volume": 64324
 },
 "BUTL39": {
 "isin": "BRBUTLBDR002",
@@ -3194,7 +3194,7 @@
 "tipo": "DRE",
 "ultimo_preco": 75.39,
 "ultimo_pregao": "2026-10-30",
-"volume": 1158498
+"volume": 1158497
 },
 "BVLU39": {
 "isin": "BRBVLUBDR008",
@@ -3234,7 +3234,7 @@
 "tipo": "DRN",
 "ultimo_preco": 32.11,
 "ultimo_pregao": "2026-10-30",
-"volume": 2935796
+"volume": 2935797
 },
 "C1AG34": {
 "isin": "BRC1AGBDR008",
@@ -3264,7 +3264,7 @@
 "tipo": "DRN",
 "ultimo_preco": 82.63,
 "ultimo_pregao": "2026-10-30",
-"volume": 785839
+"volume": 785838
 },
 "C1BO34": {
 "isin": "BRC1BOBDR000",
@@ -3294,7 +3294,7 @@
 "tipo": "DRN",
 "ultimo_preco": 121.92,
 "ultimo_pregao": "2026-10-30",
-"volume": 2489379
+"volume": 2489378
 },
 "C1CJ34": {
 "isin": "BRC1CJBDR008",
@@ -3314,7 +3314,7 @@
 "tipo": "DRN",
 "ultimo_preco": 157.28,
 "ultimo_pregao": "2026-10-30",
-"volume": 846381
+"volume": 846382
 },
 "C1DN34": {
 "isin": "BRC1DNBDR008",
@@ -3364,7 +3364,7 @@
 "tipo": "DRN",
 "ultimo_preco": 668.8,
 "ultimo_pregao": "2026-10-30",
-"volume": 2837563
+"volume": 2837564
 },
 "C1GP34": {
 "isin": "BRC1GPBDR006",
@@ -3414,7 +3414,7 @@
 "tipo": "DRN",
 "ultimo_preco": 68.58,
 "ultimo_pregao": "2026-10-30",
-"volume": 74796
+"volume": 74795
 },
 "C1MG34": {
 "isin": "BRC1MGBDR003",
@@ -3524,7 +3524,7 @@
 "tipo": "DRN",
 "ultimo_preco": 82.4,
 "ultimo_pregao": "2026-10-30",
-"volume": 347679
+"volume": 347678
 },
 "C1RR34": {
 "isin": "BRC1RRBDR009",
@@ -3614,7 +3614,7 @@
 "tipo": "DRN",
 "ultimo_preco": 16.55,
 "ultimo_pregao": "2026-10-30",
-"volume": 15290
+"volume": 15291
 },
 "C2OI34": {
 "isin": "BRC2OIBDR003",
@@ -3994,7 +3994,7 @@
 "tipo": "DRN",
 "ultimo_preco": 49.1,
 "ultimo_pregao": "2026-10-30",
-"volume": 210522
+"volume": 210521
 },
 "D1DG34": {
 "isin": "BRD1DGBDR001",
@@ -4044,7 +4044,7 @@
 "tipo": "DRN",
 "ultimo_preco": 60.54,
 "ultimo_pregao": "2026-10-30",
-"volume": 189185
+"volume": 189186
 },
 "D1OC34": {
 "isin": "BRD1OCBDR007",
@@ -4054,7 +4054,7 @@
 "tipo": "DRN",
 "ultimo_preco": 22.44,
 "ultimo_pregao": "2026-10-30",
-"volume": 305724
+"volume": 305723
 },
 "D1OM34": {
 "isin": "BRD1OMBDR006",
@@ -4074,7 +4074,7 @@
 "tipo": "DRN",
 "ultimo_preco": 47.41,
 "ultimo_pregao": "2026-10-30",
-"volume": 321118
+"volume": 321119
 },
 "D1RI34": {
 "isin": "BRD1RIBDR007",
@@ -4144,7 +4144,7 @@
 "tipo": "DRN",
 "ultimo_preco": 18.62,
 "ultimo_pregao": "2026-10-30",
-"volume": 180440
+"volume": 180441
 },
 "D2KS34": {
 "isin": "BRD2KSBDR009",
@@ -4274,7 +4274,7 @@
 "tipo": "DRN",
 "ultimo_preco": 45.19,
 "ultimo_pregao": "2026-10-30",
-"volume": 2255557
+"volume": 2255558
 },
 "DISB34": {
 "isin": "BRDISBBDR006",
@@ -4294,7 +4294,7 @@
 "tipo": "DRE",
 "ultimo_preco": 55.29,
 "ultimo_pregao": "2026-10-30",
-"volume": 12178001
+"volume": 12178000
 },
 "DTCR39": {
 "isin": "BRDTCRBDR003",
@@ -4314,7 +4314,7 @@
 "tipo": "DRN",
 "ultimo_preco": 659.28,
 "ultimo_pregao": "2026-10-30",
-"volume": 197132
+"volume": 197131
 },
 "DUOL34": {
 "isin": "BRDUOLBDR009",
@@ -4324,7 +4324,7 @@
 "tipo": "DRN",
 "ultimo_preco": 22.36,
 "ultimo_pregao": "2026-10-30",
-"volume": 2362063
+"volume": 2362062
 },
 "DVAI34": {
 "isin": "BRDVAIBDR002",
@@ -4334,7 +4334,7 @@
 "tipo": "DRN",
 "ultimo_preco": 1014.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 229962
+"volume": 229961
 },
 "E1CL34": {
 "isin": "BRE1CLBDR002",
@@ -4444,7 +4444,7 @@
 "tipo": "DRN",
 "ultimo_preco": 30.42,
 "ultimo_pregao": "2026-10-30",
-"volume": 50240
+"volume": 50241
 },
 "E1SS34": {
 "isin": "BRE1SSBDR003",
@@ -4464,7 +4464,7 @@
 "tipo": "DRN",
 "ultimo_preco": 143.1,
 "ultimo_pregao": "2026-10-30",
-"volume": 7711581
+"volume": 7711582
 },
 "E1WL34": {
 "isin": "BRE1WLBDR000",
@@ -4564,7 +4564,7 @@
 "tipo": "DRN",
 "ultimo_preco": 12.62,
 "ultimo_pregao": "2026-10-30",
-"volume": 63066
+"volume": 63065
 },
 "E2ST34": {
 "isin": "BRE2STBDR009",
@@ -4584,7 +4584,7 @@
 "tipo": "DRN",
 "ultimo_preco": 32.25,
 "ultimo_pregao": "2026-10-30",
-"volume": 24009
+"volume": 24008
 },
 "E2XE34": {
 "isin": "BRE2XEBDR001",
@@ -4674,7 +4674,7 @@
 "tipo": "DRN",
 "ultimo_preco": 68.81,
 "ultimo_pregao": "2026-10-30",
-"volume": 2906113
+"volume": 2906112
 },
 "ETHA39": {
 "isin": "BRETHABDR006",
@@ -4684,7 +4684,7 @@
 "tipo": "DRE",
 "ultimo_preco": 91.51,
 "ultimo_pregao": "2026-10-30",
-"volume": 3831809
+"volume": 3831810
 },
 "ETHV39": {
 "isin": "BRETHVBDR002",
@@ -4704,7 +4704,7 @@
 "tipo": "DR1",
 "ultimo_preco": 8.09,
 "ultimo_pregao": "2026-10-30",
-"volume": 4638566
+"volume": 4638567
 },
 "EVTC31": {
 "isin": "BREVTCBDR003",
@@ -4754,7 +4754,7 @@
 "tipo": "DRN",
 "ultimo_preco": 69.58,
 "ultimo_pregao": "2026-10-29",
-"volume": 16868
+"volume": 16867
 },
 "F1BH34": {
 "isin": "BRF1BHBDR001",
@@ -4784,7 +4784,7 @@
 "tipo": "DRN",
 "ultimo_preco": 135.72,
 "ultimo_pregao": "2026-10-30",
-"volume": 500039
+"volume": 500038
 },
 "F1MC34": {
 "isin": "BRF1MCBDR009",
@@ -4794,7 +4794,7 @@
 "tipo": "DRN",
 "ultimo_preco": 16.34,
 "ultimo_pregao": "2026-10-30",
-"volume": 8769360
+"volume": 8769359
 },
 "F1NI34": {
 "isin": "BRF1NIBDR004",
@@ -4914,7 +4914,7 @@
 "tipo": "DRN",
 "ultimo_preco": 113.51,
 "ultimo_pregao": "2026-10-30",
-"volume": 56498179
+"volume": 56498180
 },
 "FDMO34": {
 "isin": "BRFDMOBDR008",
@@ -5034,7 +5034,7 @@
 "tipo": "DRN",
 "ultimo_preco": 167.45,
 "ultimo_pregao": "2026-10-30",
-"volume": 38542203
+"volume": 38542202
 },
 "G1MI34": {
 "isin": "BRG1MIBDR005",
@@ -5054,7 +5054,7 @@
 "tipo": "DRN",
 "ultimo_preco": 130.56,
 "ultimo_pregao": "2026-10-30",
-"volume": 33794
+"volume": 33793
 },
 "G1RM34": {
 "isin": "BRG1RMBDR006",
@@ -5194,7 +5194,7 @@
 "tipo": "DRN",
 "ultimo_preco": 81.1,
 "ultimo_pregao": "2026-10-30",
-"volume": 3637049
+"volume": 3637050
 },
 "GILD34": {
 "isin": "BRGILDBDR000",
@@ -5244,7 +5244,7 @@
 "tipo": "DRN",
 "ultimo_preco": 127.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 5585721
+"volume": 5585720
 },
 "GPRK34": {
 "isin": "BRGPRKBDR007",
@@ -5294,7 +5294,7 @@
 "tipo": "DRN",
 "ultimo_preco": 161.19,
 "ultimo_pregao": "2026-10-30",
-"volume": 56160385
+"volume": 56160384
 },
 "H1AS34": {
 "isin": "BRH1ASBDR008",
@@ -5324,7 +5324,7 @@
 "tipo": "DRN",
 "ultimo_preco": 128.96,
 "ultimo_pregao": "2026-10-30",
-"volume": 387449
+"volume": 387448
 },
 "H1DB34": {
 "isin": "BRH1DBBDR008",
@@ -5414,7 +5414,7 @@
 "tipo": "DRN",
 "ultimo_preco": 296.21,
 "ultimo_pregao": "2026-10-30",
-"volume": 4330753
+"volume": 4330754
 },
 "H1RB34": {
 "isin": "BRH1RBBDR008",
@@ -5474,7 +5474,7 @@
 "tipo": "DRN",
 "ultimo_preco": 50.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 198038
+"volume": 198039
 },
 "H2TA34": {
 "isin": "BRH2TABDR004",
@@ -5494,7 +5494,7 @@
 "tipo": "DRN",
 "ultimo_preco": 26.16,
 "ultimo_pregao": "2026-10-30",
-"volume": 212704
+"volume": 212705
 },
 "HALI34": {
 "isin": "BRHALIBDR004",
@@ -5524,7 +5524,7 @@
 "tipo": "DRN",
 "ultimo_preco": 63.96,
 "ultimo_pregao": "2026-10-30",
-"volume": 2651985
+"volume": 2651986
 },
 "HONB34": {
 "isin": "BRHONBBDR006",
@@ -5544,7 +5544,7 @@
 "tipo": "DRN",
 "ultimo_preco": 185.65,
 "ultimo_pregao": "2026-10-30",
-"volume": 83332
+"volume": 83331
 },
 "HPQB34": {
 "isin": "BRHPQBBDR006",
@@ -5594,7 +5594,7 @@
 "tipo": "DRN",
 "ultimo_preco": 76.86,
 "ultimo_pregao": "2026-10-30",
-"volume": 581420
+"volume": 581419
 },
 "I1DX34": {
 "isin": "BRI1DXBDR001",
@@ -5694,7 +5694,7 @@
 "tipo": "DRN",
 "ultimo_preco": 52.36,
 "ultimo_pregao": "2026-10-29",
-"volume": 70355
+"volume": 70354
 },
 "I1RP34": {
 "isin": "BRI1RPBDR007",
@@ -5844,7 +5844,7 @@
 "tipo": "DRN",
 "ultimo_preco": 173.3,
 "ultimo_pregao": "2026-10-29",
-"volume": 169375
+"volume": 169374
 },
 "INTU34": {
 "isin": "BRINTUBDR003",
@@ -5884,7 +5884,7 @@
 "tipo": "DRN",
 "ultimo_preco": 56.52,
 "ultimo_pregao": "2026-10-29",
-"volume": 206420
+"volume": 206421
 },
 "J1EF34": {
 "isin": "BRJ1EFBDR005",
@@ -6004,7 +6004,7 @@
 "tipo": "DRN",
 "ultimo_preco": 100.38,
 "ultimo_pregao": "2026-10-30",
-"volume": 20507380
+"volume": 20507379
 },
 "JPEM39": {
 "isin": "BRJPEMBDR005",
@@ -6244,7 +6244,7 @@
 "tipo": "DRN",
 "ultimo_preco": 26.28,
 "ultimo_pregao": "2026-10-30",
-"volume": 942491
+"volume": 942490
 },
 "L1NC34": {
 "isin": "BRL1NCBDR009",
@@ -6324,7 +6324,7 @@
 "tipo": "DRN",
 "ultimo_preco": 178.93,
 "ultimo_pregao": "2026-10-30",
-"volume": 1114012
+"volume": 1114011
 },
 "L1YG34": {
 "isin": "BRL1YGBDR007",
@@ -6354,7 +6354,7 @@
 "tipo": "DRN",
 "ultimo_preco": 84.88,
 "ultimo_pregao": "2026-10-30",
-"volume": 42516
+"volume": 42517
 },
 "L2RN34": {
 "isin": "BRL2RNBDR005",
@@ -6504,7 +6504,7 @@
 "tipo": "DRN",
 "ultimo_preco": 17.82,
 "ultimo_pregao": "2026-10-29",
-"volume": 357
+"volume": 356
 },
 "M1LC34": {
 "isin": "BRM1LCBDR002",
@@ -6534,7 +6534,7 @@
 "tipo": "DRN",
 "ultimo_preco": 68.25,
 "ultimo_pregao": "2026-10-30",
-"volume": 50087
+"volume": 50088
 },
 "M1NS34": {
 "isin": "BRM1NSBDR004",
@@ -6544,7 +6544,7 @@
 "tipo": "DRN",
 "ultimo_preco": 32.19,
 "ultimo_pregao": "2026-10-30",
-"volume": 1624066
+"volume": 1624065
 },
 "M1PC34": {
 "isin": "BRM1PCBDR003",
@@ -6564,7 +6564,7 @@
 "tipo": "DRN",
 "ultimo_preco": 60.45,
 "ultimo_pregao": "2026-10-30",
-"volume": 191520764
+"volume": 191520765
 },
 "M1SC34": {
 "isin": "BRM1SCBDR007",
@@ -6644,7 +6644,7 @@
 "tipo": "DRN",
 "ultimo_preco": 43.04,
 "ultimo_pregao": "2026-10-30",
-"volume": 6606664
+"volume": 6606663
 },
 "M2PR34": {
 "isin": "BRM2PRBDR009",
@@ -6714,7 +6714,7 @@
 "tipo": "DRN",
 "ultimo_preco": 81.44,
 "ultimo_pregao": "2026-10-29",
-"volume": 331003
+"volume": 331004
 },
 "MDLZ34": {
 "isin": "BRMDLZBDR002",
@@ -6724,7 +6724,7 @@
 "tipo": "DRN",
 "ultimo_preco": 58.98,
 "ultimo_pregao": "2026-10-30",
-"volume": 1177411
+"volume": 1177412
 },
 "MDTC34": {
 "isin": "BRMDTCBDR004",
@@ -6734,7 +6734,7 @@
 "tipo": "DRN",
 "ultimo_preco": 65.87,
 "ultimo_pregao": "2026-10-30",
-"volume": 635756
+"volume": 635755
 },
 "MELI34": {
 "isin": "BRMELIBDR006",
@@ -6764,7 +6764,7 @@
 "tipo": "DRN",
 "ultimo_preco": 508.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 175285
+"volume": 175286
 },
 "MMMC34": {
 "isin": "BRMMMCBDR000",
@@ -6774,7 +6774,7 @@
 "tipo": "DRN",
 "ultimo_preco": 236.4,
 "ultimo_pregao": "2026-10-30",
-"volume": 1520605
+"volume": 1520606
 },
 "MOOO34": {
 "isin": "BRMOOOBDR007",
@@ -6784,7 +6784,7 @@
 "tipo": "DRN",
 "ultimo_preco": 85.04,
 "ultimo_pregao": "2026-10-30",
-"volume": 779882
+"volume": 779881
 },
 "MOSC34": {
 "isin": "BRMOSCBDR003",
@@ -6814,7 +6814,7 @@
 "tipo": "DRN",
 "ultimo_preco": 100.15,
 "ultimo_pregao": "2026-10-30",
-"volume": 7799544
+"volume": 7799545
 },
 "MSBR34": {
 "isin": "BRMSBRBDR008",
@@ -6844,7 +6844,7 @@
 "tipo": "DRN",
 "ultimo_preco": 118.27,
 "ultimo_pregao": "2026-10-30",
-"volume": 1129222673
+"volume": 1129222672
 },
 "MUTC34": {
 "isin": "BRMUTCBDR008",
@@ -6874,7 +6874,7 @@
 "tipo": "DRN",
 "ultimo_preco": 95.3,
 "ultimo_pregao": "2026-10-30",
-"volume": 1577585
+"volume": 1577586
 },
 "N1DA34": {
 "isin": "BRN1DABDR002",
@@ -6944,7 +6944,7 @@
 "tipo": "DRN",
 "ultimo_preco": 11.1,
 "ultimo_pregao": "2026-10-30",
-"volume": 20395956
+"volume": 20395955
 },
 "N1RG34": {
 "isin": "BRN1RGBDR009",
@@ -6994,7 +6994,7 @@
 "tipo": "DRN",
 "ultimo_preco": 26.75,
 "ultimo_pregao": "2026-10-30",
-"volume": 15020175
+"volume": 15020176
 },
 "N1VR34": {
 "isin": "BRN1VRBDR008",
@@ -7024,7 +7024,7 @@
 "tipo": "DRN",
 "ultimo_preco": 84.33,
 "ultimo_pregao": "2026-10-30",
-"volume": 945300
+"volume": 945301
 },
 "N1WL34": {
 "isin": "BRN1WLBDR009",
@@ -7064,7 +7064,7 @@
 "tipo": "DRN",
 "ultimo_preco": 84.93,
 "ultimo_pregao": "2026-10-30",
-"volume": 150016071
+"volume": 150016070
 },
 "N2LY34": {
 "isin": "BRN2LYBDR003",
@@ -7124,7 +7124,7 @@
 "tipo": "DRN",
 "ultimo_preco": 6.72,
 "ultimo_pregao": "2026-10-30",
-"volume": 178643617
+"volume": 178643618
 },
 "NIKE34": {
 "isin": "BRNIKEBDR006",
@@ -7144,7 +7144,7 @@
 "tipo": "DRN",
 "ultimo_preco": 50.3,
 "ultimo_pregao": "2026-10-29",
-"volume": 83972
+"volume": 83971
 },
 "NOCG34": {
 "isin": "BRNOCGBDR006",
@@ -7304,7 +7304,7 @@
 "tipo": "DRN",
 "ultimo_preco": 1.56,
 "ultimo_pregao": "2026-10-30",
-"volume": 101737
+"volume": 101738
 },
 "OXYP34": {
 "isin": "BROXYPBDR000",
@@ -7524,7 +7524,7 @@
 "tipo": "DRN",
 "ultimo_preco": 8.69,
 "ultimo_pregao": "2026-10-30",
-"volume": 18935
+"volume": 18936
 },
 "P2CY34": {
 "isin": "BRP2CYBDR000",
@@ -7554,7 +7554,7 @@
 "tipo": "DRN",
 "ultimo_preco": 17.24,
 "ultimo_pregao": "2026-10-30",
-"volume": 86798
+"volume": 86799
 },
 "P2LN34": {
 "isin": "BRP2LNBDR004",
@@ -7594,7 +7594,7 @@
 "tipo": "DRN",
 "ultimo_preco": 167.4,
 "ultimo_pregao": "2026-10-30",
-"volume": 401693
+"volume": 401694
 },
 "P2TC34": {
 "isin": "BRP2TCBDR000",
@@ -7654,7 +7654,7 @@
 "tipo": "DRN",
 "ultimo_preco": 146.55,
 "ultimo_pregao": "2026-10-30",
-"volume": 61760
+"volume": 61759
 },
 "PHMO34": {
 "isin": "BRPHMOBDR008",
@@ -7684,7 +7684,7 @@
 "tipo": "DRN",
 "ultimo_preco": 9.74,
 "ultimo_pregao": "2026-10-30",
-"volume": 101
+"volume": 100
 },
 "PRXB31": {
 "isin": "BRPRXBBDR001",
@@ -7694,12 +7694,12 @@
 "tipo": "DR1",
 "ultimo_preco": 20.4,
 "ultimo_pregao": "2026-10-30",
-"volume": 780664
+"volume": 780665
 },
 "PSKY34": {
 "isin": "BRPSKYBDR008",
 "negocios": 29,
-"nome": "PARA SKYDNC",
+"nome": "SKYDANCECORP",
 "primeiro_pregao": "2026-10-01",
 "tipo": "DRN",
 "ultimo_preco": 55.55,
@@ -7714,7 +7714,7 @@
 "tipo": "DRN",
 "ultimo_preco": 15.49,
 "ultimo_pregao": "2026-10-30",
-"volume": 18311237
+"volume": 18311238
 },
 "Q1RV34": {
 "isin": "BRQ1RVBDR005",
@@ -7734,7 +7734,7 @@
 "tipo": "DRN",
 "ultimo_preco": 286.2,
 "ultimo_pregao": "2026-10-29",
-"volume": 2136940
+"volume": 2136939
 },
 "Q2SC34": {
 "isin": "BRQ2SCBDR001",
@@ -7774,7 +7774,7 @@
 "tipo": "DRN",
 "ultimo_preco": 34.48,
 "ultimo_pregao": "2026-10-30",
-"volume": 1754660
+"volume": 1754659
 },
 "R1CL34": {
 "isin": "BRR1CLBDR007",
@@ -7794,7 +7794,7 @@
 "tipo": "DRN",
 "ultimo_preco": 12.84,
 "ultimo_pregao": "2026-10-30",
-"volume": 26716
+"volume": 26715
 },
 "R1EG34": {
 "isin": "BRR1EGBDR003",
@@ -7854,7 +7854,7 @@
 "tipo": "DRN",
 "ultimo_preco": 71.47,
 "ultimo_pregao": "2026-10-30",
-"volume": 292635
+"volume": 292636
 },
 "R1KU34": {
 "isin": "BRR1KUBDR001",
@@ -7964,7 +7964,7 @@
 "tipo": "DRN",
 "ultimo_preco": 23.6,
 "ultimo_pregao": "2026-10-30",
-"volume": 3038805
+"volume": 3038806
 },
 "R2GE34": {
 "isin": "BRR2GEBDR001",
@@ -8014,7 +8014,7 @@
 "tipo": "DRN",
 "ultimo_preco": 83.72,
 "ultimo_pregao": "2026-10-30",
-"volume": 2177439
+"volume": 2177438
 },
 "RGTI34": {
 "isin": "BRRGTIBDR003",
@@ -8024,7 +8024,7 @@
 "tipo": "DRN",
 "ultimo_preco": 62.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 14517583
+"volume": 14517582
 },
 "RIGG34": {
 "isin": "BRRIGGBDR000",
@@ -8064,7 +8064,7 @@
 "tipo": "DRN",
 "ultimo_preco": 10.53,
 "ultimo_pregao": "2026-10-30",
-"volume": 4337697068
+"volume": 4337697067
 },
 "RSSL39": {
 "isin": "BRRSSLBDR004",
@@ -8114,7 +8114,7 @@
 "tipo": "DRN",
 "ultimo_preco": 23.24,
 "ultimo_pregao": "2026-10-30",
-"volume": 2748693
+"volume": 2748692
 },
 "S1HW34": {
 "isin": "BRS1HWBDR002",
@@ -8124,7 +8124,7 @@
 "tipo": "DRN",
 "ultimo_preco": 194.99,
 "ultimo_pregao": "2026-10-30",
-"volume": 444260
+"volume": 444259
 },
 "S1KM34": {
 "isin": "BRS1KMBDR007",
@@ -8144,7 +8144,7 @@
 "tipo": "DRN",
 "ultimo_preco": 68.32,
 "ultimo_pregao": "2026-10-30",
-"volume": 34195
+"volume": 34196
 },
 "S1MF34": {
 "isin": "BRS1MFBDR007",
@@ -8204,7 +8204,7 @@
 "tipo": "DRN",
 "ultimo_preco": 808.03,
 "ultimo_pregao": "2026-10-30",
-"volume": 8293708
+"volume": 8293709
 },
 "S1RP34": {
 "isin": "BRS1RPBDR005",
@@ -8274,7 +8274,7 @@
 "tipo": "DRN",
 "ultimo_preco": 159.15,
 "ultimo_pregao": "2026-10-30",
-"volume": 28919260
+"volume": 28919259
 },
 "S1YY34": {
 "isin": "BRS1YYBDR003",
@@ -8304,7 +8304,7 @@
 "tipo": "DRN",
 "ultimo_preco": 16.16,
 "ultimo_pregao": "2026-10-30",
-"volume": 7530598
+"volume": 7530597
 },
 "S2ED34": {
 "isin": "BRS2EDBDR007",
@@ -8314,7 +8314,7 @@
 "tipo": "DRN",
 "ultimo_preco": 4.61,
 "ultimo_pregao": "2026-10-30",
-"volume": 1346601
+"volume": 1346600
 },
 "S2EI34": {
 "isin": "BRS2EIBDR006",
@@ -8334,7 +8334,7 @@
 "tipo": "DRN",
 "ultimo_preco": 86.0,
 "ultimo_pregao": "2026-10-29",
-"volume": 345964
+"volume": 345965
 },
 "S2GI34": {
 "isin": "BRS2GIBDR001",
@@ -8374,7 +8374,7 @@
 "tipo": "DRN",
 "ultimo_preco": 19.98,
 "ultimo_pregao": "2026-10-30",
-"volume": 33091
+"volume": 33090
 },
 "S2NA34": {
 "isin": "BRS2NABDR004",
@@ -8454,7 +8454,7 @@
 "tipo": "DRN",
 "ultimo_preco": 569.99,
 "ultimo_pregao": "2026-10-30",
-"volume": 5357516
+"volume": 5357517
 },
 "SCHW34": {
 "isin": "BRSCHWBDR006",
@@ -8464,7 +8464,7 @@
 "tipo": "DRN",
 "ultimo_preco": 58.62,
 "ultimo_pregao": "2026-10-30",
-"volume": 616017
+"volume": 616016
 },
 "SHLD39": {
 "isin": "BRSHLDBDR007",
@@ -8484,7 +8484,7 @@
 "tipo": "DRN",
 "ultimo_preco": 74.34,
 "ultimo_pregao": "2026-10-30",
-"volume": 905619
+"volume": 905618
 },
 "SIVR39": {
 "isin": "BRSIVRBDR004",
@@ -8494,7 +8494,7 @@
 "tipo": "DRE",
 "ultimo_preco": 84.8,
 "ultimo_pregao": "2026-10-30",
-"volume": 2998651
+"volume": 2998650
 },
 "SK1D34": {
 "isin": "BRSK1DBDR004",
@@ -8514,7 +8514,7 @@
 "tipo": "DRN",
 "ultimo_preco": 50.96,
 "ultimo_pregao": "2026-10-30",
-"volume": 78097780
+"volume": 78097781
 },
 "SLBG34": {
 "isin": "BRSLBGBDR003",
@@ -8554,7 +8554,7 @@
 "tipo": "DRN",
 "ultimo_preco": 49.28,
 "ultimo_pregao": "2026-10-30",
-"volume": 1628714403
+"volume": 1628714402
 },
 "SPGI34": {
 "isin": "BRSPGIBDR009",
@@ -8574,7 +8574,7 @@
 "tipo": "DRN",
 "ultimo_preco": 57.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 20276555
+"volume": 20276556
 },
 "STMN34": {
 "isin": "BRSTMNBDR009",
@@ -8694,7 +8694,7 @@
 "tipo": "DRN",
 "ultimo_preco": 30.21,
 "ultimo_pregao": "2026-10-29",
-"volume": 76647
+"volume": 76646
 },
 "T1MU34": {
 "isin": "BRT1MUBDR005",
@@ -8874,7 +8874,7 @@
 "tipo": "DRN",
 "ultimo_preco": 108.24,
 "ultimo_pregao": "2026-10-30",
-"volume": 5372099
+"volume": 5372098
 },
 "TGTB34": {
 "isin": "BRTGTBBDR004",
@@ -8904,7 +8904,7 @@
 "tipo": "DRN",
 "ultimo_preco": 65.51,
 "ultimo_pregao": "2026-10-30",
-"volume": 1426306
+"volume": 1426307
 },
 "TMOS34": {
 "isin": "BRTMOSBDR007",
@@ -8954,7 +8954,7 @@
 "tipo": "DRN",
 "ultimo_preco": 67.69,
 "ultimo_pregao": "2026-10-30",
-"volume": 99014
+"volume": 99015
 },
 "TSLA34": {
 "isin": "BRTSLABDR008",
@@ -9004,7 +9004,7 @@
 "tipo": "DRN",
 "ultimo_preco": 287.39,
 "ultimo_pregao": "2026-10-30",
-"volume": 7023289
+"volume": 7023290
 },
 "U1AI34": {
 "isin": "BRU1AIBDR002",
@@ -9024,7 +9024,7 @@
 "tipo": "DRN",
 "ultimo_preco": 285.6,
 "ultimo_pregao": "2026-10-29",
-"volume": 4870273
+"volume": 4870272
 },
 "U1BE34": {
 "isin": "BRU1BEBDR009",
@@ -9034,7 +9034,7 @@
 "tipo": "DRN",
 "ultimo_preco": 88.0,
 "ultimo_pregao": "2026-10-30",
-"volume": 65999229
+"volume": 65999228
 },
 "U1DR34": {
 "isin": "BRU1DRBDR007",
@@ -9064,7 +9064,7 @@
 "tipo": "DRN",
 "ultimo_preco": 173.6,
 "ultimo_pregao": "2026-10-30",
-"volume": 154549
+"volume": 154548
 },
 "U1NM34": {
 "isin": "BRU1NMBDR007",
@@ -9094,7 +9094,7 @@
 "tipo": "DRN",
 "ultimo_preco": 6.25,
 "ultimo_pregao": "2026-10-30",
-"volume": 357071
+"volume": 357070
 },
 "U2PW34": {
 "isin": "BRU2PWBDR009",
@@ -9154,7 +9154,7 @@
 "tipo": "DRN",
 "ultimo_preco": 31.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 13096160
+"volume": 13096161
 },
 "UPAC34": {
 "isin": "BRUPACBDR001",
@@ -9174,7 +9174,7 @@
 "tipo": "DRN",
 "ultimo_preco": 36.92,
 "ultimo_pregao": "2026-10-30",
-"volume": 1738672
+"volume": 1738671
 },
 "USBC34": {
 "isin": "BRUSBCBDR003",
@@ -9264,7 +9264,7 @@
 "tipo": "DRN",
 "ultimo_preco": 55.46,
 "ultimo_pregao": "2026-10-30",
-"volume": 16719731
+"volume": 16719730
 },
 "V1TA34": {
 "isin": "BRV1TABDR008",
@@ -9284,7 +9284,7 @@
 "tipo": "DRN",
 "ultimo_preco": 56.3,
 "ultimo_pregao": "2026-10-30",
-"volume": 2132421
+"volume": 2132420
 },
 "V2RN34": {
 "isin": "BRV2RNBDR003",
@@ -9314,7 +9314,7 @@
 "tipo": "DRN",
 "ultimo_preco": 40.64,
 "ultimo_pregao": "2026-10-30",
-"volume": 54081531
+"volume": 54081532
 },
 "VISA34": {
 "isin": "BRVISABDR000",
@@ -9464,7 +9464,7 @@
 "tipo": "DRN",
 "ultimo_preco": 13.83,
 "ultimo_pregao": "2026-10-30",
-"volume": 350444
+"volume": 350445
 },
 "W1LT34": {
 "isin": "BRW1LTBDR004",
@@ -9484,7 +9484,7 @@
 "tipo": "DRN",
 "ultimo_preco": 405.2,
 "ultimo_pregao": "2026-10-30",
-"volume": 188058
+"volume": 188059
 },
 "W1MC34": {
 "isin": "BRW1MCBDR008",
@@ -9494,7 +9494,7 @@
 "tipo": "DRN",
 "ultimo_preco": 79.68,
 "ultimo_pregao": "2026-10-30",
-"volume": 363162
+"volume": 363161
 },
 "W1MG34": {
 "isin": "BRW1MGBDR009",
@@ -9524,7 +9524,7 @@
 "tipo": "DRN",
 "ultimo_preco": 40.21,
 "ultimo_pregao": "2026-10-30",
-"volume": 1195
+"volume": 1194
 },
 "W1SO34": {
 "isin": "BRW1SOBDR000",
@@ -9624,7 +9624,7 @@
 "tipo": "DRN",
 "ultimo_preco": 252.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 48500
+"volume": 48499
 },
 "X1YZ34": {
 "isin": "BRX1YZBDR003",
@@ -9684,7 +9684,7 @@
 "tipo": "DRN",
 "ultimo_preco": 253.5,
 "ultimo_pregao": "2026-10-30",
-"volume": 251571
+"volume": 251572
 },
 "YUMR34": {
 "isin": "BRYUMRBDR006",
@@ -9754,7 +9754,7 @@
 "tipo": "DRN",
 "ultimo_preco": 27.01,
 "ultimo_pregao": "2026-10-30",
-"volume": 1709154
+"volume": 1709153
 },
 "Z2DV34": {
 "isin": "BRZ2DVBDR002",
@@ -9774,7 +9774,7 @@
 "tipo": "DRN",
 "ultimo_preco": 2.98,
 "ultimo_pregao": "2026-10-30",
-"volume": 113255
+"volume": 113254
 },
 "Z2LL34": {
 "isin": "BRZ2LLBDR006",
@@ -9784,7 +9784,7 @@
 "tipo": "DRN",
 "ultimo_preco": 13.98,
 "ultimo_pregao": "2026-10-30",
-"volume": 16906
+"volume": 16905
 },
 "Z2SC34": {
 "isin": "BRZ2SCBDR000",
@@ -9794,7 +9794,7 @@
 "tipo": "DRN",
 "ultimo_preco": 43.39,
 "ultimo_pregao": "2026-10-30",
-"volume": 50812501
+"volume": 50812500
 }
 }
 }

@@ -2,14 +2,13 @@
 "companhias": [
 {
 "codigo_cvm": "1023",
-"negocios_24m": 31097614,
+"negocios_24m": 31520229,
 "pregao": "BRASIL",
 "tickers": [
 "BBAS3"
 ],
-"volume_24m": 313207264629,
+"volume_24m": 334740772532,
 "volume_mensal": [
-9629287809,
 11528407233,
 10443898856,
 8872173846,
@@ -32,21 +31,21 @@
 9191033857,
 8899240170,
 12230288105,
-17816983559
+17816983559,
+31162795712
 ],
-"volume_mes_parcial": 31162795712
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "10456",
-"negocios_24m": 3003218,
+"negocios_24m": 3141514,
 "pregao": "ALPARGATAS",
 "tickers": [
 "ALPA3",
 "ALPA4"
 ],
-"volume_24m": 11376116025,
+"volume_24m": 12138017065,
 "volume_mensal": [
-379609516,
 541366342,
 394083476,
 391550362,
@@ -69,22 +68,22 @@
 494526508,
 308812723,
 542159170,
-720337639
+720337639,
+1141510556
 ],
-"volume_mes_parcial": 1141510557
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "10880",
-"negocios_24m": 1407,
+"negocios_24m": 1456,
 "pregao": "SONDOTECNICA",
 "tickers": [
 "SOND3",
 "SOND5",
 "SOND6"
 ],
-"volume_24m": 2339246,
+"volume_24m": 2577462,
 "volume_mensal": [
-34892,
 8519,
 72590,
 28709,
@@ -107,21 +106,21 @@
 138957,
 62475,
 101425,
-96222
+96222,
+273108
 ],
-"volume_mes_parcial": 273108
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "11070",
-"negocios_24m": 9879,
+"negocios_24m": 10826,
 "pregao": "WLM IND COM",
 "tickers": [
 "WLMM3",
 "WLMM4"
 ],
-"volume_24m": 19483128,
+"volume_24m": 21637672,
 "volume_mensal": [
-482479,
 663688,
 1062189,
 458341,
@@ -144,21 +143,21 @@
 594687,
 983987,
 1284496,
-1273067
+1273067,
+2637023
 ],
-"volume_mes_parcial": 2637023
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "1120",
-"negocios_24m": 29863,
+"negocios_24m": 29834,
 "pregao": "BANESE",
 "tickers": [
 "BGIP3",
 "BGIP4"
 ],
-"volume_24m": 34420791,
+"volume_24m": 34971440,
 "volume_mensal": [
-447750,
 441503,
 421011,
 2422384,
@@ -181,21 +180,21 @@
 761791,
 2112016,
 934178,
-949736
+949736,
+998399
 ],
-"volume_mes_parcial": 998399
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "11258",
-"negocios_24m": 19577,
+"negocios_24m": 22050,
 "pregao": "TELEBRAS",
 "tickers": [
 "TELB3",
 "TELB4"
 ],
-"volume_24m": 25126386,
+"volume_24m": 31033326,
 "volume_mensal": [
-894565,
 1406311,
 805647,
 616200,
@@ -218,22 +217,22 @@
 579020,
 312970,
 2308332,
-1568970
+1568970,
+6801505
 ],
-"volume_mes_parcial": 6801505
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "11398",
-"negocios_24m": 26891,
+"negocios_24m": 27066,
 "pregao": "CRISTAL",
 "tickers": [
 "CRPG3",
 "CRPG5",
 "CRPG6"
 ],
-"volume_24m": 33685548,
+"volume_24m": 33928788,
 "volume_mensal": [
-1923219,
 1002990,
 994360,
 903644,
@@ -256,21 +255,21 @@
 387567,
 1826654,
 1945041,
-2070365
+2070365,
+2166459
 ],
-"volume_mes_parcial": 2166459
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "1155",
-"negocios_24m": 339752,
+"negocios_24m": 337675,
 "pregao": "BANESTES",
 "tickers": [
 "BEES3",
 "BEES4"
 ],
-"volume_24m": 93932302,
+"volume_24m": 94504113,
 "volume_mensal": [
-4633829,
 3693472,
 3296762,
 3683279,
@@ -293,22 +292,22 @@
 2981609,
 3435863,
 3548891,
-3164438
+3164438,
+5205640
 ],
-"volume_mes_parcial": 5205641
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "11592",
-"negocios_24m": 1356961,
+"negocios_24m": 1392649,
 "pregao": "UNIPAR",
 "tickers": [
 "UNIP3",
 "UNIP5",
 "UNIP6"
 ],
-"volume_24m": 7070215086,
+"volume_24m": 7410463010,
 "volume_mensal": [
-191257694,
 260539972,
 177878262,
 134574163,
@@ -331,20 +330,20 @@
 238338359,
 173589292,
 301210854,
-379376734
+379376734,
+531505618
 ],
-"volume_mes_parcial": 531505618
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "1171",
-"negocios_24m": 58,
+"negocios_24m": 61,
 "pregao": "BANPARA",
 "tickers": [
 "BPAR3"
 ],
-"volume_24m": 57673,
+"volume_24m": 59860,
 "volume_mensal": [
-0,
 0,
 8685,
 228,
@@ -367,20 +366,20 @@
 1088,
 6570,
 5108,
-570
+570,
+2187
 ],
-"volume_mes_parcial": 2187
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "11762",
-"negocios_24m": 2627293,
+"negocios_24m": 2797048,
 "pregao": "VULCABRAS",
 "tickers": [
 "VULC3"
 ],
-"volume_24m": 9679742927,
+"volume_24m": 10516617248,
 "volume_mensal": [
-180683447,
 258743057,
 232150900,
 317163837,
@@ -403,20 +402,20 @@
 365614593,
 296553332,
 394110541,
-832373974
+832373974,
+1017557768
 ],
-"volume_mes_parcial": 1017557769
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "11932",
-"negocios_24m": 2342385,
+"negocios_24m": 2350080,
 "pregao": "IOCHP-MAXION",
 "tickers": [
 "MYPK3"
 ],
-"volume_24m": 6188786488,
+"volume_24m": 6223642699,
 "volume_mensal": [
-266963992,
 347158238,
 234506269,
 318153313,
@@ -439,21 +438,21 @@
 192440926,
 153369141,
 155291716,
-157823646
+157823646,
+301820203
 ],
-"volume_mes_parcial": 301820203
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "11975",
-"negocios_24m": 1401489,
+"negocios_24m": 1458160,
 "pregao": "AZEVEDO",
 "tickers": [
 "AZEV3",
 "AZEV4"
 ],
-"volume_24m": 2674371850,
+"volume_24m": 2881169765,
 "volume_mensal": [
-82459214,
 58485884,
 103442098,
 111729359,
@@ -476,21 +475,21 @@
 18214264,
 142441666,
 547262749,
-254998967
+254998967,
+289257129
 ],
-"volume_mes_parcial": 289257129
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "11991",
-"negocios_24m": 3859,
+"negocios_24m": 3783,
 "pregao": "WETZEL S/A",
 "tickers": [
 "MWET3",
 "MWET4"
 ],
-"volume_24m": 8290547,
+"volume_24m": 8235133,
 "volume_mensal": [
-66554,
 946240,
 184625,
 95264,
@@ -513,22 +512,22 @@
 21746,
 8368,
 235057,
-430103
+430103,
+11140
 ],
-"volume_mes_parcial": 11140
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "1210",
-"negocios_24m": 2726050,
+"negocios_24m": 2861165,
 "pregao": "BANRISUL",
 "tickers": [
 "BRSR3",
 "BRSR5",
 "BRSR6"
 ],
-"volume_24m": 10747978193,
+"volume_24m": 11479326436,
 "volume_mensal": [
-268488469,
 296210659,
 290653837,
 396090842,
@@ -551,20 +550,20 @@
 895561220,
 322377351,
 359268615,
-990592259
+990592259,
+999836712
 ],
-"volume_mes_parcial": 999836710
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "12190",
-"negocios_24m": 258042,
+"negocios_24m": 236629,
 "pregao": "BOMBRIL",
 "tickers": [
 "BOBR4"
 ],
-"volume_24m": 51879904,
+"volume_24m": 45026667,
 "volume_mensal": [
-7581917,
 5430961,
 3798232,
 10375023,
@@ -587,20 +586,20 @@
 46384,
 41978,
 483625,
-1024864
+1024864,
+728680
 ],
-"volume_mes_parcial": 728680
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "1228",
-"negocios_24m": 8399,
+"negocios_24m": 8754,
 "pregao": "NORD BRASIL",
 "tickers": [
 "BNBR3"
 ],
-"volume_24m": 14201953,
+"volume_24m": 14543943,
 "volume_mensal": [
-456438,
 104505,
 389186,
 184376,
@@ -623,21 +622,21 @@
 1133222,
 559416,
 767978,
-383701
+383701,
+798428
 ],
-"volume_mes_parcial": 798428
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "12572",
-"negocios_24m": 2394302,
+"negocios_24m": 2246482,
 "pregao": "RECRUSUL",
 "tickers": [
 "RCSL3",
 "RCSL4"
 ],
-"volume_24m": 5410074071,
+"volume_24m": 5153111113,
 "volume_mensal": [
-286246559,
 361478675,
 392502452,
 395260634,
@@ -660,22 +659,22 @@
 56162707,
 59616176,
 91122951,
-38628751
+38628751,
+29283601
 ],
-"volume_mes_parcial": 29283601
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "12653",
-"negocios_24m": 14266467,
+"negocios_24m": 14442031,
 "pregao": "KLABIN S/A",
 "tickers": [
 "KLBN11",
 "KLBN3",
 "KLBN4"
 ],
-"volume_24m": 57186235017,
+"volume_24m": 58316097429,
 "volume_mensal": [
-2602559212,
 2505217824,
 2907132780,
 2264869416,
@@ -698,22 +697,22 @@
 2371056372,
 2053175454,
 2408135264,
-2465209310
+2465209310,
+3732421624
 ],
-"volume_mes_parcial": 3732421624
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "12696",
-"negocios_24m": 7350,
+"negocios_24m": 7145,
 "pregao": "SANSUY",
 "tickers": [
 "SNSY3",
 "SNSY5",
 "SNSY6"
 ],
-"volume_24m": 7305291,
+"volume_24m": 6837514,
 "volume_mensal": [
-653934,
 540194,
 268155,
 181194,
@@ -736,9 +735,10 @@
 247053,
 464005,
 208225,
-101253
+101253,
+186157
 ],
-"volume_mes_parcial": 186157
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "12823",
@@ -749,7 +749,6 @@
 ],
 "volume_24m": 36000,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -772,21 +771,21 @@
 0,
 0,
 0,
+0,
 0
 ],
-"volume_mes_parcial": 0
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "1309",
-"negocios_24m": 10014,
+"negocios_24m": 9789,
 "pregao": "MERC INVEST",
 "tickers": [
 "BMIN3",
 "BMIN4"
 ],
-"volume_24m": 7365571,
+"volume_24m": 7271989,
 "volume_mensal": [
-121211,
 43039,
 107361,
 235453,
@@ -809,21 +808,21 @@
 44680,
 31990,
 73004,
-49132
+49132,
+27629
 ],
-"volume_mes_parcial": 27629
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "1325",
-"negocios_24m": 193383,
+"negocios_24m": 193179,
 "pregao": "MERCANTIL",
 "tickers": [
 "BMEB3",
 "BMEB4"
 ],
-"volume_24m": 833272102,
+"volume_24m": 863785515,
 "volume_mensal": [
-37350828,
 26881034,
 22750600,
 15302662,
@@ -846,21 +845,21 @@
 57150957,
 51212422,
 56870114,
-39332532
+39332532,
+67864241
 ],
-"volume_mes_parcial": 67864241
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "13285",
-"negocios_24m": 991,
+"negocios_24m": 937,
 "pregao": "JOSAPAR",
 "tickers": [
 "JOPA3",
 "JOPA4"
 ],
-"volume_24m": 854589,
+"volume_24m": 852267,
 "volume_mensal": [
-25595,
 30643,
 7824,
 13670,
@@ -883,21 +882,21 @@
 26193,
 95562,
 546,
-8691
+8691,
+23273
 ],
-"volume_mes_parcial": 23273
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "13366",
-"negocios_24m": 26341,
+"negocios_24m": 25153,
 "pregao": "HAGA S/A",
 "tickers": [
 "HAGA3",
 "HAGA4"
 ],
-"volume_24m": 14335917,
+"volume_24m": 13509191,
 "volume_mensal": [
-2046708,
 624031,
 488431,
 241200,
@@ -920,20 +919,20 @@
 990520,
 619118,
 1215884,
-1059431
+1059431,
+1219982
 ],
-"volume_mes_parcial": 1219982
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "13439",
-"negocios_24m": 14536,
+"negocios_24m": 15337,
 "pregao": "RIOSULENSE",
 "tickers": [
 "RSUL4"
 ],
-"volume_24m": 71152554,
+"volume_24m": 75093280,
 "volume_mensal": [
-2028823,
 2565785,
 1116432,
 819819,
@@ -956,20 +955,20 @@
 4750549,
 6601649,
 3414934,
-10249522
+10249522,
+5969549
 ],
-"volume_mes_parcial": 5969549
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "13471",
-"negocios_24m": 2353,
+"negocios_24m": 2546,
 "pregao": "PLASCAR PART",
 "tickers": [
 "PLAS3"
 ],
-"volume_24m": 1057684,
+"volume_24m": 1093795,
 "volume_mensal": [
-31285,
 86407,
 78620,
 16392,
@@ -992,20 +991,20 @@
 8739,
 20346,
 22605,
-144282
+144282,
+67396
 ],
-"volume_mes_parcial": 67396
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "13765",
-"negocios_24m": 26989,
+"negocios_24m": 27882,
 "pregao": "MINUPAR",
 "tickers": [
 "MNPR3"
 ],
-"volume_24m": 43559617,
+"volume_24m": 43265904,
 "volume_mensal": [
-1478394,
 661660,
 724080,
 1841736,
@@ -1028,20 +1027,20 @@
 664366,
 1146386,
 979390,
-1452840
+1452840,
+1184681
 ],
-"volume_mes_parcial": 1184681
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "13773",
-"negocios_24m": 389526,
+"negocios_24m": 393722,
 "pregao": "PORTOBELLO",
 "tickers": [
 "PTBL3"
 ],
-"volume_24m": 543149291,
+"volume_24m": 565637007,
 "volume_mensal": [
-25370648,
 48107451,
 31051818,
 31956814,
@@ -1064,20 +1063,20 @@
 12205351,
 11011060,
 18430782,
-16576537
+16576537,
+47858364
 ],
-"volume_mes_parcial": 47858364
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "13781",
-"negocios_24m": 161139,
+"negocios_24m": 168798,
 "pregao": "SAO CARLOS",
 "tickers": [
 "SCAR3"
 ],
-"volume_24m": 523350396,
+"volume_24m": 526590485,
 "volume_mensal": [
-5920346,
 10785817,
 27019887,
 18087299,
@@ -1100,21 +1099,21 @@
 5738491,
 3944624,
 5205573,
-3833389
+3833389,
+9160435
 ],
-"volume_mes_parcial": 9160434
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "13854",
-"negocios_24m": 1259,
+"negocios_24m": 1369,
 "pregao": "CEMEPE",
 "tickers": [
 "MAPT3",
 "MAPT4"
 ],
-"volume_24m": 370084,
+"volume_24m": 385461,
 "volume_mensal": [
-12581,
 631,
 11067,
 5051,
@@ -1137,20 +1136,20 @@
 11,
 91,
 282,
-416
+416,
+27958
 ],
-"volume_mes_parcial": 27957
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "13986",
-"negocios_24m": 10779670,
+"negocios_24m": 10954932,
 "pregao": "SUZANO S.A.",
 "tickers": [
 "SUZB3"
 ],
-"volume_24m": 157597701291,
+"volume_24m": 160546183906,
 "volume_mensal": [
-7287159318,
 8066173065,
 10064786538,
 6687308760,
@@ -1173,21 +1172,21 @@
 5530753887,
 4678322288,
 6942628011,
-5653427365
+5653427365,
+10235641933
 ],
-"volume_mes_parcial": 10235641932
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14109",
-"negocios_24m": 3470312,
+"negocios_24m": 3632971,
 "pregao": "RANDON PART",
 "tickers": [
 "RAPT3",
 "RAPT4"
 ],
-"volume_24m": 11761529665,
+"volume_24m": 12104091669,
 "volume_mensal": [
-619570776,
 365469490,
 393645323,
 569289893,
@@ -1210,21 +1209,21 @@
 330494205,
 202086905,
 223437296,
-387176780
+387176780,
+962132780
 ],
-"volume_mes_parcial": 962132779
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14206",
-"negocios_24m": 146634,
+"negocios_24m": 149000,
 "pregao": "BRB BANCO",
 "tickers": [
 "BSLI3",
 "BSLI4"
 ],
-"volume_24m": 87945649,
+"volume_24m": 90006040,
 "volume_mensal": [
-298362,
 178658,
 130293,
 208365,
@@ -1247,20 +1246,20 @@
 6360604,
 2595233,
 2700156,
-1340822
+1340822,
+2358753
 ],
-"volume_mes_parcial": 2358752
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14311",
-"negocios_24m": 8352572,
+"negocios_24m": 9019688,
 "pregao": "COPEL",
 "tickers": [
 "CPLE3"
 ],
-"volume_24m": 80005355284,
+"volume_24m": 89539506523,
 "volume_mensal": [
-1143092445,
 1346030808,
 1189653592,
 1209211910,
@@ -1283,22 +1282,22 @@
 6401402081,
 4964225016,
 5252158015,
-6022393481
+6022393481,
+10677243684
 ],
-"volume_mes_parcial": 10677243685
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14320",
-"negocios_24m": 7675084,
+"negocios_24m": 7876353,
 "pregao": "USIMINAS",
 "tickers": [
 "USIM3",
 "USIM5",
 "USIM6"
 ],
-"volume_24m": 41951507121,
+"volume_24m": 42103563103,
 "volume_mensal": [
-2130859591,
 1483143321,
 1351552129,
 1458801440,
@@ -1321,21 +1320,21 @@
 3151462364,
 2090251379,
 1595222303,
-1776163861
+1776163861,
+2282915573
 ],
-"volume_mes_parcial": 2282915572
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14346",
-"negocios_24m": 75240,
+"negocios_24m": 75628,
 "pregao": "WHIRLPOOL",
 "tickers": [
 "WHRL3",
 "WHRL4"
 ],
-"volume_24m": 41476280,
+"volume_24m": 41897662,
 "volume_mensal": [
-1558532,
 1085664,
 2029395,
 922827,
@@ -1358,20 +1357,20 @@
 1076925,
 648389,
 1098400,
-1465252
+1465252,
+1979914
 ],
-"volume_mes_parcial": 1979915
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14443",
-"negocios_24m": 10522525,
+"negocios_24m": 11281244,
 "pregao": "SABESP",
 "tickers": [
 "SBSP3"
 ],
-"volume_24m": 204170933358,
+"volume_24m": 217906041145,
 "volume_mensal": [
-6647728733,
 7239758839,
 8017658021,
 5870954961,
@@ -1394,22 +1393,22 @@
 9353723293,
 8141442535,
 12183002590,
-11716572385
+11716572385,
+20382836520
 ],
-"volume_mes_parcial": 20382836519
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14451",
-"negocios_24m": 182151,
+"negocios_24m": 184583,
 "pregao": "CEB",
 "tickers": [
 "CEBR3",
 "CEBR5",
 "CEBR6"
 ],
-"volume_24m": 258624207,
+"volume_24m": 265820744,
 "volume_mensal": [
-4323567,
 10718922,
 4951461,
 4921558,
@@ -1432,21 +1431,21 @@
 7362152,
 16835824,
 8942296,
-10805002
+10805002,
+11520104
 ],
-"volume_mes_parcial": 11520104
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14460",
-"negocios_24m": 9781446,
+"negocios_24m": 10367410,
 "pregao": "CYRELA REALT",
 "tickers": [
 "CYRE3",
 "CYRE4"
 ],
-"volume_24m": 79140208759,
+"volume_24m": 86121877552,
 "volume_mensal": [
-2958570076,
 2712913404,
 3283842967,
 2369669810,
@@ -1469,21 +1468,21 @@
 3530347905,
 3064485828,
 4082017259,
-4581884630
+4581884630,
+9940238869
 ],
-"volume_mes_parcial": 9940238869
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14524",
-"negocios_24m": 91318,
+"negocios_24m": 91792,
 "pregao": "COELBA",
 "tickers": [
 "CEEB3",
 "CEEB5"
 ],
-"volume_24m": 64808752,
+"volume_24m": 66263249,
 "volume_mensal": [
-674689,
 557648,
 619721,
 316927,
@@ -1506,21 +1505,21 @@
 679252,
 737112,
 504545,
-892120
+892120,
+2129186
 ],
-"volume_mes_parcial": 2129185
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14605",
-"negocios_24m": 6440,
+"negocios_24m": 6789,
 "pregao": "ENERGISA MT",
 "tickers": [
 "ENMT3",
 "ENMT4"
 ],
-"volume_24m": 17840288,
+"volume_24m": 18426402,
 "volume_mensal": [
-241243,
 164830,
 108193,
 444510,
@@ -1543,21 +1542,21 @@
 3880162,
 1489274,
 1532593,
-1137206
+1137206,
+827357
 ],
-"volume_mes_parcial": 827357
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14664",
-"negocios_24m": 725367,
+"negocios_24m": 746388,
 "pregao": "SCHULZ",
 "tickers": [
 "SHUL3",
 "SHUL4"
 ],
-"volume_24m": 1196344475,
+"volume_24m": 1241754756,
 "volume_mensal": [
-46946973,
 74690985,
 45122314,
 36251527,
@@ -1580,20 +1579,20 @@
 43118497,
 52199883,
 40664384,
-63720746
+63720746,
+92357254
 ],
-"volume_mes_parcial": 92357254
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14826",
-"negocios_24m": 3947535,
+"negocios_24m": 3840685,
 "pregao": "P.ACUCAR-CBD",
 "tickers": [
 "PCAR3"
 ],
-"volume_24m": 17499210266,
+"volume_24m": 17110040785,
 "volume_mensal": [
-926463451,
 692297893,
 1036172795,
 614684358,
@@ -1616,21 +1615,21 @@
 239809184,
 220709308,
 314231071,
-329073196
+329073196,
+537293970
 ],
-"volume_mes_parcial": 537293971
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "14869",
-"negocios_24m": 48715,
+"negocios_24m": 47613,
 "pregao": "COELCE",
 "tickers": [
 "COCE3",
 "COCE5"
 ],
-"volume_24m": 279661410,
+"volume_24m": 279990913,
 "volume_mensal": [
-8531121,
 92347653,
 11125576,
 6741197,
@@ -1653,21 +1652,21 @@
 8935605,
 12368010,
 3989732,
-3981360
+3981360,
+8860624
 ],
-"volume_mes_parcial": 8860624
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "1520",
-"negocios_24m": 2131,
+"negocios_24m": 2288,
 "pregao": "BARDELLA",
 "tickers": [
 "BDLL3",
 "BDLL4"
 ],
-"volume_24m": 1514383,
+"volume_24m": 1572568,
 "volume_mensal": [
-10481,
 6516,
 25232,
 20893,
@@ -1690,22 +1689,22 @@
 40995,
 32507,
 142582,
-34142
+34142,
+68666
 ],
-"volume_mes_parcial": 68666
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "15253",
-"negocios_24m": 6273767,
+"negocios_24m": 6723225,
 "pregao": "ENERGISA",
 "tickers": [
 "ENGI11",
 "ENGI3",
 "ENGI4"
 ],
-"volume_24m": 68091770483,
+"volume_24m": 72964570014,
 "volume_mensal": [
-3023166415,
 2687384951,
 2423827776,
 3070286549,
@@ -1728,20 +1727,20 @@
 2062118374,
 3124870624,
 4056252414,
-3586939436
+3586939436,
+7895965946
 ],
-"volume_mes_parcial": 7895965946
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "15423",
-"negocios_24m": 3737,
+"negocios_24m": 7566,
 "pregao": "FASA",
 "tickers": [
 "FASA3"
 ],
-"volume_24m": 1081628,
+"volume_24m": 2077633,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -1764,20 +1763,20 @@
 0,
 0,
 10209,
-1071419
+1071419,
+996005
 ],
-"volume_mes_parcial": 996005
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "15458",
-"negocios_24m": 56749,
+"negocios_24m": 55508,
 "pregao": "EMBPAR S/A",
 "tickers": [
 "EPAR3"
 ],
-"volume_24m": 21007302,
+"volume_24m": 20755729,
 "volume_mensal": [
-875561,
 750397,
 3393729,
 926128,
@@ -1800,21 +1799,21 @@
 261481,
 283673,
 137021,
-252175
+252175,
+623988
 ],
-"volume_mes_parcial": 623988
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "1562",
-"negocios_24m": 11274,
+"negocios_24m": 11283,
 "pregao": "BAUMER",
 "tickers": [
 "BALM3",
 "BALM4"
 ],
-"volume_24m": 12024441,
+"volume_24m": 12444944,
 "volume_mensal": [
-190006,
 140995,
 330920,
 95301,
@@ -1837,21 +1836,21 @@
 317889,
 267860,
 441713,
-474481
+474481,
+610509
 ],
-"volume_mes_parcial": 610507
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "15636",
-"negocios_24m": 47885,
+"negocios_24m": 48432,
 "pregao": "COMGAS",
 "tickers": [
 "CGAS3",
 "CGAS5"
 ],
-"volume_24m": 84944352,
+"volume_24m": 87256357,
 "volume_mensal": [
-2452810,
 4229061,
 5217427,
 3589760,
@@ -1874,20 +1873,20 @@
 5077524,
 2150279,
 2788010,
-3324019
+3324019,
+4764815
 ],
-"volume_mes_parcial": 4764814
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "1570",
-"negocios_24m": 474,
+"negocios_24m": 470,
 "pregao": "EXCELSIOR",
 "tickers": [
 "BAUH4"
 ],
-"volume_24m": 6454302,
+"volume_24m": 6397767,
 "volume_mensal": [
-86264,
 567058,
 39858,
 505501,
@@ -1910,20 +1909,20 @@
 75120,
 0,
 93,
-9888
+9888,
+29729
 ],
-"volume_mes_parcial": 29729
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "16101",
-"negocios_24m": 948908,
+"negocios_24m": 935883,
 "pregao": "GAFISA",
 "tickers": [
 "GFSA3"
 ],
-"volume_24m": 2681504115,
+"volume_24m": 2579598359,
 "volume_mensal": [
-181661796,
 197091114,
 105366058,
 167468913,
@@ -1946,20 +1945,20 @@
 44046153,
 64232969,
 18418777,
-29060311
+29060311,
+79756040
 ],
-"volume_mes_parcial": 79756040
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "16306",
-"negocios_24m": 72255,
+"negocios_24m": 67596,
 "pregao": "ROSSI RESID",
 "tickers": [
 "RSID3"
 ],
-"volume_24m": 31210498,
+"volume_24m": 25627210,
 "volume_mensal": [
-5583288,
 3194181,
 3301838,
 4172117,
@@ -1982,20 +1981,20 @@
 0,
 0,
 0,
+0,
 0
 ],
-"volume_mes_parcial": 0
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "16608",
-"negocios_24m": 2508,
+"negocios_24m": 2280,
 "pregao": "EQTLMARANHAO",
 "tickers": [
 "EQMA3B"
 ],
-"volume_24m": 6139668,
+"volume_24m": 5930332,
 "volume_mensal": [
-570921,
 459544,
 287588,
 217316,
@@ -2018,20 +2017,20 @@
 203361,
 166442,
 343600,
-104234
+104234,
+361585
 ],
-"volume_mes_parcial": 361584
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "16616",
-"negocios_24m": 411,
+"negocios_24m": 418,
 "pregao": "CEG",
 "tickers": [
 "CEGR3"
 ],
-"volume_24m": 456322,
+"volume_24m": 407764,
 "volume_mensal": [
-52175,
 12920,
 1117,
 384,
@@ -2054,21 +2053,21 @@
 4213,
 4858,
 114996,
-20004
+20004,
+3617
 ],
-"volume_mes_parcial": 3617
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "16632",
-"negocios_24m": 351130,
+"negocios_24m": 359184,
 "pregao": "DEXXOS PAR",
 "tickers": [
 "DEXP3",
 "DEXP4"
 ],
-"volume_24m": 454792818,
+"volume_24m": 470586399,
 "volume_mensal": [
-12497179,
 18466162,
 17684697,
 13908562,
@@ -2091,20 +2090,20 @@
 13614422,
 10340624,
 11873250,
-11810300
+11810300,
+28290760
 ],
-"volume_mes_parcial": 28290761
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "16659",
-"negocios_24m": 5393793,
+"negocios_24m": 5554675,
 "pregao": "PORTO SEGURO",
 "tickers": [
 "PSSA3"
 ],
-"volume_24m": 46343272067,
+"volume_24m": 47341830454,
 "volume_mensal": [
-1920130959,
 1375535647,
 1827937117,
 1807031572,
@@ -2127,21 +2126,21 @@
 1501950330,
 1641278307,
 1848889730,
-1802769254
+1802769254,
+2918689346
 ],
-"volume_mes_parcial": 2918689345
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "16861",
-"negocios_24m": 75,
+"negocios_24m": 91,
 "pregao": "CASAN",
 "tickers": [
 "CASN3",
 "CASN4"
 ],
-"volume_24m": 3916,
+"volume_24m": 8571,
 "volume_mensal": [
-354,
 286,
 10,
 64,
@@ -2164,20 +2163,20 @@
 25,
 646,
 33,
-215
+215,
+5009
 ],
-"volume_mes_parcial": 5009
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "1694",
-"negocios_24m": 7041,
+"negocios_24m": 7341,
 "pregao": "BIC MONARK",
 "tickers": [
 "BMKS3"
 ],
-"volume_24m": 14421464,
+"volume_24m": 14829096,
 "volume_mensal": [
-235467,
 426569,
 317196,
 153110,
@@ -2200,20 +2199,20 @@
 322986,
 243577,
 352267,
-193805
+193805,
+643099
 ],
-"volume_mes_parcial": 643099
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "17329",
-"negocios_24m": 5349737,
+"negocios_24m": 5631856,
 "pregao": "ENGIE BRASIL",
 "tickers": [
 "EGIE3"
 ],
-"volume_24m": 34315583951,
+"volume_24m": 36000343542,
 "volume_mensal": [
-1094434488,
 1265468861,
 1143203566,
 1119456039,
@@ -2236,20 +2235,20 @@
 1664126916,
 2914706494,
 2654585365,
-2072429453
+2072429453,
+2779194079
 ],
-"volume_mes_parcial": 2779194079
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "17450",
-"negocios_24m": 10804289,
+"negocios_24m": 10979969,
 "pregao": "RUMO S.A.",
 "tickers": [
 "RAIL3"
 ],
-"volume_24m": 107551570042,
+"volume_24m": 108491223374,
 "volume_mensal": [
-6528212610,
 6033596542,
 4412122178,
 4916396656,
@@ -2272,21 +2271,21 @@
 3442766759,
 2934084726,
 3795481239,
-3532301646
+3532301646,
+7467865942
 ],
-"volume_mes_parcial": 7467865943
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "17485",
-"negocios_24m": 14546,
+"negocios_24m": 14009,
 "pregao": "ELEKTRO",
 "tickers": [
 "EKTR3",
 "EKTR4"
 ],
-"volume_24m": 16770806,
+"volume_24m": 15546151,
 "volume_mensal": [
-1661826,
 875610,
 627608,
 536918,
@@ -2309,20 +2308,20 @@
 438037,
 232044,
 257086,
-236130
+236130,
+437171
 ],
-"volume_mes_parcial": 437171
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "17671",
-"negocios_24m": 8362105,
+"negocios_24m": 8594013,
 "pregao": "TELEF BRASIL",
 "tickers": [
 "VIVT3"
 ],
-"volume_24m": 79501638983,
+"volume_24m": 81801954644,
 "volume_mensal": [
-2778562298,
 2260540722,
 2946951241,
 2120182599,
@@ -2345,22 +2344,22 @@
 3580458315,
 4066918738,
 3447369518,
-3401913214
+3401913214,
+5078877959
 ],
-"volume_mes_parcial": 5078877959
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "17949",
-"negocios_24m": 2134,
+"negocios_24m": 2135,
 "pregao": "MRS LOGIST",
 "tickers": [
 "MRSA3B",
 "MRSA5B",
 "MRSA6B"
 ],
-"volume_24m": 2273371,
+"volume_24m": 2251069,
 "volume_mensal": [
-78538,
 120695,
 99224,
 31619,
@@ -2383,20 +2382,20 @@
 65348,
 74680,
 96782,
-123747
+123747,
+56236
 ],
-"volume_mes_parcial": 56235
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "17973",
-"negocios_24m": 9179940,
+"negocios_24m": 9646158,
 "pregao": "COGNA ON",
 "tickers": [
 "COGN3"
 ],
-"volume_24m": 43712101149,
+"volume_24m": 46541094329,
 "volume_mensal": [
-1052088416,
 1326936516,
 1075160662,
 925143927,
@@ -2419,13 +2418,14 @@
 1214612091,
 1149301569,
 1313175611,
-1753163094
+1753163094,
+3881081596
 ],
-"volume_mes_parcial": 3881081596
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "18309",
-"negocios_24m": 44308,
+"negocios_24m": 49382,
 "pregao": "EQTL PARA",
 "tickers": [
 "EQPA3",
@@ -2433,9 +2433,8 @@
 "EQPA6",
 "EQPA7"
 ],
-"volume_24m": 37823083,
+"volume_24m": 43727830,
 "volume_mensal": [
-783336,
 700435,
 543718,
 1702122,
@@ -2458,21 +2457,21 @@
 2832755,
 3557122,
 1552656,
-1789465
+1789465,
+6688083
 ],
-"volume_mes_parcial": 6688084
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "18368",
-"negocios_24m": 21322,
+"negocios_24m": 21068,
 "pregao": "GER PARANAP",
 "tickers": [
 "GEPA3",
 "GEPA4"
 ],
-"volume_24m": 14689909,
+"volume_24m": 15233500,
 "volume_mensal": [
-512722,
 417840,
 583284,
 442012,
@@ -2495,21 +2494,21 @@
 329102,
 396382,
 285433,
-331202
+331202,
+1056313
 ],
-"volume_mes_parcial": 1056314
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "18376",
-"negocios_24m": 4763704,
+"negocios_24m": 5199331,
 "pregao": "ISA ENERGIA",
 "tickers": [
 "ISAE3",
 "ISAE4"
 ],
-"volume_24m": 31768775526,
+"volume_24m": 34833409658,
 "volume_mensal": [
-0,
 550761685,
 1695981204,
 1788479545,
@@ -2532,20 +2531,20 @@
 1383112140,
 2436661473,
 1856395249,
-2535063357
+2535063357,
+3064634132
 ],
-"volume_mes_parcial": 3064634132
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "18414",
-"negocios_24m": 64186,
+"negocios_24m": 65187,
 "pregao": "PADTEC",
 "tickers": [
 "PDTC3"
 ],
-"volume_24m": 32759774,
+"volume_24m": 34060150,
 "volume_mensal": [
-1609787,
 2086149,
 1026096,
 1144048,
@@ -2568,20 +2567,20 @@
 581174,
 3835096,
 1646512,
-986621
+986621,
+2910163
 ],
-"volume_mes_parcial": 2910164
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "18465",
-"negocios_24m": 8641266,
+"negocios_24m": 9064084,
 "pregao": "ULTRAPAR",
 "tickers": [
 "UGPA3"
 ],
-"volume_24m": 79120679067,
+"volume_24m": 86672828147,
 "volume_mensal": [
-2145332100,
 2345083795,
 2305184452,
 2149804262,
@@ -2604,20 +2603,20 @@
 3016140388,
 7238706497,
 7380467441,
-8107965589
+8107965589,
+9697481180
 ],
-"volume_mes_parcial": 9697481179
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "18597",
-"negocios_24m": 850,
+"negocios_24m": 810,
 "pregao": "DTCOM-DIRECT",
 "tickers": [
 "DTCY3"
 ],
-"volume_24m": 363867,
+"volume_24m": 353660,
 "volume_mensal": [
-11923,
 2825,
 2847,
 1070,
@@ -2640,22 +2639,22 @@
 5139,
 2431,
 31727,
-9986
+9986,
+1716
 ],
-"volume_mes_parcial": 1717
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "18627",
-"negocios_24m": 7672106,
+"negocios_24m": 7995032,
 "pregao": "SANEPAR",
 "tickers": [
 "SAPR11",
 "SAPR3",
 "SAPR4"
 ],
-"volume_24m": 29489016238,
+"volume_24m": 31669079390,
 "volume_mensal": [
-843386955,
 874408685,
 1214557651,
 842826278,
@@ -2678,20 +2677,20 @@
 1498427369,
 920423777,
 1231406891,
-1343828301
+1343828301,
+3023450107
 ],
-"volume_mes_parcial": 3023450107
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "18660",
-"negocios_24m": 4671907,
+"negocios_24m": 4858180,
 "pregao": "CPFL ENERGIA",
 "tickers": [
 "CPFE3"
 ],
-"volume_24m": 37741394182,
+"volume_24m": 38805347616,
 "volume_mensal": [
-1658077519,
 1062228872,
 1040850932,
 1185564692,
@@ -2714,21 +2713,21 @@
 1390729625,
 1193930840,
 1481864003,
-1891826300
+1891826300,
+2722030953
 ],
-"volume_mes_parcial": 2722030954
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "18708",
-"negocios_24m": 2954,
+"negocios_24m": 2843,
 "pregao": "PAR AL BAHIA",
 "tickers": [
 "PEAB3",
 "PEAB4"
 ],
-"volume_24m": 8614334,
+"volume_24m": 8312270,
 "volume_mensal": [
-355531,
 352983,
 211783,
 178261,
@@ -2751,21 +2750,21 @@
 259563,
 168234,
 515123,
-452989
+452989,
+53467
 ],
-"volume_mes_parcial": 53467
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "18724",
-"negocios_24m": 4766452,
+"negocios_24m": 4832178,
 "pregao": "BRADESPAR",
 "tickers": [
 "BRAP3",
 "BRAP4"
 ],
-"volume_24m": 32573426419,
+"volume_24m": 33300585318,
 "volume_mensal": [
-1593130154,
 2523492671,
 1350855754,
 1208630190,
@@ -2788,20 +2787,20 @@
 950263505,
 872421685,
 838401279,
-1105855850
+1105855850,
+2320289053
 ],
-"volume_mes_parcial": 2320289054
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "18821",
-"negocios_24m": 5592408,
+"negocios_24m": 6249051,
 "pregao": "MOTIVA SA",
 "tickers": [
 "MOTV3"
 ],
-"volume_24m": 50720838028,
+"volume_24m": 59401566062,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -2824,20 +2823,20 @@
 2869381149,
 2266943683,
 3534876765,
-5438599554
+5438599554,
+8680728034
 ],
-"volume_mes_parcial": 8680728034
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19100",
-"negocios_24m": 6265,
+"negocios_24m": 7151,
 "pregao": "CONTAX",
 "tickers": [
 "CTAX3"
 ],
-"volume_24m": 2017705,
+"volume_24m": 2766110,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -2860,20 +2859,20 @@
 82883,
 139592,
 129493,
-119114
+119114,
+748405
 ],
-"volume_mes_parcial": 748406
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19305",
-"negocios_24m": 133849,
+"negocios_24m": 133254,
 "pregao": "BIOMM",
 "tickers": [
 "BIOM3"
 ],
-"volume_24m": 610538047,
+"volume_24m": 609336062,
 "volume_mensal": [
-11694258,
 15126429,
 24585834,
 18326712,
@@ -2896,20 +2895,20 @@
 11142859,
 7664066,
 5783510,
-5117331
+5117331,
+10492273
 ],
-"volume_mes_parcial": 10492273
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19330",
-"negocios_24m": 103134,
+"negocios_24m": 97396,
 "pregao": "TRIUNFO PART",
 "tickers": [
 "TPIS3"
 ],
-"volume_24m": 132163775,
+"volume_24m": 132296272,
 "volume_mensal": [
-15316698,
 9134678,
 8216966,
 2931825,
@@ -2932,21 +2931,21 @@
 10774740,
 6768267,
 5091085,
-5043900
+5043900,
+15449195
 ],
-"volume_mes_parcial": 15449195
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19348",
-"negocios_24m": 25264799,
+"negocios_24m": 26325550,
 "pregao": "ITAUUNIBANCO",
 "tickers": [
 "ITUB3",
 "ITUB4"
 ],
-"volume_24m": 500383496155,
+"volume_24m": 532586959613,
 "volume_mensal": [
-16326356533,
 17444403040,
 17960204124,
 14481431405,
@@ -2969,20 +2968,20 @@
 28286727644,
 19044474471,
 24000744087,
-25529249556
+25529249556,
+48529819991
 ],
-"volume_mes_parcial": 48529819992
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19445",
-"negocios_24m": 7033693,
+"negocios_24m": 7642658,
 "pregao": "COPASA",
 "tickers": [
 "CSMG3"
 ],
-"volume_24m": 64014482480,
+"volume_24m": 72460744933,
 "volume_mensal": [
-636469870,
 1117967997,
 777019570,
 826089862,
@@ -3005,20 +3004,20 @@
 8868212022,
 5402853429,
 5403650499,
-4511052231
+4511052231,
+9082732323
 ],
-"volume_mes_parcial": 9082732323
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19453",
-"negocios_24m": 4368865,
+"negocios_24m": 5009171,
 "pregao": "ECORODOVIAS",
 "tickers": [
 "ECOR3"
 ],
-"volume_24m": 20398194297,
+"volume_24m": 24769739422,
 "volume_mensal": [
-555985309,
 642045311,
 602510447,
 423187304,
@@ -3041,20 +3040,20 @@
 802666691,
 672781928,
 753048006,
-1759622141
+1759622141,
+4927530434
 ],
-"volume_mes_parcial": 4927530434
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19550",
-"negocios_24m": 4764083,
+"negocios_24m": 5243730,
 "pregao": "NATURA",
 "tickers": [
 "NATU3"
 ],
-"volume_24m": 27237933698,
+"volume_24m": 29416123732,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -3077,20 +3076,20 @@
 2735885162,
 1800209371,
 978823627,
-1528554830
+1528554830,
+2178190034
 ],
-"volume_mes_parcial": 2178190034
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19615",
-"negocios_24m": 2931578,
+"negocios_24m": 3040794,
 "pregao": "GRENDENE",
 "tickers": [
 "GRND3"
 ],
-"volume_24m": 7223892727,
+"volume_24m": 7481580608,
 "volume_mensal": [
-111109882,
 106296445,
 135002591,
 132205196,
@@ -3113,20 +3112,20 @@
 227830479,
 186269374,
 309076720,
-203839053
+203839053,
+368797763
 ],
-"volume_mes_parcial": 368797764
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19623",
-"negocios_24m": 1084454,
+"negocios_24m": 1149253,
 "pregao": "DASA",
 "tickers": [
 "DASA3"
 ],
-"volume_24m": 1760462644,
+"volume_24m": 1909031595,
 "volume_mensal": [
-46074793,
 41181677,
 41253322,
 37055299,
@@ -3149,21 +3148,21 @@
 54402819,
 54327233,
 66515964,
-73497671
+73497671,
+194643744
 ],
-"volume_mes_parcial": 194643744
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19739",
-"negocios_24m": 14230967,
+"negocios_24m": 14984963,
 "pregao": "LOCALIZA",
 "tickers": [
 "RENT3",
 "RENT4"
 ],
-"volume_24m": 189563297005,
+"volume_24m": 203477302543,
 "volume_mensal": [
-6140973912,
 10906782469,
 8903767501,
 6314131566,
@@ -3186,20 +3185,20 @@
 7929790030,
 6116091031,
 7290568229,
-9784597882
+9784597882,
+20054979450
 ],
-"volume_mes_parcial": 20054979449
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19836",
-"negocios_24m": 12264082,
+"negocios_24m": 12854903,
 "pregao": "COSAN",
 "tickers": [
 "CSAN3"
 ],
-"volume_24m": 83654757164,
+"volume_24m": 85634181535,
 "volume_mensal": [
-3064620727,
 3277092263,
 3191005556,
 3903280503,
@@ -3222,20 +3221,20 @@
 3029362385,
 1515207039,
 2550480698,
-2745792064
+2745792064,
+5044045098
 ],
-"volume_mes_parcial": 5044045098
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19879",
-"negocios_24m": 1421232,
+"negocios_24m": 1493027,
 "pregao": "LIGHT S/A",
 "tickers": [
 "LIGT3"
 ],
-"volume_24m": 3458429952,
+"volume_24m": 3793530879,
 "volume_mensal": [
-95555647,
 96358717,
 45367128,
 32546896,
@@ -3258,20 +3257,20 @@
 234566243,
 185288074,
 255725278,
-193185427
+193185427,
+430656574
 ],
-"volume_mes_parcial": 430656574
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "19992",
-"negocios_24m": 8179094,
+"negocios_24m": 8533237,
 "pregao": "TOTVS",
 "tickers": [
 "TOTS3"
 ],
-"volume_24m": 75711641909,
+"volume_24m": 79518756304,
 "volume_mensal": [
-2161548491,
 3210395139,
 2052523795,
 2158592456,
@@ -3294,20 +3293,20 @@
 3614427420,
 2689992374,
 2705971676,
-3834070400
+3834070400,
+5968662886
 ],
-"volume_mes_parcial": 5968662886
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20010",
-"negocios_24m": 12154786,
+"negocios_24m": 12733797,
 "pregao": "EQUATORIAL",
 "tickers": [
 "EQTL3"
 ],
-"volume_24m": 148738041710,
+"volume_24m": 162952869499,
 "volume_mensal": [
-5302461224,
 5764803167,
 6085449024,
 5909883854,
@@ -3330,20 +3329,20 @@
 7163894548,
 5672122877,
 8716476494,
-7332197897
+7332197897,
+19517289013
 ],
-"volume_mes_parcial": 19517289013
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20028",
-"negocios_24m": 1150833,
+"negocios_24m": 1155501,
 "pregao": "VALID",
 "tickers": [
 "VLID3"
 ],
-"volume_24m": 3765470054,
+"volume_24m": 3711964912,
 "volume_mensal": [
-229286274,
 268749323,
 234458620,
 243650383,
@@ -3366,20 +3365,20 @@
 110870766,
 80048388,
 96592579,
-66081467
+66081467,
+175781132
 ],
-"volume_mes_parcial": 175781133
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20036",
-"negocios_24m": 1064626,
+"negocios_24m": 1064791,
 "pregao": "BRASILAGRO",
 "tickers": [
 "AGRO3"
 ],
-"volume_24m": 2112268064,
+"volume_24m": 2115254954,
 "volume_mensal": [
-139948678,
 126564821,
 119620956,
 94192816,
@@ -3402,20 +3401,20 @@
 51771647,
 42519591,
 47251810,
-101433190
+101433190,
+142935568
 ],
-"volume_mes_parcial": 142935568
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20044",
-"negocios_24m": 259072,
+"negocios_24m": 273301,
 "pregao": "CSU DIGITAL",
 "tickers": [
 "CSUD3"
 ],
-"volume_24m": 497272303,
+"volume_24m": 516665039,
 "volume_mensal": [
-13887406,
 18819725,
 18747706,
 14851943,
@@ -3438,20 +3437,20 @@
 21143663,
 28333830,
 15046117,
-15407503
+15407503,
+33280142
 ],
-"volume_mes_parcial": 33280141
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20060",
-"negocios_24m": 335617,
+"negocios_24m": 331894,
 "pregao": "LUPATECH",
 "tickers": [
 "LUPA3"
 ],
-"volume_24m": 86438403,
+"volume_24m": 80663630,
 "volume_mensal": [
-8880040,
 7888286,
 4076000,
 10017690,
@@ -3474,20 +3473,20 @@
 839388,
 851772,
 1640034,
-429142
+429142,
+3105267
 ],
-"volume_mes_parcial": 3105267
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20087",
-"negocios_24m": 5316862,
+"negocios_24m": 6182655,
 "pregao": "EMBRAER",
 "tickers": [
 "EMBJ3"
 ],
-"volume_24m": 95745728304,
+"volume_24m": 111179403867,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -3510,20 +3509,20 @@
 8603994740,
 7711351907,
 11308252219,
-10448202081
+10448202081,
+15433675563
 ],
-"volume_mes_parcial": 15433675563
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20125",
-"negocios_24m": 1212250,
+"negocios_24m": 1669462,
 "pregao": "BRADSAUDE",
 "tickers": [
 "SAUD3"
 ],
-"volume_24m": 7777883594,
+"volume_24m": 10691215587,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -3546,22 +3545,22 @@
 1544652790,
 976991124,
 1673488899,
-2334855042
+2334855042,
+2913331993
 ],
-"volume_mes_parcial": 2913331992
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20257",
-"negocios_24m": 7765623,
+"negocios_24m": 7982315,
 "pregao": "TAESA",
 "tickers": [
 "TAEE11",
 "TAEE3",
 "TAEE4"
 ],
-"volume_24m": 38141255030,
+"volume_24m": 40094523423,
 "volume_mensal": [
-1359239804,
 1504608614,
 1581657642,
 1457788894,
@@ -3584,20 +3583,20 @@
 1253404351,
 1780906830,
 1906651603,
-1663642599
+1663642599,
+3312508197
 ],
-"volume_mes_parcial": 3312508200
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20338",
-"negocios_24m": 1764047,
+"negocios_24m": 1807486,
 "pregao": "M.DIASBRANCO",
 "tickers": [
 "MDIA3"
 ],
-"volume_24m": 7996595164,
+"volume_24m": 7930539953,
 "volume_mensal": [
-610538859,
 664526291,
 336513306,
 288790153,
@@ -3620,20 +3619,20 @@
 247208763,
 196902086,
 267946667,
-292946308
+292946308,
+544483648
 ],
-"volume_mes_parcial": 544483648
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20346",
-"negocios_24m": 494902,
+"negocios_24m": 508468,
 "pregao": "PROFARMA",
 "tickers": [
 "PFRM3"
 ],
-"volume_24m": 827879380,
+"volume_24m": 843680490,
 "volume_mensal": [
-36182845,
 48663375,
 33323127,
 21749722,
@@ -3656,20 +3655,20 @@
 20631051,
 21002672,
 21082384,
-16250491
+16250491,
+51983955
 ],
-"volume_mes_parcial": 51983956
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20362",
-"negocios_24m": 1361626,
+"negocios_24m": 1348486,
 "pregao": "POSITIVO TEC",
 "tickers": [
 "POSI3"
 ],
-"volume_24m": 2503956309,
+"volume_24m": 2457626057,
 "volume_mensal": [
-208203037,
 163221770,
 132946684,
 103299623,
@@ -3692,20 +3691,20 @@
 98356085,
 44460966,
 58282270,
-53347855
+53347855,
+161872785
 ],
-"volume_mes_parcial": 161872784
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20370",
-"negocios_24m": 187919,
+"negocios_24m": 195822,
 "pregao": "LOPES BRASIL",
 "tickers": [
 "LPSB3"
 ],
-"volume_24m": 129875551,
+"volume_24m": 143700965,
 "volume_mensal": [
-3786955,
 4937754,
 4172655,
 4384745,
@@ -3728,20 +3727,20 @@
 4828938,
 3219038,
 4112001,
-5244608
+5244608,
+17612369
 ],
-"volume_mes_parcial": 17612368
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20435",
-"negocios_24m": 158505,
+"negocios_24m": 156988,
 "pregao": "TECNISA",
 "tickers": [
 "TCSA3"
 ],
-"volume_24m": 73033474,
+"volume_24m": 73705580,
 "volume_mensal": [
-5367690,
 2858574,
 3176748,
 3387804,
@@ -3764,20 +3763,20 @@
 1799096,
 1552670,
 1600356,
-681725
+681725,
+6039796
 ],
-"volume_mes_parcial": 6039795
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20478",
-"negocios_24m": 333866,
+"negocios_24m": 295802,
 "pregao": "PDG REALT",
 "tickers": [
 "PDGR3"
 ],
-"volume_24m": 215388630,
+"volume_24m": 208356095,
 "volume_mensal": [
-18831488,
 10581209,
 667467,
 968544,
@@ -3800,20 +3799,20 @@
 340034,
 585537,
 2847039,
-955675
+955675,
+11798953
 ],
-"volume_mes_parcial": 11798954
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20516",
-"negocios_24m": 3718838,
+"negocios_24m": 3808695,
 "pregao": "SAO MARTINHO",
 "tickers": [
 "SMTO3"
 ],
-"volume_24m": 18622246430,
+"volume_24m": 18966474422,
 "volume_mensal": [
-668805499,
 746115581,
 648110114,
 674447830,
@@ -3836,20 +3835,20 @@
 684056460,
 491720290,
 858974283,
-732975631
+732975631,
+1013033491
 ],
-"volume_mes_parcial": 1013033491
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20524",
-"negocios_24m": 1528655,
+"negocios_24m": 1535264,
 "pregao": "EVEN",
 "tickers": [
 "EVEN3"
 ],
-"volume_24m": 3140740869,
+"volume_24m": 3115276295,
 "volume_mensal": [
-239339319,
 167218400,
 152022024,
 160169547,
@@ -3872,22 +3871,22 @@
 142119360,
 86954595,
 91018506,
-131462056
+131462056,
+213874745
 ],
-"volume_mes_parcial": 213874745
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20532",
-"negocios_24m": 6914845,
+"negocios_24m": 7100539,
 "pregao": "SANTANDER BR",
 "tickers": [
 "SANB11",
 "SANB3",
 "SANB4"
 ],
-"volume_24m": 48478924913,
+"volume_24m": 51254003373,
 "volume_mensal": [
-1693581846,
 1758661443,
 1370475393,
 1516826900,
@@ -3910,21 +3909,21 @@
 1819429932,
 3580328480,
 3746492698,
-1908168194
+1908168194,
+4468660306
 ],
-"volume_mes_parcial": 4468660306
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20567",
-"negocios_24m": 1032784,
+"negocios_24m": 1169691,
 "pregao": "PINE",
 "tickers": [
 "PINE3",
 "PINE4"
 ],
-"volume_24m": 3064599003,
+"volume_24m": 3558257982,
 "volume_mensal": [
-32165913,
 22812261,
 22839157,
 12459120,
@@ -3947,20 +3946,20 @@
 309274913,
 300702875,
 269077308,
-222490627
+222490627,
+525824892
 ],
-"volume_mes_parcial": 525824892
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20605",
-"negocios_24m": 3901194,
+"negocios_24m": 4158947,
 "pregao": "JHSF PART",
 "tickers": [
 "JHSF3"
 ],
-"volume_24m": 14976395618,
+"volume_24m": 16103547527,
 "volume_mensal": [
-429439840,
 228859826,
 322738794,
 229649217,
@@ -3983,20 +3982,20 @@
 1129486194,
 823076747,
 772528378,
-1039734531
+1039734531,
+1556591749
 ],
-"volume_mes_parcial": 1556591749
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20613",
-"negocios_24m": 4530,
+"negocios_24m": 3140,
 "pregao": "METALFRIO",
 "tickers": [
 "FRIO3"
 ],
-"volume_24m": 67756403,
+"volume_24m": 45294014,
 "volume_mensal": [
-22475240,
 3496707,
 17078990,
 10234450,
@@ -4019,20 +4018,20 @@
 71142,
 49874,
 9020,
-9056
+9056,
+12851
 ],
-"volume_mes_parcial": 12851
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20621",
-"negocios_24m": 86170,
+"negocios_24m": 86260,
 "pregao": "FER HERINGER",
 "tickers": [
 "FHER3"
 ],
-"volume_24m": 73621771,
+"volume_24m": 74155893,
 "volume_mensal": [
-290145,
 241700,
 34359158,
 5220096,
@@ -4055,20 +4054,20 @@
 146703,
 223358,
 606296,
-482390
+482390,
+824267
 ],
-"volume_mes_parcial": 824267
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20630",
-"negocios_24m": 1322,
+"negocios_24m": 1358,
 "pregao": "FICA",
 "tickers": [
 "FIEI3"
 ],
-"volume_24m": 5675717,
+"volume_24m": 5249794,
 "volume_mensal": [
-499359,
 7212,
 15192,
 37311,
@@ -4091,21 +4090,21 @@
 2740,
 88790,
 11408,
-88492
+88492,
+73436
 ],
-"volume_mes_parcial": 73436
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20648",
-"negocios_24m": 1007,
+"negocios_24m": 993,
 "pregao": "CEEE-D",
 "tickers": [
 "CEED3",
 "CEED4"
 ],
-"volume_24m": 253393,
+"volume_24m": 257216,
 "volume_mensal": [
-1445,
 556,
 721,
 3531,
@@ -4128,20 +4127,20 @@
 10217,
 4611,
 7353,
-2871
+2871,
+5268
 ],
-"volume_mes_parcial": 5268
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20702",
-"negocios_24m": 164933,
+"negocios_24m": 166762,
 "pregao": "VIVER",
 "tickers": [
 "VIVR3"
 ],
-"volume_24m": 43950689,
+"volume_24m": 49587794,
 "volume_mensal": [
-4178214,
 4370633,
 2504901,
 2303622,
@@ -4164,20 +4163,20 @@
 832994,
 292474,
 358562,
-208775
+208775,
+9815319
 ],
-"volume_mes_parcial": 9815318
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20710",
-"negocios_24m": 93930,
+"negocios_24m": 90165,
 "pregao": "LOG-IN",
 "tickers": [
 "LOGN3"
 ],
-"volume_24m": 449213831,
+"volume_24m": 443081295,
 "volume_mensal": [
-21820691,
 70209083,
 56505840,
 20929011,
@@ -4200,20 +4199,20 @@
 10324341,
 10563403,
 7486476,
-10276111
+10276111,
+15688155
 ],
-"volume_mes_parcial": 15688155
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20745",
-"negocios_24m": 4526054,
+"negocios_24m": 4600668,
 "pregao": "SLC AGRICOLA",
 "tickers": [
 "SLCE3"
 ],
-"volume_24m": 21796774122,
+"volume_24m": 22185751281,
 "volume_mensal": [
-863714690,
 680263302,
 953819160,
 823100152,
@@ -4236,20 +4235,20 @@
 1070477853,
 901494069,
 922892040,
-1236376064
+1236376064,
+1252691849
 ],
-"volume_mes_parcial": 1252691849
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20770",
-"negocios_24m": 3346459,
+"negocios_24m": 3592976,
 "pregao": "EZTEC",
 "tickers": [
 "EZTC3"
 ],
-"volume_24m": 14139524133,
+"volume_24m": 15630875457,
 "volume_mensal": [
-555894128,
 1064441610,
 607626743,
 585695029,
@@ -4272,20 +4271,20 @@
 557528386,
 423890067,
 652809225,
-1033536895
+1033536895,
+2047245452
 ],
-"volume_mes_parcial": 2047245452
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20788",
-"negocios_24m": 4962839,
+"negocios_24m": 5466744,
 "pregao": "MARFRIG",
 "tickers": [
 "MBRF3"
 ],
-"volume_24m": 45972604831,
+"volume_24m": 49035552156,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -4308,20 +4307,20 @@
 2431077273,
 2668673940,
 2213233303,
-1620129574
+1620129574,
+3062947325
 ],
-"volume_mes_parcial": 3062947325
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20800",
-"negocios_24m": 820474,
+"negocios_24m": 874423,
 "pregao": "TEGMA",
 "tickers": [
 "TGMA3"
 ],
-"volume_24m": 4456318010,
+"volume_24m": 4870733443,
 "volume_mensal": [
-159619326,
 173690408,
 190775009,
 127614092,
@@ -4344,20 +4343,20 @@
 106590265,
 137023261,
 251037240,
-211109475
+211109475,
+574034759
 ],
-"volume_mes_parcial": 574034760
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20877",
-"negocios_24m": 831797,
+"negocios_24m": 868470,
 "pregao": "HELBOR",
 "tickers": [
 "HBOR3"
 ],
-"volume_24m": 1570465993,
+"volume_24m": 1643537984,
 "volume_mensal": [
-25133751,
 27210823,
 33253890,
 23245471,
@@ -4380,20 +4379,20 @@
 38207874,
 74284705,
 22685689,
-27813933
+27813933,
+98205742
 ],
-"volume_mes_parcial": 98205742
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20915",
-"negocios_24m": 6652771,
+"negocios_24m": 6861869,
 "pregao": "MRV",
 "tickers": [
 "MRVE3"
 ],
-"volume_24m": 33995863199,
+"volume_24m": 35338905596,
 "volume_mensal": [
-1941810688,
 2312246858,
 1629687353,
 1192521082,
@@ -4416,20 +4415,20 @@
 1107743888,
 1055773921,
 1444075808,
-1368748624
+1368748624,
+3284853085
 ],
-"volume_mes_parcial": 3284853085
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20931",
-"negocios_24m": 7192856,
+"negocios_24m": 7441012,
 "pregao": "MINERVA",
 "tickers": [
 "BEEF3"
 ],
-"volume_24m": 35159465430,
+"volume_24m": 36330825331,
 "volume_mensal": [
-1203303542,
 1080497668,
 1051351879,
 977344472,
@@ -4452,20 +4451,20 @@
 1027052495,
 682783750,
 1235298511,
-1956564518
+1956564518,
+2374663443
 ],
-"volume_mes_parcial": 2374663443
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20958",
-"negocios_24m": 1926744,
+"negocios_24m": 1990763,
 "pregao": "ABC BRASIL",
 "tickers": [
 "ABCB4"
 ],
-"volume_24m": 6888121937,
+"volume_24m": 7225239387,
 "volume_mensal": [
-262774485,
 295147993,
 392949580,
 264603965,
@@ -4488,20 +4487,20 @@
 472812963,
 268845330,
 246719742,
-299672631
+299672631,
+599891935
 ],
-"volume_mes_parcial": 599891935
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20982",
-"negocios_24m": 8214638,
+"negocios_24m": 8768668,
 "pregao": "MULTIPLAN",
 "tickers": [
 "MULT3"
 ],
-"volume_24m": 53341730339,
+"volume_24m": 59215148602,
 "volume_mensal": [
-1798853796,
 1895723306,
 2151396952,
 1865342902,
@@ -4524,20 +4523,20 @@
 2068964482,
 2032337215,
 2200896706,
-3159275710
+3159275710,
+7672272059
 ],
-"volume_mes_parcial": 7672272059
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "20990",
-"negocios_24m": 2006179,
+"negocios_24m": 2031863,
 "pregao": "AMERICANAS",
 "tickers": [
 "AMER3"
 ],
-"volume_24m": 8317558139,
+"volume_24m": 8516534328,
 "volume_mensal": [
-185171647,
 1568450162,
 346452130,
 370189436,
@@ -4560,20 +4559,20 @@
 135599326,
 179447785,
 143980953,
-159728903
+159728903,
+384147836
 ],
-"volume_mes_parcial": 384147837
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "2100",
-"negocios_24m": 85617,
+"negocios_24m": 87725,
 "pregao": "CAMBUCI",
 "tickers": [
 "CAMB3"
 ],
-"volume_24m": 167705390,
+"volume_24m": 171738921,
 "volume_mensal": [
-7876981,
 12937805,
 9554319,
 11033917,
@@ -4596,20 +4595,20 @@
 2769681,
 2268375,
 4162580,
-4268369
+4268369,
+11910512
 ],
-"volume_mes_parcial": 11910512
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21008",
-"negocios_24m": 2485,
+"negocios_24m": 2741,
 "pregao": "GENERALSHOPP",
 "tickers": [
 "GSHP3"
 ],
-"volume_24m": 1030606,
+"volume_24m": 1048256,
 "volume_mensal": [
-53066,
 26732,
 31453,
 32550,
@@ -4632,20 +4631,20 @@
 43368,
 2872,
 9777,
-13977
+13977,
+70716
 ],
-"volume_mes_parcial": 70715
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21016",
-"negocios_24m": 5614087,
+"negocios_24m": 5738628,
 "pregao": "YDUQS PART",
 "tickers": [
 "YDUQ3"
 ],
-"volume_24m": 25086184538,
+"volume_24m": 25543022176,
 "volume_mensal": [
-1158669518,
 918244336,
 813444400,
 1025794622,
@@ -4668,20 +4667,20 @@
 710217524,
 650998788,
 773453169,
-1464273742
+1464273742,
+1615507156
 ],
-"volume_mes_parcial": 1615507157
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21040",
-"negocios_24m": 1169489,
+"negocios_24m": 1166166,
 "pregao": "SYN PROP TEC",
 "tickers": [
 "SYNE3"
 ],
-"volume_24m": 1793492722,
+"volume_24m": 1742626466,
 "volume_mensal": [
-109500130,
 83032130,
 210860655,
 103952543,
@@ -4704,20 +4703,20 @@
 39975027,
 25936108,
 25538011,
-35337149
+35337149,
+58633874
 ],
-"volume_mes_parcial": 58633874
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21067",
-"negocios_24m": 2356771,
+"negocios_24m": 2570013,
 "pregao": "MOURA DUBEUX",
 "tickers": [
 "MDNE3"
 ],
-"volume_24m": 11602481012,
+"volume_24m": 12828171945,
 "volume_mensal": [
-233513671,
 240727285,
 163382309,
 182323769,
@@ -4740,20 +4739,20 @@
 581865272,
 864460433,
 503254344,
-814926211
+814926211,
+1459204604
 ],
-"volume_mes_parcial": 1459204604
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21091",
-"negocios_24m": 2545568,
+"negocios_24m": 2634593,
 "pregao": "DEXCO",
 "tickers": [
 "DXCO3"
 ],
-"volume_24m": 7404095871,
+"volume_24m": 7805246373,
 "volume_mensal": [
-646380043,
 440280026,
 521408384,
 337570288,
@@ -4776,20 +4775,20 @@
 194727753,
 167359452,
 208871736,
-214679844
+214679844,
+1047530545
 ],
-"volume_mes_parcial": 1047530546
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21130",
-"negocios_24m": 661640,
+"negocios_24m": 667832,
 "pregao": "TRISUL",
 "tickers": [
 "TRIS3"
 ],
-"volume_24m": 1384488200,
+"volume_24m": 1397053358,
 "volume_mensal": [
-64641047,
 59536530,
 55645373,
 74677751,
@@ -4812,20 +4811,20 @@
 24463990,
 41102623,
 29323414,
-28518400
+28518400,
+77206205
 ],
-"volume_mes_parcial": 77206205
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21148",
-"negocios_24m": 5312186,
+"negocios_24m": 5652455,
 "pregao": "TENDA",
 "tickers": [
 "TEND3"
 ],
-"volume_24m": 30035611753,
+"volume_24m": 32239476522,
 "volume_mensal": [
-937126930,
 1236429443,
 917131229,
 760106049,
@@ -4848,20 +4847,20 @@
 1976888931,
 1718638253,
 2020885397,
-2837494690
+2837494690,
+3140991699
 ],
-"volume_mes_parcial": 3140991699
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21180",
-"negocios_24m": 6230,
+"negocios_24m": 6000,
 "pregao": "NEXPE",
 "tickers": [
 "NEXP3"
 ],
-"volume_24m": 2382585,
+"volume_24m": 2280669,
 "volume_mensal": [
-146147,
 184131,
 87018,
 114517,
@@ -4884,20 +4883,20 @@
 26885,
 13456,
 19902,
-66924
+66924,
+44231
 ],
-"volume_mes_parcial": 44231
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21237",
-"negocios_24m": 10036933,
+"negocios_24m": 10410190,
 "pregao": "ENEVA",
 "tickers": [
 "ENEV3"
 ],
-"volume_24m": 100928293961,
+"volume_24m": 108957427250,
 "volume_mensal": [
-2377895749,
 2246112410,
 1797122887,
 2729201919,
@@ -4920,20 +4919,20 @@
 4315611463,
 4563518810,
 5774173882,
-5709284974
+5709284974,
+10407029038
 ],
-"volume_mes_parcial": 10407029039
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21334",
-"negocios_24m": 16908,
+"negocios_24m": 17326,
 "pregao": "NUTRIPLANT",
 "tickers": [
 "NUTR3"
 ],
-"volume_24m": 6787195,
+"volume_24m": 7092690,
 "volume_mensal": [
-278689,
 578926,
 347071,
 512137,
@@ -4956,20 +4955,20 @@
 375393,
 138912,
 175952,
-219796
+219796,
+584184
 ],
-"volume_mes_parcial": 584184
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21342",
-"negocios_24m": 9387,
+"negocios_24m": 8508,
 "pregao": "OSX BRASIL",
 "tickers": [
 "OSXB3"
 ],
-"volume_24m": 4199171,
+"volume_24m": 3713207,
 "volume_mensal": [
-626715,
 889654,
 292320,
 223374,
@@ -4992,20 +4991,20 @@
 26860,
 31087,
 33126,
-54133
+54133,
+140751
 ],
-"volume_mes_parcial": 140752
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21350",
-"negocios_24m": 7072690,
+"negocios_24m": 7594400,
 "pregao": "DIRECIONAL",
 "tickers": [
 "DIRR3"
 ],
-"volume_24m": 42454009561,
+"volume_24m": 45206471199,
 "volume_mensal": [
-1202290524,
 1260798218,
 1540825840,
 1245024225,
@@ -5028,20 +5027,20 @@
 2043387669,
 2173220228,
 2041016569,
-2559675985
+2559675985,
+3954752162
 ],
-"volume_mes_parcial": 3954752163
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21393",
-"negocios_24m": 863,
+"negocios_24m": 892,
 "pregao": "CELGPAR",
 "tickers": [
 "GPAR3"
 ],
-"volume_24m": 181545,
+"volume_24m": 183324,
 "volume_mensal": [
-9526,
 10206,
 2094,
 25372,
@@ -5064,20 +5063,20 @@
 5742,
 4733,
 730,
-464
+464,
+11305
 ],
-"volume_mes_parcial": 11306
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21431",
-"negocios_24m": 6314357,
+"negocios_24m": 6232999,
 "pregao": "HYPERA",
 "tickers": [
 "HYPE3"
 ],
-"volume_24m": 43014468972,
+"volume_24m": 40434195685,
 "volume_mensal": [
-5805150935,
 2250747140,
 1938629392,
 1654950168,
@@ -5100,20 +5099,20 @@
 1238967900,
 1296309316,
 1377315798,
-1626113361
+1626113361,
+3224877648
 ],
-"volume_mes_parcial": 3224877649
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21440",
-"negocios_24m": 42892,
+"negocios_24m": 43710,
 "pregao": "VESTE",
 "tickers": [
 "VSTE3"
 ],
-"volume_24m": 67078446,
+"volume_24m": 66206908,
 "volume_mensal": [
-4980078,
 3785246,
 10596670,
 2341976,
@@ -5136,22 +5135,22 @@
 1126955,
 3131454,
 2036557,
-4315131
+4315131,
+4108540
 ],
-"volume_mes_parcial": 4108539
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21490",
-"negocios_24m": 2781980,
+"negocios_24m": 2923372,
 "pregao": "ALUPAR",
 "tickers": [
 "ALUP11",
 "ALUP3",
 "ALUP4"
 ],
-"volume_24m": 15001586470,
+"volume_24m": 16034599206,
 "volume_mensal": [
-548579013,
 554614951,
 695954131,
 606246023,
@@ -5174,20 +5173,20 @@
 560530036,
 512147058,
 806561106,
-762651797
+762651797,
+1581591749
 ],
-"volume_mes_parcial": 1581591750
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21610",
-"negocios_24m": 19756640,
+"negocios_24m": 20385815,
 "pregao": "B3",
 "tickers": [
 "B3SA3"
 ],
-"volume_24m": 279557219863,
+"volume_24m": 304334096606,
 "volume_mensal": [
-8791849268,
 11591214823,
 13309778399,
 9875517677,
@@ -5210,21 +5209,21 @@
 15619665591,
 11134271328,
 10593163977,
-16918311528
+16918311528,
+33568726011
 ],
-"volume_mes_parcial": 33568726011
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21636",
-"negocios_24m": 189676,
+"negocios_24m": 177819,
 "pregao": "RENOVA",
 "tickers": [
 "RNEW3",
 "RNEW4"
 ],
-"volume_24m": 109618150,
+"volume_24m": 99285128,
 "volume_mensal": [
-13449112,
 5775595,
 4179827,
 3405073,
@@ -5247,20 +5246,20 @@
 1639022,
 1923115,
 1646690,
-2802791
+2802791,
+3116090
 ],
-"volume_mes_parcial": 3116091
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "21881",
-"negocios_24m": 5498468,
+"negocios_24m": 5908539,
 "pregao": "FLEURY",
 "tickers": [
 "FLRY3"
 ],
-"volume_24m": 24257160745,
+"volume_24m": 27249057814,
 "volume_mensal": [
-1115216056,
 897331833,
 799217026,
 876964099,
@@ -5283,20 +5282,20 @@
 717071810,
 738266663,
 1788586105,
-1813449976
+1813449976,
+4107113125
 ],
-"volume_mes_parcial": 4107113126
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22012",
-"negocios_24m": 1362083,
+"negocios_24m": 1364740,
 "pregao": "MILLS",
 "tickers": [
 "MILS3"
 ],
-"volume_24m": 5930099601,
+"volume_24m": 6301724627,
 "volume_mensal": [
-264216927,
 215921750,
 178472593,
 123638750,
@@ -5319,20 +5318,20 @@
 341933449,
 337208940,
 196979591,
-244961864
+244961864,
+635841953
 ],
-"volume_mes_parcial": 635841953
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22020",
-"negocios_24m": 1110627,
+"negocios_24m": 1217310,
 "pregao": "JSL",
 "tickers": [
 "JSLG3"
 ],
-"volume_24m": 2616192722,
+"volume_24m": 3128424703,
 "volume_mensal": [
-110143146,
 112559085,
 54130998,
 65662365,
@@ -5355,20 +5354,20 @@
 103082716,
 98312412,
 104455816,
-157264745
+157264745,
+622375127
 ],
-"volume_mes_parcial": 622375127
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22055",
-"negocios_24m": 330070,
+"negocios_24m": 321686,
 "pregao": "LOJAS MARISA",
 "tickers": [
 "AMAR3"
 ],
-"volume_24m": 141705723,
+"volume_24m": 144394409,
 "volume_mensal": [
-4114876,
 4909705,
 4775318,
 6062591,
@@ -5391,20 +5390,20 @@
 2123357,
 2812406,
 5481615,
-3999396
+3999396,
+6803562
 ],
-"volume_mes_parcial": 6803563
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22179",
-"negocios_24m": 8238,
+"negocios_24m": 8984,
 "pregao": "AFLUENTE T",
 "tickers": [
 "AFLT3"
 ],
-"volume_24m": 1383279,
+"volume_24m": 1714928,
 "volume_mensal": [
-38663,
 57245,
 68109,
 91895,
@@ -5427,20 +5426,20 @@
 59686,
 121301,
 66813,
-43004
+43004,
+370312
 ],
-"volume_mes_parcial": 370313
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22187",
-"negocios_24m": 15359937,
+"negocios_24m": 15544480,
 "pregao": "PRIO",
 "tickers": [
 "PRIO3"
 ],
-"volume_24m": 235923405575,
+"volume_24m": 241332649539,
 "volume_mensal": [
-9213125794,
 6464621851,
 6799642684,
 8576968663,
@@ -5463,20 +5462,20 @@
 11313202044,
 9017328047,
 8606436569,
-11756040106
+11756040106,
+14622369758
 ],
-"volume_mes_parcial": 14622369758
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22349",
-"negocios_24m": 5608919,
+"negocios_24m": 5900103,
 "pregao": "AZZAS 2154",
 "tickers": [
 "AZZA3"
 ],
-"volume_24m": 37646691014,
+"volume_24m": 38688897729,
 "volume_mensal": [
-1670670757,
 1511444246,
 1619206982,
 1164745625,
@@ -5499,20 +5498,20 @@
 1259670597,
 741275734,
 919871698,
-1416139114
+1416139114,
+2712877472
 ],
-"volume_mes_parcial": 2712877472
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22357",
-"negocios_24m": 7009966,
+"negocios_24m": 7454283,
 "pregao": "ALLOS",
 "tickers": [
 "ALOS3"
 ],
-"volume_24m": 59526868054,
+"volume_24m": 64830056047,
 "volume_mensal": [
-2222582718,
 2306795328,
 1883379480,
 1895730995,
@@ -5535,20 +5534,20 @@
 3701721579,
 2162066339,
 2332887611,
-3401190491
+3401190491,
+7525770711
 ],
-"volume_mes_parcial": 7525770712
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22470",
-"negocios_24m": 10872775,
+"negocios_24m": 11717168,
 "pregao": "MAGAZ LUIZA",
 "tickers": [
 "MGLU3"
 ],
-"volume_24m": 99046379650,
+"volume_24m": 106863333249,
 "volume_mensal": [
-4721936418,
 6145755535,
 4587289360,
 3284333866,
@@ -5571,20 +5570,20 @@
 2519525641,
 2041315276,
 2251242145,
-4140821061
+4140821061,
+12538890017
 ],
-"volume_mes_parcial": 12538890018
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22497",
-"negocios_24m": 1631312,
+"negocios_24m": 1712690,
 "pregao": "QUALICORP",
 "tickers": [
 "QUAL3"
 ],
-"volume_24m": 3354009072,
+"volume_24m": 3348894918,
 "volume_mensal": [
-278288823,
 287145535,
 208950684,
 121849522,
@@ -5607,20 +5606,20 @@
 139670217,
 97484517,
 94277061,
-127286812
+127286812,
+273174669
 ],
-"volume_mes_parcial": 273174670
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22519",
-"negocios_24m": 169553,
+"negocios_24m": 166256,
 "pregao": "TECHNOS",
 "tickers": [
 "TECN3"
 ],
-"volume_24m": 278655015,
+"volume_24m": 266369944,
 "volume_mensal": [
-22150419,
 12168273,
 15114557,
 19892609,
@@ -5643,20 +5642,20 @@
 8838581,
 14937229,
 15110581,
-8944646
+8944646,
+9865348
 ],
-"volume_mes_parcial": 9865348
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22608",
-"negocios_24m": 2852273,
+"negocios_24m": 3294573,
 "pregao": "PAGUE MENOS",
 "tickers": [
 "PGMN3"
 ],
-"volume_24m": 7415340598,
+"volume_24m": 8886887216,
 "volume_mensal": [
-25735243,
 84141769,
 49397050,
 99034712,
@@ -5679,22 +5678,22 @@
 414089808,
 331148818,
 339729892,
-579673665
+579673665,
+1497281861
 ],
-"volume_mes_parcial": 1497281861
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22616",
-"negocios_24m": 13106591,
+"negocios_24m": 13862554,
 "pregao": "BTGP BANCO",
 "tickers": [
 "BPAC11",
 "BPAC3",
 "BPAC5"
 ],
-"volume_24m": 210266272592,
+"volume_24m": 241824325175,
 "volume_mensal": [
-5153965754,
 6030148454,
 6260836683,
 5404415526,
@@ -5717,20 +5716,20 @@
 12650548531,
 9959831666,
 14150220938,
-13412795423
+13412795423,
+36712018337
 ],
-"volume_mes_parcial": 36712018337
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22675",
-"negocios_24m": 2015470,
+"negocios_24m": 2046235,
 "pregao": "HIDROVIAS",
 "tickers": [
 "HBSA3"
 ],
-"volume_24m": 4927764743,
+"volume_24m": 4896009904,
 "volume_mensal": [
-233543489,
 272665156,
 204742651,
 207293218,
@@ -5753,20 +5752,20 @@
 168259880,
 90450385,
 110210196,
-115726454
+115726454,
+201788650
 ],
-"volume_mes_parcial": 201788650
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "22780",
-"negocios_24m": 209609,
+"negocios_24m": 209924,
 "pregao": "UNICASA",
 "tickers": [
 "UCAS3"
 ],
-"volume_24m": 55894625,
+"volume_24m": 55711250,
 "volume_mensal": [
-1064568,
 1270013,
 4309110,
 4120881,
@@ -5789,20 +5788,20 @@
 613626,
 422010,
 311182,
-410000
+410000,
+881193
 ],
-"volume_mes_parcial": 881193
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "23159",
-"negocios_24m": 12029950,
+"negocios_24m": 12319842,
 "pregao": "BBSEGURIDADE",
 "tickers": [
 "BBSE3"
 ],
-"volume_24m": 104363648611,
+"volume_24m": 108466959117,
 "volume_mensal": [
-3524615910,
 2845934511,
 3969298598,
 3759043155,
@@ -5825,20 +5824,20 @@
 6306252175,
 4719016322,
 5645654618,
-5283738925
+5283738925,
+7627926416
 ],
-"volume_mes_parcial": 7627926416
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "23221",
-"negocios_24m": 1892533,
+"negocios_24m": 2022098,
 "pregao": "SER EDUCA",
 "tickers": [
 "SEER3"
 ],
-"volume_24m": 4395364376,
+"volume_24m": 4752088125,
 "volume_mensal": [
-54565055,
 119445984,
 44947210,
 55771469,
@@ -5861,20 +5860,20 @@
 159873306,
 181078989,
 348943088,
-312023020
+312023020,
+411288804
 ],
-"volume_mes_parcial": 411288804
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "23248",
-"negocios_24m": 3777788,
+"negocios_24m": 3899546,
 "pregao": "ANIMA",
 "tickers": [
 "ANIM3"
 ],
-"volume_24m": 12791187940,
+"volume_24m": 13641063795,
 "volume_mensal": [
-460887342,
 552861764,
 433907263,
 371773461,
@@ -5897,20 +5896,20 @@
 390269492,
 689845024,
 484051622,
-369172721
+369172721,
+1310763197
 ],
-"volume_mes_parcial": 1310763198
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "23264",
-"negocios_24m": 14230012,
+"negocios_24m": 14314049,
 "pregao": "AMBEV S/A",
 "tickers": [
 "ABEV3"
 ],
-"volume_24m": 207186697161,
+"volume_24m": 213881960386,
 "volume_mensal": [
-9284280381,
 7283043682,
 11164016949,
 8692054760,
@@ -5933,20 +5932,20 @@
 8175030485,
 10044424390,
 8823083646,
-8411856166
+8411856166,
+15979543606
 ],
-"volume_mes_parcial": 15979543606
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "23272",
-"negocios_24m": 1307863,
+"negocios_24m": 1426602,
 "pregao": "LOG COM PROP",
 "tickers": [
 "LOGG3"
 ],
-"volume_24m": 4794625587,
+"volume_24m": 5225598083,
 "volume_mensal": [
-189550561,
 188889689,
 167219280,
 248011854,
@@ -5969,20 +5968,20 @@
 645825065,
 210254480,
 254220030,
-285862845
+285862845,
+620523057
 ],
-"volume_mes_parcial": 620523058
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "23310",
-"negocios_24m": 4094313,
+"negocios_24m": 4129445,
 "pregao": "CVC BRASIL",
 "tickers": [
 "CVCB3"
 ],
-"volume_24m": 17128005466,
+"volume_24m": 17214005766,
 "volume_mensal": [
-563783273,
 1529812256,
 1199494832,
 797070411,
@@ -6005,20 +6004,20 @@
 294079887,
 357792719,
 510584133,
-479176576
+479176576,
+649783573
 ],
-"volume_mes_parcial": 649783573
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "23507",
-"negocios_24m": 29095,
+"negocios_24m": 29180,
 "pregao": "OUROFINO S/A",
 "tickers": [
 "OFSA3"
 ],
-"volume_24m": 94166247,
+"volume_24m": 93975377,
 "volume_mensal": [
-2811744,
 2312382,
 2880371,
 4075703,
@@ -6041,20 +6040,20 @@
 6434891,
 12858648,
 4332970,
-2461777
+2461777,
+2620874
 ],
-"volume_mes_parcial": 2620874
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "23574",
-"negocios_24m": 153530,
+"negocios_24m": 150547,
 "pregao": "IMC S/A",
 "tickers": [
 "MEAL3"
 ],
-"volume_24m": 197470363,
+"volume_24m": 191507020,
 "volume_mensal": [
-13615279,
 13005999,
 10868224,
 9904935,
@@ -6077,20 +6076,20 @@
 3619522,
 5912433,
 2727038,
-6521420
+6521420,
+7651936
 ],
-"volume_mes_parcial": 7651936
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "23590",
-"negocios_24m": 1066466,
+"negocios_24m": 1127791,
 "pregao": "WIZ CO",
 "tickers": [
 "WIZC3"
 ],
-"volume_24m": 1663998824,
+"volume_24m": 1854245411,
 "volume_mensal": [
-47030590,
 64971613,
 57161470,
 67152163,
@@ -6113,20 +6112,20 @@
 64893482,
 47986632,
 56372177,
-54951200
+54951200,
+237277177
 ],
-"volume_mes_parcial": 237277177
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "23795",
-"negocios_24m": 9035145,
+"negocios_24m": 9284102,
 "pregao": "CAIXA SEGURI",
 "tickers": [
 "CXSE3"
 ],
-"volume_24m": 39132936592,
+"volume_24m": 43024327149,
 "volume_mensal": [
-1135384639,
 1080964324,
 1901111024,
 1088256886,
@@ -6149,20 +6148,20 @@
 1928192281,
 3397698132,
 2659406890,
-2423733620
+2423733620,
+5026775196
 ],
-"volume_mes_parcial": 5026775196
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "23825",
-"negocios_24m": 4563966,
+"negocios_24m": 5236365,
 "pregao": "MOVIDA",
 "tickers": [
 "MOVI3"
 ],
-"volume_24m": 22301253569,
+"volume_24m": 27971582604,
 "volume_mensal": [
-618074583,
 996705081,
 651516745,
 433365678,
@@ -6185,20 +6184,20 @@
 887293530,
 810376114,
 801038497,
-1352209104
+1352209104,
+6288403618
 ],
-"volume_mes_parcial": 6288403618
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24058",
-"negocios_24m": 131448,
+"negocios_24m": 127099,
 "pregao": "ALLIAR",
 "tickers": [
 "AALR3"
 ],
-"volume_24m": 281545290,
+"volume_24m": 276842059,
 "volume_mensal": [
-10131600,
 4380447,
 4236064,
 5032778,
@@ -6221,20 +6220,20 @@
 3154975,
 4108367,
 2875398,
-4299771
+4299771,
+5428369
 ],
-"volume_mes_parcial": 5428370
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24112",
-"negocios_24m": 109000,
+"negocios_24m": 148785,
 "pregao": "AZUL",
 "tickers": [
 "AZUL3"
 ],
-"volume_24m": 446899358,
+"volume_24m": 539314767,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -6257,20 +6256,20 @@
 66058601,
 45642287,
 59333889,
-47373264
+47373264,
+92415409
 ],
-"volume_mes_parcial": 92415409
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24180",
-"negocios_24m": 2659428,
+"negocios_24m": 2685013,
 "pregao": "IRBBRASIL RE",
 "tickers": [
 "IRBR3"
 ],
-"volume_24m": 23560236081,
+"volume_24m": 24073627913,
 "volume_mensal": [
-1143521624,
 992318788,
 962297149,
 2235569458,
@@ -6293,20 +6292,20 @@
 413060349,
 533204632,
 704088913,
-1306085327
+1306085327,
+1656913456
 ],
-"volume_mes_parcial": 1656913456
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24228",
-"negocios_24m": 1623180,
+"negocios_24m": 1705286,
 "pregao": "CAMIL",
 "tickers": [
 "CAML3"
 ],
-"volume_24m": 3064552453,
+"volume_24m": 3215951663,
 "volume_mensal": [
-114081244,
 71846829,
 90442758,
 170731230,
@@ -6329,20 +6328,20 @@
 101052225,
 140705662,
 67421436,
-99584700
+99584700,
+265480454
 ],
-"volume_mes_parcial": 265480454
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24236",
-"negocios_24m": 956992,
+"negocios_24m": 1062380,
 "pregao": "PRINER",
 "tickers": [
 "PRNR3"
 ],
-"volume_24m": 3468248251,
+"volume_24m": 3829956970,
 "volume_mensal": [
-102047563,
 112641810,
 98285504,
 126531229,
@@ -6365,20 +6364,20 @@
 170118704,
 133783578,
 198105745,
-211968475
+211968475,
+463756282
 ],
-"volume_mes_parcial": 463756283
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24260",
-"negocios_24m": 7507365,
+"negocios_24m": 8179240,
 "pregao": "SMART FIT",
 "tickers": [
 "SMFT3"
 ],
-"volume_24m": 55726842222,
+"volume_24m": 62199521021,
 "volume_mensal": [
-929359136,
 1170989655,
 932268451,
 1017330709,
@@ -6401,20 +6400,20 @@
 2033047139,
 2189566629,
 3945383319,
-2786240107
+2786240107,
+7402037935
 ],
-"volume_mes_parcial": 7402037934
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "2429",
-"negocios_24m": 1758581,
+"negocios_24m": 1770656,
 "pregao": "IRANI",
 "tickers": [
 "RANI3"
 ],
-"volume_24m": 2833360681,
+"volume_24m": 2884410445,
 "volume_mensal": [
-181491591,
 111031805,
 81975016,
 109194886,
@@ -6437,20 +6436,20 @@
 113550594,
 81679381,
 101748836,
-107244064
+107244064,
+232541355
 ],
-"volume_mes_parcial": 232541355
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24295",
-"negocios_24m": 10959627,
+"negocios_24m": 11415401,
 "pregao": "VIBRA",
 "tickers": [
 "VBBR3"
 ],
-"volume_24m": 120844664205,
+"volume_24m": 129843853359,
 "volume_mensal": [
-3330354463,
 4044863690,
 4107861639,
 4290846373,
@@ -6473,21 +6472,21 @@
 5312414087,
 6540882637,
 6544837538,
-9144684125
+9144684125,
+12329543617
 ],
-"volume_mes_parcial": 12329543617
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "2437",
-"negocios_24m": 9205576,
+"negocios_24m": 10546251,
 "pregao": "AXIA ENERGIA",
 "tickers": [
 "AXIA3",
 "AXIA7"
 ],
-"volume_24m": 164485078374,
+"volume_24m": 195416989624,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -6510,20 +6509,20 @@
 13027496274,
 14278596861,
 15774921415,
-18981402571
+18981402571,
+30931911250
 ],
-"volume_mes_parcial": 30931911250
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24392",
-"negocios_24m": 12139265,
+"negocios_24m": 11742439,
 "pregao": "HAPVIDA",
 "tickers": [
 "HAPV3"
 ],
-"volume_24m": 84513274076,
+"volume_24m": 80745588781,
 "volume_mensal": [
-6074049920,
 5487870401,
 5307072350,
 3408228613,
@@ -6546,21 +6545,21 @@
 1304052238,
 1014609293,
 1743016476,
-1236659284
+1236659284,
+2306364625
 ],
-"volume_mes_parcial": 2306364625
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "2453",
-"negocios_24m": 13749996,
+"negocios_24m": 14064620,
 "pregao": "CEMIG",
 "tickers": [
 "CMIG3",
 "CMIG4"
 ],
-"volume_24m": 74612714336,
+"volume_24m": 77308372708,
 "volume_mensal": [
-2804644073,
 3697608428,
 3023259566,
 3120309415,
@@ -6583,20 +6582,20 @@
 3700400952,
 2731659606,
 3521664903,
-3772385456
+3772385456,
+5500302445
 ],
-"volume_mes_parcial": 5500302444
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24600",
-"negocios_24m": 1616263,
+"negocios_24m": 1677668,
 "pregao": "BANCO BMG",
 "tickers": [
 "BMGB4"
 ],
-"volume_24m": 1976118492,
+"volume_24m": 2154120236,
 "volume_mensal": [
-79364695,
 50716658,
 40646452,
 28919391,
@@ -6619,21 +6618,21 @@
 122927561,
 127845792,
 114206409,
-201703087
+201703087,
+257366439
 ],
-"volume_mes_parcial": 257366440
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "2461",
-"negocios_24m": 49825,
+"negocios_24m": 53466,
 "pregao": "CELESC",
 "tickers": [
 "CLSC3",
 "CLSC4"
 ],
-"volume_24m": 253706465,
+"volume_24m": 325331454,
 "volume_mensal": [
-4828860,
 4947030,
 6514752,
 7074339,
@@ -6656,20 +6655,20 @@
 13944115,
 11391970,
 18474942,
-18902194
+18902194,
+76453849
 ],
-"volume_mes_parcial": 76453849
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24627",
-"negocios_24m": 945613,
+"negocios_24m": 966628,
 "pregao": "BLAU",
 "tickers": [
 "BLAU3"
 ],
-"volume_24m": 1879802197,
+"volume_24m": 1899564122,
 "volume_mensal": [
-82978146,
 120951166,
 80586270,
 69657119,
@@ -6692,20 +6691,20 @@
 49321891,
 54169137,
 43230314,
-59928510
+59928510,
+102740071
 ],
-"volume_mes_parcial": 102740070
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24694",
-"negocios_24m": 2906377,
+"negocios_24m": 3047919,
 "pregao": "GRUPO SBF",
 "tickers": [
 "SBFG3"
 ],
-"volume_24m": 12425481383,
+"volume_24m": 13193772654,
 "volume_mensal": [
-709441162,
 541980033,
 662305409,
 530271938,
@@ -6728,20 +6727,20 @@
 545658109,
 357157004,
 422998949,
-598024614
+598024614,
+1477732433
 ],
-"volume_mes_parcial": 1477732433
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24716",
-"negocios_24m": 6833361,
+"negocios_24m": 7166742,
 "pregao": "VAMOS",
 "tickers": [
 "VAMO3"
 ],
-"volume_24m": 28078229102,
+"volume_24m": 30657997924,
 "volume_mensal": [
-1695552215,
 1101457946,
 1220890662,
 508298499,
@@ -6764,20 +6763,20 @@
 706792006,
 753127683,
 919318136,
-1385611551
+1385611551,
+4275321037
 ],
-"volume_mes_parcial": 4275321038
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24805",
-"negocios_24m": 6718007,
+"negocios_24m": 6933209,
 "pregao": "VIVARA S.A.",
 "tickers": [
 "VIVA3"
 ],
-"volume_24m": 42112177017,
+"volume_24m": 43032197217,
 "volume_mensal": [
-1590733928,
 1964966988,
 1310538014,
 1294111192,
@@ -6800,20 +6799,20 @@
 1358088885,
 1372553395,
 1404748409,
-1375244385
+1375244385,
+2510754128
 ],
-"volume_mes_parcial": 2510754129
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24821",
-"negocios_24m": 10205937,
+"negocios_24m": 10583187,
 "pregao": "REDE D OR",
 "tickers": [
 "RDOR3"
 ],
-"volume_24m": 110445180782,
+"volume_24m": 117644056468,
 "volume_mensal": [
-3313404319,
 3372135919,
 3508500880,
 2965941548,
@@ -6836,20 +6835,20 @@
 5170972177,
 3699749279,
 6218682092,
-5001980617
+5001980617,
+10512280005
 ],
-"volume_mes_parcial": 10512280005
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24848",
-"negocios_24m": 6584291,
+"negocios_24m": 7069889,
 "pregao": "CEA MODAS",
 "tickers": [
 "CEAB3"
 ],
-"volume_24m": 38667138839,
+"volume_24m": 41562911084,
 "volume_mensal": [
-891913660,
 1912655938,
 873040114,
 874064600,
@@ -6872,20 +6871,20 @@
 1700591645,
 1315957178,
 1932850767,
-1752010660
+1752010660,
+3787685905
 ],
-"volume_mes_parcial": 3787685905
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24902",
-"negocios_24m": 924488,
+"negocios_24m": 959742,
 "pregao": "MITRE REALTY",
 "tickers": [
 "MTRE3"
 ],
-"volume_24m": 1161320748,
+"volume_24m": 1217477756,
 "volume_mensal": [
-52027493,
 61483375,
 53202701,
 38807310,
@@ -6908,20 +6907,20 @@
 49416212,
 56279808,
 39219980,
-53395081
+53395081,
+108184501
 ],
-"volume_mes_parcial": 108184501
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24910",
-"negocios_24m": 3791213,
+"negocios_24m": 3819856,
 "pregao": "LWSA",
 "tickers": [
 "LWSA3"
 ],
-"volume_24m": 10780315395,
+"volume_24m": 10831984395,
 "volume_mensal": [
-553244467,
 655711361,
 499742510,
 456731960,
@@ -6944,20 +6943,20 @@
 336801049,
 219935236,
 301905525,
-279736518
+279736518,
+604913467
 ],
-"volume_mes_parcial": 604913468
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24929",
-"negocios_24m": 7882800,
+"negocios_24m": 8146705,
 "pregao": "TIM",
 "tickers": [
 "TIMS3"
 ],
-"volume_24m": 69529463991,
+"volume_24m": 71100602341,
 "volume_mensal": [
-2875161219,
 2653693565,
 2507586925,
 2560006541,
@@ -6980,20 +6979,20 @@
 2814056869,
 3516655545,
 3536650602,
-2734804118
+2734804118,
+4446299569
 ],
-"volume_mes_parcial": 4446299568
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24953",
-"negocios_24m": 326878,
+"negocios_24m": 336668,
 "pregao": "ESTAPAR",
 "tickers": [
 "ALPK3"
 ],
-"volume_24m": 283722585,
+"volume_24m": 297622792,
 "volume_mensal": [
-14535743,
 10432614,
 8922222,
 7235795,
@@ -7016,20 +7015,20 @@
 19626076,
 10940260,
 13620251,
-9458441
+9458441,
+28435950
 ],
-"volume_mes_parcial": 28435950
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "24961",
-"negocios_24m": 1219764,
+"negocios_24m": 1186870,
 "pregao": "AMBIPAR",
 "tickers": [
 "AMBP3"
 ],
-"volume_24m": 7094757120,
+"volume_24m": 6422384054,
 "volume_mensal": [
-692355639,
 575313018,
 1098124500,
 323239431,
@@ -7052,20 +7051,20 @@
 16800099,
 20029367,
 15468979,
-9570663
+9570663,
+19982573
 ],
-"volume_mes_parcial": 19982574
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25003",
-"negocios_24m": 3492958,
+"negocios_24m": 3889789,
 "pregao": "SIMPAR",
 "tickers": [
 "SIMH3"
 ],
-"volume_24m": 13994820248,
+"volume_24m": 16497091795,
 "volume_mensal": [
-480383592,
 436045822,
 460819788,
 343884905,
@@ -7088,20 +7087,20 @@
 446078385,
 394106643,
 370194616,
-727695125
+727695125,
+2982655139
 ],
-"volume_mes_parcial": 2982655139
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25038",
-"negocios_24m": 1576442,
+"negocios_24m": 1584787,
 "pregao": "QUERO-QUERO",
 "tickers": [
 "LJQQ3"
 ],
-"volume_24m": 3510326418,
+"volume_24m": 3510267932,
 "volume_mensal": [
-356612287,
 312541817,
 170309834,
 175755937,
@@ -7124,20 +7123,20 @@
 83772810,
 53250677,
 53236101,
-61266388
+61266388,
+356553801
 ],
-"volume_mes_parcial": 356553802
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25046",
-"negocios_24m": 278327,
+"negocios_24m": 268685,
 "pregao": "D1000VFARMA",
 "tickers": [
 "DMVF3"
 ],
-"volume_24m": 253397685,
+"volume_24m": 241665170,
 "volume_mensal": [
-18522692,
 17247024,
 10404192,
 10420241,
@@ -7160,20 +7159,20 @@
 11052161,
 4900929,
 5751816,
-5070134
+5070134,
+6790177
 ],
-"volume_mes_parcial": 6790177
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25062",
-"negocios_24m": 1395426,
+"negocios_24m": 1493984,
 "pregao": "LAVVI",
 "tickers": [
 "LAVV3"
 ],
-"volume_24m": 3773663483,
+"volume_24m": 4171636259,
 "volume_mensal": [
-112308621,
 136921420,
 100699909,
 140590279,
@@ -7196,20 +7195,20 @@
 119468941,
 113760504,
 128753398,
-139255162
+139255162,
+510281397
 ],
-"volume_mes_parcial": 510281396
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25070",
-"negocios_24m": 2783982,
+"negocios_24m": 2898161,
 "pregao": "PLANOEPLANO",
 "tickers": [
 "PLPL3"
 ],
-"volume_24m": 10876533829,
+"volume_24m": 11455410905,
 "volume_mensal": [
-215151896,
 325639740,
 229364931,
 297984308,
@@ -7232,20 +7231,20 @@
 568136702,
 354554768,
 260661542,
-409269174
+409269174,
+794028972
 ],
-"volume_mes_parcial": 794028972
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25100",
-"negocios_24m": 6068509,
+"negocios_24m": 6451788,
 "pregao": "CURY S/A",
 "tickers": [
 "CURY3"
 ],
-"volume_24m": 43203159358,
+"volume_24m": 46173871010,
 "volume_mensal": [
-1308219820,
 808269408,
 967495757,
 878048624,
@@ -7268,20 +7267,20 @@
 2879078896,
 2375566226,
 2611284941,
-2708611694
+2708611694,
+4278931472
 ],
-"volume_mes_parcial": 4278931472
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25119",
-"negocios_24m": 726035,
+"negocios_24m": 746354,
 "pregao": "MELNICK",
 "tickers": [
 "MELK3"
 ],
-"volume_24m": 930145977,
+"volume_24m": 956968072,
 "volume_mensal": [
-32650901,
 51817038,
 37245106,
 27522974,
@@ -7304,20 +7303,20 @@
 31070622,
 27107392,
 25574660,
-27280701
+27280701,
+59472996
 ],
-"volume_mes_parcial": 59472996
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25127",
-"negocios_24m": 423941,
+"negocios_24m": 609488,
 "pregao": "COMPASS",
 "tickers": [
 "PASS3"
 ],
-"volume_24m": 3503627351,
+"volume_24m": 4637428089,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -7340,20 +7339,20 @@
 737249436,
 406351521,
 801970522,
-469357620
+469357620,
+1133800738
 ],
-"volume_mes_parcial": 1133800738
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25160",
-"negocios_24m": 443871,
+"negocios_24m": 399157,
 "pregao": "SEQUOIA LOG",
 "tickers": [
 "SEQL3"
 ],
-"volume_24m": 588092298,
+"volume_24m": 418743385,
 "volume_mensal": [
-173008511,
 73009675,
 47428738,
 38710237,
@@ -7376,20 +7375,20 @@
 3418883,
 1077348,
 1027955,
-3557151
+3557151,
+3659598
 ],
-"volume_mes_parcial": 3659598
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25186",
-"negocios_24m": 3971883,
+"negocios_24m": 4155687,
 "pregao": "GRUPO MATEUS",
 "tickers": [
 "GMAT3"
 ],
-"volume_24m": 16602518625,
+"volume_24m": 17216271501,
 "volume_mensal": [
-577313811,
 546400854,
 770820975,
 569903701,
@@ -7412,20 +7411,20 @@
 435952979,
 400140450,
 601266146,
-410346888
+410346888,
+1191066687
 ],
-"volume_mes_parcial": 1191066687
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25208",
-"negocios_24m": 1161719,
+"negocios_24m": 1304777,
 "pregao": "TRACK FIELD",
 "tickers": [
 "TFCO4"
 ],
-"volume_24m": 4251182801,
+"volume_24m": 4807631209,
 "volume_mensal": [
-45274719,
 153660654,
 99656846,
 78260883,
@@ -7448,20 +7447,20 @@
 211989996,
 150891579,
 176677099,
-212955966
+212955966,
+601723127
 ],
-"volume_mes_parcial": 601723126
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25232",
-"negocios_24m": 1893840,
+"negocios_24m": 1927345,
 "pregao": "MELIUZ",
 "tickers": [
 "CASH3"
 ],
-"volume_24m": 5782704277,
+"volume_24m": 5904066059,
 "volume_mensal": [
-70937292,
 84088782,
 71572990,
 41959836,
@@ -7484,20 +7483,20 @@
 90082105,
 208023521,
 228968798,
-153784240
+153784240,
+192299074
 ],
-"volume_mes_parcial": 192299073
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25259",
-"negocios_24m": 336710,
+"negocios_24m": 331773,
 "pregao": "ENJOEI",
 "tickers": [
 "ENJU3"
 ],
-"volume_24m": 421075040,
+"volume_24m": 433004075,
 "volume_mensal": [
-17480259,
 14081597,
 29909298,
 13703175,
@@ -7520,20 +7519,20 @@
 19210095,
 21937022,
 15055665,
-9686654
+9686654,
+29409294
 ],
-"volume_mes_parcial": 29409294
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25275",
-"negocios_24m": 14490,
+"negocios_24m": 14405,
 "pregao": "ALPHAVILLE",
 "tickers": [
 "AVLL3"
 ],
-"volume_24m": 9835108,
+"volume_24m": 9196013,
 "volume_mensal": [
-741767,
 604688,
 217119,
 138755,
@@ -7556,20 +7555,20 @@
 74756,
 94715,
 94532,
-79543
+79543,
+102672
 ],
-"volume_mes_parcial": 102673
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25283",
-"negocios_24m": 454640,
+"negocios_24m": 443959,
 "pregao": "AERIS",
 "tickers": [
 "AERI3"
 ],
-"volume_24m": 722269347,
+"volume_24m": 702576209,
 "volume_mensal": [
-27236767,
 37391070,
 177359760,
 213059075,
@@ -7592,20 +7591,20 @@
 2304627,
 1594263,
 2608325,
-1841885
+1841885,
+7543629
 ],
-"volume_mes_parcial": 7543628
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25291",
-"negocios_24m": 9383468,
+"negocios_24m": 9393172,
 "pregao": "BRAVA",
 "tickers": [
 "BRAV3"
 ],
-"volume_24m": 83144157405,
+"volume_24m": 82402361973,
 "volume_mensal": [
-2690242376,
 3221511174,
 4680678432,
 5228174473,
@@ -7628,20 +7627,20 @@
 2458271806,
 3367585668,
 2467126326,
-1325876977
+1325876977,
+1948446944
 ],
-"volume_mes_parcial": 1948446945
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25330",
-"negocios_24m": 665107,
+"negocios_24m": 760579,
 "pregao": "ALLIED",
 "tickers": [
 "ALLD3"
 ],
-"volume_24m": 982469417,
+"volume_24m": 1363100000,
 "volume_mensal": [
-10137996,
 17415975,
 19071808,
 7253489,
@@ -7664,20 +7663,20 @@
 39409397,
 37141734,
 51668242,
-62470296
+62470296,
+390768579
 ],
-"volume_mes_parcial": 390768579
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25372",
-"negocios_24m": 10606186,
+"negocios_24m": 11004555,
 "pregao": "ASSAI",
 "tickers": [
 "ASAI3"
 ],
-"volume_24m": 68839587751,
+"volume_24m": 71647009572,
 "volume_mensal": [
-3702113273,
 4853217409,
 2939186811,
 2414882484,
@@ -7700,20 +7699,20 @@
 2072308537,
 1552316405,
 2013450074,
-2655665723
+2655665723,
+6509535094
 ],
-"volume_mes_parcial": 6509535094
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25402",
-"negocios_24m": 420278,
+"negocios_24m": 441627,
 "pregao": "HBR REALTY",
 "tickers": [
 "HBRE3"
 ],
-"volume_24m": 836572696,
+"volume_24m": 856555266,
 "volume_mensal": [
-52657130,
 62466434,
 44935320,
 23700607,
@@ -7736,20 +7735,20 @@
 10224717,
 41810314,
 34121212,
-23430598
+23430598,
+72639700
 ],
-"volume_mes_parcial": 72639700
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25445",
-"negocios_24m": 224708,
+"negocios_24m": 237195,
 "pregao": "ESPACOLASER",
 "tickers": [
 "ESPA3"
 ],
-"volume_24m": 308991636,
+"volume_24m": 346907949,
 "volume_mensal": [
-5649617,
 7097661,
 6406119,
 5752003,
@@ -7772,20 +7771,20 @@
 13321944,
 8473261,
 14699394,
-6907281
+6907281,
+43565930
 ],
-"volume_mes_parcial": 43565930
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25453",
-"negocios_24m": 3225674,
+"negocios_24m": 3314680,
 "pregao": "INTELBRAS",
 "tickers": [
 "INTB3"
 ],
-"volume_24m": 13767427929,
+"volume_24m": 14013601614,
 "volume_mensal": [
-556501472,
 469633381,
 383723194,
 471859350,
@@ -7808,20 +7807,20 @@
 622848559,
 554128970,
 368469779,
-339482960
+339482960,
+802675157
 ],
-"volume_mes_parcial": 802675157
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25461",
-"negocios_24m": 94429,
+"negocios_24m": 95517,
 "pregao": "GRUPO TOKY",
 "tickers": [
 "TOKY3"
 ],
-"volume_24m": 137753796,
+"volume_24m": 138924251,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -7844,20 +7843,20 @@
 2042359,
 2402634,
 1331012,
-4950294
+4950294,
+1170455
 ],
-"volume_mes_parcial": 1170456
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25496",
-"negocios_24m": 981337,
+"negocios_24m": 979114,
 "pregao": "JALLESMACHAD",
 "tickers": [
 "JALL3"
 ],
-"volume_24m": 1570586593,
+"volume_24m": 1561372114,
 "volume_mensal": [
-93786457,
 127610888,
 56044476,
 62506016,
@@ -7880,20 +7879,20 @@
 62318625,
 58796193,
 52209901,
-55837815
+55837815,
+84571978
 ],
-"volume_mes_parcial": 84571979
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25500",
-"negocios_24m": 1064722,
+"negocios_24m": 1179479,
 "pregao": "BEMOBI TECH",
 "tickers": [
 "BMOB3"
 ],
-"volume_24m": 4312899012,
+"volume_24m": 4939903232,
 "volume_mensal": [
-82870833,
 71131130,
 75785890,
 65733918,
@@ -7916,20 +7915,20 @@
 192187193,
 134641894,
 214705694,
-450434370
+450434370,
+709875053
 ],
-"volume_mes_parcial": 709875054
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25518",
-"negocios_24m": 74649,
+"negocios_24m": 75097,
 "pregao": "WESTWING",
 "tickers": [
 "WEST3"
 ],
-"volume_24m": 67069300,
+"volume_24m": 68572474,
 "volume_mensal": [
-1096588,
 899307,
 889964,
 439669,
@@ -7952,20 +7951,20 @@
 4697872,
 1198228,
 640004,
-1129663
+1129663,
+2599762
 ],
-"volume_mes_parcial": 2599762
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25526",
-"negocios_24m": 706792,
+"negocios_24m": 723462,
 "pregao": "CRUZEIRO EDU",
 "tickers": [
 "CSED3"
 ],
-"volume_24m": 1256037756,
+"volume_24m": 1293059558,
 "volume_mensal": [
-32467238,
 47094494,
 44379777,
 43258370,
@@ -7988,20 +7987,20 @@
 48757872,
 18919378,
 32863856,
-43614814
+43614814,
+69489040
 ],
-"volume_mes_parcial": 69489039
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25534",
-"negocios_24m": 974843,
+"negocios_24m": 1103843,
 "pregao": "OCEANPACT",
 "tickers": [
 "OPCT3"
 ],
-"volume_24m": 2308119417,
+"volume_24m": 2915734125,
 "volume_mensal": [
-66144524,
 83596709,
 64825570,
 92813866,
@@ -8024,20 +8023,20 @@
 134995993,
 151291877,
 156433510,
-337835006
+337835006,
+673759232
 ],
-"volume_mes_parcial": 673759233
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25550",
-"negocios_24m": 1866858,
+"negocios_24m": 2176387,
 "pregao": "ORIZON",
 "tickers": [
 "ORVR3"
 ],
-"volume_24m": 17470280539,
+"volume_24m": 19138338800,
 "volume_mensal": [
-489730501,
 543523885,
 441605204,
 322234546,
@@ -8060,20 +8059,20 @@
 1236968719,
 1039224923,
 860050773,
-1024010396
+1024010396,
+2157788762
 ],
-"volume_mes_parcial": 2157788762
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25585",
-"negocios_24m": 5980897,
+"negocios_24m": 6076611,
 "pregao": "CSNMINERACAO",
 "tickers": [
 "CMIN3"
 ],
-"volume_24m": 20518943468,
+"volume_24m": 20319924546,
 "volume_mensal": [
-1156100168,
 973063295,
 808594279,
 941361387,
@@ -8096,20 +8095,20 @@
 878429123,
 1286300513,
 775821047,
-1177678607
+1177678607,
+957081246
 ],
-"volume_mes_parcial": 957081246
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25658",
-"negocios_24m": 267497,
+"negocios_24m": 258733,
 "pregao": "AGROGALAXY",
 "tickers": [
 "AGXY3"
 ],
-"volume_24m": 121913328,
+"volume_24m": 118137473,
 "volume_mensal": [
-4161221,
 18124274,
 20966786,
 15055564,
@@ -8132,20 +8131,20 @@
 835460,
 1516624,
 1375397,
-2552246
+2552246,
+385366
 ],
-"volume_mes_parcial": 385367
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25682",
-"negocios_24m": 802544,
+"negocios_24m": 765186,
 "pregao": "VIVEO",
 "tickers": [
 "VVEO3"
 ],
-"volume_24m": 1225783740,
+"volume_24m": 1177505114,
 "volume_mensal": [
-105202252,
 156071689,
 73793763,
 103262630,
@@ -8168,20 +8167,20 @@
 67378855,
 30184991,
 11017064,
-12389004
+12389004,
+56923626
 ],
-"volume_mes_parcial": 56923626
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25690",
-"negocios_24m": 603075,
+"negocios_24m": 608690,
 "pregao": "MATER DEI",
 "tickers": [
 "MATD3"
 ],
-"volume_24m": 718849511,
+"volume_24m": 715950783,
 "volume_mensal": [
-50513029,
 56306910,
 70509854,
 54491868,
@@ -8204,20 +8203,20 @@
 20876262,
 24389066,
 16563896,
-23933810
+23933810,
+47614301
 ],
-"volume_mes_parcial": 47614300
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25704",
-"negocios_24m": 1552372,
+"negocios_24m": 1562760,
 "pregao": "BOA SAFRA",
 "tickers": [
 "SOJA3"
 ],
-"volume_24m": 3313339906,
+"volume_24m": 3305917575,
 "volume_mensal": [
-168722042,
 164638468,
 120710777,
 91453232,
@@ -8240,20 +8239,20 @@
 117493608,
 82366390,
 96016739,
-133316004
+133316004,
+161299711
 ],
-"volume_mes_parcial": 161299711
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25712",
-"negocios_24m": 4246855,
+"negocios_24m": 4626165,
 "pregao": "GPS",
 "tickers": [
 "GGPS3"
 ],
-"volume_24m": 22753855657,
+"volume_24m": 25373922668,
 "volume_mensal": [
-810334106,
 731490536,
 687981577,
 905892390,
@@ -8276,20 +8275,20 @@
 766053415,
 888902396,
 860265357,
-905373771
+905373771,
+3430401117
 ],
-"volume_mes_parcial": 3430401118
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25747",
-"negocios_24m": 588050,
+"negocios_24m": 532549,
 "pregao": "INFRACOMM",
 "tickers": [
 "IFCM3"
 ],
-"volume_24m": 404733078,
+"volume_24m": 374260875,
 "volume_mensal": [
-34184112,
 15134919,
 20780647,
 11621512,
@@ -8312,20 +8311,20 @@
 2984526,
 2310354,
 5513902,
-2774045
+2774045,
+3711909
 ],
-"volume_mes_parcial": 3711909
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25763",
-"negocios_24m": 484278,
+"negocios_24m": 472357,
 "pregao": "VITTIA",
 "tickers": [
 "VITT3"
 ],
-"volume_24m": 572382951,
+"volume_24m": 551284565,
 "volume_mensal": [
-48298754,
 20887859,
 33036951,
 56769208,
@@ -8348,20 +8347,20 @@
 20764349,
 14480347,
 16645622,
-13447793
+13447793,
+27200368
 ],
-"volume_mes_parcial": 27200367
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25780",
-"negocios_24m": 4676499,
+"negocios_24m": 4688050,
 "pregao": "PETRORECSA",
 "tickers": [
 "RECV3"
 ],
-"volume_24m": 19110783052,
+"volume_24m": 18943283662,
 "volume_mensal": [
-777959433,
 860168868,
 804403618,
 645155345,
@@ -8384,20 +8383,20 @@
 546539072,
 498060220,
 414607668,
-548524181
+548524181,
+610460043
 ],
-"volume_mes_parcial": 610460043
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25836",
-"negocios_24m": 77236,
+"negocios_24m": 75838,
 "pregao": "DOTZ SA",
 "tickers": [
 "DOTZ3"
 ],
-"volume_24m": 91457305,
+"volume_24m": 93718204,
 "volume_mensal": [
-5754793,
 2033856,
 6324634,
 1248992,
@@ -8420,20 +8419,20 @@
 4248322,
 8025519,
 23420510,
-13378334
+13378334,
+8015692
 ],
-"volume_mes_parcial": 8015693
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25860",
-"negocios_24m": 1426752,
+"negocios_24m": 1544731,
 "pregao": "BR PARTNERS",
 "tickers": [
 "BRBI11"
 ],
-"volume_24m": 2450778878,
+"volume_24m": 2740553402,
 "volume_mensal": [
-88670054,
 121312153,
 134543543,
 123797923,
@@ -8456,20 +8455,20 @@
 107819695,
 72251249,
 126899169,
-94764374
+94764374,
+378444578
 ],
-"volume_mes_parcial": 378444578
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25887",
-"negocios_24m": 1482,
+"negocios_24m": 1738,
 "pregao": "ARANDU",
 "tickers": [
 "ARND3"
 ],
-"volume_24m": 242884,
+"volume_24m": 575300,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -8492,20 +8491,20 @@
 20070,
 33726,
 8987,
-38863
+38863,
+332416
 ],
-"volume_mes_parcial": 332416
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25895",
-"negocios_24m": 14950,
+"negocios_24m": 16395,
 "pregao": "WDC NETWORKS",
 "tickers": [
 "WDCN3"
 ],
-"volume_24m": 14284612,
+"volume_24m": 16064632,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -8528,20 +8527,20 @@
 919912,
 1388205,
 694709,
-1224184
+1224184,
+1780020
 ],
-"volume_mes_parcial": 1780020
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25917",
-"negocios_24m": 6569183,
+"negocios_24m": 6482535,
 "pregao": "RAIZEN",
 "tickers": [
 "RAIZ4"
 ],
-"volume_24m": 12515655289,
+"volume_24m": 11935218408,
 "volume_mensal": [
-789947905,
 925993303,
 618124770,
 759956620,
@@ -8564,20 +8563,20 @@
 152457977,
 115286815,
 75706576,
-90955384
+90955384,
+209511024
 ],
-"volume_mes_parcial": 209511024
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25950",
-"negocios_24m": 3329440,
+"negocios_24m": 3487922,
 "pregao": "3TENTOS",
 "tickers": [
 "TTEN3"
 ],
-"volume_24m": 9957615564,
+"volume_24m": 10586859513,
 "volume_mensal": [
-201790491,
 404371975,
 346060433,
 336973952,
@@ -8600,20 +8599,20 @@
 395482605,
 505048902,
 497470443,
-432397813
+432397813,
+831034440
 ],
-"volume_mes_parcial": 831034440
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "25984",
-"negocios_24m": 3235364,
+"negocios_24m": 3195958,
 "pregao": "CBA",
 "tickers": [
 "CBAV3"
 ],
-"volume_24m": 15670647867,
+"volume_24m": 16474431979,
 "volume_mensal": [
-527703574,
 496711123,
 420274261,
 419960061,
@@ -8636,20 +8635,20 @@
 545764610,
 516709058,
 636541957,
-493219358
+493219358,
+1331487686
 ],
-"volume_mes_parcial": 1331487686
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "26000",
-"negocios_24m": 97212,
+"negocios_24m": 96740,
 "pregao": "TERRASANTAPA",
 "tickers": [
 "LAND3"
 ],
-"volume_24m": 315010536,
+"volume_24m": 311524542,
 "volume_mensal": [
-15426543,
 8131093,
 12419308,
 10732232,
@@ -8672,20 +8671,20 @@
 14049692,
 40363930,
 8619879,
-7395320
+7395320,
+11940549
 ],
-"volume_mes_parcial": 11940549
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "26026",
-"negocios_24m": 1034339,
+"negocios_24m": 1067709,
 "pregao": "DESKTOP",
 "tickers": [
 "DESK3"
 ],
-"volume_24m": 4225965301,
+"volume_24m": 4507323286,
 "volume_mensal": [
-39516554,
 37122516,
 37217698,
 51047552,
@@ -8708,20 +8707,20 @@
 152015235,
 137707224,
 215131655,
-262402242
+262402242,
+320874539
 ],
-"volume_mes_parcial": 320874539
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "26034",
-"negocios_24m": 997850,
+"negocios_24m": 1063691,
 "pregao": "MULTILASER",
 "tickers": [
 "MLAS3"
 ],
-"volume_24m": 1087363853,
+"volume_24m": 1163146090,
 "volume_mensal": [
-65361797,
 79841984,
 52016556,
 47263886,
@@ -8744,20 +8743,20 @@
 45104085,
 47711880,
 85463456,
-92594228
+92594228,
+141144034
 ],
-"volume_mes_parcial": 141144034
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "26050",
-"negocios_24m": 994850,
+"negocios_24m": 1067813,
 "pregao": "UNIFIQUE",
 "tickers": [
 "FIQE3"
 ],
-"volume_24m": 1373740237,
+"volume_24m": 1689079991,
 "volume_mensal": [
-29090592,
 30090354,
 28844082,
 26961049,
@@ -8780,20 +8779,20 @@
 76474804,
 105949451,
 121194503,
-69196626
+69196626,
+344430346
 ],
-"volume_mes_parcial": 344430345
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "26069",
-"negocios_24m": 1365792,
+"negocios_24m": 1416666,
 "pregao": "ARMAC",
 "tickers": [
 "ARML3"
 ],
-"volume_24m": 2661246656,
+"volume_24m": 2717867882,
 "volume_mensal": [
-168617742,
 138893221,
 135233561,
 93607257,
@@ -8816,20 +8815,20 @@
 56597018,
 54028528,
 79856872,
-108706253
+108706253,
+225238968
 ],
-"volume_mes_parcial": 225238968
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "26077",
-"negocios_24m": 2089,
+"negocios_24m": 3148,
 "pregao": "ECONOMATICA",
 "tickers": [
 "ECOM3"
 ],
-"volume_24m": 1023718,
+"volume_24m": 1581617,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -8852,20 +8851,20 @@
 0,
 189019,
 287145,
-547554
+547554,
+557899
 ],
-"volume_mes_parcial": 557899
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "26123",
-"negocios_24m": 2349246,
+"negocios_24m": 2322937,
 "pregao": "ONCOCLINICAS",
 "tickers": [
 "ONCO3"
 ],
-"volume_24m": 8499107443,
+"volume_24m": 8370084139,
 "volume_mensal": [
-277802000,
 653614950,
 525300945,
 391137621,
@@ -8888,20 +8887,20 @@
 191671632,
 266288077,
 975447863,
-325764670
+325764670,
+148778696
 ],
-"volume_mes_parcial": 148778696
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "26620",
-"negocios_24m": 5513164,
+"negocios_24m": 5678159,
 "pregao": "AUREN",
 "tickers": [
 "AURE3"
 ],
-"volume_24m": 23835152934,
+"volume_24m": 24557005219,
 "volume_mensal": [
-1399916115,
 1191839073,
 1078557542,
 1154059729,
@@ -8924,20 +8923,20 @@
 644747100,
 728795162,
 763377688,
-815114767
+815114767,
+2121768400
 ],
-"volume_mes_parcial": 2121768400
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "27057",
-"negocios_24m": 994763,
+"negocios_24m": 1184620,
 "pregao": "VITRUEDUCA",
 "tickers": [
 "VTRU3"
 ],
-"volume_24m": 3036123665,
+"volume_24m": 3652574194,
 "volume_mensal": [
-36049365,
 28147208,
 15565608,
 22425950,
@@ -8960,9 +8959,10 @@
 188262082,
 128444181,
 178863620,
-235531132
+235531132,
+652499894
 ],
-"volume_mes_parcial": 652499894
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "27219",
@@ -8990,26 +8990,25 @@
 0,
 0,
 0,
-0,
 4816840,
+0,
 0,
 0,
 0,
 0,
 0
 ],
-"volume_mes_parcial": 0
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "27570",
-"negocios_24m": 10297,
+"negocios_24m": 10663,
 "pregao": "RDVC CITY",
 "tickers": [
 "CCTY3"
 ],
-"volume_24m": 3871972,
+"volume_24m": 3904852,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -9032,20 +9031,20 @@
 5275,
 4846,
 18457,
-17542
+17542,
+32880
 ],
-"volume_mes_parcial": 32879
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "27626",
-"negocios_24m": 545505,
+"negocios_24m": 558819,
 "pregao": "AZT ENERGIA",
 "tickers": [
 "AZTE3"
 ],
-"volume_24m": 824709769,
+"volume_24m": 843637967,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -9068,20 +9067,20 @@
 11268276,
 26253336,
 52877375,
-39828860
+39828860,
+18928198
 ],
-"volume_mes_parcial": 18928198
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "27634",
-"negocios_24m": 239,
+"negocios_24m": 257,
 "pregao": "B100 S.A.",
 "tickers": [
 "B1003"
 ],
-"volume_24m": 295048,
+"volume_24m": 366300,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -9104,20 +9103,20 @@
 1979,
 35317,
 33221,
-181034
+181034,
+71252
 ],
-"volume_mes_parcial": 71252
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "27650",
-"negocios_24m": 5272,
+"negocios_24m": 5548,
 "pregao": "REVEE",
 "tickers": [
 "RVEE3"
 ],
-"volume_24m": 8455431,
+"volume_24m": 8481334,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -9140,20 +9139,20 @@
 17994,
 12425,
 16708,
-28791
+28791,
+25903
 ],
-"volume_mes_parcial": 25903
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "27677",
-"negocios_24m": 28566,
+"negocios_24m": 29225,
 "pregao": "ATOM EDUC",
 "tickers": [
 "ATED3"
 ],
-"volume_24m": 25944604,
+"volume_24m": 26329861,
 "volume_mensal": [
-0,
 0,
 6875683,
 693253,
@@ -9176,20 +9175,20 @@
 1675496,
 240993,
 204318,
-273867
+273867,
+385257
 ],
-"volume_mes_parcial": 385257
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "27693",
-"negocios_24m": 446103,
+"negocios_24m": 475833,
 "pregao": "BRISANET",
 "tickers": [
 "BRST3"
 ],
-"volume_24m": 341777242,
+"volume_24m": 376359459,
 "volume_mensal": [
-0,
 0,
 11886934,
 10841411,
@@ -9212,20 +9211,20 @@
 18783881,
 13418416,
 12515169,
-12201537
+12201537,
+34582217
 ],
-"volume_mes_parcial": 34582217
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "27707",
-"negocios_24m": 1235322,
+"negocios_24m": 1252874,
 "pregao": "AUTOMOB",
 "tickers": [
 "AMOB3"
 ],
-"volume_24m": 1032780204,
+"volume_24m": 1093659670,
 "volume_mensal": [
-0,
 0,
 327652698,
 132474633,
@@ -9248,20 +9247,20 @@
 12236238,
 9505605,
 7758591,
-6795737
+6795737,
+60879466
 ],
-"volume_mes_parcial": 60879466
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "27766",
-"negocios_24m": 844303,
+"negocios_24m": 1008944,
 "pregao": "PETZCOBASI",
 "tickers": [
 "AUAU3"
 ],
-"volume_24m": 3187362878,
+"volume_24m": 3839131053,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -9284,20 +9283,20 @@
 170592302,
 179172131,
 314974372,
-381607978
+381607978,
+651768175
 ],
-"volume_mes_parcial": 651768175
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "27910",
-"negocios_24m": 483095,
+"negocios_24m": 547222,
 "pregao": "ORANJEBTC",
 "tickers": [
 "OBTC3"
 ],
-"volume_24m": 1010281926,
+"volume_24m": 1212164070,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -9320,20 +9319,20 @@
 44589605,
 26229890,
 83140233,
-291486835
+291486835,
+201882144
 ],
-"volume_mes_parcial": 201882144
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "3050",
-"negocios_24m": 1860,
+"negocios_24m": 1897,
 "pregao": "AMPLA ENERG",
 "tickers": [
 "CBEE3"
 ],
-"volume_24m": 1160289,
+"volume_24m": 1197800,
 "volume_mensal": [
-17775,
 8128,
 14892,
 3328,
@@ -9356,21 +9355,21 @@
 350562,
 45833,
 39005,
-12520
+12520,
+55286
 ],
-"volume_mes_parcial": 55286
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "3069",
-"negocios_24m": 1226679,
+"negocios_24m": 1281469,
 "pregao": "FERBASA",
 "tickers": [
 "FESA3",
 "FESA4"
 ],
-"volume_24m": 2390262885,
+"volume_24m": 2518516382,
 "volume_mensal": [
-91017780,
 72496095,
 89441204,
 62741777,
@@ -9393,21 +9392,21 @@
 106679400,
 76339756,
 194470499,
-145885792
+145885792,
+219271277
 ],
-"volume_mes_parcial": 219271278
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "3077",
-"negocios_24m": 3869,
+"negocios_24m": 3850,
 "pregao": "CEDRO",
 "tickers": [
 "CEDO3",
 "CEDO4"
 ],
-"volume_24m": 11083302,
+"volume_24m": 10561811,
 "volume_mensal": [
-708827,
 530780,
 878177,
 186343,
@@ -9430,20 +9429,20 @@
 574978,
 73533,
 171036,
-142414
+142414,
+187336
 ],
-"volume_mes_parcial": 187337
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "3190",
-"negocios_24m": 29867,
+"negocios_24m": 28876,
 "pregao": "REDE ENERGIA",
 "tickers": [
 "REDE3"
 ],
-"volume_24m": 7613338,
+"volume_24m": 7421448,
 "volume_mensal": [
-393342,
 378555,
 311329,
 210774,
@@ -9466,20 +9465,20 @@
 110499,
 184804,
 180430,
-241984
+241984,
+201452
 ],
-"volume_mes_parcial": 201452
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "3298",
-"negocios_24m": 1239,
+"negocios_24m": 1185,
 "pregao": "HABITASUL",
 "tickers": [
 "HBTS5"
 ],
-"volume_24m": 1873911,
+"volume_24m": 1672428,
 "volume_mensal": [
-252785,
 69290,
 86207,
 74907,
@@ -9502,21 +9501,21 @@
 57068,
 5747,
 53786,
-12695
+12695,
+51302
 ],
-"volume_mes_parcial": 51302
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "3654",
-"negocios_24m": 243,
+"negocios_24m": 240,
 "pregao": "MELHOR SP",
 "tickers": [
 "MSPA3",
 "MSPA4"
 ],
-"volume_24m": 893915,
+"volume_24m": 895998,
 "volume_mensal": [
-1448,
 0,
 19731,
 0,
@@ -9539,21 +9538,21 @@
 39553,
 55643,
 29625,
-21774
+21774,
+3531
 ],
-"volume_mes_parcial": 3531
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "3980",
-"negocios_24m": 11059983,
+"negocios_24m": 11195251,
 "pregao": "GERDAU",
 "tickers": [
 "GGBR3",
 "GGBR4"
 ],
-"volume_24m": 108285712046,
+"volume_24m": 110229890337,
 "volume_mensal": [
-5234974956,
 6120348152,
 5392135337,
 4629818278,
@@ -9576,20 +9575,20 @@
 5303695944,
 4314633602,
 5839253619,
-4561327591
+4561327591,
+7179153247
 ],
-"volume_mes_parcial": 7179153247
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "4030",
-"negocios_24m": 7783500,
+"negocios_24m": 8139736,
 "pregao": "SID NACIONAL",
 "tickers": [
 "CSNA3"
 ],
-"volume_24m": 47626747888,
+"volume_24m": 48412937828,
 "volume_mensal": [
-2087405099,
 2284833924,
 1967411773,
 2356213848,
@@ -9612,21 +9611,21 @@
 2398843542,
 1394793496,
 1638639132,
-3464334271
+3464334271,
+2873595039
 ],
-"volume_mes_parcial": 2873595039
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "4081",
-"negocios_24m": 11481,
+"negocios_24m": 7045,
 "pregao": "SANTANENSE",
 "tickers": [
 "CTSA3",
 "CTSA4"
 ],
-"volume_24m": 2061048,
+"volume_24m": 1425473,
 "volume_mensal": [
-635575,
 86898,
 123904,
 67249,
@@ -9649,21 +9648,21 @@
 0,
 0,
 0,
+0,
 0
 ],
-"volume_mes_parcial": 0
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "4146",
-"negocios_24m": 2577,
+"negocios_24m": 2704,
 "pregao": "KARSTEN",
 "tickers": [
 "CTKA3",
 "CTKA4"
 ],
-"volume_24m": 12773126,
+"volume_24m": 13362542,
 "volume_mensal": [
-378116,
 310927,
 69350,
 421509,
@@ -9686,20 +9685,20 @@
 433192,
 705805,
 328684,
-276710
+276710,
+967532
 ],
-"volume_mes_parcial": 967531
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "4170",
-"negocios_24m": 25115826,
+"negocios_24m": 25544360,
 "pregao": "VALE",
 "tickers": [
 "VALE3"
 ],
-"volume_24m": 749114503852,
+"volume_24m": 766587037314,
 "volume_mensal": [
-31466048672,
 24350710930,
 25773103573,
 40710574413,
@@ -9722,21 +9721,21 @@
 30619080468,
 26369206256,
 31649386483,
-33687949935
+33687949935,
+48938582134
 ],
-"volume_mes_parcial": 48938582135
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "4537",
-"negocios_24m": 92716,
+"negocios_24m": 94263,
 "pregao": "GRAZZIOTIN",
 "tickers": [
 "CGRA3",
 "CGRA4"
 ],
-"volume_24m": 178991486,
+"volume_24m": 181659554,
 "volume_mensal": [
-3129428,
 4420592,
 8744514,
 15436589,
@@ -9759,20 +9758,20 @@
 3138038,
 2899951,
 3988364,
-2784349
+2784349,
+5797496
 ],
-"volume_mes_parcial": 5797495
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "4669",
-"negocios_24m": 755657,
+"negocios_24m": 997193,
 "pregao": "RIACHUELO",
 "tickers": [
 "RIAA3"
 ],
-"volume_24m": 2363018065,
+"volume_24m": 3121074286,
 "volume_mensal": [
-0,
 0,
 0,
 0,
@@ -9795,20 +9794,20 @@
 230527991,
 222552725,
 195059565,
-285523498
+285523498,
+758056221
 ],
-"volume_mes_parcial": 758056220
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "4693",
-"negocios_24m": 92,
+"negocios_24m": 94,
 "pregao": "ODERICH",
 "tickers": [
 "ODER4"
 ],
-"volume_24m": 14998,
+"volume_24m": 15104,
 "volume_mensal": [
-350,
 500,
 597,
 1471,
@@ -9831,20 +9830,20 @@
 0,
 65,
 65,
-1151
+1151,
+456
 ],
-"volume_mes_parcial": 456
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "4723",
-"negocios_24m": 881,
+"negocios_24m": 941,
 "pregao": "CONST A LIND",
 "tickers": [
 "CALI3"
 ],
-"volume_24m": 571276,
+"volume_24m": 578059,
 "volume_mensal": [
-1689,
 4592,
 2134,
 957,
@@ -9867,22 +9866,22 @@
 18234,
 21900,
 60347,
-10125
+10125,
+8472
 ],
-"volume_mes_parcial": 8472
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "4820",
-"negocios_24m": 5024681,
+"negocios_24m": 5023933,
 "pregao": "BRASKEM",
 "tickers": [
 "BRKM3",
 "BRKM5",
 "BRKM6"
 ],
-"volume_24m": 22367098273,
+"volume_24m": 21849984573,
 "volume_mensal": [
-1043188495,
 1219641390,
 978246449,
 915293315,
@@ -9905,21 +9904,21 @@
 1751998606,
 918321267,
 983509090,
-512197935
+512197935,
+526074795
 ],
-"volume_mes_parcial": 526074794
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "5207",
-"negocios_24m": 6307,
+"negocios_24m": 6389,
 "pregao": "DOHLER",
 "tickers": [
 "DOHL3",
 "DOHL4"
 ],
-"volume_24m": 3973037,
+"volume_24m": 4132768,
 "volume_mensal": [
-78726,
 102441,
 89392,
 104285,
@@ -9942,20 +9941,20 @@
 58666,
 316183,
 494496,
-137128
+137128,
+238457
 ],
-"volume_mes_parcial": 238456
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "5258",
-"negocios_24m": 11766220,
+"negocios_24m": 12143424,
 "pregao": "RAIADROGASIL",
 "tickers": [
 "RADL3"
 ],
-"volume_24m": 104121673419,
+"volume_24m": 106595182026,
 "volume_mensal": [
-3623021045,
 3582867106,
 4253899404,
 4120005263,
@@ -9978,20 +9977,20 @@
 4070519125,
 3640584316,
 4458655937,
-4409388181
+4409388181,
+6096529652
 ],
-"volume_mes_parcial": 6096529652
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "5312",
-"negocios_24m": 4175,
+"negocios_24m": 4444,
 "pregao": "MUNDIAL",
 "tickers": [
 "MNDL3"
 ],
-"volume_24m": 14321318,
+"volume_24m": 14705514,
 "volume_mensal": [
-442667,
 375078,
 589191,
 418193,
@@ -10014,21 +10013,21 @@
 289919,
 172392,
 83280,
-142436
+142436,
+826863
 ],
-"volume_mes_parcial": 826863
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "5380",
-"negocios_24m": 66383,
+"negocios_24m": 66186,
 "pregao": "ACO ALTONA",
 "tickers": [
 "EALT3",
 "EALT4"
 ],
-"volume_24m": 96967624,
+"volume_24m": 97771008,
 "volume_mensal": [
-3003996,
 8542073,
 3639067,
 3768262,
@@ -10051,20 +10050,20 @@
 1470390,
 2077568,
 1819608,
-1247415
+1247415,
+3807380
 ],
-"volume_mes_parcial": 3807380
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "5410",
-"negocios_24m": 13900122,
+"negocios_24m": 14349839,
 "pregao": "WEG",
 "tickers": [
 "WEGE3"
 ],
-"volume_24m": 184901628357,
+"volume_24m": 193723160281,
 "volume_mensal": [
-7819622346,
 6556334506,
 7418075047,
 7461301285,
@@ -10087,20 +10086,20 @@
 7670602559,
 8551558378,
 6936962146,
-8683869787
+8683869787,
+16641154270
 ],
-"volume_mes_parcial": 16641154271
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "5762",
-"negocios_24m": 244213,
+"negocios_24m": 241722,
 "pregao": "ETERNIT",
 "tickers": [
 "ETER3"
 ],
-"volume_24m": 256696084,
+"volume_24m": 249004669,
 "volume_mensal": [
-22234903,
 31091824,
 19045350,
 11528678,
@@ -10123,21 +10122,21 @@
 7598269,
 4353526,
 6240239,
-4634859
+4634859,
+14543488
 ],
-"volume_mes_parcial": 14543488
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "5770",
-"negocios_24m": 250484,
+"negocios_24m": 256219,
 "pregao": "EUCATEX",
 "tickers": [
 "EUCA3",
 "EUCA4"
 ],
-"volume_24m": 526448311,
+"volume_24m": 551725973,
 "volume_mensal": [
-19142582,
 13049196,
 14027238,
 10276031,
@@ -10160,21 +10159,21 @@
 47380360,
 36387290,
 36090170,
-31942702
+31942702,
+44420244
 ],
-"volume_mes_parcial": 44420244
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "6041",
-"negocios_24m": 111,
+"negocios_24m": 127,
 "pregao": "INVEST BEMGE",
 "tickers": [
 "FIGE3",
 "FIGE4"
 ],
-"volume_24m": 22703,
+"volume_24m": 26641,
 "volume_mensal": [
-0,
 349,
 198,
 1793,
@@ -10197,21 +10196,21 @@
 66,
 1380,
 102,
-1559
+1559,
+3938
 ],
-"volume_mes_parcial": 3938
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "6173",
-"negocios_24m": 1174506,
+"negocios_24m": 1266877,
 "pregao": "TAURUS ARMAS",
 "tickers": [
 "TASA3",
 "TASA4"
 ],
-"volume_24m": 1337596076,
+"volume_24m": 1666129542,
 "volume_mensal": [
-64642975,
 77771954,
 64269441,
 44552211,
@@ -10234,20 +10233,20 @@
 44799525,
 24324188,
 41435592,
-225980197
+225980197,
+393176441
 ],
-"volume_mes_parcial": 393176441
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "6211",
-"negocios_24m": 790920,
+"negocios_24m": 815749,
 "pregao": "FRAS-LE",
 "tickers": [
 "FRAS3"
 ],
-"volume_24m": 3973176293,
+"volume_24m": 4117922046,
 "volume_mensal": [
-132848584,
 136726999,
 103591651,
 142689862,
@@ -10270,20 +10269,20 @@
 84326443,
 125998935,
 107563455,
-102672022
+102672022,
+277594337
 ],
-"volume_mes_parcial": 277594336
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "6343",
-"negocios_24m": 2092901,
+"negocios_24m": 2159702,
 "pregao": "TUPY",
 "tickers": [
 "TUPY3"
 ],
-"volume_24m": 6774918319,
+"volume_24m": 6997872737,
 "volume_mensal": [
-288386746,
 355082094,
 448521789,
 293420364,
@@ -10306,20 +10305,20 @@
 262879552,
 219696831,
 273959292,
-177423880
+177423880,
+511341164
 ],
-"volume_mes_parcial": 511341164
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "6505",
-"negocios_24m": 2450408,
+"negocios_24m": 2525874,
 "pregao": "CASAS BAHIA",
 "tickers": [
 "BHIA3"
 ],
-"volume_24m": 9108055990,
+"volume_24m": 9366580376,
 "volume_mensal": [
-250940262,
 261427906,
 227823971,
 207419688,
@@ -10342,21 +10341,21 @@
 88330193,
 127554819,
 116925414,
-264570982
+264570982,
+509464648
 ],
-"volume_mes_parcial": 509464648
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "6629",
-"negocios_24m": 786,
+"negocios_24m": 716,
 "pregao": "HERCULES",
 "tickers": [
 "HETA3",
 "HETA4"
 ],
-"volume_24m": 246342,
+"volume_24m": 197902,
 "volume_mensal": [
-53480,
 48483,
 6055,
 12547,
@@ -10379,20 +10378,20 @@
 2783,
 6113,
 847,
-12481
+12481,
+5040
 ],
-"volume_mes_parcial": 5040
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "6700",
-"negocios_24m": 7879,
+"negocios_24m": 7849,
 "pregao": "HOTEIS OTHON",
 "tickers": [
 "HOOT4"
 ],
-"volume_24m": 14539216,
+"volume_24m": 14531789,
 "volume_mensal": [
-221284,
 315428,
 151952,
 32780,
@@ -10415,20 +10414,20 @@
 315282,
 505559,
 530414,
-685103
+685103,
+213857
 ],
-"volume_mes_parcial": 213858
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "701",
-"negocios_24m": 8167,
+"negocios_24m": 8359,
 "pregao": "BIOMA EDUC",
 "tickers": [
 "BIED3"
 ],
-"volume_24m": 8765416,
+"volume_24m": 9046609,
 "volume_mensal": [
-0,
 63835,
 419587,
 336119,
@@ -10451,20 +10450,20 @@
 323446,
 96585,
 232849,
-365444
+365444,
+281193
 ],
-"volume_mes_parcial": 281193
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "7510",
-"negocios_24m": 615919,
+"negocios_24m": 630264,
 "pregao": "ROMI",
 "tickers": [
 "ROMI3"
 ],
-"volume_24m": 715212934,
+"volume_24m": 756473467,
 "volume_mensal": [
-41204546,
 41477013,
 38199949,
 35236763,
@@ -10487,21 +10486,21 @@
 23996804,
 19023616,
 19291485,
-34206983
+34206983,
+82465079
 ],
-"volume_mes_parcial": 82465079
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "7544",
-"negocios_24m": 2186,
+"negocios_24m": 2145,
 "pregao": "TEX RENAUX",
 "tickers": [
 "TXRX3",
 "TXRX4"
 ],
-"volume_24m": 504370,
+"volume_24m": 516659,
 "volume_mensal": [
-40315,
 21953,
 23620,
 12277,
@@ -10524,21 +10523,21 @@
 10270,
 1048,
 97,
-97471
+97471,
+52604
 ],
-"volume_mes_parcial": 52604
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "7595",
-"negocios_24m": 96342,
+"negocios_24m": 80439,
 "pregao": "INEPAR",
 "tickers": [
 "INEP3",
 "INEP4"
 ],
-"volume_24m": 75312082,
+"volume_24m": 72578214,
 "volume_mensal": [
-4528141,
 1072071,
 3046942,
 2711037,
@@ -10561,21 +10560,21 @@
 3189993,
 3951993,
 1635327,
-2509522
+2509522,
+1794273
 ],
-"volume_mes_parcial": 1794273
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "7617",
-"negocios_24m": 17957892,
+"negocios_24m": 18607549,
 "pregao": "ITAUSA",
 "tickers": [
 "ITSA3",
 "ITSA4"
 ],
-"volume_24m": 164442656373,
+"volume_24m": 174808239076,
 "volume_mensal": [
-5035826544,
 5270064061,
 6138075237,
 5179600340,
@@ -10598,20 +10597,20 @@
 11323814402,
 5363539506,
 6287923686,
-7778573257
+7778573257,
+15401409247
 ],
-"volume_mes_parcial": 15401409247
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "7811",
-"negocios_24m": 55815,
+"negocios_24m": 48225,
 "pregao": "JOAO FORTES",
 "tickers": [
 "JFEN3"
 ],
-"volume_24m": 35488844,
+"volume_24m": 28333505,
 "volume_mensal": [
-10212311,
 5301450,
 4971761,
 2680669,
@@ -10634,20 +10633,20 @@
 542249,
 179110,
 333848,
-1524943
+1524943,
+3056972
 ],
-"volume_mes_parcial": 3056972
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "7870",
-"negocios_24m": 2664322,
+"negocios_24m": 2712676,
 "pregao": "KEPLER WEBER",
 "tickers": [
 "KEPL3"
 ],
-"volume_24m": 6864237899,
+"volume_24m": 6989367848,
 "volume_mensal": [
-254995979,
 208028542,
 138181948,
 171958871,
@@ -10670,20 +10669,20 @@
 169700430,
 101475886,
 174420874,
-174736237
+174736237,
+380125928
 ],
-"volume_mes_parcial": 380125929
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "8133",
-"negocios_24m": 12836282,
+"negocios_24m": 13327070,
 "pregao": "LOJAS RENNER",
 "tickers": [
 "LREN3"
 ],
-"volume_24m": 119102097208,
+"volume_24m": 122828005740,
 "volume_mensal": [
-5654833743,
 5523214802,
 4545076296,
 4344204167,
@@ -10706,20 +10705,20 @@
 5064483772,
 3508856677,
 5253230261,
-4271158333
+4271158333,
+9380742275
 ],
-"volume_mes_parcial": 9380742274
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "8192",
-"negocios_24m": 9151,
+"negocios_24m": 9628,
 "pregao": "TREVISA",
 "tickers": [
 "LUXM4"
 ],
-"volume_24m": 10700252,
+"volume_24m": 11032028,
 "volume_mensal": [
-38954,
 89132,
 21899,
 15301,
@@ -10742,21 +10741,21 @@
 263560,
 328161,
 409047,
-482412
+482412,
+370730
 ],
-"volume_mes_parcial": 370731
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "8397",
-"negocios_24m": 5772,
+"negocios_24m": 5934,
 "pregao": "MANGELS INDL",
 "tickers": [
 "MGEL3",
 "MGEL4"
 ],
-"volume_24m": 11521945,
+"volume_24m": 11759221,
 "volume_mensal": [
-372718,
 174347,
 193770,
 237466,
@@ -10779,21 +10778,21 @@
 416177,
 95069,
 567011,
-627089
+627089,
+609994
 ],
-"volume_mes_parcial": 609993
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "8427",
-"negocios_24m": 3090,
+"negocios_24m": 2822,
 "pregao": "ESTRELA",
 "tickers": [
 "ESTR3",
 "ESTR4"
 ],
-"volume_24m": 955400,
+"volume_24m": 880342,
 "volume_mensal": [
-93738,
 48627,
 52643,
 48070,
@@ -10816,21 +10815,21 @@
 25175,
 23735,
 31197,
-18671
+18671,
+18680
 ],
-"volume_mes_parcial": 18680
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "8451",
-"negocios_24m": 10089157,
+"negocios_24m": 10476617,
 "pregao": "MARCOPOLO",
 "tickers": [
 "POMO3",
 "POMO4"
 ],
-"volume_24m": 43405003040,
+"volume_24m": 44127303700,
 "volume_mensal": [
-1833594222,
 2277222104,
 1841200926,
 2203561824,
@@ -10853,20 +10852,20 @@
 1009125800,
 1241286309,
 1795864445,
-1735037440
+1735037440,
+2555894882
 ],
-"volume_mes_parcial": 2555894883
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "8575",
-"negocios_24m": 1537425,
+"negocios_24m": 1572040,
 "pregao": "METAL LEVE",
 "tickers": [
 "LEVE3"
 ],
-"volume_24m": 5102661215,
+"volume_24m": 5292356560,
 "volume_mensal": [
-237098469,
 269360493,
 258237621,
 175024177,
@@ -10889,21 +10888,21 @@
 126972051,
 162415682,
 200411402,
-157975245
+157975245,
+426793814
 ],
-"volume_mes_parcial": 426793815
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "8656",
-"negocios_24m": 6216175,
+"negocios_24m": 6421764,
 "pregao": "GERDAU MET",
 "tickers": [
 "GOAU3",
 "GOAU4"
 ],
-"volume_24m": 42088507882,
+"volume_24m": 44242669455,
 "volume_mensal": [
-1739788443,
 2294374317,
 1866260873,
 1957357094,
@@ -10926,22 +10925,22 @@
 2076632130,
 1132804832,
 2448979436,
-2157232409
+2157232409,
+3893950016
 ],
-"volume_mes_parcial": 3893950015
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "8672",
-"negocios_24m": 5114481,
+"negocios_24m": 5465932,
 "pregao": "IGUATEMI S.A",
 "tickers": [
 "IGTI11",
 "IGTI3",
 "IGTI4"
 ],
-"volume_24m": 28621117147,
+"volume_24m": 31416098781,
 "volume_mensal": [
-1313767843,
 1149243937,
 1133819177,
 903843026,
@@ -10964,21 +10963,21 @@
 1286100681,
 920977597,
 1227524001,
-1606650645
+1606650645,
+4108749477
 ],
-"volume_mes_parcial": 4108749478
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "8753",
-"negocios_24m": 19694,
+"negocios_24m": 19132,
 "pregao": "METISA",
 "tickers": [
 "MTSA3",
 "MTSA4"
 ],
-"volume_24m": 83040093,
+"volume_24m": 81508752,
 "volume_mensal": [
-2418917,
 3924472,
 1668262,
 2013628,
@@ -11001,9 +11000,10 @@
 9516503,
 1490442,
 894336,
-1430594
+1430594,
+887576
 ],
-"volume_mes_parcial": 887576
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "8818",
@@ -11015,7 +11015,6 @@
 ],
 "volume_24m": 14504457,
 "volume_mensal": [
-0,
 0,
 13979155,
 525302,
@@ -11038,21 +11037,21 @@
 0,
 0,
 0,
+0,
 0
 ],
-"volume_mes_parcial": 0
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "906",
-"negocios_24m": 26309152,
+"negocios_24m": 27094025,
 "pregao": "BRADESCO",
 "tickers": [
 "BBDC3",
 "BBDC4"
 ],
-"volume_24m": 338003949975,
+"volume_24m": 369984904232,
 "volume_mensal": [
-13149000328,
 13848493430,
 11866440271,
 11812188897,
@@ -11075,20 +11074,20 @@
 13462313766,
 14393941105,
 14993124521,
-19225929053
+19225929053,
+45129954585
 ],
-"volume_mes_parcial": 45129954584
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "9083",
-"negocios_24m": 4981,
+"negocios_24m": 4985,
 "pregao": "NORDON MET",
 "tickers": [
 "NORD3"
 ],
-"volume_24m": 1521007,
+"volume_24m": 1384917,
 "volume_mensal": [
-190689,
 75950,
 23767,
 53911,
@@ -11111,20 +11110,20 @@
 78614,
 96229,
 51731,
-83323
+83323,
+54599
 ],
-"volume_mes_parcial": 54599
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "922",
-"negocios_24m": 73832,
+"negocios_24m": 76616,
 "pregao": "AMAZONIA",
 "tickers": [
 "BAZA3"
 ],
-"volume_24m": 206848964,
+"volume_24m": 213392165,
 "volume_mensal": [
-4169728,
 3383571,
 4359519,
 3233128,
@@ -11147,20 +11146,20 @@
 16583942,
 9904746,
 6175807,
-4506544
+4506544,
+10712929
 ],
-"volume_mes_parcial": 10712929
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "9342",
-"negocios_24m": 1218011,
+"negocios_24m": 1303342,
 "pregao": "DIMED",
 "tickers": [
 "PNVL3"
 ],
-"volume_24m": 3279871096,
+"volume_24m": 3638571613,
 "volume_mensal": [
-69225016,
 71418452,
 70354382,
 57905481,
@@ -11183,20 +11182,20 @@
 233381376,
 178493554,
 165968809,
-254209266
+254209266,
+427925533
 ],
-"volume_mes_parcial": 427925532
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "9393",
-"negocios_24m": 759744,
+"negocios_24m": 806122,
 "pregao": "PARANAPANEMA",
 "tickers": [
 "PMAM3"
 ],
-"volume_24m": 800227939,
+"volume_24m": 891704812,
 "volume_mensal": [
-6807869,
 6276647,
 4475809,
 19153814,
@@ -11219,21 +11218,21 @@
 20687453,
 40339073,
 27839962,
-279558384
+279558384,
+98284742
 ],
-"volume_mes_parcial": 98284743
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "94",
-"negocios_24m": 10561,
+"negocios_24m": 10076,
 "pregao": "PANATLANTICA",
 "tickers": [
 "PATI3",
 "PATI4"
 ],
-"volume_24m": 10702075,
+"volume_24m": 10487305,
 "volume_mensal": [
-416779,
 159836,
 154035,
 122217,
@@ -11256,22 +11255,22 @@
 101386,
 57224,
 1791361,
-445948
+445948,
+202009
 ],
-"volume_mes_parcial": 202010
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "9415",
-"negocios_24m": 1147,
+"negocios_24m": 1097,
 "pregao": "SPTURIS",
 "tickers": [
 "AHEB3",
 "AHEB5",
 "AHEB6"
 ],
-"volume_24m": 1882536,
+"volume_24m": 1788714,
 "volume_mensal": [
-104035,
 51029,
 117227,
 72539,
@@ -11294,21 +11293,21 @@
 119455,
 30558,
 13655,
-11552
+11552,
+10213
 ],
-"volume_mes_parcial": 10213
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "9512",
-"negocios_24m": 44038605,
+"negocios_24m": 44884158,
 "pregao": "PETROBRAS",
 "tickers": [
 "PETR3",
 "PETR4"
 ],
-"volume_24m": 954599903854,
+"volume_24m": 1012267001255,
 "volume_mensal": [
-30834748177,
 33338037276,
 32657752711,
 28748509064,
@@ -11331,22 +11330,22 @@
 44837452893,
 36735749428,
 57390902272,
-53181683011
+53181683011,
+88501845578
 ],
-"volume_mes_parcial": 88501845578
+"volume_mes_parcial": null
 },
 {
 "codigo_cvm": "9954",
-"negocios_24m": 4395,
+"negocios_24m": 4376,
 "pregao": "ALFA HOLDING",
 "tickers": [
 "RPAD3",
 "RPAD5",
 "RPAD6"
 ],
-"volume_24m": 2090818,
+"volume_24m": 2205974,
 "volume_mensal": [
-45496,
 57992,
 37926,
 345864,
@@ -11369,18 +11368,13 @@
 63940,
 16789,
 290017,
-136569
+136569,
+160652
 ],
-"volume_mes_parcial": 160652
+"volume_mes_parcial": null
 }
 ],
 "fontes_volume": {
-"2024-10": {
-"arquivos": [
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M102024.ZIP"
-],
-"tipo": "mensal"
-},
 "2024-11": {
 "arquivos": [
 "https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M112024.ZIP"
@@ -11521,34 +11515,13 @@
 },
 "2026-10": {
 "arquivos": [
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D01102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D02102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D05102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D06102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D07102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D08102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D09102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D13102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D14102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D15102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D16102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D19102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D20102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D21102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D22102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D23102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D26102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D27102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D28102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D29102026.ZIP",
-"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_D30102026.ZIP"
+"https://bvmf.bmfbovespa.com.br/InstDados/SerHist/COTAHIST_M102026.ZIP"
 ],
-"tipo": "diario"
+"tipo": "mensal"
 }
 },
-"mes_parcial": "2026-10",
+"mes_parcial": null,
 "meses": [
-"2024-10",
 "2024-11",
 "2024-12",
 "2025-01",
@@ -11571,12 +11544,12 @@
 "2026-06",
 "2026-07",
 "2026-08",
-"2026-09"
+"2026-09",
+"2026-10"
 ],
 "nao_atribuido": {
-"tickers": 64,
+"tickers": 63,
 "volume_mensal": [
-49692496045,
 50340928870,
 47962948703,
 41340726129,
@@ -11599,7 +11572,8 @@
 546843786,
 21619364,
 15188312,
-2305449
+2305449,
+4476700
 ]
 },
 "pagina_fonte": "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/mercado-a-vista/series-historicas/",
