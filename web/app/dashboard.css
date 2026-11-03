@@ -1988,6 +1988,10 @@ a.mc:focus-visible {
 
 /* mapa de calor: um SVG esticado à largura; cor, grade e estados em <path>, fios sem escala */
 .mapa {
+  /* padrões; o componente sobrescreve com as colunas e a altura de linha reais */
+  --mapa-colunas: 24;
+  --mapa-celula-min: 26px;
+  --mapa-linha: 20px;
   margin-top: var(--space-3);
 }
 .mapa-controles {
