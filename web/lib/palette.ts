@@ -29,6 +29,31 @@ export const SEGMENTO_NOME: Record<string, string> = {
   "?": "Sem dados",
 };
 
+/** Categorias de negociação: rampa para a presença, neutros com rótulo para o que não é medida de presença. */
+export const LIQUIDEZ_COR: Record<string, string> = {
+  presenca_alta: CAT_COR[0],
+  presenca_media: CAT_COR[1],
+  presenca_baixa: CAT_COR[2],
+  sem_negocios: CAT_ALT_COR[0],
+  listagem_recente: CAT_ALT_COR[1],
+  sem_cotacao_no_periodo: CAT_ALT_COR[2],
+  sem_ticker: COR_SEM_DADOS,
+};
+
+export const FAIXA_COR: Record<string, string> = {
+  ticket_alto: CAT_COR[0],
+  intermediario: CAT_COR[1],
+  ticket_baixo: CAT_COR[2],
+  dados_insuficientes: COR_SEM_DADOS,
+};
+
+export const FAIXA_NOME: Record<string, string> = {
+  ticket_alto: "Ticket alto",
+  intermediario: "Intermediário",
+  ticket_baixo: "Ticket baixo",
+  dados_insuficientes: "Dados insuficientes",
+};
+
 export const HISTORICO = ["Trocou de escriturador", "Sem troca registrada", "Sem dados na CVM"] as const;
 export type Historico = (typeof HISTORICO)[number];
 export const HISTORICO_COR: Record<Historico, string> = {

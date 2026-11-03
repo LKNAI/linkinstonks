@@ -1985,3 +1985,434 @@ a.mc:focus-visible {
 .prose li + li {
   margin-top: var(--space-1);
 }
+
+/* mapa de calor: um SVG esticado à largura; cor, grade e estados em <path>, fios sem escala */
+.mapa {
+  margin-top: var(--space-3);
+}
+.mapa-controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+.mapa-legenda {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  color: var(--text-muted);
+}
+.mapa-esc {
+  display: inline-flex;
+  gap: 2px;
+}
+.mapa-esc i {
+  display: block;
+  width: var(--space-6);
+  height: var(--space-3);
+}
+.mapa-chave {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.mapa-chave-vazia,
+.mapa-chave-semref {
+  display: inline-block;
+  width: var(--space-5);
+  height: var(--space-3);
+  position: relative;
+}
+.mapa-chave-vazia {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.mapa-chave-vazia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 3px;
+  height: 3px;
+  border-radius: var(--radius-round);
+  background: var(--border-strong);
+}
+.mapa-chave-semref {
+  background: repeating-linear-gradient(45deg, var(--surface-sunken) 0 3px, var(--border-strong) 3px 4px);
+}
+.mapa-rolagem {
+  min-width: 0;
+}
+.mapa-tabela {
+  --mapa-rot: 196px;
+  --mapa-dir: 0px;
+  min-width: calc(var(--mapa-rot) + var(--mapa-dir) + var(--mapa-colunas) * var(--mapa-celula-min));
+}
+.mapa-tabela.com-direita {
+  --mapa-dir: 84px;
+}
+.mapa-cab {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: var(--mapa-rot) minmax(0, 1fr) var(--mapa-dir);
+  align-items: end;
+  background: var(--surface);
+  padding-bottom: var(--space-1);
+}
+.mapa-canto {
+  position: sticky;
+  left: 0;
+  align-self: stretch;
+  background: var(--surface);
+}
+.mapa-meses {
+  display: grid;
+  grid-template-columns: repeat(var(--mapa-colunas), minmax(0, 1fr));
+}
+.mapa-mes,
+button.mapa-mes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  color: var(--text-muted);
+  background: none;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  min-width: 0;
+}
+button.mapa-mes {
+  cursor: pointer;
+}
+button.mapa-mes:hover,
+button.mapa-mes[aria-pressed="true"] {
+  color: var(--accent-hover);
+  font-weight: var(--fw-semibold);
+}
+.mapa-ano {
+  display: block;
+  height: var(--lh-xs);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  white-space: nowrap;
+  align-self: flex-start;
+  font-weight: var(--fw-semibold);
+  color: var(--text);
+}
+.mapa-titulo-dir {
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  color: var(--text-muted);
+  text-align: right;
+}
+.mapa-corpo {
+  position: relative;
+}
+.mapa-janela {
+  display: grid;
+  grid-template-columns: var(--mapa-rot) minmax(0, 1fr) var(--mapa-dir);
+  will-change: transform;
+}
+.mapa-rotulos,
+.mapa-direita {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mapa-rotulos {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--surface);
+}
+.mapa-rotulos li,
+.mapa-direita li {
+  height: var(--mapa-linha);
+  line-height: var(--mapa-linha);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--fs-xs);
+}
+.mapa-tk {
+  font-family: var(--font-mono);
+  font-weight: var(--fw-semibold);
+  color: var(--text);
+  margin-right: var(--space-2);
+}
+a.mapa-tk:hover {
+  color: var(--accent-hover);
+}
+.mapa-sub {
+  color: var(--text-muted);
+}
+.mapa-direita li {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.mapa-area {
+  min-width: 0;
+  outline-offset: 2px;
+}
+.mapa-area:focus-visible {
+  outline: 2px solid var(--focus-ring);
+}
+.mapa-svg {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+.mapa-svg path,
+.mapa-svg rect {
+  vector-effect: non-scaling-stroke;
+}
+.mapa-seq-1 {
+  fill: var(--seq-1);
+}
+.mapa-seq-2 {
+  fill: var(--seq-2);
+}
+.mapa-seq-3 {
+  fill: var(--seq-3);
+}
+.mapa-seq-4 {
+  fill: var(--seq-4);
+}
+.mapa-seq-5 {
+  fill: var(--seq-5);
+}
+.mapa-seq-6 {
+  fill: var(--seq-6);
+}
+.mapa-seq-7 {
+  fill: var(--seq-7);
+}
+.mapa-neutro {
+  fill: var(--div-neutro);
+}
+.mapa-frio-1 {
+  fill: var(--div-frio-1);
+}
+.mapa-frio-2 {
+  fill: var(--div-frio-2);
+}
+.mapa-frio-3 {
+  fill: var(--div-frio-3);
+}
+.mapa-quente-1 {
+  fill: var(--div-quente-1);
+}
+.mapa-quente-2 {
+  fill: var(--div-quente-2);
+}
+.mapa-quente-3 {
+  fill: var(--div-quente-3);
+}
+.mapa-sem-ref {
+  fill: var(--surface-sunken);
+}
+.mapa-sem-ref-risco {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 1;
+}
+.mapa-grade {
+  fill: none;
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+.mapa-vazia {
+  fill: var(--surface);
+  stroke: var(--border);
+  stroke-width: 1;
+}
+.mapa-ponto {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.mapa-fio {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 1;
+}
+.mapa-sel {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+.mapa-foco-a,
+.mapa-foco-b {
+  fill: none;
+}
+.mapa-foco-a {
+  stroke: var(--surface);
+  stroke-width: 4;
+}
+.mapa-foco-b {
+  stroke: var(--text);
+  stroke-width: 2;
+}
+@media (max-width: 1023px) {
+  .mapa-rolagem {
+    overflow-x: auto;
+  }
+  .mapa-tabela,
+  .mapa-tabela.com-direita {
+    --mapa-rot: 64px;
+    --mapa-dir: 0px;
+  }
+  .mapa-sub,
+  .mapa-direita,
+  .mapa-titulo-dir {
+    display: none;
+  }
+}
+
+/* histograma: barras por porcentagem e marcas rotuladas acima da área */
+.hist {
+  margin-top: var(--space-2);
+}
+.hist-marcas {
+  position: relative;
+  height: var(--space-6);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  color: var(--text);
+}
+.hist-marca {
+  position: absolute;
+  bottom: var(--space-1);
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.hist-marca:first-child {
+  transform: translateX(-100%);
+}
+.hist-marca:last-child {
+  transform: none;
+}
+.hist-area {
+  position: relative;
+  border-bottom: 1px solid var(--border-strong);
+}
+.hist-barra {
+  position: absolute;
+  bottom: 0;
+  border-left: 1px solid var(--surface);
+  border-right: 1px solid var(--surface);
+}
+.hist-fio {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--text);
+  pointer-events: none;
+}
+.hist-eixo {
+  position: relative;
+  height: var(--space-6);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  color: var(--text-muted);
+}
+.hist-eixo span {
+  position: absolute;
+  top: var(--space-1);
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* barras de composição: rótulo, barra 100% e total, cada linha é um filtro */
+.comp {
+  display: grid;
+  gap: var(--space-2);
+}
+.comp-linha {
+  display: grid;
+  grid-template-columns: minmax(96px, 168px) minmax(0, 1fr) var(--space-8);
+  align-items: center;
+  gap: var(--space-3);
+  background: none;
+  border: 0;
+  padding: var(--space-1) 0;
+  font: inherit;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+.comp-linha[aria-pressed="true"] .comp-rotulo {
+  font-weight: var(--fw-semibold);
+  color: var(--accent-hover);
+}
+.comp-barra {
+  display: flex;
+  gap: 2px;
+  height: var(--space-4);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.comp-barra i {
+  display: block;
+  min-width: 2px;
+}
+.comp-total {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+/* marca de número aproximado: tipográfica, sem cor de alerta */
+.aprox {
+  margin-right: 2px;
+  color: var(--text-muted);
+  text-decoration: none;
+  cursor: help;
+}
+
+/* fatos da listagem, em ordem cronológica */
+.fatos {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-1);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+}
+.fatos li {
+  display: grid;
+  grid-template-columns: var(--space-12) minmax(0, 1fr) auto;
+  gap: var(--space-3);
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--border);
+}
+.fatos-ano {
+  font-weight: var(--fw-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+/* na seção de negociação há menos KPIs, e o subtítulo traz a contagem de cada categoria: pode quebrar a linha */
+.c12 > .kpis .sub {
+  white-space: normal;
+  overflow: visible;
+}
+td.crit {
+  min-width: 300px;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  color: var(--text-muted);
+}

@@ -55,6 +55,10 @@ export function formatDinheiro(reais: number): string {
   return a ? "< R$ 1 mil" : "—";
 }
 
+/** Valores pequenos, como o ticket médio: sem o "< R$ 1 mil" de `formatDinheiro`, que serve para volumes. */
+export const formatTicket = (reais: number): string =>
+  reais < 1000 ? `R$ ${inteiro.format(Math.round(reais))}` : formatDinheiro(reais);
+
 export const formatBRL = (n: number): string => brl.format(n);
 
 export interface Variacao {

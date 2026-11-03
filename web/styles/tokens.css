@@ -45,6 +45,23 @@
   --cat-alt-3: #98a1b4;
   --cat-alt-4: #b3bacb;
 
+  /* mapa de calor. Intensidade: um só matiz (ameixa). Variação: polos frio e quente, sem vermelho e verde,
+     porque subir ou cair de volume não é bom nem ruim. Validação em docs/design-system.md */
+  --seq-1: #f3e6f4;
+  --seq-2: #dfc1e2;
+  --seq-3: #c79acb;
+  --seq-4: #ab6eb1;
+  --seq-5: #8c4592;
+  --seq-6: #6d1d72;
+  --seq-7: #4a1050;
+  --div-frio-3: #0b5563;
+  --div-frio-2: #3f8f9b;
+  --div-frio-1: #7fc8d4;
+  --div-neutro: #e9edf4;
+  --div-quente-1: #f2ac76;
+  --div-quente-2: #c46c30;
+  --div-quente-3: #8f3e0c;
+
   /* tipografia */
   --font-sans: var(--font-plex-sans), system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
