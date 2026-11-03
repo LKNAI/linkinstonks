@@ -77,7 +77,7 @@ Resumo: ✅ funciona como o prompt descreve · ⚠️ funciona com diferença ·
 - ✅ **Padrão diário confirmado:** `COTAHIST_D{DD}{MM}{AAAA}.ZIP` (ex.: `COTAHIST_D28102026.ZIP`, 617 KB zip, 4,3 MB texto). Mensal `COTAHIST_M{MM}{AAAA}.ZIP` (set/2026: 10 MB zip, **90 MB** descompactado → streaming obrigatório). Anual `COTAHIST_A{AAAA}.ZIP` (≈ 89 MB zip).
 - `HEAD` funciona e dá `Content-Length`/`Last-Modified` sem baixar. 404 em fim de semana, em feriado e **antes da publicação do dia**. O arquivo de 28/10 saiu às 23:34 UTC (20:34 BRT): o cron das 01:23 UTC (22:23 BRT) tem folga de ~1h50.
 - Layout confirmado: 245 colunas por registro, `\r\n`, ISO-8859-1; `00` header, `01` cotação, `99` trailer (com contagem de registros). Posições do prompt conferem.
-- Filtro de BDR: o regex `^[A-Z0-9]{4}3[1-59]F?$` e o filtro do seed (`ESPECI` começando com `DR`) dão **o mesmo conjunto** (966 tickers em set/2026). `TPMERC` só `010`/`020`; existem também `012/013` (leilão), `021`, `030` (termo), `070/080` (opções), que o filtro exclui. `ESPECI` pode vir como `DRN ED`, `DRE ED`, `DRN EB` (sufixos): usar o primeiro token.
+- Filtro de BDR: o regex `^[A-Z0-9]{4}3[1-59]F?$` e o filtro do seed (`ESPECI` começando com `DR`) dão **o mesmo conjunto** (966 tickers em set/2026). `TPMERC` só `010`/`020`; existem também `012/013` (exercício de opções), `017` (leilão), `021` (fora da tabela do layout oficial), `030` (termo), `070/080` (opções), que o filtro exclui. `ESPECI` pode vir como `DRN ED`, `DRE ED`, `DRN EB` (sufixos): usar o primeiro token.
 - **Paridade antecipada:** agregando `COTAHIST_M092026` com essas regras, o volume de set/2026 reproduz o seed em **966 de 966 tickers**; total R$ 33.968.128 mil contra R$ 33.968.112 mil (diferença de R$ 16 mil por arredondamento por ticker).
 - Fixture: `COTAHIST_D28102026_bdr_extrato.txt` (header + 601 registros de BDR + trailer; o trailer **não** bate com a contagem do extrato).
 
@@ -147,6 +147,15 @@ Cada volume mensal de BDR publicado aponta para o arquivo oficial da B3 de onde 
 - `pagina_fonte`: página oficial de séries históricas da B3 (`https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/mercado-a-vista/series-historicas/`), verificada em 2026-10-29 (HTTP 200, "Séries Históricas | B3").
 
 No site, a barra do gráfico (`/bdrs/{ticker}`) e a célula do volume mensal na tabela (`/bdrs`) são links para o arquivo do mês; no mês parcial, que soma vários arquivos, o link vai à página oficial e os arquivos diários ficam listados no bloco "Fonte do volume e como conferir". Como reproduzir o número: no arquivo, somar `VOLTOT` (colunas 171 a 188, 2 casas implícitas) das linhas cujo `CODNEG` (colunas 13 a 24) é o ticker ou o ticker com `F`, com `TPMERC` (colunas 25 a 27) `010` ou `020`.
+
+## Achados da Etapa 8.0 (detalhes em `docs/fase8-etapa0.md`)
+- **`TOTNEG` tem 5 dígitos** e parece estourar acima de 99.999 (PETR4 em 11/02/2026: 39 negócios e R$ 2,13 bi). Afeta negócios e ticket médio dos papéis mais líquidos; volume, quantidade e presença não.
+- **BDRs não têm fracionário:** nenhum registro em 25 meses (ADR 0005).
+- **`CODBDI` não filtra ações:** recuperação judicial está em 08, extrajudicial em 07, e `IBOV11` está em 02.
+- **O COTAHIST não tem registro com `TOTNEG` = 0:** sem negócio, não há linha. O trailer só conta registros; não há total de mercado.
+- **FCA `valor_mobiliario`:** 18 colunas, iguais de 2010 a 2026, uma referência por ano. Antes da referência de 2018 não há ticker e o segmento não é confiável.
+- **Empréstimo de ativos:** as páginas de acesso da B3 vedam a coleta automatizada (ADR 0006). Não coletar.
+- Layout oficial: `https://www.b3.com.br/data/files/33/67/B9/50/D84057102C784E47AC094EA8/SeriesHistoricas_Layout.pdf`.
 
 ## COTAHIST de ações (Fase 7)
 Os mesmos arquivos `COTAHIST_*` servem ao dataset `acoes_volume` (volume mensal das ações por companhia). Filtro: `TPMERC` `010`/`020`; `CODNEG` com 4 caracteres + final 3 a 8, com `B` opcional (séries, como `MRSA3B`) e `F` no fracionário; units (final 11) só com `ESPECI` iniciando em `UNT`, porque ETFs e FIIs também terminam em 11. Ficam de fora ETF/FII (`CI`), bonificação (`BNS`), direito (`DIR`), opções, termo e BDRs. Em 28/10/2026: 702 registros de 367 tickers de ações. Detalhes em `docs/decisoes/0004-cotahist-por-categoria.md`. A rastreabilidade do volume (seção anterior) vale também para ações.
