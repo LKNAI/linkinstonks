@@ -46,12 +46,13 @@ export function derivarBdrs(bdrs: readonly Bdr[]): BdrRow[] {
 }
 
 // ------------------------------------------------------------------------------------------- filtros
-export const DIMS_BDR = ["dep", "type", "cat"] as const;
+export const DIMS_BDR = ["dep", "type", "cat", "faixa"] as const;
 export type DimBdr = (typeof DIMS_BDR)[number];
 export const ROTULO_DIM_BDR: Record<DimBdr, string> = {
   dep: "Depositária",
   type: "Tipo",
   cat: "Classe do ETF",
+  faixa: "Faixa de ticket",
 };
 
 export type Situacao = "all" | "on" | "off";
@@ -62,6 +63,7 @@ export interface FiltrosBdrs {
   dep: string | null;
   type: string | null;
   cat: string | null;
+  faixa: string | null;
   /** Índice (0-based) do mês escolhido para o ranking; `null` = 24 meses. */
   month: number | null;
   sort: Ordem;
@@ -74,12 +76,14 @@ export const FILTROS_BDR_PADRAO: FiltrosBdrs = {
   dep: null,
   type: null,
   cat: null,
+  faixa: null,
   month: null,
   sort: { k: "tot", dir: -1 },
   showM: false,
 };
 
-const valorDim = (d: BdrRow, k: DimBdr): string | null => ({ dep: d.depositaria, type: d.T, cat: d.C })[k];
+const valorDim = (d: BdrRow, k: DimBdr): string | null =>
+  ({ dep: d.depositaria, type: d.T, cat: d.C, faixa: d.perfil?.faixa ?? null })[k];
 
 export function passaBdr(d: BdrRow, f: FiltrosBdrs, exceto?: DimBdr): boolean {
   if (f.st === "on" && !d.on) return false;
@@ -184,9 +188,9 @@ export function totaisMensais(rows: readonly BdrRow[], meses: readonly string[])
 }
 
 /** Degrau "bonito" do eixo Y (em R$): 1, 2 ou 5 x 10^n, com no máximo 5 linhas de grade (como no seed). */
-export function escalaEixo(max: number): { passo: number; topo: number } {
+export function escalaEixo(max: number, menor = 1e6): { passo: number; topo: number } {
   const passos: number[] = [];
-  for (let e = 1e6; e <= 1e10; e *= 10) passos.push(e, 2 * e, 5 * e);
+  for (let e = menor; e <= 1e10; e *= 10) passos.push(e, 2 * e, 5 * e);
   const passo = passos.find((s) => max / s <= 5) ?? 1e11;
   return { passo, topo: Math.max(passo, Math.ceil(max / passo) * passo) };
 }

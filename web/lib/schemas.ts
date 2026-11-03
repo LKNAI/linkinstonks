@@ -107,26 +107,6 @@ export const bdrsDocSchema = z.object({
   bdrs: z.array(bdrSchema),
 });
 
-export const volumeCompanhiaSchema = z.object({
-  codigo_cvm: z.string(),
-  pregao: z.string(),
-  tickers: z.array(z.string()),
-  negocios_24m: z.int(),
-  volume_24m: z.int(),
-  volume_mensal: z.array(z.int()),
-  volume_mes_parcial: z.nullable(z.int()),
-});
-
-export const acoesVolumeDocSchema = z.object({
-  schema_version: versaoSchema,
-  meses: z.array(z.string()),
-  mes_parcial: z.nullable(z.string()),
-  pagina_fonte: z.string(),
-  fontes_volume: z.record(z.string(), fonteVolumeSchema),
-  nao_atribuido: z.object({ tickers: z.int(), volume_mensal: z.array(z.int()) }),
-  companhias: z.array(volumeCompanhiaSchema),
-});
-
 const mensalLiquidezSchema = z.object({
   dias_com_negocio: z.array(z.int()),
   negocios: z.array(z.int()),
@@ -163,6 +143,40 @@ const liquidezComum = {
   ultimo_preco: z.nullable(z.number()),
   volume_mes_parcial: z.nullable(z.int()),
 };
+
+const janelaResumoSchema = z.object({
+  dias_com_negocio: z.int(),
+  negocios: z.int(),
+  pregoes: z.int(),
+  presenca: z.nullable(z.number()),
+  ticket_medio: z.nullable(z.number()),
+  volume: z.int(),
+});
+
+export const volumeCompanhiaSchema = z.object({
+  agregados: z.object({ "3m": janelaResumoSchema, "6m": janelaResumoSchema, "12m": janelaResumoSchema }),
+  codigo_cvm: z.string(),
+  meses_negocios_suspeitos: z.array(z.string()),
+  negocios_24m: z.int(),
+  pregao: z.string(),
+  ticker_principal: nomeOuNulo,
+  tickers: z.array(z.string()),
+  ultimo_pregao: nomeOuNulo,
+  volume_24m: z.int(),
+  volume_mensal: z.array(z.int()),
+  volume_mes_parcial: z.nullable(z.int()),
+});
+
+export const acoesResumoDocSchema = z.object({
+  schema_version: versaoSchema,
+  meses: z.array(z.string()),
+  mes_parcial: z.nullable(z.string()),
+  pregoes_mes: z.array(z.int()),
+  pagina_fonte: z.string(),
+  fontes_volume: z.record(z.string(), fonteVolumeSchema),
+  nao_atribuido: z.object({ tickers: z.int(), volume_mensal: z.array(z.int()) }),
+  companhias: z.array(volumeCompanhiaSchema),
+});
 
 export const acoesLiquidezDocSchema = z.object({
   schema_version: versaoSchema,
@@ -231,6 +245,10 @@ export const eventosDocSchema = z.object({
 export type Acao = z.infer<typeof acaoSchema>;
 export type Bdr = z.infer<typeof bdrSchema>;
 export type VolumeCompanhia = z.infer<typeof volumeCompanhiaSchema>;
+export type LiquidezCompanhia = z.infer<typeof acoesLiquidezDocSchema>["companhias"][number];
+export type TrechoSegmento = z.infer<typeof segmentosDocSchema>["companhias"][string][number];
+export type CategoriaLiquidez = (typeof CATEGORIAS_LIQUIDEZ)[number];
+export type FaixaTicket = (typeof FAIXAS_TICKET)[number];
 export type Meta = z.infer<typeof metaSchema>;
 export type Evento = z.infer<typeof eventoSchema>;
 

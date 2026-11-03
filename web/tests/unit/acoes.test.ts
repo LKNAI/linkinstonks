@@ -22,7 +22,7 @@ import {
   volumeMensalDe,
   type FiltrosAcoes,
 } from "@/lib/acoes";
-import { acoesDocSchema, acoesVolumeDocSchema } from "@/lib/schemas";
+import { acoesDocSchema, acoesResumoDocSchema } from "@/lib/schemas";
 import { publico } from "../dados";
 
 const rows = derivar(acoesDocSchema.parse(publico("acoes.json")).companhias);
@@ -137,8 +137,8 @@ describe("painel de ações (dados reais)", () => {
   });
 });
 
-describe("volume por companhia (acoes_volume.json cruzado por código CVM)", () => {
-  const vol = acoesVolumeDocSchema.parse(publico("acoes_volume.json"));
+describe("volume por companhia (resumo de liquidez cruzado por código CVM)", () => {
+  const vol = acoesResumoDocSchema.parse(publico("acoes_liquidez_resumo.json"));
   const comVol = derivar(acoesDocSchema.parse(publico("acoes.json")).companhias, vol.companhias);
   const base = filtrar(comVol, f());
 
@@ -186,10 +186,10 @@ describe("volume por companhia (acoes_volume.json cruzado por código CVM)", () 
     expect(o.at(-1)?.v24).toBeNull();
   });
 
-  it("CSV com volume acrescenta duas colunas", () => {
+  it("CSV com volume acrescenta as colunas de negociação", () => {
     const sem = csvAcoes(base, true).split("\n")[0].split(";").length;
     const com = csvAcoes(base, true, true).split("\n")[0].split(";");
-    expect(com).toHaveLength(sem + 2);
-    expect(com.at(-2)).toBe("Volume 24m (R$)");
+    expect(com).toHaveLength(sem + 6);
+    expect(com.at(-6)).toBe("Volume 24m (R$)");
   });
 });

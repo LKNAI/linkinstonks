@@ -35,6 +35,7 @@ export function ColunasEmpilhadas({
   escalaMax,
   altura,
   grade,
+  somenteLeitura,
 }: {
   colunas: ColunaEmpilhada[];
   selecionada: string | null;
@@ -45,6 +46,8 @@ export function ColunasEmpilhadas({
   /** Altura em px da área das barras (nas colunas mensais, a altura mínima: o gráfico pode crescer). */
   altura: number;
   grade?: { valor: number; rotulo: string }[];
+  /** Colunas sem clique: só o valor, no tooltip e por teclado. */
+  somenteLeitura?: boolean;
 }) {
   const tip = useTip();
   const anos = variante === "anos";
@@ -80,7 +83,7 @@ export function ColunasEmpilhadas({
           <div
             className={`${anos ? "yrs" : "mcols"}${selecionada != null || leitura ? " has-sel" : ""}`}
             role="group"
-            aria-label="Colunas selecionáveis"
+            aria-label={somenteLeitura ? "Colunas" : "Colunas selecionáveis"}
           >
             {grade?.map((g) => (
               <div key={g.valor} className="gridline" style={{ bottom: altoDe(g.valor) }}>
@@ -123,6 +126,17 @@ export function ColunasEmpilhadas({
                 >
                   {barra}
                 </a>
+              ) : somenteLeitura ? (
+                <div
+                  key={c.id}
+                  className={classe}
+                  role="img"
+                  tabIndex={0}
+                  aria-label={c.rotuloAria}
+                  {...tip(c.dica)}
+                >
+                  {barra}
+                </div>
               ) : (
                 <button
                   key={c.id}

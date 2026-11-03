@@ -5,7 +5,7 @@ import {
   acaoSchema,
   acoesDocSchema,
   acoesLiquidezDocSchema,
-  acoesVolumeDocSchema,
+  acoesResumoDocSchema,
   bdrSchema,
   bdrsDocSchema,
   eventosDocSchema,
@@ -18,7 +18,7 @@ describe("contrato com o ETL", () => {
   it("os arquivos publicados passam no zod", () => {
     expect(() => acoesDocSchema.parse(publico("acoes.json"))).not.toThrow();
     expect(() => bdrsDocSchema.parse(publico("bdrs.json"))).not.toThrow();
-    expect(() => acoesVolumeDocSchema.parse(publico("acoes_volume.json"))).not.toThrow();
+    expect(() => acoesResumoDocSchema.parse(publico("acoes_liquidez_resumo.json"))).not.toThrow();
     expect(() => metaSchema.parse(publico("meta.json"))).not.toThrow();
     expect(() => eventosDocSchema.parse(publico("eventos.json"))).not.toThrow();
     expect(() => acoesLiquidezDocSchema.parse(publico("acoes_liquidez.json"))).not.toThrow();
@@ -121,17 +121,17 @@ describe("contrato com o ETL", () => {
     }
   });
 
-  it("zod e JSON Schema de acoes_volume declaram os mesmos campos", () => {
-    const js = schemaJson("acoes_volume");
-    expect(Object.keys(acoesVolumeDocSchema.shape).sort()).toEqual(Object.keys(js.properties).sort());
+  it("zod e JSON Schema do resumo de liquidez declaram os mesmos campos", () => {
+    const js = schemaJson("acoes_liquidez_resumo");
+    expect(Object.keys(acoesResumoDocSchema.shape).sort()).toEqual(Object.keys(js.properties).sort());
     expect([...js.required].sort()).toEqual(Object.keys(js.properties).sort());
     const item = js.properties.companhias.items.properties;
-    const zodItem = acoesVolumeDocSchema.shape.companhias.def.element.shape;
+    const zodItem = acoesResumoDocSchema.shape.companhias.def.element.shape;
     expect(Object.keys(zodItem).sort()).toEqual(Object.keys(item).sort());
   });
 
   it("o volume das companhias e o não atribuído reproduzem o total do mercado, mês a mês", () => {
-    const d = acoesVolumeDocSchema.parse(publico("acoes_volume.json"));
+    const d = acoesResumoDocSchema.parse(publico("acoes_liquidez_resumo.json"));
     expect(d.meses).toHaveLength(24);
     d.companhias.forEach((c) => {
       expect(c.volume_mensal).toHaveLength(24);

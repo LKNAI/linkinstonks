@@ -4,11 +4,18 @@
 // lidos do CSS em tempo de execução, então não há literal de cor, tamanho ou raio duplicado aqui.
 import { Search } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
+import { BarrasComposicao } from "@/components/charts/BarrasComposicao";
 import { Donut } from "@/components/charts/Donut";
+import { Histograma } from "@/components/charts/Histograma";
+import { MapaCalor } from "@/components/charts/MapaCalor";
+import { CELULA_SEM_NEGOCIOS, CELULA_SEM_REFERENCIA } from "@/components/charts/celulas";
+import { TipConteudo } from "@/components/charts/Tooltip";
 import { Sparkline } from "@/components/charts/Sparkline";
 import { Alternador, Chips, Segmentado, Seletor } from "@/components/filters/Controles";
 import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import { ErroDados, KpiGrid, Notas } from "@/components/layout/Pagina";
+import { Aprox, NotaEstimativa, NotaSuspeitos } from "@/components/paineis/Avisos";
+import { LegendaMapa } from "@/components/paineis/SecaoMapa";
 import { COR_ESCRITURADOR, coresDoConjunto } from "@/lib/colors";
 import { formatInt, formatPct } from "@/lib/format";
 import {
@@ -34,6 +41,22 @@ const CATEGORIAS = [
   "cat-alt-2",
   "cat-alt-3",
   "cat-alt-4",
+];
+const MAPA = [
+  "seq-1",
+  "seq-2",
+  "seq-3",
+  "seq-4",
+  "seq-5",
+  "seq-6",
+  "seq-7",
+  "div-frio-3",
+  "div-frio-2",
+  "div-frio-1",
+  "div-neutro",
+  "div-quente-1",
+  "div-quente-2",
+  "div-quente-3",
 ];
 const ESCALA = ["xs", "sm", "md", "lg", "xl", "2xl", "kpi"];
 const PESOS = ["regular", "medium", "semibold", "bold"];
@@ -127,6 +150,7 @@ export function Catalogo() {
             <Grupo titulo="Destaque do produto" nomes={DESTAQUE} />
             <Grupo titulo="Status de dados (nunca identidade de série)" nomes={STATUS} />
             <Grupo titulo="Categorias: rampa ameixa e neutros" nomes={CATEGORIAS} />
+            <Grupo titulo="Mapa de calor: intensidade e variação" nomes={MAPA} />
           </div>
         </Secao>
 
@@ -329,6 +353,113 @@ export function Catalogo() {
               </tbody>
             </table>
           </div>
+        </Secao>
+
+        <Secao id="ds-mapa" titulo="Mapa de calor">
+          <p className="muted">
+            Passe o mouse ou use as setas. Cada modo mostra as células com cor, sem negócios e sem referência.
+          </p>
+          <LegendaMapa modo="intensidade" />
+          <MapaCalor
+            rotulo="Exemplo em intensidade"
+            escala="seq"
+            colunas={["jan", "fev", "mar", "abr", "mai", "jun", "jul"].map((m, i) => ({
+              id: m,
+              rotulo: m,
+              ano: i === 0 ? "2026" : undefined,
+            }))}
+            linhas={[
+              {
+                id: "a",
+                rotulo: "AAAA34",
+                sub: "Com todos os tons",
+                direita: "R$ 1 bi",
+                celulas: [1, 2, 3, 4, 5, 6, 7],
+              },
+              {
+                id: "b",
+                rotulo: "BBBB34",
+                sub: "Sem negócios no início",
+                direita: "R$ 1 mi",
+                celulas: [CELULA_SEM_NEGOCIOS, CELULA_SEM_NEGOCIOS, 2, 3, 7, 4, 2],
+              },
+            ]}
+            tituloDireita="Volume"
+            dica={(l, j) => <TipConteudo titulo={l.rotulo} linhas={[["Célula", String(l.celulas[j])]]} />}
+            textoCelula={(l, j) => `${l.rotulo}, coluna ${j + 1}: ${l.celulas[j]}`}
+            onColuna={() => {}}
+            colunaSelecionada={4}
+          />
+          <LegendaMapa modo="variacao" />
+          <MapaCalor
+            rotulo="Exemplo em variação"
+            escala="div"
+            colunas={["jan", "fev", "mar", "abr", "mai", "jun", "jul"].map((m, i) => ({
+              id: m,
+              rotulo: m,
+              ano: i === 0 ? "2026" : undefined,
+            }))}
+            linhas={[
+              { id: "a", rotulo: "AAAA34", celulas: [-3, -2, -1, 0, 1, 2, 3] },
+              {
+                id: "b",
+                rotulo: "BBBB34",
+                celulas: [CELULA_SEM_REFERENCIA, CELULA_SEM_REFERENCIA, CELULA_SEM_NEGOCIOS, 1, 0, -1, 2],
+              },
+            ]}
+            dica={(l, j) => <TipConteudo titulo={l.rotulo} linhas={[["Célula", String(l.celulas[j])]]} />}
+            textoCelula={(l, j) => `${l.rotulo}, coluna ${j + 1}: ${l.celulas[j]}`}
+          />
+        </Secao>
+
+        <Secao id="ds-negociacao" titulo="Histograma, composição, ressalvas e listagem">
+          <Histograma
+            altura={96}
+            barras={[1, 3, 6, 4, 2].map((n, i) => ({
+              id: String(i),
+              de: i / 5,
+              ate: (i + 1) / 5,
+              n,
+              cor: CAT_COR[Math.min(2, Math.floor(i / 2))],
+              rotuloAria: `Faixa ${i + 1}: ${n} itens`,
+              dica: () => <TipConteudo titulo={`Faixa ${i + 1}`} linhas={[["Itens", n]]} />,
+            }))}
+            marcas={[
+              { x: 0.25, rotulo: "1º quartil" },
+              { x: 0.75, rotulo: "3º quartil" },
+            ]}
+            eixo={[
+              { x: 0.2, rotulo: "R$ 100" },
+              { x: 0.8, rotulo: "R$ 10 mil" },
+            ]}
+          />
+          <BarrasComposicao
+            unidade="empresas"
+            vazio="Nenhuma companhia no filtro atual."
+            selecionado={fatia === "seg-a" ? "seg-a" : null}
+            onSelecionar={(k) => setFatia((a) => (a === k ? null : k))}
+            linhas={[
+              {
+                k: "seg-a",
+                rotulo: "Segmento A",
+                total: 10,
+                partes: [
+                  { k: "x", nome: "Presença alta", n: 7, cor: CAT_COR[0] },
+                  { k: "y", nome: "Presença média", n: 2, cor: CAT_COR[1] },
+                  { k: "z", nome: "Presença baixa", n: 1, cor: CAT_COR[2] },
+                ],
+              },
+            ]}
+          />
+          <p className="empty">Vazio: Nenhuma companhia no filtro atual.</p>
+          <p>
+            Valor aproximado: <Aprox ativo /> R$ 35.096,00
+          </p>
+          <NotaSuspeitos />
+          <NotaEstimativa />
+          <p className="note">
+            <span className="badge">CVM indica Novo Mercado</span> Selo informativo, sem cor de alerta.
+          </p>
         </Secao>
 
         <Secao id="ds-estados" titulo="Estados">

@@ -1,5 +1,6 @@
 // Rótulos legíveis para ids internos que vêm dos dados (fontes e eventos). Um só lugar para Capa, Novidades e Status.
 import { SEGMENTO_NOME } from "@/lib/palette";
+import { ROTULO_LIQUIDEZ } from "@/lib/rotulos-liquidez";
 import type { Acao, Evento } from "@/lib/schemas";
 
 export const NOME_FONTE: Record<string, string> = {
@@ -30,19 +31,10 @@ export const ROTULO_TIPO: Record<string, string> = {
   saiu_presenca_baixa: "Saiu de presença baixa",
 };
 
-export const ROTULO_LIQUIDEZ: Record<string, string> = {
-  sem_ticker: "Sem código de negociação",
-  listagem_recente: "Listagem recente",
-  sem_cotacao_no_periodo: "Sem cotação no período",
-  sem_negocios: "Sem negócios",
-  presenca_baixa: "Presença baixa",
-  presenca_media: "Presença média",
-  presenca_alta: "Presença alta",
-};
+export { ROTULO_LIQUIDEZ };
 
 export const NOME_DATASET: Record<string, string> = {
   acoes: "Ações",
-  acoes_volume: "Volume das ações",
   acoes_liquidez: "Liquidez das ações",
   bdrs: "BDRs",
 };
