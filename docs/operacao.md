@@ -75,7 +75,8 @@ Aparece em `/status`. Se você souber a depositária **e a fonte**, acrescente u
 ```bash
 cd etl
 uv run painel-etl backfill fca --from 2010                    # FCA dos anos fechados
-uv run painel-etl backfill cotahist --from 2024-10            # partições mensais do COTAHIST
+uv run painel-etl backfill cotahist --from 2024-11            # partições mensais do COTAHIST (--datasets acoes,bdrs; lê cada ZIP uma vez)
+uv run painel-etl backfill fca-valores --from 2018            # valores mobiliários do FCA
 uv run painel-etl run --dataset all --weekly                  # publicação completa
 uv run painel-etl validate                                    # JSON Schemas
 ```
@@ -85,7 +86,7 @@ Depois, `git diff --stat data/` mostra o que mudou antes de commitar.
 Os dados são versionados: `git revert <commit de dados>` desfaz a publicação e a Vercel reimplanta. `data/events/` é append-only; ao reverter, remova à mão só os eventos do commit revertido.
 
 ### Eventos e feed
-`data/events/AAAA.jsonl` guarda cada mudança (troca de escriturador, novo BDR...). O site mostra os 500 mais recentes em `/novidades` e no feed Atom `/feed.xml`.
+`data/events/AAAA.jsonl` guarda cada mudança (troca de escriturador, novo BDR, entrada e saída das categorias de pouca negociação...). O site mostra os 500 mais recentes em `/novidades` e no feed Atom `/feed.xml`.
 
 ### Custos
 | item | estimativa | observação |
@@ -95,7 +96,10 @@ Os dados são versionados: `git revert <commit de dados>` desfaz a publicação 
 | GitHub Actions, se o repositório for privado | ≈ 200 min/mês | **estimativa, a medir nas primeiras execuções**: diário ~5 min × 22 + semanal ~15 min × 4 + mensal ~20 min + CI. Cabe nos 2.000 min gratuitos. Medido no ensaio local: o passo do ETL diário levou 60 s; some ~1 a 2 min de preparação do runner (uv, cache). Registre os tempos reais aqui depois da primeira semana |
 
 ### Limites de tamanho
-`data/public/` ≈ 1,5 MB (limite 15 MB). `data/history/` cresce ~165 KB por mês de COTAHIST e ~15 KB por ano de FCA. Se o repositório se aproximar de 500 MB, registre um ADR e mova os históricos para assets de GitHub Releases.
+`data/public/` ≈ 4 MB (orçamento de 20 MB em `config/indicadores.yaml`; o `painel-etl validate` e a build falham acima disso). `data/history/` cresce cerca de 315 KB por mês de COTAHIST (190 KB de BDRs e 125 KB de ações) e ~30 KB por ano de FCA. Se o repositório se aproximar de 500 MB, registre um ADR e mova os históricos para assets de GitHub Releases.
+
+### Tempo dos workflows
+Orçamento: diário abaixo de 8 minutos, mensal abaixo de 20. Medido em 2026-11-03, nesta máquina, sem o tempo de preparação do runner: `run --dataset all` em 1 min, sem pregão novo a processar; leitura de um arquivo `M` em cerca de 4 s (24 meses em 1 min 30 s). **Ainda falta medir no GitHub Actions** e registrar aqui.
 
 ### Pontos que dependem de você ou ainda não foram verificados
 - O `probe.yml` precisa ser rodado no GitHub (Passo 2).

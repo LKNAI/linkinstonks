@@ -22,7 +22,7 @@ ACAO = Categoria("acao", "b3_cotahist_acoes", "acoes_volume", "cotahist_acoes", 
 ### 2. Módulo em `datasets/`
 `etl/src/painel_etl/datasets/acoes_volume.py`, com a mesma forma dos outros: `construir(...)`, `validar(...)`, `csv_cabecalho/csv_linhas`. Ele soma o volume dos tickers de cada companhia (cadastro vindo de `acoes.json`) e **não descarta o que não casa**: vai para `nao_atribuido`, e companhias mais não atribuído reproduzem o total dos arquivos da B3.
 
-A função `run_<dataset>` entra em `pipeline.py` (`run_acoes_volume`) e é registrada em três lugares: o dicionário de `run()`, `DATASETS` em `cli.py` e `ARQUIVOS` (os arquivos que `painel-etl validate` confere). Quem usa partições históricas precisa de um `backfill`: `painel-etl backfill cotahist --from 2024-10 --categoria acao`.
+A função `run_<dataset>` entra em `pipeline.py` (`run_acoes_volume`) e é registrada em três lugares: o dicionário de `run()`, `DATASETS` em `cli.py` e `ARQUIVOS` (os arquivos que `painel-etl validate` confere). Quem usa partições históricas precisa de um `backfill`: `painel-etl backfill cotahist --from 2024-11 --datasets acoes`.
 
 Regras que todo dataset cumpre (a revisão confere):
 - saída determinística (chaves ordenadas, sem timestamp dentro dos dados), via `core/io`;

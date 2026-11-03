@@ -153,7 +153,7 @@ No site, a barra do gráfico (`/bdrs/{ticker}`) e a célula do volume mensal na 
 - **BDRs não têm fracionário:** nenhum registro em 25 meses (ADR 0005).
 - **`CODBDI` não filtra ações:** recuperação judicial está em 08, extrajudicial em 07, e `IBOV11` está em 02.
 - **O COTAHIST não tem registro com `TOTNEG` = 0:** sem negócio, não há linha. O trailer só conta registros; não há total de mercado.
-- **FCA `valor_mobiliario`:** 18 colunas, iguais de 2010 a 2026, uma referência por ano. Antes da referência de 2018 não há ticker e o segmento não é confiável.
+- **FCA `valor_mobiliario`:** 18 colunas, iguais de 2010 a 2026, uma referência por ano. Antes da referência de 2018 não há ticker e o segmento não é confiável; em 2018, as linhas sem ticker ainda usam os rótulos antigos. Ações e units de 2018 em diante ficam em `data/history/fca_valor_mobiliario/AAAA.csv.gz`.
 - **Empréstimo de ativos:** as páginas de acesso da B3 vedam a coleta automatizada (ADR 0006). Não coletar.
 - Layout oficial: `https://www.b3.com.br/data/files/33/67/B9/50/D84057102C784E47AC094EA8/SeriesHistoricas_Layout.pdf`.
 

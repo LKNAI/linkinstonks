@@ -13,3 +13,9 @@ Um recorte do COTAHIST é uma `Categoria` (nome, chave da fonte em `meta.fontes`
 - **Custo aceito:** cada categoria baixa de novo o arquivo diário (~0,6 MB por pregão) e o mensal (~10 MB), pois o `download` não reaproveita arquivo em disco. Para 2 categorias é irrelevante; com muitas, convém processar todas as categorias numa só leitura de cada arquivo (mudança local em `processar_diario`).
 - **Filtro de ações:** `^[A-Z0-9]{4}[3-8]B?F?$`, mais units (`11`) somente com espécie `UNT`, porque ETFs e FIIs também terminam em 11. Fica de fora o que não é ação à vista: bonificação (`BNS`), direito (`DIR`), ETF/FII (`CI`), opções e termo. Validado contra o arquivo de 28/10/2026 (702 registros de 367 tickers de ações).
 - **Volume sem dono:** tickers que não casam com nenhuma companhia do cadastro atual (por exemplo, empresas já deslistadas) não são descartados; vão para `nao_atribuido`. No primeiro cálculo foram 6,4% do volume em 24 meses; acima de 10% o ETL avisa.
+
+## Atualização (Fase 8, 2026-11-03)
+- **Custo aceito resolvido:** um único parser (`ler_arquivo`) lê cada arquivo uma vez e alimenta todas as categorias. O diário e o mensal não baixam mais o mesmo arquivo duas vezes.
+- **Filtro de ações:** passou do formato do ticker para a espécie (`config/indicadores.yaml`), que também aceita códigos especiais como `AZUL97`. O filtro antigo segue como conferência: em 24 meses, a diferença máxima é de 0,063%.
+- **Partições de ações:** `ACAO` grava em `data/history/acoes_liquidez/`, com quantidade, fracionário e dias com negócio. `data/history/acoes_volume/` fica como está e não é mais atualizada. O arquivo público `acoes_volume.json` passa a sair das novas partições.
+- **Campo `pregoes`:** nas partições mensais novas, traz todas as datas do arquivo. Antes, só o primeiro e o último pregão de cada ticker; as partições antigas de BDR seguem assim, sem efeito no site.
