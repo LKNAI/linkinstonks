@@ -15,6 +15,21 @@ export const ROTULO_TIPO = {
   novo_bdr: "Novo BDR",
   bdr_cancelado: "BDR cancelado",
   troca_depositaria: "Troca de depositária",
+  entrou_sem_negocios: "Sem negócios nos últimos meses",
+  saiu_sem_negocios: "Voltou a ter negócios",
+  entrou_presenca_baixa: "Entrou em presença baixa",
+  saiu_presenca_baixa: "Saiu de presença baixa",
+};
+
+// Espelha ROTULO_LIQUIDEZ de lib/rotulos.ts (este script roda no Node puro); tests/unit/feed.test.ts confere.
+export const ROTULO_LIQUIDEZ = {
+  sem_ticker: "Sem código de negociação",
+  listagem_recente: "Listagem recente",
+  sem_cotacao_no_periodo: "Sem cotação no período",
+  sem_negocios: "Sem negócios",
+  presenca_baixa: "Presença baixa",
+  presenca_media: "Presença média",
+  presenca_alta: "Presença alta",
 };
 
 // Espelha SEGMENTO_NOME de lib/palette.ts (este script roda no Node puro, sem o TypeScript); tests/unit/feed.test.ts confere.
@@ -48,6 +63,10 @@ export function mudancaDoEvento(e) {
     return `${seg(e.de)} → ${seg(e.para)}`;
   }
   if (e.tipo === "deslistagem") return null;
+  if (e.tipo.startsWith("entrou_") || e.tipo.startsWith("saiu_")) {
+    const r = (x) => (x == null ? "—" : (ROTULO_LIQUIDEZ[x] ?? x));
+    return `${r(e.de)} → ${r(e.para)}`;
+  }
   return `${e.de ?? "—"} → ${e.para ?? "—"}`;
 }
 

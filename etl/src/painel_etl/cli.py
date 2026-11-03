@@ -5,6 +5,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import sys
+import zipfile
 from pathlib import Path
 from typing import Annotated
 from zoneinfo import ZoneInfo
@@ -13,15 +14,18 @@ import typer
 
 from painel_etl import __version__, ci, issues, paths, pipeline, seed_import
 from painel_etl import probe as probe_mod
+from painel_etl.core.cache import raw_path
 from painel_etl.core.http import Http
 from painel_etl.core.state import State
+from painel_etl.indicadores import carregar as carregar_indicadores
 from painel_etl.sources import b3_cotahist, cvm_fca
 
 app = typer.Typer(help="ETL do Painel B3 (escrituradores de ações e BDRs).", no_args_is_help=True, add_completion=False)
 backfill_app = typer.Typer(help="Carga histórica.", no_args_is_help=True)
 app.add_typer(backfill_app, name="backfill")
 
-DATASETS = ("acoes", "bdrs", "acoes_volume")
+DATASETS = ("acoes", "bdrs", "acoes_volume", "acoes_liquidez")
+CATEGORIAS_BACKFILL = {"bdrs": b3_cotahist.BDR, "acoes": b3_cotahist.ACAO}
 
 
 def _gravar_relatorio(
@@ -105,27 +109,33 @@ def run(
 def backfill_cotahist(
     start: Annotated[str, typer.Option("--from", help="Mês inicial AAAA-MM.")],
     end: Annotated[str | None, typer.Option("--to", help="Mês final AAAA-MM (padrão: mês anterior ao atual).")] = None,
-    force: Annotated[bool, typer.Option(help="Rebaixa meses cuja partição já é a oficial (mensal).")] = False,
-    categoria: Annotated[str, typer.Option(help="Recorte do COTAHIST: bdr ou acao.")] = "bdr",
+    force: Annotated[bool, typer.Option(help="Refaz meses cuja partição já é a oficial (mensal).")] = False,
+    datasets: Annotated[str, typer.Option(help="Recortes separados por vírgula: acoes, bdrs.")] = "acoes,bdrs",
 ) -> None:
-    """Carrega partições mensais do COTAHIST (arquivos `M`) para `data/history/<categoria>_volume/`."""
+    """Carrega partições mensais do COTAHIST (arquivos `M`), lendo cada arquivo uma só vez."""
     _utf8()
     hoje = _hoje()
     fim = end or f"{(hoje.replace(day=1) - dt.timedelta(days=1)):%Y-%m}"
-    cats = {"bdr": b3_cotahist.BDR, "acao": b3_cotahist.ACAO}
-    if categoria not in cats:
-        raise typer.BadParameter(f"categoria deve ser uma de {sorted(cats)}")
-    cat = cats[categoria]
-    pasta = paths.data_dir() / "history" / cat.pasta
+    nomes = [n.strip() for n in datasets.split(",") if n.strip()]
+    if not nomes or any(n not in CATEGORIAS_BACKFILL for n in nomes):
+        raise typer.BadParameter(f"datasets deve usar {sorted(CATEGORIAS_BACKFILL)}")
     http = Http("b3_cotahist")
     for ano, mes in b3_cotahist.meses_entre(start, fim):
         chave = f"{ano}-{mes:02d}"
-        atual = b3_cotahist.ler_particao(chave, pasta)
-        if atual and atual["fonte"] == "mensal" and not force:
+        alvos = []
+        for n in nomes:
+            cat = CATEGORIAS_BACKFILL[n]
+            pasta = paths.data_dir() / "history" / cat.pasta
+            atual = b3_cotahist.ler_particao(chave, pasta)
+            if force or not (atual and atual["fonte"] == "mensal"):
+                alvos.append((cat, pasta))
+        if not alvos:
             typer.echo(f"{chave}: já oficial, pulando")
             continue
-        r = b3_cotahist.processar_mensal(http, ano, mes, cache=paths.cache_dir() / "b3_cotahist", pasta=pasta, cat=cat)
-        typer.echo(f"{chave}: {r['status']} ({r.get('tickers', 0)} tickers)")
+        r = b3_cotahist.processar_mensal_varias(
+            http, ano, mes, cache=paths.cache_dir() / "b3_cotahist", alvos=alvos, reutilizar=True
+        )
+        typer.echo(f"{chave}: " + ", ".join(f"{k} {v['status']} ({v.get('tickers', 0)} tickers)" for k, v in r.items()))
 
 
 @backfill_app.command("fca")
@@ -145,6 +155,26 @@ def backfill_fca(
             cvm_fca.salvar_particao(ano, linhas)
             typer.echo(f"{ano}: {len(linhas)} linhas")
     state.save()
+
+
+@backfill_app.command("fca-valores")
+def backfill_fca_valores(
+    start: Annotated[
+        int | None, typer.Option("--from", help="Ano inicial (padrão: o de config/indicadores.yaml).")
+    ] = None,
+) -> None:
+    """Grava os valores mobiliários do FCA em `data/history/fca_valor_mobiliario/`. Reaproveita os ZIPs do cache."""
+    _utf8()
+    inicio = start or carregar_indicadores().fca_valor_mobiliario.ano_inicial
+    http = Http("cvm_fca")
+    pasta = cvm_fca.valores_mobiliarios_dir()
+    for ano in range(inicio, _hoje().year + 1):
+        destino = raw_path("cvm_fca", f"fca_{ano}.zip", paths.cache_dir())
+        if not (destino.exists() and zipfile.is_zipfile(destino)):
+            http.download(cvm_fca.url_ano(ano), destino).raise_for_status()
+        linhas = list(cvm_fca.parse_valor_mobiliario(destino))
+        cvm_fca.salvar_valores_mobiliarios(ano, linhas, pasta)
+        typer.echo(f"{ano}: {len(linhas)} linhas")
 
 
 @app.command()

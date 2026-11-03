@@ -15,6 +15,7 @@ import {
   totaisMensais,
   type FiltrosBdrs,
 } from "@/lib/bdrs";
+import { formatDinheiro, formatInt } from "@/lib/format";
 import { bdrsDocSchema } from "@/lib/schemas";
 import { publico } from "../dados";
 
@@ -24,9 +25,11 @@ const meses = doc.meses;
 const f = (p: Partial<FiltrosBdrs> = {}): FiltrosBdrs => ({ ...FILTROS_BDR_PADRAO, ...p });
 
 describe("painel de BDRs (dados reais)", () => {
-  it("24 meses fechados e 1.152 BDRs", () => {
+  // Os dados mudam todo mês: a contagem vem do próprio arquivo, sem número fixo aqui.
+  it("24 meses fechados e uma linha por BDR", () => {
     expect(meses).toHaveLength(24);
-    expect(rows).toHaveLength(1152);
+    expect(rows).toHaveLength(doc.bdrs.length);
+    expect(rows.length).toBeGreaterThan(1000);
     expect(rows.every((d) => d.volume_mensal.length === 24)).toBe(true);
   });
 
@@ -40,16 +43,16 @@ describe("painel de BDRs (dados reais)", () => {
     const off = filtrarBdrs(rows, f({ st: "off" }));
     expect(on.length + off.length).toBe(rows.length);
     expect(on.every((d) => d.volume_mensal[23] > 0)).toBe(true);
-    expect(on).toHaveLength(966);
+    expect(on).toHaveLength(doc.bdrs.filter((b) => b.volume_mensal[23] > 0).length);
   });
 
   it("KPIs coerentes", () => {
     const { kpis } = kpisBdrs(rows, meses);
     expect(kpis).toHaveLength(6);
-    expect(kpis[0].valor).toBe("1.152");
-    expect(kpis[1].valor).toBe("R$ 538 bi");
+    expect(kpis[0].valor).toBe(formatInt(rows.length));
+    expect(kpis[1].valor).toBe(formatDinheiro(rows.reduce((a, d) => a + d.tot, 0)));
     expect(kpis[4].sub).toContain("Banco B3");
-    expect(kpis[5].valor).toBe("TSLA34");
+    expect(kpis[5].valor).toBe([...rows].sort((a, b) => b.tot - a.tot)[0].ticker);
   });
 
   it("volume mensal por tipo soma o total de 24 meses", () => {

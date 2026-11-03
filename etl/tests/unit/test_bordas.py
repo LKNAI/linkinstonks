@@ -54,6 +54,10 @@ def cotahist(tmp_path: Path) -> Path:
     state.set("inicio", "2026-10-28")
     state.set("processados", ["2026-10-27"])
     state.save()
+    acoes = State("cotahist_acoes", tmp_path / "state")
+    acoes.set("inicio", "2026-10-28")
+    acoes.set("processados", ["2026-10-27"])
+    acoes.save()
     return pasta
 
 

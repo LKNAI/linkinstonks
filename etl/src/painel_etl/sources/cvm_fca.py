@@ -26,6 +26,11 @@ from painel_etl.normalize import cnpj as cnpj_mod
 BASE = "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/FCA/DADOS"
 ANO_INICIAL = 2010
 COLUNAS = ["cnpj", "referencia", "versao", "empresa", "escriturador", "cnpj_escriturador", "inicio", "fim"]
+COLUNAS_VM = [
+    "cnpj", "referencia", "versao", "valor_mobiliario", "ticker", "mercado", "entidade", "inicio_negociacao",
+    "fim_negociacao", "segmento", "inicio_listagem", "fim_listagem",
+]  # fmt: skip
+PREFIXOS_ACAO = ("Ações", "Units")  # debêntures, notas comerciais e bônus ficam de fora
 
 
 class FcaRow(BaseModel):
@@ -41,6 +46,27 @@ class FcaRow(BaseModel):
     @property
     def ano(self) -> int:
         return int(self.referencia[:4])
+
+
+class ValorMobiliarioRow(BaseModel):
+    """Ação ou unit de `fca_cia_aberta_valor_mobiliario_{AAAA}.csv`, na maior versão do documento."""
+
+    cnpj: str  # companhia, 14 dígitos
+    referencia: str  # AAAA-MM-DD; há uma referência por ano (AAAA-01-01)
+    versao: int
+    valor_mobiliario: str
+    ticker: str
+    mercado: str
+    entidade: str
+    inicio_negociacao: str
+    fim_negociacao: str
+    segmento: str
+    inicio_listagem: str
+    fim_listagem: str
+
+    @property
+    def ativo(self) -> bool:
+        return not self.fim_negociacao and not self.fim_listagem
 
 
 def url_ano(ano: int) -> str:
@@ -95,6 +121,59 @@ def parse_zip(path: Path) -> Iterator[FcaRow]:
             inicio=r["Data_Inicio_Atuacao"].strip(),
             fim=r["Data_Fim_Atuacao"].strip(),
         )
+
+
+def parse_valor_mobiliario(path: Path) -> Iterator[ValorMobiliarioRow]:
+    """Linhas de ações e units do CSV de valores mobiliários, só a maior versão de cada documento."""
+    with zipfile.ZipFile(path) as z:
+        nome = next(n for n in z.namelist() if "valor_mobiliario" in n)
+        texto = io.TextIOWrapper(io.BytesIO(z.read(nome)), encoding="iso-8859-1", newline="")
+        linhas = list(csv.DictReader(texto, delimiter=";"))
+    maior: dict[tuple[str, str], int] = {}
+    for r in linhas:
+        k = (r["CNPJ_Companhia"], r["Data_Referencia"])
+        maior[k] = max(maior.get(k, 0), int(r["Versao"] or 0))
+    for r in linhas:
+        if int(r["Versao"] or 0) != maior[(r["CNPJ_Companhia"], r["Data_Referencia"])]:
+            continue
+        if not r["Valor_Mobiliario"].startswith(PREFIXOS_ACAO):
+            continue
+        yield ValorMobiliarioRow(
+            cnpj=cnpj_mod.digits(r["CNPJ_Companhia"]),
+            referencia=r["Data_Referencia"],
+            versao=int(r["Versao"] or 0),
+            valor_mobiliario=r["Valor_Mobiliario"].strip(),
+            ticker=r["Codigo_Negociacao"].strip(),
+            mercado=r["Mercado"].strip(),
+            entidade=r["Entidade_Administradora"].strip(),
+            inicio_negociacao=r["Data_Inicio_Negociacao"].strip(),
+            fim_negociacao=r["Data_Fim_Negociacao"].strip(),
+            segmento=r["Segmento"].strip(),
+            inicio_listagem=r["Data_Inicio_Listagem"].strip(),
+            fim_listagem=r["Data_Fim_Listagem"].strip(),
+        )
+
+
+def valores_mobiliarios_dir(raiz: Path | None = None) -> Path:
+    return (raiz or paths.data_dir()) / "history" / "fca_valor_mobiliario"
+
+
+def salvar_valores_mobiliarios(ano: int, linhas: list[ValorMobiliarioRow], pasta: Path) -> bool:
+    """`data/history/fca_valor_mobiliario/AAAA.csv.gz`, ordenado de forma estável."""
+    ordenadas = sorted(linhas, key=lambda x: (x.cnpj, x.referencia, x.valor_mobiliario, x.ticker, x.inicio_negociacao))
+    return pio.write_csv_gz(
+        pasta / f"{ano}.csv.gz", COLUNAS_VM, ([getattr(x, c) for c in COLUNAS_VM] for x in ordenadas)
+    )
+
+
+def carregar_valores_mobiliarios(pasta: Path) -> dict[str, list[ValorMobiliarioRow]]:
+    """Todas as partições, agrupadas por CNPJ da companhia. Pasta vazia ou ausente devolve vazio."""
+    saida: dict[str, list[ValorMobiliarioRow]] = {}
+    for arq in sorted(pasta.glob("*.csv.gz")):
+        for r in pio.read_csv_gz(arq):
+            row = ValorMobiliarioRow.model_validate({**r, "versao": int(r["versao"])})
+            saida.setdefault(row.cnpj, []).append(row)
+    return saida
 
 
 def salvar_particao(ano: int, linhas: list[FcaRow], pasta: Path | None = None) -> bool:

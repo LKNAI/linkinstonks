@@ -194,10 +194,10 @@ class TestMensal:
         assert r.fontes["b3_cotahist"]["status"] == "desatualizado"
 
 
-@pytest.mark.parametrize("nome", ["acoes", "bdrs", "acoes_volume"])
+@pytest.mark.parametrize("nome", ["acoes", "bdrs", "acoes_volume", "acoes_liquidez"])
 def test_snapshots_nao_sao_criados_sem_publicacao(tmp_path: Path, nome: str) -> None:
     ctx = pipeline.Contexto(hoje=dt.date(2026, 10, 5), raiz=tmp_path, cache=tmp_path / "c")
-    for pasta in ("bdr_volume", "acoes_volume"):
+    for pasta in ("bdr_volume", "acoes_liquidez"):
         b3_cotahist.gravar_particao("2026-09", {}, "mensal", [], tmp_path / "history" / pasta)
     r = pipeline.mensal(ctx)
     assert r.publicado and not (tmp_path / "history" / "snapshots" / "2026-09" / f"{nome}.csv.gz").exists()

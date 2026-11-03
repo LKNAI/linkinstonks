@@ -1,0 +1,45 @@
+# Parâmetros dos indicadores da Fase 8. Definições e fórmulas: docs/metodologia.md. Nenhum limiar fica fixo no código.
+
+liquidez:
+  # 1º token de ESPECI aceito como ação. Ficam de fora BNS (bônus), DIR (direito), TPR, CI (ETF/FII), DR* (BDR) e IBO.
+  especies_acao: ["ON", "PN", "PNA", "PNB", "PNC", "PND", "UNT"]  # com aspas: YAML lê ON como booleano
+  # Complementos de ESPECI que tiram o registro do filtro, mesmo com espécie aceita: PN REC é recibo, não ação.
+  complementos_excluidos: ["REC"]
+  janelas_agregados_meses: [3, 6, 12]
+  janela_sem_negocios_meses: 3   # meses fechados sem nenhum registro => sem_negocios
+  janela_presenca_meses: 6       # janela da categoria de presença
+  listagem_recente_meses: 3      # listada há menos que isto => listagem_recente
+  presenca_baixa_abaixo_de: 0.25
+  presenca_alta_acima_de: 0.75
+  # Diferença tolerada entre o filtro por espécie e o filtro por formato de ticker (ADR 0004), como conferência.
+  # Medido em 24 meses: máximo de 0,063% (códigos especiais como AZUL53, que só o filtro por espécie aceita).
+  tolerancia_filtros: 0.001
+
+perfil_bdr:
+  min_negocios_mes: 30           # abaixo disto, "dados insuficientes" no mês
+  janela_resumo_meses: 12
+
+# TOTNEG tem 5 dígitos (N(05) no layout da B3) e parece perder o que passa de 99.999. A fonte não é corrigida:
+# os meses marcados recebem um selo. Ver docs/metodologia.md.
+estouro_negocios:
+  limite_campo: 100000
+  negocios_esperados_min: 60000  # só avalia dias em que QUATOT / tamanho típico do negócio chega a isto
+  dias_minimos_mes: 5            # com menos pregões no mês, não há tamanho típico confiável
+  # Papel que negocia pouco não chega a 100 mil negócios num dia: ali, QUATOT alto é negócio em bloco, não estouro.
+  negocios_tipicos_min: 10000    # mediana diária de TOTNEG nos demais pregões do mês
+
+fca_valor_mobiliario:
+  ano_inicial: 2018              # antes da referência de 2018 não há ticker e o segmento não é confiável
+  # 27 tickers têm esta mesma data de início de listagem; parece um valor padrão, não a listagem real.
+  datas_listagem_incertas: ["1977-07-20"]
+  # Texto do FCA -> segmento da B3 em `acoes.json`. O que não estiver aqui nunca gera selo de divergência.
+  segmento_cvm_para_b3:
+    "Novo Mercado": NM
+    "Nível 2 de Governança Corporativa": N2
+    "Nível 1 de Governança Corporativa": N1
+    "Bovespa Mais": MP
+    "Básico": B
+
+# O build e o `painel-etl validate` falham se data/public passar disto (snapshots têm orçamento próprio, item 8.6).
+orcamento:
+  data_public_mb: 20

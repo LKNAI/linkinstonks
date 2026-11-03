@@ -174,6 +174,7 @@ def linha_cot(
     neg: int = 10,
     vol: int = 100000,
     isin: str = "BRACMEBDR001",
+    qtd: int = 100,
 ) -> str:
     c = [" "] * 245
 
@@ -187,6 +188,7 @@ def linha_cot(
     poe(24, mercado)
     poe(27, nome.ljust(12))
     poe(39, especi.ljust(10))
+    poe(152, f"{qtd:018d}")
     poe(108, f"{preco:013d}")
     poe(147, f"{neg:05d}")
     poe(170, f"{vol:018d}")
@@ -331,7 +333,7 @@ class TestCotahistAcoes:
         ls = self.linhas(fixtures)
         acoes = [c for c in (b3_cotahist.parse_linha(x, b3_cotahist.ACAO) for x in ls) if c]
         bdrs = [c for c in (b3_cotahist.parse_linha(x, b3_cotahist.BDR) for x in ls) if c]
-        assert len(acoes) == 34 and len(bdrs) == 2
+        assert len(acoes) == 36 and len(bdrs) == 2  # 34 pelo formato do ticker + AZUL97 e AZUL98, units
         assert {c.especi.split()[0] for c in acoes} >= {"ON", "PN", "PNA", "UNT"}
         assert {c.mercado for c in acoes} == {"010", "020"}
         assert not {c.codneg for c in acoes} & {c.codneg for c in bdrs}  # as categorias não se sobrepõem

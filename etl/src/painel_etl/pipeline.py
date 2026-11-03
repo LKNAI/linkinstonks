@@ -22,13 +22,17 @@ from painel_etl.core import io as pio
 from painel_etl.core.http import Http
 from painel_etl.core.state import State
 from painel_etl.datasets import acoes as ds_acoes
+from painel_etl.datasets import acoes_liquidez as ds_liquidez
 from painel_etl.datasets import acoes_volume as ds_acoes_volume
 from painel_etl.datasets import bdrs as ds_bdrs
+from painel_etl.datasets import valores_mobiliarios as ds_valores
+from painel_etl.indicadores import carregar as carregar_indicadores
 from painel_etl.normalize.instituicoes import Registro
 from painel_etl.sources import b3_cotahist, b3_finservices, bradesco_bdr, cvm_cad, cvm_fca
 from painel_etl.sources.b3_listed import B3Listed, CompanyDetail, EtfRow, ListedCompany
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = "1.1"
+SCHEMA_VERSION_NOVOS = "1.0"  # arquivos criados na Fase 8
 HEARTBEAT_DIAS = 2  # meta.json só é regravado sem mudança de dados a cada (HEARTBEAT_DIAS + 1) dias
 QUEDA_SCRAPER = 0.20
 SPONSORED = {"DR1", "DR2", "DR3"}
@@ -47,6 +51,7 @@ class Contexto:
     cache: Path = field(default_factory=paths.cache_dir)
     http: Callable[[str], Http] = Http
     listadas: list[ListedCompany] | None = None
+    cotahist: dict[str, dict[str, Any]] | None = None  # resultado da passada única pelos arquivos da B3
 
 
 @dataclass
@@ -113,11 +118,15 @@ def run_acoes(ctx: Contexto) -> Resultado:
 
     # FCA: o ano corrente é verificado por ETag; os anos fechados vêm de data/history/fca (backfill)
     state_fca = State("cvm_fca", ctx.raiz / "state")
+    pasta_vm = cvm_fca.valores_mobiliarios_dir(ctx.raiz)
     try:
         if not ctx.dry_run:
             artefato = cvm_fca.fetch_ano(ctx.http("cvm_fca"), ctx.hoje.year, state=state_fca, cache=ctx.cache)
             if artefato and artefato.mudou:
                 cvm_fca.salvar_particao(ctx.hoje.year, list(cvm_fca.parse_zip(artefato.path)))
+                cvm_fca.salvar_valores_mobiliarios(
+                    ctx.hoje.year, list(cvm_fca.parse_valor_mobiliario(artefato.path)), pasta_vm
+                )
             state_fca.save()
         res.fontes["cvm_fca"] = {"status": "ok"}
     except Exception as e:
@@ -143,9 +152,11 @@ def run_acoes(ctx: Contexto) -> Resultado:
     except Exception as e:
         res.avisos.append(f"GetDetail falhou; mantendo detalhes anteriores: {e}")
         detalhes = {}
+    valores = cvm_fca.carregar_valores_mobiliarios(pasta_vm)
     companhias, historico, nao_mapeados = ds_acoes.construir(
-        acoes_b3, detalhes, cvm_fca.carregar_historico(), cad, reg, previo
+        acoes_b3, detalhes, cvm_fca.carregar_historico(), cad, reg, previo, valores
     )
+    _classificar_liquidez(ctx, res, companhias, valores, previo)
     res.nao_mapeados = nao_mapeados
     if nao_mapeados:
         res.avisos.append(f"escrituradores não mapeados (incluir em config/instituicoes.yaml): {nao_mapeados}")
@@ -162,12 +173,61 @@ def run_acoes(ctx: Contexto) -> Resultado:
         doc_hist = {"companhias": historico, "schema_version": SCHEMA_VERSION}
         schema.validar("acoes_historico_escrituradores", doc_hist)
         res.mudou |= pio.write_json(pub(ctx.raiz) / "acoes_historico_escrituradores.json", doc_hist, 0)
+        doc_seg = {
+            "companhias": ds_acoes.historico_segmentos(companhias, valores),
+            "schema_version": SCHEMA_VERSION_NOVOS,
+        }
+        schema.validar("acoes_historico_segmentos", doc_seg)
+        res.mudou |= pio.write_json(pub(ctx.raiz) / "acoes_historico_segmentos.json", doc_seg, 0)
         res.mudou |= pio.write_csv(
             pub(ctx.raiz) / "downloads" / "acoes.csv", ds_acoes.CSV_COLUNAS, ds_acoes.csv_linhas(companhias)
         )
         res.eventos = pio.append_jsonl(ctx.raiz / "events" / f"{ctx.hoje.year}.jsonl", eventos)
     res.publicado = True
     return res
+
+
+def _tickers_historicos(
+    ctx: Contexto, res: Resultado, companhias: list[dict[str, Any]], valores: dict[str, Any]
+) -> dict[str, str]:
+    """Ticker antigo -> companhia, pelo FCA e pela curadoria manual (`config/overrides/tickers_historicos.csv`)."""
+    atuais = {t["ticker"] for c in companhias for t in c["tickers"]}
+    por_cnpj = {"".join(ch for ch in c["cnpj"] if ch.isdigit()): c["codigo_cvm"] for c in companhias}
+    mapa, ambiguos = ds_valores.tickers_historicos(valores, por_cnpj, atuais, ds_valores.ler_overrides_tickers())
+    if ambiguos:
+        res.avisos.append(f"tickers antigos com mais de uma companhia no FCA, não atribuídos: {ambiguos}")
+    return mapa
+
+
+def _classificar_liquidez(
+    ctx: Contexto,
+    res: Resultado,
+    companhias: list[dict[str, Any]],
+    valores: dict[str, Any],
+    previo: dict[str, dict[str, Any]],
+) -> None:
+    """Preenche `liquidez` em cada companhia. Sem partições completas, mantém a última classificação boa."""
+    _atualizar_cotahist(ctx)
+    meses = ds_bdrs.meses_fechados(ctx.hoje)
+    pasta = ctx.raiz / "history" / b3_cotahist.ACAO.pasta
+    particoes = {m: p for m in meses if (p := b3_cotahist.ler_particao(m, pasta))}
+    if any(m not in particoes for m in meses):
+        for c in companhias:
+            c["liquidez"] = previo.get(c["codigo_cvm"], {}).get("liquidez")
+        res.avisos.append("liquidez: partições de ações incompletas; mantida a última classificação")
+        return
+    cfg = carregar_indicadores().liquidez
+    historicos = _tickers_historicos(ctx, res, companhias, valores)
+    for c in companhias:
+        c["liquidez"] = ds_liquidez.classificar(
+            [t["ticker"] for t in c["tickers"]],
+            ds_liquidez.tickers_da_companhia(c, historicos),
+            (c["listagem"] or {}).get("desde"),
+            particoes,
+            meses,
+            ctx.hoje,
+            cfg,
+        )
 
 
 # ------------------------------------------------------------------------------------------ BDRs
@@ -236,30 +296,59 @@ def _bradesco(ctx: Contexto, res: Resultado) -> None:
     res.fontes["bradesco"] = {"status": "ok", "contagem": len(atual.acoes) + len(atual.etfs)}
 
 
-def _cotahist(ctx: Contexto, res: Resultado, cat: b3_cotahist.Categoria = b3_cotahist.BDR) -> None:
-    """Atualiza as partições mensais do COTAHIST de uma categoria (BDRs, ações...) a partir dos arquivos da B3."""
+def _atualizar_cotahist(ctx: Contexto) -> dict[str, dict[str, Any]]:
+    """Atualiza as partições de todas as categorias numa só passada pelos arquivos da B3, uma vez por execução."""
+    if ctx.cotahist is not None:
+        return ctx.cotahist
+    ctx.cotahist = {}
     if ctx.dry_run:
-        return
-    state = State(cat.estado, ctx.raiz / "state")
+        return ctx.cotahist
+    alvos = [
+        (cat, ctx.raiz / "history" / cat.pasta, State(cat.estado, ctx.raiz / "state")) for cat in b3_cotahist.CATEGORIAS
+    ]
     http = ctx.http("b3_cotahist")
-    pasta = ctx.raiz / "history" / cat.pasta
+    cache = ctx.cache / "b3_cotahist"
     try:
-        b3_cotahist.processar_diario(http, state, ctx.hoje, cache=ctx.cache / "b3_cotahist", pasta=pasta, cat=cat)
+        b3_cotahist.processar_diario_varias(http, ctx.hoje, cache=cache, alvos=alvos)
         anterior = ctx.hoje.replace(day=1) - dt.timedelta(days=1)
-        parte = b3_cotahist.ler_particao(f"{anterior:%Y-%m}", pasta)
-        if parte is None or parte["fonte"] != "mensal":  # fecha o mês anterior assim que o arquivo M sair
-            m = b3_cotahist.processar_mensal(
-                http, anterior.year, anterior.month, cache=ctx.cache / "b3_cotahist", pasta=pasta, cat=cat
+        pendentes = [
+            (cat, pasta)
+            for cat, pasta, _ in alvos
+            if (p := b3_cotahist.ler_particao(f"{anterior:%Y-%m}", pasta)) is None or p["fonte"] != "mensal"
+        ]  # fecha o mês anterior assim que o arquivo M sair
+        mensal_info: dict[str, dict[str, Any]] = {}
+        if pendentes:
+            mensal_info = b3_cotahist.processar_mensal_varias(
+                http, anterior.year, anterior.month, cache=cache, alvos=pendentes
             )
-            if m.get("alerta"):
-                res.avisos.append(
+        for cat, _pasta, state in alvos:
+            state.save()
+            info = {"status": "ok", "ultimo_pregao": (state.get("processados") or [""])[-1]}
+            m = mensal_info.get(cat.nome, {})
+            ctx.cotahist[cat.nome] = {
+                "fonte": info,
+                "aviso": (
                     f"COTAHIST {m['mes']} ({cat.nome}): diário e mensal diferem {m['diferenca_vs_diario']:.2%} (> 0,5%)"
-                )
-        state.save()
-        res.fontes[cat.fonte] = {"status": "ok", "ultimo_pregao": (state.get("processados") or [""])[-1]}
+                    if m.get("alerta")
+                    else None
+                ),
+            }
     except Exception as e:
-        res.fontes[cat.fonte] = {"status": "desatualizado", "mensagem": str(e)[:200]}
-        res.avisos.append(f"COTAHIST indisponível; usando as partições existentes: {e}")
+        for cat, _pasta, _state in alvos:
+            ctx.cotahist[cat.nome] = {
+                "fonte": {"status": "desatualizado", "mensagem": str(e)[:200]},
+                "aviso": f"COTAHIST indisponível; usando as partições existentes: {e}",
+            }
+    return ctx.cotahist
+
+
+def _cotahist(ctx: Contexto, res: Resultado, cat: b3_cotahist.Categoria = b3_cotahist.BDR) -> None:
+    """Registra no resultado de um dataset o que a passada única pelos arquivos da B3 deu para a sua categoria."""
+    info = _atualizar_cotahist(ctx).get(cat.nome)
+    if info:
+        res.fontes[cat.fonte] = info["fonte"]
+        if info["aviso"]:
+            res.avisos.append(info["aviso"])
 
 
 def run_bdrs(ctx: Contexto) -> Resultado:
@@ -290,9 +379,12 @@ def run_bdrs(ctx: Contexto) -> Resultado:
             return res
     fin = _finservices(ctx, res)
     _bradesco(ctx, res)
+    pasta_suspeitos = ctx.raiz / "history" / b3_cotahist.PASTA_NEGOCIOS_SUSPEITOS
+    suspeitos = {m: b3_cotahist.ler_suspeitos(m, pasta_suspeitos) for m in meses}
+    cfg_perfil = carregar_indicadores().perfil_bdr
     bdrs, nao_mapeados = ds_bdrs.construir(
         particoes, meses, parcial_ok, etfs=etfs, deps_api=deps_api, nomes_api=nomes_api, finservices=fin,
-        overrides=ds_bdrs.ler_overrides(), reg=reg,
+        overrides=ds_bdrs.ler_overrides(), reg=reg, suspeitos=suspeitos, cfg_perfil=cfg_perfil,
     )  # fmt: skip
     res.nao_mapeados = nao_mapeados
     if nao_mapeados:
@@ -306,8 +398,10 @@ def run_bdrs(ctx: Contexto) -> Resultado:
         "fontes_volume": ds_bdrs.fontes_volume(particoes, meses, parcial_ok),
         "mes_parcial": parcial_ok,
         "meses": meses,
+        "min_negocios_mes": cfg_perfil.min_negocios_mes,
         "pagina_fonte": b3_cotahist.PAGINA_FONTE,
         "schema_version": SCHEMA_VERSION,
+        "ticket_quartis": ds_bdrs.quartis_por_mes(particoes, meses, cfg_perfil),
     }
     schema.validar("bdrs", doc)
     eventos = diff.diff_bdrs(previo, _indexar(bdrs, "ticker"), ctx.hoje)
@@ -340,10 +434,12 @@ def run_acoes_volume(ctx: Contexto) -> Resultado:
     if faltando:
         res.erro = (
             f"partições de ações do COTAHIST ausentes: {faltando[:3]}... "
-            "(rode `painel-etl backfill cotahist --categoria acao`)"
+            "(rode `painel-etl backfill cotahist --datasets acoes`)"
         )
         return res
-    cias, nao = ds_acoes_volume.construir(particoes, meses, parcial_ok, acoes_doc["companhias"])
+    valores = cvm_fca.carregar_valores_mobiliarios(cvm_fca.valores_mobiliarios_dir(ctx.raiz))
+    historicos = _tickers_historicos(ctx, res, acoes_doc["companhias"], valores)
+    cias, nao = ds_acoes_volume.construir(particoes, meses, parcial_ok, acoes_doc["companhias"], historicos)
     rel = ds_acoes_volume.validar(cias, nao, anterior or None, ctx.hoje)
     res.relatorio, res.contagem = rel, len(cias)
     if not rel.ok:
@@ -364,6 +460,60 @@ def run_acoes_volume(ctx: Contexto) -> Resultado:
             pub(ctx.raiz) / "downloads" / "acoes_volume.csv",
             ds_acoes_volume.csv_cabecalho(meses),
             ds_acoes_volume.csv_linhas(cias),
+        )
+    res.publicado = True
+    return res
+
+
+def run_acoes_liquidez(ctx: Contexto) -> Resultado:
+    """Liquidez mensal por ticker e por companhia (itens 8.1 e 8.2), a partir das mesmas partições do volume."""
+    res = Resultado("acoes_liquidez")
+    destino = pub(ctx.raiz) / "acoes_liquidez.json"
+    anterior = len(pio.read_json(destino, {"companhias": []})["companhias"])
+    acoes_doc = pio.read_json(pub(ctx.raiz) / "acoes.json")
+    if not acoes_doc:
+        res.erro = "acoes.json ausente: o cadastro de tickers vem do dataset `acoes`"
+        return res
+    _cotahist(ctx, res, b3_cotahist.ACAO)
+    meses = ds_bdrs.meses_fechados(ctx.hoje)
+    parcial = f"{ctx.hoje:%Y-%m}"
+    pasta = ctx.raiz / "history" / b3_cotahist.ACAO.pasta
+    particoes = {m: p for m in [*meses, parcial] if (p := b3_cotahist.ler_particao(m, pasta))}
+    parcial_ok = parcial if parcial in particoes else None
+    faltando = [m for m in meses if m not in particoes]
+    if faltando:
+        res.erro = (
+            f"partições de ações do COTAHIST ausentes: {faltando[:3]}... "
+            "(rode `painel-etl backfill cotahist --datasets acoes`)"
+        )
+        return res
+    cfg = carregar_indicadores().liquidez
+    valores = cvm_fca.carregar_valores_mobiliarios(cvm_fca.valores_mobiliarios_dir(ctx.raiz))
+    historicos = _tickers_historicos(ctx, res, acoes_doc["companhias"], valores)
+    pasta_suspeitos = ctx.raiz / "history" / b3_cotahist.PASTA_NEGOCIOS_SUSPEITOS
+    suspeitos = {m: b3_cotahist.ler_suspeitos(m, pasta_suspeitos) for m in meses}
+    partes = ds_liquidez.construir(particoes, meses, parcial_ok, acoes_doc["companhias"], historicos, suspeitos, cfg)
+    doc = {
+        **partes,
+        "fontes_volume": ds_acoes_volume.fontes_volume(particoes, meses, parcial_ok),
+        "mes_parcial": parcial_ok,
+        "meses": meses,
+        "pagina_fonte": b3_cotahist.PAGINA_FONTE,
+        "schema_version": SCHEMA_VERSION_NOVOS,
+    }
+    rel = ds_liquidez.validar(doc, particoes, anterior or None, cfg)
+    res.relatorio, res.contagem = rel, len(doc["companhias"])
+    if not rel.ok:
+        return res
+    schema.validar("acoes_liquidez", doc)
+    if not ctx.dry_run:
+        res.mudou |= pio.write_json(destino, doc, 0)
+        categorias = {c["codigo_cvm"]: (c.get("liquidez") or {}).get("categoria") for c in acoes_doc["companhias"]}
+        janelas = cfg.janelas_agregados_meses
+        res.mudou |= pio.write_csv(
+            pub(ctx.raiz) / "downloads" / "acoes_liquidez.csv",
+            ds_liquidez.csv_cabecalho(janelas),
+            ds_liquidez.csv_linhas(doc["companhias"], categorias, janelas),
         )
     res.publicado = True
     return res
@@ -396,7 +546,7 @@ def publicar_eventos(ctx: Contexto) -> bool:
 def atualizar_meta(ctx: Contexto, resultados: list[Resultado]) -> bool:
     """`meta.json` por fonte. Só é regravado se algo mudou ou se o último sucesso passou do batimento."""
     caminho = pub(ctx.raiz) / "meta.json"
-    atual = pio.read_json(caminho, {"datasets": {}, "fontes": {}, "schema_version": SCHEMA_VERSION})
+    atual = {**pio.read_json(caminho, {"datasets": {}, "fontes": {}}), "schema_version": SCHEMA_VERSION}
     hoje = ctx.hoje.isoformat()
     for r in resultados:
         for nome, info in r.fontes.items():
@@ -424,11 +574,13 @@ ARQUIVOS = {
     "meta.json": "meta",
     "acoes_historico_escrituradores.json": "acoes_historico_escrituradores",
     "acoes_volume.json": "acoes_volume",
+    "acoes_liquidez.json": "acoes_liquidez",
+    "acoes_historico_segmentos.json": "acoes_historico_segmentos",
 }
 
 
 def validar_publicados(raiz: Path | None = None) -> list[str]:
-    """Valida cada arquivo de `data/public` contra o seu JSON Schema. Vazio = tudo certo."""
+    """Valida cada arquivo de `data/public` contra o seu JSON Schema e o orçamento de tamanho. Vazio = tudo certo."""
     saida = []
     for arquivo, nome in ARQUIVOS.items():
         caminho = pub(raiz) / arquivo
@@ -436,6 +588,10 @@ def validar_publicados(raiz: Path | None = None) -> list[str]:
             saida.append(f"{arquivo}: ausente")
             continue
         saida += [f"{arquivo}: {e}" for e in schema.erros(nome, pio.read_json(caminho))]
+    limite = carregar_indicadores().orcamento.data_public_mb
+    tamanho = sum(a.stat().st_size for a in pub(raiz).rglob("*") if a.is_file()) / 1_000_000
+    if tamanho > limite:
+        saida.append(f"data/public: {tamanho:.1f} MB, acima do orçamento de {limite} MB")
     return saida
 
 
@@ -460,7 +616,13 @@ def run(ctx: Contexto, datasets: list[str]) -> list[Resultado]:
     resultados = []
     for nome in datasets:
         try:
-            resultados.append({"acoes": run_acoes, "bdrs": run_bdrs, "acoes_volume": run_acoes_volume}[nome](ctx))
+            executar = {
+                "acoes": run_acoes,
+                "bdrs": run_bdrs,
+                "acoes_volume": run_acoes_volume,
+                "acoes_liquidez": run_acoes_liquidez,
+            }[nome]
+            resultados.append(executar(ctx))
         except Exception as e:
             r = Resultado(nome, erro=f"{type(e).__name__}: {e}")
             r.avisos.append(traceback.format_exc(limit=3))
@@ -484,15 +646,20 @@ def mensal(ctx: Contexto) -> Resultado:
     anterior = ctx.hoje.replace(day=1) - dt.timedelta(days=1)
     mes = f"{anterior:%Y-%m}"
     try:
-        for cat in (b3_cotahist.BDR, b3_cotahist.ACAO):
-            pasta = ctx.raiz / "history" / cat.pasta
-            parte = b3_cotahist.ler_particao(mes, pasta)
-            if parte is not None and parte["fonte"] == "mensal":
-                continue
-            m = b3_cotahist.processar_mensal(
-                ctx.http("b3_cotahist"), anterior.year, anterior.month, cache=ctx.cache / "b3_cotahist", pasta=pasta,
-                cat=cat,
-            )  # fmt: skip
+        pendentes = [
+            (cat, ctx.raiz / "history" / cat.pasta)
+            for cat in b3_cotahist.CATEGORIAS
+            if (p := b3_cotahist.ler_particao(mes, ctx.raiz / "history" / cat.pasta)) is None or p["fonte"] != "mensal"
+        ]
+        resumos = (
+            b3_cotahist.processar_mensal_varias(
+                ctx.http("b3_cotahist"), anterior.year, anterior.month, cache=ctx.cache / "b3_cotahist", alvos=pendentes
+            )
+            if pendentes
+            else {}
+        )
+        for cat, _pasta in pendentes:
+            m = resumos[cat.nome]
             res.fontes[cat.fonte] = {"status": "ok" if m["status"] == "ok" else "desatualizado"}
             if m["status"] != "ok":
                 res.avisos.append(f"COTAHIST mensal de {mes} ({cat.nome}) ainda não publicado")
@@ -502,7 +669,7 @@ def mensal(ctx: Contexto) -> Resultado:
                 )
             res.mudou |= bool(m.get("mudou"))
         snap = ctx.raiz / "history" / "snapshots" / mes
-        for nome in ("acoes", "bdrs", "acoes_volume"):
+        for nome in ("acoes", "bdrs", "acoes_volume", "acoes_liquidez"):
             origem = pub(ctx.raiz) / "downloads" / f"{nome}.csv"
             destino = snap / f"{nome}.csv.gz"
             if origem.exists() and not destino.exists():  # snapshot é imutável: só cria se não existir

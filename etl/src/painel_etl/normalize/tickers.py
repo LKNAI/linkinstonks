@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import re
 
+from painel_etl.indicadores import carregar as carregar_indicadores
+
 #: BDR no COTAHIST: 4 caracteres + 3 + [1-5 ou 9] (+ F no fracionário). Seção 7.4 do prompt.
 BDR_RX = re.compile(r"^[A-Z0-9]{4}3[1-59]F?$")
 
@@ -35,3 +37,10 @@ def is_bdr_ticker(codneg: str) -> bool:
 def is_acao_ticker(codneg: str, especi: str = "") -> bool:
     """Ação (ON/PN/units) negociada à vista; exclui BDR (dois dígitos finais), ETF, FII, opções e termo."""
     return bool(ACAO_RX.match(codneg)) or bool(UNIT_RX.match(codneg) and "UNT" in especi)
+
+
+def is_acao_especie(especi: str) -> bool:
+    """Ação ou unit pela espécie do COTAHIST (`config/indicadores.yaml`). `PN REC` é recibo e fica de fora."""
+    cfg = carregar_indicadores().liquidez
+    tokens = especi.split()
+    return bool(tokens) and tokens[0] in cfg.especies_acao and not set(tokens[1:]) & set(cfg.complementos_excluidos)

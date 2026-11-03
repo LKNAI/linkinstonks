@@ -10,8 +10,10 @@ Evento = dict[str, Any]
 
 TIPOS = (
     "nova_listagem", "deslistagem", "troca_escriturador", "divergencia_b3_cvm", "ticker_novo", "ticker_removido",
-    "mudanca_segmento", "novo_bdr", "bdr_cancelado", "troca_depositaria",
+    "mudanca_segmento", "novo_bdr", "bdr_cancelado", "troca_depositaria", "entrou_sem_negocios", "saiu_sem_negocios",
+    "entrou_presenca_baixa", "saiu_presenca_baixa",
 )  # fmt: skip
+CATEGORIAS_ACOMPANHADAS = ("sem_negocios", "presenca_baixa")
 
 
 def _ev(
@@ -55,6 +57,16 @@ def diff_acoes(
         eventos += [_ev(hoje, "acoes", "ticker_removido", k, t, None, "B3") for t in sorted(ta - td)]
         if a["segmento"] != d["segmento"] and a["detalhe_b3"] and d["detalhe_b3"]:
             eventos.append(_ev(hoje, "acoes", "mudanca_segmento", k, a["segmento"], d["segmento"], "B3"))
+        sa, sd = (a.get("listagem") or {}).get("segmento_cvm"), (d.get("listagem") or {}).get("segmento_cvm")
+        if sa != sd and sa and sd:
+            eventos.append(_ev(hoje, "acoes", "mudanca_segmento", k, sa, sd, "CVM"))
+        la, ld = (a.get("liquidez") or {}).get("categoria"), (d.get("liquidez") or {}).get("categoria")
+        if la != ld and la and ld:  # sem classificação anterior não há evento: a primeira carga não vira novidade
+            for cat in CATEGORIAS_ACOMPANHADAS:
+                if la == cat:
+                    eventos.append(_ev(hoje, "acoes", f"saiu_{cat}", k, la, ld, "B3"))
+                if ld == cat:
+                    eventos.append(_ev(hoje, "acoes", f"entrou_{cat}", k, la, ld, "B3"))
     return eventos
 
 

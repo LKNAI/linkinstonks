@@ -94,3 +94,8 @@ datasets:
     janela_meses: 24
     queda_maxima_registros: 0.10
     aviso_volume_sem_companhia: 0.10
+  acoes_liquidez:                       # Fase 8: mesmas partições do volume; parâmetros em indicadores.yaml
+    fontes: [b3_cotahist, cvm_fca]
+    cadastro: acoes.json
+    janela_meses: 24
+    queda_maxima_registros: 0.10

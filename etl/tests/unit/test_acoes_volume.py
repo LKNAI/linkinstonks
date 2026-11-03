@@ -99,7 +99,7 @@ class TestPipeline:
         return tmp_path
 
     def gravar(self, raiz: Path, meses: list[str], vol: int = 1000) -> None:
-        pasta = raiz / "history" / "acoes_volume"
+        pasta = raiz / "history" / "acoes_liquidez"
         for m in meses:
             a = b3_cotahist.Agregado("PETROBRAS", "PN", "BRPETRACNPR6", vol * 100, 5, f"{m}-02", f"{m}-20", 30.0)
             b3_cotahist.gravar_particao(m, {"PETR4": a}, "mensal", [], pasta)
@@ -123,7 +123,7 @@ class TestPipeline:
     def test_sem_particoes_pede_o_backfill_e_nao_publica(self, raiz: Path) -> None:
         self.gravar(raiz, MESES[:10])
         r = pipeline.run_acoes_volume(self.ctx(raiz))
-        assert not r.publicado and "backfill cotahist --categoria acao" in r.erro
+        assert not r.publicado and "backfill cotahist --datasets acoes" in r.erro
         assert not (raiz / "public" / "acoes_volume.json").exists()
 
     def test_sem_o_cadastro_de_acoes_nao_publica(self, tmp_path: Path) -> None:

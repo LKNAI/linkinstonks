@@ -1,0 +1,445 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "acoes_liquidez.schema.json",
+  "title": "acoes_liquidez.json: liquidez mensal das ações por ticker e por companhia",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "meses",
+    "mes_parcial",
+    "pregoes_mes",
+    "pagina_fonte",
+    "fontes_volume",
+    "nao_atribuido",
+    "companhias",
+    "tickers"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^1\\.[0-9]+$"
+    },
+    "meses": {
+      "description": "Os 24 meses fechados, alinhados com as séries de `mensal`",
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]{4}-[0-9]{2}$"
+      }
+    },
+    "mes_parcial": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{4}-[0-9]{2}$"
+    },
+    "pregoes_mes": {
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "description": "Datas distintas do arquivo de cada mês (todo o mercado)"
+    },
+    "pagina_fonte": {
+      "type": "string",
+      "format": "uri"
+    },
+    "fontes_volume": {
+      "description": "Mês (AAAA-MM) -> arquivos oficiais da B3 que sustentam o volume daquele mês: o COTAHIST mensal oficial (`mensal`) ou os diários somados (`diario`, mês corrente)",
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[0-9]{4}-[0-9]{2}$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "tipo",
+          "arquivos"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "tipo": {
+            "enum": [
+              "mensal",
+              "diario"
+            ]
+          },
+          "arquivos": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      }
+    },
+    "nao_atribuido": {
+      "description": "Volume de tickers sem companhia no cadastro nem no FCA. Companhias + não atribuído = partições.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tickers",
+        "volume_mensal"
+      ],
+      "properties": {
+        "tickers": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "volume_mensal": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "companhias": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "agregados",
+          "codigo_cvm",
+          "mensal",
+          "meses_negocios_suspeitos",
+          "ultimo_pregao",
+          "ultimo_preco",
+          "volume_mes_parcial",
+          "pregao",
+          "ticker_principal",
+          "tickers"
+        ],
+        "properties": {
+          "agregados": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "3m",
+              "6m",
+              "12m"
+            ],
+            "properties": {
+              "3m": {
+                "$ref": "#/$defs/agregado"
+              },
+              "6m": {
+                "$ref": "#/$defs/agregado"
+              },
+              "12m": {
+                "$ref": "#/$defs/agregado"
+              }
+            }
+          },
+          "codigo_cvm": {
+            "type": "string",
+            "pattern": "^[0-9]+$"
+          },
+          "mensal": {
+            "$ref": "#/$defs/mensal"
+          },
+          "meses_negocios_suspeitos": {
+            "description": "Meses em que o número de negócios pode estar subestimado (limite de 5 dígitos do COTAHIST)",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}$"
+            }
+          },
+          "ultimo_pregao": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          "ultimo_preco": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "volume_mes_parcial": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "pregao": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ticker_principal": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "tickers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "tickers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "agregados",
+          "codigo_cvm",
+          "mensal",
+          "meses_negocios_suspeitos",
+          "ultimo_pregao",
+          "ultimo_preco",
+          "volume_mes_parcial",
+          "historico",
+          "ticker"
+        ],
+        "properties": {
+          "agregados": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "3m",
+              "6m",
+              "12m"
+            ],
+            "properties": {
+              "3m": {
+                "$ref": "#/$defs/agregado"
+              },
+              "6m": {
+                "$ref": "#/$defs/agregado"
+              },
+              "12m": {
+                "$ref": "#/$defs/agregado"
+              }
+            }
+          },
+          "codigo_cvm": {
+            "type": "string",
+            "pattern": "^[0-9]+$"
+          },
+          "mensal": {
+            "$ref": "#/$defs/mensal"
+          },
+          "meses_negocios_suspeitos": {
+            "description": "Meses em que o número de negócios pode estar subestimado (limite de 5 dígitos do COTAHIST)",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}$"
+            }
+          },
+          "ultimo_pregao": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          "ultimo_preco": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "volume_mes_parcial": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "historico": {
+            "description": "Ticker antigo, fora do cadastro atual, atribuído pelo FCA",
+            "type": "boolean"
+          },
+          "ticker": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "mensal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dias_com_negocio",
+        "negocios",
+        "presenca",
+        "quantidade",
+        "ticket_medio",
+        "volume",
+        "volume_fracionario",
+        "volume_medio_diario"
+      ],
+      "properties": {
+        "dias_com_negocio": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "negocios": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "presenca": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "description": "dias_com_negocio ÷ pregões do mês; na companhia, os do ticker mais negociado"
+        },
+        "quantidade": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "ticket_medio": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "description": "volume ÷ negócios; nulo em mês sem negócios"
+        },
+        "volume": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "volume_fracionario": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "volume_medio_diario": {
+          "type": "array",
+          "minItems": 24,
+          "maxItems": 24,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "agregado": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dias_com_negocio",
+        "negocios",
+        "pregoes",
+        "presenca",
+        "quantidade",
+        "ticket_medio",
+        "volume",
+        "volume_fracionario",
+        "volume_medio_diario"
+      ],
+      "properties": {
+        "dias_com_negocio": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "negocios": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pregoes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "presenca": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "quantidade": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ticket_medio": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "volume": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "volume_fracionario": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "volume_medio_diario": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

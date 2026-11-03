@@ -19,9 +19,9 @@ linkinstonks (antigo Painel B3): site estático (Next.js, Vercel) que mostra esc
 etl/   Python 3.12 (uv). Pacote painel_etl: cli, pipeline, seed_import, core/, sources/, datasets/, normalize/, probe.py
 web/   Next.js 16 + TypeScript strict + Tailwind 4 (pnpm). Export estático em web/out
 data/  public/ (contrato com o site) · history/ · events/ · state/
-config/  instituicoes.yaml · sources.yaml · overrides/*.csv
+config/  instituicoes.yaml · sources.yaml · indicadores.yaml · overrides/*.csv
 schemas/ JSON Schema de cada arquivo de data/public
-docs/  arquitetura, fontes, paridade, decisoes/ (ADRs)
+docs/  arquitetura, fontes, metodologia, paridade, decisoes/ (ADRs)
 ```
 
 ## Comandos
@@ -36,18 +36,20 @@ docs/  arquitetura, fontes, paridade, decisoes/ (ADRs)
 | e2e | `cd web && pnpm test:e2e` (precisa do build; `pnpm exec playwright install chromium` na 1ª vez; inclui acessibilidade com axe) |
 | orçamento de JS | `cd web && pnpm build && pnpm budget` (≤ 200 KB gzip por rota; roda no CI) |
 | sondar fontes | `cd etl && uv run painel-etl probe [fonte]` (usa a rede; regrava fixtures) |
-| rodar o ETL | `cd etl && uv run painel-etl run [--dataset acoes\|bdrs\|acoes_volume\|all] [--weekly] [--dry-run] [--date AAAA-MM-DD]` (usa a rede; `--weekly` revisita todos os detalhes e atualiza as listas de depositárias) |
-| carga histórica | `painel-etl backfill cotahist --from 2024-10 [--categoria bdr|acao]` · `painel-etl backfill fca --from 2010` |
+| rodar o ETL | `cd etl && uv run painel-etl run [--dataset acoes\|bdrs\|acoes_volume\|acoes_liquidez\|all] [--weekly] [--dry-run] [--date AAAA-MM-DD]` (usa a rede; `--weekly` revisita todos os detalhes e atualiza as listas de depositárias) |
+| carga histórica | `painel-etl backfill cotahist --from 2024-11 [--datasets acoes,bdrs] [--force]` (reaproveita os ZIPs do cache) · `painel-etl backfill fca --from 2010` · `painel-etl backfill fca-valores --from 2018` |
 | rotina mensal e automacao | `painel-etl monthly` (reconcilia o COTAHIST do mes fechado + snapshot) · `painel-etl commit-message --report R.json` · `painel-etl issues --report R.json [--dry-run]`; os workflows em `.github/workflows` so orquestram esses comandos (ver `docs/operacao.md`) |
 | validar / resumir | `painel-etl validate` (JSON Schema de `data/public`) · `painel-etl report` (Markdown) |
 | carga inicial do seed | `painel-etl seed-import` (só para ter dados; um `run` normal os substitui) |
 | testes golden | `cd etl && uv run pytest tests/golden` (paridade com o seed, sem rede) |
 | tudo do CI | `make check` |
 
-Sem `make` (Windows): rode os comandos da tabela.
+Sem `make` (Windows): rode os comandos da tabela. Se o Controle de Aplicativo do Windows bloquear os executáveis de `.venv/Scripts`, use `uv run python -m pytest` (também `ruff` e `mypy`) e `uv run python -c "from painel_etl.cli import app; app()" <comando>`.
 
 ## Convenções
-- **ETL:** `ruff` (linha 120), `mypy --strict`, `pydantic` v2 nos modelos. Um módulo por fonte em `sources/` (`fetch` + `parse`); datasets em `datasets/`. Novo dataset = módulo + schema + rota + entrada em `sources.yaml` (`docs/adicionar-dataset.md`; exemplo real: `acoes_volume`).
+- **ETL:** `ruff` (linha 120), `mypy --strict`, `pydantic` v2 nos modelos. Um módulo por fonte em `sources/` (`fetch` + `parse`); datasets em `datasets/`. Novo dataset = módulo + schema + rota + entrada em `sources.yaml` (`docs/adicionar-dataset.md`; exemplo real: `acoes_liquidez`).
+- **Indicadores:** limiares só em `config/indicadores.yaml`; definição e fórmula em `docs/metodologia.md`. Linguagem factual: descrever o dado, sem julgar.
+- **Contratos:** `schema_version` é `MAJOR.MINOR` (ADR 0008). Campo novo sobe o minor nos JSON Schemas e no zod juntos; campo removido exige subir o major (`tests/unit/test_contrato_schemas.py`).
 - **Web:** Prettier (linha 110), ESLint do Next. Números `Intl.NumberFormat('pt-BR')`, datas `dd/mm/aaaa`, fuso `America/Sao_Paulo` (`web/lib/format.ts`). Componentes de gráfico/tabela genéricos, sem lógica de domínio.
 - **Next.js 16:** a versão tem diferenças em relação ao que se conhece; a documentação oficial vem no pacote em `web/node_modules/next/dist/docs/` (ver `web/AGENTS.md`). `headers`/`redirects`/`rewrites` do Next **não** funcionam com `output: 'export'`; cabeçalhos ficam no `vercel.json`.
 - **GitHub Actions:** actions de terceiros fixadas por **SHA** (com a versão em comentário). Resolver o SHA com `gh api`, nunca de memória.
@@ -61,6 +63,9 @@ Sem `make` (Windows): rode os comandos da tabela.
 - No JSON bruto do Bradesco `<` e `>` vêm escapados (`>`): decodificar antes de aplicar regex.
 - Itaú bloqueia clientes não-navegador (403): sem scraper; curadoria manual em `config/overrides/depositarias.csv`. **Não** tentar contornar o bloqueio.
 - A chave confiável de BDR na API da B3 é `typeBDR`, não `type`.
+- Em YAML, `ON` sem aspas vira booleano: as espécies em `config/indicadores.yaml` ficam entre aspas.
+- `TOTNEG` tem 5 dígitos e parece estourar em 99.999 (`docs/metodologia.md`). `CODBDI` não filtra ações.
+- **Não coletar** das páginas "Boletim diário" e "Pesquisa por pregão" da B3: elas vedam a coleta automatizada (ADR 0006).
 
 ## Fases
-0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade ✅ · 5 páginas novas ✅ · 6 automação e deploy ✅ · 7 endurecimento (em andamento: ver `docs/qualidade.md`). Cada fase termina com relatório; só avançar com autorização do dono.
+0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade ✅ · 5 páginas novas ✅ · 6 automação e deploy ✅ · 7 endurecimento (em andamento: ver `docs/qualidade.md`) · 8 novas funcionalidades (em andamento: Etapa 8.0 e Onda A prontas; ver `docs/fase8-etapa0.md`). Cada fase termina com relatório; só avançar com autorização do dono.

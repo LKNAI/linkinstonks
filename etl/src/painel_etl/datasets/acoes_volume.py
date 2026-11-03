@@ -29,9 +29,13 @@ def construir(
     meses: Sequence[str],
     parcial: str | None,
     companhias: Sequence[Mapping[str, Any]],
+    historicos: Mapping[str, str] | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-    """Devolve (companhias com volume, ordenadas por código CVM; resumo do volume não atribuído)."""
-    de_quem = {t["ticker"]: c["codigo_cvm"] for c in companhias for t in c["tickers"]}
+    """Devolve (companhias com volume, ordenadas por código CVM; resumo do volume não atribuído).
+
+    `historicos`: ticker antigo -> código CVM (`datasets/valores_mobiliarios.py`). O cadastro atual tem prioridade.
+    """
+    de_quem = {**(historicos or {}), **{t["ticker"]: c["codigo_cvm"] for c in companhias for t in c["tickers"]}}
     pregao = {c["codigo_cvm"]: c["pregao"] for c in companhias}
     todos = [*meses, *([parcial] if parcial else [])]
     por_cia: dict[str, dict[str, Any]] = {}
