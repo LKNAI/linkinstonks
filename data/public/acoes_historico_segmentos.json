@@ -1,0 +1,2949 @@
+{
+"companhias": {
+"1023": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"10456": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"10880": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"11070": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"1120": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"11258": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"11398": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"1155": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"11592": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"1171": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"11762": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"11932": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"11975": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"11991": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"1210": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"12190": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"1228": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"12572": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"12653": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"12696": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"12823": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"1309": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"1325": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"13285": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"13439": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"13447": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"13471": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"13765": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"13773": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"13781": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"13854": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"13986": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"14109": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"14176": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"14206": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"14311": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+},
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+},
+{
+"data_aproximada": true,
+"desde": "2025-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"14320": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"14346": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"14362": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"14443": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"14451": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"14460": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"14524": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"14605": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"14664": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"14826": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+},
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"14869": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"1520": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"15253": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais N2"
+},
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"15369": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"15423": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+},
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"15539": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"1562": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"15636": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"1570": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"16101": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"16284": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"16292": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"16306": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"16438": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"16586": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"16616": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"16632": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"16659": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"16861": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"1694": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"16993": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+},
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"17329": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"17450": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"17485": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"17671": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"17884": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"17892": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"17965": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"17973": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"18139": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"18309": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"18333": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"18368": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"18376": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"18414": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+},
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"18465": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"18597": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"18627": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"18660": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"18708": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"18724": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"18821": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"19100": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+},
+{
+"data_aproximada": true,
+"desde": "2023-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"19208": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"19305": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais"
+},
+{
+"data_aproximada": true,
+"desde": "2026-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"19330": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"19348": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"19445": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"19453": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"19550": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+},
+{
+"data_aproximada": true,
+"desde": "2025-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"19615": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"19623": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+},
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"19739": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"19836": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"19879": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"19909": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"19992": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20010": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20028": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20036": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20044": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20060": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20087": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20125": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20257": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"20338": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20346": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20362": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20370": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20435": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20451": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20478": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20494": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+},
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"20516": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20524": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20532": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"20540": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20567": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"20605": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20613": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20621": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20630": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+},
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"20648": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+},
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"20702": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20710": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20745": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20770": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20788": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20877": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20915": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20931": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"20958": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"20982": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"20990": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"2100": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"21008": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+},
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"21016": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21040": [
+{
+"data_aproximada": true,
+"desde": "2023-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21067": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21091": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21130": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21148": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21180": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+},
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"21237": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21334": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais"
+},
+{
+"data_aproximada": true,
+"desde": "2026-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"21342": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21350": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21393": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"21431": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+},
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21440": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21490": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"21610": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21636": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"21733": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+},
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"21881": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22012": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22020": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22055": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22179": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"22187": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22349": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22357": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22470": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22497": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22519": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22608": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22616": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"22675": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"22780": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23159": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23175": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais"
+},
+{
+"data_aproximada": true,
+"desde": "2026-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"23221": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23248": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23264": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"23272": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23302": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais"
+}
+],
+"23310": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23426": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23507": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23574": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23590": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23612": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais"
+}
+],
+"23795": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23817": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais"
+}
+],
+"23825": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"23981": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais"
+},
+{
+"data_aproximada": true,
+"desde": "2026-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"24058": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24112": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"24180": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24228": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24236": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais"
+},
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24260": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais N2"
+},
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24279": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais"
+}
+],
+"2429": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+},
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24295": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24317": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+},
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"2437": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+},
+{
+"data_aproximada": true,
+"desde": "2026-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24392": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"2453": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"24546": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais N2"
+},
+{
+"data_aproximada": true,
+"desde": "2026-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"24600": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"2461": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"24627": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24660": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais"
+}
+],
+"24694": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24716": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24805": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24821": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24902": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24910": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24929": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24953": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"24961": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25003": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25038": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25046": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25062": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25070": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25100": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25119": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25127": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"25160": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25186": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25208": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"25232": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25259": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25275": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25283": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25291": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25330": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25372": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25402": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25445": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25453": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25461": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25496": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25500": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25518": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25526": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25534": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25550": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25585": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"25658": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25674": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"25682": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25690": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25704": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25712": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25747": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25763": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"2577": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"25780": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25798": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"25836": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25860": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"25879": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25887": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25917": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"25950": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"25984": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"26000": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"26026": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"26034": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"26050": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"26069": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"26077": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"26123": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"26174": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"26441": [
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"26620": [
+{
+"data_aproximada": true,
+"desde": "2022-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"27057": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"27154": [
+{
+"data_aproximada": true,
+"desde": "2023-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"27570": [
+{
+"data_aproximada": true,
+"desde": "2025-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"27626": [
+{
+"data_aproximada": true,
+"desde": "2025-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"27634": [
+{
+"data_aproximada": true,
+"desde": "2025-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"27650": [
+{
+"data_aproximada": true,
+"desde": "2025-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+},
+{
+"data_aproximada": true,
+"desde": "2026-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"27677": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"27707": [
+{
+"data_aproximada": true,
+"desde": "2025-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"27766": [
+{
+"data_aproximada": true,
+"desde": "2026-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"27820": [
+{
+"data_aproximada": true,
+"desde": "2025-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"3050": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"3069": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"3077": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"3190": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"3204": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"3298": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"3654": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"3980": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"4081": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"4146": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"4170": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"4537": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"4669": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"4693": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"4723": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"4820": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"5207": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"5258": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"5312": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"5380": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"5410": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"5762": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"5770": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"6041": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"6173": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"6211": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"6505": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"6629": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"6700": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"701": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Bovespa Mais"
+},
+{
+"data_aproximada": true,
+"desde": "2026-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"7510": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+},
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"7544": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"7595": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+},
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"7617": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"7811": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"7870": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+},
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"8133": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"8397": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"8427": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"8451": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"8575": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"8656": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"8672": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+},
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"8753": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"8818": [
+{
+"data_aproximada": true,
+"desde": "2024-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"906": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 1 de Governança Corporativa"
+}
+],
+"9067": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"922": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"9342": [
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+},
+{
+"data_aproximada": true,
+"desde": "2021-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+},
+{
+"data_aproximada": true,
+"desde": "2023-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"9393": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Novo Mercado"
+}
+],
+"94": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"9415": [
+{
+"data_aproximada": true,
+"desde": "2019-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"9512": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+},
+{
+"data_aproximada": true,
+"desde": "2020-01-01",
+"fonte": "CVM FCA",
+"segmento": "Nível 2 de Governança Corporativa"
+}
+],
+"9539": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+],
+"9954": [
+{
+"data_aproximada": true,
+"desde": "2018-01-01",
+"fonte": "CVM FCA",
+"segmento": "Básico"
+}
+]
+},
+"schema_version": "1.0"
+}
