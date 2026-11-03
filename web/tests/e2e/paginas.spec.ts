@@ -12,7 +12,14 @@ const acoes = dados<{
     escriturador_cvm: { anterior: string | null } | null;
   }[];
 }>("acoes.json").companhias;
-const bdrs = dados<{ bdrs: { ticker: string; depositaria: string }[] }>("bdrs.json").bdrs;
+const docBdrs = dados<{
+  meses: string[];
+  mes_parcial: string | null;
+  bdrs: { ticker: string; depositaria: string }[];
+}>("bdrs.json");
+const bdrs = docBdrs.bdrs;
+// Na virada do mês, antes do primeiro pregão, não há mês parcial: o número de barras vem dos dados.
+const BARRAS = docBdrs.meses.length + (docBdrs.mes_parcial ? 1 : 0);
 
 function ouvirErros(page: Page): string[] {
   const erros: string[] = [];
@@ -71,10 +78,10 @@ test.describe("página do BDR", () => {
     await expect(page.getByRole("heading", { level: 1 })).toContainText("TSLA34");
     await expect(page.locator(".dep", { hasText: "Banco B3" })).toBeVisible();
     await expect(page.getByText("Banco B3 (finservices)")).toBeVisible();
-    await expect(page.locator(".mcols .mc")).toHaveCount(25); // 24 meses fechados + mês corrente parcial
+    await expect(page.locator(".mcols .mc")).toHaveCount(BARRAS); // 24 meses fechados + mês parcial, se houver
     await page.getByRole("button", { name: "Ver como tabela" }).click();
     const grafico = page.locator("section", { hasText: "Volume financeiro mensal" });
-    await expect(grafico.locator(".alt-table tbody tr")).toHaveCount(25);
+    await expect(grafico.locator(".alt-table tbody tr")).toHaveCount(BARRAS);
     expect(erros).toEqual([]);
   });
 
@@ -83,14 +90,16 @@ test.describe("página do BDR", () => {
   }) => {
     await page.goto("/bdrs/TSLA34/");
     const barras = page.locator("a.mc");
-    await expect(barras).toHaveCount(25);
+    await expect(barras).toHaveCount(BARRAS);
     const mensal = barras.nth(23); // último mês fechado
     await expect(mensal).toHaveAttribute("href", /\/InstDados\/SerHist\/COTAHIST_M\d{6}\.ZIP$/);
     await expect(mensal).toHaveAttribute("target", "_blank");
     await expect(mensal).toHaveAttribute("rel", /noopener/);
     await expect(mensal).toHaveAttribute("aria-label", /TSLA34, .*Abrir a fonte oficial na B3/);
     // o mês parcial soma arquivos diários: o clique vai à página oficial da B3
-    await expect(barras.nth(24)).toHaveAttribute("href", /^https:\/\/www\.b3\.com\.br\//);
+    if (docBdrs.mes_parcial) {
+      await expect(barras.nth(24)).toHaveAttribute("href", /^https:\/\/www\.b3\.com\.br\//);
+    }
     // o clique de fato abre uma nova aba com a URL da fonte
     // (o pedido ao domínio da B3 é interceptado: o teste não sai da máquina, e um ZIP viraria download)
     await page
@@ -110,7 +119,7 @@ test.describe("página do BDR", () => {
     await expect(bloco).toContainText("VOLTOT");
     await expect(bloco).toContainText("TSLA34F");
     await bloco.getByText(/Arquivos de origem por mês/).click();
-    await expect(bloco.locator("tbody tr")).toHaveCount(25);
+    await expect(bloco.locator("tbody tr")).toHaveCount(BARRAS);
     await expect(bloco.locator("tbody a[href*='COTAHIST_M']").first()).toBeVisible();
     await page.getByRole("button", { name: "Ver como tabela" }).click();
     await expect(page.locator(".alt-table a.fonte-link").first()).toHaveAttribute(
@@ -135,7 +144,7 @@ test.describe("página do BDR", () => {
   }) => {
     await page.goto("/acoes/9512/");
     const grafico = page.locator("section", { hasText: "Volume negociado das ações" }).first();
-    await expect(grafico.locator("a.mc")).toHaveCount(25);
+    await expect(grafico.locator("a.mc")).toHaveCount(BARRAS);
     await expect(grafico.locator("a.mc").nth(23)).toHaveAttribute(
       "aria-label",
       /PETR3 PETR4, .*Abrir a fonte/,

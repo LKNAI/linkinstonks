@@ -121,7 +121,7 @@ test.describe("gráficos de colunas no celular", () => {
     await expect(leitura).toBeVisible();
     await expect(leitura.getByRole("link", { name: /Abrir arquivo oficial da B3/ })).toHaveAttribute(
       "href",
-      /b3\.com\.br/,
+      /b3\.com\.br|bmfbovespa\.com\.br/, // página oficial no mês parcial; arquivo mensal no mês fechado
     );
     expect(abriu).toBe(false);
   });
