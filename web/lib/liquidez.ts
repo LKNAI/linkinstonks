@@ -92,9 +92,13 @@ export function ordenarLiquidez(rows: readonly AcaoRow[], k: string, dir: 1 | -1
   });
 }
 
+/** O ticket de 12 meses só leva a ressalva se o mês suspeito estiver dentro desses 12 meses. */
+export const suspeitoEm12Meses = (d: AcaoRow, meses: readonly string[]): boolean =>
+  (d.vol?.meses_negocios_suspeitos ?? []).some((m) => meses.slice(-12).includes(m));
+
 const decimal = (v: number | null | undefined): string => (v == null ? "" : String(v).replace(".", ","));
 
-export function csvLiquidez(rows: readonly AcaoRow[]): string {
+export function csvLiquidez(rows: readonly AcaoRow[], meses: readonly string[]): string {
   const cab = [
     "Empresa",
     "Código CVM",
@@ -108,7 +112,7 @@ export function csvLiquidez(rows: readonly AcaoRow[]): string {
     "Presença 6m",
     "Presença 12m",
     "Ticket médio 12m (R$)",
-    "Negócios podem estar subestimados",
+    "Negócios podem estar subestimados em 12m",
     "Último pregão",
   ];
   const linhas = rows.map((d) => {
@@ -126,7 +130,7 @@ export function csvLiquidez(rows: readonly AcaoRow[]): string {
       decimal(a?.["6m"].presenca),
       decimal(a?.["12m"].presenca),
       decimal(a?.["12m"].ticket_medio),
-      d.vol?.meses_negocios_suspeitos.length ? "sim" : "",
+      suspeitoEm12Meses(d, meses) ? "sim" : "",
       d.vol?.ultimo_pregao ? formatDate(d.vol.ultimo_pregao) : "",
     ];
   });

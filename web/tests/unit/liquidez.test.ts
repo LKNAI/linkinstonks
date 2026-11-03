@@ -8,6 +8,7 @@ import {
   fatiasLiquidez,
   ordenarLiquidez,
   semTicker,
+  suspeitoEm12Meses,
 } from "@/lib/liquidez";
 import { acoesDocSchema, acoesResumoDocSchema, bdrsDocSchema } from "@/lib/schemas";
 import { derivarBdrs } from "@/lib/bdrs";
@@ -45,9 +46,21 @@ describe("tabela de liquidez", () => {
   });
 
   it("o CSV traz uma linha por empresa, com decimal em vírgula", () => {
-    const csv = csvLiquidez(rows.slice(0, 5));
+    const csv = csvLiquidez(rows.slice(0, 5), resumo.meses);
     expect(csv.trim().split("\n")).toHaveLength(6);
     expect(csv).toContain("Presença 6m");
+  });
+});
+
+describe("ressalva do ticket de 12 meses", () => {
+  const meses = resumo.meses;
+  const com = (m: string[]) => ({ vol: { meses_negocios_suspeitos: m } }) as unknown as (typeof rows)[number];
+
+  it("só vale para mês suspeito dentro dos últimos 12", () => {
+    expect(suspeitoEm12Meses(com([meses[23]]), meses)).toBe(true);
+    expect(suspeitoEm12Meses(com([meses[12]]), meses)).toBe(true);
+    expect(suspeitoEm12Meses(com([meses[11]]), meses)).toBe(false);
+    expect(suspeitoEm12Meses(com([]), meses)).toBe(false);
   });
 });
 

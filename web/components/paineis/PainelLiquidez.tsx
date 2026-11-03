@@ -17,6 +17,7 @@ import { formatBRL, formatDate, formatDinheiro, formatInt, rotuloMes } from "@/l
 import {
   COLUNAS_TEXTO_LIQUIDEZ,
   csvLiquidez,
+  suspeitoEm12Meses,
   NOME_ARQUIVO_CSV_LIQUIDEZ,
   ORDEM_LIQUIDEZ,
   ordenarLiquidez,
@@ -76,7 +77,7 @@ const pct = (p: number | null | undefined) =>
   p == null ? "—" : `${(p * 100).toLocaleString("pt-BR", { maximumFractionDigits: 0 })}%`;
 const din = (v: number | null | undefined) => (v == null ? "—" : formatDinheiro(v));
 
-const COLUNAS: ColunaSpec<AcaoRow>[] = [
+const colunas = (meses: readonly string[]): ColunaSpec<AcaoRow>[] => [
   {
     id: "pregao",
     titulo: "Empresa",
@@ -137,10 +138,9 @@ const COLUNAS: ColunaSpec<AcaoRow>[] = [
     celula: (d) => {
       const t = d.vol?.agregados["12m"].ticket_medio;
       if (t == null) return "—";
-      const ultimos12 = d.vol?.meses_negocios_suspeitos.length ?? 0;
       return (
         <>
-          <Aprox ativo={ultimos12 > 0} />
+          <Aprox ativo={suspeitoEm12Meses(d, meses)} />
           {formatBRL(t)}
         </>
       );
@@ -209,6 +209,7 @@ function Conteudo({
     onRemover: () => setF((a) => ({ ...a, [k]: null })),
   }));
   const ult = resumo.meses[resumo.meses.length - 1];
+  const tabela = useMemo(() => colunas(resumo.meses), [resumo.meses]);
   return (
     <div className="wrap">
       <div className="filters">
@@ -271,7 +272,7 @@ function Conteudo({
               <button
                 type="button"
                 className="btn"
-                onClick={() => baixarCsv(NOME_ARQUIVO_CSV_LIQUIDEZ, csvLiquidez(ordenadas))}
+                onClick={() => baixarCsv(NOME_ARQUIVO_CSV_LIQUIDEZ, csvLiquidez(ordenadas, resumo.meses))}
               >
                 Exportar CSV
               </button>
@@ -279,7 +280,7 @@ function Conteudo({
           </div>
           <DataTable
             dados={ordenadas}
-            colunas={COLUNAS}
+            colunas={tabela}
             chave={(d) => d.codigo_cvm}
             ordem={{ k: f.k, dir: f.dir }}
             onOrdenar={(id) =>
