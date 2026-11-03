@@ -67,7 +67,7 @@ const codec: Codec<Filtros> = {
 };
 
 const HERO: HeroProps = {
-  selo: "B3 + CVM · dados abertos",
+  selo: "B3 + CVM · dados públicos",
   titulo: "Liquidez das ações",
   texto:
     "Volume, presença e ticket médio de cada companhia em 3, 6 e 12 meses, com o critério de cada categoria. A presença é a parte dos pregões em que o ticker mais negociado teve negócio.",
@@ -304,10 +304,6 @@ function Conteudo({
           <Link prefetch={false} href="/sobre/#metodologia-liquidez" className="fonte-link">
             metodologia
           </Link>
-          . Dados abertos:{" "}
-          <a href="/data/downloads/acoes_liquidez.csv" download className="fonte-link">
-            acoes_liquidez.csv
-          </a>
           .
         </p>
       </div>

@@ -172,7 +172,8 @@ class TestMensal:
         respx.get(b3_cotahist.url_mensal(2026, 9)).mock(return_value=httpx.Response(200, content=mensal))
         (tmp_path / "public" / "downloads").mkdir(parents=True)
         (tmp_path / "public" / "downloads" / "acoes.csv").write_bytes(b"a;b\n1;2\n")
-        (tmp_path / "public" / "downloads" / "bdrs.csv").write_bytes(b"x\n")
+        (tmp_path / "history" / "csv_correntes").mkdir(parents=True)
+        (tmp_path / "history" / "csv_correntes" / "bdrs.csv").write_bytes(b"x\n")
 
         r = pipeline.mensal(self.contexto(tmp_path))
         assert r.publicado and not r.erro and r.mudou

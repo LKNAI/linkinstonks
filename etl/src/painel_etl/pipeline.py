@@ -42,6 +42,11 @@ def pub(raiz: Path | None = None) -> Path:
     return (raiz or paths.data_dir()) / "public"
 
 
+def csv_mercado(raiz: Path | None = None) -> Path:
+    """CSVs com dados de negociação: alimentam só o snapshot mensal e não são publicados no site (ADR 0009)."""
+    return (raiz or paths.data_dir()) / "history" / "csv_correntes"
+
+
 @dataclass
 class Contexto:
     hoje: dt.date
@@ -408,7 +413,10 @@ def run_bdrs(ctx: Contexto) -> Resultado:
     if not ctx.dry_run:
         res.mudou |= pio.write_json(destino, doc, 0)
         res.mudou |= pio.write_csv(
-            pub(ctx.raiz) / "downloads" / "bdrs.csv", ds_bdrs.csv_cabecalho(meses), ds_bdrs.csv_linhas(bdrs)
+            pub(ctx.raiz) / "downloads" / "bdrs.csv", ds_bdrs.CSV_CADASTRO, ds_bdrs.csv_cadastro_linhas(bdrs)
+        )
+        res.mudou |= pio.write_csv(
+            csv_mercado(ctx.raiz) / "bdrs.csv", ds_bdrs.csv_cabecalho(meses), ds_bdrs.csv_linhas(bdrs)
         )
         res.eventos = pio.append_jsonl(ctx.raiz / "events" / f"{ctx.hoje.year}.jsonl", eventos)
     res.publicado = True
@@ -471,14 +479,14 @@ def run_acoes_liquidez(ctx: Contexto) -> Resultado:
         res.mudou |= pio.write_json(destino, doc, 0)
         res.mudou |= pio.write_json(pub(ctx.raiz) / "acoes_liquidez_resumo.json", doc_resumo, 0)
         res.mudou |= pio.write_csv(
-            pub(ctx.raiz) / "downloads" / "acoes_volume.csv",
+            csv_mercado(ctx.raiz) / "acoes_volume.csv",
             ds_liquidez.csv_volume_cabecalho(meses),
             ds_liquidez.csv_volume_linhas(doc["companhias"]),
         )
         categorias = {c["codigo_cvm"]: (c.get("liquidez") or {}).get("categoria") for c in acoes_doc["companhias"]}
         janelas = cfg.janelas_agregados_meses
         res.mudou |= pio.write_csv(
-            pub(ctx.raiz) / "downloads" / "acoes_liquidez.csv",
+            csv_mercado(ctx.raiz) / "acoes_liquidez.csv",
             ds_liquidez.csv_cabecalho(janelas),
             ds_liquidez.csv_linhas(doc["companhias"], categorias, janelas),
         )
@@ -636,8 +644,14 @@ def mensal(ctx: Contexto) -> Resultado:
                 )
             res.mudou |= bool(m.get("mudou"))
         snap = ctx.raiz / "history" / "snapshots" / mes
-        for nome in ("acoes", "bdrs", "acoes_liquidez", "acoes_volume"):
-            origem = pub(ctx.raiz) / "downloads" / f"{nome}.csv"
+        origens = {
+            "acoes": pub(ctx.raiz) / "downloads",
+            "bdrs": csv_mercado(ctx.raiz),
+            "acoes_liquidez": csv_mercado(ctx.raiz),
+            "acoes_volume": csv_mercado(ctx.raiz),
+        }
+        for nome, pasta in origens.items():
+            origem = pasta / f"{nome}.csv"
             destino = snap / f"{nome}.csv.gz"
             if origem.exists() and not destino.exists():  # snapshot é imutável: só cria se não existir
                 res.mudou |= pio.write_bytes(destino, gzip.compress(origem.read_bytes(), compresslevel=9, mtime=0))

@@ -18,4 +18,4 @@ A 8.10 sai do escopo. Não haverá `/data/v1/`, catálogo, `datapackage.json`, C
 - Os contratos versionados (ADR 0008) e o teste de contrato, que protegem o próprio site.
 
 ## Consequências
-Esta decisão não resolve a questão dos Termos para o site atual, que publica dados derivados da B3 e CSVs para baixar. A decisão sobre isso continua com o dono (`docs/fase8-etapa0.md`). Só evita aumentar a exposição.
+Esta decisão não resolve a questão dos Termos para o site atual, que publica dados derivados da B3 e CSVs para baixar. Só evita aumentar a exposição. A questão do site atual está no [ADR 0009](0009-termos-de-uso-da-b3.md).

@@ -12,7 +12,7 @@ import { NOME_FONTE, ROTULO_STATUS_FONTE, ROTULO_TIPO, mudancaDoEvento, nomeDoIt
 import { hojeEmBrasilia } from "@/lib/stale";
 
 const HERO: HeroProps = {
-  selo: "B3 + CVM · dados abertos",
+  selo: "B3 + CVM · dados públicos",
   titulo: "linkinstonks: escrituradores e BDRs",
   texto:
     "Quem escritura cada ação listada na B3 e qual banco é depositário de cada BDR, com histórico de trocas e volume mensal. Os dados se atualizam sozinhos a partir das fontes oficiais.",

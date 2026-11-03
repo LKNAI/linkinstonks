@@ -172,6 +172,14 @@ def csv_cabecalho(meses: Sequence[str]) -> list[str]:
     ]  # fmt: skip
 
 
+CSV_CADASTRO = ["ticker", "nome", "tipo", "depositaria", "fonte_depositaria", "categoria", "qualificado", "isin"]
+
+
+def csv_cadastro_linhas(bdrs: Sequence[Mapping[str, Any]]) -> list[list[Any]]:
+    """Arquivo público para baixar: só o cadastro, sem preço, negócios ou volume (ADR 0009)."""
+    return [linha[: len(CSV_CADASTRO)] for linha in csv_linhas(bdrs)]
+
+
 def csv_linhas(bdrs: Sequence[Mapping[str, Any]]) -> list[list[Any]]:
     return [
         [

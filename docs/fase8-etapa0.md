@@ -229,7 +229,7 @@ O cadastro só tem os tickers atuais. Em nov/2024, **R$ 50,3 bi (13% do volume d
 
 ## Riscos fora do escopo da etapa
 
-**Termos de uso da B3.** Os Termos do site dizem que os dados são para "uso exclusivamente pessoal" e que, sobre a difusão de dados de mercado, "é vedada a distribuição, redistribuição, [...] publicação [...] ou fornecimento de bases de dados e produtos a terceiros" sem consentimento. A página de séries históricas, de onde vem o COTAHIST, **não** traz o aviso de coleta automatizada, e o CE 033/2019 cita essas séries como parte da divulgação prevista na regulamentação. Mesmo assim, o texto geral alcança o site atual e pesa mais sobre a 8.10, que publica uma API aberta com CORS. Não é parecer jurídico. A 8.10 saiu do escopo; a questão sobre o site atual continua em aberto.
+**Termos de uso da B3.** Os Termos do site dizem que os dados são para "uso exclusivamente pessoal" e que, sobre a difusão de dados de mercado, "é vedada a distribuição, redistribuição, [...] publicação [...] ou fornecimento de bases de dados e produtos a terceiros" sem consentimento. A página de séries históricas, de onde vem o COTAHIST, **não** traz o aviso de coleta automatizada, e o CE 033/2019 cita essas séries como parte da divulgação prevista na regulamentação. Mesmo assim, o texto geral alcança o site atual e pesa mais sobre a 8.10, que publica uma API aberta com CORS. Não é parecer jurídico. A 8.10 saiu do escopo; a questão sobre o site atual está no [ADR 0009](decisoes/0009-termos-de-uso-da-b3.md).
 
 ## Limites desta verificação
 
