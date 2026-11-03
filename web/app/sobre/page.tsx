@@ -96,15 +96,116 @@ export default function Page() {
             </li>
             <li>
               <strong>Volume das ações:</strong> mesma regra, somada por companhia (todos os tickers de ações
-              da empresa, ON, PN, units e demais classes). Tickers que não casam com o cadastro atual, como o
-              de empresas já deslistadas, ficam fora das somas por companhia e aparecem à parte no arquivo{" "}
-              <code>acoes_volume.csv</code>.
+              da empresa, ON, PN, units e demais classes). Tickers antigos entram na companhia pelo Formulário
+              Cadastral da CVM; os que não se resolvem ficam fora das somas por companhia e aparecem à parte.
             </li>
             <li>
               <strong>Depositária:</strong> API da B3 (patrocinados e ETFs) &gt; listas do Banco B3 &gt;
               correções manuais com fonte e data &gt; “Não identificado”.
             </li>
           </ul>
+
+          <h2 id="metodologia">Metodologia dos indicadores</h2>
+          <p>
+            O texto descreve o dado e não julga a ação nem o BDR. Os limiares ficam em{" "}
+            <code>config/indicadores.yaml</code>, no repositório público do projeto.
+          </p>
+
+          <h3 id="metodologia-liquidez">Liquidez das ações</h3>
+          <p>
+            Entram os mercados à vista (<code>TPMERC</code> 010) e fracionário (020) de ações e units, pela
+            espécie do papel. Ficam de fora opções, termo, FIIs, ETFs, BDRs, bônus de subscrição, direitos e
+            recibos.
+          </p>
+          <ul>
+            <li>
+              <strong>Volume:</strong> soma de <code>VOLTOT</code>, em R$. <strong>Negócios:</strong> soma de{" "}
+              <code>TOTNEG</code>. <strong>Ticket médio:</strong> volume ÷ negócios, vazio em mês sem
+              negócios.
+            </li>
+            <li>
+              <strong>Pregões do mês:</strong> datas distintas do arquivo do mês, considerando todo o mercado.{" "}
+              <strong>Presença:</strong> dias com negócio ÷ pregões do mês. Dia só com negócio no fracionário
+              conta.
+            </li>
+            <li>
+              <strong>Companhia:</strong> soma os tickers; dias e presença são os do ticker mais negociado no
+              mês. Nas janelas de 3, 6 e 12 meses, a presença é o total de dias ÷ o total de pregões.
+            </li>
+            <li>
+              <strong>Tickers antigos:</strong> quando a companhia troca de código, o Formulário Cadastral da
+              CVM liga o código antigo ao CNPJ, e a série continua.
+            </li>
+          </ul>
+
+          <h3 id="metodologia-categorias">Categorias de negociação</h3>
+          <p>Aplicadas à companhia, nesta ordem de precedência:</p>
+          <ul>
+            <li>
+              <strong>Sem código de negociação:</strong> a B3 não informa ticker.
+            </li>
+            <li>
+              <strong>Listagem recente:</strong> listada há menos de 3 meses.
+            </li>
+            <li>
+              <strong>Sem cotação no período:</strong> nenhum registro nos últimos 24 meses.
+            </li>
+            <li>
+              <strong>Sem negócios:</strong> tem registro em 24 meses e nenhum nos 3 últimos meses fechados.
+            </li>
+            <li>
+              <strong>Presença baixa, média ou alta:</strong> presença em 6 meses abaixo de 25%, de 25% a 75%,
+              ou acima de 75%.
+            </li>
+          </ul>
+          <p>
+            O COTAHIST não traz linha para o papel que não negociou: sem registro significa sem negócio. Uma
+            companhia listada há 4 meses é medida contra os 6 meses inteiros.
+          </p>
+
+          <h3 id="metodologia-negocios">Número de negócios: limite da fonte</h3>
+          <p>
+            <code>TOTNEG</code> tem 5 dígitos no layout da B3 e parece perder o que passa de 99.999. Em
+            11/02/2026 a PETR4 aparece com 39 negócios e R$ 2,13 bi. Isso é uma inferência a partir dos dados,
+            sem confirmação da B3. Os números ficam como vieram; o mês com pregão suspeito leva a marca “≈”,
+            porque os negócios podem estar subestimados e o ticket médio, superestimado. Volume, quantidade e
+            presença não são afetados.
+          </p>
+          <p>
+            Um pregão é suspeito quando quantidade ÷ tamanho típico do negócio (mediana dos demais pregões do
+            mês) fica mais perto de <code>TOTNEG</code> + 100.000 do que de <code>TOTNEG</code>, desde que
+            chegue a 60.000 e o papel tenha mediana de ao menos 10.000 negócios por pregão. Negócios em bloco
+            também podem acionar a marca.
+          </p>
+
+          <h3 id="metodologia-ticket">Faixas de ticket médio dos BDRs (estimativa)</h3>
+          <p>
+            <strong>Estimativa baseada no tamanho médio dos negócios; não identifica investidores.</strong>{" "}
+            BDRs não têm mercado fracionário: não há nenhum registro em 25 meses. A cada mês, entre os BDRs
+            com ao menos 30 negócios, calculam-se o 1º e o 3º quartis do ticket médio: até o 1º quartil,
+            ticket baixo; acima do 3º, ticket alto; entre os dois, intermediário. Com menos de 30 negócios,
+            dados insuficientes. A faixa descreve a posição do BDR em relação aos demais naquele mês, e o
+            ticket depende do preço do BDR.
+          </p>
+
+          <h3 id="metodologia-mapa">Mapa de calor</h3>
+          <p>
+            Em <strong>intensidade relativa</strong>, o tom compara o volume do mês com o maior volume mensal
+            do próprio BDR em 24 meses. Em <strong>variação contra a média</strong>, compara com a média dos
+            12 meses anteriores, em escala logarítmica de ×0,25 a ×4, com ×1 no centro. A variação só existe
+            nos 12 meses mais recentes. Tendência é a média dos últimos 6 meses ÷ a média dos 6 anteriores.
+          </p>
+
+          <h3 id="metodologia-listagem">Listagem e segmento segundo a CVM</h3>
+          <p>
+            Vale a maior versão de cada documento do Formulário Cadastral. A linha do tempo de segmento começa
+            na referência de 2018, porque antes não há ticker e o segmento não concorda com a B3 em mais de
+            2,6% dos casos. A data é a da primeira referência anual em que o segmento aparece, por isso é
+            aproximada, e o primeiro trecho marca o início da série, não a entrada no segmento. Divergência
+            entre B3 e CVM vira só um selo informativo: nenhuma fonte corrige a outra. Na falta da data no
+            FCA, usa-se a data da lista da B3, marcada como incerta; a data 20/07/1977, repetida em 27
+            tickers, também é marcada como incerta.
+          </p>
 
           <h2>Regras de normalização</h2>
           <p>
@@ -162,6 +263,12 @@ export default function Page() {
                 acoes_volume.csv
               </a>
               : volume mensal das ações por companhia, em R$ mil.
+            </li>
+            <li>
+              <a href="/data/downloads/acoes_liquidez.csv" download>
+                acoes_liquidez.csv
+              </a>
+              : volume, presença e ticket médio em 3, 6 e 12 meses, com a categoria de cada companhia.
             </li>
             <li>
               <a href="/data/acoes.json" download>

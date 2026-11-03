@@ -78,9 +78,9 @@ test.describe("página do BDR", () => {
     await expect(page.getByRole("heading", { level: 1 })).toContainText("TSLA34");
     await expect(page.locator(".dep", { hasText: "Banco B3" })).toBeVisible();
     await expect(page.getByText("Banco B3 (finservices)")).toBeVisible();
-    await expect(page.locator(".mcols .mc")).toHaveCount(BARRAS); // 24 meses fechados + mês parcial, se houver
-    await page.getByRole("button", { name: "Ver como tabela" }).click();
-    const grafico = page.locator("section", { hasText: "Volume financeiro mensal" });
+    const grafico = page.getByRole("region", { name: "Volume financeiro mensal" });
+    await expect(grafico.locator(".mcols .mc")).toHaveCount(BARRAS); // 24 meses fechados + mês parcial, se houver
+    await grafico.getByRole("button", { name: "Ver como tabela" }).click();
     await expect(grafico.locator(".alt-table tbody tr")).toHaveCount(BARRAS);
     expect(erros).toEqual([]);
   });
@@ -121,7 +121,10 @@ test.describe("página do BDR", () => {
     await bloco.getByText(/Arquivos de origem por mês/).click();
     await expect(bloco.locator("tbody tr")).toHaveCount(BARRAS);
     await expect(bloco.locator("tbody a[href*='COTAHIST_M']").first()).toBeVisible();
-    await page.getByRole("button", { name: "Ver como tabela" }).click();
+    await page
+      .getByRole("region", { name: "Volume financeiro mensal" })
+      .getByRole("button", { name: "Ver como tabela" })
+      .click();
     await expect(page.locator(".alt-table a.fonte-link").first()).toHaveAttribute(
       "href",
       /COTAHIST|b3\.com\.br/,

@@ -83,6 +83,12 @@ O resumo em `bdrs.json` traz a faixa do último mês fechado e o ticket médio d
 
 **Limitações.** O ticket médio depende do preço do BDR, e o número de negócios tem a limitação descrita acima, que hoje aparece em 6 BDRs. Uma faixa descreve a posição do BDR em relação aos demais naquele mês, e não uma característica fixa.
 
+## Mapa de calor
+
+- **Intensidade relativa:** volume do mês ÷ maior volume mensal do próprio BDR em 24 meses, em 7 tons. Mês sem negócio tem marca própria, diferente do tom mais claro.
+- **Variação contra a média:** volume do mês ÷ média dos 12 meses anteriores, em escala logarítmica de ×0,25 a ×4, com ×1 no centro. Só existe nos 12 meses mais recentes, os que têm 12 meses de referência nos dados publicados.
+- **Tendência:** média dos últimos 6 meses ÷ média dos 6 anteriores.
+
 ## Listagem e segmento segundo a CVM
 
 - **Regra de versão:** só a maior `Versao` de cada `Data_Referencia`.
@@ -94,3 +100,4 @@ O resumo em `bdrs.json` traz a faixa do último mês fechado e o ticket médio d
 
 - [ADR 0008](decisoes/0008-schema-version-major-minor.md): `schema_version` em `MAJOR.MINOR`.
 - `acoes_liquidez` substitui as partições de `acoes_volume`, que seguem no repositório sem atualização.
+- `acoes_liquidez_resumo.json` substitui `acoes_volume.json` nas telas de lista; `acoes_liquidez.json` traz as séries mensais completas.

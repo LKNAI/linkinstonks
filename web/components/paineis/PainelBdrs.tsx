@@ -2,17 +2,21 @@
 
 // /bdrs: paridade total com seed/html/dashboard_bdrs_b3.html.
 import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
+import Link from "next/link";
 import { useMemo } from "react";
 import { BarList } from "@/components/charts/BarList";
 import { ChartCard } from "@/components/charts/ChartCard";
 import { ColunasEmpilhadas } from "@/components/charts/ColunasEmpilhadas";
 import { Donut } from "@/components/charts/Donut";
+import { Histograma } from "@/components/charts/Histograma";
 import { Sparkline } from "@/components/charts/Sparkline";
 import { TipConteudo } from "@/components/charts/Tooltip";
-import { Busca, Chips, Segmentado } from "@/components/filters/Controles";
+import { Busca, Chips, Segmentado, Seletor } from "@/components/filters/Controles";
 import { Carregando, ErroDados, KpiGrid, PaginaComHero, type HeroProps } from "@/components/layout/Pagina";
 import { useRegua } from "@/components/layout/Regua";
 import { FiltrosSheet } from "@/components/filters/FiltrosSheet";
+import { NotaEstimativa } from "@/components/paineis/Avisos";
+import { SecaoMapa } from "@/components/paineis/SecaoMapa";
 import { DataTable } from "@/components/table/DataTableLazy";
 import { linkDoMes, origemDoMes, type FontesVolume } from "@/lib/fonte-volume";
 import type { ColunaSpec } from "@/components/table/DataTable";
@@ -51,11 +55,16 @@ import {
   formatDinheiro,
   formatInt,
   formatPct,
+  formatTicket,
   rotuloMes,
   variacao,
 } from "@/lib/format";
+import { linhasDoMapa } from "@/lib/mapa";
+import { contagemFaixas, histogramaTicket, type Quartis } from "@/lib/ticket";
 import {
   COR_SEM_DADOS,
+  FAIXA_COR,
+  FAIXA_NOME,
   TIPO_GRUPO_COR,
   TIPO_GRUPO_NOME,
   legivelSobreBranco,
@@ -114,7 +123,14 @@ export function PainelBdrs() {
     <PaginaComHero
       hero={{ ...HERO, selo: `Dados abertos B3 · ${rotuloMes(m[0])} – ${rotuloMes(m[m.length - 1])}` }}
     >
-      <Conteudo meses={m} bdrs={d.dados.bdrs} fontes={d.dados.fontes_volume} pagina={d.dados.pagina_fonte} />
+      <Conteudo
+        meses={m}
+        bdrs={d.dados.bdrs}
+        fontes={d.dados.fontes_volume}
+        pagina={d.dados.pagina_fonte}
+        quartis={d.dados.ticket_quartis}
+        minNegocios={d.dados.min_negocios_mes}
+      />
     </PaginaComHero>
   );
 }
@@ -291,11 +307,15 @@ function Conteudo({
   meses,
   fontes,
   pagina,
+  quartis,
+  minNegocios,
 }: {
   bdrs: Parameters<typeof derivarBdrs>[0];
   meses: string[];
   fontes: FontesVolume;
   pagina: string;
+  quartis: Record<string, Quartis>;
+  minNegocios: number;
 }) {
   const todos = useMemo(() => derivarBdrs(bdrs), [bdrs]);
   const [f, setF] = useEstadoUrl(FILTROS_BDR_PADRAO, codecBdrs);
@@ -335,7 +355,12 @@ function Conteudo({
     ...DIMS_BDR.filter((k) => f[k] != null).map((k) => ({
       id: k,
       rotulo: ROTULO_DIM_BDR[k],
-      valor: k === "type" ? TIPO_GRUPO_NOME[f.type as TipoGrupo] : (f[k] as string),
+      valor:
+        k === "type"
+          ? TIPO_GRUPO_NOME[f.type as TipoGrupo]
+          : k === "faixa"
+            ? FAIXA_NOME[f.faixa as string]
+            : (f[k] as string),
       onRemover: () => setF((a) => ({ ...a, [k]: null })),
     })),
     ...(f.month != null
@@ -350,6 +375,12 @@ function Conteudo({
       : []),
   ];
   const tipos: TipoGrupo[] = ["DRN", "DRE", "SPO"];
+  const mesTicket = f.month ?? meses.length - 1;
+  const qTicket = quartis[meses[mesTicket]];
+  const hist = histogramaTicket(base, mesTicket, qTicket, minNegocios);
+  const faixas = contagemFaixas(filtrarBdrs(todos, f, "faixa"));
+  const maxFaixa = Math.max(1, ...Object.values(faixas));
+  const previa = useMemo(() => linhasDoMapa(base, 25, "volume"), [base]);
 
   return (
     <>
@@ -372,6 +403,15 @@ function Conteudo({
                   { v: "all", texto: "Todas" },
                   { v: "on", texto: `Negociadas em ${rot}` },
                   { v: "off", texto: `Sem negócios em ${rot}` },
+                ]}
+              />
+              <Seletor
+                rotulo="Faixa de ticket"
+                valor={f.faixa ?? ""}
+                onChange={(v) => setF((a) => ({ ...a, faixa: v || null }))}
+                opcoes={[
+                  { v: "", texto: "Todas as faixas de ticket" },
+                  ...Object.entries(FAIXA_NOME).map(([v, texto]) => ({ v, texto })),
                 ]}
               />
             </FiltrosSheet>
@@ -606,6 +646,105 @@ function Conteudo({
                 do total{f.month == null ? " em 24 meses" : ` em ${rotuloMes(meses[f.month])}`}.
               </p>
             </div>
+          </ChartCard>
+
+          <div className="sec-h" id="padrao">
+            <h2>Padrão de negociação</h2>
+            <p>
+              Como o volume de cada BDR se distribui no tempo e qual é o tamanho médio dos negócios. Os
+              gráficos acompanham os filtros acima.{" "}
+              <Link prefetch={false} href="/bdrs/mapa/" className="fonte-link">
+                Abrir o mapa completo
+              </Link>
+              .
+            </p>
+          </div>
+          <SecaoMapa
+            rows={previa}
+            meses={meses}
+            modo="intensidade"
+            janela={24}
+            titulo="Mapa de calor do volume"
+            descricao="Os 25 maiores BDRs do filtro · clique num mês para usá-lo no ranking · clique numa linha para abrir o BDR"
+            mesSelecionado={f.month}
+            onMes={(i) => setF((a) => ({ ...a, month: a.month === i ? null : i }))}
+          />
+          <ChartCard
+            coluna="c8"
+            titulo={`Ticket médio em ${rotuloMes(meses[mesTicket])}`}
+            descricao={`${formatInt(hist.noCalculo)} BDRs com ao menos ${formatInt(minNegocios)} negócios no mês; ${formatInt(hist.semDados)} com menos · escala logarítmica`}
+            tabela={{
+              cabecalho: ["Ticket médio", "BDRs"],
+              linhas: hist.bins.map((b) => [`${formatBRL(b.min)} a ${formatBRL(b.max)}`, b.n]),
+            }}
+          >
+            {hist.bins.length ? (
+              <Histograma
+                barras={hist.bins.map((b) => ({
+                  id: String(b.min),
+                  de: b.de,
+                  ate: b.ate,
+                  n: b.n,
+                  cor: b.cor,
+                  rotuloAria: `${b.n} BDRs com ticket médio de ${formatBRL(b.min)} a ${formatBRL(b.max)}`,
+                  dica: () => (
+                    <TipConteudo
+                      titulo={`${formatBRL(b.min)} a ${formatBRL(b.max)}`}
+                      linhas={[["BDRs", formatInt(b.n)]]}
+                    />
+                  ),
+                }))}
+                marcas={
+                  qTicket
+                    ? [
+                        {
+                          x: hist.x(qTicket.q1),
+                          rotulo: `1º quartil R$ ${formatInt(Math.round(qTicket.q1))}`,
+                        },
+                        {
+                          x: hist.x(qTicket.q3),
+                          rotulo: `3º quartil R$ ${formatInt(Math.round(qTicket.q3))}`,
+                        },
+                      ]
+                    : []
+                }
+                eixo={hist.eixo
+                  .filter((e) => e.x < 0.97)
+                  .map((e) => ({ x: e.x, rotulo: formatTicket(e.reais) }))}
+              />
+            ) : (
+              <p className="muted">Nenhum BDR com negócios suficientes no filtro atual.</p>
+            )}
+            <NotaEstimativa />
+          </ChartCard>
+          <ChartCard
+            coluna="c4"
+            titulo="BDRs por faixa de ticket"
+            descricao={`Faixa em ${rot}, entre os BDRs com negócios suficientes · clique para filtrar`}
+            tabela={{
+              cabecalho: ["Faixa", "BDRs"],
+              linhas: Object.keys(FAIXA_NOME).map((k) => [FAIXA_NOME[k], faixas[k] ?? 0]),
+            }}
+          >
+            <BarList
+              selecionado={f.faixa}
+              onSelecionar={(k) => alternar("faixa", k)}
+              itens={["ticket_baixo", "intermediario", "ticket_alto", "dados_insuficientes"].map((k) => ({
+                k,
+                rotulo: FAIXA_NOME[k],
+                parte: (faixas[k] ?? 0) / maxFaixa,
+                fundo: FAIXA_COR[k],
+                valor: formatInt(faixas[k] ?? 0),
+                pct: formatPct(
+                  faixas[k] ?? 0,
+                  Object.values(faixas).reduce((a, b) => a + b, 0),
+                ),
+                rotuloAria: `${FAIXA_NOME[k]}: ${formatInt(faixas[k] ?? 0)} BDRs`,
+                dica: () => (
+                  <TipConteudo titulo={FAIXA_NOME[k]} linhas={[["BDRs", formatInt(faixas[k] ?? 0)]]} />
+                ),
+              }))}
+            />
           </ChartCard>
 
           <section className="card c12" id="tabela-bdrs" aria-label="Todos os BDRs">

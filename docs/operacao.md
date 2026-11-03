@@ -96,7 +96,7 @@ Os dados são versionados: `git revert <commit de dados>` desfaz a publicação 
 | GitHub Actions, se o repositório for privado | ≈ 200 min/mês | **estimativa, a medir nas primeiras execuções**: diário ~5 min × 22 + semanal ~15 min × 4 + mensal ~20 min + CI. Cabe nos 2.000 min gratuitos. Medido no ensaio local: o passo do ETL diário levou 60 s; some ~1 a 2 min de preparação do runner (uv, cache). Registre os tempos reais aqui depois da primeira semana |
 
 ### Limites de tamanho
-`data/public/` ≈ 4 MB (orçamento de 20 MB em `config/indicadores.yaml`; o `painel-etl validate` e a build falham acima disso). `data/history/` cresce cerca de 315 KB por mês de COTAHIST (190 KB de BDRs e 125 KB de ações) e ~30 KB por ano de FCA. Se o repositório se aproximar de 500 MB, registre um ADR e mova os históricos para assets de GitHub Releases.
+`data/public/` ≈ 4,3 MB (orçamento de 20 MB em `config/indicadores.yaml`; o `painel-etl validate` e a build falham acima disso). `data/history/` cresce cerca de 315 KB por mês de COTAHIST (190 KB de BDRs e 125 KB de ações) e ~30 KB por ano de FCA. Se o repositório se aproximar de 500 MB, registre um ADR e mova os históricos para assets de GitHub Releases.
 
 ### Tempo dos workflows
 Orçamento: diário abaixo de 8 minutos, mensal abaixo de 20. Medido em 2026-11-03, nesta máquina, sem o tempo de preparação do runner: `run --dataset all` em 1 min, sem pregão novo a processar; leitura de um arquivo `M` em cerca de 4 s (24 meses em 1 min 30 s). **Ainda falta medir no GitHub Actions** e registrar aqui.

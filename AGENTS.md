@@ -36,7 +36,7 @@ docs/  arquitetura, fontes, metodologia, paridade, decisoes/ (ADRs)
 | e2e | `cd web && pnpm test:e2e` (precisa do build; `pnpm exec playwright install chromium` na 1ª vez; inclui acessibilidade com axe) |
 | orçamento de JS | `cd web && pnpm build && pnpm budget` (≤ 200 KB gzip por rota; roda no CI) |
 | sondar fontes | `cd etl && uv run painel-etl probe [fonte]` (usa a rede; regrava fixtures) |
-| rodar o ETL | `cd etl && uv run painel-etl run [--dataset acoes\|bdrs\|acoes_volume\|acoes_liquidez\|all] [--weekly] [--dry-run] [--date AAAA-MM-DD]` (usa a rede; `--weekly` revisita todos os detalhes e atualiza as listas de depositárias) |
+| rodar o ETL | `cd etl && uv run painel-etl run [--dataset acoes\|bdrs\|acoes_liquidez\|all] [--weekly] [--dry-run] [--date AAAA-MM-DD]` (usa a rede; `--weekly` revisita todos os detalhes e atualiza as listas de depositárias) |
 | carga histórica | `painel-etl backfill cotahist --from 2024-11 [--datasets acoes,bdrs] [--force]` (reaproveita os ZIPs do cache) · `painel-etl backfill fca --from 2010` · `painel-etl backfill fca-valores --from 2018` |
 | rotina mensal e automacao | `painel-etl monthly` (reconcilia o COTAHIST do mes fechado + snapshot) · `painel-etl commit-message --report R.json` · `painel-etl issues --report R.json [--dry-run]`; os workflows em `.github/workflows` so orquestram esses comandos (ver `docs/operacao.md`) |
 | validar / resumir | `painel-etl validate` (JSON Schema de `data/public`) · `painel-etl report` (Markdown) |
@@ -68,4 +68,4 @@ Sem `make` (Windows): rode os comandos da tabela. Se o Controle de Aplicativo do
 - **Não coletar** das páginas "Boletim diário" e "Pesquisa por pregão" da B3: elas vedam a coleta automatizada (ADR 0006).
 
 ## Fases
-0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade ✅ · 5 páginas novas ✅ · 6 automação e deploy ✅ · 7 endurecimento (em andamento: ver `docs/qualidade.md`) · 8 novas funcionalidades (em andamento: Etapa 8.0 e Onda A prontas; ver `docs/fase8-etapa0.md`). Cada fase termina com relatório; só avançar com autorização do dono.
+0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade ✅ · 5 páginas novas ✅ · 6 automação e deploy ✅ · 7 endurecimento (em andamento: ver `docs/qualidade.md`) · 8 novas funcionalidades (em andamento: Etapa 8.0 e Ondas A e B prontas; ver `docs/fase8-etapa0.md` e `docs/fase8-proposta-onda-b.md`). Cada fase termina com relatório; só avançar com autorização do dono.

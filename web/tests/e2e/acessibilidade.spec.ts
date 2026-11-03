@@ -6,6 +6,8 @@ import { expect, test, type Page } from "@playwright/test";
 const ROTAS = [
   { rota: "/", pronto: ".kpi" },
   { rota: "/acoes/", pronto: ".kpi" },
+  { rota: "/acoes/liquidez/", pronto: ".dtable tbody tr" },
+  { rota: "/bdrs/mapa/", pronto: ".mapa-svg" },
   { rota: "/bdrs/", pronto: ".dtable tbody tr" },
   { rota: "/instituicoes/", pronto: ".stats-table tbody tr" },
   { rota: "/novidades/", pronto: ".state, .stats-table" },
@@ -112,7 +114,10 @@ test.describe("gráficos de colunas no celular", () => {
     context,
   }) => {
     await page.goto("/bdrs/TSLA34/");
-    const coluna = page.locator(".mcols .mc").last();
+    const coluna = page
+      .getByRole("region", { name: "Volume financeiro mensal" })
+      .locator(".mcols .mc")
+      .last();
     await coluna.waitFor();
     let abriu = false;
     context.on("page", () => (abriu = true));
@@ -138,7 +143,10 @@ test.describe("estados interativos", () => {
   test("gráfico em modo tabela (BDR) e bloco de fonte aberto", async ({ page }) => {
     await page.goto("/bdrs/TSLA34/");
     await page.locator(".mcols .mc").first().waitFor();
-    await page.getByRole("button", { name: "Ver como tabela" }).click();
+    await page
+      .getByRole("region", { name: "Volume financeiro mensal" })
+      .getByRole("button", { name: "Ver como tabela" })
+      .click();
     await page.getByText(/Arquivos de origem por mês/).click();
     expect(await auditar(page)).toEqual([]);
   });
