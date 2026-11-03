@@ -20,3 +20,6 @@ cd etl && uv run python -m tests.unit.test_contrato_schemas
 
 ## Consequências
 A troca de inteiro para texto é, em si, uma mudança incompatível, aceita sem subir o major porque não há consumidor externo: a API pública saiu do escopo ([ADR 0007](0007-api-publica-fora-do-escopo.md)) e o site é publicado junto com os dados.
+
+## Atualização (Onda B, 2026-11-03)
+`acoes_volume.json` deixou de existir, substituído por `acoes_liquidez_resumo.json`, que tem todos os campos dele e mais alguns. A linha de base do teste de contrato foi regravada sem subir o major, pelo mesmo motivo acima: o site é o único consumidor e é publicado junto com os dados. `downloads/acoes_volume.csv` continua sendo publicado, com o mesmo cabeçalho.

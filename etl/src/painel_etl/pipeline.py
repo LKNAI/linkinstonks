@@ -23,7 +23,6 @@ from painel_etl.core.http import Http
 from painel_etl.core.state import State
 from painel_etl.datasets import acoes as ds_acoes
 from painel_etl.datasets import acoes_liquidez as ds_liquidez
-from painel_etl.datasets import acoes_volume as ds_acoes_volume
 from painel_etl.datasets import bdrs as ds_bdrs
 from painel_etl.datasets import valores_mobiliarios as ds_valores
 from painel_etl.indicadores import carregar as carregar_indicadores
@@ -36,6 +35,7 @@ SCHEMA_VERSION_NOVOS = "1.0"  # arquivos criados na Fase 8
 HEARTBEAT_DIAS = 2  # meta.json só é regravado sem mudança de dados a cada (HEARTBEAT_DIAS + 1) dias
 QUEDA_SCRAPER = 0.20
 SPONSORED = {"DR1", "DR2", "DR3"}
+DATASETS_PUBLICADOS = ("acoes", "bdrs", "acoes_liquidez")  # o meta deixa de listar o que saiu (como acoes_volume)
 
 
 def pub(raiz: Path | None = None) -> Path:
@@ -415,56 +415,6 @@ def run_bdrs(ctx: Contexto) -> Resultado:
     return res
 
 
-def run_acoes_volume(ctx: Contexto) -> Resultado:
-    """Volume mensal das ações por companhia: os mesmos arquivos COTAHIST dos BDRs, outro filtro (seção 13)."""
-    res = Resultado("acoes_volume")
-    destino = pub(ctx.raiz) / "acoes_volume.json"
-    anterior = len(pio.read_json(destino, {"companhias": []})["companhias"])
-    acoes_doc = pio.read_json(pub(ctx.raiz) / "acoes.json")
-    if not acoes_doc:
-        res.erro = "acoes.json ausente: o cadastro de tickers vem do dataset `acoes`"
-        return res
-    _cotahist(ctx, res, b3_cotahist.ACAO)
-    meses = ds_bdrs.meses_fechados(ctx.hoje)
-    parcial = f"{ctx.hoje:%Y-%m}"
-    pasta = ctx.raiz / "history" / b3_cotahist.ACAO.pasta
-    particoes = {m: p for m in [*meses, parcial] if (p := b3_cotahist.ler_particao(m, pasta))}
-    parcial_ok = parcial if parcial in particoes else None
-    faltando = [m for m in meses if m not in particoes]
-    if faltando:
-        res.erro = (
-            f"partições de ações do COTAHIST ausentes: {faltando[:3]}... "
-            "(rode `painel-etl backfill cotahist --datasets acoes`)"
-        )
-        return res
-    valores = cvm_fca.carregar_valores_mobiliarios(cvm_fca.valores_mobiliarios_dir(ctx.raiz))
-    historicos = _tickers_historicos(ctx, res, acoes_doc["companhias"], valores)
-    cias, nao = ds_acoes_volume.construir(particoes, meses, parcial_ok, acoes_doc["companhias"], historicos)
-    rel = ds_acoes_volume.validar(cias, nao, anterior or None, ctx.hoje)
-    res.relatorio, res.contagem = rel, len(cias)
-    if not rel.ok:
-        return res
-    doc = {
-        "companhias": cias,
-        "fontes_volume": ds_acoes_volume.fontes_volume(particoes, meses, parcial_ok),
-        "mes_parcial": parcial_ok,
-        "meses": meses,
-        "nao_atribuido": nao,
-        "pagina_fonte": b3_cotahist.PAGINA_FONTE,
-        "schema_version": SCHEMA_VERSION,
-    }
-    schema.validar("acoes_volume", doc)
-    if not ctx.dry_run:
-        res.mudou |= pio.write_json(destino, doc, 0)
-        res.mudou |= pio.write_csv(
-            pub(ctx.raiz) / "downloads" / "acoes_volume.csv",
-            ds_acoes_volume.csv_cabecalho(meses),
-            ds_acoes_volume.csv_linhas(cias),
-        )
-    res.publicado = True
-    return res
-
-
 def run_acoes_liquidez(ctx: Contexto) -> Resultado:
     """Liquidez mensal por ticker e por companhia (itens 8.1 e 8.2), a partir das mesmas partições do volume."""
     res = Resultado("acoes_liquidez")
@@ -495,7 +445,7 @@ def run_acoes_liquidez(ctx: Contexto) -> Resultado:
     partes = ds_liquidez.construir(particoes, meses, parcial_ok, acoes_doc["companhias"], historicos, suspeitos, cfg)
     doc = {
         **partes,
-        "fontes_volume": ds_acoes_volume.fontes_volume(particoes, meses, parcial_ok),
+        "fontes_volume": ds_bdrs.fontes_volume(particoes, meses, parcial_ok),
         "mes_parcial": parcial_ok,
         "meses": meses,
         "pagina_fonte": b3_cotahist.PAGINA_FONTE,
@@ -506,8 +456,25 @@ def run_acoes_liquidez(ctx: Contexto) -> Resultado:
     if not rel.ok:
         return res
     schema.validar("acoes_liquidez", doc)
+    doc_resumo = {
+        "companhias": ds_liquidez.resumo(doc["companhias"]),
+        "fontes_volume": doc["fontes_volume"],
+        "mes_parcial": parcial_ok,
+        "meses": meses,
+        "nao_atribuido": doc["nao_atribuido"],
+        "pagina_fonte": b3_cotahist.PAGINA_FONTE,
+        "pregoes_mes": doc["pregoes_mes"],
+        "schema_version": SCHEMA_VERSION_NOVOS,
+    }
+    schema.validar("acoes_liquidez_resumo", doc_resumo)
     if not ctx.dry_run:
         res.mudou |= pio.write_json(destino, doc, 0)
+        res.mudou |= pio.write_json(pub(ctx.raiz) / "acoes_liquidez_resumo.json", doc_resumo, 0)
+        res.mudou |= pio.write_csv(
+            pub(ctx.raiz) / "downloads" / "acoes_volume.csv",
+            ds_liquidez.csv_volume_cabecalho(meses),
+            ds_liquidez.csv_volume_linhas(doc["companhias"]),
+        )
         categorias = {c["codigo_cvm"]: (c.get("liquidez") or {}).get("categoria") for c in acoes_doc["companhias"]}
         janelas = cfg.janelas_agregados_meses
         res.mudou |= pio.write_csv(
@@ -562,6 +529,7 @@ def atualizar_meta(ctx: Contexto, resultados: list[Resultado]) -> bool:
                 "atualizado_em": hoje if r.mudou else atual["datasets"].get(r.dataset, {}).get("atualizado_em", hoje),
                 "contagem": r.contagem,
             }
+    atual["datasets"] = {k: v for k, v in atual["datasets"].items() if k in DATASETS_PUBLICADOS}
     schema.validar("meta", atual)
     return _escrever(ctx, caminho, atual, 2)
 
@@ -573,8 +541,8 @@ ARQUIVOS = {
     "eventos.json": "eventos",
     "meta.json": "meta",
     "acoes_historico_escrituradores.json": "acoes_historico_escrituradores",
-    "acoes_volume.json": "acoes_volume",
     "acoes_liquidez.json": "acoes_liquidez",
+    "acoes_liquidez_resumo.json": "acoes_liquidez_resumo",
     "acoes_historico_segmentos.json": "acoes_historico_segmentos",
 }
 
@@ -619,7 +587,6 @@ def run(ctx: Contexto, datasets: list[str]) -> list[Resultado]:
             executar = {
                 "acoes": run_acoes,
                 "bdrs": run_bdrs,
-                "acoes_volume": run_acoes_volume,
                 "acoes_liquidez": run_acoes_liquidez,
             }[nome]
             resultados.append(executar(ctx))
@@ -669,7 +636,7 @@ def mensal(ctx: Contexto) -> Resultado:
                 )
             res.mudou |= bool(m.get("mudou"))
         snap = ctx.raiz / "history" / "snapshots" / mes
-        for nome in ("acoes", "bdrs", "acoes_volume", "acoes_liquidez"):
+        for nome in ("acoes", "bdrs", "acoes_liquidez", "acoes_volume"):
             origem = pub(ctx.raiz) / "downloads" / f"{nome}.csv"
             destino = snap / f"{nome}.csv.gz"
             if origem.exists() and not destino.exists():  # snapshot é imutável: só cria se não existir

@@ -345,6 +345,11 @@ class TestPipeline:
         assert doc["schema_version"] == "1.0" and doc["pregoes_mes"] == [20] * 24
         assert doc["companhias"][0]["agregados"]["3m"]["presenca"] == 0.5
         assert "9512;PETROBRAS;PETR4;" in (raiz / "public" / "downloads" / "acoes_liquidez.csv").read_text("utf-8")
+        assert "9512;PETROBRAS;PETR4;" in (raiz / "public" / "downloads" / "acoes_volume.csv").read_text("utf-8")
+        res = pio.read_json(raiz / "public" / "acoes_liquidez_resumo.json")
+        cia = res["companhias"][0]
+        assert cia["volume_mensal"] == doc["companhias"][0]["mensal"]["volume"] and cia["volume_24m"] == 24_000
+        assert set(cia["agregados"]["3m"]) == set(ds.CAMPOS_RESUMO) and "mensal" not in cia
         antes = (raiz / "public" / "acoes_liquidez.json").read_bytes()
         again = pipeline.run_acoes_liquidez(pipeline.Contexto(hoje=HOJE, raiz=raiz, cache=raiz / "c"))
         assert not again.mudou and (raiz / "public" / "acoes_liquidez.json").read_bytes() == antes

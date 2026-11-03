@@ -263,6 +263,9 @@ def validar(
     quality.checar_queda(rel, len(cias), anterior, 0.10)
     quality.checar_unicos(rel, (c["codigo_cvm"] for c in cias), "codigo_cvm")
     quality.checar_unicos(rel, (t["ticker"] for t in tickers), "ticker")
+    quality.checar_nao_negativos(
+        rel, ((c["codigo_cvm"], min(c["mensal"]["volume"], default=0)) for c in cias), "volume"
+    )
     for item in (*cias, *tickers):
         nome = item.get("ticker") or item["codigo_cvm"]
         m = item["mensal"]
@@ -288,6 +291,43 @@ def validar(
     if janela + perdido and perdido / (janela + perdido) > LIMITE_NAO_ATRIBUIDO:
         rel.aviso("volume_sem_companhia", f"{perdido / (janela + perdido):.1%} do volume sem companhia em 24 meses")
     return rel
+
+
+CAMPOS_RESUMO = ("dias_com_negocio", "negocios", "pregoes", "presenca", "ticket_medio", "volume")
+
+
+def resumo(cias: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+    """Por companhia, só o que as telas de lista usam: o arquivo completo pesa 530 KB em gzip e fica fora delas."""
+    return [
+        {
+            "agregados": {j: {k: a[k] for k in CAMPOS_RESUMO} for j, a in c["agregados"].items()},
+            "codigo_cvm": c["codigo_cvm"],
+            "meses_negocios_suspeitos": c["meses_negocios_suspeitos"],
+            "negocios_24m": sum(c["mensal"]["negocios"]),
+            "pregao": c["pregao"],
+            "ticker_principal": c["ticker_principal"],
+            "tickers": c["tickers"],
+            "ultimo_pregao": c["ultimo_pregao"],
+            "volume_24m": sum(c["mensal"]["volume"]),
+            "volume_mensal": c["mensal"]["volume"],
+            "volume_mes_parcial": c["volume_mes_parcial"],
+        }
+        for c in cias
+    ]
+
+
+def csv_volume_cabecalho(meses: Sequence[str]) -> list[str]:
+    return ["codigo_cvm", "pregao", "tickers", "negocios_24m", "volume_24m_rs_mil", *[f"vol_{m}_rs_mil" for m in meses]]
+
+
+def csv_volume_linhas(cias: Sequence[Mapping[str, Any]]) -> list[list[Any]]:
+    return [
+        [
+            c["codigo_cvm"], c["pregao"], " ".join(c["tickers"]), sum(c["mensal"]["negocios"]),
+            round(sum(c["mensal"]["volume"]) / 1000), *[round(v / 1000) for v in c["mensal"]["volume"]],
+        ]
+        for c in cias
+    ]  # fmt: skip
 
 
 def csv_cabecalho(janelas: Sequence[int]) -> list[str]:

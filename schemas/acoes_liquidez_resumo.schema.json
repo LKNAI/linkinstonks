@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "acoes_volume.schema.json",
-  "title": "acoes_volume.json: volume financeiro mensal das ações por companhia",
+  "$id": "acoes_liquidez_resumo.schema.json",
+  "title": "acoes_liquidez_resumo.json: por companhia, o que as telas de lista usam (substitui acoes_volume.json)",
   "type": "object",
   "required": [
     "schema_version",
@@ -10,7 +10,8 @@
     "pagina_fonte",
     "fontes_volume",
     "nao_atribuido",
-    "companhias"
+    "companhias",
+    "pregoes_mes"
   ],
   "additionalProperties": false,
   "properties": {
@@ -106,7 +107,11 @@
           "negocios_24m",
           "volume_24m",
           "volume_mensal",
-          "volume_mes_parcial"
+          "volume_mes_parcial",
+          "agregados",
+          "meses_negocios_suspeitos",
+          "ticker_principal",
+          "ultimo_pregao"
         ],
         "additionalProperties": false,
         "properties": {
@@ -149,7 +154,106 @@
               "null"
             ],
             "minimum": 0
+          },
+          "agregados": {
+            "description": "Janelas de 3, 6 e 12 meses fechados",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "3m",
+              "6m",
+              "12m"
+            ],
+            "properties": {
+              "3m": {
+                "$ref": "#/$defs/agregado"
+              },
+              "6m": {
+                "$ref": "#/$defs/agregado"
+              },
+              "12m": {
+                "$ref": "#/$defs/agregado"
+              }
+            }
+          },
+          "meses_negocios_suspeitos": {
+            "description": "Meses em que o número de negócios pode estar subestimado (limite de 5 dígitos do COTAHIST)",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}$"
+            }
+          },
+          "ticker_principal": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ultimo_pregao": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
           }
+        }
+      }
+    },
+    "pregoes_mes": {
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "description": "Datas distintas do arquivo de cada mês (todo o mercado)"
+    }
+  },
+  "$defs": {
+    "agregado": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dias_com_negocio",
+        "negocios",
+        "pregoes",
+        "presenca",
+        "ticket_medio",
+        "volume"
+      ],
+      "properties": {
+        "dias_com_negocio": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "negocios": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pregoes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "presenca": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "ticket_medio": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "volume": {
+          "type": "integer",
+          "minimum": 0
         }
       }
     }

@@ -24,7 +24,7 @@ app = typer.Typer(help="ETL do Painel B3 (escrituradores de ações e BDRs).", n
 backfill_app = typer.Typer(help="Carga histórica.", no_args_is_help=True)
 app.add_typer(backfill_app, name="backfill")
 
-DATASETS = ("acoes", "bdrs", "acoes_volume", "acoes_liquidez")
+DATASETS = ("acoes", "bdrs", "acoes_liquidez")
 CATEGORIAS_BACKFILL = {"bdrs": b3_cotahist.BDR, "acoes": b3_cotahist.ACAO}
 
 

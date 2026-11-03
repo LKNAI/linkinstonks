@@ -56,6 +56,17 @@ def test_orcamento_de_tamanho_reprova(tmp_path: Path, monkeypatch: pytest.Monkey
     assert any("orçamento" in e for e in pipeline.validar_publicados(tmp_path))
 
 
+def test_meta_deixa_de_listar_dataset_que_saiu(tmp_path: Path) -> None:
+    antigo = {"atualizado_em": "2026-10-29", "contagem": 1}
+    pio.write_json(
+        tmp_path / "public" / "meta.json",
+        {"datasets": {"acoes_volume": antigo}, "fontes": {}, "schema_version": "1.1"},
+        2,
+    )
+    pipeline.atualizar_meta(ctx(tmp_path, dt.date(2026, 11, 3)), [resultado(mudou=True)])
+    assert "acoes_volume" not in pio.read_json(tmp_path / "public" / "meta.json")["datasets"]
+
+
 class TestValidacao:
     def test_arquivos_ausentes_sao_apontados(self, tmp_path: Path) -> None:
         erros = pipeline.validar_publicados(tmp_path)
@@ -76,15 +87,6 @@ class TestValidacao:
             f"2026-{m:02d}" for m in range(1, 11)
         ]  # fmt: skip
         pio.write_json(
-            tmp_path / "public" / "acoes_volume.json",
-            {
-                "schema_version": "1.1", "meses": meses[:24], "mes_parcial": None, "companhias": [],
-                "pagina_fonte": "https://www.b3.com.br/", "nao_atribuido": {"tickers": 0, "volume_mensal": [0] * 24},
-                "fontes_volume": {m: {"tipo": "mensal", "arquivos": ["https://exemplo.test/x.zip"]} for m in meses[:24]},
-            },
-            0,
-        )  # fmt: skip
-        pio.write_json(
             tmp_path / "public" / "acoes_liquidez.json",
             {
                 "schema_version": "1.0", "meses": meses[:24], "mes_parcial": None, "companhias": [], "tickers": [],
@@ -94,6 +96,9 @@ class TestValidacao:
             },
             0,
         )  # fmt: skip
+        doc_liq = pio.read_json(tmp_path / "public" / "acoes_liquidez.json")
+        del doc_liq["tickers"]
+        pio.write_json(tmp_path / "public" / "acoes_liquidez_resumo.json", doc_liq, 0)
         assert pipeline.validar_publicados(tmp_path) == []
 
         doc = pio.read_json(tmp_path / "public" / "bdrs.json")

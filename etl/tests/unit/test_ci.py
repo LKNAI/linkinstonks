@@ -194,7 +194,7 @@ class TestMensal:
         assert r.fontes["b3_cotahist"]["status"] == "desatualizado"
 
 
-@pytest.mark.parametrize("nome", ["acoes", "bdrs", "acoes_volume", "acoes_liquidez"])
+@pytest.mark.parametrize("nome", ["acoes", "bdrs", "acoes_liquidez"])
 def test_snapshots_nao_sao_criados_sem_publicacao(tmp_path: Path, nome: str) -> None:
     ctx = pipeline.Contexto(hoje=dt.date(2026, 10, 5), raiz=tmp_path, cache=tmp_path / "c")
     for pasta in ("bdr_volume", "acoes_liquidez"):
