@@ -172148,7 +172148,7 @@ null
 }
 },
 "codigo_cvm": "25917",
-"historico": false,
+"historico": true,
 "mensal": {
 "dias_com_negocio": [
 19,

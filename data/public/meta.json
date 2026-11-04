@@ -1,11 +1,11 @@
 {
   "datasets": {
     "acoes": {
-      "atualizado_em": "2026-11-03",
+      "atualizado_em": "2026-11-04",
       "contagem": 567
     },
     "acoes_liquidez": {
-      "atualizado_em": "2026-11-03",
+      "atualizado_em": "2026-11-04",
       "contagem": 322
     },
     "bdrs": {
@@ -27,7 +27,7 @@
     "b3_cotahist_acoes": {
       "status": "ok",
       "ultimo_pregao": "2026-11-03",
-      "ultimo_sucesso": "2026-11-03"
+      "ultimo_sucesso": "2026-11-04"
     },
     "b3_finservices": {
       "contagem": 1070,
@@ -37,7 +37,7 @@
     "b3_listed": {
       "contagem": 3548,
       "status": "ok",
-      "ultimo_sucesso": "2026-11-03"
+      "ultimo_sucesso": "2026-11-04"
     },
     "bradesco": {
       "contagem": 48,
@@ -46,11 +46,11 @@
     },
     "cvm_cad": {
       "status": "ok",
-      "ultimo_sucesso": "2026-11-03"
+      "ultimo_sucesso": "2026-11-04"
     },
     "cvm_fca": {
       "status": "ok",
-      "ultimo_sucesso": "2026-11-03"
+      "ultimo_sucesso": "2026-11-04"
     }
   },
   "schema_version": "1.1"

@@ -19841,9 +19841,9 @@
 "situacao_cvm": "ATIVO",
 "tickers": [
 {
-"classe": "PN",
-"negociacao_desde": "2021-08-05",
-"ticker": "RAIZ4"
+"classe": "Outros",
+"negociacao_desde": null,
+"ticker": "RAIZ55"
 }
 ]
 },

@@ -1,6 +1,24 @@
 {
 "eventos": [
 {
+"chave": "25917",
+"data": "2026-11-04",
+"dataset": "acoes",
+"de": "RAIZ4",
+"fonte": "B3",
+"para": null,
+"tipo": "ticker_removido"
+},
+{
+"chave": "25917",
+"data": "2026-11-04",
+"dataset": "acoes",
+"de": null,
+"fonte": "B3",
+"para": "RAIZ55",
+"tipo": "ticker_novo"
+},
+{
 "chave": "2437",
 "data": "2026-11-01",
 "dataset": "acoes",
