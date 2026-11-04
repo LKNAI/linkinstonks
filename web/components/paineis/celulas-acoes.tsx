@@ -1,4 +1,5 @@
 // Colunas da tabela de ações de /acoes (paridade com o seed, mais volume e código CVM).
+import { Estrela } from "@/components/acompanhamento/Estrela";
 import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import type { ColunaSpec } from "@/components/table/DataTable";
 import { detalheAnterior, textoDesde, type AcaoRow } from "@/lib/acoes";
@@ -21,6 +22,7 @@ function CelulaEmpresa({ d }: { d: AcaoRow }) {
   return (
     <div className="co">
       <b>
+        <Estrela item={{ tipo: "companhia", chave: d.codigo_cvm, nome: d.pregao }} />
         <LinkNovaAba href={`/acoes/${d.codigo_cvm}/`}>{d.pregao}</LinkNovaAba>
       </b>
       <div>{d.razao_social}</div>

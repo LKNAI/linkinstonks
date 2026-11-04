@@ -2,6 +2,8 @@
 
 // Cabeçalho, faixa de dados desatualizados e rodapé (com a data real do meta.json) de todas as páginas.
 import Link from "next/link";
+import { ContadorLista } from "@/components/acompanhamento/ContadorLista";
+import { BotaoBusca } from "@/components/busca/BotaoBusca";
 import { Logo } from "./Logo";
 import { usePathname } from "next/navigation";
 import { useDados } from "@/lib/data";
@@ -15,6 +17,8 @@ const LINKS = [
   { href: "/bdrs/", texto: "BDRs" },
   { href: "/instituicoes/", texto: "Instituições" },
   { href: "/novidades/", texto: "Novidades" },
+  { href: "/relatorios/", texto: "Relatórios" },
+  { href: "/acompanhamento/", texto: "Minha lista" },
   { href: "/status/", texto: "Status" },
   { href: "/sobre/", texto: "Sobre" },
 ];
@@ -45,6 +49,10 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
+        <div className="cab-acoes">
+          <ContadorLista />
+          <BotaoBusca />
+        </div>
       </div>
     </header>
   );

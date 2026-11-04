@@ -89,3 +89,23 @@ describe("feed Atom", () => {
     expect(ROTULO_LIQUIDEZ).toEqual(LIQUIDEZ_SITE);
   });
 });
+
+describe("relatórios no feed", () => {
+  const relatorio = {
+    mes: "2026-12",
+    titulo: "Relatório de dezembro de 2026",
+    secoes: [{ itens: [{ texto: "A & B." }] }],
+  };
+
+  it("cada relatório vira uma entrada, com data fixa no mês seguinte", () => {
+    const xml = montarFeed({
+      eventos: [],
+      siteUrl: "https://exemplo.test",
+      atualizadoEm: "2026-01-01",
+      relatorios: [relatorio],
+    });
+    expect(xml).toContain('<link href="https://exemplo.test/relatorios/2026-12/"/>');
+    expect(xml).toContain("<updated>2027-01-01T00:00:00Z</updated>");
+    expect(xml).toContain("<summary>A &amp; B.</summary>");
+  });
+});

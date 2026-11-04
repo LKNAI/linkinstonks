@@ -36,8 +36,8 @@ export function derivarBdrs(bdrs: readonly Bdr[]): BdrRow[] {
       ...d,
       T,
       tot: d.volume_24m,
-      y1: v.slice(12).reduce((a, b) => a + b, 0),
-      y0: v.slice(0, 12).reduce((a, b) => a + b, 0),
+      y1: v.slice(-12).reduce((a, b) => a + b, 0),
+      y0: v.slice(-24, -12).reduce((a, b) => a + b, 0),
       on: (v[v.length - 1] ?? 0) > 0,
       C: T === "DRE" ? d.categoria || CATEGORIA_SEM : null,
       ix: normalizar(`${d.ticker} ${d.nome} ${d.isin} ${d.depositaria} ${TIPO_GRUPO_NOME[T]} ${d.tipo}`),
@@ -136,7 +136,7 @@ export function kpisBdrs(
         cor: "var(--accent)",
       },
       {
-        rotulo: "Volume em 24 meses",
+        rotulo: `Volume em ${meses.length} meses`,
         valor: formatDinheiro(total),
         sub: `média de ${formatDinheiro(total / (meses.length || 1))} por mês`,
         cor: "var(--accent)",
@@ -144,13 +144,18 @@ export function kpisBdrs(
       {
         rotulo: `Volume em ${rot}`,
         valor: formatDinheiro(mesAtual),
-        sub: `${vMes.texto} vs ${rotuloMes(meses[ult - 12] ?? "")}`,
+        sub: meses[ult - 12]
+          ? `${vMes.texto} vs ${rotuloMes(meses[ult - 12])}`
+          : "sem o mesmo mês do ano anterior",
         cor: "var(--accent)",
       },
       {
         rotulo: "Últimos 12 × 12 anteriores",
-        valor: vAnos.texto || "—",
-        sub: `${formatDinheiro(y1)} vs ${formatDinheiro(y0)}`,
+        valor: meses.length < 24 ? "—" : vAnos.texto || "—",
+        sub:
+          meses.length < 24
+            ? `esta posição tem ${meses.length} meses`
+            : `${formatDinheiro(y1)} vs ${formatDinheiro(y0)}`,
         cor: "var(--accent)",
       },
       {
@@ -211,7 +216,7 @@ export function fatiasDepositaria(rowsSemDep: readonly BdrRow[]): Fatia[] {
     .map((k) => ({ k, label: k, n: v[k], color: corDepositaria(k), extra: [["BDRs", formatInt(c[k])]] }));
 }
 
-export function fatiasTipo(rowsSemTipo: readonly BdrRow[]): Fatia[] {
+export function fatiasTipo(rowsSemTipo: readonly BdrRow[], nMeses = 24): Fatia[] {
   const c: Record<string, number> = {};
   const v: Record<string, number> = {};
   for (const d of rowsSemTipo) {
@@ -225,7 +230,7 @@ export function fatiasTipo(rowsSemTipo: readonly BdrRow[]): Fatia[] {
       label: TIPO_GRUPO_NOME[k],
       n: c[k],
       color: TIPO_GRUPO_COR[k],
-      extra: [["Volume 24m", formatDinheiro(v[k])]],
+      extra: [[`Volume ${nMeses}m`, formatDinheiro(v[k])]],
     }));
 }
 
@@ -365,8 +370,8 @@ export function csvBdrs(rows: readonly BdrRow[], meses: readonly string[]): stri
     "Primeiro pregão no período",
     "Último pregão",
     "Último preço (R$)",
-    "Negócios 24m",
-    "Volume 24m (R$)",
+    `Negócios ${meses.length}m`,
+    `Volume ${meses.length}m (R$)`,
     ...meses.map((m) => `Volume ${m} (R$)`),
   ]; // fmt: skip
   const linhas = rows.map((d) => [

@@ -2420,3 +2420,303 @@ td.crit {
   line-height: var(--lh-sm);
   color: var(--text-muted);
 }
+
+/* busca global e lista de acompanhamento (Fase 8, itens 8.8 e 8.9) */
+.cab-acoes {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-left: auto;
+}
+.busca-botao {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--space-8);
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+}
+.busca-botao:hover {
+  color: var(--text);
+}
+.busca-botao kbd {
+  font-family: inherit;
+  font-size: var(--fs-xs);
+  color: var(--text-subtle);
+}
+.contador-lista {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--accent);
+}
+.contador-capa {
+  display: inline-block;
+  margin-bottom: var(--space-3);
+}
+.busca-fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--space-12) var(--space-4) var(--space-4);
+  background: var(--scrim);
+}
+.busca {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 640px;
+  max-height: 70vh;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-modal);
+}
+.busca-campo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+}
+.busca-campo input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: var(--text);
+  font-size: var(--fs-lg);
+}
+.busca-fechar {
+  display: inline-flex;
+  padding: var(--space-1);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.busca-lista {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--space-2);
+}
+.busca-grupo {
+  padding: var(--space-2) var(--space-2) var(--space-1);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--text-muted);
+}
+.busca-opcao {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--space-10);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.busca-opcao[aria-selected="true"] {
+  background: var(--surface-sunken);
+  box-shadow: inset 2px 0 0 var(--accent);
+}
+.busca-texto {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--fs-sm);
+}
+.busca-texto b {
+  margin-right: var(--space-2);
+}
+.busca-texto span {
+  color: var(--text-muted);
+}
+.busca-estrela {
+  display: inline-flex;
+  padding: var(--space-2);
+  color: var(--text-subtle);
+}
+.busca-estrela[data-ativa] svg,
+.estrela[aria-pressed="true"] svg {
+  fill: var(--accent);
+  color: var(--accent);
+}
+.busca-rodape {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+.estrela {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px;
+  margin-right: var(--space-1);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--text-subtle);
+  vertical-align: middle;
+  cursor: pointer;
+}
+.estrela:hover {
+  color: var(--accent);
+}
+.estrela-texto {
+  margin: 0 0 var(--space-3);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--border-strong);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+.acomp-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.so-lista {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--fs-sm);
+}
+tr.da-lista {
+  background: var(--surface-sunken);
+}
+.selo-lista {
+  margin-left: var(--space-2);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+@media (max-width: 640px) {
+  .busca-botao kbd,
+  .busca-dicas {
+    display: none;
+  }
+  .busca-fundo {
+    padding: 0;
+  }
+  .busca {
+    max-width: none;
+    max-height: none;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+/* posição de um mês passado (8.6) */
+.em-barra {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+.em-faixa {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  border-top: 2px solid var(--accent);
+  background: var(--surface);
+  box-shadow: var(--shadow-float);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+}
+.em-faixa p {
+  flex: 1 1 320px;
+  margin: 0;
+}
+.em-faixa ~ * {
+  scroll-margin-bottom: var(--space-16);
+}
+body:has(.em-faixa) {
+  padding-bottom: var(--space-16);
+}
+
+/* relatório mensal (8.7) */
+.relatorio-imprimir {
+  margin-bottom: var(--space-4);
+}
+.relatorio .prose ul {
+  padding-left: 0;
+}
+.relatorio .prose a {
+  font-weight: var(--fw-regular);
+}
+.relatorio section:first-child h2 {
+  margin-top: 0;
+}
+.relatorio-cabecalho,
+.relatorio-rodape {
+  display: none;
+}
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 16mm;
+  }
+  .site-header,
+  .site-footer,
+  .stale,
+  .crumb,
+  .relatorio-imprimir {
+    display: none !important;
+  }
+  /* como partes de uma tabela, cabeçalho e rodapé se repetem em cada página sem cobrir o texto */
+  .relatorio {
+    display: table;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+  .relatorio-corpo {
+    display: table-row-group;
+  }
+  .relatorio-cabecalho,
+  .relatorio-rodape {
+    break-inside: avoid; /* sem isto o Chromium não repete */
+    font-size: var(--fs-xs);
+    color: var(--text-muted);
+  }
+  .relatorio-cabecalho {
+    display: table-header-group;
+  }
+  .relatorio-rodape {
+    display: table-footer-group;
+  }
+  .relatorio section {
+    break-inside: avoid;
+  }
+  .relatorio .card {
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    background: none;
+  }
+  .relatorio a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

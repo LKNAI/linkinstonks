@@ -2,10 +2,11 @@
 
 // /novidades: eventos (trocas de escriturador, novas listagens, novos BDRs...), filtráveis por tipo, dataset e período.
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Carregando, ErroDados } from "@/components/layout/Pagina";
 import { Seletor } from "@/components/filters/Controles";
 import { Migalhas } from "@/components/paineis/Detalhe";
+import { eventoDaLista, marcarVisita, useLista } from "@/lib/acompanhamento";
 import { useDados } from "@/lib/data";
 import { formatDate, formatInt } from "@/lib/format";
 import { diasEntre, hojeEmBrasilia } from "@/lib/stale";
@@ -29,7 +30,12 @@ export function Novidades() {
   const [tipo, setTipo] = useState("");
   const [dataset, setDataset] = useState("");
   const [periodo, setPeriodo] = useState("");
+  const [soLista, setSoLista] = useState(false);
+  const minhaLista = useLista();
   const hoje = hojeEmBrasilia();
+  useEffect(() => {
+    if (d.estado === "ok") marcarVisita(hoje);
+  }, [d.estado, hoje]);
   const acoesLista = useMemo(() => (acoes.estado === "ok" ? acoes.dados.companhias : []), [acoes]);
 
   const todos = useMemo(() => (d.estado === "ok" ? d.dados.eventos : []), [d]);
@@ -39,9 +45,10 @@ export function Novidades() {
         (e) =>
           (!tipo || e.tipo === tipo) &&
           (!dataset || e.dataset === dataset) &&
-          (!periodo || diasEntre(e.data, hoje) <= Number(periodo)),
+          (!periodo || diasEntre(e.data, hoje) <= Number(periodo)) &&
+          (!soLista || eventoDaLista(e, minhaLista)),
       ),
-    [todos, tipo, dataset, periodo, hoje],
+    [todos, tipo, dataset, periodo, hoje, soLista, minhaLista],
   );
   if (d.estado === "erro") return <ErroDados mensagem={d.mensagem} />;
   if (d.estado === "carregando") return <Carregando />;
@@ -91,6 +98,12 @@ export function Novidades() {
               ]}
             />
             <Seletor rotulo="Período" valor={periodo} onChange={setPeriodo} opcoes={PERIODOS} />
+            {minhaLista.itens.length ? (
+              <label className="so-lista">
+                <input type="checkbox" checked={soLista} onChange={(e) => setSoLista(e.target.checked)} />
+                Só da minha lista
+              </label>
+            ) : null}
             <span className="count" aria-live="polite">
               <b>{formatInt(lista.length)}</b> de {formatInt(todos.length)} eventos
             </span>
@@ -112,13 +125,19 @@ export function Novidades() {
                 </thead>
                 <tbody>
                   {lista.map((e, i) => (
-                    <tr key={`${e.data}-${e.tipo}-${e.chave}-${i}`}>
+                    <tr
+                      key={`${e.data}-${e.tipo}-${e.chave}-${i}`}
+                      className={eventoDaLista(e, minhaLista) ? "da-lista" : undefined}
+                    >
                       <td>{formatDate(e.data)}</td>
                       <td>{ROTULO_TIPO[e.tipo] ?? e.tipo}</td>
                       <td>
                         <Link href={linkDoEvento(e)} prefetch={false}>
                           {nomeDoItem(e, acoesLista)}
                         </Link>
+                        {eventoDaLista(e, minhaLista) ? (
+                          <span className="selo-lista">na sua lista</span>
+                        ) : null}
                       </td>
                       <td>{mudancaDoEvento(e) ?? "—"}</td>
                       <td>{e.fonte}</td>

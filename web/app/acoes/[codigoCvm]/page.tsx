@@ -1,3 +1,4 @@
+import { Estrela } from "@/components/acompanhamento/Estrela";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
@@ -63,6 +64,7 @@ export default async function Page({ params }: Props) {
           itens={[{ href: "/", texto: "Início" }, { href: "/acoes/", texto: "Ações" }, { texto: c.pregao }]}
         />
         <h1 className="page-title">{c.pregao}</h1>
+        <Estrela comTexto item={{ tipo: "companhia", chave: c.codigo_cvm, nome: c.pregao }} />
         <p className="page-sub">
           {c.razao_social}. CNPJ {c.cnpj} · código CVM {c.codigo_cvm} ·{" "}
           <LinkNovaAba

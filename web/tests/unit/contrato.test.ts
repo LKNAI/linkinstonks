@@ -10,8 +10,12 @@ import {
   bdrsDocSchema,
   eventosDocSchema,
   metaSchema,
+  relatorioSchema,
   segmentosDocSchema,
+  snapshotAcoesSchema,
+  snapshotBdrsSchema,
 } from "@/lib/schemas";
+import { expandirLinhas } from "@/lib/snapshots";
 import { publico, schemaJson } from "../dados";
 
 describe("contrato com o ETL", () => {
@@ -23,6 +27,18 @@ describe("contrato com o ETL", () => {
     expect(() => eventosDocSchema.parse(publico("eventos.json"))).not.toThrow();
     expect(() => acoesLiquidezDocSchema.parse(publico("acoes_liquidez.json"))).not.toThrow();
     expect(() => segmentosDocSchema.parse(publico("acoes_historico_segmentos.json"))).not.toThrow();
+  });
+
+  it("relatório e snapshots passam no zod", () => {
+    const raiz = join(__dirname, "..", "..", "..", "data");
+    const ler = (...c: string[]) => JSON.parse(readFileSync(join(raiz, ...c), "utf8"));
+    expect(() => relatorioSchema.parse(ler("public", "relatorios", "2026-10.json"))).not.toThrow();
+    for (const mes of ["2023-11", "2026-09"]) {
+      const a = expandirLinhas(ler("snapshots_site", mes, "acoes.json"), "companhias");
+      expect(() => snapshotAcoesSchema.parse(a)).not.toThrow();
+    }
+    const b = expandirLinhas(ler("snapshots_site", "2026-09", "bdrs.json"), "bdrs");
+    expect(() => snapshotBdrsSchema.parse(b)).not.toThrow();
   });
 
   it("o zod rejeita dado fora do contrato", () => {

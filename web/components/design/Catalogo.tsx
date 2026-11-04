@@ -3,6 +3,9 @@
 // Catálogo interno (/design): tokens, tipografia, cores e componentes com os estados. Os valores dos tokens são
 // lidos do CSS em tempo de execução, então não há literal de cor, tamanho ou raio duplicado aqui.
 import { Search } from "lucide-react";
+import { Estrela } from "@/components/acompanhamento/Estrela";
+import { BotaoBusca } from "@/components/busca/BotaoBusca";
+import { VerComoEm } from "@/components/paineis/VerComoEm";
 import { useEffect, useState, type ReactNode } from "react";
 import { BarrasComposicao } from "@/components/charts/BarrasComposicao";
 import { Donut } from "@/components/charts/Donut";
@@ -469,6 +472,20 @@ export function Catalogo() {
           <Notas>
             Exemplo de nota de rodapé com fonte e data: <strong>Fonte:</strong> B3, atualizado em 29/10/2026.
           </Notas>
+        </Secao>
+        <Secao id="busca-lista" titulo="Busca e lista de acompanhamento">
+          <p className="hint">
+            Botão da busca, que abre o diálogo com Ctrl+K ou /, e estrela com e sem texto.
+          </p>
+          <div className="acomp-acoes">
+            <BotaoBusca />
+            <Estrela item={{ tipo: "bdr", chave: "EXEMPLO", nome: "item de exemplo" }} />
+            <Estrela comTexto item={{ tipo: "bdr", chave: "EXEMPLO2", nome: "outro item de exemplo" }} />
+          </div>
+        </Secao>
+        <Secao id="mes-passado" titulo="Mês passado">
+          <p className="hint">Seletor e faixa aparecem nas telas com ?em=AAAA-MM. Aqui, só o seletor.</p>
+          <VerComoEm pagina="acoes" />
         </Secao>
       </div>
     </div>

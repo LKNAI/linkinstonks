@@ -39,7 +39,9 @@ export function useEstadoUrl<T extends object>(
 
   useEffect(() => {
     if (!pronto) return;
-    const q = paraQuery(codecRef.current.codificar(estado));
+    // `em` (mês passado, lib/em.ts) não faz parte dos filtros e precisa sobreviver a esta escrita
+    const em = new URLSearchParams(window.location.search).get("em");
+    const q = paraQuery({ ...codecRef.current.codificar(estado), ...(em ? { em } : {}) });
     if (q !== window.location.search) window.history.replaceState(null, "", window.location.pathname + q);
   }, [estado, pronto]);
 

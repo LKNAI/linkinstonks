@@ -1,6 +1,6 @@
 // Gera public/feed.xml (Atom) a partir de data/public/eventos.json, para acompanhar mudanças por leitor de RSS.
 // Determinístico: nada de relógio; a data do feed é a do evento mais recente (ou da última atualização dos dados).
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -78,10 +78,32 @@ export const escaparXml = (s) =>
 
 const link = (siteUrl, e) => `${siteUrl}/${e.dataset === "acoes" ? "acoes" : "bdrs"}/${e.chave}/`;
 
-/** @param {{ eventos: any[], siteUrl: string, atualizadoEm: string, acoes?: { codigo_cvm: string, pregao: string, razao_social: string }[] }} args */
-export function montarFeed({ eventos, siteUrl, atualizadoEm, acoes = [] }) {
+/** Primeiro dia do mês seguinte: a data de um relatório não depende de quando a rotina rodou. */
+export function dataDoRelatorio(mes) {
+  const a = Number(mes.slice(0, 4));
+  const m = Number(mes.slice(5, 7));
+  return m === 12 ? `${a + 1}-01-01` : `${a}-${String(m + 1).padStart(2, "0")}-01`;
+}
+
+function entradaRelatorio(base, r) {
+  const data = dataDoRelatorio(r.mes);
+  const url = `${base}/relatorios/${r.mes}/`;
+  const resumo = r.secoes[0]?.itens.map((i) => i.texto).join(" ") ?? "";
+  return `  <entry>
+    <id>${escaparXml(`tag:${new URL(base).host},${data}:relatorio/${r.mes}`)}</id>
+    <title>${escaparXml(r.titulo)}</title>
+    <updated>${data}T00:00:00Z</updated>
+    <link href="${escaparXml(url)}"/>
+    <summary>${escaparXml(resumo)}</summary>
+  </entry>`;
+}
+
+/** @param {{ eventos: any[], siteUrl: string, atualizadoEm: string, acoes?: { codigo_cvm: string, pregao: string, razao_social: string }[], relatorios?: any[] }} args */
+export function montarFeed({ eventos, siteUrl, atualizadoEm, acoes = [], relatorios = [] }) {
   const base = siteUrl.replace(/\/$/, "");
-  const atualizado = `${eventos[0]?.data ?? atualizadoEm}T00:00:00Z`;
+  const datas = [eventos[0]?.data, ...relatorios.map((r) => dataDoRelatorio(r.mes))].filter(Boolean).sort();
+  const atualizado = `${datas.at(-1) ?? atualizadoEm}T00:00:00Z`;
+  const deRelatorios = relatorios.map((r) => entradaRelatorio(base, r));
   const entradas = eventos
     .map((e) => {
       const mudanca = mudancaDoEvento(e);
@@ -95,6 +117,7 @@ export function montarFeed({ eventos, siteUrl, atualizadoEm, acoes = [] }) {
     <summary>${escaparXml(`${titulo}. Fonte: ${e.fonte}.`)}</summary>
   </entry>`;
     })
+    .concat(deRelatorios)
     .join("\n");
   return `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR">
@@ -127,7 +150,14 @@ function principal() {
       .sort()
       .at(-1) ?? "1970-01-01";
   const siteUrl = process.env.SITE_URL ?? "https://linkinstonks.vercel.app";
-  writeFileSync(destino, montarFeed({ eventos, siteUrl, atualizadoEm, acoes }));
+  const pastaRel = join(pub, "relatorios");
+  const relatorios = existsSync(pastaRel)
+    ? readdirSync(pastaRel)
+        .sort()
+        .reverse()
+        .map((n) => JSON.parse(readFileSync(join(pastaRel, n), "utf8")))
+    : [];
+  writeFileSync(destino, montarFeed({ eventos, siteUrl, atualizadoEm, acoes, relatorios }));
   console.log(`gen-feed: ${eventos.length} evento(s) em public/feed.xml`);
 }
 

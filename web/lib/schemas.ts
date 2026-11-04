@@ -268,3 +268,83 @@ export const historicoDocSchema = z.object({
 });
 
 export type Passagem = z.infer<typeof passagemSchema>;
+
+// Relatório mensal (lido na build) e posição compacta de um mês passado (lida sob demanda).
+export const relatorioSchema = z.object({
+  schema_version: versaoSchema,
+  mes: z.string(),
+  titulo: z.string(),
+  resumo: z.object({
+    companhias: z.int(),
+    bdrs: z.int(),
+    volume_acoes: z.int(),
+    volume_acoes_anterior: z.int(),
+    volume_bdrs: z.int(),
+    volume_bdrs_anterior: z.int(),
+  }),
+  secoes: z.array(
+    z.object({
+      id: z.string(),
+      titulo: z.string(),
+      vazio: z.string(),
+      itens: z.array(z.object({ texto: z.string(), href: nomeOuNulo })),
+    }),
+  ),
+});
+export type Relatorio = z.infer<typeof relatorioSchema>;
+
+export const snapshotAcoesSchema = z.object({
+  schema_version: versaoSchema,
+  mes: z.string(),
+  reconstituido: z.boolean(),
+  coletado_em: nomeOuNulo,
+  companhias: z.array(
+    z.object({
+      codigo_cvm: z.string(),
+      pregao: z.string(),
+      razao_social: z.string(),
+      emissor: z.string(),
+      cnpj: z.string(),
+      setor: z.string(),
+      segmento: z.enum(SEGMENTOS),
+      tickers: z.array(z.object({ ticker: z.string(), classe: z.enum(CLASSES) })),
+      escriturador: nomeOuNulo,
+      escriturador_cvm: z.nullable(
+        z.object({
+          atual: z.string(),
+          inicio: z.string(),
+          inicio_aproximado: z.boolean(),
+          anterior: nomeOuNulo,
+          anterior_inicio: nomeOuNulo,
+          anterior_fim: nomeOuNulo,
+        }),
+      ),
+    }),
+  ),
+});
+
+export const snapshotBdrsSchema = z.object({
+  schema_version: versaoSchema,
+  mes: z.string(),
+  reconstituido: z.boolean(),
+  coletado_em: nomeOuNulo,
+  meses: z.array(z.string()),
+  bdrs: z.array(
+    z.object({
+      ticker: z.string(),
+      nome: z.string(),
+      tipo: z.enum(TIPOS_BDR),
+      isin: z.string(),
+      depositaria: z.string(),
+      fonte_depositaria: z.string(),
+      categoria: z.string(),
+      qualificado: z.boolean(),
+      primeiro_pregao: nomeOuNulo,
+      ultimo_pregao: z.string(),
+      ultimo_preco: z.number(),
+      negocios_24m: z.int(),
+      volume_24m: z.int(),
+      volume_mensal: z.array(z.int()),
+    }),
+  ),
+});

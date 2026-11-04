@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PainelBdrs } from "@/components/paineis/PainelBdrs";
+import { PainelBdrs } from "@/components/paineis/PaineisLazy";
 
 export const metadata: Metadata = {
   title: "BDRs: depositárias e volume",

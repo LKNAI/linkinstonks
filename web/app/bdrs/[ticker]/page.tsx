@@ -1,3 +1,4 @@
+import { Estrela } from "@/components/acompanhamento/Estrela";
 import type { Metadata } from "next";
 import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import { notFound } from "next/navigation";
@@ -45,6 +46,7 @@ export default async function Page({ params }: Props) {
         <h1 className="page-title">
           {b.ticker} <span style={{ fontWeight: 600, color: "var(--text-muted)" }}>· {b.nome}</span>
         </h1>
+        <Estrela comTexto item={{ tipo: "bdr", chave: b.ticker, nome: b.ticker }} />
         <p className="page-sub">
           BDR {TIPO_GRUPO_NOME[grupo].toLowerCase()} ({b.tipo})
           {b.qualificado ? " · restrito a investidores qualificados" : ""} ·{" "}

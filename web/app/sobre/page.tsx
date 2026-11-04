@@ -207,6 +207,36 @@ export default function Page() {
             tickers, também é marcada como incerta.
           </p>
 
+          <h3 id="metodologia-busca">Busca global</h3>
+          <p>
+            Código exato (ticker, emissor, CNPJ, código CVM ou ISIN) vem primeiro, depois prefixo de código,
+            início de palavra do nome, trecho do nome e, por último, correspondência aproximada, para erros de
+            digitação. A busca ignora acentos e maiúsculas e mostra até 8 resultados por grupo.
+          </p>
+
+          <h3 id="metodologia-relatorio">Relatório mensal</h3>
+          <p>
+            O texto usa frases fixas, sem modelo de linguagem. Os eventos são os detectados no mês, com a data
+            da detecção. As altas e quedas de BDRs só consideram R$ 10 mi ou mais nos dois meses, para evitar
+            ruído percentual. O registro de falhas de coleta começa em novembro de 2026.
+          </p>
+
+          <h3 id="metodologia-passado">Ver um mês passado</h3>
+          <p>
+            A posição real é a guardada pela rotina mensal, e a tela mostra a data da coleta. A reconstituída
+            é montada depois e sempre marcada como tal. Nas ações, usa o escriturador vigente no último dia do
+            mês segundo o histórico da CVM, só para companhias do cadastro atual: quem saiu da bolsa não
+            aparece, e setor, segmento e tickers são os de hoje. Nos BDRs, o volume vem do COTAHIST, e a
+            depositária e o tipo vêm do primeiro snapshot guardado. Por isso, em mês reconstituído, a
+            diferença contra hoje não equivale ao número de novas listagens.
+          </p>
+
+          <h3 id="metodologia-lista">Sua lista de acompanhamento</h3>
+          <p>
+            Fica só neste navegador, no armazenamento local, e não é enviada a lugar nenhum. As novidades
+            contam os eventos dos itens da lista desde a última visita a Novidades ou a Minha lista.
+          </p>
+
           <h2>Regras de normalização</h2>
           <p>
             Nomes de escrituradores variam muito entre fontes (só o Itaú Corretora aparece com mais de dez
@@ -251,7 +281,9 @@ export default function Page() {
             , que limitam o uso a fins pessoais e exigem autorização dela para redistribuir ou usar para fins
             comerciais. O que está aqui serve para consulta e não concede nenhuma licença sobre esses dados.
             Quem representa uma das fontes e quer corrigir ou retirar algum dado pode{" "}
-            <a href="https://github.com/LKNAI/linkinstonks/issues">abrir um pedido no repositório do projeto</a>
+            <a href="https://github.com/LKNAI/linkinstonks/issues">
+              abrir um pedido no repositório do projeto
+            </a>
             .
           </p>
 

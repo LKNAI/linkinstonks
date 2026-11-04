@@ -60,6 +60,15 @@ import { type Acao } from "@/lib/schemas";
 import { hojeEmBrasilia } from "@/lib/stale";
 import { useEstadoUrl, type Codec } from "@/lib/url-state";
 import { colunasAcoes } from "./celulas-acoes";
+import { VerComoEm } from "./VerComoEm";
+import { useEm } from "@/lib/em";
+import {
+  carregarAcoes as carregarAcoesEm,
+  diferenca,
+  kpisComDiferenca,
+  UNIDADE_COMPANHIA,
+  useSnapshot,
+} from "@/lib/snapshots";
 
 type VolumeDoc = Doc<"acoes_liquidez_resumo.json">;
 
@@ -102,11 +111,26 @@ const HERO: HeroProps = {
 export function PainelAcoes() {
   const d = useDados("acoes.json");
   const v = useDados("acoes_liquidez_resumo.json"); // em paralelo; se falhar, o painel segue sem a parte de volume
+  const em = useEm();
+  const snap = useSnapshot(em, carregarAcoesEm);
   if (d.estado === "erro") return <ErroDados mensagem={d.mensagem} />;
+  if (snap?.estado === "erro")
+    return (
+      <>
+        <VerComoEm pagina="acoes" />
+        <ErroDados mensagem={snap.mensagem} />
+      </>
+    );
+  const passado = snap?.estado === "ok" ? snap.dados.acoes : null;
   return (
     <PaginaComHero hero={HERO}>
-      {d.estado === "ok" && v.estado !== "carregando" ? (
-        <Conteudo acoes={d.dados.companhias} volume={v.estado === "ok" ? v.dados : null} />
+      {d.estado === "ok" && v.estado !== "carregando" && (!em || passado) ? (
+        <Conteudo
+          key={em ?? "hoje"}
+          acoes={passado ?? d.dados.companhias}
+          volume={!passado && v.estado === "ok" ? v.dados : null}
+          hoje={passado ? d.dados.companhias : null}
+        />
       ) : (
         <Carregando comHero />
       )}
@@ -124,11 +148,22 @@ function contarAnteriores(rows: readonly { outE: string | null }[]): [string, nu
 const comSelecionado = (itens: { v: string; texto: string }[], sel: string | null) =>
   sel && !itens.some((i) => i.v === sel) ? [...itens, { v: sel, texto: `${sel} (0)` }] : itens;
 
-function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }) {
+function Conteudo({
+  acoes,
+  volume,
+  hoje,
+}: {
+  acoes: Acao[];
+  volume: VolumeDoc | null;
+  /** Posição atual, para comparar quando a tela mostra um mês passado. */
+  hoje: Acao[] | null;
+}) {
   const todas = useMemo(() => derivar(acoes, volume?.companhias), [acoes, volume]);
   const meses = useMemo(() => volume?.meses ?? [], [volume]);
   const ordemInst = useMemo(() => ordemDasInstituicoes(todas, ORDEM_MARCAS), [todas]);
-  const [f, setF] = useEstadoUrl(FILTROS_PADRAO, codecAcoes);
+  const [fUrl, setF] = useEstadoUrl(FILTROS_PADRAO, codecAcoes);
+  // a liquidez não existe no snapshot: um link compartilhado com ?liq= não pode esvaziar a tela
+  const f = hoje ? { ...fUrl, liq: null, showL: false } : fUrl;
   const colunasTabela = useMemo(() => colunasAcoes(meses.at(-1) ?? null, f.showL), [meses, f.showL]);
   const anoRef = Number(hojeEmBrasilia().slice(0, 4));
 
@@ -186,7 +221,25 @@ function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }
   return (
     <>
       <div className="wrap">
-        <KpiGrid kpis={kpisAcoes(base, todas.length, anoRef)} />
+        <VerComoEm
+          pagina="acoes"
+          resumo={
+            hoje
+              ? `${formatInt(todas.length)} companhias nesta posição. ${diferenca(hoje.length, todas.length, UNIDADE_COMPANHIA)}.`
+              : undefined
+          }
+        />
+        <KpiGrid
+          kpis={
+            hoje
+              ? kpisComDiferenca(
+                  kpisAcoes(base, todas.length, anoRef),
+                  kpisAcoes(filtrar(derivar(hoje), f), hoje.length, anoRef),
+                  UNIDADE_COMPANHIA,
+                )
+              : kpisAcoes(base, todas.length, anoRef)
+          }
+        />
 
         <div className="filters">
           <div className="fbar">
@@ -444,7 +497,7 @@ function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }
             </p>
           </ChartCard>
 
-          <div className="sec-h" id="volume">
+          <div className="sec-h" id={hoje ? undefined : "volume"} hidden={!!hoje}>
             <h2>Negociação</h2>
             <p>
               Mercado à vista e fracionário somados por companhia,{" "}
@@ -704,7 +757,9 @@ function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }
           ) : (
             <section className="card c12" role="status">
               <p className="muted" style={{ margin: 0 }}>
-                O volume negociado está indisponível no momento. Os demais indicadores seguem válidos.
+                {hoje
+                  ? "A negociação não tem retrato de meses passados: esta seção só aparece na posição de hoje."
+                  : "O volume negociado está indisponível no momento. Os demais indicadores seguem válidos."}
               </p>
             </section>
           )}
