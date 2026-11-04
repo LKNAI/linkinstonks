@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "relatorio.schema.json",
+  "title": "relatorios/AAAA-MM.json: relatório mensal (item 8.7)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "mes", "titulo", "resumo", "secoes"],
+  "properties": {
+    "schema_version": { "type": "string", "pattern": "^1\\.[0-9]+$" },
+    "mes": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}$" },
+    "titulo": { "type": "string" },
+    "resumo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["companhias", "bdrs", "volume_acoes", "volume_acoes_anterior", "volume_bdrs", "volume_bdrs_anterior"],
+      "properties": {
+        "companhias": { "type": "integer", "minimum": 0 },
+        "bdrs": { "type": "integer", "minimum": 0 },
+        "volume_acoes": { "type": "integer", "minimum": 0 },
+        "volume_acoes_anterior": { "type": "integer", "minimum": 0 },
+        "volume_bdrs": { "type": "integer", "minimum": 0 },
+        "volume_bdrs_anterior": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "secoes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "titulo", "itens", "vazio"],
+        "properties": {
+          "id": { "type": "string" },
+          "titulo": { "type": "string" },
+          "vazio": { "type": "string" },
+          "itens": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["texto", "href"],
+              "properties": {
+                "texto": { "type": "string" },
+                "href": { "type": ["string", "null"] }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

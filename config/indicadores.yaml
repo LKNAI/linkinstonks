@@ -43,3 +43,14 @@ fca_valor_mobiliario:
 # O build e o `painel-etl validate` falham se data/public passar disto (snapshots têm orçamento próprio, item 8.6).
 orcamento:
   data_public_mb: 20
+
+# Relatório mensal (item 8.7): variações de BDR só entre meses que atingem este volume, para evitar ruído percentual.
+relatorio_mensal:
+  volume_minimo_bdr: 10000000
+  maiores_variacoes: 5
+  registro_falhas_desde: "2026-11"  # antes disto não há registro de falhas: o relatório diz isso, em vez de "nenhuma"
+
+# Posição de meses passados no site (item 8.6, ADR 0011). A build falha acima do orçamento.
+snapshots_site:
+  retencao_meses: 36
+  orcamento_kb_mes: 600

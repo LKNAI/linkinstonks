@@ -45,12 +45,25 @@ class Orcamento(BaseModel):
     data_public_mb: int
 
 
+class RelatorioMensal(BaseModel):
+    volume_minimo_bdr: int
+    maiores_variacoes: int
+    registro_falhas_desde: str
+
+
+class SnapshotsSite(BaseModel):
+    retencao_meses: int
+    orcamento_kb_mes: int
+
+
 class Indicadores(BaseModel):
     liquidez: Liquidez
     perfil_bdr: PerfilBdr
     estouro_negocios: EstouroNegocios
     fca_valor_mobiliario: FcaValorMobiliario
     orcamento: Orcamento
+    relatorio_mensal: RelatorioMensal
+    snapshots_site: SnapshotsSite
 
 
 @cache

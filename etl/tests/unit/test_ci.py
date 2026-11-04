@@ -181,6 +181,8 @@ class TestMensal:
         assert b3_cotahist.ler_particao("2026-09", pasta)["fonte"] == "mensal"  # type: ignore[index]
         snap = tmp_path / "history" / "snapshots" / "2026-09" / "acoes.csv.gz"
         assert gzip.decompress(snap.read_bytes()) == b"a;b\n1;2\n"
+        coletas = tmp_path / "history" / "snapshots" / "datas_coleta.json"
+        assert json.loads(coletas.read_text("utf-8")) == {"2026-09": "2026-10-05"}  # a data real, não o fim do mês
 
         (tmp_path / "public" / "downloads" / "acoes.csv").write_bytes(b"mudou\n")
         r2 = pipeline.mensal(self.contexto(tmp_path))

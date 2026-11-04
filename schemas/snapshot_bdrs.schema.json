@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "snapshot_bdrs.schema.json",
+  "title": "snapshots/AAAA-MM/bdrs.json: posição compacta de um mês passado (item 8.6)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "mes", "reconstituido", "coletado_em", "meses", "bdrs"],
+  "properties": {
+    "schema_version": { "type": "string", "pattern": "^1\\.[0-9]+$" },
+    "mes": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}$" },
+    "reconstituido": { "type": "boolean" },
+    "coletado_em": { "type": ["string", "null"] },
+    "meses": { "type": "array", "items": { "type": "string" } },
+    "bdrs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["ticker", "nome", "tipo", "isin", "depositaria", "fonte_depositaria", "categoria", "qualificado", "primeiro_pregao", "ultimo_pregao", "ultimo_preco", "negocios_24m", "volume_24m", "volume_mensal"],
+        "properties": {
+          "ticker": { "type": "string" },
+          "nome": { "type": "string" },
+          "tipo": { "type": "string" },
+          "isin": { "type": "string" },
+          "depositaria": { "type": "string" },
+          "fonte_depositaria": { "type": "string" },
+          "categoria": { "type": "string" },
+          "qualificado": { "type": "boolean" },
+          "primeiro_pregao": { "type": ["string", "null"] },
+          "ultimo_pregao": { "type": "string" },
+          "ultimo_preco": { "type": "number" },
+          "negocios_24m": { "type": "integer" },
+          "volume_24m": { "type": "integer" },
+          "volume_mensal": { "type": "array", "items": { "type": "integer" } }
+        }
+      }
+    }
+  }
+}

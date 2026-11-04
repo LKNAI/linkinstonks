@@ -24,6 +24,8 @@ from painel_etl.core.state import State
 from painel_etl.datasets import acoes as ds_acoes
 from painel_etl.datasets import acoes_liquidez as ds_liquidez
 from painel_etl.datasets import bdrs as ds_bdrs
+from painel_etl.datasets import relatorio_mensal as ds_relatorio
+from painel_etl.datasets import snapshots_site as ds_snapshots
 from painel_etl.datasets import valores_mobiliarios as ds_valores
 from painel_etl.indicadores import carregar as carregar_indicadores
 from painel_etl.normalize.instituicoes import Registro
@@ -32,6 +34,7 @@ from painel_etl.sources.b3_listed import B3Listed, CompanyDetail, EtfRow, Listed
 
 SCHEMA_VERSION = "1.1"
 SCHEMA_VERSION_NOVOS = "1.0"  # arquivos criados na Fase 8
+SCHEMA_VERSION_INSTITUICOES = "1.2"  # 1.2: campo `aliases`, usado pela busca global
 HEARTBEAT_DIAS = 2  # meta.json só é regravado sem mudança de dados a cada (HEARTBEAT_DIAS + 1) dias
 QUEDA_SCRAPER = 0.20
 SPONSORED = {"DR1", "DR2", "DR3"}
@@ -499,12 +502,13 @@ def publicar_instituicoes(ctx: Contexto) -> bool:
     reg = Registro.carregar()
     itens = [
         {
-            "cnpjs": i.cnpjs, "cor": i.cor, "cor_depositaria": i.cor_depositaria, "id": i.id, "nome": i.nome,
+            "aliases": i.aliases, "cnpjs": i.cnpjs, "cor": i.cor, "cor_depositaria": i.cor_depositaria, "id": i.id,
+            "nome": i.nome,
             "nome_curto": i.nome_curto, "papeis": i.papeis,
         }
         for i in sorted(reg.itens, key=lambda x: x.id)
     ]  # fmt: skip
-    doc = {"instituicoes": itens, "schema_version": SCHEMA_VERSION}
+    doc = {"instituicoes": itens, "schema_version": SCHEMA_VERSION_INSTITUICOES}
     schema.validar("instituicoes", doc)
     return _escrever(ctx, pub(ctx.raiz) / "instituicoes.json", doc, 2)
 
@@ -558,6 +562,8 @@ ARQUIVOS = {
 def validar_publicados(raiz: Path | None = None) -> list[str]:
     """Valida cada arquivo de `data/public` contra o seu JSON Schema e o orçamento de tamanho. Vazio = tudo certo."""
     saida = []
+    for relatorio in sorted((pub(raiz) / "relatorios").glob("*.json")):
+        saida += [f"relatorios/{relatorio.name}: {e}" for e in schema.erros("relatorio", pio.read_json(relatorio))]
     for arquivo, nome in ARQUIVOS.items():
         caminho = pub(raiz) / arquivo
         if not caminho.exists():
@@ -605,7 +611,90 @@ def run(ctx: Contexto, datasets: list[str]) -> list[Resultado]:
     publicar_instituicoes(ctx)
     publicar_eventos(ctx)
     atualizar_meta(ctx, resultados)
+    registrar_falhas(ctx, resultados)
     return resultados
+
+
+def registrar_falhas(ctx: Contexto, resultados: list[Resultado]) -> None:
+    """Fonte com problema vai para o registro do mês, lido pelo relatório. Dia sem falha não gera arquivo nem commit."""
+    linhas = [
+        {"data": ctx.hoje.isoformat(), "fonte": nome, "status": info["status"]}
+        for r in resultados
+        for nome, info in sorted(r.fontes.items())
+        if info["status"] != "ok"
+    ]
+    if linhas and not ctx.dry_run:
+        pio.append_jsonl(ctx.raiz / "history" / "qualidade" / f"{ctx.hoje:%Y-%m}.jsonl", linhas)
+
+
+def gerar_relatorio(ctx: Contexto, mes: str) -> Path:
+    """`data/public/relatorios/AAAA-MM.json`, a partir do log de eventos e das partições do COTAHIST."""
+    eventos: list[dict[str, Any]] = []
+    for arq in sorted((ctx.raiz / "events").glob("*.jsonl")):
+        eventos += [json.loads(x) for x in arq.read_text(encoding="utf-8").splitlines() if x]
+    acoes = pio.read_json(pub(ctx.raiz) / "acoes.json", {"companhias": []})["companhias"]
+    bdrs = pio.read_json(pub(ctx.raiz) / "bdrs.json", {"bdrs": []})["bdrs"]
+    anterior = ds_relatorio.mes_anterior(mes)
+    pasta_a, pasta_b = ctx.raiz / "history" / b3_cotahist.ACAO.pasta, ctx.raiz / "history" / "bdr_volume"
+    qualidade = ctx.raiz / "history" / "qualidade" / f"{mes}.jsonl"
+    falhas = [json.loads(x) for x in qualidade.read_text("utf-8").splitlines() if x] if qualidade.exists() else []
+    estado = State(b3_cotahist.ACAO.estado, ctx.raiz / "state").get("processados", [])
+    do_mes = [d for d in estado if d.startswith(mes)]
+    cfg = carregar_indicadores().relatorio_mensal
+    doc = ds_relatorio.construir(
+        mes, eventos, {c["codigo_cvm"]: c["pregao"] or c["razao_social"] for c in acoes}, len(acoes), len(bdrs),
+        (b3_cotahist.ler_particao(mes, pasta_a), b3_cotahist.ler_particao(anterior, pasta_a)),
+        (b3_cotahist.ler_particao(mes, pasta_b), b3_cotahist.ler_particao(anterior, pasta_b)),
+        falhas, do_mes or None, cfg.volume_minimo_bdr, cfg.maiores_variacoes, cfg.registro_falhas_desde,
+        SCHEMA_VERSION_NOVOS,
+    )  # fmt: skip
+    schema.validar("relatorio", doc)
+    destino = pub(ctx.raiz) / "relatorios" / f"{mes}.json"
+    pio.write_json(destino, doc, 2)
+    return destino
+
+
+def _datas_coleta(raiz: Path) -> dict[str, str]:
+    dados: dict[str, str] = pio.read_json(raiz / "history" / "snapshots" / "datas_coleta.json", {})
+    return dados
+
+
+def gerar_snapshot_site(ctx: Contexto, mes: str) -> list[str]:
+    """Posição compacta de um mês para o site (ADR 0011). Sem snapshot real do mês, reconstitui e marca."""
+    pasta = ctx.raiz / "history" / "snapshots"
+    destino = ctx.raiz / "snapshots_site" / mes
+    atuais = pio.read_json(pub(ctx.raiz) / "acoes.json", {"companhias": []})["companhias"]
+    historico = pio.read_json(pub(ctx.raiz) / "acoes_historico_escrituradores.json", {"companhias": {}})["companhias"]
+    coletas = _datas_coleta(ctx.raiz)
+    real_acoes = pasta / mes / "acoes.csv.gz"
+    gerados = []
+    if real_acoes.exists() and mes in coletas:
+        doc = ds_snapshots.acoes_real(pio.read_csv_gz(real_acoes), atuais, mes, coletas[mes], SCHEMA_VERSION_NOVOS)
+    else:
+        doc = ds_snapshots.acoes_reconstituido(atuais, historico, mes, SCHEMA_VERSION_NOVOS)
+    schema.validar("snapshot_acoes", doc)
+    pio.write_json(destino / "acoes.json", ds_snapshots.compactar(doc, "companhias"), None)
+    gerados.append("acoes")
+
+    particoes_dir = ctx.raiz / "history" / "bdr_volume"
+    meses = sorted(a.stem for a in particoes_dir.glob("*.json") if a.stem <= mes)[-24:]
+    primeiro = next(iter(sorted(pasta.glob("*/bdrs.csv.gz"))), None)
+    real_bdrs = pasta / mes / "bdrs.csv.gz"
+    if len(meses) >= 2 and primeiro:
+        real = real_bdrs.exists() and mes in coletas
+        doc_b = ds_snapshots.bdrs_do_mes(
+            {m: p for m in meses if (p := b3_cotahist.ler_particao(m, particoes_dir))},
+            meses,
+            pio.read_csv_gz(real_bdrs if real else primeiro),
+            mes,
+            not real,
+            coletas[mes] if real else None,
+            SCHEMA_VERSION_NOVOS,
+        )
+        schema.validar("snapshot_bdrs", doc_b)
+        pio.write_json(destino / "bdrs.json", ds_snapshots.compactar(doc_b, "bdrs"), None)
+        gerados.append("bdrs")
+    return gerados
 
 
 def relatorio_execucao(ctx: Contexto, resultados: list[Resultado]) -> dict[str, Any]:
@@ -655,6 +744,9 @@ def mensal(ctx: Contexto) -> Resultado:
             destino = snap / f"{nome}.csv.gz"
             if origem.exists() and not destino.exists():  # snapshot é imutável: só cria se não existir
                 res.mudou |= pio.write_bytes(destino, gzip.compress(origem.read_bytes(), compresslevel=9, mtime=0))
+                coletas = _datas_coleta(ctx.raiz)
+                coletas.setdefault(mes, ctx.hoje.isoformat())
+                pio.write_json(snap.parent / "datas_coleta.json", coletas, 2)
         res.publicado = True
     except Exception as e:
         res.erro = f"{type(e).__name__}: {e}"

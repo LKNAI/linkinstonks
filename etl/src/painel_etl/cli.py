@@ -23,6 +23,8 @@ from painel_etl.sources import b3_cotahist, cvm_fca
 app = typer.Typer(help="ETL do Painel B3 (escrituradores de ações e BDRs).", no_args_is_help=True, add_completion=False)
 backfill_app = typer.Typer(help="Carga histórica.", no_args_is_help=True)
 app.add_typer(backfill_app, name="backfill")
+report_app = typer.Typer(help="Resumo em Markdown e relatório mensal.", invoke_without_command=True)
+app.add_typer(report_app, name="report")
 
 DATASETS = ("acoes", "bdrs", "acoes_liquidez")
 CATEGORIAS_BACKFILL = {"bdrs": b3_cotahist.BDR, "acoes": b3_cotahist.ACAO}
@@ -188,11 +190,34 @@ def validate() -> None:
     raise typer.Exit(1 if erros else 0)
 
 
-@app.command()
-def report() -> None:
-    """Imprime um resumo em Markdown (Job Summary e Issues)."""
+@report_app.callback()
+def report(ctx: typer.Context) -> None:
+    """Sem subcomando, imprime um resumo em Markdown (Job Summary e Issues)."""
     _utf8()
-    typer.echo(pipeline.resumo_markdown())
+    if ctx.invoked_subcommand is None:
+        typer.echo(pipeline.resumo_markdown())
+
+
+@report_app.command("monthly")
+def report_monthly(mes: Annotated[str, typer.Option(help="Mês AAAA-MM.")]) -> None:
+    """Grava data/public/relatorios/AAAA-MM.json."""
+    destino = pipeline.gerar_relatorio(pipeline.Contexto(hoje=_hoje()), mes)
+    typer.echo(str(destino))
+
+
+@backfill_app.command("snapshots-site")
+def backfill_snapshots_site(
+    start: Annotated[str, typer.Option("--from", help="Mês inicial AAAA-MM.")],
+    end: Annotated[str | None, typer.Option("--to", help="Mês final AAAA-MM (padrão: mês anterior ao atual).")] = None,
+) -> None:
+    """Gera a posição compacta de cada mês em data/snapshots_site. Sem rede."""
+    _utf8()
+    hoje = _hoje()
+    fim = end or f"{(hoje.replace(day=1) - dt.timedelta(days=1)):%Y-%m}"
+    ctx = pipeline.Contexto(hoje=hoje)
+    for ano, mes in b3_cotahist.meses_entre(start, fim):
+        chave = f"{ano}-{mes:02d}"
+        typer.echo(f"{chave}: {', '.join(pipeline.gerar_snapshot_site(ctx, chave))}")
 
 
 @app.command("seed-import")
@@ -213,6 +238,10 @@ def monthly(
     _utf8()
     ctx = pipeline.Contexto(hoje=dt.date.fromisoformat(date) if date else _hoje(), semanal=True)
     resultados = [pipeline.mensal(ctx), *pipeline.run(ctx, list(DATASETS))]
+    if not any(r.erro for r in resultados):  # depois da reconciliação e da publicação completa
+        mes = f"{(ctx.hoje.replace(day=1) - dt.timedelta(days=1)):%Y-%m}"
+        pipeline.gerar_relatorio(ctx, mes)
+        pipeline.gerar_snapshot_site(ctx, mes)
     _gravar_relatorio(ctx, resultados, report_json, summary_md)
     for r in resultados:
         typer.echo(f"{r.dataset}: {'ok' if r.publicado and not r.erro else 'FALHOU'} {r.erro}".strip())
