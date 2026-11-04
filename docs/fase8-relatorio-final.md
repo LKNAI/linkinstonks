@@ -1,6 +1,6 @@
 # Fase 8: relatório final
 
-Situação em 03/11/2026. As Ondas A e B estão nos PRs #7 e #8, e a Onda C está na branch local `feat/fase8-onda-c`. Nada foi integrado ao `main` nem publicado. O dono dispensou a revisão de cada etapa.
+Situação em 04/11/2026. A Fase 8 está no `main` e publicada em <https://linkinstonks.vercel.app> desde 03/11/2026, às 22h50 de Brasília, pelo PR #9, que incorporou as Ondas A (#7) e B (#8). O dono autorizou integrar e publicar sem revisão, desde que a verificação e o CI passassem.
 
 ## O que foi entregue
 
@@ -57,7 +57,10 @@ Quartis do mês: R$ 1.108,43 e R$ 7.463,41, com 574 BDRs no cálculo.
 |---|---|
 | Testes do ETL, ruff e mypy | 371 passaram, sem erros |
 | Testes do site, ESLint, tipos e Prettier | 144 passaram, sem erros |
-| e2e com axe | 123 passaram, 1 ignorado (só roda quando há mês parcial) |
+| e2e com axe | 124 passaram, nenhum ignorado, já com o mês parcial de novembro nos dados |
+| CI do PR #9 | ETL, site com e2e, seed intacto e Vercel aprovados |
+| Produção | todas as rotas respondem; arquivos retirados dão 404; `noindex` em `/data/`; busca, lista, relatório e mês passado conferidos em navegador, sem erro de console |
+| `etl-daily` no Actions | 1 min 33 s (manual, 03/11, com o primeiro arquivo diário de novembro) e 1 min 37 s (agendado, 04/11), sem issue de qualidade; meta de 8 min |
 | JS inicial | maior rota com 197,7 KB; `/acoes` e `/bdrs` com 180,9 KB (limite de 200 KB) |
 | `data/public` | 3,9 MB (limite de 20 MB) |
 | `data/snapshots_site` | 11 MB; maior mês com 534 KB (limite de 600 KB) |
@@ -66,16 +69,13 @@ Quartis do mês: R$ 1.108,43 e R$ 7.463,41, com 574 BDRs no cálculo.
 
 ## O que não foi verificado
 
-- **CI da Onda C:** os testes rodaram só nesta máquina, porque a branch não foi enviada.
-- **Lighthouse e PageSpeed:** não medidos. A última medida local de desempenho foi baixa (58 a 62, `docs/design-system.md`). Baixar os painéis sob demanda deve ajudar, mas não há número.
-- **Tempos no GitHub Actions:** só há medidas locais (`docs/operacao.md`), e a meta é ficar abaixo de 8 minutos no diário e 20 no mensal.
-- **Rotina mensal real:** a primeira com este código depende da integração. A de 05/11/2026 é a próxima.
-- **Fluxo diário com arquivo de novembro:** não exercitado com dado real.
+- **Lighthouse e PageSpeed:** não medidos. A API do PageSpeed recusou por falta de cota (HTTP 429), e o Lighthouse local não foi executado. A última medida na máquina local foi baixa (58 a 62, `docs/design-system.md`). Baixar os painéis sob demanda deve ajudar, mas não há número. Falta rodar <https://pagespeed.web.dev/> em `/acoes/` e `/bdrs/`.
+- **Rotina mensal real:** a primeira com este código é a de 05/11/2026, que grava o snapshot real de outubro, refaz o relatório e mede o tempo contra a meta de 20 minutos.
 
 ## Riscos
 
 1. **Termos da B3.** O site continua mostrando dados de negociação sem autorização da B3. O [ADR 0009](decisoes/0009-termos-de-uso-da-b3.md) reduz a exposição, mas não a elimina, e traz o texto do pedido de autorização. Não é parecer jurídico.
-2. **Integração.** O bot grava em `data/` no `main` todo dia, então `data/public` precisa ser regenerado na integração. Se a integração for depois de 05/11, a rotina antiga terá gravado o snapshot de outubro sem registrar a data, e o mês precisa ser refeito (`docs/operacao.md`).
+2. **Primeira rotina mensal.** O relatório e a posição compacta só foram exercitados por comando local, e o caminho completo roda pela primeira vez em 05/11. Se falhar, o job fica vermelho e abre uma Issue, e o site mantém o último dado bom. Para refazer um mês: `docs/operacao.md`.
 3. **Reconstituição.** Mostra só companhias do cadastro atual com escriturador no FCA. "+N desde então" compara conjuntos diferentes e não mede novas listagens. A tela e a metodologia avisam.
 4. **`TOTNEG`.** O estouro em 5 dígitos é inferência, sem confirmação da B3. Negócios e ticket seguem como vieram, com "≈" nos meses suspeitos.
 5. **Janela de BDRs.** As partições começam em out/2024, então só meses recentes têm 24 meses de série. As telas dizem quantos meses mostram.
@@ -84,7 +84,7 @@ Quartis do mês: R$ 1.108,43 e R$ 7.463,41, com 574 BDRs no cálculo.
 ## Sugestões para a Fase 9
 
 1. Enviar o pedido à B3 e registrar a resposta no ADR 0009.
-2. Medir PageSpeed e os tempos do Actions, e corrigir o que ficar abaixo da meta.
+2. Medir o PageSpeed e o tempo da rotina mensal, e corrigir o que ficar fora da meta.
 3. Carregar mais 24 meses de COTAHIST, para dar série completa aos BDRs em meses passados.
 4. Guardar liquidez e faixas de ticket nos snapshots, para que essas seções também apareçam no mês passado.
 5. Reabrir o empréstimo de ativos, se a B3 autorizar.

@@ -48,7 +48,7 @@ Dentro do sistema existente, sem mudança de direção.
 - **Busca:** diálogo modal com raio de 12 px e sombra média; em tela cheia até 640 px. A opção ativa usa o fio de destaque à esquerda, como a seleção dos gráficos.
 - **Estrela:** só contorno fora da lista e preenchida na cor de destaque dentro dela, com `aria-pressed` e rótulo. Nas opções da busca, é só para ponteiro; pelo teclado, Alt+A.
 - **Faixa de mês passado:** fixa no rodapé da janela, para não competir com os filtros, que ficam fixos no topo. Usa o fio de destaque, sem cor de status: não é um alerta.
-- **Relatório:** usa `.prose` com até 72 caracteres por linha; na impressão, A4 com cabeçalho e rodapé repetidos, e sem menu.
+- **Relatório:** usa `.prose` dentro de um cartão, como `/sobre`; na impressão, A4 com cabeçalho e rodapé repetidos em cada página, e sem menu.
 
 ## Estado da implementação
 
