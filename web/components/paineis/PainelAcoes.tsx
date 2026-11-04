@@ -467,7 +467,7 @@ function Conteudo({
                 fundo: "var(--accent)",
                 valor: formatInt(s.n),
                 pct: formatPct(s.n, semSetor.length),
-                rotuloAria: `${s.k}: ${s.n} empresas`,
+                complementoAria: "Empresas no setor",
                 dica: () => (
                   <TipConteudo
                     titulo={s.k}
@@ -679,7 +679,7 @@ function Conteudo({
                     fundo: corEscriturador(d.b),
                     valor: formatDinheiro(v),
                     pct: formatPct(v, rk.total),
-                    rotuloAria: `${d.pregao}: ${formatDinheiro(v)}. Filtra a tabela`,
+                    complementoAria: "Filtra a tabela",
                     dica: () => (
                       <TipConteudo
                         titulo={`${d.pregao} · ${d.razao_social}`}

@@ -605,7 +605,7 @@ function Conteudo({
                 fundo: corDepositaria(d.depositaria),
                 valor: formatDinheiro(volume),
                 pct: formatPct(volume, rk.total),
-                rotuloAria: `${d.ticker}, ${d.nome}: ${formatDinheiro(volume)}. Filtra a tabela`,
+                complementoAria: "Filtra a tabela",
                 dica: () => (
                   <TipConteudo
                     titulo={`${d.ticker} · ${d.nome}`}
@@ -805,7 +805,7 @@ function Conteudo({
                       faixas[k] ?? 0,
                       Object.values(faixas).reduce((a, b) => a + b, 0),
                     ),
-                    rotuloAria: `${FAIXA_NOME[k]}: ${formatInt(faixas[k] ?? 0)} BDRs`,
+                    complementoAria: "BDRs na faixa",
                     dica: () => (
                       <TipConteudo titulo={FAIXA_NOME[k]} linhas={[["BDRs", formatInt(faixas[k] ?? 0)]]} />
                     ),

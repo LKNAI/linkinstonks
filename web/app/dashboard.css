@@ -613,7 +613,6 @@
   font-weight: var(--fw-medium);
   color: var(--text-subtle);
   font-size: var(--fs-xs);
-  margin-left: var(--space-1);
 }
 .bars.has-sel .brow:not(.sel) .fill {
   opacity: 0.28;
@@ -2535,7 +2534,7 @@ td.crit {
   font-size: var(--fs-sm);
 }
 .busca-texto b {
-  margin-right: var(--space-2);
+  margin-right: var(--space-1);
 }
 .busca-texto span {
   color: var(--text-muted);

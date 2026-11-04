@@ -16,7 +16,8 @@ export interface ItemBarra {
   valor: string;
   pct: string;
   dica: () => ReactNode;
-  rotuloAria: string;
+  /** Completa o nome lido pelo leitor de tela, que começa pelo texto visível (WCAG 2.5.3). */
+  complementoAria: string;
 }
 
 export function BarList({
@@ -42,20 +43,19 @@ export function BarList({
           type="button"
           className={`brow${selecionado === it.k ? " sel" : ""}`}
           aria-pressed={selecionado === undefined ? undefined : selecionado === it.k}
-          aria-label={it.rotuloAria}
+          aria-label={`${it.rotulo}${it.sub ? `, ${it.sub}` : ""}: ${it.valor}, ${it.pct}. ${it.complementoAria}`}
           onClick={() => onSelecionar(it.k)}
           {...tip(it.dica)}
         >
           <span className="nm" title={it.rotulo}>
-            {it.sub !== undefined ? <b>{it.rotulo}</b> : it.rotulo}
+            {it.sub !== undefined ? <b>{it.rotulo}</b> : it.rotulo}{" "}
             {it.sub !== undefined ? <small>{it.sub}</small> : null}
-          </span>
+          </span>{" "}
           <span className="track">
             <span className="fill" style={{ width: `${it.parte * 100}%`, background: it.fundo }} />
-          </span>
+          </span>{" "}
           <span className="num">
-            {it.valor}
-            <em>{it.pct}</em>
+            {it.valor} <em>{it.pct}</em>
           </span>
         </button>
       ))}

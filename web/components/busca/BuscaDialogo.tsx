@@ -188,8 +188,7 @@ export default function BuscaDialogo({ aoFechar }: { aoFechar: () => void }) {
                     onClick={() => abrir(r)}
                   >
                     <span className="busca-texto">
-                      <b>{r.titulo}</b>
-                      <span>{r.detalhe}</span>
+                      <b>{r.titulo}</b> <span>{r.detalhe}</span>
                     </span>
                     <span
                       className="busca-estrela"

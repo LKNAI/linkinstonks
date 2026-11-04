@@ -52,12 +52,12 @@ export function BarrasComposicao({
             />
           ))}
         >
-          <span className="comp-rotulo">{l.rotulo}</span>
+          <span className="comp-rotulo">{l.rotulo}</span>{" "}
           <span className="comp-barra" aria-hidden="true">
             {l.partes.map((p) => (
               <i key={p.k} style={{ width: `${(p.n / l.total) * 100}%`, background: p.cor }} />
             ))}
-          </span>
+          </span>{" "}
           <span className="comp-total">{l.total}</span>
         </button>
       ))}
