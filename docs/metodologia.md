@@ -96,6 +96,30 @@ O resumo em `bdrs.json` traz a faixa do último mês fechado e o ticket médio d
 - **Antes de 2018 não se usa.** De 2010 a 2017 o arquivo não tem ticker, nem os valores "Básico" e "Novo Mercado", e concorda com a B3 em no máximo 2,6% dos casos. Os pares de 2017 para 2018 sugerem rótulos deslocados: é uma hipótese, e nada é corrigido.
 - **Divergência entre B3 e CVM.** Vira só um selo informativo. Nenhuma fonte corrige a outra. Segmentos sem equivalente nas duas fontes não são comparados.
 
+## Busca global
+
+Código exato (ticker, emissor, CNPJ, código CVM, ISIN) vem primeiro, depois prefixo de código, início de palavra do nome, trecho do nome e, por último, aproximação por distância de edição (1 erro até 6 letras, 2 a partir de 7), só com 4 caracteres ou mais. Sem acentos nem maiúsculas. Até 8 resultados por grupo. Ver [ADR 0010](decisoes/0010-busca-sem-biblioteca.md).
+
+## Relatório mensal
+
+Frases fixas, sem modelo de linguagem: a mesma entrada produz o mesmo texto (`etl/tests/golden/test_relatorio_golden.py`).
+
+- **Eventos:** os do log com data dentro do mês. A data é a da detecção pelo ETL, não a do fato.
+- **Companhias e BDRs:** contagem do cadastro quando o relatório foi gerado.
+- **Volume:** soma das partições do COTAHIST do mês (ações e BDRs) e variação contra o mês anterior.
+- **Altas e quedas de BDRs:** volume do mês ÷ volume do mês anterior, só com R$ 10 mi ou mais nos dois meses, os 5 maiores (`relatorio_mensal` em `config/indicadores.yaml`).
+- **Qualidade:** fontes que falharam, de `data/history/qualidade/AAAA-MM.jsonl`, e pregões sem atualização diária. O registro de falhas começa em nov/2026: um relatório anterior diz que não há registro, em vez de "nenhuma ocorrência".
+- **Empréstimo de ativos:** omitido ([ADR 0006](decisoes/0006-emprestimo-de-ativos-nao-seguir.md)).
+
+## Ver um mês passado
+
+Regras e limitações no [ADR 0011](decisoes/0011-snapshots-no-site.md).
+
+- **Real:** o CSV guardado na rotina mensal. A tela mostra a data real da coleta, porque não é a foto do último dia do mês.
+- **Reconstituída:** montada depois, sempre marcada. Ações: escriturador vigente no último dia do mês, pelo histórico da CVM, só para companhias do cadastro atual. BDRs: volume do COTAHIST, com depositária e tipo do primeiro snapshot.
+- **Comparação:** "+N desde então" é o número de hoje menos o da posição. Em mês reconstituído, compara conjuntos diferentes e não equivale a novas listagens.
+- **O que não aparece:** negociação de ações, padrão de negociação de BDRs e faixas de ticket só existem na posição de hoje. A janela de BDRs vai até 24 meses, limitada pelos dados guardados desde out/2024; a comparação de 12 × 12 meses só aparece com a janela completa.
+
 ## Mudanças de contrato
 
 - [ADR 0008](decisoes/0008-schema-version-major-minor.md): `schema_version` em `MAJOR.MINOR`.

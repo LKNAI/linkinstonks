@@ -39,7 +39,16 @@ Proposta aprovada em 2026-11-03: `docs/fase8-proposta-onda-b.md`, com maquetes e
 - **Ponto memorável:** o mapa de calor como livro-razão, com ticker à esquerda, total à direita e um fio separando os anos. Um único SVG, com um `<path>` por cor; ponteiro e teclado acham a célula por conta. O resto usa componentes que já existiam.
 - **Decisões do dono:** sem donut de faixas de ticket (mostraria sempre 25%, 50% e 25%); variação só nos 12 meses com referência; `/acoes` usa `acoes_liquidez_resumo.json`, 70 KB em gzip, em vez do arquivo completo, de 530 KB.
 - **`/acoes`:** a liquidez entrou na seção de volume, renomeada "Negociação", sem segundo ranking.
-- **Orçamento de JS:** `/acoes` está em 199,4 KB de 200 KB. O mapa e a tabela são baixados sob demanda; qualquer código novo nessa rota tem de seguir o mesmo caminho.
+- **Orçamento de JS:** o conteúdo de `/acoes` e `/bdrs` é baixado sob demanda, em paralelo com os dados (`components/paineis/PaineisLazy.tsx`).
+
+## Fase 8 (Onda C)
+
+Dentro do sistema existente, sem mudança de direção.
+
+- **Busca:** diálogo modal com raio de 12 px e sombra média; em tela cheia até 640 px. A opção ativa usa o fio de destaque à esquerda, como a seleção dos gráficos.
+- **Estrela:** só contorno fora da lista e preenchida na cor de destaque dentro dela, com `aria-pressed` e rótulo. Nas opções da busca, é só para ponteiro; pelo teclado, Alt+A.
+- **Faixa de mês passado:** fixa no rodapé da janela, para não competir com os filtros, que ficam fixos no topo. Usa o fio de destaque, sem cor de status: não é um alerta.
+- **Relatório:** usa `.prose` com até 72 caracteres por linha; na impressão, A4 com cabeçalho e rodapé repetidos, e sem menu.
 
 ## Estado da implementação
 

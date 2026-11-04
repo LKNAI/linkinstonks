@@ -50,7 +50,7 @@ O ensaio local desse ciclo (dados adulterados → eventos → mensagem de commit
 |---|---|---|
 | `etl-daily` | `23 1 * * 2-6` (≈ 22h23 BRT, seg a sex) | lista B3 + rodízio de `GetDetail`; COTAHIST do dia; FCA do ano se mudou; publica `acoes` e `bdrs` |
 | `etl-weekly` | `41 9 * * 0` (dom ≈ 06h41 BRT) | tudo do diário + revisita completa dos detalhes, listas Banco B3 e Bradesco, cadastro CVM |
-| `etl-monthly` | `7 11 5 * *` (dia 5) | reconcilia o COTAHIST mensal do mês fechado, snapshot em `data/history/snapshots/`, e refaz a publicação completa |
+| `etl-monthly` | `7 11 5 * *` (dia 5) | reconcilia o COTAHIST mensal do mês fechado, snapshot em `data/history/snapshots/`, refaz a publicação completa e gera o relatório do mês e a posição compacta em `data/snapshots_site/` |
 | `keepalive` | `17 6 15 * *` | commit vazio se o repositório ficou parado há mais de 45 dias; reativa os agendamentos |
 | `ci` | PR e push | lint, tipos, testes, build, e2e e `painel-etl validate` |
 | `probe` | manual | testa o acesso às fontes |
@@ -70,6 +70,15 @@ Abre a Issue `[data-quality] nomes-nao-mapeados` com os textos. Inclua a institu
 
 ### BDR sem depositária
 Aparece em `/status`. Se você souber a depositária **e a fonte**, acrescente uma linha em `config/overrides/depositarias.csv` (`ticker;nome;depositaria;fonte;data;observacao`, com o id da instituição). O Itaú bloqueia coleta automática: seus programas são mantidos aqui à mão. Quando o `run --weekly` avisar que a lista do Bradesco mudou, revise o CSV.
+
+### Relatório mensal e mês passado
+A rotina mensal grava o relatório em `data/public/relatorios/AAAA-MM.json` e a posição em `data/snapshots_site/AAAA-MM/`, depois da reconciliação. Para refazer um mês, sem rede:
+```bash
+cd etl
+uv run painel-etl report monthly --mes AAAA-MM
+uv run painel-etl backfill snapshots-site --from AAAA-MM --to AAAA-MM
+```
+Um mês só é tratado como real se estiver em `data/history/snapshots/datas_coleta.json`, com a data da coleta. Se o snapshot tiver sido gravado por uma versão antiga do código, inclua o mês nesse arquivo antes de refazer; sem isso, ele sai como reconstituído. Fontes com problema vão para `data/history/qualidade/AAAA-MM.jsonl`, lido pelo relatório.
 
 ### Reprocessar ou recarregar histórico
 ```bash
@@ -96,10 +105,10 @@ Os dados são versionados: `git revert <commit de dados>` desfaz a publicação 
 | GitHub Actions, se o repositório for privado | ≈ 200 min/mês | **estimativa, a medir nas primeiras execuções**: diário ~5 min × 22 + semanal ~15 min × 4 + mensal ~20 min + CI. Cabe nos 2.000 min gratuitos. Medido no ensaio local: o passo do ETL diário levou 60 s; some ~1 a 2 min de preparação do runner (uv, cache). Registre os tempos reais aqui depois da primeira semana |
 
 ### Limites de tamanho
-`data/public/` ≈ 4,3 MB (orçamento de 20 MB em `config/indicadores.yaml`; o `painel-etl validate` e a build falham acima disso). `data/history/` cresce cerca de 315 KB por mês de COTAHIST (190 KB de BDRs e 125 KB de ações) e ~30 KB por ano de FCA. Se o repositório se aproximar de 500 MB, registre um ADR e mova os históricos para assets de GitHub Releases.
+`data/public/` ≈ 3,9 MB (orçamento de 20 MB em `config/indicadores.yaml`; o `painel-etl validate` e a build falham acima disso). `data/snapshots_site/` ≈ 11 MB em 35 meses, com no máximo 534 KB por mês (orçamento próprio de 600 KB por mês e retenção de 36 meses; a build falha acima disso). `data/history/` cresce cerca de 315 KB por mês de COTAHIST (190 KB de BDRs e 125 KB de ações) e ~30 KB por ano de FCA. Se o repositório se aproximar de 500 MB, registre um ADR e mova os históricos para assets de GitHub Releases.
 
 ### Tempo dos workflows
-Orçamento: diário abaixo de 8 minutos, mensal abaixo de 20. Medido em 2026-11-03, nesta máquina, sem o tempo de preparação do runner: `run --dataset all` em 1 min, sem pregão novo a processar; leitura de um arquivo `M` em cerca de 4 s (24 meses em 1 min 30 s). **Ainda falta medir no GitHub Actions** e registrar aqui.
+Orçamento: diário abaixo de 8 minutos, mensal abaixo de 20. Medido em 2026-11-03, nesta máquina, sem o tempo de preparação do runner: `run --dataset all` em 1 min, sem pregão novo a processar; leitura de um arquivo `M` em cerca de 4 s (24 meses em 1 min 30 s); relatório mensal em cerca de 6 s e posição compacta de um mês em cerca de 4 s, os dois sem rede. **Ainda falta medir no GitHub Actions** e registrar aqui.
 
 ### Pontos que dependem de você ou ainda não foram verificados
 - O `probe.yml` precisa ser rodado no GitHub (Passo 2).

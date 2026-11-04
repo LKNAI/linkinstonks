@@ -18,7 +18,7 @@ linkinstonks (antigo Painel B3): site estático (Next.js, Vercel) que mostra esc
 ```
 etl/   Python 3.12 (uv). Pacote painel_etl: cli, pipeline, seed_import, core/, sources/, datasets/, normalize/, probe.py
 web/   Next.js 16 + TypeScript strict + Tailwind 4 (pnpm). Export estático em web/out
-data/  public/ (contrato com o site) · history/ · events/ · state/
+data/  public/ (contrato com o site) · snapshots_site/ (meses passados no site) · history/ · events/ · state/
 config/  instituicoes.yaml · sources.yaml · indicadores.yaml · overrides/*.csv
 schemas/ JSON Schema de cada arquivo de data/public
 docs/  arquitetura, fontes, metodologia, paridade, decisoes/ (ADRs)
@@ -38,6 +38,8 @@ docs/  arquitetura, fontes, metodologia, paridade, decisoes/ (ADRs)
 | sondar fontes | `cd etl && uv run painel-etl probe [fonte]` (usa a rede; regrava fixtures) |
 | rodar o ETL | `cd etl && uv run painel-etl run [--dataset acoes\|bdrs\|acoes_liquidez\|all] [--weekly] [--dry-run] [--date AAAA-MM-DD]` (usa a rede; `--weekly` revisita todos os detalhes e atualiza as listas de depositárias) |
 | carga histórica | `painel-etl backfill cotahist --from 2024-11 [--datasets acoes,bdrs] [--force]` (reaproveita os ZIPs do cache) · `painel-etl backfill fca --from 2010` · `painel-etl backfill fca-valores --from 2018` |
+| relatório mensal | `painel-etl report monthly --mes AAAA-MM` (sem rede; a rotina mensal já o gera) |
+| posição de meses passados | `painel-etl backfill snapshots-site --from AAAA-MM [--to AAAA-MM]` (sem rede; ADR 0011) |
 | rotina mensal e automacao | `painel-etl monthly` (reconcilia o COTAHIST do mes fechado + snapshot) · `painel-etl commit-message --report R.json` · `painel-etl issues --report R.json [--dry-run]`; os workflows em `.github/workflows` so orquestram esses comandos (ver `docs/operacao.md`) |
 | validar / resumir | `painel-etl validate` (JSON Schema de `data/public`) · `painel-etl report` (Markdown) |
 | carga inicial do seed | `painel-etl seed-import` (só para ter dados; um `run` normal os substitui) |
@@ -66,6 +68,7 @@ Sem `make` (Windows): rode os comandos da tabela. Se o Controle de Aplicativo do
 - Em YAML, `ON` sem aspas vira booleano: as espécies em `config/indicadores.yaml` ficam entre aspas.
 - `TOTNEG` tem 5 dígitos e parece estourar em 99.999 (`docs/metodologia.md`). `CODBDI` não filtra ações.
 - **Não coletar** das páginas "Boletim diário" e "Pesquisa por pregão" da B3: elas vedam a coleta automatizada (ADR 0006).
+- **Termos da B3:** arquivos para baixar só com cadastro; dados de negociação não entram em `data/public/downloads` (ADR 0009).
 
 ## Fases
-0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade ✅ · 5 páginas novas ✅ · 6 automação e deploy ✅ · 7 endurecimento (em andamento: ver `docs/qualidade.md`) · 8 novas funcionalidades (em andamento: Etapa 8.0 e Ondas A e B prontas; ver `docs/fase8-etapa0.md` e `docs/fase8-proposta-onda-b.md`). Cada fase termina com relatório; só avançar com autorização do dono.
+0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade ✅ · 5 páginas novas ✅ · 6 automação e deploy ✅ · 7 endurecimento (em andamento: ver `docs/qualidade.md`) · 8 novas funcionalidades (Etapa 8.0 e Ondas A, B e C prontas, sem merge; ver `docs/fase8-relatorio-final.md`). Cada fase termina com relatório; só avançar com autorização do dono.
