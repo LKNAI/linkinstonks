@@ -68,7 +68,7 @@ Sem `make` (Windows): rode os comandos da tabela. Se o Controle de Aplicativo do
 - Em YAML, `ON` sem aspas vira booleano: as espécies em `config/indicadores.yaml` ficam entre aspas.
 - `TOTNEG` tem 5 dígitos e parece estourar em 99.999 (`docs/metodologia.md`). `CODBDI` não filtra ações.
 - **Não coletar** das páginas "Boletim diário" e "Pesquisa por pregão" da B3: elas vedam a coleta automatizada (ADR 0006).
-- **Termos da B3:** arquivos para baixar só com cadastro; dados de negociação não entram em `data/public/downloads` (ADR 0009).
+- **Termos da B3:** o site publica dados de negociação sem autorização da B3, por decisão do dono (ADR 0009). O texto do pedido de autorização está nesse ADR.
 
 ## Fases
 0 descoberta ✅ · 1 esqueleto e CI ✅ · 2 ETL de ações ✅ · 3 ETL de BDRs ✅ · 4 front com paridade ✅ · 5 páginas novas ✅ · 6 automação e deploy ✅ · 7 endurecimento (em andamento: ver `docs/qualidade.md`) · 8 novas funcionalidades ✅ (no `main` desde 03/11/2026; pendências em `docs/fase8-relatorio-final.md`). Cada fase termina com relatório; só avançar com autorização do dono.

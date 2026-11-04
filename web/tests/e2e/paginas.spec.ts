@@ -228,9 +228,7 @@ test.describe("sobre, sitemap e robots", () => {
     const hrefs = await page
       .locator('a[href^="/data/"], a[href="/feed.xml"]')
       .evaluateAll((a) => a.map((x) => x.getAttribute("href")!));
-    expect(hrefs.length).toBeGreaterThanOrEqual(5);
-    // ADR 0009: nenhum arquivo para baixar com dados de negociação
-    expect(hrefs.filter((h) => /acoes_volume|acoes_liquidez|\/data\/bdrs\.json/.test(h))).toEqual([]);
+    expect(hrefs.length).toBeGreaterThanOrEqual(7);
     for (const h of hrefs) expect((await request.get(h)).status(), h).toBe(200);
   });
 

@@ -77,11 +77,8 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <p className="mx-auto max-w-[1440px]">
-        Fontes: B3 e CVM (dados públicos). Última atualização: {data ? formatDate(data) : "—"}. Sem vínculo
-        com a B3 ou a CVM. Não é recomendação de investimento.{" "}
-        <Link prefetch={false} href="/sobre/#aviso-legal">
-          Aviso legal
-        </Link>
+        Fontes: B3 e CVM (dados públicos). Última atualização: {data ? formatDate(data) : "—"}. Não é
+        recomendação de investimento.
       </p>
     </footer>
   );

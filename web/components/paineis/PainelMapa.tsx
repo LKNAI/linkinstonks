@@ -68,7 +68,7 @@ export const codecMapa: Codec<FiltrosMapa> = {
 };
 
 const HERO: HeroProps = {
-  selo: "Dados públicos B3",
+  selo: "Dados abertos B3",
   titulo: "Mapa de calor do volume dos BDRs",
   texto:
     "Cada linha é um BDR e cada coluna, um mês. Em intensidade, o tom compara o mês com o pico do próprio BDR; em variação, com a média dos 12 meses anteriores. Clique numa linha para abrir o BDR.",

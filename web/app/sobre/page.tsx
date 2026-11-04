@@ -267,31 +267,14 @@ export default function Page() {
             </li>
           </ul>
 
-          <h2 id="aviso-legal">Aviso legal</h2>
+          <h2>Aviso legal</h2>
           <p>
             Este site é informativo, <strong>não é recomendação de investimento</strong> e não é afiliado à
-            B3, à CVM nem a qualquer instituição citada, nem foi autorizado ou revisado por elas. Projeto
-            pessoal, sem fins comerciais. Não há dados pessoais: apenas companhias e instituições.
-          </p>
-          <p>
-            Os dados de negociação e os cadastros da B3 pertencem à B3 e seguem os{" "}
-            <a href="https://www.b3.com.br/pt_br/termos-de-uso-e-protecao-de-dados/termos-de-uso/">
-              Termos de Uso da B3
-            </a>
-            , que limitam o uso a fins pessoais e exigem autorização dela para redistribuir ou usar para fins
-            comerciais. O que está aqui serve para consulta e não concede nenhuma licença sobre esses dados.
-            Quem representa uma das fontes e quer corrigir ou retirar algum dado pode{" "}
-            <a href="https://github.com/LKNAI/linkinstonks/issues">
-              abrir um pedido no repositório do projeto
-            </a>
-            .
+            B3, à CVM nem a qualquer instituição citada. Uso não comercial. Não há dados pessoais: apenas
+            companhias e instituições.
           </p>
 
           <h2>Downloads e feed</h2>
-          <p>
-            Os arquivos para baixar trazem só dados cadastrais. Volume, preço e negócios ficam nas telas e na
-            exportação de cada tabela, para consulta pessoal.
-          </p>
           <ul>
             <li>
               <a href="/data/downloads/acoes.csv" download>
@@ -303,17 +286,37 @@ export default function Page() {
               <a href="/data/downloads/bdrs.csv" download>
                 bdrs.csv
               </a>
-              : BDRs, tipo, depositária, fonte da depositária e ISIN.
+              : BDRs, depositária, fonte e volume mensal em R$ mil.
             </li>
             <li>
+              <a href="/data/downloads/acoes_volume.csv" download>
+                acoes_volume.csv
+              </a>
+              : volume mensal das ações por companhia, em R$ mil.
+            </li>
+            <li>
+              <a href="/data/downloads/acoes_liquidez.csv" download>
+                acoes_liquidez.csv
+              </a>
+              : volume, presença e ticket médio em 3, 6 e 12 meses, com a categoria de cada companhia.
+            </li>
+            <li>
+              <a href="/data/acoes.json" download>
+                acoes.json
+              </a>
+              ,{" "}
+              <a href="/data/bdrs.json" download>
+                bdrs.json
+              </a>
+              ,{" "}
               <a href="/data/acoes_historico_escrituradores.json" download>
                 histórico de escrituradores
-              </a>{" "}
-              e{" "}
+              </a>
+              ,{" "}
               <a href="/data/instituicoes.json" download>
                 instituições
               </a>
-              , em JSON.
+              : os mesmos dados que alimentam o site, em JSON.
             </li>
             <li>
               <a href="/feed.xml">feed.xml</a>: feed Atom com as últimas mudanças (até 500 eventos).

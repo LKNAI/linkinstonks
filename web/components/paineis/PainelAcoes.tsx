@@ -102,7 +102,7 @@ export const codecAcoes: Codec<FiltrosAcoes> = {
 const ORDEM_MARCAS = Object.keys(COR_ESCRITURADOR);
 
 const HERO: HeroProps = {
-  selo: "B3 + CVM · dados públicos",
+  selo: "B3 + CVM · dados abertos",
   titulo: "Ações na B3: quem escritura cada empresa",
   texto:
     "Escriturador atual de cada companhia emissora de ações (B3), com data de início e escriturador anterior segundo o Formulário Cadastral entregue à CVM, e o volume negociado em 24 meses. Clique nos gráficos para filtrar todo o painel.",
@@ -869,7 +869,11 @@ function Conteudo({
                   volume.companhias.reduce((a, c) => a + c.volume_24m, 0),
               )}{" "}
               do volume do mercado ({formatInt(volume.nao_atribuido.tickers)} tickers) e ficam fora das somas
-              acima.
+              acima. Dados abertos:{" "}
+              <a href="/data/downloads/acoes_volume.csv" download className="fonte-link">
+                acoes_volume.csv
+              </a>
+              .
             </p>
           ) : null}
         </div>

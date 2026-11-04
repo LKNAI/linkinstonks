@@ -113,7 +113,7 @@ export const codecBdrs: Codec<FiltrosBdrs> = {
 };
 
 const HERO: HeroProps = {
-  selo: "Dados públicos B3",
+  selo: "Dados abertos B3",
   titulo: "BDRs na B3: quem emite e quanto negocia",
   texto:
     "Todos os BDRs com negócios nos últimos 24 meses: tickers, tipo de programa, instituição depositária (o banco emissor) e volume financeiro mensal. Clique nos gráficos para filtrar o painel inteiro.",
@@ -143,7 +143,7 @@ export function PainelBdrs() {
     <PaginaComHero
       hero={{
         ...HERO,
-        selo: `Dados públicos B3 · ${rotuloMes(m[0])} – ${rotuloMes(m[m.length - 1])}`,
+        selo: `Dados abertos B3 · ${rotuloMes(m[0])} – ${rotuloMes(m[m.length - 1])}`,
         texto: passado
           ? HERO.texto.replace(
               "nos últimos 24 meses",

@@ -1,6 +1,6 @@
 # ADR 0009: Termos de Uso da B3 no site atual
 
-**Status:** aceita (2026-11-03; o dono delegou a decisão). Mitiga o risco, mas não o elimina. Não é parecer jurídico.
+**Status:** aceita em 2026-11-03, com o dono delegando a decisão, e revista por ele em 2026-11-04: quase toda a mitigação foi desfeita. O risco segue aberto. Não é parecer jurídico.
 
 ## O que dizem os Termos
 Texto lido em 2026-11-03 em <https://www.b3.com.br/pt_br/termos-de-uso-e-protecao-de-dados/termos-de-uso/>. A página não mostra data de atualização.
@@ -16,18 +16,19 @@ O linkinstonks publica, para qualquer pessoa, dados derivados do COTAHIST (volum
 **Só um consentimento da B3 resolve a questão por inteiro.** Nenhuma mudança de código faz isso.
 
 ## Decisão
-Reduzir o que mais se aproxima do texto vedado, sem tirar as telas do ar:
+Em 2026-11-03 a mitigação retirou os downloads com dados de negociação, ampliou o aviso legal e trocou o selo "dados abertos" por "dados públicos". Em 2026-11-04 o dono viu o resultado, não gostou e pediu para desfazer esses três pontos:
 
-1. **Arquivos para baixar só com cadastro.** `downloads/acoes_volume.csv` e `downloads/acoes_liquidez.csv` deixam de ser publicados. `downloads/bdrs.csv` perde preço, negócios e volume. Os links para `acoes.json` e `bdrs.json` saem de `/sobre`. O motivo é o trecho "fornecimento de bases de dados": um arquivo com URL fixa é o que mais se parece com isso.
-2. **CSVs de negociação fora do site.** Vão para `data/history/csv_correntes/`, de onde sai o snapshot mensal.
-3. **`X-Robots-Tag: noindex` em `/data/`.** Os arquivos não entram em buscadores, e as telas continuam a carregá-los.
-4. **Sem "dados abertos".** O selo das telas passa a "dados públicos", porque os dados da B3 não têm licença aberta. Os da CVM têm (ODbL).
-5. **Aviso legal explícito** em `/sobre#aviso-legal`, com link no rodapé: propriedade da B3, link para os Termos, ausência de vínculo e de autorização, finalidade não comercial e canal para pedir correção ou retirada.
+1. **Downloads de volta.** `downloads/acoes_volume.csv`, `downloads/acoes_liquidez.csv`, `downloads/bdrs.csv` completo e os links em `/sobre`, `/acoes` e `/acoes/liquidez`.
+2. **Aviso legal antigo de volta.** Saíram de `/sobre` a menção aos Termos e o pedido de retirada, e do rodapé o link e a frase "Sem vínculo". `/sobre` volta a dizer que o site não é afiliado à B3 nem à CVM e tem uso não comercial.
+3. **Selo "dados abertos" de volta.** Os dados da B3 não têm licença aberta (os da CVM têm, ODbL), então o termo diz mais do que a licença da B3 permite afirmar.
+
+**Ficou só o `X-Robots-Tag: noindex` em `/data/`:** os arquivos não entram em buscadores, e as telas continuam a carregá-los.
 
 ## O que continua exposto
-- As telas seguem mostrando volume, presença, ticket e preço, inclusive em forma de gráfico ("reformatação").
-- A exportação CSV de cada tabela segue no site, porque o dono a pediu e é uma cópia do que a pessoa está vendo.
-- Os JSON que alimentam as telas continuam acessíveis por URL: um site estático não tem como evitar isso.
+- As telas mostram volume, presença, ticket e preço, inclusive em forma de gráfico ("reformatação").
+- Os arquivos para baixar têm URL fixa e trazem dados de negociação. É o que mais se aproxima do trecho "fornecimento de bases de dados".
+- A exportação CSV de cada tabela segue no site.
+- Os JSON que alimentam as telas ficam acessíveis por URL: um site estático não tem como evitar isso.
 - **O repositório é público**, então `data/history/` também pode ser baixado. O dono decidiu mantê-lo público (2026-11-04): torná-lo privado reduziria pouco, porque as telas e os JSON continuam abertos, e tiraria a transparência do método. Dá para rever a decisão quando a B3 responder.
 
 ## Se a B3 pedir a retirada
@@ -44,7 +45,7 @@ O dono pode pedir autorização por escrito com o texto abaixo. Contato: Coorden
 >
 > Mantenho o linkinstonks (https://linkinstonks.vercel.app), site pessoal, gratuito e sem publicidade, que informa quem é o escriturador de cada ação listada e a depositária de cada BDR.
 >
-> O site usa estas fontes públicas da B3: Séries Históricas (COTAHIST), lista de Empresas Listadas e listas de programas de BDR do Banco B3. Exibe agregados mensais por ativo (volume, número de negócios, dias com negócio e ticket médio), o último preço e dados cadastrais, com atualização diária e indicação da fonte. Não exibe cotação em tempo real, não vende dados e não coleta das páginas "Boletim diário" e "Pesquisa por pregão".
+> O site usa estas fontes públicas da B3: Séries Históricas (COTAHIST), lista de Empresas Listadas e listas de programas de BDR do Banco B3. Exibe agregados mensais por ativo (volume, número de negócios, dias com negócio e ticket médio), o último preço e dados cadastrais, com atualização diária e indicação da fonte, e oferece esses dados em arquivos CSV e JSON para baixar. Não exibe cotação em tempo real, não vende dados e não coleta das páginas "Boletim diário" e "Pesquisa por pregão".
 >
 > Os Termos de Uso limitam os dados a uso pessoal e exigem consentimento para publicação. Por isso, peço que informem:
 >
@@ -58,5 +59,5 @@ O dono pode pedir autorização por escrito com o texto abaixo. Contato: Coorden
 > [nome do responsável]
 > [contato]
 
-## Como desfazer
-Reverter o commit deste ADR recoloca os arquivos e os links.
+## Como refazer a mitigação
+O commit `f6026ee` tem as mudanças de 2026-11-03: arquivos para baixar só com cadastro, aviso legal explícito e selo "dados públicos". Se a B3 reclamar, ele é o ponto de partida.
