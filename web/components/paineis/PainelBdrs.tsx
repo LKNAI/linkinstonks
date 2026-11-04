@@ -2,17 +2,31 @@
 
 // /bdrs: paridade total com seed/html/dashboard_bdrs_b3.html.
 import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
+import Link from "next/link";
 import { useMemo } from "react";
 import { BarList } from "@/components/charts/BarList";
 import { ChartCard } from "@/components/charts/ChartCard";
 import { ColunasEmpilhadas } from "@/components/charts/ColunasEmpilhadas";
 import { Donut } from "@/components/charts/Donut";
+import { Histograma } from "@/components/charts/Histograma";
 import { Sparkline } from "@/components/charts/Sparkline";
 import { TipConteudo } from "@/components/charts/Tooltip";
-import { Busca, Chips, Segmentado } from "@/components/filters/Controles";
+import { Busca, Chips, Segmentado, Seletor } from "@/components/filters/Controles";
 import { Carregando, ErroDados, KpiGrid, PaginaComHero, type HeroProps } from "@/components/layout/Pagina";
 import { useRegua } from "@/components/layout/Regua";
 import { FiltrosSheet } from "@/components/filters/FiltrosSheet";
+import { NotaEstimativa } from "@/components/paineis/Avisos";
+import { SecaoMapa } from "@/components/paineis/SecaoMapa";
+import { Estrela } from "@/components/acompanhamento/Estrela";
+import { VerComoEm } from "@/components/paineis/VerComoEm";
+import { useEm } from "@/lib/em";
+import {
+  carregarBdrs as carregarBdrsEm,
+  diferenca,
+  kpisComDiferenca,
+  UNIDADE_BDR,
+  useSnapshot,
+} from "@/lib/snapshots";
 import { DataTable } from "@/components/table/DataTableLazy";
 import { linkDoMes, origemDoMes, type FontesVolume } from "@/lib/fonte-volume";
 import type { ColunaSpec } from "@/components/table/DataTable";
@@ -51,11 +65,16 @@ import {
   formatDinheiro,
   formatInt,
   formatPct,
+  formatTicket,
   rotuloMes,
   variacao,
 } from "@/lib/format";
+import { linhasDoMapa } from "@/lib/mapa";
+import { contagemFaixas, histogramaTicket, type Quartis } from "@/lib/ticket";
 import {
   COR_SEM_DADOS,
+  FAIXA_COR,
+  FAIXA_NOME,
   TIPO_GRUPO_COR,
   TIPO_GRUPO_NOME,
   legivelSobreBranco,
@@ -94,7 +113,7 @@ export const codecBdrs: Codec<FiltrosBdrs> = {
 };
 
 const HERO: HeroProps = {
-  selo: "Dados abertos B3",
+  selo: "Dados públicos B3",
   titulo: "BDRs na B3: quem emite e quanto negocia",
   texto:
     "Todos os BDRs com negócios nos últimos 24 meses: tickers, tipo de programa, instituição depositária (o banco emissor) e volume financeiro mensal. Clique nos gráficos para filtrar o painel inteiro.",
@@ -102,19 +121,47 @@ const HERO: HeroProps = {
 
 export function PainelBdrs() {
   const d = useDados("bdrs.json");
+  const em = useEm();
+  const snap = useSnapshot(em, carregarBdrsEm);
   if (d.estado === "erro") return <ErroDados mensagem={d.mensagem} />;
-  if (d.estado === "carregando")
+  if (snap?.estado === "erro")
+    return (
+      <>
+        <VerComoEm pagina="bdrs" />
+        <ErroDados mensagem={snap.mensagem} />
+      </>
+    );
+  if (d.estado === "carregando" || snap?.estado === "carregando")
     return (
       <PaginaComHero hero={HERO}>
         <Carregando comHero />
       </PaginaComHero>
     );
-  const m = d.dados.meses;
+  const passado = snap?.estado === "ok" ? snap.dados : null;
+  const m = passado?.meses ?? d.dados.meses;
   return (
     <PaginaComHero
-      hero={{ ...HERO, selo: `Dados abertos B3 · ${rotuloMes(m[0])} – ${rotuloMes(m[m.length - 1])}` }}
+      hero={{
+        ...HERO,
+        selo: `Dados públicos B3 · ${rotuloMes(m[0])} – ${rotuloMes(m[m.length - 1])}`,
+        texto: passado
+          ? HERO.texto.replace(
+              "nos últimos 24 meses",
+              `nos ${m.length} meses até ${rotuloMes(m[m.length - 1])}`,
+            )
+          : HERO.texto,
+      }}
     >
-      <Conteudo meses={m} bdrs={d.dados.bdrs} fontes={d.dados.fontes_volume} pagina={d.dados.pagina_fonte} />
+      <Conteudo
+        key={em ?? "hoje"}
+        meses={m}
+        bdrs={passado?.bdrs ?? d.dados.bdrs}
+        hoje={passado ? d.dados : null}
+        fontes={d.dados.fontes_volume}
+        pagina={d.dados.pagina_fonte}
+        quartis={passado ? {} : d.dados.ticket_quartis}
+        minNegocios={d.dados.min_negocios_mes}
+      />
     </PaginaComHero>
   );
 }
@@ -141,6 +188,7 @@ function colunas(
       fixa: true,
       celula: (d) => (
         <div className="co">
+          <Estrela item={{ tipo: "bdr", chave: d.ticker, nome: d.ticker }} />
           <LinkNovaAba href={`/bdrs/${d.ticker}/`} className="tk">
             {d.ticker}
           </LinkNovaAba>
@@ -191,7 +239,7 @@ function colunas(
     },
     {
       id: "spark",
-      titulo: "24 meses",
+      titulo: `${meses.length} meses`,
       ordenavel: false,
       celula: (d) => (
         <Sparkline
@@ -203,7 +251,7 @@ function colunas(
     },
     {
       id: "tot",
-      titulo: "Volume 24m",
+      titulo: `Volume ${meses.length}m`,
       classeTh: "r",
       classeTd: () => "r num",
       celula: (d) => <b>{formatDinheiro(d.tot)}</b>,
@@ -220,11 +268,11 @@ function colunas(
       titulo: "12m × 12m ant.",
       classeTh: "r",
       classeTd: () => "r num",
-      celula: (d) => <Variacao a={d.y1} b={d.y0} />,
+      celula: (d) => (meses.length < 24 ? "—" : <Variacao a={d.y1} b={d.y0} />),
     },
     {
       id: "g",
-      titulo: "Negócios 24m",
+      titulo: `Negócios ${meses.length}m`,
       classeTh: "r",
       classeTd: () => "r num",
       celula: (d) => formatInt(d.negocios_24m),
@@ -288,17 +336,26 @@ function colunas(
 
 function Conteudo({
   bdrs,
+  hoje,
   meses,
   fontes,
   pagina,
+  quartis,
+  minNegocios,
 }: {
   bdrs: Parameters<typeof derivarBdrs>[0];
+  /** Posição atual, para comparar quando a tela mostra um mês passado. */
+  hoje: { bdrs: Parameters<typeof derivarBdrs>[0]; meses: string[] } | null;
   meses: string[];
   fontes: FontesVolume;
   pagina: string;
+  quartis: Record<string, Quartis>;
+  minNegocios: number;
 }) {
   const todos = useMemo(() => derivarBdrs(bdrs), [bdrs]);
-  const [f, setF] = useEstadoUrl(FILTROS_BDR_PADRAO, codecBdrs);
+  const [fUrl, setF] = useEstadoUrl(FILTROS_BDR_PADRAO, codecBdrs);
+  // a faixa de ticket não existe no snapshot: um link compartilhado com ?faixa= não pode esvaziar a tela
+  const f = hoje && fUrl.faixa ? { ...fUrl, faixa: null } : fUrl;
   const rot = rotuloMes(meses[meses.length - 1]);
   const alternar = (k: DimBdr, v: string) => setF((a) => ({ ...a, [k]: a[k] === v ? null : v }));
   const limpar = () => setF(() => ({ ...FILTROS_BDR_PADRAO }));
@@ -315,7 +372,7 @@ function Conteudo({
   const conc = concentracao(rk.todos, rk.total, f);
   const porDep = fatiasDepositaria(filtrarBdrs(todos, f, "dep"));
   useRegua(fatiasDepositaria(todos).map((i) => ({ nome: i.label, cor: i.color, valor: i.n })));
-  const porTipo = fatiasTipo(filtrarBdrs(todos, f, "type"));
+  const porTipo = fatiasTipo(filtrarBdrs(todos, f, "type"), meses.length);
   const porCat = fatiasCategoria(filtrarBdrs(todos, f, "cat"));
   // 1º pregão da janela: quem negociou nele já existia antes (como o "antes de out/24" do seed).
   const inicioJanela = useMemo(
@@ -335,7 +392,12 @@ function Conteudo({
     ...DIMS_BDR.filter((k) => f[k] != null).map((k) => ({
       id: k,
       rotulo: ROTULO_DIM_BDR[k],
-      valor: k === "type" ? TIPO_GRUPO_NOME[f.type as TipoGrupo] : (f[k] as string),
+      valor:
+        k === "type"
+          ? TIPO_GRUPO_NOME[f.type as TipoGrupo]
+          : k === "faixa"
+            ? FAIXA_NOME[f.faixa as string]
+            : (f[k] as string),
       onRemover: () => setF((a) => ({ ...a, [k]: null })),
     })),
     ...(f.month != null
@@ -350,11 +412,35 @@ function Conteudo({
       : []),
   ];
   const tipos: TipoGrupo[] = ["DRN", "DRE", "SPO"];
+  const mesTicket = f.month ?? meses.length - 1;
+  const qTicket = quartis[meses[mesTicket]];
+  const hist = histogramaTicket(base, mesTicket, qTicket, minNegocios);
+  const faixas = contagemFaixas(filtrarBdrs(todos, f, "faixa"));
+  const maxFaixa = Math.max(1, ...Object.values(faixas));
+  const previa = useMemo(() => linhasDoMapa(base, 25, "volume"), [base]);
 
   return (
     <>
       <div className="wrap">
-        <KpiGrid kpis={kpis} />
+        <VerComoEm
+          pagina="bdrs"
+          resumo={
+            hoje
+              ? `${formatInt(todos.length)} BDRs nesta posição. ${diferenca(hoje.bdrs.length, todos.length, UNIDADE_BDR)}.`
+              : undefined
+          }
+        />
+        <KpiGrid
+          kpis={
+            hoje
+              ? kpisComDiferenca(
+                  kpis,
+                  kpisBdrs(filtrarBdrs(derivarBdrs(hoje.bdrs), f), hoje.meses).kpis,
+                  UNIDADE_BDR,
+                )
+              : kpis
+          }
+        />
 
         <div className="filters">
           <div className="fbar">
@@ -374,6 +460,17 @@ function Conteudo({
                   { v: "off", texto: `Sem negócios em ${rot}` },
                 ]}
               />
+              {hoje ? null : (
+                <Seletor
+                  rotulo="Faixa de ticket"
+                  valor={f.faixa ?? ""}
+                  onChange={(v) => setF((a) => ({ ...a, faixa: v || null }))}
+                  opcoes={[
+                    { v: "", texto: "Todas as faixas de ticket" },
+                    ...Object.entries(FAIXA_NOME).map(([v, texto]) => ({ v, texto })),
+                  ]}
+                />
+              )}
             </FiltrosSheet>
             <Chips chips={chips} mostrarLimpar={temFiltroBdr(f)} onLimpar={limpar} />
           </div>
@@ -384,7 +481,7 @@ function Conteudo({
             coluna="c8"
             titulo="Volume financeiro mensal"
             descricao="Soma do mercado à vista e fracionário, por tipo de programa · clique num mês para usá-lo como referência no ranking"
-            tag={`${formatDinheiro(mensal.reduce((a, m) => a + m.total, 0))} em 24 meses`}
+            tag={`${formatDinheiro(mensal.reduce((a, m) => a + m.total, 0))} em ${meses.length} meses`}
             tabela={{
               cabecalho: ["Mês", "Total", ...tipos.map((t) => TIPO_GRUPO_NOME[t])],
               linhas: mensal.map((m) => [
@@ -456,9 +553,9 @@ function Conteudo({
           <ChartCard
             coluna="c4"
             titulo="Volume por depositária"
-            descricao="Banco emissor dos BDRs · 24 meses"
+            descricao={`Banco emissor dos BDRs · ${meses.length} meses`}
             tabela={{
-              cabecalho: ["Depositária", "Volume 24m", "BDRs"],
+              cabecalho: ["Depositária", `Volume ${meses.length}m`, "BDRs"],
               linhas: porDep.map((i) => [i.label, formatDinheiro(i.n), i.extra?.[0][1] ?? ""]),
             }}
           >
@@ -466,7 +563,7 @@ function Conteudo({
               itens={porDep}
               selecionado={f.dep}
               onSelecionar={(k) => alternar("dep", k)}
-              centro="volume 24m"
+              centro={`volume ${meses.length}m`}
               rotuloValor="Volume"
               formatar={formatDinheiro}
               tamanho={168}
@@ -476,7 +573,7 @@ function Conteudo({
           <ChartCard
             coluna="c8 tall"
             titulo="Ranking por volume"
-            descricao={`${f.month == null ? "Volume acumulado em 24 meses" : `Volume em ${rotuloMes(meses[f.month])}`} · cor = depositária`}
+            descricao={`${f.month == null ? `Volume acumulado em ${meses.length} meses` : `Volume em ${rotuloMes(meses[f.month])}`} · cor = depositária`}
             tag={f.month == null ? `${rotuloMes(meses[0])} – ${rot}` : rotuloMes(meses[f.month])}
             tabela={{
               cabecalho: ["BDR", "Nome", "Depositária", "Volume", "Participação"],
@@ -530,7 +627,7 @@ function Conteudo({
             titulo="BDRs por tipo de programa"
             descricao="Quantidade de tickers negociados"
             tabela={{
-              cabecalho: ["Tipo", "BDRs", "Volume 24m"],
+              cabecalho: ["Tipo", "BDRs", `Volume ${meses.length}m`],
               linhas: porTipo.map((i) => [i.label, i.n, i.extra?.[0][1] ?? ""]),
             }}
           >
@@ -547,9 +644,9 @@ function Conteudo({
           <ChartCard
             coluna="c4"
             titulo="BDRs de ETF por classe"
-            descricao="Volume dos BDRs de ETF (DRE) · 24 meses"
+            descricao={`Volume dos BDRs de ETF (DRE) · ${meses.length} meses`}
             tabela={{
-              cabecalho: ["Classe", "Volume 24m", "ETFs"],
+              cabecalho: ["Classe", `Volume ${meses.length}m`, "ETFs"],
               linhas: porCat.map((i) => [i.label, formatDinheiro(i.n), i.extra?.[0][1] ?? ""]),
             }}
           >
@@ -558,7 +655,7 @@ function Conteudo({
                 itens={porCat}
                 selecionado={f.cat}
                 onSelecionar={(k) => alternar("cat", k)}
-                centro="volume 24m"
+                centro={`volume ${meses.length}m`}
                 rotuloValor="Volume"
                 formatar={formatDinheiro}
                 tamanho={168}
@@ -603,10 +700,120 @@ function Conteudo({
               ))}
               <p className="hint" style={{ margin: 0 }}>
                 {formatInt(conc.precisam80)} de {formatInt(conc.comVolume)} BDRs com volume respondem por 80%
-                do total{f.month == null ? " em 24 meses" : ` em ${rotuloMes(meses[f.month])}`}.
+                do total{f.month == null ? ` em ${meses.length} meses` : ` em ${rotuloMes(meses[f.month])}`}.
               </p>
             </div>
           </ChartCard>
+
+          {hoje ? (
+            <section className="card c12" role="status">
+              <p className="muted" style={{ margin: 0 }}>
+                O padrão de negociação não tem retrato de meses passados: esta seção só aparece na posição de
+                hoje.
+              </p>
+            </section>
+          ) : (
+            <>
+              <div className="sec-h" id="padrao">
+                <h2>Padrão de negociação</h2>
+                <p>
+                  Como o volume de cada BDR se distribui no tempo e qual é o tamanho médio dos negócios. Os
+                  gráficos acompanham os filtros acima.{" "}
+                  <Link prefetch={false} href="/bdrs/mapa/" className="fonte-link">
+                    Abrir o mapa completo
+                  </Link>
+                  .
+                </p>
+              </div>
+              <SecaoMapa
+                rows={previa}
+                meses={meses}
+                modo="intensidade"
+                janela={24}
+                titulo="Mapa de calor do volume"
+                descricao="Os 25 maiores BDRs do filtro · clique num mês para usá-lo no ranking · clique numa linha para abrir o BDR"
+                mesSelecionado={f.month}
+                onMes={(i) => setF((a) => ({ ...a, month: a.month === i ? null : i }))}
+              />
+              <ChartCard
+                coluna="c8"
+                titulo={`Ticket médio em ${rotuloMes(meses[mesTicket])}`}
+                descricao={`${formatInt(hist.noCalculo)} BDRs com ao menos ${formatInt(minNegocios)} negócios no mês; ${formatInt(hist.semDados)} com menos · escala logarítmica`}
+                tabela={{
+                  cabecalho: ["Ticket médio", "BDRs"],
+                  linhas: hist.bins.map((b) => [`${formatBRL(b.min)} a ${formatBRL(b.max)}`, b.n]),
+                }}
+              >
+                {hist.bins.length ? (
+                  <Histograma
+                    barras={hist.bins.map((b) => ({
+                      id: String(b.min),
+                      de: b.de,
+                      ate: b.ate,
+                      n: b.n,
+                      cor: b.cor,
+                      rotuloAria: `${b.n} BDRs com ticket médio de ${formatBRL(b.min)} a ${formatBRL(b.max)}`,
+                      dica: () => (
+                        <TipConteudo
+                          titulo={`${formatBRL(b.min)} a ${formatBRL(b.max)}`}
+                          linhas={[["BDRs", formatInt(b.n)]]}
+                        />
+                      ),
+                    }))}
+                    marcas={
+                      qTicket
+                        ? [
+                            {
+                              x: hist.x(qTicket.q1),
+                              rotulo: `1º quartil R$ ${formatInt(Math.round(qTicket.q1))}`,
+                            },
+                            {
+                              x: hist.x(qTicket.q3),
+                              rotulo: `3º quartil R$ ${formatInt(Math.round(qTicket.q3))}`,
+                            },
+                          ]
+                        : []
+                    }
+                    eixo={hist.eixo
+                      .filter((e) => e.x < 0.97)
+                      .map((e) => ({ x: e.x, rotulo: formatTicket(e.reais) }))}
+                  />
+                ) : (
+                  <p className="muted">Nenhum BDR com negócios suficientes no filtro atual.</p>
+                )}
+                <NotaEstimativa />
+              </ChartCard>
+              <ChartCard
+                coluna="c4"
+                titulo="BDRs por faixa de ticket"
+                descricao={`Faixa em ${rot}, entre os BDRs com negócios suficientes · clique para filtrar`}
+                tabela={{
+                  cabecalho: ["Faixa", "BDRs"],
+                  linhas: Object.keys(FAIXA_NOME).map((k) => [FAIXA_NOME[k], faixas[k] ?? 0]),
+                }}
+              >
+                <BarList
+                  selecionado={f.faixa}
+                  onSelecionar={(k) => alternar("faixa", k)}
+                  itens={["ticket_baixo", "intermediario", "ticket_alto", "dados_insuficientes"].map((k) => ({
+                    k,
+                    rotulo: FAIXA_NOME[k],
+                    parte: (faixas[k] ?? 0) / maxFaixa,
+                    fundo: FAIXA_COR[k],
+                    valor: formatInt(faixas[k] ?? 0),
+                    pct: formatPct(
+                      faixas[k] ?? 0,
+                      Object.values(faixas).reduce((a, b) => a + b, 0),
+                    ),
+                    rotuloAria: `${FAIXA_NOME[k]}: ${formatInt(faixas[k] ?? 0)} BDRs`,
+                    dica: () => (
+                      <TipConteudo titulo={FAIXA_NOME[k]} linhas={[["BDRs", formatInt(faixas[k] ?? 0)]]} />
+                    ),
+                  }))}
+                />
+              </ChartCard>
+            </>
+          )}
 
           <section className="card c12" id="tabela-bdrs" aria-label="Todos os BDRs">
             <div className="tbl-head">
@@ -627,7 +834,7 @@ function Conteudo({
                   aria-pressed={f.showM}
                   onClick={() => setF((a) => ({ ...a, showM: !a.showM }))}
                 >
-                  {f.showM ? "Ocultar meses" : "Mostrar os 24 meses"}
+                  {f.showM ? "Ocultar meses" : `Mostrar os ${meses.length} meses`}
                 </button>
                 <button
                   type="button"

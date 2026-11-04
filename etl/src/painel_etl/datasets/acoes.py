@@ -15,14 +15,15 @@ import yaml
 
 from painel_etl import paths
 from painel_etl.core import quality
+from painel_etl.datasets import valores_mobiliarios as ds_valores
 from painel_etl.datasets.escrituradores import Historico, derivar
+from painel_etl.indicadores import carregar as carregar_indicadores
 from painel_etl.normalize import cnpj as cnpj_mod
 from painel_etl.normalize.instituicoes import Registro
 from painel_etl.normalize.tickers import ticker_class
 from painel_etl.sources.b3_listed import CompanyDetail, ListedCompany
-from painel_etl.sources.cvm_fca import FcaRow
+from painel_etl.sources.cvm_fca import FcaRow, ValorMobiliarioRow
 
-SCHEMA_VERSION = 1
 TIPO_ACOES = "1"
 ROTACAO_DIAS = 7
 SEGMENTO_SEM_DADOS = "?"
@@ -117,9 +118,12 @@ def construir(
     cad: Mapping[str, Mapping[str, str]],
     reg: Registro,
     previo: Mapping[str, Mapping[str, Any]] | None = None,
+    valores: Mapping[str, Sequence[ValorMobiliarioRow]] | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, list[dict[str, Any]]], list[str]]:
     """Devolve (companhias, linha do tempo por companhia, nomes de escriturador não mapeados)."""
     previo = previo or {}
+    valores = valores or {}
+    cfg_vm = carregar_indicadores().fca_valor_mobiliario
     seg_map = segmento_por_indicador()
     companhias, historico, nao_mapeados = [], {}, set()
     for c in sorted((x for x in listadas if x.tipo == TIPO_ACOES), key=lambda x: (x.pregao, x.codigo_cvm)):
@@ -139,6 +143,12 @@ def construir(
             nao_mapeados |= {p.nome for p in h.passagens if p.nao_mapeado}
         cvm = _cvm(h)
         principal = principal_b3(b3["escriturador_b3"])
+        vm = valores.get(digitos, [])
+        desde = ds_valores.negociacao_desde(vm)
+        b3["tickers"] = [
+            {"ticker": t["ticker"], "classe": t["classe"], "negociacao_desde": desde.get(t["ticker"])}
+            for t in b3["tickers"]
+        ]
         companhias.append(
             {
                 "codigo_cvm": c.codigo_cvm,
@@ -152,6 +162,8 @@ def construir(
                 "escriturador_cvm": cvm,
                 "divergente_b3_cvm": bool(cvm and cvm["atual"] != principal),
                 "situacao_cvm": cad.get(digitos, {}).get("situacao"),
+                "listagem": ds_valores.listagem(vm, b3["segmento"], c.data_listagem, cfg_vm),
+                "liquidez": None,
             }
         )
         if h:
@@ -168,6 +180,18 @@ def construir(
                 for p in h.passagens
             ]
     return companhias, historico, sorted(nao_mapeados)
+
+
+def historico_segmentos(
+    companhias: Sequence[Mapping[str, Any]], valores: Mapping[str, Sequence[ValorMobiliarioRow]]
+) -> dict[str, list[dict[str, Any]]]:
+    """Código CVM -> linha do tempo de segmento segundo o FCA. Companhia sem dados no FCA fica de fora."""
+    saida = {}
+    for c in companhias:
+        linha = ds_valores.linha_do_tempo(valores.get(cnpj_mod.digits(c["cnpj"]), []))
+        if linha:
+            saida[c["codigo_cvm"]] = linha
+    return saida
 
 
 def validar(

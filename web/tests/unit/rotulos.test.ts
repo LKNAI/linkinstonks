@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { NOME_FONTE, ROTULO_STATUS_FONTE, mudancaDoEvento, nomeDoItem } from "@/lib/rotulos";
+import { NOME_FONTE, ROTULO_STATUS_FONTE, ROTULO_TIPO, mudancaDoEvento, nomeDoItem } from "@/lib/rotulos";
 import type { Acao, Evento } from "@/lib/schemas";
+import { schemaJson } from "../dados";
 
 const evento = (p: Partial<Evento> = {}): Evento => ({
   chave: "25887",
@@ -49,5 +50,23 @@ describe("eventos legíveis", () => {
     expect(
       mudancaDoEvento(evento({ tipo: "troca_escriturador", de: "Banco Bradesco", para: "Itaú Corretora" })),
     ).toBe("Banco Bradesco → Itaú Corretora");
+  });
+});
+
+describe("eventos de liquidez", () => {
+  it("mostra as categorias por extenso", () => {
+    expect(
+      mudancaDoEvento(
+        evento({ tipo: "entrou_presenca_baixa", de: "presenca_media", para: "presenca_baixa" }),
+      ),
+    ).toBe("Presença média → Presença baixa");
+    expect(
+      mudancaDoEvento(evento({ tipo: "saiu_sem_negocios", de: "sem_negocios", para: "presenca_baixa" })),
+    ).toBe("Sem negócios → Presença baixa");
+  });
+
+  it("todo tipo de evento do schema tem rótulo", () => {
+    const tipos = schemaJson("eventos").properties.eventos.items.properties.tipo.enum as string[];
+    tipos.forEach((t) => expect(ROTULO_TIPO[t]).toBeTruthy());
   });
 });

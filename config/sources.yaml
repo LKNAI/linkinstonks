@@ -88,9 +88,8 @@ datasets:
     fontes: [b3_listed, cvm_fca, cvm_cad]
   bdrs:
     fontes: [b3_cotahist, b3_listed, b3_finservices, bradesco]
-  acoes_volume:                         # Fase 7: exemplo de escalabilidade, sem fonte nova
-    fontes: [b3_cotahist]               # mesmos arquivos dos BDRs, categoria ACAO (ADR 0004)
-    cadastro: acoes.json                # tickers -> companhia
+  acoes_liquidez:                       # Fase 8: substitui acoes_volume; parâmetros em indicadores.yaml
+    fontes: [b3_cotahist, cvm_fca]      # mesmos arquivos dos BDRs, categoria ACAO (ADR 0004)
+    cadastro: acoes.json
     janela_meses: 24
     queda_maxima_registros: 0.10
-    aviso_volume_sem_companhia: 0.10

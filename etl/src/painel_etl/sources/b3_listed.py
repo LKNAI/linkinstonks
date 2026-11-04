@@ -42,6 +42,7 @@ class ListedCompany(_Modelo):
     setor: str = Field("", alias="segment")
     tipo: str = Field(alias="type")
     mercado: str = Field("", alias="market")
+    data_listagem: str = Field("", alias="dateListing")  # dd/mm/aaaa; 31/12/9999 = não informada
 
 
 class OtherCode(_Modelo):

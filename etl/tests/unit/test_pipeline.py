@@ -3,7 +3,9 @@ from __future__ import annotations
 import datetime as dt
 from pathlib import Path
 
-from painel_etl import pipeline, seed_import
+import pytest
+
+from painel_etl import indicadores, pipeline, seed_import
 from painel_etl.core import io as pio
 
 
@@ -39,6 +41,32 @@ class TestMeta:
         assert (f["status"], f["ultimo_sucesso"]) == ("erro", "2026-10-29")
 
 
+def test_meta_antigo_com_versao_inteira_e_migrado(tmp_path: Path) -> None:
+    pio.write_json(tmp_path / "public" / "meta.json", {"datasets": {}, "fontes": {}, "schema_version": 1}, 2)
+    pipeline.atualizar_meta(ctx(tmp_path, dt.date(2026, 11, 3)), [resultado(mudou=True)])
+    assert pio.read_json(tmp_path / "public" / "meta.json")["schema_version"] == pipeline.SCHEMA_VERSION
+
+
+def test_orcamento_de_tamanho_reprova(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    (tmp_path / "public").mkdir()
+    (tmp_path / "public" / "grande.bin").write_bytes(b"0" * 2_000_000)
+    cfg = indicadores.carregar().model_copy(deep=True)
+    cfg.orcamento.data_public_mb = 1
+    monkeypatch.setattr(pipeline, "carregar_indicadores", lambda: cfg)
+    assert any("orçamento" in e for e in pipeline.validar_publicados(tmp_path))
+
+
+def test_meta_deixa_de_listar_dataset_que_saiu(tmp_path: Path) -> None:
+    antigo = {"atualizado_em": "2026-10-29", "contagem": 1}
+    pio.write_json(
+        tmp_path / "public" / "meta.json",
+        {"datasets": {"acoes_volume": antigo}, "fontes": {}, "schema_version": "1.1"},
+        2,
+    )
+    pipeline.atualizar_meta(ctx(tmp_path, dt.date(2026, 11, 3)), [resultado(mudou=True)])
+    assert "acoes_volume" not in pio.read_json(tmp_path / "public" / "meta.json")["datasets"]
+
+
 class TestValidacao:
     def test_arquivos_ausentes_sao_apontados(self, tmp_path: Path) -> None:
         erros = pipeline.validar_publicados(tmp_path)
@@ -50,20 +78,27 @@ class TestValidacao:
         pipeline.publicar_eventos(ctx(tmp_path, dt.date(2026, 10, 29)))
         pipeline.atualizar_meta(ctx(tmp_path, dt.date(2026, 10, 29)), [resultado(mudou=True)])
         pio.write_json(
-            tmp_path / "public" / "acoes_historico_escrituradores.json", {"schema_version": 1, "companhias": {}}, 0
+            tmp_path / "public" / "acoes_historico_escrituradores.json", {"schema_version": "1.1", "companhias": {}}, 0
+        )
+        pio.write_json(
+            tmp_path / "public" / "acoes_historico_segmentos.json", {"schema_version": "1.0", "companhias": {}}, 0
         )
         meses = [f"2024-{m:02d}" for m in range(11, 13)] + [f"2025-{m:02d}" for m in range(1, 13)] + [
             f"2026-{m:02d}" for m in range(1, 11)
         ]  # fmt: skip
         pio.write_json(
-            tmp_path / "public" / "acoes_volume.json",
+            tmp_path / "public" / "acoes_liquidez.json",
             {
-                "schema_version": 1, "meses": meses[:24], "mes_parcial": None, "companhias": [],
+                "schema_version": "1.0", "meses": meses[:24], "mes_parcial": None, "companhias": [], "tickers": [],
                 "pagina_fonte": "https://www.b3.com.br/", "nao_atribuido": {"tickers": 0, "volume_mensal": [0] * 24},
+                "pregoes_mes": [21] * 24,
                 "fontes_volume": {m: {"tipo": "mensal", "arquivos": ["https://exemplo.test/x.zip"]} for m in meses[:24]},
             },
             0,
         )  # fmt: skip
+        doc_liq = pio.read_json(tmp_path / "public" / "acoes_liquidez.json")
+        del doc_liq["tickers"]
+        pio.write_json(tmp_path / "public" / "acoes_liquidez_resumo.json", doc_liq, 0)
         assert pipeline.validar_publicados(tmp_path) == []
 
         doc = pio.read_json(tmp_path / "public" / "bdrs.json")

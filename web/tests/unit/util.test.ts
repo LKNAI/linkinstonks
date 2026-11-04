@@ -89,7 +89,7 @@ describe("estado na URL", () => {
 
 describe("aviso de dados desatualizados", () => {
   const meta = (ultimo: Record<string, string>, status: "ok" | "erro" = "ok"): Meta => ({
-    schema_version: 1,
+    schema_version: "1.1",
     datasets: {
       acoes: { atualizado_em: "2026-10-29", contagem: 1 },
       bdrs: { atualizado_em: "2026-10-27", contagem: 1 },

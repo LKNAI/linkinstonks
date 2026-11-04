@@ -3,6 +3,8 @@ import { expect, test, type Page } from "@playwright/test";
 const ROTAS = [
   { rota: "/", pronto: ".kpi" },
   { rota: "/acoes/", pronto: ".kpi" },
+  { rota: "/acoes/liquidez/", pronto: ".dtable tbody tr" },
+  { rota: "/bdrs/mapa/", pronto: ".mapa-svg" },
   { rota: "/bdrs/", pronto: ".kpi" },
   { rota: "/instituicoes/", pronto: ".stats-table tbody tr" },
   { rota: "/novidades/", pronto: ".state, .stats-table" },

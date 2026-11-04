@@ -19,6 +19,9 @@ O catálogo vivo é a rota `/design` (noindex, fora do sitemap); a fonte dos val
 | degradê | nenhum na capa nem nos cartões; o único permitido é a área sob série temporal |
 | logo | cor chapada em `--accent`, sem degradê |
 
+| mapa de calor (Fase 8) | intensidade em rampa de um só matiz (`--seq-1..7`, ameixa); variação em `--div-frio-*`, `--div-neutro` e `--div-quente-*` (azul-petróleo e terracota, sem vermelho e verde: subir ou cair de volume não é bom nem ruim). Validação: rampa monótona e de matiz único; pares da divergente com ΔE 11,8 sob daltonismo (alvo ≥ 8) e 15,7 em visão normal (piso 15). O tom mais claro fica abaixo de 3:1, compensado por tooltip e tabela; "sem negócios" tem borda e ponto, não só cor |
+| incerteza | "≈" antes do número e nota com link para a metodologia; "aprox." em datas aproximadas; "(incerta)" em datas de listagem duvidosas. Sem cor de status |
+
 ## Regras de código
 
 - Nenhum literal de cor, tamanho de fonte, espaçamento, raio ou sombra fora de `tokens.css`. Exceções: `lib/colors.ts` (gerado), `lib/palette.ts` (espelha os tokens; `tests/unit/palette.test.ts` compara com `tokens.css`), `@media`, geometria de SVG e hairlines de 1–2 px.
@@ -28,6 +31,24 @@ O catálogo vivo é a rota `/design` (noindex, fora do sitemap); a fonte dos val
 
 - **Nova aba** (`components/layout/LinkNovaAba.tsx`): registros e fontes (empresa e BDR nas tabelas, "ver na lista" nos detalhes, instituições e as listas já filtradas que elas abrem) e arquivos oficiais da B3. Ícone `ExternalLink` de 14 px e texto `sr-only` "(abre em nova aba)". Cliques em gráficos, chips, filtros e ordenação filtram a própria página; menu, logo, migalhas e botões da Capa ficam na mesma aba.
 - **Divisão de seção** (`.sec-h`): título `--fs-xl` e uma linha de apoio dentro da grade de 12 colunas, para separar blocos de uma mesma tela (por exemplo, "Volume negociado" em `/acoes`).
+
+## Fase 8 (Onda B)
+
+Proposta aprovada em 2026-11-03: `docs/fase8-proposta-onda-b.md`, com maquetes e capturas em `docs/capturas/fase8-onda-b/`.
+
+- **Ponto memorável:** o mapa de calor como livro-razão, com ticker à esquerda, total à direita e um fio separando os anos. Um único SVG, com um `<path>` por cor; ponteiro e teclado acham a célula por conta. O resto usa componentes que já existiam.
+- **Decisões do dono:** sem donut de faixas de ticket (mostraria sempre 25%, 50% e 25%); variação só nos 12 meses com referência; `/acoes` usa `acoes_liquidez_resumo.json`, 70 KB em gzip, em vez do arquivo completo, de 530 KB.
+- **`/acoes`:** a liquidez entrou na seção de volume, renomeada "Negociação", sem segundo ranking.
+- **Orçamento de JS:** o conteúdo de `/acoes` e `/bdrs` é baixado sob demanda, em paralelo com os dados (`components/paineis/PaineisLazy.tsx`).
+
+## Fase 8 (Onda C)
+
+Dentro do sistema existente, sem mudança de direção.
+
+- **Busca:** diálogo modal com raio de 12 px e sombra média; em tela cheia até 640 px. A opção ativa usa o fio de destaque à esquerda, como a seleção dos gráficos.
+- **Estrela:** só contorno fora da lista e preenchida na cor de destaque dentro dela, com `aria-pressed` e rótulo. Nas opções da busca, é só para ponteiro; pelo teclado, Alt+A.
+- **Faixa de mês passado:** fixa no rodapé da janela, para não competir com os filtros, que ficam fixos no topo. Usa o fio de destaque, sem cor de status: não é um alerta.
+- **Relatório:** usa `.prose` com até 72 caracteres por linha; na impressão, A4 com cabeçalho e rodapé repetidos, e sem menu.
 
 ## Estado da implementação
 

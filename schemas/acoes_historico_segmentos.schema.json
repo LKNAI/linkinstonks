@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "acoes_historico_segmentos.schema.json",
+  "title": "acoes_historico_segmentos.json: mudanças de segmento de listagem segundo o FCA da CVM",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "companhias"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^1\\.[0-9]+$"
+    },
+    "companhias": {
+      "description": "Código CVM -> trechos em ordem cronológica. O primeiro é o início da série (referência de 2018), não a entrada no segmento.",
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[0-9]+$"
+      },
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "segmento",
+            "desde",
+            "data_aproximada",
+            "fonte"
+          ],
+          "properties": {
+            "segmento": {
+              "type": "string",
+              "minLength": 1
+            },
+            "desde": {
+              "type": "string",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+            },
+            "data_aproximada": {
+              "description": "A data é a da referência anual do FCA",
+              "const": true
+            },
+            "fonte": {
+              "const": "CVM FCA"
+            }
+          }
+        }
+      }
+    }
+  }
+}

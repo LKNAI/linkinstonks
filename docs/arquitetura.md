@@ -18,6 +18,10 @@
 - [ADR 0002: Site estático](decisoes/0002-site-estatico.md)
 - [Decisões da Fase 0](decisoes/0000-decisoes-fase-0.md)
 - [ADR 0003: histórico de escrituradores](decisoes/0003-historico-de-escrituradores.md)
+- [ADR 0005: BDRs não têm mercado fracionário](decisoes/0005-bdr-sem-fracionario.md)
+- [ADR 0006: empréstimo de ativos, não seguir](decisoes/0006-emprestimo-de-ativos-nao-seguir.md)
+- [ADR 0007: API pública fora do escopo](decisoes/0007-api-publica-fora-do-escopo.md)
+- [ADR 0008: `schema_version` em `MAJOR.MINOR`](decisoes/0008-schema-version-major-minor.md)
 
 ## Contrato entre as partes
 `etl/` e `web/` só se falam por `data/public/` (JSON validado por JSON Schema). O `zod` do front e o schema não podem divergir (teste de equivalência, Fase 2/4).

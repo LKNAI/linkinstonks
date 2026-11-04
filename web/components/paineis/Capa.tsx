@@ -2,6 +2,7 @@
 
 // Capa: KPIs dos dois painéis, data da última atualização por fonte, últimos eventos e atalhos.
 import Link from "next/link";
+import { ContadorLista } from "@/components/acompanhamento/ContadorLista";
 import { Carregando, ErroDados, KpiGrid, PaginaComHero, type HeroProps } from "@/components/layout/Pagina";
 import { derivar, kpisAcoes, type Kpi } from "@/lib/acoes";
 import { derivarBdrs, kpisBdrs } from "@/lib/bdrs";
@@ -12,7 +13,7 @@ import { NOME_FONTE, ROTULO_STATUS_FONTE, ROTULO_TIPO, mudancaDoEvento, nomeDoIt
 import { hojeEmBrasilia } from "@/lib/stale";
 
 const HERO: HeroProps = {
-  selo: "B3 + CVM · dados abertos",
+  selo: "B3 + CVM · dados públicos",
   titulo: "linkinstonks: escrituradores e BDRs",
   texto:
     "Quem escritura cada ação listada na B3 e qual banco é depositário de cada BDR, com histórico de trocas e volume mensal. Os dados se atualizam sozinhos a partir das fontes oficiais.",
@@ -47,6 +48,7 @@ export function Capa() {
   return (
     <PaginaComHero hero={HERO}>
       <div className="wrap">
+        <ContadorLista className="contador-lista contador-capa" />
         <KpiGrid kpis={destaques} />
         <div className="grid" style={{ marginTop: "var(--space-6)" }}>
           <section className="card c4" aria-labelledby="atalhos">

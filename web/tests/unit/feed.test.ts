@@ -1,7 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { ROTULO_TIPO, SEGMENTO_NOME, escaparXml, montarFeed } from "../../scripts/gen-feed.mjs";
+import {
+  ROTULO_LIQUIDEZ,
+  ROTULO_TIPO,
+  SEGMENTO_NOME,
+  escaparXml,
+  montarFeed,
+} from "../../scripts/gen-feed.mjs";
 import { SEGMENTO_NOME as SEGMENTOS_SITE } from "@/lib/palette";
-import { ROTULO_TIPO as ROTULOS_SITE } from "@/lib/rotulos";
+import { ROTULO_LIQUIDEZ as LIQUIDEZ_SITE, ROTULO_TIPO as ROTULOS_SITE } from "@/lib/rotulos";
 
 const evento = (p: Record<string, unknown> = {}) => ({
   data: "2026-10-29",
@@ -80,5 +86,26 @@ describe("feed Atom", () => {
   it("os rótulos do feed são os mesmos do site", () => {
     expect(SEGMENTO_NOME).toEqual(SEGMENTOS_SITE);
     expect(ROTULO_TIPO).toEqual(ROTULOS_SITE);
+    expect(ROTULO_LIQUIDEZ).toEqual(LIQUIDEZ_SITE);
+  });
+});
+
+describe("relatórios no feed", () => {
+  const relatorio = {
+    mes: "2026-12",
+    titulo: "Relatório de dezembro de 2026",
+    secoes: [{ itens: [{ texto: "A & B." }] }],
+  };
+
+  it("cada relatório vira uma entrada, com data fixa no mês seguinte", () => {
+    const xml = montarFeed({
+      eventos: [],
+      siteUrl: "https://exemplo.test",
+      atualizadoEm: "2026-01-01",
+      relatorios: [relatorio],
+    });
+    expect(xml).toContain('<link href="https://exemplo.test/relatorios/2026-12/"/>');
+    expect(xml).toContain("<updated>2027-01-01T00:00:00Z</updated>");
+    expect(xml).toContain("<summary>A &amp; B.</summary>");
   });
 });

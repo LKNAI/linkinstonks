@@ -36,8 +36,8 @@ export function derivarBdrs(bdrs: readonly Bdr[]): BdrRow[] {
       ...d,
       T,
       tot: d.volume_24m,
-      y1: v.slice(12).reduce((a, b) => a + b, 0),
-      y0: v.slice(0, 12).reduce((a, b) => a + b, 0),
+      y1: v.slice(-12).reduce((a, b) => a + b, 0),
+      y0: v.slice(-24, -12).reduce((a, b) => a + b, 0),
       on: (v[v.length - 1] ?? 0) > 0,
       C: T === "DRE" ? d.categoria || CATEGORIA_SEM : null,
       ix: normalizar(`${d.ticker} ${d.nome} ${d.isin} ${d.depositaria} ${TIPO_GRUPO_NOME[T]} ${d.tipo}`),
@@ -46,12 +46,13 @@ export function derivarBdrs(bdrs: readonly Bdr[]): BdrRow[] {
 }
 
 // ------------------------------------------------------------------------------------------- filtros
-export const DIMS_BDR = ["dep", "type", "cat"] as const;
+export const DIMS_BDR = ["dep", "type", "cat", "faixa"] as const;
 export type DimBdr = (typeof DIMS_BDR)[number];
 export const ROTULO_DIM_BDR: Record<DimBdr, string> = {
   dep: "Depositária",
   type: "Tipo",
   cat: "Classe do ETF",
+  faixa: "Faixa de ticket",
 };
 
 export type Situacao = "all" | "on" | "off";
@@ -62,6 +63,7 @@ export interface FiltrosBdrs {
   dep: string | null;
   type: string | null;
   cat: string | null;
+  faixa: string | null;
   /** Índice (0-based) do mês escolhido para o ranking; `null` = 24 meses. */
   month: number | null;
   sort: Ordem;
@@ -74,12 +76,14 @@ export const FILTROS_BDR_PADRAO: FiltrosBdrs = {
   dep: null,
   type: null,
   cat: null,
+  faixa: null,
   month: null,
   sort: { k: "tot", dir: -1 },
   showM: false,
 };
 
-const valorDim = (d: BdrRow, k: DimBdr): string | null => ({ dep: d.depositaria, type: d.T, cat: d.C })[k];
+const valorDim = (d: BdrRow, k: DimBdr): string | null =>
+  ({ dep: d.depositaria, type: d.T, cat: d.C, faixa: d.perfil?.faixa ?? null })[k];
 
 export function passaBdr(d: BdrRow, f: FiltrosBdrs, exceto?: DimBdr): boolean {
   if (f.st === "on" && !d.on) return false;
@@ -132,7 +136,7 @@ export function kpisBdrs(
         cor: "var(--accent)",
       },
       {
-        rotulo: "Volume em 24 meses",
+        rotulo: `Volume em ${meses.length} meses`,
         valor: formatDinheiro(total),
         sub: `média de ${formatDinheiro(total / (meses.length || 1))} por mês`,
         cor: "var(--accent)",
@@ -140,13 +144,18 @@ export function kpisBdrs(
       {
         rotulo: `Volume em ${rot}`,
         valor: formatDinheiro(mesAtual),
-        sub: `${vMes.texto} vs ${rotuloMes(meses[ult - 12] ?? "")}`,
+        sub: meses[ult - 12]
+          ? `${vMes.texto} vs ${rotuloMes(meses[ult - 12])}`
+          : "sem o mesmo mês do ano anterior",
         cor: "var(--accent)",
       },
       {
         rotulo: "Últimos 12 × 12 anteriores",
-        valor: vAnos.texto || "—",
-        sub: `${formatDinheiro(y1)} vs ${formatDinheiro(y0)}`,
+        valor: meses.length < 24 ? "—" : vAnos.texto || "—",
+        sub:
+          meses.length < 24
+            ? `esta posição tem ${meses.length} meses`
+            : `${formatDinheiro(y1)} vs ${formatDinheiro(y0)}`,
         cor: "var(--accent)",
       },
       {
@@ -184,9 +193,9 @@ export function totaisMensais(rows: readonly BdrRow[], meses: readonly string[])
 }
 
 /** Degrau "bonito" do eixo Y (em R$): 1, 2 ou 5 x 10^n, com no máximo 5 linhas de grade (como no seed). */
-export function escalaEixo(max: number): { passo: number; topo: number } {
+export function escalaEixo(max: number, menor = 1e6): { passo: number; topo: number } {
   const passos: number[] = [];
-  for (let e = 1e6; e <= 1e10; e *= 10) passos.push(e, 2 * e, 5 * e);
+  for (let e = menor; e <= 1e10; e *= 10) passos.push(e, 2 * e, 5 * e);
   const passo = passos.find((s) => max / s <= 5) ?? 1e11;
   return { passo, topo: Math.max(passo, Math.ceil(max / passo) * passo) };
 }
@@ -207,7 +216,7 @@ export function fatiasDepositaria(rowsSemDep: readonly BdrRow[]): Fatia[] {
     .map((k) => ({ k, label: k, n: v[k], color: corDepositaria(k), extra: [["BDRs", formatInt(c[k])]] }));
 }
 
-export function fatiasTipo(rowsSemTipo: readonly BdrRow[]): Fatia[] {
+export function fatiasTipo(rowsSemTipo: readonly BdrRow[], nMeses = 24): Fatia[] {
   const c: Record<string, number> = {};
   const v: Record<string, number> = {};
   for (const d of rowsSemTipo) {
@@ -221,7 +230,7 @@ export function fatiasTipo(rowsSemTipo: readonly BdrRow[]): Fatia[] {
       label: TIPO_GRUPO_NOME[k],
       n: c[k],
       color: TIPO_GRUPO_COR[k],
-      extra: [["Volume 24m", formatDinheiro(v[k])]],
+      extra: [[`Volume ${nMeses}m`, formatDinheiro(v[k])]],
     }));
 }
 
@@ -361,8 +370,8 @@ export function csvBdrs(rows: readonly BdrRow[], meses: readonly string[]): stri
     "Primeiro pregão no período",
     "Último pregão",
     "Último preço (R$)",
-    "Negócios 24m",
-    "Volume 24m (R$)",
+    `Negócios ${meses.length}m`,
+    `Volume ${meses.length}m (R$)`,
     ...meses.map((m) => `Volume ${m} (R$)`),
   ]; // fmt: skip
   const linhas = rows.map((d) => [

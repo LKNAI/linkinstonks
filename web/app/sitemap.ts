@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL, metaPublica, todasAcoes, todosBdrs } from "@/lib/servidor";
+import { SITE_URL, metaPublica, todasAcoes, todosBdrs, todosRelatorios } from "@/lib/servidor";
 
 export const dynamic = "force-static";
 
@@ -9,9 +9,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .map((d) => d.atualizado_em)
     .sort();
   const lastModified = datas.at(-1);
-  const fixas = ["/", "/acoes/", "/bdrs/", "/instituicoes/", "/novidades/", "/status/", "/sobre/"];
+  const fixas = [
+    "/",
+    "/acoes/",
+    "/acoes/liquidez/",
+    "/bdrs/",
+    "/bdrs/mapa/",
+    "/instituicoes/",
+    "/novidades/",
+    "/relatorios/",
+    "/status/",
+    "/sobre/",
+  ];
   const caminhos = [
     ...fixas,
+    ...todosRelatorios().map((r) => `/relatorios/${r.mes}/`),
     ...todasAcoes().map((c) => `/acoes/${c.codigo_cvm}/`),
     ...todosBdrs().bdrs.map((b) => `/bdrs/${b.ticker}/`),
   ];

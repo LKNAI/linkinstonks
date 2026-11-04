@@ -1,5 +1,12 @@
 import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { expect, test, type Page } from "@playwright/test";
+
+const docBdrs = JSON.parse(
+  readFileSync(join(__dirname, "..", "..", "..", "data", "public", "bdrs.json"), "utf8"),
+) as { meses: string[]; mes_parcial: string | null; bdrs: { volume_mensal: number[] }[] };
+// Na virada do mês, antes do primeiro pregão, não há mês parcial: o número de barras vem dos dados.
+const BARRAS = docBdrs.meses.length + (docBdrs.mes_parcial ? 1 : 0);
 
 const numero = (s: string | null): number => Number((s ?? "").replace(/\./g, "").match(/\d+/)?.[0]);
 
@@ -151,7 +158,7 @@ test.describe("/acoes: filtros da antiga tabela e volume", () => {
     page,
   }) => {
     const barras = page.locator("a.mc");
-    await expect(barras).toHaveCount(25); // 24 meses fechados + mês corrente parcial
+    await expect(barras).toHaveCount(BARRAS); // 24 meses fechados + mês parcial, se houver
     await expect(barras.nth(23)).toHaveAttribute("href", /\/InstDados\/SerHist\/COTAHIST_M\d{6}\.ZIP$/);
     await expect(barras.nth(23)).toHaveAttribute(
       "aria-label",
@@ -168,6 +175,7 @@ test.describe("/acoes: filtros da antiga tabela e volume", () => {
   });
 
   test("o mês parcial vem com aviso de que não está reconciliado com o arquivo mensal", async ({ page }) => {
+    test.skip(!docBdrs.mes_parcial, "Sem pregão no mês corrente ainda: não há mês parcial nos dados.");
     await expect(
       page.locator(".card", { hasText: "Volume financeiro mensal" }).locator(".note"),
     ).toContainText(/é parcial: soma de \d+ arquivos diários/);
@@ -190,9 +198,10 @@ test.describe("/bdrs", () => {
   });
 
   test("a situação filtra e os KPIs acompanham", async ({ page }) => {
-    expect(numero(await page.locator(".kpi .val").first().textContent())).toBe(1152);
+    expect(numero(await page.locator(".kpi .val").first().textContent())).toBe(docBdrs.bdrs.length);
     await page.getByRole("button", { name: /^Negociadas em/ }).click();
-    expect(numero(await page.locator(".kpi .val").first().textContent())).toBe(966);
+    const negociadas = docBdrs.bdrs.filter((b) => b.volume_mensal[23] > 0).length;
+    expect(numero(await page.locator(".kpi .val").first().textContent())).toBe(negociadas);
     await expect(page).toHaveURL(/st=on/);
   });
 

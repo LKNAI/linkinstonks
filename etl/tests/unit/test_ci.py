@@ -172,7 +172,8 @@ class TestMensal:
         respx.get(b3_cotahist.url_mensal(2026, 9)).mock(return_value=httpx.Response(200, content=mensal))
         (tmp_path / "public" / "downloads").mkdir(parents=True)
         (tmp_path / "public" / "downloads" / "acoes.csv").write_bytes(b"a;b\n1;2\n")
-        (tmp_path / "public" / "downloads" / "bdrs.csv").write_bytes(b"x\n")
+        (tmp_path / "history" / "csv_correntes").mkdir(parents=True)
+        (tmp_path / "history" / "csv_correntes" / "bdrs.csv").write_bytes(b"x\n")
 
         r = pipeline.mensal(self.contexto(tmp_path))
         assert r.publicado and not r.erro and r.mudou
@@ -180,6 +181,8 @@ class TestMensal:
         assert b3_cotahist.ler_particao("2026-09", pasta)["fonte"] == "mensal"  # type: ignore[index]
         snap = tmp_path / "history" / "snapshots" / "2026-09" / "acoes.csv.gz"
         assert gzip.decompress(snap.read_bytes()) == b"a;b\n1;2\n"
+        coletas = tmp_path / "history" / "snapshots" / "datas_coleta.json"
+        assert json.loads(coletas.read_text("utf-8")) == {"2026-09": "2026-10-05"}  # a data real, não o fim do mês
 
         (tmp_path / "public" / "downloads" / "acoes.csv").write_bytes(b"mudou\n")
         r2 = pipeline.mensal(self.contexto(tmp_path))
@@ -194,10 +197,10 @@ class TestMensal:
         assert r.fontes["b3_cotahist"]["status"] == "desatualizado"
 
 
-@pytest.mark.parametrize("nome", ["acoes", "bdrs", "acoes_volume"])
+@pytest.mark.parametrize("nome", ["acoes", "bdrs", "acoes_liquidez"])
 def test_snapshots_nao_sao_criados_sem_publicacao(tmp_path: Path, nome: str) -> None:
     ctx = pipeline.Contexto(hoje=dt.date(2026, 10, 5), raiz=tmp_path, cache=tmp_path / "c")
-    for pasta in ("bdr_volume", "acoes_volume"):
+    for pasta in ("bdr_volume", "acoes_liquidez"):
         b3_cotahist.gravar_particao("2026-09", {}, "mensal", [], tmp_path / "history" / pasta)
     r = pipeline.mensal(ctx)
     assert r.publicado and not (tmp_path / "history" / "snapshots" / "2026-09" / f"{nome}.csv.gz").exists()

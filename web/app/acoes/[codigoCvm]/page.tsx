@@ -1,15 +1,18 @@
+import { Estrela } from "@/components/acompanhamento/Estrela";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
+import { GraficoPresenca, type MesCompanhia } from "@/components/charts/GraficosMensais";
 import { GraficoVolume } from "@/components/charts/GraficoVolume";
-import { Cartao, LinhaDoTempo, Lista, Migalhas } from "@/components/paineis/Detalhe";
+import { Cartao, LinhaDoTempo, Lista, Listagem, Migalhas } from "@/components/paineis/Detalhe";
 import { FonteVolume } from "@/components/paineis/FonteVolume";
 import { Banco } from "@/components/paineis/celulas-acoes";
 import { normalizar } from "@/lib/acoes";
 import { formatDate } from "@/lib/format";
 import { SEGMENTO_NOME } from "@/lib/palette";
 import { comoConferirCompanhia } from "@/lib/fonte-volume";
-import { acoesVolume, historicoDe, todasAcoes } from "@/lib/servidor";
+import { ROTULO_LIQUIDEZ } from "@/lib/rotulos-liquidez";
+import { acoesLiquidez, historicoDe, segmentosDe, todasAcoes } from "@/lib/servidor";
 
 export const dynamicParams = false;
 
@@ -38,8 +41,20 @@ export default async function Page({ params }: Props) {
   const b3 = c.escriturador_b3;
   const principalB3 = b3.on ?? b3.pn;
   const historico = historicoDe(c.codigo_cvm);
-  const vol = acoesVolume();
+  const vol = acoesLiquidez();
   const volCia = vol.companhias.find((x) => x.codigo_cvm === c.codigo_cvm);
+  const pontos: MesCompanhia[] = volCia
+    ? vol.meses.map((mes, i) => ({
+        mes,
+        volume: volCia.mensal.volume[i],
+        negocios: volCia.mensal.negocios[i],
+        ticket: volCia.mensal.ticket_medio[i],
+        dias: volCia.mensal.dias_com_negocio[i],
+        pregoes: vol.pregoes_mes[i],
+        presenca: volCia.mensal.presenca[i],
+        suspeito: volCia.meses_negocios_suspeitos.includes(mes),
+      }))
+    : [];
   const anoFinal = Number(new Date().getFullYear());
 
   return (
@@ -49,6 +64,7 @@ export default async function Page({ params }: Props) {
           itens={[{ href: "/", texto: "Início" }, { href: "/acoes/", texto: "Ações" }, { texto: c.pregao }]}
         />
         <h1 className="page-title">{c.pregao}</h1>
+        <Estrela comTexto item={{ tipo: "companhia", chave: c.codigo_cvm, nome: c.pregao }} />
         <p className="page-sub">
           {c.razao_social}. CNPJ {c.cnpj} · código CVM {c.codigo_cvm} ·{" "}
           <LinkNovaAba
@@ -107,15 +123,28 @@ export default async function Page({ params }: Props) {
                   f?.anterior ? <Banco key="a" nome={f.anterior} /> : f ? "Sem troca registrada" : "—",
                 ],
                 ["Escrituradores desde 2010", f ? String(f.n_escrituradores) : "—"],
+                [
+                  "Negociação",
+                  c.liquidez ? (ROTULO_LIQUIDEZ[c.liquidez.categoria] ?? c.liquidez.categoria) : "—",
+                ],
               ]}
             />
+            {c.liquidez ? <p className="note">{c.liquidez.criterio_texto}</p> : null}
           </Cartao>
 
           <Cartao coluna="c4" titulo="Tickers" descricao="Códigos de negociação de ações">
             {c.tickers.length ? (
               <div>
                 {c.tickers.map((t) => (
-                  <span className="tk" key={t.ticker}>
+                  <span
+                    className="tk"
+                    key={t.ticker}
+                    title={
+                      t.negociacao_desde
+                        ? `Negociado desde ${formatDate(t.negociacao_desde)}, segundo a CVM`
+                        : undefined
+                    }
+                  >
                     {t.ticker}
                     <i>{t.classe === "Outros" ? "" : t.classe}</i>
                   </span>
@@ -138,6 +167,8 @@ export default async function Page({ params }: Props) {
             </p>
           </Cartao>
 
+          <Listagem listagem={c.listagem} segmentos={segmentosDe(c.codigo_cvm)} passagens={historico} />
+
           {volCia ? (
             <>
               <GraficoVolume
@@ -146,11 +177,12 @@ export default async function Page({ params }: Props) {
                 fontes={vol.fontes_volume}
                 pagina={vol.pagina_fonte}
                 meses={vol.meses}
-                volumes={volCia.volume_mensal}
+                volumes={volCia.mensal.volume}
                 mesParcial={vol.mes_parcial}
                 volumeParcial={volCia.volume_mes_parcial}
                 cor="var(--accent)"
               />
+              <GraficoPresenca pontos={pontos} ticker={volCia.ticker_principal} />
               <FonteVolume
                 ticker={volCia.tickers[0] ?? c.pregao}
                 como={comoConferirCompanhia(volCia.tickers)}

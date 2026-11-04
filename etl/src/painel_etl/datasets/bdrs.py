@@ -19,6 +19,9 @@ from typing import Any
 
 from painel_etl import paths
 from painel_etl.core import quality
+from painel_etl.datasets import perfil_bdr
+from painel_etl.indicadores import PerfilBdr
+from painel_etl.indicadores import carregar as carregar_indicadores
 from painel_etl.normalize.instituicoes import NAO_IDENTIFICADO, NAO_MAPEADO, Registro
 from painel_etl.sources import b3_cotahist
 from painel_etl.sources.b3_finservices import Programa
@@ -81,9 +84,14 @@ def construir(
     finservices: Mapping[str, Sequence[Programa]],
     overrides: Mapping[str, Mapping[str, str]],
     reg: Registro,
+    suspeitos: Mapping[str, Mapping[str, Sequence[str]]] | None = None,
+    cfg_perfil: PerfilBdr | None = None,
 ) -> tuple[list[dict[str, Any]], list[str]]:
     """Devolve (BDRs ordenados por ticker, textos de depositária da API que não foram mapeados)."""
     fin = {p.ticker: p for lista in finservices.values() for p in lista}
+    suspeitos = suspeitos or {}
+    cfg = cfg_perfil or carregar_indicadores().perfil_bdr
+    quartis = quartis_por_mes(particoes, meses, cfg)
     todos = [*meses, *([parcial] if parcial else [])]
     tickers = sorted({t for m in todos if m in particoes for t in particoes[m]["tickers"]})
     nao_mapeados: set[str] = set()
@@ -95,6 +103,8 @@ def construir(
         janela = [pontos[m] for m in meses if m in pontos]
         dep, fonte = _depositaria(t, deps_api, fin, overrides, reg, nao_mapeados)
         o = overrides.get(t, {})
+        volumes = [pontos[m]["volume"] if m in pontos else 0 for m in meses]
+        negocios = [pontos[m]["negocios"] if m in pontos else 0 for m in meses]
         nome = o.get("nome") or (fin[t].nome if t in fin else "") or nomes_api.get(t, "").title() or ref["nome"].title()
         saida.append(
             {
@@ -110,12 +120,27 @@ def construir(
                 "ultimo_pregao": max(p["ultimo_pregao"] for p in pontos.values()),
                 "ultimo_preco": ref["ultimo_preco"],
                 "negocios_24m": sum(p["negocios"] for p in janela),
+                "negocios_mensal": negocios,
+                "meses_negocios_suspeitos": [m for m in meses if t in suspeitos.get(m, {})],
+                "perfil": perfil_bdr.perfil(volumes, negocios, meses, quartis, cfg),
                 "volume_24m": sum(p["volume"] for p in janela),
-                "volume_mensal": [pontos[m]["volume"] if m in pontos else 0 for m in meses],
+                "volume_mensal": volumes,
                 "volume_mes_parcial": (pontos[parcial]["volume"] if parcial in pontos else 0) if parcial else None,
             }
         )
     return saida, sorted(nao_mapeados)
+
+
+def quartis_por_mes(
+    particoes: Mapping[str, Mapping[str, Any]], meses: Sequence[str], cfg: PerfilBdr
+) -> dict[str, dict[str, Any]]:
+    """Mês -> quartis do ticket médio. Mês sem BDRs suficientes fica de fora, e a faixa vira "dados insuficientes"."""
+    saida = {}
+    for m in meses:
+        q = perfil_bdr.quartis_do_mes(particoes[m]["tickers"], cfg) if m in particoes else None
+        if q:
+            saida[m] = q
+    return saida
 
 
 def fontes_volume(
@@ -145,6 +170,14 @@ def csv_cabecalho(meses: Sequence[str]) -> list[str]:
         "ticker", "nome", "tipo", "depositaria", "fonte_depositaria", "categoria", "qualificado", "isin",
         "primeiro_pregao_24m", "ultimo_pregao", "ultimo_preco", "negocios_24m", *[f"vol_{m}_rs_mil" for m in meses],
     ]  # fmt: skip
+
+
+CSV_CADASTRO = ["ticker", "nome", "tipo", "depositaria", "fonte_depositaria", "categoria", "qualificado", "isin"]
+
+
+def csv_cadastro_linhas(bdrs: Sequence[Mapping[str, Any]]) -> list[list[Any]]:
+    """Arquivo público para baixar: só o cadastro, sem preço, negócios ou volume (ADR 0009)."""
+    return [linha[: len(CSV_CADASTRO)] for linha in csv_linhas(bdrs)]
 
 
 def csv_linhas(bdrs: Sequence[Mapping[str, Any]]) -> list[list[Any]]:

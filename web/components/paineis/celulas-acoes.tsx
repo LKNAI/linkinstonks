@@ -1,10 +1,12 @@
 // Colunas da tabela de ações de /acoes (paridade com o seed, mais volume e código CVM).
+import { Estrela } from "@/components/acompanhamento/Estrela";
 import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import type { ColunaSpec } from "@/components/table/DataTable";
 import { detalheAnterior, textoDesde, type AcaoRow } from "@/lib/acoes";
 import { corEscriturador } from "@/lib/colors";
-import { formatDinheiro, rotuloMes } from "@/lib/format";
-import { SEGMENTO_NOME } from "@/lib/palette";
+import { formatDate, formatDinheiro, rotuloMes } from "@/lib/format";
+import { LIQUIDEZ_COR, SEGMENTO_NOME } from "@/lib/palette";
+import { ROTULO_LIQUIDEZ } from "@/lib/rotulos-liquidez";
 
 export function Banco({ nome }: { nome: string | null | undefined }) {
   if (!nome) return <span className="muted">—</span>;
@@ -20,6 +22,7 @@ function CelulaEmpresa({ d }: { d: AcaoRow }) {
   return (
     <div className="co">
       <b>
+        <Estrela item={{ tipo: "companhia", chave: d.codigo_cvm, nome: d.pregao }} />
         <LinkNovaAba href={`/acoes/${d.codigo_cvm}/`}>{d.pregao}</LinkNovaAba>
       </b>
       <div>{d.razao_social}</div>
@@ -86,7 +89,59 @@ function CelulaAnterior({ d }: { d: AcaoRow }) {
   );
 }
 
-export function colunasAcoes(ultimoMes: string | null): ColunaSpec<AcaoRow>[] {
+/** Colunas opcionais de liquidez. */
+function colunasLiquidez(): ColunaSpec<AcaoRow>[] {
+  return [
+    {
+      id: "v12",
+      titulo: "Volume 12m",
+      classeTh: "r",
+      classeTd: () => "r num",
+      celula: (d) => (d.v12 == null ? <span className="muted">—</span> : formatDinheiro(d.v12)),
+    },
+    {
+      id: "p6",
+      titulo: "Presença 6m",
+      classeTh: "r",
+      classeTd: () => "r num",
+      celula: (d) =>
+        d.p6 == null ? (
+          <span className="muted">—</span>
+        ) : (
+          `${(d.p6 * 100).toLocaleString("pt-BR", { maximumFractionDigits: 0 })}%`
+        ),
+    },
+    {
+      id: "liq",
+      titulo: "Categoria",
+      celula: (d) =>
+        d.liq ? (
+          <span className="dep" title={d.liquidez?.criterio_texto}>
+            <i style={{ background: LIQUIDEZ_COR[d.liq] }} />
+            {ROTULO_LIQUIDEZ[d.liq]}
+          </span>
+        ) : (
+          <span className="muted">—</span>
+        ),
+    },
+    {
+      id: "desde",
+      titulo: "Listada desde",
+      classeTd: () => "num",
+      celula: (d) =>
+        d.listagem?.desde ? (
+          <span title={d.listagem.desde_incerto ? "Data incerta: ver a metodologia" : undefined}>
+            {formatDate(d.listagem.desde)}
+            {d.listagem.desde_incerto ? " (incerta)" : ""}
+          </span>
+        ) : (
+          <span className="muted">—</span>
+        ),
+    },
+  ];
+}
+
+export function colunasAcoes(ultimoMes: string | null, comLiquidez = false): ColunaSpec<AcaoRow>[] {
   const volume: ColunaSpec<AcaoRow>[] = ultimoMes
     ? [
         {
@@ -124,6 +179,7 @@ export function colunasAcoes(ultimoMes: string | null): ColunaSpec<AcaoRow>[] {
       celula: (d) => <CelulaAnterior d={d} />,
     },
     ...volume,
+    ...(comLiquidez ? colunasLiquidez() : []),
     {
       id: "segmento",
       titulo: "Segmento",

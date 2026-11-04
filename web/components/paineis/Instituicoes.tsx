@@ -1,8 +1,18 @@
 "use client";
 
 // /instituicoes: ranking de escrituradores (e ganhos/perdas de clientes no período) e de depositárias de BDR.
+import { Estrela } from "@/components/acompanhamento/Estrela";
 import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import { useMemo, useState } from "react";
+import { VerComoEm } from "@/components/paineis/VerComoEm";
+import { useEm } from "@/lib/em";
+import {
+  carregarAcoes as carregarAcoesEm,
+  carregarBdrs as carregarBdrsEm,
+  diferenca,
+  UNIDADE_COMPANHIA,
+  useSnapshot,
+} from "@/lib/snapshots";
 import { Carregando, ErroDados } from "@/components/layout/Pagina";
 import { Seletor } from "@/components/filters/Controles";
 import { Banco } from "@/components/paineis/celulas-acoes";
@@ -21,18 +31,46 @@ const PERIODOS = [
   { v: "1", texto: "Último ano" },
 ];
 
+const carregarBdrsOpcional = (m: string) => carregarBdrsEm(m).catch(() => null);
+
 export function Instituicoes() {
   const a = useDados("acoes.json");
   const b = useDados("bdrs.json");
+  const em = useEm();
+  const snapA = useSnapshot(em, carregarAcoesEm);
+  const snapB = useSnapshot(em, carregarBdrsOpcional);
   const [periodo, setPeriodo] = useState("2010");
   const anoRef = Number(hojeEmBrasilia().slice(0, 4));
 
-  const linhasA = useMemo(() => (a.estado === "ok" ? derivar(a.dados.companhias) : []), [a]);
-  const linhasB = useMemo(() => (b.estado === "ok" ? derivarBdrs(b.dados.bdrs) : []), [b]);
+  const passadoA = snapA?.estado === "ok" ? snapA.dados.acoes : null;
+  const passadoB = snapB?.estado === "ok" ? snapB.dados : null;
+  const linhasA = useMemo(
+    () => (passadoA ? derivar(passadoA) : a.estado === "ok" ? derivar(a.dados.companhias) : []),
+    [a, passadoA],
+  );
+  const linhasB = useMemo(
+    () =>
+      em ? (passadoB ? derivarBdrs(passadoB.bdrs) : []) : b.estado === "ok" ? derivarBdrs(b.dados.bdrs) : [],
+    [b, em, passadoB],
+  );
   if (a.estado === "erro") return <ErroDados mensagem={a.mensagem} />;
   if (b.estado === "erro") return <ErroDados mensagem={b.mensagem} />;
-  if (a.estado !== "ok" || b.estado !== "ok") return <Carregando />;
+  if (snapA?.estado === "erro")
+    return (
+      <>
+        <VerComoEm pagina="acoes" />
+        <ErroDados mensagem={snapA.mensagem} />
+      </>
+    );
+  if (
+    a.estado !== "ok" ||
+    b.estado !== "ok" ||
+    snapA?.estado === "carregando" ||
+    snapB?.estado === "carregando"
+  )
+    return <Carregando />;
 
+  const nMeses = passadoB?.meses.length ?? 24;
   const desde = periodo === "2010" ? 2010 : anoRef - Number(periodo) + 1;
   const comTicker = filtrar(linhasA, { ...FILTROS_PADRAO, onlyT: true });
   const porBanco: Record<string, number> = {};
@@ -61,6 +99,14 @@ export function Instituicoes() {
           Quem escritura mais empresas, quem ganhou e perdeu clientes, e quais bancos são depositários dos
           BDRs.
         </p>
+        <VerComoEm
+          pagina="acoes"
+          resumo={
+            passadoA
+              ? `${formatInt(passadoA.length)} companhias nesta posição. ${diferenca(a.dados.companhias.length, passadoA.length, UNIDADE_COMPANHIA)}.`
+              : undefined
+          }
+        />
 
         <div className="grid">
           <section className="card c12" aria-labelledby="t-esc">
@@ -103,6 +149,7 @@ export function Instituicoes() {
                     return (
                       <tr key={n}>
                         <td>
+                          <Estrela item={{ tipo: "instituicao", chave: n, nome: n }} />
                           <LinkNovaAba href={`/acoes/?bank=${encodeURIComponent(n)}`}>
                             <Banco nome={n} />
                           </LinkNovaAba>
@@ -128,9 +175,17 @@ export function Instituicoes() {
             </p>
           </section>
 
-          <section className="card c12" aria-labelledby="t-dep">
+          {em && !passadoB ? (
+            <p className="note c12">Não há posição de BDRs guardada para este mês.</p>
+          ) : null}
+          <section className="card c12" aria-labelledby="t-dep" hidden={!!em && !passadoB}>
             <h2 id="t-dep">Depositárias de BDR</h2>
-            <p className="desc">Banco emissor dos programas, por volume financeiro nos últimos 24 meses</p>
+            <p className="desc">
+              Banco emissor dos programas, por volume financeiro em {nMeses} meses
+              {passadoB?.reconstituido
+                ? ". Depositária e tipo vêm do primeiro snapshot guardado, não da época"
+                : ""}
+            </p>
             <div className="tbl-wrap">
               <table className="stats-table">
                 <thead>
@@ -140,7 +195,7 @@ export function Instituicoes() {
                       BDRs
                     </th>
                     <th scope="col" className="r">
-                      Volume 24 meses
+                      Volume {nMeses} meses
                     </th>
                     <th scope="col" className="r">
                       Participação
@@ -151,6 +206,7 @@ export function Instituicoes() {
                   {deps.map(([n, v]) => (
                     <tr key={n}>
                       <td>
+                        <Estrela item={{ tipo: "instituicao", chave: n, nome: n }} />
                         <LinkNovaAba href={`/bdrs/?dep=${encodeURIComponent(n)}`}>
                           <span className="dep">
                             <i style={{ background: corDepositaria(n) }} />

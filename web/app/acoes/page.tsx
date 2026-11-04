@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PainelAcoes } from "@/components/paineis/PainelAcoes";
+import { PainelAcoes } from "@/components/paineis/PaineisLazy";
 
 export const metadata: Metadata = {
   title: "Ações: escrituradores e volume",

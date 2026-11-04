@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { coresDoConjunto } from "@/lib/colors";
 import { formatDate } from "@/lib/format";
-import type { Passagem } from "@/lib/schemas";
+import type { Acao, Passagem, TrechoSegmento } from "@/lib/schemas";
 
 export function Migalhas({ itens }: { itens: { href?: string; texto: string }[] }) {
   return (
@@ -111,5 +111,80 @@ export function LinhaDoTempo({ passagens, anoFinal }: { passagens: Passagem[]; a
         ))}
       </ol>
     </>
+  );
+}
+
+/** Listagem na CVM e, juntos em ordem cronológica, os segmentos e os escrituradores da companhia. */
+export function Listagem({
+  listagem,
+  segmentos,
+  passagens,
+}: {
+  listagem: Acao["listagem"];
+  segmentos: TrechoSegmento[];
+  passagens: Passagem[];
+}) {
+  const fatos = [
+    ...segmentos.map((s, i) => ({
+      data: s.desde,
+      ano: s.desde.slice(0, 4),
+      texto: i === 0 ? `Segmento ${s.segmento}, no início da série` : `Segmento ${s.segmento}`,
+      aprox: true,
+      fonte: "CVM",
+    })),
+    ...passagens.map((p) => ({
+      data: p.inicio ?? `${p.primeiro_ano}-01-01`,
+      ano: (p.inicio ?? String(p.primeiro_ano)).slice(0, 4),
+      texto: `Escriturador ${p.instituicao}`,
+      aprox: p.inicio_aproximado || !p.inicio,
+      fonte: "CVM",
+    })),
+  ].sort((a, b) => b.data.localeCompare(a.data));
+  return (
+    <Cartao
+      coluna="c12"
+      titulo="Listagem"
+      descricao="Segmentos e escrituradores em ordem cronológica, do mais recente ao mais antigo"
+    >
+      <Lista
+        linhas={[
+          [
+            "Listada desde",
+            listagem?.desde
+              ? `${formatDate(listagem.desde)}${listagem.desde_incerto ? " (data incerta)" : ""}`
+              : "Não informado",
+          ],
+          ["Segmento na CVM", listagem?.segmento_cvm ?? "Não informado"],
+          ["Mercado", listagem?.mercado ?? "Não informado"],
+        ]}
+      />
+      {listagem?.segmento_divergente ? (
+        <p className="note">
+          <span className="badge">CVM indica {listagem.segmento_cvm}</span> O segmento informado pela CVM
+          difere do informado pela B3. Nenhuma fonte corrige a outra.
+        </p>
+      ) : null}
+      {fatos.length ? (
+        <ol className="fatos">
+          {fatos.map((f) => (
+            <li key={f.data + f.texto}>
+              <span className="fatos-ano">{f.ano}</span>
+              <span>
+                {f.texto}
+                {f.aprox ? <span className="muted"> (aprox.)</span> : null}
+              </span>
+              <span className="muted">{f.fonte}</span>
+            </li>
+          ))}
+        </ol>
+      ) : null}
+      <p className="note">
+        A data de um segmento é a da primeira referência anual em que ele aparece no Formulário Cadastral, e a
+        série começa em 2018.{" "}
+        <Link prefetch={false} href="/sobre/#metodologia-listagem" className="fonte-link">
+          Metodologia
+        </Link>
+      </p>
+    </Cartao>
   );
 }

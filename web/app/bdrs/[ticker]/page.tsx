@@ -1,12 +1,14 @@
+import { Estrela } from "@/components/acompanhamento/Estrela";
 import type { Metadata } from "next";
 import { LinkNovaAba } from "@/components/layout/LinkNovaAba";
 import { notFound } from "next/navigation";
+import { GraficoTicket } from "@/components/charts/GraficosMensais";
 import { GraficoVolume } from "@/components/charts/GraficoVolume";
 import { FonteVolume } from "@/components/paineis/FonteVolume";
 import { Cartao, Lista, Migalhas } from "@/components/paineis/Detalhe";
 import { corDepositaria } from "@/lib/colors";
 import { formatBRL, formatDate, formatDinheiro, formatInt, rotuloMes } from "@/lib/format";
-import { TIPO_GRUPO_NOME, grupoDoTipo } from "@/lib/palette";
+import { FAIXA_NOME, TIPO_GRUPO_NOME, grupoDoTipo } from "@/lib/palette";
 import { todosBdrs } from "@/lib/servidor";
 
 export const dynamicParams = false;
@@ -31,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Page({ params }: Props) {
   const b = buscar((await params).ticker);
   if (!b) notFound();
-  const { meses, mesParcial, fontes, paginaFonte } = todosBdrs();
+  const { meses, mesParcial, fontes, paginaFonte, quartis, minNegocios } = todosBdrs();
   const cor = corDepositaria(b.depositaria);
   const grupo = grupoDoTipo(b.tipo);
 
@@ -44,6 +46,7 @@ export default async function Page({ params }: Props) {
         <h1 className="page-title">
           {b.ticker} <span style={{ fontWeight: 600, color: "var(--text-muted)" }}>· {b.nome}</span>
         </h1>
+        <Estrela comTexto item={{ tipo: "bdr", chave: b.ticker, nome: b.ticker }} />
         <p className="page-sub">
           BDR {TIPO_GRUPO_NOME[grupo].toLowerCase()} ({b.tipo})
           {b.qualificado ? " · restrito a investidores qualificados" : ""} ·{" "}
@@ -97,6 +100,15 @@ export default async function Page({ params }: Props) {
                 ["Último pregão", formatDate(b.ultimo_pregao)],
                 ["Negócios em 24 meses", formatInt(b.negocios_24m)],
                 ["Volume em 24 meses", formatDinheiro(b.volume_24m)],
+                ...(b.perfil
+                  ? ([
+                      ["Faixa de ticket (estimativa)", FAIXA_NOME[b.perfil.faixa]],
+                      [
+                        "Ticket médio em 12 meses",
+                        b.perfil.ticket_medio_janela == null ? "—" : formatBRL(b.perfil.ticket_medio_janela),
+                      ],
+                    ] as [string, React.ReactNode][])
+                  : []),
                 ...(mesParcial
                   ? ([
                       [
@@ -119,6 +131,17 @@ export default async function Page({ params }: Props) {
             volumeParcial={b.volume_mes_parcial}
             cor={cor}
           />
+          {b.negocios_mensal ? (
+            <GraficoTicket
+              ticker={b.ticker}
+              meses={meses}
+              volumes={b.volume_mensal}
+              negocios={b.negocios_mensal}
+              suspeitos={b.meses_negocios_suspeitos}
+              quartis={quartis}
+              minNegocios={minNegocios}
+            />
+          ) : null}
           <FonteVolume
             ticker={b.ticker}
             meses={meses}

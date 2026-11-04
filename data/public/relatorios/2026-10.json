@@ -1,0 +1,145 @@
+{
+  "mes": "2026-10",
+  "resumo": {
+    "bdrs": 1151,
+    "companhias": 567,
+    "volume_acoes": 885638069026,
+    "volume_acoes_anterior": 484561569221,
+    "volume_bdrs": 47349728650,
+    "volume_bdrs_anterior": 33968128480
+  },
+  "schema_version": "1.0",
+  "secoes": [
+    {
+      "id": "resumo",
+      "itens": [
+        {
+          "href": null,
+          "texto": "567 companhias e 1.151 BDRs no cadastro."
+        },
+        {
+          "href": null,
+          "texto": "Volume de ações no mês: R$ 885,6 bi (+82,8% contra o mês anterior)."
+        },
+        {
+          "href": null,
+          "texto": "Volume de BDRs no mês: R$ 47,3 bi (+39,4% contra o mês anterior)."
+        }
+      ],
+      "titulo": "Resumo em números",
+      "vazio": "Nenhuma ocorrência no mês."
+    },
+    {
+      "id": "escrituradores",
+      "itens": [],
+      "titulo": "Trocas de escriturador",
+      "vazio": "Nenhuma ocorrência no mês."
+    },
+    {
+      "id": "listagens",
+      "itens": [
+        {
+          "href": null,
+          "texto": "MNLT SA: saiu da lista de companhias em 30/10/2026 (fonte: B3)."
+        }
+      ],
+      "titulo": "Novas listagens e deslistagens",
+      "vazio": "Nenhuma ocorrência no mês."
+    },
+    {
+      "id": "segmentos",
+      "itens": [
+        {
+          "href": "/acoes/25887/",
+          "texto": "ARANDU: segmento passou de Novo Mercado para Tradicional, registrado em 30/10/2026 (fonte: B3)."
+        }
+      ],
+      "titulo": "Mudanças de segmento",
+      "vazio": "Nenhuma ocorrência no mês."
+    },
+    {
+      "id": "bdrs",
+      "itens": [],
+      "titulo": "BDRs novos e cancelados",
+      "vazio": "Nenhuma ocorrência no mês."
+    },
+    {
+      "id": "depositarias",
+      "itens": [],
+      "titulo": "Trocas de depositária",
+      "vazio": "Nenhuma ocorrência no mês."
+    },
+    {
+      "id": "altas",
+      "itens": [
+        {
+          "href": "/bdrs/D1DG34/",
+          "texto": "D1DG34: R$ 89,2 mi no mês, contra R$ 12,8 mi no mês anterior (+594,4%)."
+        },
+        {
+          "href": "/bdrs/VERZ34/",
+          "texto": "VERZ34: R$ 54,1 mi no mês, contra R$ 10,5 mi no mês anterior (+412,8%)."
+        },
+        {
+          "href": "/bdrs/STOC34/",
+          "texto": "STOC34: R$ 603,5 mi no mês, contra R$ 185,4 mi no mês anterior (+225,6%)."
+        },
+        {
+          "href": "/bdrs/BEWY39/",
+          "texto": "BEWY39: R$ 72,2 mi no mês, contra R$ 22,5 mi no mês anterior (+220,5%)."
+        },
+        {
+          "href": "/bdrs/VISA34/",
+          "texto": "VISA34: R$ 67,4 mi no mês, contra R$ 21,2 mi no mês anterior (+217,3%)."
+        }
+      ],
+      "titulo": "Maiores altas de volume de BDRs (mínimo de R$ 10,0 mi nos dois meses)",
+      "vazio": "Nenhuma ocorrência no mês."
+    },
+    {
+      "id": "quedas",
+      "itens": [
+        {
+          "href": "/bdrs/ADBE34/",
+          "texto": "ADBE34: R$ 12,4 mi no mês, contra R$ 30,8 mi no mês anterior (−59,7%)."
+        },
+        {
+          "href": "/bdrs/BSIL39/",
+          "texto": "BSIL39: R$ 18,1 mi no mês, contra R$ 44,1 mi no mês anterior (−59,0%)."
+        },
+        {
+          "href": "/bdrs/C2OI34/",
+          "texto": "C2OI34: R$ 95,8 mi no mês, contra R$ 181,0 mi no mês anterior (−47,1%)."
+        },
+        {
+          "href": "/bdrs/BIYF39/",
+          "texto": "BIYF39: R$ 12,2 mi no mês, contra R$ 21,0 mi no mês anterior (−41,9%)."
+        },
+        {
+          "href": "/bdrs/DOLL39/",
+          "texto": "DOLL39: R$ 12,2 mi no mês, contra R$ 17,8 mi no mês anterior (−31,6%)."
+        }
+      ],
+      "titulo": "Maiores quedas de volume de BDRs (mínimo de R$ 10,0 mi nos dois meses)",
+      "vazio": "Nenhuma ocorrência no mês."
+    },
+    {
+      "id": "negociacao",
+      "itens": [],
+      "titulo": "Ações que entraram ou saíram das categorias de pouca negociação",
+      "vazio": "Nenhuma ocorrência no mês."
+    },
+    {
+      "id": "qualidade",
+      "itens": [
+        {
+          "href": null,
+          "texto": "Falhas de coleta: sem registro neste mês. O registro começa em novembro de 2026."
+        }
+      ],
+      "titulo": "Qualidade dos dados no mês",
+      "vazio": "Nenhuma ocorrência no mês."
+    }
+  ],
+  "titulo": "Relatório de outubro de 2026"
+}

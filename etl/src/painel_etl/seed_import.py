@@ -13,9 +13,10 @@ from typing import Any
 from painel_etl import paths
 from painel_etl.core import io as pio
 from painel_etl.core import schema
+from painel_etl.indicadores import carregar as carregar_indicadores
 from painel_etl.sources import b3_cotahist
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = "1.1"
 # O seed usa rótulos próprios; decisão da Fase 0: valem os da API da B3.
 CATEGORIA = {"Renda variável": "Renda Variável", "Renda fixa": "Renda Fixa", "Commodities / cripto": "Commodities"}
 INDICADOR = {"NM": "18", "N2": "17", "N1": "16", "MP": "32", "B": "1", "SO": "7", "BN": "8", "?": ""}
@@ -55,7 +56,7 @@ def acoes_do_seed(seed: Path) -> dict[str, Any]:
                 "setor": c["s"],
                 "indicador_mercado": INDICADOR[c["m"]],
                 "segmento": c["m"],
-                "tickers": [{"ticker": t, "classe": k} for t, k in c["t"]],
+                "tickers": [{"ticker": t, "classe": k, "negociacao_desde": None} for t, k in c["t"]],
                 "escriturador_b3": {
                     "on": b if c["onr"] else None,
                     "pn": _nulo(c["pn"]),
@@ -66,6 +67,8 @@ def acoes_do_seed(seed: Path) -> dict[str, Any]:
                 "escriturador_cvm": cvm,
                 "divergente_b3_cvm": bool(f and f["cur"] != b),
                 "situacao_cvm": None,
+                "listagem": None,
+                "liquidez": None,
             }
         )
     return {"companhias": sorted(saida, key=lambda x: (x["pregao"], x["codigo_cvm"])), "schema_version": SCHEMA_VERSION}
@@ -88,6 +91,9 @@ def bdrs_do_seed(seed: Path) -> dict[str, Any]:
                 "primeiro_pregao": d["f"],
                 "ultimo_pregao": d["l"],
                 "ultimo_preco": d["p"],
+                "negocios_mensal": None,
+                "meses_negocios_suspeitos": [],
+                "perfil": None,
                 "negocios_24m": d["g"],
                 "volume_24m": sum(d["v"]) * 1000,  # o seed guarda R$ mil
                 "volume_mensal": [v * 1000 for v in d["v"]],
@@ -102,8 +108,10 @@ def bdrs_do_seed(seed: Path) -> dict[str, Any]:
         "fontes_volume": {m: b3_cotahist.fonte_do_mes(m, {"fonte": "mensal", "pregoes": []}) for m in meses},
         "mes_parcial": None,
         "meses": meses,
+        "min_negocios_mes": carregar_indicadores().perfil_bdr.min_negocios_mes,
         "pagina_fonte": b3_cotahist.PAGINA_FONTE,
         "schema_version": SCHEMA_VERSION,
+        "ticket_quartis": {},
     }
 
 

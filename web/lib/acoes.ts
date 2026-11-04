@@ -11,6 +11,7 @@ import {
   type Historico,
 } from "@/lib/palette";
 import { CLASSES } from "@/lib/constantes";
+import { ROTULO_LIQUIDEZ } from "@/lib/rotulos-liquidez";
 import type { Acao, VolumeCompanhia } from "@/lib/schemas";
 
 export const SEM_INFORMACAO = "Não informado";
@@ -28,11 +29,15 @@ export interface AcaoRow extends Acao {
   outE: string | null;
   since: string;
   ix: string;
-  /** Volume negociado (acoes_volume.json); null quando a companhia não tem negócios nos 24 meses. */
+  /** Resumo de negociação (acoes_liquidez_resumo.json); null quando a companhia não tem negócios nos 24 meses. */
   vol: VolumeCompanhia | null;
   v24: number | null;
   /** Volume do último mês fechado. */
   vUlt: number | null;
+  /** Categoria de negociação; null antes da primeira classificação. */
+  liq: string | null;
+  v12: number | null;
+  p6: number | null;
 }
 
 export const normalizar = (s: string): string => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -68,6 +73,9 @@ export function derivar(acoes: readonly Acao[], volumes?: readonly VolumeCompanh
       vol,
       v24: vol ? vol.volume_24m : null,
       vUlt: vol ? (vol.volume_mensal.at(-1) ?? 0) : null,
+      liq: d.liquidez?.categoria ?? null,
+      v12: vol ? vol.agregados["12m"].volume : null,
+      p6: vol ? vol.agregados["6m"].presenca : null,
       ix: normalizar(
         [
           d.pregao,
@@ -90,7 +98,7 @@ export function derivar(acoes: readonly Acao[], volumes?: readonly VolumeCompanh
 }
 
 // ------------------------------------------------------------------------------------------- filtros
-export const DIMS = ["bank", "mkt", "cls", "sec", "hist", "yr", "inE", "outE"] as const;
+export const DIMS = ["bank", "mkt", "cls", "sec", "hist", "yr", "inE", "outE", "liq"] as const;
 export type Dim = (typeof DIMS)[number];
 export const ROTULO_DIM: Record<Dim, string> = {
   bank: "Escriturador",
@@ -101,6 +109,7 @@ export const ROTULO_DIM: Record<Dim, string> = {
   yr: "Troca em",
   inE: "Conquistou",
   outE: "Perdeu",
+  liq: "Presença",
 };
 
 export interface Ordem {
@@ -112,6 +121,8 @@ export interface FiltrosAcoes extends Record<Dim, string | null> {
   q: string;
   onlyT: boolean;
   sort: Ordem;
+  /** Mostra as colunas opcionais de liquidez na tabela. */
+  showL: boolean;
 }
 
 export const FILTROS_PADRAO: FiltrosAcoes = {
@@ -125,13 +136,23 @@ export const FILTROS_PADRAO: FiltrosAcoes = {
   yr: null,
   inE: null,
   outE: null,
+  liq: null,
   sort: { k: "pregao", dir: 1 },
+  showL: false,
 };
 
 const valorDim = (d: AcaoRow, k: Dim): string | string[] | null =>
-  ({ bank: d.b, mkt: d.segmento, cls: d.cls, sec: d.sec, hist: d.hist, yr: d.yr, inE: d.inE, outE: d.outE })[
-    k
-  ];
+  ({
+    bank: d.b,
+    mkt: d.segmento,
+    cls: d.cls,
+    sec: d.sec,
+    hist: d.hist,
+    yr: d.yr,
+    inE: d.inE,
+    outE: d.outE,
+    liq: d.liq,
+  })[k];
 
 /** Cada gráfico recalcula com todos os filtros EXCETO o seu próprio (`exceto`), como no seed. */
 export function passa(d: AcaoRow, f: FiltrosAcoes, exceto?: Dim | readonly Dim[]): boolean {
@@ -456,6 +477,8 @@ export const COLUNAS_TEXTO_ACOES = [
   "setor",
   "cnpj",
   "codigo_cvm",
+  "liq",
+  "desde",
 ];
 
 export function ordenar(rows: readonly AcaoRow[], { k, dir }: Ordem): AcaoRow[] {
@@ -481,6 +504,14 @@ export function ordenar(rows: readonly AcaoRow[], { k, dir }: Ordem): AcaoRow[] 
         return d.v24 ?? -1;
       case "vUlt":
         return d.vUlt ?? -1;
+      case "v12":
+        return d.v12 ?? -1;
+      case "p6":
+        return d.p6 ?? -1;
+      case "liq":
+        return d.liq ?? "~";
+      case "desde":
+        return d.listagem?.desde ?? "9999";
       default:
         return d.pregao || "~";
     }
@@ -550,7 +581,15 @@ const CSV_ACOES = [
 export function csvAcoes(rows: readonly AcaoRow[], comCodigoCvm: boolean, comVolume = false): string {
   const cab: string[] = [...CSV_ACOES];
   if (comCodigoCvm) cab.splice(4, 0, "Código CVM");
-  if (comVolume) cab.push("Volume 24m (R$)", "Volume do último mês (R$)");
+  if (comVolume)
+    cab.push(
+      "Volume 24m (R$)",
+      "Volume do último mês (R$)",
+      "Volume 12m (R$)",
+      "Presença em 6 meses",
+      "Categoria de negociação",
+      "Listada desde",
+    );
   const linhas = rows.map((d) => {
     const f = d.escriturador_cvm;
     const l: unknown[] = [
@@ -574,7 +613,15 @@ export function csvAcoes(rows: readonly AcaoRow[], comCodigoCvm: boolean, comVol
       f?.n_escrituradores ?? "",
     ]; // fmt: skip
     if (comCodigoCvm) l.splice(4, 0, d.codigo_cvm);
-    if (comVolume) l.push(d.v24 ?? "", d.vUlt ?? "");
+    if (comVolume)
+      l.push(
+        d.v24 ?? "",
+        d.vUlt ?? "",
+        d.v12 ?? "",
+        d.p6 == null ? "" : String(d.p6).replace(".", ","),
+        d.liq ? (ROTULO_LIQUIDEZ[d.liq] ?? d.liq) : "",
+        d.listagem?.desde ? formatDate(d.listagem.desde) : "",
+      );
     return l;
   });
   return montarCsv(cab, linhas);

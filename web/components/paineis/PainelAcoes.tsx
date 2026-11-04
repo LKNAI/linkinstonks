@@ -1,9 +1,11 @@
 "use client";
 
-// /acoes: paridade com seed/html/dashboard_acoes_b3.html e empresas_acoes_b3.html (a tabela completa), mais o volume
-// negociado (acoes_volume.json), que reage aos mesmos filtros.
+// /acoes: paridade com seed/html/dashboard_acoes_b3.html e empresas_acoes_b3.html (a tabela completa), mais a
+// negociação (acoes_liquidez_resumo.json), que reage aos mesmos filtros.
+import Link from "next/link";
 import { useMemo } from "react";
 import { BarList } from "@/components/charts/BarList";
+import { BarrasComposicao } from "@/components/charts/BarrasComposicao";
 import { ChartCard } from "@/components/charts/ChartCard";
 import { Colunas } from "@/components/charts/Colunas";
 import { ColunasEmpilhadas } from "@/components/charts/ColunasEmpilhadas";
@@ -51,19 +53,31 @@ import { baixarCsv } from "@/lib/csv";
 import { useDados, type Doc } from "@/lib/data";
 import { comoConferirMercado } from "@/lib/fonte-volume";
 import { formatDate, formatDinheiro, formatInt, formatPct, rotuloMes, variacao } from "@/lib/format";
-import { legivelSobreBranco, SEGMENTO_NOME } from "@/lib/palette";
+import { composicaoPorSegmento, fatiasLiquidez, ORDEM_LIQUIDEZ, semTicker } from "@/lib/liquidez";
+import { legivelSobreBranco, LIQUIDEZ_COR, SEGMENTO_NOME } from "@/lib/palette";
+import { ROTULO_LIQUIDEZ } from "@/lib/rotulos-liquidez";
 import { type Acao } from "@/lib/schemas";
 import { hojeEmBrasilia } from "@/lib/stale";
 import { useEstadoUrl, type Codec } from "@/lib/url-state";
 import { colunasAcoes } from "./celulas-acoes";
+import { VerComoEm } from "./VerComoEm";
+import { useEm } from "@/lib/em";
+import {
+  carregarAcoes as carregarAcoesEm,
+  diferenca,
+  kpisComDiferenca,
+  UNIDADE_COMPANHIA,
+  useSnapshot,
+} from "@/lib/snapshots";
 
-type VolumeDoc = Doc<"acoes_volume.json">;
+type VolumeDoc = Doc<"acoes_liquidez_resumo.json">;
 
 export const codecAcoes: Codec<FiltrosAcoes> = {
   codificar(f) {
     const p: Record<string, string> = {};
     if (f.q) p.q = f.q;
     if (!f.onlyT) p.t = "0";
+    if (f.showL) p.lq = "1";
     for (const k of DIMS) if (f[k] != null) p[k] = f[k] as string;
     if (f.sort.k !== FILTROS_PADRAO.sort.k || f.sort.dir !== FILTROS_PADRAO.sort.dir)
       p.ord = `${f.sort.k}:${f.sort.dir}`;
@@ -73,6 +87,7 @@ export const codecAcoes: Codec<FiltrosAcoes> = {
     const f: Partial<FiltrosAcoes> = {};
     if (p.get("q")) f.q = p.get("q") as string;
     if (p.get("t") === "0") f.onlyT = false;
+    if (p.get("lq") === "1") f.showL = true;
     for (const k of DIMS) if (p.get(k)) f[k] = p.get(k);
     // links da antiga /acoes/tabela: "prev" (escriturador anterior) e "seg" (segmento)
     if (!f.outE && p.get("prev")) f.outE = p.get("prev");
@@ -87,7 +102,7 @@ export const codecAcoes: Codec<FiltrosAcoes> = {
 const ORDEM_MARCAS = Object.keys(COR_ESCRITURADOR);
 
 const HERO: HeroProps = {
-  selo: "B3 + CVM · dados abertos",
+  selo: "B3 + CVM · dados públicos",
   titulo: "Ações na B3: quem escritura cada empresa",
   texto:
     "Escriturador atual de cada companhia emissora de ações (B3), com data de início e escriturador anterior segundo o Formulário Cadastral entregue à CVM, e o volume negociado em 24 meses. Clique nos gráficos para filtrar todo o painel.",
@@ -95,12 +110,27 @@ const HERO: HeroProps = {
 
 export function PainelAcoes() {
   const d = useDados("acoes.json");
-  const v = useDados("acoes_volume.json"); // em paralelo; se falhar, o painel segue sem a parte de volume
+  const v = useDados("acoes_liquidez_resumo.json"); // em paralelo; se falhar, o painel segue sem a parte de volume
+  const em = useEm();
+  const snap = useSnapshot(em, carregarAcoesEm);
   if (d.estado === "erro") return <ErroDados mensagem={d.mensagem} />;
+  if (snap?.estado === "erro")
+    return (
+      <>
+        <VerComoEm pagina="acoes" />
+        <ErroDados mensagem={snap.mensagem} />
+      </>
+    );
+  const passado = snap?.estado === "ok" ? snap.dados.acoes : null;
   return (
     <PaginaComHero hero={HERO}>
-      {d.estado === "ok" && v.estado !== "carregando" ? (
-        <Conteudo acoes={d.dados.companhias} volume={v.estado === "ok" ? v.dados : null} />
+      {d.estado === "ok" && v.estado !== "carregando" && (!em || passado) ? (
+        <Conteudo
+          key={em ?? "hoje"}
+          acoes={passado ?? d.dados.companhias}
+          volume={!passado && v.estado === "ok" ? v.dados : null}
+          hoje={passado ? d.dados.companhias : null}
+        />
       ) : (
         <Carregando comHero />
       )}
@@ -118,16 +148,27 @@ function contarAnteriores(rows: readonly { outE: string | null }[]): [string, nu
 const comSelecionado = (itens: { v: string; texto: string }[], sel: string | null) =>
   sel && !itens.some((i) => i.v === sel) ? [...itens, { v: sel, texto: `${sel} (0)` }] : itens;
 
-function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }) {
+function Conteudo({
+  acoes,
+  volume,
+  hoje,
+}: {
+  acoes: Acao[];
+  volume: VolumeDoc | null;
+  /** Posição atual, para comparar quando a tela mostra um mês passado. */
+  hoje: Acao[] | null;
+}) {
   const todas = useMemo(() => derivar(acoes, volume?.companhias), [acoes, volume]);
   const meses = useMemo(() => volume?.meses ?? [], [volume]);
-  const colunasTabela = useMemo(() => colunasAcoes(meses.at(-1) ?? null), [meses]);
   const ordemInst = useMemo(() => ordemDasInstituicoes(todas, ORDEM_MARCAS), [todas]);
-  const [f, setF] = useEstadoUrl(FILTROS_PADRAO, codecAcoes);
+  const [fUrl, setF] = useEstadoUrl(FILTROS_PADRAO, codecAcoes);
+  // a liquidez não existe no snapshot: um link compartilhado com ?liq= não pode esvaziar a tela
+  const f = hoje ? { ...fUrl, liq: null, showL: false } : fUrl;
+  const colunasTabela = useMemo(() => colunasAcoes(meses.at(-1) ?? null, f.showL), [meses, f.showL]);
   const anoRef = Number(hojeEmBrasilia().slice(0, 4));
 
   const alternar = (k: Dim, v: string) => setF((a) => ({ ...a, [k]: a[k] === v ? null : v }));
-  const limpar = () => setF((a) => ({ ...FILTROS_PADRAO, onlyT: a.onlyT, sort: a.sort }));
+  const limpar = () => setF((a) => ({ ...FILTROS_PADRAO, onlyT: a.onlyT, sort: a.sort, showL: a.showL }));
 
   const base = filtrar(todas, f);
   const ordenadas = useMemo(() => ordenar(base, f.sort), [base, f.sort]);
@@ -159,19 +200,46 @@ function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }
   const volBanco = fatiasVolumePorBanco(filtrar(todas, f, "bank"));
   const volSegmento = fatiasVolumePorSegmento(filtrar(todas, f, "mkt"));
   const topo10 = rk.todas.slice(0, 10).reduce((a, x) => a + x.volume, 0);
-  const vsAno = ult >= 12 ? variacao(vm.mensal[ult], vm.mensal[ult - 12]) : null;
+  const vsMes = ult >= 1 ? variacao(vm.mensal[ult], vm.mensal[ult - 1]) : null;
+  const semLiq = filtrar(todas, f, "liq");
+  const doLiq = fatiasLiquidez(semLiq);
+  const nLiq = Object.fromEntries(doLiq.map((i) => [i.k, i.n]));
+  const porSegmento = composicaoPorSegmento(filtrar(todas, f, "mkt"));
 
   const chips = DIMS.filter((k) => f[k] != null).map((k) => ({
     id: k,
     rotulo: ROTULO_DIM[k],
-    valor: k === "mkt" ? (SEGMENTO_NOME[f[k] as string] ?? (f[k] as string)) : (f[k] as string),
+    valor:
+      k === "mkt"
+        ? (SEGMENTO_NOME[f[k] as string] ?? (f[k] as string))
+        : k === "liq"
+          ? (ROTULO_LIQUIDEZ[f[k] as string] ?? (f[k] as string))
+          : (f[k] as string),
     onRemover: () => setF((a) => ({ ...a, [k]: null })),
   }));
 
   return (
     <>
       <div className="wrap">
-        <KpiGrid kpis={kpisAcoes(base, todas.length, anoRef)} />
+        <VerComoEm
+          pagina="acoes"
+          resumo={
+            hoje
+              ? `${formatInt(todas.length)} companhias nesta posição. ${diferenca(hoje.length, todas.length, UNIDADE_COMPANHIA)}.`
+              : undefined
+          }
+        />
+        <KpiGrid
+          kpis={
+            hoje
+              ? kpisComDiferenca(
+                  kpisAcoes(base, todas.length, anoRef),
+                  kpisAcoes(filtrar(derivar(hoje), f), hoje.length, anoRef),
+                  UNIDADE_COMPANHIA,
+                )
+              : kpisAcoes(base, todas.length, anoRef)
+          }
+        />
 
         <div className="filters">
           <div className="fbar">
@@ -429,13 +497,17 @@ function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }
             </p>
           </ChartCard>
 
-          <div className="sec-h" id="volume">
-            <h2>Volume negociado</h2>
+          <div className="sec-h" id={hoje ? undefined : "volume"} hidden={!!hoje}>
+            <h2>Negociação</h2>
             <p>
               Mercado à vista e fracionário somados por companhia,{" "}
               {volume ? rotuloMes(meses[0]) : "últimos 24 meses"}
               {volume ? ` a ${rotuloMes(meses[ult])}` : ""}. Os números acompanham os filtros acima; cada
-              barra do gráfico mensal leva ao arquivo oficial da B3 de onde o valor veio.
+              barra do gráfico mensal leva ao arquivo oficial da B3 de onde o valor veio.{" "}
+              <Link prefetch={false} href="/acoes/liquidez/" className="fonte-link">
+                Ver a tabela de liquidez
+              </Link>
+              .
             </p>
           </div>
 
@@ -446,18 +518,29 @@ function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }
                   rotulo="Indicadores de volume"
                   kpis={[
                     {
+                      rotulo: `Volume em ${rotuloMes(meses[ult])}`,
+                      valor: formatDinheiro(vm.mensal[ult]),
+                      sub:
+                        vsMes && vsMes.texto
+                          ? `${vsMes.texto} contra ${rotuloMes(meses[ult - 1])}`
+                          : "último mês fechado",
+                      cor: "var(--accent)",
+                    },
+                    {
                       rotulo: "Volume em 24 meses",
                       valor: formatDinheiro(totalVol),
                       sub: `${formatInt(vm.comVolume)} de ${formatInt(base.length)} empresas com negócios`,
                       cor: "var(--accent)",
                     },
                     {
-                      rotulo: `Volume em ${rotuloMes(meses[ult])}`,
-                      valor: formatDinheiro(vm.mensal[ult]),
-                      sub:
-                        vsAno && vsAno.texto
-                          ? `${vsAno.texto} vs ${rotuloMes(meses[ult - 12])}`
-                          : "último mês fechado",
+                      rotulo: "Presença em 6 meses",
+                      valor: `${formatInt(nLiq.presenca_alta ?? 0)} alta`,
+                      sub: ORDEM_LIQUIDEZ.filter((k) => k !== "presenca_alta" && nLiq[k])
+                        .map(
+                          (k) =>
+                            `${formatInt(nLiq[k])} ${ROTULO_LIQUIDEZ[k].replace("Presença ", "").toLowerCase()}`,
+                        )
+                        .join(" · "),
                       cor: "var(--accent)",
                     },
                     {
@@ -470,6 +553,60 @@ function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }
                   ]}
                 />
               </div>
+
+              <ChartCard
+                coluna="c4"
+                titulo="Presença em 6 meses"
+                descricao="Companhias com ticker, pelo ticker mais negociado"
+                tabela={{
+                  cabecalho: ["Categoria", "Empresas"],
+                  linhas: doLiq.map((i) => [i.label, i.n]),
+                }}
+              >
+                <Donut
+                  itens={doLiq}
+                  selecionado={f.liq}
+                  onSelecionar={(k) => alternar("liq", k)}
+                  centro="empresas"
+                  rotuloValor="Empresas"
+                  tamanho={168}
+                  rotuloAria="Companhias por categoria de negociação"
+                />
+                {semTicker(semLiq) ? (
+                  <p className="note">
+                    {formatInt(semTicker(semLiq))} companhias sem código de negociação não entram no gráfico.
+                  </p>
+                ) : null}
+              </ChartCard>
+              <ChartCard
+                coluna="c8"
+                titulo="Presença por segmento de listagem"
+                descricao="Quantas companhias de cada segmento estão em cada categoria · clique para filtrar"
+                tabela={{
+                  cabecalho: ["Segmento", "Empresas", ...ORDEM_LIQUIDEZ.map((k) => ROTULO_LIQUIDEZ[k])],
+                  linhas: porSegmento.map((s) => [
+                    s.rotulo,
+                    s.total,
+                    ...ORDEM_LIQUIDEZ.map((k) => s.partes.find((p) => p.k === k)?.n ?? 0),
+                  ]),
+                }}
+              >
+                <BarrasComposicao
+                  linhas={porSegmento}
+                  selecionado={f.mkt}
+                  onSelecionar={(k) => alternar("mkt", k)}
+                  unidade="empresas"
+                  vazio="Nenhuma companhia no filtro atual."
+                />
+                <div className="lgd">
+                  {ORDEM_LIQUIDEZ.filter((k) => nLiq[k]).map((k) => (
+                    <span key={k}>
+                      <i style={{ background: LIQUIDEZ_COR[k] }} />
+                      {ROTULO_LIQUIDEZ[k]}
+                    </span>
+                  ))}
+                </div>
+              </ChartCard>
 
               <GraficoVolume
                 coluna="c8"
@@ -620,7 +757,9 @@ function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }
           ) : (
             <section className="card c12" role="status">
               <p className="muted" style={{ margin: 0 }}>
-                O volume negociado está indisponível no momento. Os demais indicadores seguem válidos.
+                {hoje
+                  ? "A negociação não tem retrato de meses passados: esta seção só aparece na posição de hoje."
+                  : "O volume negociado está indisponível no momento. Os demais indicadores seguem válidos."}
               </p>
             </section>
           )}
@@ -642,6 +781,16 @@ function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }
                 <span className="count" aria-live="polite">
                   <b>{formatInt(ordenadas.length)}</b> de {formatInt(todas.length)} empresas
                 </span>
+                {volume ? (
+                  <button
+                    type="button"
+                    className="btn"
+                    aria-pressed={f.showL}
+                    onClick={() => setF((a) => ({ ...a, showL: !a.showL }))}
+                  >
+                    {f.showL ? "Ocultar liquidez" : "Mostrar liquidez"}
+                  </button>
+                ) : null}
                 <button
                   type="button"
                   className="btn"
@@ -668,7 +817,7 @@ function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }
               }
               rotulo="Empresas e escrituradores"
               vazio="Nenhuma empresa corresponde aos filtros."
-              larguraMinima={volume ? 1780 : 1480}
+              larguraMinima={volume ? (f.showL ? 2240 : 1780) : 1480}
             />
           </section>
 
@@ -720,11 +869,7 @@ function Conteudo({ acoes, volume }: { acoes: Acao[]; volume: VolumeDoc | null }
                   volume.companhias.reduce((a, c) => a + c.volume_24m, 0),
               )}{" "}
               do volume do mercado ({formatInt(volume.nao_atribuido.tickers)} tickers) e ficam fora das somas
-              acima. Dados abertos:{" "}
-              <a href="/data/downloads/acoes_volume.csv" download className="fonte-link">
-                acoes_volume.csv
-              </a>
-              .
+              acima.
             </p>
           ) : null}
         </div>

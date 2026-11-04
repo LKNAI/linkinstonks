@@ -5,7 +5,7 @@
   "buildCommand": "rm -rf .next && pnpm build && pnpm check:css",
   "outputDirectory": ".next",
   "trailingSlash": true,
-  "ignoreCommand": "[ -n \"$VERCEL_GIT_PREVIOUS_SHA\" ] && git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" HEAD -- . ../data/public ../schemas",
+  "ignoreCommand": "[ -n \"$VERCEL_GIT_PREVIOUS_SHA\" ] && git diff --quiet \"$VERCEL_GIT_PREVIOUS_SHA\" HEAD -- . ../data/public ../data/snapshots_site ../schemas",
   "redirects": [
     { "source": "/acoes/tabela", "destination": "/acoes/", "permanent": true },
     { "source": "/acoes/tabela/", "destination": "/acoes/", "permanent": true },
@@ -35,7 +35,10 @@
     },
     {
       "source": "/data/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, stale-while-revalidate=3600" }]
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=300, stale-while-revalidate=3600" },
+        { "key": "X-Robots-Tag", "value": "noindex" }
+      ]
     },
     {
       "source": "/feed.xml",

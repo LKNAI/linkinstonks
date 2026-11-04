@@ -1,5 +1,6 @@
 // Rótulos legíveis para ids internos que vêm dos dados (fontes e eventos). Um só lugar para Capa, Novidades e Status.
 import { SEGMENTO_NOME } from "@/lib/palette";
+import { ROTULO_LIQUIDEZ } from "@/lib/rotulos-liquidez";
 import type { Acao, Evento } from "@/lib/schemas";
 
 export const NOME_FONTE: Record<string, string> = {
@@ -24,11 +25,17 @@ export const ROTULO_TIPO: Record<string, string> = {
   novo_bdr: "Novo BDR",
   bdr_cancelado: "BDR cancelado",
   troca_depositaria: "Troca de depositária",
+  entrou_sem_negocios: "Sem negócios nos últimos meses",
+  saiu_sem_negocios: "Voltou a ter negócios",
+  entrou_presenca_baixa: "Entrou em presença baixa",
+  saiu_presenca_baixa: "Saiu de presença baixa",
 };
+
+export { ROTULO_LIQUIDEZ };
 
 export const NOME_DATASET: Record<string, string> = {
   acoes: "Ações",
-  acoes_volume: "Volume das ações",
+  acoes_liquidez: "Liquidez das ações",
   bdrs: "BDRs",
 };
 
@@ -57,5 +64,9 @@ export function mudancaDoEvento(e: Evento): string | null {
   if (e.tipo === "mudanca_segmento") return `${rotuloSegmento(e.de)} → ${rotuloSegmento(e.para)}`;
   // Deslistagem: `de` é só o nome de pregão (já mostrado como item), sem destino.
   if (e.tipo === "deslistagem") return null;
+  if (e.tipo.startsWith("entrou_") || e.tipo.startsWith("saiu_")) {
+    const r = (x: string | null) => (x == null ? "—" : (ROTULO_LIQUIDEZ[x] ?? x));
+    return `${r(e.de)} → ${r(e.para)}`;
+  }
   return `${e.de ?? "—"} → ${e.para ?? "—"}`;
 }

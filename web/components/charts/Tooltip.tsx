@@ -85,6 +85,11 @@ export function TooltipProvider({ children }: { children: ReactNode }) {
   );
 }
 
+/** Para quem calcula a célula pela posição do ponteiro, como o mapa de calor (um só elemento, muitas células). */
+export function useTipApi() {
+  return useContext(Ctx);
+}
+
 /** Props de evento para ligar um tooltip a qualquer elemento: `<button {...tip(() => <TipConteudo .../>)}>`. */
 export function useTip() {
   const api = useContext(Ctx);
