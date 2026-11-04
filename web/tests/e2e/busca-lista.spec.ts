@@ -66,6 +66,11 @@ test.describe("lista de acompanhamento (8.9)", () => {
       "aria-pressed",
       "true",
     );
+    const nomes = await new AxeBuilder({ page })
+      .withRules(["label-content-name-mismatch"])
+      .include(".estrela-texto")
+      .analyze();
+    expect(nomes.violations).toEqual([]); // "Na sua lista" visível precisa estar no nome lido
     await page.goto("/acompanhamento/");
     await expect(page.getByRole("link", { name: "PETROBRAS" })).toBeVisible();
     await expect(page.getByText(/fica só neste navegador/)).toBeVisible();

@@ -220,8 +220,7 @@ export function MapaCalor({
               {colunas.map((c, j) => {
                 const conteudo = (
                   <>
-                    <span className="mapa-ano">{c.ano ?? ""}</span>
-                    {c.rotulo}
+                    <span className="mapa-ano">{c.ano ?? ""}</span> {c.rotulo}
                   </>
                 );
                 return onColuna ? (
@@ -230,7 +229,7 @@ export function MapaCalor({
                     type="button"
                     className={`mapa-mes${c.ano ? " inicio-ano" : ""}`}
                     aria-pressed={colunaSelecionada === j}
-                    aria-label={`${c.rotulo}${c.ano ? ` de ${c.ano}` : ""}: usar este mês no ranking`}
+                    aria-label={`${c.ano ? `${c.ano} ` : ""}${c.rotulo}: usar este mês no ranking`}
                     onClick={() => onColuna(j)}
                   >
                     {conteudo}

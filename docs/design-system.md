@@ -50,6 +50,10 @@ Dentro do sistema existente, sem mudança de direção.
 - **Faixa de mês passado:** fixa no rodapé da janela, para não competir com os filtros, que ficam fixos no topo. Usa o fio de destaque, sem cor de status: não é um alerta.
 - **Relatório:** usa `.prose` dentro de um cartão, como `/sobre`; na impressão, A4 com cabeçalho e rodapé repetidos em cada página, e sem menu.
 
+## Acessibilidade dos nomes
+
+O nome lido pelo leitor de tela contém o texto visível, na mesma ordem (WCAG 2.5.3, cobrado pelo axe 4.14): quem usa comando de voz fala o que vê. Texto em elementos vizinhos precisa de um espaço no DOM, mesmo quando o layout já os separa. `BarList` monta o nome a partir do que mostra; quem chama passa só o `complementoAria`.
+
 ## Estado da implementação
 
 Feito: tokens, fontes e cor; escala tipográfica; raio, espaço e movimento; variantes de pares de marcas; catálogo `/design`; todas as telas. `/bdrs` e `/acoes` com régua de marcas, KPIs sem cartões, grade 8+4, filtros em sheet no celular e gráficos mensais rolando no celular; `/acoes` com a Tabela e o Volume de ações unidos e links de registro em nova aba; Capa, detalhes, `/instituicoes`, `/novidades`, `/status` e `/sobre` já nos tokens, com microcopy e espaçamento ajustados.

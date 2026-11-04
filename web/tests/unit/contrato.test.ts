@@ -104,16 +104,21 @@ describe("contrato com o ETL", () => {
     expect(Object.keys(zodItem).sort()).toEqual(Object.keys(item).sort());
   });
 
-  it("liquidez: as séries têm 24 meses, a presença fica entre 0 e 1 e o ticket só existe com negócios", () => {
-    const d = acoesLiquidezDocSchema.parse(publico("acoes_liquidez.json"));
-    expect(d.meses).toHaveLength(24);
-    expect(d.pregoes_mes).toHaveLength(24);
-    [...d.companhias, ...d.tickers].forEach((x) => {
-      expect(x.mensal.volume).toHaveLength(24);
-      x.mensal.presenca.forEach((p) => expect(p === null || (p >= 0 && p <= 1)).toBe(true));
-      x.mensal.ticket_medio.forEach((t, i) => expect(t === null || x.mensal.negocios[i] > 0).toBe(true));
-    });
-  });
+  // percorre milhares de séries: leva de 1 a 3 s e fica perto do limite padrão de 5 s com a máquina ocupada
+  it(
+    "liquidez: as séries têm 24 meses, a presença fica entre 0 e 1 e o ticket só existe com negócios",
+    { timeout: 30_000 },
+    () => {
+      const d = acoesLiquidezDocSchema.parse(publico("acoes_liquidez.json"));
+      expect(d.meses).toHaveLength(24);
+      expect(d.pregoes_mes).toHaveLength(24);
+      [...d.companhias, ...d.tickers].forEach((x) => {
+        expect(x.mensal.volume).toHaveLength(24);
+        x.mensal.presenca.forEach((p) => expect(p === null || (p >= 0 && p <= 1)).toBe(true));
+        x.mensal.ticket_medio.forEach((t, i) => expect(t === null || x.mensal.negocios[i] > 0).toBe(true));
+      });
+    },
+  );
 
   it("os enums do zod coincidem com os do JSON Schema", () => {
     const comp = schemaJson("acoes").$defs.companhia.properties;

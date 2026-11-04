@@ -10,10 +10,12 @@ export function Estrela({ item, comTexto = false }: { item: ItemLista; comTexto?
   const lista = useLista();
   const [falhou, setFalhou] = useState(false);
   const ativa = acompanha(lista, item.tipo, item.chave);
+  const texto = ativa ? "Na sua lista" : "Acompanhar";
+  // o nome sempre contém o texto visível (WCAG 2.5.3)
   const rotulo = falhou
-    ? "Este navegador não permite guardar a lista"
+    ? `${texto}: este navegador não permite guardar a lista`
     : ativa
-      ? `Remover ${item.nome} da lista`
+      ? `Na sua lista. Remover ${item.nome} da lista`
       : `Acompanhar ${item.nome}`;
   return (
     <button
@@ -30,7 +32,7 @@ export function Estrela({ item, comTexto = false }: { item: ItemLista; comTexto?
       }}
     >
       <Star size={16} strokeWidth={1.5} aria-hidden />
-      {comTexto ? <span>{ativa ? "Na sua lista" : "Acompanhar"}</span> : null}
+      {comTexto ? <span>{texto}</span> : null}
     </button>
   );
 }
