@@ -28,7 +28,7 @@ Reduzir o que mais se aproxima do texto vedado, sem tirar as telas do ar:
 - As telas seguem mostrando volume, presença, ticket e preço, inclusive em forma de gráfico ("reformatação").
 - A exportação CSV de cada tabela segue no site, porque o dono a pediu e é uma cópia do que a pessoa está vendo.
 - Os JSON que alimentam as telas continuam acessíveis por URL: um site estático não tem como evitar isso.
-- **O repositório é público**, então `data/history/` também pode ser baixado. Torná-lo privado reduziria essa exposição, mas é decisão do dono, porque muda o projeto (Actions passam a consumir a cota gratuita) e a transparência do método.
+- **O repositório é público**, então `data/history/` também pode ser baixado. O dono decidiu mantê-lo público (2026-11-04): torná-lo privado reduziria pouco, porque as telas e os JSON continuam abertos, e tiraria a transparência do método. Dá para rever a decisão quando a B3 responder.
 
 ## Se a B3 pedir a retirada
 Atender de imediato: remover do site os dados de negociação (`bdrs.json` sem volume, sem `acoes_liquidez*.json`, sem as seções correspondentes), mantendo o cadastro de escrituradores da CVM, e registrar aqui o que foi pedido.
