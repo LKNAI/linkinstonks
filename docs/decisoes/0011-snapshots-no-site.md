@@ -20,4 +20,4 @@ O item 8.6 pede ver as telas como estavam em um mês passado. Só existe um snap
 - Em um mês real, a classe do ticker e `inicio_aproximado` vêm do cadastro atual, porque não estão no CSV guardado.
 
 ## Consequências
-O repositório cresce até 600 KB por mês, mais a carga inicial dos 35 meses gerados agora. Os snapshots seguem o [ADR 0009](0009-termos-de-uso-da-b3.md): carregam só o que as telas mostram e não são anunciados como arquivos para baixar.
+O repositório cresce até 600 KB por mês, mais a carga inicial dos 35 meses gerados agora. Os snapshots carregam só o que as telas mostram e não são anunciados como arquivos para baixar. Os Termos da B3 estão no [ADR 0009](0009-termos-de-uso-da-b3.md).

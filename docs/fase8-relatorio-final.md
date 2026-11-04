@@ -59,10 +59,10 @@ Quartis do mês: R$ 1.108,43 e R$ 7.463,41, com 574 BDRs no cálculo.
 | Testes do site, ESLint, tipos e Prettier | 144 passaram, sem erros |
 | e2e com axe | 124 passaram, nenhum ignorado, já com o mês parcial de novembro nos dados |
 | CI do PR #9 | ETL, site com e2e, seed intacto e Vercel aprovados |
-| Produção | todas as rotas respondem; arquivos retirados dão 404; `noindex` em `/data/`; busca, lista, relatório e mês passado conferidos em navegador, sem erro de console |
+| Produção | todas as rotas respondem; `noindex` em `/data/`; busca, lista, relatório e mês passado conferidos em navegador, sem erro de console |
 | `etl-daily` no Actions | 1 min 33 s (manual, 03/11, com o primeiro arquivo diário de novembro) e 1 min 37 s (agendado, 04/11), sem issue de qualidade; meta de 8 min |
 | JS inicial | maior rota com 197,7 KB; `/acoes` e `/bdrs` com 180,9 KB (limite de 200 KB) |
-| `data/public` | 3,9 MB (limite de 20 MB) |
+| `data/public` | 4,1 MB (limite de 20 MB) |
 | `data/snapshots_site` | 11 MB; maior mês com 534 KB (limite de 600 KB) |
 | Capturas da Onda C | 27, em 1440, 1024 e 390 px, sem rolagem horizontal nem erro de console, em `docs/capturas/fase8-onda-c/`, fora do Git |
 | Impressão | PDF conferido: A4, com cabeçalho e rodapé repetidos em cada página |
@@ -74,7 +74,7 @@ Quartis do mês: R$ 1.108,43 e R$ 7.463,41, com 574 BDRs no cálculo.
 
 ## Riscos
 
-1. **Termos da B3.** O site continua mostrando dados de negociação sem autorização da B3. O [ADR 0009](decisoes/0009-termos-de-uso-da-b3.md) reduz a exposição, mas não a elimina, e traz o texto do pedido de autorização. Não é parecer jurídico.
+1. **Termos da B3.** O site mostra dados de negociação e oferece arquivos para baixar sem autorização da B3. O dono preferiu manter os downloads, o aviso antigo e o selo "dados abertos"; da mitigação, só ficou o `noindex` em `/data/` ([ADR 0009](decisoes/0009-termos-de-uso-da-b3.md), que traz também o texto do pedido de autorização). Não é parecer jurídico.
 2. **Primeira rotina mensal.** O relatório e a posição compacta só foram exercitados por comando local, e o caminho completo roda pela primeira vez em 05/11. Se falhar, o job fica vermelho e abre uma Issue, e o site mantém o último dado bom. Para refazer um mês: `docs/operacao.md`.
 3. **Reconstituição.** Mostra só companhias do cadastro atual com escriturador no FCA. "+N desde então" compara conjuntos diferentes e não mede novas listagens. A tela e a metodologia avisam.
 4. **`TOTNEG`.** O estouro em 5 dígitos é inferência, sem confirmação da B3. Negócios e ticket seguem como vieram, com "≈" nos meses suspeitos.

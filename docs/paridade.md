@@ -147,7 +147,7 @@ Entradas congeladas em `etl/tests/golden/` (dados reais de 29/10/2026) contra o 
 | universo | 1.143 | 1.152 na publicação real | 9 BDRs sem nenhum volume nos 24 meses fechados e com negócios só em out/2026 (BBCA39, BFTC39, CEGG34, INBR34, JGLO39, JIVE39, L1TM34, S1AK34, SK1D34): têm volume só no mês parcial. |
 | categoria do ETF | `Renda variável`, `Renda fixa`, `Commodities / cripto` | `Renda Variável`, `Renda Fixa`, `Commodities` | Decisão da Fase 0: rótulos da API. |
 | `fonte_depositaria` dos ETFs | `Banco B3 (finservices)` / `Bradesco Custódia` | `API B3 (GetDetail)` | A API informa a depositária dos ETFs e tem prioridade. A depositária resultante é a mesma. |
-| unidade do volume | R$ mil | R$ (inteiro) | O CSV com os cabeçalhos do seed, em R$ mil, fica em `data/history/csv_correntes/bdrs.csv`; `downloads/bdrs.csv` traz só o cadastro desde o ADR 0009. |
+| unidade do volume | R$ mil | R$ (inteiro) | `downloads/bdrs.csv` mantém R$ mil e os mesmos cabeçalhos do seed. |
 | mês corrente | ausente | `volume_mes_parcial` (COTAHIST diário) | Novo: o site mostra o mês em andamento. |
 
 Pendência observada na publicação real: **INBR34** (Inter&Co, estreou em out/2026 com R$ 937 mi no mês) está sem depositária identificada. O seed só conhece INBR32 (Bradesco). Não será atribuída sem fonte.

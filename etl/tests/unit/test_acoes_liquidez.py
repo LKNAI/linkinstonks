@@ -344,8 +344,8 @@ class TestPipeline:
         doc = pio.read_json(raiz / "public" / "acoes_liquidez.json")
         assert doc["schema_version"] == "1.0" and doc["pregoes_mes"] == [20] * 24
         assert doc["companhias"][0]["agregados"]["3m"]["presenca"] == 0.5
-        assert "9512;PETROBRAS;PETR4;" in (raiz / "history" / "csv_correntes" / "acoes_liquidez.csv").read_text("utf-8")
-        assert "9512;PETROBRAS;PETR4;" in (raiz / "history" / "csv_correntes" / "acoes_volume.csv").read_text("utf-8")
+        assert "9512;PETROBRAS;PETR4;" in (raiz / "public" / "downloads" / "acoes_liquidez.csv").read_text("utf-8")
+        assert "9512;PETROBRAS;PETR4;" in (raiz / "public" / "downloads" / "acoes_volume.csv").read_text("utf-8")
         res = pio.read_json(raiz / "public" / "acoes_liquidez_resumo.json")
         cia = res["companhias"][0]
         assert cia["volume_mensal"] == doc["companhias"][0]["mensal"]["volume"] and cia["volume_24m"] == 24_000
