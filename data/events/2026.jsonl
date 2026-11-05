@@ -5,3 +5,5 @@
 {"chave": "27839", "data": "2026-11-01", "dataset": "acoes", "de": "Própria empresa", "fonte": "B3/CVM", "para": "Itaú Corretora", "tipo": "divergencia_b3_cvm"}
 {"chave": "25917", "data": "2026-11-04", "dataset": "acoes", "de": null, "fonte": "B3", "para": "RAIZ55", "tipo": "ticker_novo"}
 {"chave": "25917", "data": "2026-11-04", "dataset": "acoes", "de": "RAIZ4", "fonte": "B3", "para": null, "tipo": "ticker_removido"}
+{"chave": "20745", "data": "2026-11-05", "dataset": "acoes", "de": "BTG Pactual", "fonte": "B3", "para": "Itaú Corretora", "tipo": "troca_escriturador"}
+{"chave": "20745", "data": "2026-11-05", "dataset": "acoes", "de": "Itaú Corretora", "fonte": "B3/CVM", "para": "BTG Pactual", "tipo": "divergencia_b3_cvm"}

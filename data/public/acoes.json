@@ -21885,12 +21885,12 @@
 "cnpj": "89.096.457/0001-55",
 "codigo_cvm": "20745",
 "detalhe_b3": true,
-"divergente_b3_cvm": false,
+"divergente_b3_cvm": true,
 "emissor": "SLCE",
 "escriturador_b3": {
-"bruto_on": "BTG PACTUAL SERVIÇOS FINANCEIROS SA DTVM",
+"bruto_on": "ITAU CORRETORA ACOES",
 "bruto_pn": "",
-"on": "BTG Pactual",
+"on": "Itaú Corretora",
 "pn": null
 },
 "escriturador_cvm": {
