@@ -2345,14 +2345,14 @@
 {
 "fim": "2025-06-16",
 "fonte": "CVM FCA",
-"inicio": "2007-05-23",
+"inicio": "2026-11-03",
 "inicio_aproximado": false,
 "instituicao": "Itaú Corretora",
 "primeiro_ano": 2010,
 "ultimo_ano": 2026
 },
 {
-"fim": null,
+"fim": "2026-11-02",
 "fonte": "CVM FCA",
 "inicio": "2025-06-17",
 "inicio_aproximado": false,

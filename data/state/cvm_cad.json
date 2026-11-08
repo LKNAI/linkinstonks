@@ -6100,6 +6100,11 @@
       "data_cancelamento": "2016-07-08",
       "situacao": "CANCELADA"
     },
+    "20961867000110": {
+      "codigo_cvm": "28118",
+      "data_cancelamento": "",
+      "situacao": "ATIVO"
+    },
     "21110778000123": {
       "codigo_cvm": "26417",
       "data_cancelamento": "2026-03-20",
@@ -12656,5 +12661,5 @@
       "situacao": "CANCELADA"
     }
   },
-  "etag": "\"6aec01a4-16cc41\""
+  "etag": "\"6aeea479-16ce97\""
 }

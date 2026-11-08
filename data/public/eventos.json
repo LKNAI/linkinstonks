@@ -2,6 +2,15 @@
 "eventos": [
 {
 "chave": "20745",
+"data": "2026-11-08",
+"dataset": "acoes",
+"de": "BTG Pactual",
+"fonte": "CVM",
+"para": "Itaú Corretora",
+"tipo": "troca_escriturador"
+},
+{
+"chave": "20745",
 "data": "2026-11-05",
 "dataset": "acoes",
 "de": "BTG Pactual",

@@ -21885,7 +21885,7 @@
 "cnpj": "89.096.457/0001-55",
 "codigo_cvm": "20745",
 "detalhe_b3": true,
-"divergente_b3_cvm": true,
+"divergente_b3_cvm": false,
 "emissor": "SLCE",
 "escriturador_b3": {
 "bruto_on": "ITAU CORRETORA ACOES",
@@ -21894,12 +21894,12 @@
 "pn": null
 },
 "escriturador_cvm": {
-"anterior": "Itaú Corretora",
-"anterior_fim": "2025-06-16",
-"anterior_inicio": "2007-05-23",
+"anterior": "BTG Pactual",
+"anterior_fim": "2026-11-02",
+"anterior_inicio": "2025-06-17",
 "anterior_ultimo_ano": 2026,
-"atual": "BTG Pactual",
-"inicio": "2025-06-17",
+"atual": "Itaú Corretora",
+"inicio": "2026-11-03",
 "inicio_aproximado": false,
 "n_escrituradores": 2
 },
