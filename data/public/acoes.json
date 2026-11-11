@@ -19843,6 +19843,21 @@
 {
 "classe": "Outros",
 "negociacao_desde": null,
+"ticker": "RAIZ1"
+},
+{
+"classe": "Outros",
+"negociacao_desde": null,
+"ticker": "RAIZ14"
+},
+{
+"classe": "Outros",
+"negociacao_desde": null,
+"ticker": "RAIZ16"
+},
+{
+"classe": "Outros",
+"negociacao_desde": null,
 "ticker": "RAIZ55"
 }
 ]

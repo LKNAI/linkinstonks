@@ -1,6 +1,33 @@
 {
 "eventos": [
 {
+"chave": "25917",
+"data": "2026-11-11",
+"dataset": "acoes",
+"de": null,
+"fonte": "B3",
+"para": "RAIZ1",
+"tipo": "ticker_novo"
+},
+{
+"chave": "25917",
+"data": "2026-11-11",
+"dataset": "acoes",
+"de": null,
+"fonte": "B3",
+"para": "RAIZ14",
+"tipo": "ticker_novo"
+},
+{
+"chave": "25917",
+"data": "2026-11-11",
+"dataset": "acoes",
+"de": null,
+"fonte": "B3",
+"para": "RAIZ16",
+"tipo": "ticker_novo"
+},
+{
 "chave": "20745",
 "data": "2026-11-08",
 "dataset": "acoes",
