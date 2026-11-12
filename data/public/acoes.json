@@ -2893,6 +2893,11 @@
 "situacao_cvm": "ATIVO",
 "tickers": [
 {
+"classe": "Outros",
+"negociacao_desde": null,
+"ticker": "AZTE1"
+},
+{
 "classe": "ON",
 "negociacao_desde": "2025-02-17",
 "ticker": "AZTE3"

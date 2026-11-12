@@ -7,7 +7,8 @@
 "2026-11-05",
 "2026-11-06",
 "2026-11-09",
-"2026-11-10"
+"2026-11-10",
+"2026-11-11"
 ],
 "schema_version": 1,
 "tickers": {
@@ -33,53 +34,53 @@
 },
 "A1DC34": {
 "isin": "BRA1DCBDR003",
-"negocios": 18,
+"negocios": 22,
 "nome": "AGREE REALTY",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 48.95,
-"ultimo_pregao": "2026-11-10",
-"volume": 10541
+"ultimo_preco": 48.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 12710
 },
 "A1DI34": {
 "isin": "BRA1DIBDR000",
-"negocios": 87,
+"negocios": 209,
 "nome": "ANALOG DEVIC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 54.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 293500
+"ultimo_preco": 56.55,
+"ultimo_pregao": "2026-11-11",
+"volume": 351380
 },
 "A1DM34": {
 "isin": "BRA1DMBDR002",
-"negocios": 30,
+"negocios": 34,
 "nome": "ARCHER DANIE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 49.3,
-"ultimo_pregao": "2026-11-10",
-"volume": 95750
+"ultimo_preco": 49.5,
+"ultimo_pregao": "2026-11-11",
+"volume": 99435
 },
 "A1EG34": {
 "isin": "BRA1EGBDR002",
-"negocios": 10,
+"negocios": 11,
 "nome": "AEGON LTD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 48.45,
-"ultimo_pregao": "2026-11-10",
-"volume": 16645
+"ultimo_preco": 48.25,
+"ultimo_pregao": "2026-11-11",
+"volume": 16693
 },
 "A1EP34": {
 "isin": "BRA1EPBDR003",
-"negocios": 18,
+"negocios": 392,
 "nome": "AMERICAN ELE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 71.8,
-"ultimo_pregao": "2026-11-10",
-"volume": 46505
+"ultimo_preco": 72.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 124138
 },
 "A1ES34": {
 "isin": "BRA1ESBDR007",
@@ -103,13 +104,13 @@
 },
 "A1IV34": {
 "isin": "BRA1IVBDR002",
-"negocios": 262,
+"negocios": 289,
 "nome": "APARTMENT IN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 8.58,
-"ultimo_pregao": "2026-11-10",
-"volume": 25911
+"ultimo_preco": 8.44,
+"ultimo_pregao": "2026-11-11",
+"volume": 26617
 },
 "A1JG34": {
 "isin": "BRA1JGBDR001",
@@ -123,23 +124,23 @@
 },
 "A1KA34": {
 "isin": "BRA1KABDR002",
-"negocios": 308,
+"negocios": 419,
 "nome": "AKAMAI TECHN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 39.05,
-"ultimo_pregao": "2026-11-10",
-"volume": 22080940
+"ultimo_preco": 40.16,
+"ultimo_pregao": "2026-11-11",
+"volume": 22131093
 },
 "A1LB34": {
 "isin": "BRA1LBBDR008",
-"negocios": 3027,
+"negocios": 3031,
 "nome": "ALBEMARLE CO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 21.98,
-"ultimo_pregao": "2026-11-10",
-"volume": 166096
+"ultimo_preco": 22.36,
+"ultimo_pregao": "2026-11-11",
+"volume": 184525
 },
 "A1LG34": {
 "isin": "BRA1LGBDR007",
@@ -153,43 +154,43 @@
 },
 "A1LK34": {
 "isin": "BRA1LKBDR009",
-"negocios": 9,
+"negocios": 11,
 "nome": "ALASKA AIR G",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 231.15,
-"ultimo_pregao": "2026-11-10",
-"volume": 23764
+"ultimo_preco": 229.54,
+"ultimo_pregao": "2026-11-11",
+"volume": 27219
 },
 "A1LL34": {
 "isin": "BRA1LLBDR007",
-"negocios": 20,
+"negocios": 22,
 "nome": "BREAD FINAN",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 134.4,
-"ultimo_pregao": "2026-11-10",
-"volume": 124797
+"ultimo_preco": 133.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 133605
 },
 "A1LN34": {
 "isin": "BRA1LNBDR003",
-"negocios": 67,
+"negocios": 72,
 "nome": "ALNYLAM PHAR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 42.56,
-"ultimo_pregao": "2026-11-10",
-"volume": 5175768
+"ultimo_preco": 43.75,
+"ultimo_pregao": "2026-11-11",
+"volume": 5179608
 },
 "A1MD34": {
 "isin": "BRA1MDBDR002",
-"negocios": 9769,
+"negocios": 11404,
 "nome": "ADVANCED MIC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 360.4,
-"ultimo_pregao": "2026-11-10",
-"volume": 393380297
+"ultimo_preco": 384.53,
+"ultimo_pregao": "2026-11-11",
+"volume": 458903450
 },
 "A1ME34": {
 "isin": "BRA1MEBDR000",
@@ -203,33 +204,33 @@
 },
 "A1MP34": {
 "isin": "BRA1MPBDR006",
-"negocios": 17,
+"negocios": 18,
 "nome": "AMERIPRISE F",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 72.94,
-"ultimo_pregao": "2026-11-10",
-"volume": 63861
+"ultimo_preco": 72.59,
+"ultimo_pregao": "2026-11-11",
+"volume": 63934
 },
 "A1MT34": {
 "isin": "BRA1MTBDR008",
-"negocios": 6781,
+"negocios": 7259,
 "nome": "APPLIED MATE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 207.4,
-"ultimo_pregao": "2026-11-10",
-"volume": 50398162
+"ultimo_preco": 224.99,
+"ultimo_pregao": "2026-11-11",
+"volume": 55080136
 },
 "A1NE34": {
 "isin": "BRA1NEBDR008",
-"negocios": 2858,
+"negocios": 2933,
 "nome": "ARISTA NETWO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 259.93,
-"ultimo_pregao": "2026-11-10",
-"volume": 21525031
+"ultimo_preco": 276.37,
+"ultimo_pregao": "2026-11-11",
+"volume": 22136988
 },
 "A1ON34": {
 "isin": "BRA1ONBDR007",
@@ -240,6 +241,26 @@
 "ultimo_preco": 78.31,
 "ultimo_pregao": "2026-11-06",
 "volume": 12739
+},
+"A1OS34": {
+"isin": "BRA1OSBDR006",
+"negocios": 1,
+"nome": "AO SMITH COR",
+"primeiro_pregao": "2026-11-11",
+"tipo": "DRN",
+"ultimo_preco": 355.48,
+"ultimo_pregao": "2026-11-11",
+"volume": 11375
+},
+"A1PA34": {
+"isin": "BRA1PABDR001",
+"negocios": 5,
+"nome": "APA CORP",
+"primeiro_pregao": "2026-11-11",
+"tipo": "DRN",
+"ultimo_preco": 259.5,
+"ultimo_pregao": "2026-11-11",
+"volume": 2069
 },
 "A1PD34": {
 "isin": "BRA1PDBDR005",
@@ -253,43 +274,43 @@
 },
 "A1PH34": {
 "isin": "BRA1PHBDR006",
-"negocios": 922,
+"negocios": 1041,
 "nome": "AMPHENOL COR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 37.3,
-"ultimo_pregao": "2026-11-10",
-"volume": 2447679
+"ultimo_preco": 36.82,
+"ultimo_pregao": "2026-11-11",
+"volume": 2669789
 },
 "A1PL34": {
 "isin": "BRA1PLBDR008",
-"negocios": 130,
+"negocios": 153,
 "nome": "APPLIED DGTL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 88.38,
-"ultimo_pregao": "2026-11-10",
-"volume": 4227897
+"ultimo_preco": 99.4,
+"ultimo_pregao": "2026-11-11",
+"volume": 6504346
 },
 "A1PO34": {
 "isin": "BRA1POBDR002",
-"negocios": 57,
+"negocios": 61,
 "nome": "APOLLO GLOBL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 45.64,
-"ultimo_pregao": "2026-11-10",
-"volume": 293648
+"ultimo_preco": 45.85,
+"ultimo_pregao": "2026-11-11",
+"volume": 319152
 },
 "A1PP34": {
 "isin": "BRA1PPBDR009",
-"negocios": 555,
+"negocios": 2588,
 "nome": "APPLOVIN CO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 69.75,
-"ultimo_pregao": "2026-11-10",
-"volume": 5833535
+"ultimo_preco": 71.3,
+"ultimo_pregao": "2026-11-11",
+"volume": 7109277
 },
 "A1RC34": {
 "isin": "BRA1RCBDR003",
@@ -303,13 +324,13 @@
 },
 "A1RE34": {
 "isin": "BRA1REBDR009",
-"negocios": 6,
+"negocios": 7,
 "nome": "ALEXANDRIA R",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 60.96,
-"ultimo_pregao": "2026-11-06",
-"volume": 21716
+"ultimo_preco": 61.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 21961
 },
 "A1RG34": {
 "isin": "BRA1RGBDR004",
@@ -383,23 +404,23 @@
 },
 "A1ZN34": {
 "isin": "BRA1ZNBDR003",
-"negocios": 65,
+"negocios": 73,
 "nome": "ASTRAZENECA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 174.01,
-"ultimo_pregao": "2026-11-10",
-"volume": 1166677
+"ultimo_preco": 172.39,
+"ultimo_pregao": "2026-11-11",
+"volume": 1202958
 },
 "A2FY34": {
 "isin": "BRA2FYBDR000",
-"negocios": 71,
+"negocios": 72,
 "nome": "AFYA LTD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 29.58,
-"ultimo_pregao": "2026-11-10",
-"volume": 604109
+"ultimo_preco": 28.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 604137
 },
 "A2LC34": {
 "isin": "BRA2LCBDR004",
@@ -413,43 +434,43 @@
 },
 "A2MB34": {
 "isin": "BRA2MBBDR004",
-"negocios": 35,
+"negocios": 37,
 "nome": "AMBARELLA IN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 13.37,
-"ultimo_pregao": "2026-11-10",
-"volume": 208705
+"ultimo_preco": 13.86,
+"ultimo_pregao": "2026-11-11",
+"volume": 211503
 },
 "A2RE34": {
 "isin": "BRA2REBDR007",
-"negocios": 8,
+"negocios": 9,
 "nome": "ARES MANAGEM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
 "ultimo_preco": 78.08,
-"ultimo_pregao": "2026-11-10",
-"volume": 809
+"ultimo_pregao": "2026-11-11",
+"volume": 887
 },
 "A2RR34": {
 "isin": "BRA2RRBDR009",
-"negocios": 17,
+"negocios": 27,
 "nome": "ARROWHEAD PH",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 33.9,
-"ultimo_pregao": "2026-11-10",
-"volume": 40077
+"ultimo_preco": 34.17,
+"ultimo_pregao": "2026-11-11",
+"volume": 93288
 },
 "A2RW34": {
 "isin": "BRA2RWBDR009",
-"negocios": 194,
+"negocios": 222,
 "nome": "ARROW ELECTR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 72.59,
-"ultimo_pregao": "2026-11-10",
-"volume": 15104
+"ultimo_preco": 73.57,
+"ultimo_pregao": "2026-11-11",
+"volume": 17171
 },
 "A2SO34": {
 "isin": "BRA2SOBDR004",
@@ -463,13 +484,13 @@
 },
 "A2XO34": {
 "isin": "BRA2XOBDR004",
-"negocios": 133,
+"negocios": 190,
 "nome": "AXON ENTERPR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 100.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 671939
+"ultimo_preco": 98.28,
+"ultimo_pregao": "2026-11-11",
+"volume": 698388
 },
 "A2ZT34": {
 "isin": "BRA2ZTBDR008",
@@ -493,33 +514,33 @@
 },
 "AALL34": {
 "isin": "BRAALLBDR003",
-"negocios": 285,
+"negocios": 310,
 "nome": "AMERICAN AIR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 78.72,
-"ultimo_pregao": "2026-11-10",
-"volume": 1956241
+"ultimo_preco": 78.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 1993558
 },
 "AAPL34": {
 "isin": "BRAAPLBDR004",
-"negocios": 20270,
+"negocios": 24634,
 "nome": "APPLE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 98.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 398626568
+"ultimo_preco": 98.61,
+"ultimo_pregao": "2026-11-11",
+"volume": 419138579
 },
 "ABBV34": {
 "isin": "BRABBVBDR001",
-"negocios": 3091,
+"negocios": 3636,
 "nome": "ABBVIE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 103.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 1216791
+"ultimo_preco": 101.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 1439178
 },
 "ABGD39": {
 "isin": "BRABGDBDR008",
@@ -533,63 +554,63 @@
 },
 "ABTT34": {
 "isin": "BRABTTBDR007",
-"negocios": 124,
+"negocios": 138,
 "nome": "ABBOTT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 51.55,
-"ultimo_pregao": "2026-11-10",
-"volume": 161878
+"ultimo_preco": 51.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 164065
 },
 "ABUD34": {
 "isin": "BRABUDBDR009",
-"negocios": 38,
+"negocios": 40,
 "nome": "AB INBEV",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 79.92,
-"ultimo_pregao": "2026-11-10",
-"volume": 16288
+"ultimo_preco": 77.98,
+"ultimo_pregao": "2026-11-11",
+"volume": 16755
 },
 "ACNB34": {
 "isin": "BRACNBBDR006",
-"negocios": 72,
+"negocios": 75,
 "nome": "ACCENTURE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 1411.91,
-"ultimo_pregao": "2026-11-10",
-"volume": 420894
+"ultimo_preco": 1408.33,
+"ultimo_pregao": "2026-11-11",
+"volume": 549067
 },
 "ACWX39": {
 "isin": "BRACWXBDR001",
-"negocios": 10,
+"negocios": 11,
 "nome": "MSCI ACWI US",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 68.95,
-"ultimo_pregao": "2026-11-10",
-"volume": 8084
+"ultimo_preco": 69.02,
+"ultimo_pregao": "2026-11-11",
+"volume": 8429
 },
 "ADBE34": {
 "isin": "BRADBEBDR003",
-"negocios": 528,
+"negocios": 3158,
 "nome": "ADOBE INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 26.43,
-"ultimo_pregao": "2026-11-10",
-"volume": 2377062
+"ultimo_preco": 26.7,
+"ultimo_pregao": "2026-11-11",
+"volume": 3241009
 },
 "ADPR34": {
 "isin": "BRADPRBDR005",
-"negocios": 9,
+"negocios": 226,
 "nome": "AUTOMATIC DT",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 69.93,
-"ultimo_pregao": "2026-11-09",
-"volume": 3727
+"ultimo_preco": 70.84,
+"ultimo_pregao": "2026-11-11",
+"volume": 61628
 },
 "AETH39": {
 "isin": "BRAETHBDR006",
@@ -613,33 +634,33 @@
 },
 "AIRB34": {
 "isin": "BRAIRBBDR004",
-"negocios": 1430,
+"negocios": 1501,
 "nome": "AIRBNB",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 52.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 3198562
+"ultimo_preco": 50.44,
+"ultimo_pregao": "2026-11-11",
+"volume": 3534176
 },
 "AMGN34": {
 "isin": "BRAMGNBDR004",
-"negocios": 54,
+"negocios": 63,
 "nome": "AMGEN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 93.16,
-"ultimo_pregao": "2026-11-10",
-"volume": 61555
+"ultimo_preco": 93.24,
+"ultimo_pregao": "2026-11-11",
+"volume": 604012
 },
 "AMZO34": {
 "isin": "BRAMZOBDR002",
-"negocios": 46479,
+"negocios": 52144,
 "nome": "AMAZON",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 75.78,
-"ultimo_pregao": "2026-11-10",
-"volume": 713211539
+"ultimo_preco": 73.86,
+"ultimo_pregao": "2026-11-11",
+"volume": 741143007
 },
 "APTV34": {
 "isin": "BRAPTVBDR003",
@@ -653,103 +674,103 @@
 },
 "ARGT39": {
 "isin": "BRARGTBDR000",
-"negocios": 137,
+"negocios": 150,
 "nome": "GX ARGENTINA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 41.05,
-"ultimo_pregao": "2026-11-10",
-"volume": 3283113
+"ultimo_preco": 40.91,
+"ultimo_pregao": "2026-11-11",
+"volume": 3434682
 },
 "ARMT34": {
 "isin": "BRARMTBDR008",
-"negocios": 1205,
+"negocios": 2040,
 "nome": "ARCELOR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 184.65,
-"ultimo_pregao": "2026-11-10",
-"volume": 710573
+"ultimo_preco": 185.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 912211
 },
 "ARNC34": {
 "isin": "BRARNCBDR002",
-"negocios": 1162,
+"negocios": 1442,
 "nome": "HOWMET AERO",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 48.96,
-"ultimo_pregao": "2026-11-10",
-"volume": 5242749
+"ultimo_preco": 49.75,
+"ultimo_pregao": "2026-11-11",
+"volume": 5268381
 },
 "ASML34": {
 "isin": "BRASMLBDR003",
-"negocios": 9940,
+"negocios": 16487,
 "nome": "ASML HOLD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 153.8,
-"ultimo_pregao": "2026-11-10",
-"volume": 79892254
+"ultimo_preco": 156.11,
+"ultimo_pregao": "2026-11-11",
+"volume": 87788920
 },
 "ATTB34": {
 "isin": "BRATTBBDR007",
-"negocios": 132,
+"negocios": 437,
 "nome": "ATT INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 41.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 913341
+"ultimo_preco": 42.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 979363
 },
 "AURA33": {
 "isin": "BRAURABDR001",
-"negocios": 147868,
+"negocios": 169625,
 "nome": "AURA 360",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DR3",
-"ultimo_preco": 152.04,
-"ultimo_pregao": "2026-11-10",
-"volume": 993018086
+"ultimo_preco": 151.49,
+"ultimo_pregao": "2026-11-11",
+"volume": 1100144237
 },
 "AVGO34": {
 "isin": "BRAVGOBDR003",
-"negocios": 20413,
+"negocios": 25431,
 "nome": "BROADCOM INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 26.89,
-"ultimo_pregao": "2026-11-10",
-"volume": 143983376
+"ultimo_preco": 27.4,
+"ultimo_pregao": "2026-11-11",
+"volume": 162051883
 },
 "AXPB34": {
 "isin": "BRAXPBBDR007",
-"negocios": 572,
+"negocios": 830,
 "nome": "AMERICAN EXP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 181.16,
-"ultimo_pregao": "2026-11-10",
-"volume": 1738955
+"ultimo_preco": 178.92,
+"ultimo_pregao": "2026-11-11",
+"volume": 3206514
 },
 "AZOI34": {
 "isin": "BRAZOIBDR000",
-"negocios": 8,
+"negocios": 9,
 "nome": "AUTOZONE INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 81.68,
-"ultimo_pregao": "2026-11-10",
-"volume": 2674
+"ultimo_preco": 80.7,
+"ultimo_pregao": "2026-11-11",
+"volume": 6709
 },
 "B1AM34": {
 "isin": "BRB1AMBDR007",
-"negocios": 170,
+"negocios": 190,
 "nome": "BROOKFIELD C",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 60.27,
-"ultimo_pregao": "2026-11-10",
-"volume": 1373764
+"ultimo_preco": 58.61,
+"ultimo_pregao": "2026-11-11",
+"volume": 1701870
 },
 "B1AX34": {
 "isin": "BRB1AXBDR004",
@@ -783,23 +804,33 @@
 },
 "B1CS34": {
 "isin": "BRB1CSBDR000",
-"negocios": 170,
+"negocios": 175,
 "nome": "BARCLAYS PLC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 130.26,
-"ultimo_pregao": "2026-11-10",
-"volume": 34508
+"ultimo_preco": 128.31,
+"ultimo_pregao": "2026-11-11",
+"volume": 36169
+},
+"B1FC34": {
+"isin": "BRB1FCBDR007",
+"negocios": 2,
+"nome": "BROWN FORMAN",
+"primeiro_pregao": "2026-11-11",
+"tipo": "DRN",
+"ultimo_preco": 167.86,
+"ultimo_pregao": "2026-11-11",
+"volume": 337
 },
 "B1IL34": {
 "isin": "BRB1ILBDR002",
-"negocios": 35,
+"negocios": 38,
 "nome": "BILIBILI INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 15.82,
-"ultimo_pregao": "2026-11-10",
-"volume": 28423
+"ultimo_preco": 15.58,
+"ultimo_pregao": "2026-11-11",
+"volume": 30339
 },
 "B1KR34": {
 "isin": "BRB1KRBDR005",
@@ -833,63 +864,63 @@
 },
 "B1NT34": {
 "isin": "BRB1NTBDR005",
-"negocios": 67,
+"negocios": 77,
 "nome": "BIONTECH SE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 30.42,
-"ultimo_pregao": "2026-11-10",
-"volume": 220355
+"ultimo_preco": 30.46,
+"ultimo_pregao": "2026-11-11",
+"volume": 293128
 },
 "B1PP34": {
 "isin": "BRB1PPBDR008",
-"negocios": 89,
+"negocios": 98,
 "nome": "BP PLC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 62.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 645956
+"ultimo_preco": 63.7,
+"ultimo_pregao": "2026-11-11",
+"volume": 648341
 },
 "B1RF34": {
 "isin": "BRB1RFBDR005",
-"negocios": 4,
+"negocios": 5,
 "nome": "BROADRIDGE F",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 262.6,
-"ultimo_pregao": "2026-11-09",
-"volume": 7867
+"ultimo_preco": 266.76,
+"ultimo_pregao": "2026-11-11",
+"volume": 15603
 },
 "B1SA34": {
 "isin": "BRB1SABDR004",
-"negocios": 202,
+"negocios": 207,
 "nome": "BANCO SANTAN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 90.36,
-"ultimo_pregao": "2026-11-10",
-"volume": 84560
+"ultimo_preco": 90.09,
+"ultimo_pregao": "2026-11-11",
+"volume": 90223
 },
 "B1SX34": {
 "isin": "BRB1SXBDR006",
-"negocios": 110,
+"negocios": 237,
 "nome": "BOSTON SCIEN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 62.28,
-"ultimo_pregao": "2026-11-10",
-"volume": 764076
+"ultimo_preco": 62.7,
+"ultimo_pregao": "2026-11-11",
+"volume": 826378
 },
 "B1TI34": {
 "isin": "BRB1TIBDR005",
-"negocios": 267,
+"negocios": 278,
 "nome": "BRITISH AMER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 67.67,
-"ultimo_pregao": "2026-11-10",
-"volume": 1270909
+"ultimo_preco": 67.95,
+"ultimo_pregao": "2026-11-11",
+"volume": 1283537
 },
 "B1WA34": {
 "isin": "BRB1WABDR006",
@@ -913,13 +944,13 @@
 },
 "B2AH34": {
 "isin": "BRB2AHBDR005",
-"negocios": 4,
+"negocios": 5,
 "nome": "BOOZALLEN HH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 48.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 387
+"ultimo_preco": 48.48,
+"ultimo_pregao": "2026-11-11",
+"volume": 435
 },
 "B2AP34": {
 "isin": "BRB2APBDR008",
@@ -933,33 +964,33 @@
 },
 "B2HI34": {
 "isin": "BRB2HIBDR008",
-"negocios": 219,
+"negocios": 255,
 "nome": "BILL HOLD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 1.65,
-"ultimo_pregao": "2026-11-10",
-"volume": 103866
+"ultimo_preco": 1.68,
+"ultimo_pregao": "2026-11-11",
+"volume": 105063
 },
 "B2LN34": {
 "isin": "BRB2LNBDR000",
-"negocios": 3,
+"negocios": 4,
 "nome": "BLACKLINE IN",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 11.92,
-"ultimo_pregao": "2026-11-06",
-"volume": 72141
+"ultimo_preco": 12.77,
+"ultimo_pregao": "2026-11-11",
+"volume": 72154
 },
 "B2MB34": {
 "isin": "BRB2MBBDR003",
-"negocios": 20,
+"negocios": 21,
 "nome": "BUMBLE INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 6.65,
-"ultimo_pregao": "2026-11-09",
-"volume": 85848
+"ultimo_preco": 6.7,
+"ultimo_pregao": "2026-11-11",
+"volume": 85861
 },
 "B2RK34": {
 "isin": "BRB2RKBDR003",
@@ -983,73 +1014,73 @@
 },
 "B2YN34": {
 "isin": "BRB2YNBDR003",
-"negocios": 66,
+"negocios": 86,
 "nome": "BEYOND MEAT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 31.55,
-"ultimo_pregao": "2026-11-10",
-"volume": 43723
+"ultimo_preco": 32.5,
+"ultimo_pregao": "2026-11-11",
+"volume": 80150
 },
 "BAAX39": {
 "isin": "BRBAAXBDR009",
-"negocios": 180,
+"negocios": 198,
 "nome": "MSCI ASIA JP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 58.26,
-"ultimo_pregao": "2026-11-10",
-"volume": 8686529
+"ultimo_preco": 59.91,
+"ultimo_pregao": "2026-11-11",
+"volume": 8702597
 },
 "BABA34": {
 "isin": "BRBABABDR005",
-"negocios": 8534,
+"negocios": 9079,
 "nome": "ALIBABAGR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 20.62,
-"ultimo_pregao": "2026-11-10",
-"volume": 88087912
+"ultimo_preco": 20.27,
+"ultimo_pregao": "2026-11-11",
+"volume": 93923435
 },
 "BACW39": {
 "isin": "BRBACWBDR007",
-"negocios": 255,
+"negocios": 341,
 "nome": "MSCI ACWI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 86.62,
-"ultimo_pregao": "2026-11-10",
-"volume": 49973265
+"ultimo_preco": 87.44,
+"ultimo_pregao": "2026-11-11",
+"volume": 69216465
 },
 "BAER39": {
 "isin": "BRBAERBDR003",
-"negocios": 867,
+"negocios": 873,
 "nome": "US AEROSPACE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 20.18,
-"ultimo_pregao": "2026-11-10",
-"volume": 581061
+"ultimo_preco": 20.32,
+"ultimo_pregao": "2026-11-11",
+"volume": 582442
 },
 "BAGG39": {
 "isin": "BRBAGGBDR001",
-"negocios": 130,
+"negocios": 146,
 "nome": "BKR US AGGRE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
 "ultimo_preco": 53.4,
-"ultimo_pregao": "2026-11-10",
-"volume": 1115218
+"ultimo_pregao": "2026-11-11",
+"volume": 1731761
 },
 "BAIQ39": {
 "isin": "BRBAIQBDR006",
-"negocios": 2497,
+"negocios": 2560,
 "nome": "GX AI TECH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 54.19,
-"ultimo_pregao": "2026-11-10",
-"volume": 1875115
+"ultimo_preco": 56.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 2079588
 },
 "BAOA39": {
 "isin": "BRBAOABDR008",
@@ -1083,23 +1114,23 @@
 },
 "BAOR39": {
 "isin": "BRBAORBDR002",
-"negocios": 2,
+"negocios": 7,
 "nome": "BKR BAL ALOC",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRE",
-"ultimo_preco": 76.3,
-"ultimo_pregao": "2026-11-10",
-"volume": 1142
+"ultimo_preco": 76.64,
+"ultimo_pregao": "2026-11-11",
+"volume": 51714
 },
 "BARY39": {
 "isin": "BRBARYBDR001",
-"negocios": 8,
+"negocios": 52,
 "nome": "BKR FUT AIT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 164.05,
-"ultimo_pregao": "2026-11-06",
-"volume": 7806
+"ultimo_preco": 190.74,
+"ultimo_pregao": "2026-11-11",
+"volume": 152424
 },
 "BBAX39": {
 "isin": "BRBBAXBDR007",
@@ -1113,13 +1144,13 @@
 },
 "BBEU39": {
 "isin": "BRBBEUBDR005",
-"negocios": 10,
+"negocios": 13,
 "nome": "JP BTB EUROP",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRE",
-"ultimo_preco": 86.16,
-"ultimo_pregao": "2026-11-09",
-"volume": 4859
+"ultimo_preco": 87.02,
+"ultimo_pregao": "2026-11-11",
+"volume": 5206
 },
 "BBJP39": {
 "isin": "BRBBJPBDR004",
@@ -1143,13 +1174,13 @@
 },
 "BBUG39": {
 "isin": "BRBBUGBDR000",
-"negocios": 549,
+"negocios": 569,
 "nome": "GX CYBERSECT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 83.91,
-"ultimo_pregao": "2026-11-10",
-"volume": 1534175
+"ultimo_preco": 84.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 1626060
 },
 "BBUS39": {
 "isin": "BRBBUSBDR005",
@@ -1183,13 +1214,13 @@
 },
 "BCHI39": {
 "isin": "BRBCHIBDR001",
-"negocios": 214,
+"negocios": 220,
 "nome": "MSCI CHINA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 35.6,
-"ultimo_pregao": "2026-11-10",
-"volume": 608677
+"ultimo_preco": 35.4,
+"ultimo_pregao": "2026-11-11",
+"volume": 663193
 },
 "BCHQ39": {
 "isin": "BRBCHQBDR004",
@@ -1203,13 +1234,13 @@
 },
 "BCIR39": {
 "isin": "BRBCIRBDR000",
-"negocios": 52,
+"negocios": 59,
 "nome": "FT NASDCYBER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 105.31,
-"ultimo_pregao": "2026-11-10",
-"volume": 1290631
+"ultimo_preco": 107.5,
+"ultimo_pregao": "2026-11-11",
+"volume": 1291389
 },
 "BCLO39": {
 "isin": "BRBCLOBDR001",
@@ -1233,43 +1264,43 @@
 },
 "BCOM39": {
 "isin": "BRBCOMBDR009",
-"negocios": 1999,
+"negocios": 2014,
 "nome": "BKR COMT ROL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 65.7,
-"ultimo_pregao": "2026-11-10",
-"volume": 900332
+"ultimo_preco": 63.94,
+"ultimo_pregao": "2026-11-11",
+"volume": 905179
 },
 "BCPX39": {
 "isin": "BRBCPXBDR003",
-"negocios": 4112,
+"negocios": 11999,
 "nome": "GX COPPER MN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 40.65,
-"ultimo_pregao": "2026-11-10",
-"volume": 6044012
+"ultimo_preco": 40.73,
+"ultimo_pregao": "2026-11-11",
+"volume": 7219469
 },
 "BCSA34": {
 "isin": "BRBCSABDR005",
-"negocios": 209,
+"negocios": 1469,
 "nome": "SANTANDER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 70.1,
-"ultimo_pregao": "2026-11-10",
-"volume": 2163915
+"ultimo_preco": 69.24,
+"ultimo_pregao": "2026-11-11",
+"volume": 2385040
 },
 "BCTE39": {
 "isin": "BRBCTEBDR005",
-"negocios": 20,
+"negocios": 41,
 "nome": "GX CLEANCH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 34.98,
-"ultimo_pregao": "2026-11-10",
-"volume": 539349
+"ultimo_preco": 35.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 597237
 },
 "BCWV39": {
 "isin": "BRBCWVBDR003",
@@ -1280,6 +1311,16 @@
 "ultimo_preco": 72.0,
 "ultimo_pregao": "2026-11-10",
 "volume": 165924
+},
+"BDRE39": {
+"isin": "BRBDREBDR007",
+"negocios": 8,
+"nome": "JP DV US SM",
+"primeiro_pregao": "2026-11-11",
+"tipo": "DRE",
+"ultimo_preco": 80.44,
+"ultimo_pregao": "2026-11-11",
+"volume": 6791
 },
 "BDRI39": {
 "isin": "BRBDRIBDR008",
@@ -1293,13 +1334,13 @@
 },
 "BDVD39": {
 "isin": "BRBDVDBDR001",
-"negocios": 14,
+"negocios": 17,
 "nome": "GX SUPDIV US",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 53.39,
-"ultimo_pregao": "2026-11-10",
-"volume": 4054
+"ultimo_preco": 53.16,
+"ultimo_pregao": "2026-11-11",
+"volume": 56632
 },
 "BDVE39": {
 "isin": "BRBDVEBDR009",
@@ -1313,13 +1354,13 @@
 },
 "BDVY39": {
 "isin": "BRBDVYBDR007",
-"negocios": 200,
+"negocios": 206,
 "nome": "SELECT DIVID",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 90.67,
-"ultimo_pregao": "2026-11-10",
-"volume": 301103
+"ultimo_preco": 90.72,
+"ultimo_pregao": "2026-11-11",
+"volume": 423397
 },
 "BECH39": {
 "isin": "BRBECHBDR000",
@@ -1333,23 +1374,23 @@
 },
 "BEEM39": {
 "isin": "BRBEEMBDR006",
-"negocios": 1027,
+"negocios": 1056,
 "nome": "MSCI EMGMARK",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 56.19,
-"ultimo_pregao": "2026-11-10",
-"volume": 19555599
+"ultimo_preco": 57.26,
+"ultimo_pregao": "2026-11-11",
+"volume": 19982039
 },
 "BEFA39": {
 "isin": "BRBEFABDR008",
-"negocios": 19,
+"negocios": 20,
 "nome": "MSCI EAFE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 73.24,
-"ultimo_pregao": "2026-11-10",
-"volume": 639662
+"ultimo_preco": 72.55,
+"ultimo_pregao": "2026-11-11",
+"volume": 1183787
 },
 "BEFG39": {
 "isin": "BRBEFGBDR005",
@@ -1363,13 +1404,13 @@
 },
 "BEFV39": {
 "isin": "BRBEFVBDR004",
-"negocios": 42,
+"negocios": 45,
 "nome": "MSCIEAFEVALU",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 37.08,
-"ultimo_pregao": "2026-11-09",
-"volume": 467171
+"ultimo_preco": 37.24,
+"ultimo_pregao": "2026-11-11",
+"volume": 467468
 },
 "BEGE39": {
 "isin": "BRBEGEBDR008",
@@ -1383,13 +1424,13 @@
 },
 "BEGU39": {
 "isin": "BRBEGUBDR004",
-"negocios": 5,
+"negocios": 7,
 "nome": "TRUSTMSCI US",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRE",
-"ultimo_preco": 92.3,
-"ultimo_pregao": "2026-11-10",
-"volume": 2405
+"ultimo_preco": 92.77,
+"ultimo_pregao": "2026-11-11",
+"volume": 2777
 },
 "BEIS39": {
 "isin": "BRBEISBDR004",
@@ -1431,15 +1472,25 @@
 "ultimo_pregao": "2026-11-09",
 "volume": 1025590
 },
+"BEPU39": {
+"isin": "BRBEPUBDR005",
+"negocios": 1,
+"nome": "MSCI PERU GE",
+"primeiro_pregao": "2026-11-11",
+"tipo": "DRE",
+"ultimo_preco": 90.99,
+"ultimo_pregao": "2026-11-11",
+"volume": 910
+},
 "BERK34": {
 "isin": "BRBERKBDR002",
-"negocios": 8601,
+"negocios": 9606,
 "nome": "BERKSHIRE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 165.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 58146958
+"ultimo_preco": 163.02,
+"ultimo_pregao": "2026-11-11",
+"volume": 66957131
 },
 "BEUW39": {
 "isin": "BRBEUWBDR001",
@@ -1453,13 +1504,13 @@
 },
 "BEWA39": {
 "isin": "BRBEWABDR003",
-"negocios": 7,
+"negocios": 8,
 "nome": "MSCIAUSTRALI",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRE",
-"ultimo_preco": 54.55,
-"ultimo_pregao": "2026-11-10",
-"volume": 813
+"ultimo_preco": 54.65,
+"ultimo_pregao": "2026-11-11",
+"volume": 868
 },
 "BEWC39": {
 "isin": "BRBEWCBDR009",
@@ -1483,23 +1534,23 @@
 },
 "BEWG39": {
 "isin": "BRBEWGBDR000",
-"negocios": 23,
+"negocios": 27,
 "nome": "MSCI GERMANY",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 79.68,
-"ultimo_pregao": "2026-11-10",
-"volume": 3989290
+"ultimo_preco": 78.89,
+"ultimo_pregao": "2026-11-11",
+"volume": 3989846
 },
 "BEWH39": {
 "isin": "BRBEWHBDR008",
-"negocios": 163,
+"negocios": 165,
 "nome": "MSCIHONGKONG",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 42.88,
-"ultimo_pregao": "2026-11-09",
-"volume": 360190
+"ultimo_preco": 42.76,
+"ultimo_pregao": "2026-11-11",
+"volume": 362499
 },
 "BEWI39": {
 "isin": "BRBEWIBDR006",
@@ -1513,23 +1564,23 @@
 },
 "BEWJ39": {
 "isin": "BRBEWJBDR004",
-"negocios": 336,
+"negocios": 353,
 "nome": "MSCI JAPAN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 62.88,
-"ultimo_pregao": "2026-11-10",
-"volume": 2870238
+"ultimo_preco": 63.84,
+"ultimo_pregao": "2026-11-11",
+"volume": 2946875
 },
 "BEWL39": {
 "isin": "BRBEWLBDR000",
-"negocios": 38,
+"negocios": 43,
 "nome": "MSCI SWITZER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 73.01,
-"ultimo_pregao": "2026-11-10",
-"volume": 497504
+"ultimo_preco": 72.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 499473
 },
 "BEWM39": {
 "isin": "BRBEWMBDR008",
@@ -1583,43 +1634,43 @@
 },
 "BEWT39": {
 "isin": "BRBEWTBDR003",
-"negocios": 88,
+"negocios": 94,
 "nome": "MSCI TAIWAN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 87.84,
-"ultimo_pregao": "2026-11-10",
-"volume": 364580
+"ultimo_preco": 92.97,
+"ultimo_pregao": "2026-11-11",
+"volume": 405430
 },
 "BEWU39": {
 "isin": "BRBEWUBDR001",
-"negocios": 14,
+"negocios": 17,
 "nome": "MSCI UK",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 89.45,
-"ultimo_pregao": "2026-11-10",
-"volume": 3404646
+"ultimo_preco": 89.01,
+"ultimo_pregao": "2026-11-11",
+"volume": 3408283
 },
 "BEWW39": {
 "isin": "BRBEWWBDR007",
-"negocios": 1,
+"negocios": 3,
 "nome": "MSCI MEXICO",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRE",
-"ultimo_preco": 103.11,
-"ultimo_pregao": "2026-11-04",
-"volume": 206
+"ultimo_preco": 107.25,
+"ultimo_pregao": "2026-11-11",
+"volume": 420
 },
 "BEWY39": {
 "isin": "BRBEWYBDR003",
-"negocios": 6960,
+"negocios": 9105,
 "nome": "MSCISOUTHKOR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 97.29,
-"ultimo_pregao": "2026-11-10",
-"volume": 16705348
+"ultimo_preco": 102.83,
+"ultimo_pregao": "2026-11-11",
+"volume": 19430651
 },
 "BEWZ39": {
 "isin": "BRBEWZBDR000",
@@ -1633,23 +1684,23 @@
 },
 "BEZA39": {
 "isin": "BRBEZABDR006",
-"negocios": 1,
+"negocios": 2,
 "nome": "MSCI SAFRICA",
 "primeiro_pregao": "2026-11-09",
 "tipo": "DRE",
 "ultimo_preco": 62.0,
-"ultimo_pregao": "2026-11-09",
-"volume": 124
+"ultimo_pregao": "2026-11-11",
+"volume": 186
 },
 "BEZU39": {
 "isin": "BRBEZUBDR004",
-"negocios": 1,
+"negocios": 3,
 "nome": "MSCIEUROZONE",
 "primeiro_pregao": "2026-11-09",
 "tipo": "DRE",
-"ultimo_preco": 93.06,
-"ultimo_pregao": "2026-11-09",
-"volume": 27546
+"ultimo_preco": 94.23,
+"ultimo_pregao": "2026-11-11",
+"volume": 78387
 },
 "BFAV39": {
 "isin": "BRBFAVBDR002",
@@ -1663,13 +1714,13 @@
 },
 "BFCG39": {
 "isin": "BRBFCGBDR009",
-"negocios": 1489,
+"negocios": 1587,
 "nome": "FT NAT GAS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 83.52,
-"ultimo_pregao": "2026-11-03",
-"volume": 329299
+"ultimo_preco": 80.64,
+"ultimo_pregao": "2026-11-11",
+"volume": 337601
 },
 "BFDN39": {
 "isin": "BRBFDNBDR003",
@@ -1683,23 +1734,23 @@
 },
 "BFXI39": {
 "isin": "BRBFXIBDR001",
-"negocios": 25,
+"negocios": 31,
 "nome": "CHINALARGECA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 38.12,
-"ultimo_pregao": "2026-11-09",
-"volume": 19896
+"ultimo_preco": 37.68,
+"ultimo_pregao": "2026-11-11",
+"volume": 20733
 },
 "BGAR39": {
 "isin": "BRBGARBDR008",
-"negocios": 34,
+"negocios": 39,
 "nome": "MSCI US GARP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 70.68,
-"ultimo_pregao": "2026-11-10",
-"volume": 18741
+"ultimo_preco": 72.62,
+"ultimo_pregao": "2026-11-11",
+"volume": 25406
 },
 "BGLC39": {
 "isin": "BRBGLCBDR007",
@@ -1723,13 +1774,13 @@
 },
 "BGOV39": {
 "isin": "BRBGOVBDR001",
-"negocios": 108,
+"negocios": 123,
 "nome": "BKR US TREAS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 41.17,
-"ultimo_pregao": "2026-11-10",
-"volume": 864060
+"ultimo_preco": 40.96,
+"ultimo_pregao": "2026-11-11",
+"volume": 988651
 },
 "BGOZ39": {
 "isin": "BRBGOZBDR002",
@@ -1743,33 +1794,33 @@
 },
 "BGRT39": {
 "isin": "BRBGRTBDR008",
-"negocios": 86,
+"negocios": 128,
 "nome": "GLOBAL REIT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 51.15,
-"ultimo_pregao": "2026-11-10",
-"volume": 44480
+"ultimo_preco": 50.6,
+"ultimo_pregao": "2026-11-11",
+"volume": 51889
 },
 "BGWH39": {
 "isin": "BRBGWHBDR003",
-"negocios": 38,
+"negocios": 41,
 "nome": "COREDIVGROWT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 91.1,
-"ultimo_pregao": "2026-11-10",
-"volume": 237711
+"ultimo_preco": 91.44,
+"ultimo_pregao": "2026-11-11",
+"volume": 242726
 },
 "BHDV39": {
 "isin": "BRBHDVBDR002",
-"negocios": 34,
+"negocios": 36,
 "nome": "BKR CORE HDV",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 17.18,
-"ultimo_pregao": "2026-11-10",
-"volume": 32257
+"ultimo_preco": 17.04,
+"ultimo_pregao": "2026-11-11",
+"volume": 33297
 },
 "BHEF39": {
 "isin": "BRBHEFBDR003",
@@ -1783,13 +1834,13 @@
 },
 "BHER39": {
 "isin": "BRBHERBDR008",
-"negocios": 10,
+"negocios": 11,
 "nome": "GX GAMES SPT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 40.46,
-"ultimo_pregao": "2026-11-10",
-"volume": 191579
+"ultimo_preco": 40.08,
+"ultimo_pregao": "2026-11-11",
+"volume": 191779
 },
 "BHVN34": {
 "isin": "BRBHVNBDR001",
@@ -1803,13 +1854,13 @@
 },
 "BHYG39": {
 "isin": "BRBHYGBDR009",
-"negocios": 1342,
+"negocios": 1382,
 "nome": "BKR IBOXX HY",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 53.91,
-"ultimo_pregao": "2026-11-10",
-"volume": 2335135
+"ultimo_preco": 53.71,
+"ultimo_pregao": "2026-11-11",
+"volume": 2879931
 },
 "BIAI39": {
 "isin": "BRBIAIBDR003",
@@ -1833,23 +1884,23 @@
 },
 "BIAU39": {
 "isin": "BRBIAUBDR008",
-"negocios": 879,
+"negocios": 942,
 "nome": "GOLD TRUST",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 105.69,
-"ultimo_pregao": "2026-11-10",
-"volume": 11448734
+"ultimo_preco": 103.74,
+"ultimo_pregao": "2026-11-11",
+"volume": 13321857
 },
 "BIBB39": {
 "isin": "BRBIBBBDR006",
-"negocios": 164,
+"negocios": 184,
 "nome": "ICE BIOTECH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 80.87,
-"ultimo_pregao": "2026-11-10",
-"volume": 5529332
+"ultimo_preco": 80.97,
+"ultimo_pregao": "2026-11-11",
+"volume": 5909905
 },
 "BICL39": {
 "isin": "BRBICLBDR003",
@@ -1873,13 +1924,13 @@
 },
 "BIDU34": {
 "isin": "BRBIDUBDR002",
-"negocios": 481,
+"negocios": 520,
 "nome": "BAIDU INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 31.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 2844775
+"ultimo_preco": 31.89,
+"ultimo_pregao": "2026-11-11",
+"volume": 2920876
 },
 "BIDV39": {
 "isin": "BRBIDVBDR000",
@@ -1893,63 +1944,63 @@
 },
 "BIEF39": {
 "isin": "BRBIEFBDR001",
-"negocios": 66,
+"negocios": 72,
 "nome": "COREMSCIEAFE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 67.88,
-"ultimo_pregao": "2026-11-10",
-"volume": 290991
+"ultimo_preco": 67.62,
+"ultimo_pregao": "2026-11-11",
+"volume": 318566
 },
 "BIEI39": {
 "isin": "BRBIEIBDR005",
-"negocios": 1293,
+"negocios": 1353,
 "nome": "BKR 3 7 YRTR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 53.26,
-"ultimo_pregao": "2026-11-10",
-"volume": 3039054
+"ultimo_preco": 53.15,
+"ultimo_pregao": "2026-11-11",
+"volume": 3082252
 },
 "BIEM39": {
 "isin": "BRBIEMBDR007",
-"negocios": 186,
+"negocios": 195,
 "nome": "COREMSCI EMK",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 68.45,
-"ultimo_pregao": "2026-11-10",
-"volume": 5735269
+"ultimo_preco": 70.17,
+"ultimo_pregao": "2026-11-11",
+"volume": 5853177
 },
 "BIEO39": {
 "isin": "BRBIEOBDR003",
-"negocios": 9,
+"negocios": 10,
 "nome": "BKR OIL GAS",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRE",
-"ultimo_preco": 73.08,
-"ultimo_pregao": "2026-11-10",
-"volume": 16072
+"ultimo_preco": 74.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 16521
 },
 "BIEU39": {
 "isin": "BRBIEUBDR000",
-"negocios": 823,
+"negocios": 848,
 "nome": "COREMSCI EUR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 70.78,
-"ultimo_pregao": "2026-11-10",
-"volume": 9870525
+"ultimo_preco": 70.35,
+"ultimo_pregao": "2026-11-11",
+"volume": 9952660
 },
 "BIEV39": {
 "isin": "BRBIEVBDR008",
-"negocios": 8,
+"negocios": 10,
 "nome": "EUROPE ETF",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 79.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 16610
+"ultimo_preco": 81.6,
+"ultimo_pregao": "2026-11-11",
+"volume": 37336
 },
 "BIEZ39": {
 "isin": "BRBIEZBDR009",
@@ -1973,23 +2024,23 @@
 },
 "BIGS39": {
 "isin": "BRBIGSBDR009",
-"negocios": 1555,
+"negocios": 1599,
 "nome": "BKR 1 5YGRCO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 57.24,
-"ultimo_pregao": "2026-11-10",
-"volume": 2404697
+"ultimo_preco": 57.02,
+"ultimo_pregao": "2026-11-11",
+"volume": 2439449
 },
 "BIHE39": {
 "isin": "BRBIHEBDR007",
-"negocios": 43,
+"negocios": 47,
 "nome": "BKR PHARMACL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 34.47,
-"ultimo_pregao": "2026-11-10",
-"volume": 113596
+"ultimo_preco": 34.23,
+"ultimo_pregao": "2026-11-11",
+"volume": 116059
 },
 "BIHF39": {
 "isin": "BRBIHFBDR004",
@@ -2003,13 +2054,13 @@
 },
 "BIHI39": {
 "isin": "BRBIHIBDR008",
-"negocios": 146,
+"negocios": 155,
 "nome": "USMEDICDEVIC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 9.28,
-"ultimo_pregao": "2026-11-10",
-"volume": 54462
+"ultimo_preco": 9.25,
+"ultimo_pregao": "2026-11-11",
+"volume": 55266
 },
 "BIIB34": {
 "isin": "BRBIIBBDR001",
@@ -2053,13 +2104,13 @@
 },
 "BILB34": {
 "isin": "BRBILBBDR005",
-"negocios": 23,
+"negocios": 27,
 "nome": "BILBAOVIZ",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 148.39,
-"ultimo_pregao": "2026-11-10",
-"volume": 15584
+"ultimo_preco": 145.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 16167
 },
 "BILF39": {
 "isin": "BRBILFBDR006",
@@ -2073,43 +2124,43 @@
 },
 "BITO39": {
 "isin": "BRBITOBDR001",
-"negocios": 2492,
+"negocios": 2494,
 "nome": "CORE SP TOTA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 91.31,
-"ultimo_pregao": "2026-11-10",
-"volume": 3336358
+"ultimo_preco": 92.5,
+"ultimo_pregao": "2026-11-11",
+"volume": 3336635
 },
 "BIVB39": {
 "isin": "BRBIVBBDR004",
-"negocios": 2532,
+"negocios": 2590,
 "nome": "CORE SP 500",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 105.04,
-"ultimo_pregao": "2026-11-10",
-"volume": 17526976
+"ultimo_preco": 106.07,
+"ultimo_pregao": "2026-11-11",
+"volume": 17669899
 },
 "BIVE39": {
 "isin": "BRBIVEBDR008",
-"negocios": 302,
+"negocios": 319,
 "nome": "SP500 VALUE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 89.86,
-"ultimo_pregao": "2026-11-10",
-"volume": 2233931
+"ultimo_preco": 89.84,
+"ultimo_pregao": "2026-11-11",
+"volume": 2284850
 },
 "BIVW39": {
 "isin": "BRBIVWBDR000",
-"negocios": 193,
+"negocios": 196,
 "nome": "SP500GROWTH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 91.75,
-"ultimo_pregao": "2026-11-10",
-"volume": 7683904
+"ultimo_preco": 93.24,
+"ultimo_pregao": "2026-11-11",
+"volume": 26188478
 },
 "BIWF39": {
 "isin": "BRBIWFBDR003",
@@ -2123,83 +2174,83 @@
 },
 "BIWM39": {
 "isin": "BRBIWMBDR009",
-"negocios": 887,
+"negocios": 891,
 "nome": "RUSSELL 2000",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 78.01,
-"ultimo_pregao": "2026-11-10",
-"volume": 25391401
+"ultimo_preco": 78.93,
+"ultimo_pregao": "2026-11-11",
+"volume": 25397081
 },
 "BIXC39": {
 "isin": "BRBIXCBDR008",
-"negocios": 24,
+"negocios": 26,
 "nome": "BKR GLB ENER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 79.84,
-"ultimo_pregao": "2026-11-10",
-"volume": 46422
+"ultimo_preco": 80.5,
+"ultimo_pregao": "2026-11-11",
+"volume": 46583
 },
 "BIXJ39": {
 "isin": "BRBIXJBDR003",
-"negocios": 1182,
+"negocios": 1204,
 "nome": "GLOBALHEALTH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 80.59,
-"ultimo_pregao": "2026-11-10",
-"volume": 395956
+"ultimo_preco": 79.52,
+"ultimo_pregao": "2026-11-11",
+"volume": 404930
 },
 "BIXN39": {
 "isin": "BRBIXNBDR005",
-"negocios": 304,
+"negocios": 318,
 "nome": "GLOBAL TECH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 23.8,
-"ultimo_pregao": "2026-11-10",
-"volume": 418466
+"ultimo_preco": 24.48,
+"ultimo_pregao": "2026-11-11",
+"volume": 565524
 },
 "BIXU39": {
 "isin": "BRBIXUBDR000",
-"negocios": 73,
+"negocios": 80,
 "nome": "BKR TI STOCK",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 86.17,
-"ultimo_pregao": "2026-11-10",
-"volume": 192264
+"ultimo_preco": 86.49,
+"ultimo_pregao": "2026-11-11",
+"volume": 198083
 },
 "BIYC39": {
 "isin": "BRBIYCBDR006",
-"negocios": 12,
+"negocios": 14,
 "nome": "BKR CODISCRT",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRE",
-"ultimo_preco": 113.74,
-"ultimo_pregao": "2026-11-06",
-"volume": 14145
+"ultimo_preco": 117.48,
+"ultimo_pregao": "2026-11-11",
+"volume": 19432
 },
 "BIYE39": {
 "isin": "BRBIYEBDR002",
-"negocios": 187,
+"negocios": 191,
 "nome": "BKR US ENER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 122.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 1663307
+"ultimo_preco": 124.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 1672192
 },
 "BIYF39": {
 "isin": "BRBIYFBDR009",
-"negocios": 515,
+"negocios": 520,
 "nome": "US FINANCIAL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 49.15,
-"ultimo_pregao": "2026-11-10",
-"volume": 2986686
+"ultimo_preco": 49.75,
+"ultimo_pregao": "2026-11-11",
+"volume": 2987439
 },
 "BIYG39": {
 "isin": "BRBIYGBDR007",
@@ -2213,13 +2264,13 @@
 },
 "BIYJ39": {
 "isin": "BRBIYJBDR001",
-"negocios": 2,
+"negocios": 3,
 "nome": "BKR US INDLS",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRE",
-"ultimo_preco": 85.05,
-"ultimo_pregao": "2026-11-05",
-"volume": 5446
+"ultimo_preco": 89.64,
+"ultimo_pregao": "2026-11-11",
+"volume": 6880
 },
 "BIYP39": {
 "isin": "BRBIYPBDR008",
@@ -2233,23 +2284,23 @@
 },
 "BIYT39": {
 "isin": "BRBIYTBDR000",
-"negocios": 326,
+"negocios": 328,
 "nome": "BKR 7 10 YRT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 50.98,
-"ultimo_pregao": "2026-11-10",
-"volume": 8429096
+"ultimo_preco": 50.74,
+"ultimo_pregao": "2026-11-11",
+"volume": 8504812
 },
 "BIYW39": {
 "isin": "BRBIYWBDR004",
-"negocios": 31,
+"negocios": 32,
 "nome": "US TECHNOLOG",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 36.8,
-"ultimo_pregao": "2026-11-10",
-"volume": 546842
+"ultimo_preco": 36.81,
+"ultimo_pregao": "2026-11-11",
+"volume": 546879
 },
 "BIYZ39": {
 "isin": "BRBIYZBDR007",
@@ -2263,43 +2314,43 @@
 },
 "BKCH39": {
 "isin": "BRBKCHBDR007",
-"negocios": 37,
+"negocios": 40,
 "nome": "GX BLOCKCHAI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 21.72,
-"ultimo_pregao": "2026-11-10",
-"volume": 19356
+"ultimo_preco": 22.84,
+"ultimo_pregao": "2026-11-11",
+"volume": 20864
 },
 "BKNG34": {
 "isin": "BRBKNGBDR006",
-"negocios": 2631,
+"negocios": 3224,
 "nome": "BOOKING",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 5.08,
-"ultimo_pregao": "2026-11-10",
-"volume": 14792166
+"ultimo_preco": 5.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 17408740
 },
 "BKSA39": {
 "isin": "BRBKSABDR008",
-"negocios": 36,
+"negocios": 49,
 "nome": "BKR SAUDARAB",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 49.45,
-"ultimo_pregao": "2026-11-10",
-"volume": 129367
+"ultimo_preco": 50.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 136852
 },
 "BKWB39": {
 "isin": "BRBKWBBDR008",
-"negocios": 124,
+"negocios": 127,
 "nome": "KR CSI CHINA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 134.94,
-"ultimo_pregao": "2026-11-10",
-"volume": 3501234
+"ultimo_preco": 132.5,
+"ultimo_pregao": "2026-11-11",
+"volume": 3633669
 },
 "BKYY39": {
 "isin": "BRBKYYBDR006",
@@ -2313,23 +2364,23 @@
 },
 "BLAK34": {
 "isin": "BRBLAKBDR003",
-"negocios": 1915,
+"negocios": 1958,
 "nome": "BLACKROCK",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 103.91,
-"ultimo_pregao": "2026-11-10",
-"volume": 7555451
+"ultimo_preco": 103.11,
+"ultimo_pregao": "2026-11-11",
+"volume": 7907706
 },
 "BLBT39": {
 "isin": "BRBLBTBDR002",
-"negocios": 1362,
+"negocios": 1424,
 "nome": "GX LITHIUM B",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 41.9,
-"ultimo_pregao": "2026-11-10",
-"volume": 371391
+"ultimo_preco": 42.36,
+"ultimo_pregao": "2026-11-11",
+"volume": 544043
 },
 "BLPA39": {
 "isin": "BRBLPABDR002",
@@ -2343,33 +2394,33 @@
 },
 "BLPX39": {
 "isin": "BRBLPXBDR004",
-"negocios": 226,
+"negocios": 227,
 "nome": "GX MLP EN IN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
 "ultimo_preco": 49.7,
-"ultimo_pregao": "2026-11-10",
-"volume": 19536
+"ultimo_pregao": "2026-11-11",
+"volume": 23264
 },
 "BLQD39": {
 "isin": "BRBLQDBDR004",
-"negocios": 631,
+"negocios": 665,
 "nome": "BKR IBOX IGC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 57.97,
-"ultimo_pregao": "2026-11-10",
-"volume": 3526059
+"ultimo_preco": 57.73,
+"ultimo_pregao": "2026-11-11",
+"volume": 3548966
 },
 "BMBB39": {
 "isin": "BRBMBBBDR008",
-"negocios": 31,
+"negocios": 34,
 "nome": "BKR MBS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 50.75,
-"ultimo_pregao": "2026-11-10",
-"volume": 3037
+"ultimo_preco": 50.55,
+"ultimo_pregao": "2026-11-11",
+"volume": 3494
 },
 "BMIL39": {
 "isin": "BRBMILBDR002",
@@ -2383,13 +2434,13 @@
 },
 "BMTU39": {
 "isin": "BRBMTUBDR000",
-"negocios": 76,
+"negocios": 91,
 "nome": "MSCIUSAMOM F",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 18.54,
-"ultimo_pregao": "2026-11-10",
-"volume": 543405
+"ultimo_preco": 19.34,
+"ultimo_pregao": "2026-11-11",
+"volume": 554778
 },
 "BMYB34": {
 "isin": "BRBMYBBDR000",
@@ -2403,63 +2454,63 @@
 },
 "BNDA39": {
 "isin": "BRBNDABDR004",
-"negocios": 91,
+"negocios": 109,
 "nome": "MSCI INDIA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 72.03,
-"ultimo_pregao": "2026-11-10",
-"volume": 357997
+"ultimo_preco": 71.54,
+"ultimo_pregao": "2026-11-11",
+"volume": 456462
 },
 "BOAC34": {
 "isin": "BRBOACBDR004",
-"negocios": 4190,
+"negocios": 4621,
 "nome": "BANK AMERICA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 70.3,
-"ultimo_pregao": "2026-11-10",
-"volume": 21098918
+"ultimo_preco": 70.56,
+"ultimo_pregao": "2026-11-11",
+"volume": 22645545
 },
 "BOEF39": {
 "isin": "BRBOEFBDR009",
-"negocios": 13,
+"negocios": 15,
 "nome": "BKR SP100",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 102.4,
-"ultimo_pregao": "2026-11-09",
-"volume": 505237
+"ultimo_preco": 104.4,
+"ultimo_pregao": "2026-11-11",
+"volume": 505655
 },
 "BOEI34": {
 "isin": "BRBOEIBDR003",
-"negocios": 48,
+"negocios": 54,
 "nome": "BOEING",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 969.75,
-"ultimo_pregao": "2026-11-10",
-"volume": 1037324
+"ultimo_preco": 969.03,
+"ultimo_pregao": "2026-11-11",
+"volume": 1216078
 },
 "BONY34": {
 "isin": "BRBONYBDR001",
-"negocios": 38,
+"negocios": 95,
 "nome": "BNY MELLON",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 837.09,
-"ultimo_pregao": "2026-11-09",
-"volume": 627697
+"ultimo_preco": 853.45,
+"ultimo_pregao": "2026-11-11",
+"volume": 761364
 },
 "BOTZ39": {
 "isin": "BRBOTZBDR005",
-"negocios": 184,
+"negocios": 193,
 "nome": "GX ROBOTC AI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 43.93,
-"ultimo_pregao": "2026-11-10",
-"volume": 670150
+"ultimo_preco": 44.98,
+"ultimo_pregao": "2026-11-11",
+"volume": 692495
 },
 "BOXP34": {
 "isin": "BRBOXPBDR008",
@@ -2483,13 +2534,23 @@
 },
 "BPVE39": {
 "isin": "BRBPVEBDR003",
-"negocios": 31,
+"negocios": 39,
 "nome": "GX INFRA DEV",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 49.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 11668
+"ultimo_preco": 50.11,
+"ultimo_pregao": "2026-11-11",
+"volume": 13165
+},
+"BQCL39": {
+"isin": "BRBQCLBDR006",
+"negocios": 7,
+"nome": "FT NSQ GREEN",
+"primeiro_pregao": "2026-11-11",
+"tipo": "DRE",
+"ultimo_preco": 32.08,
+"ultimo_pregao": "2026-11-11",
+"volume": 1924
 },
 "BQLT39": {
 "isin": "BRBQLTBDR000",
@@ -2503,123 +2564,123 @@
 },
 "BQQW39": {
 "isin": "BRBQQWBDR003",
-"negocios": 1,
+"negocios": 2,
 "nome": "FT NASD100EQ",
 "primeiro_pregao": "2026-11-06",
 "tipo": "DRE",
-"ultimo_preco": 78.88,
-"ultimo_pregao": "2026-11-06",
-"volume": 4102
+"ultimo_preco": 84.15,
+"ultimo_pregao": "2026-11-11",
+"volume": 84044
 },
 "BQUA39": {
 "isin": "BRBQUABDR001",
-"negocios": 203,
+"negocios": 204,
 "nome": "MSCIUSQUAL F",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 20.72,
-"ultimo_pregao": "2026-11-10",
-"volume": 271549
+"ultimo_preco": 20.77,
+"ultimo_pregao": "2026-11-11",
+"volume": 274041
 },
 "BQYL39": {
 "isin": "BRBQYLBDR000",
-"negocios": 39,
+"negocios": 41,
 "nome": "GX NASDAQ100",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 32.47,
-"ultimo_pregao": "2026-11-10",
-"volume": 15260
+"ultimo_preco": 33.47,
+"ultimo_pregao": "2026-11-11",
+"volume": 15494
 },
 "BSDV39": {
 "isin": "BRBSDVBDR009",
-"negocios": 122,
+"negocios": 125,
 "nome": "GX SUPERDIVD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 61.55,
-"ultimo_pregao": "2026-11-10",
-"volume": 33377
+"ultimo_preco": 61.5,
+"ultimo_pregao": "2026-11-11",
+"volume": 35897
 },
 "BSHV39": {
 "isin": "BRBSHVBDR000",
-"negocios": 452,
+"negocios": 475,
 "nome": "BKR 0 1 SHV",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 61.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 3098761
+"ultimo_preco": 61.08,
+"ultimo_pregao": "2026-11-11",
+"volume": 3197416
 },
 "BSHY39": {
 "isin": "BRBSHYBDR004",
-"negocios": 195,
+"negocios": 203,
 "nome": "BKR 1 3 YRTR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 56.77,
-"ultimo_pregao": "2026-11-10",
-"volume": 1877954
+"ultimo_preco": 56.58,
+"ultimo_pregao": "2026-11-11",
+"volume": 2081776
 },
 "BSIL39": {
 "isin": "BRBSILBDR009",
-"negocios": 9699,
+"negocios": 12503,
 "nome": "GX SILVER MN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 43.72,
-"ultimo_pregao": "2026-11-10",
-"volume": 13227374
+"ultimo_preco": 42.95,
+"ultimo_pregao": "2026-11-11",
+"volume": 13790738
 },
 "BSLV39": {
 "isin": "BRBSLVBDR002",
-"negocios": 2615,
+"negocios": 2826,
 "nome": "SILVER TRUST",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 86.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 23236638
+"ultimo_preco": 86.4,
+"ultimo_pregao": "2026-11-11",
+"volume": 25478133
 },
 "BSOX39": {
 "isin": "BRBSOXBDR002",
-"negocios": 21979,
+"negocios": 26094,
 "nome": "BKR SEMICOND",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 21.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 26190299
+"ultimo_preco": 21.53,
+"ultimo_pregao": "2026-11-11",
+"volume": 28246809
 },
 "BSRE39": {
 "isin": "BRBSREBDR005",
-"negocios": 6,
+"negocios": 9,
 "nome": "GX SUDIVREIT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 37.05,
-"ultimo_pregao": "2026-11-04",
-"volume": 475
+"ultimo_preco": 37.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 1369
 },
 "BSTI39": {
 "isin": "BRBSTIBDR002",
-"negocios": 63,
+"negocios": 64,
 "nome": "BKR STIP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 56.07,
-"ultimo_pregao": "2026-11-10",
-"volume": 555762
+"ultimo_preco": 55.79,
+"ultimo_pregao": "2026-11-11",
+"volume": 583657
 },
 "BTFL39": {
 "isin": "BRBTFLBDR003",
-"negocios": 35,
+"negocios": 39,
 "nome": "BKR FLOT RTE",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRE",
 "ultimo_preco": 56.4,
-"ultimo_pregao": "2026-11-10",
-"volume": 156470
+"ultimo_pregao": "2026-11-11",
+"volume": 162255
 },
 "BTHD39": {
 "isin": "BRBTHDBDR006",
@@ -2633,23 +2694,23 @@
 },
 "BTIP39": {
 "isin": "BRBTIPBDR008",
-"negocios": 19,
+"negocios": 22,
 "nome": "BKR TIP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 58.33,
-"ultimo_pregao": "2026-11-09",
-"volume": 897044
+"ultimo_preco": 58.44,
+"ultimo_pregao": "2026-11-11",
+"volume": 900024
 },
 "BTLT39": {
 "isin": "BRBTLTBDR004",
-"negocios": 11574,
+"negocios": 13272,
 "nome": "BKR 20YR TRS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 30.08,
-"ultimo_pregao": "2026-11-10",
-"volume": 10135969
+"ultimo_preco": 30.05,
+"ultimo_pregao": "2026-11-11",
+"volume": 10743721
 },
 "BUAE39": {
 "isin": "BRBUAEBDR007",
@@ -2663,73 +2724,73 @@
 },
 "BURA39": {
 "isin": "BRBURABDR009",
-"negocios": 6052,
+"negocios": 7843,
 "nome": "GX URANIUM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 30.7,
-"ultimo_pregao": "2026-11-10",
-"volume": 7744476
+"ultimo_preco": 31.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 8480802
 },
 "BURT39": {
 "isin": "BRBURTBDR009",
-"negocios": 20,
+"negocios": 22,
 "nome": "BKR MS WLD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 75.87,
-"ultimo_pregao": "2026-11-10",
-"volume": 8595864
+"ultimo_preco": 76.24,
+"ultimo_pregao": "2026-11-11",
+"volume": 8598149
 },
 "BUSM39": {
 "isin": "BRBUSMBDR002",
-"negocios": 16,
+"negocios": 19,
 "nome": "MSCI US MVOL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 70.77,
-"ultimo_pregao": "2026-11-10",
-"volume": 3777275
+"ultimo_preco": 72.06,
+"ultimo_pregao": "2026-11-11",
+"volume": 24831423
 },
 "BUSR39": {
 "isin": "BRBUSRBDR001",
-"negocios": 7,
+"negocios": 8,
 "nome": "CORE US REIT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 60.8,
-"ultimo_pregao": "2026-11-09",
-"volume": 16051
+"ultimo_preco": 61.44,
+"ultimo_pregao": "2026-11-11",
+"volume": 16297
 },
 "BUTL39": {
 "isin": "BRBUTLBDR002",
-"negocios": 339,
+"negocios": 343,
 "nome": "BKR US UTILT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 77.8,
-"ultimo_pregao": "2026-11-10",
-"volume": 341562
+"ultimo_preco": 77.76,
+"ultimo_pregao": "2026-11-11",
+"volume": 347930
 },
 "BVLU39": {
 "isin": "BRBVLUBDR008",
-"negocios": 70,
+"negocios": 71,
 "nome": "MSCIUSVALUEF",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 103.8,
-"ultimo_pregao": "2026-11-10",
-"volume": 101671
+"ultimo_preco": 107.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 105416
 },
 "BXTC39": {
 "isin": "BRBXTCBDR005",
-"negocios": 8,
+"negocios": 9,
 "nome": "EXPON TECHNL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 76.56,
-"ultimo_pregao": "2026-11-04",
-"volume": 7072
+"ultimo_preco": 77.28,
+"ultimo_pregao": "2026-11-11",
+"volume": 7227
 },
 "BZRO39": {
 "isin": "BRBZROBDR009",
@@ -2743,13 +2804,13 @@
 },
 "C1AB34": {
 "isin": "BRC1ABBDR009",
-"negocios": 41,
+"negocios": 68,
 "nome": "CABLE ONE IN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 21.58,
-"ultimo_pregao": "2026-11-10",
-"volume": 15106
+"ultimo_preco": 20.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 26826
 },
 "C1AG34": {
 "isin": "BRC1AGBDR008",
@@ -2763,33 +2824,33 @@
 },
 "C1AH34": {
 "isin": "BRC1AHBDR006",
-"negocios": 28,
+"negocios": 41,
 "nome": "CARDINAL HEA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 1540.2,
-"ultimo_pregao": "2026-11-10",
-"volume": 54127
+"ultimo_preco": 1537.6,
+"ultimo_pregao": "2026-11-11",
+"volume": 74031
 },
 "C1BL34": {
 "isin": "BRC1BLBDR006",
-"negocios": 525,
+"negocios": 562,
 "nome": "CHUBB LTD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 85.76,
-"ultimo_pregao": "2026-11-10",
-"volume": 180069
+"ultimo_preco": 85.59,
+"ultimo_pregao": "2026-11-11",
+"volume": 184172
 },
 "C1BO34": {
 "isin": "BRC1BOBDR000",
-"negocios": 4,
+"negocios": 5,
 "nome": "CBOE GLOBAL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 990.13,
-"ultimo_pregao": "2026-11-09",
-"volume": 26942
+"ultimo_preco": 1020.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 30002
 },
 "C1BR34": {
 "isin": "BRC1BRBDR003",
@@ -2823,23 +2884,23 @@
 },
 "C1CL34": {
 "isin": "BRC1CLBDR004",
-"negocios": 17,
+"negocios": 304,
 "nome": "CARNIVAL COR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 171.02,
-"ultimo_pregao": "2026-11-10",
-"volume": 35561
+"ultimo_preco": 172.37,
+"ultimo_pregao": "2026-11-11",
+"volume": 88987
 },
 "C1DN34": {
 "isin": "BRC1DNBDR008",
-"negocios": 14854,
+"negocios": 14897,
 "nome": "CADENCE DESI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 54.3,
-"ultimo_pregao": "2026-11-10",
-"volume": 25839534
+"ultimo_preco": 53.76,
+"ultimo_pregao": "2026-11-11",
+"volume": 26097589
 },
 "C1DW34": {
 "isin": "BRC1DWBDR009",
@@ -2863,13 +2924,13 @@
 },
 "C1GP34": {
 "isin": "BRC1GPBDR006",
-"negocios": 95,
+"negocios": 104,
 "nome": "COSTAR GROUP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 1.69,
-"ultimo_pregao": "2026-11-10",
-"volume": 10492
+"ultimo_preco": 1.67,
+"ultimo_pregao": "2026-11-11",
+"volume": 10643
 },
 "C1HK34": {
 "isin": "BRC1HKBDR005",
@@ -2883,13 +2944,13 @@
 },
 "C1HR34": {
 "isin": "BRC1HRBDR000",
-"negocios": 4,
+"negocios": 5,
 "nome": "CH ROBINSON",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 35.31,
-"ultimo_pregao": "2026-11-09",
-"volume": 1371
+"ultimo_preco": 37.04,
+"ultimo_pregao": "2026-11-11",
+"volume": 1408
 },
 "C1HT34": {
 "isin": "BRC1HTBDR006",
@@ -2913,123 +2974,123 @@
 },
 "C1MG34": {
 "isin": "BRC1MGBDR003",
-"negocios": 330,
+"negocios": 380,
 "nome": "CHIPOTLE MEX",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 10.08,
-"ultimo_pregao": "2026-11-10",
-"volume": 564931
+"ultimo_preco": 10.19,
+"ultimo_pregao": "2026-11-11",
+"volume": 576660
 },
 "C1MI34": {
 "isin": "BRC1MIBDR009",
-"negocios": 4161,
+"negocios": 4514,
 "nome": "CUMMINS INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 45.35,
-"ultimo_pregao": "2026-11-10",
-"volume": 603255
+"ultimo_preco": 46.05,
+"ultimo_pregao": "2026-11-11",
+"volume": 648450
 },
 "C1NC34": {
 "isin": "BRC1NCBDR000",
-"negocios": 9,
+"negocios": 10,
 "nome": "CENTENE CORP",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 379.07,
-"ultimo_pregao": "2026-11-10",
-"volume": 90596
+"ultimo_preco": 391.56,
+"ultimo_pregao": "2026-11-11",
+"volume": 103126
 },
 "C1OO34": {
 "isin": "BRC1OOBDR003",
-"negocios": 1,
+"negocios": 2,
 "nome": "COOPER COMPA",
 "primeiro_pregao": "2026-11-09",
 "tipo": "DRN",
-"ultimo_preco": 34.86,
-"ultimo_pregao": "2026-11-09",
-"volume": 6972
+"ultimo_preco": 34.84,
+"ultimo_pregao": "2026-11-11",
+"volume": 7007
 },
 "C1PR34": {
 "isin": "BRC1PRBDR003",
-"negocios": 6,
+"negocios": 11,
 "nome": "COPART INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 88.25,
-"ultimo_pregao": "2026-11-04",
-"volume": 131305
+"ultimo_preco": 88.79,
+"ultimo_pregao": "2026-11-11",
+"volume": 148827
 },
 "C1RB34": {
 "isin": "BRC1RBBDR003",
-"negocios": 49,
+"negocios": 53,
 "nome": "CEREBRAS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 20.08,
-"ultimo_pregao": "2026-11-09",
-"volume": 138961
+"ultimo_preco": 22.56,
+"ultimo_pregao": "2026-11-11",
+"volume": 143556
 },
 "C1RH34": {
 "isin": "BRC1RHBDR000",
-"negocios": 12,
+"negocios": 29,
 "nome": "CRH PLC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 90.24,
-"ultimo_pregao": "2026-11-10",
-"volume": 22432
+"ultimo_preco": 88.92,
+"ultimo_pregao": "2026-11-11",
+"volume": 23943
 },
 "C1RR34": {
 "isin": "BRC1RRBDR009",
-"negocios": 6,
+"negocios": 7,
 "nome": "CARRIER GLOB",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 74.34,
-"ultimo_pregao": "2026-11-09",
-"volume": 13341
+"ultimo_preco": 75.04,
+"ultimo_pregao": "2026-11-11",
+"volume": 13416
 },
 "C1TA34": {
 "isin": "BRC1TABDR001",
-"negocios": 41,
+"negocios": 44,
 "nome": "CINTAS CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 248.74,
-"ultimo_pregao": "2026-11-10",
-"volume": 154605
+"ultimo_preco": 250.75,
+"ultimo_pregao": "2026-11-11",
+"volume": 162623
 },
 "C1TV34": {
 "isin": "BRC1TVBDR007",
-"negocios": 49,
+"negocios": 58,
 "nome": "CORTEVA INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 16.92,
-"ultimo_pregao": "2026-11-10",
-"volume": 46319
+"ultimo_preco": 16.86,
+"ultimo_pregao": "2026-11-11",
+"volume": 49847
 },
 "C2AC34": {
 "isin": "BRC2ACBDR005",
-"negocios": 26,
+"negocios": 27,
 "nome": "CACI INTERNL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
 "ultimo_preco": 4.63,
-"ultimo_pregao": "2026-11-10",
-"volume": 2381
+"ultimo_pregao": "2026-11-11",
+"volume": 2390
 },
 "C2CA34": {
 "isin": "BRC2CABDR005",
-"negocios": 6,
+"negocios": 7,
 "nome": "FEMSA SAB CV",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 132.86,
-"ultimo_pregao": "2026-11-10",
-"volume": 2054
+"ultimo_preco": 133.64,
+"ultimo_pregao": "2026-11-11",
+"volume": 2321
 },
 "C2EM34": {
 "isin": "BRC2EMBDR006",
@@ -3053,63 +3114,63 @@
 },
 "C2HP34": {
 "isin": "BRC2HPBDR002",
-"negocios": 34,
+"negocios": 37,
 "nome": "CHARGEPOINTH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 21.32,
-"ultimo_pregao": "2026-11-09",
-"volume": 7414
+"ultimo_preco": 23.3,
+"ultimo_pregao": "2026-11-11",
+"volume": 7766
 },
 "C2OI34": {
 "isin": "BRC2OIBDR003",
-"negocios": 3558,
+"negocios": 3914,
 "nome": "COINBASEGLOB",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 30.38,
-"ultimo_pregao": "2026-11-10",
-"volume": 15249740
+"ultimo_preco": 30.14,
+"ultimo_pregao": "2026-11-11",
+"volume": 18709340
 },
 "C2OL34": {
 "isin": "BRC2OLBDR007",
-"negocios": 390,
+"negocios": 402,
 "nome": "GRUPOCIBEST",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 127.53,
-"ultimo_pregao": "2026-11-10",
-"volume": 195137
+"ultimo_preco": 128.18,
+"ultimo_pregao": "2026-11-11",
+"volume": 203578
 },
 "C2OU34": {
 "isin": "BRC2OUBDR008",
-"negocios": 8,
+"negocios": 10,
 "nome": "COURSERA INC",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 10.35,
-"ultimo_pregao": "2026-11-09",
-"volume": 38016
+"ultimo_preco": 10.38,
+"ultimo_pregao": "2026-11-11",
+"volume": 44244
 },
 "C2RS34": {
 "isin": "BRC2RSBDR005",
-"negocios": 4,
+"negocios": 17,
 "nome": "CRISPR THERA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 34.53,
-"ultimo_pregao": "2026-11-06",
-"volume": 25124
+"ultimo_preco": 31.79,
+"ultimo_pregao": "2026-11-11",
+"volume": 148309
 },
 "C2RW34": {
 "isin": "BRC2RWBDR007",
-"negocios": 3167,
+"negocios": 3318,
 "nome": "CROWDSTRIKE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 57.61,
-"ultimo_pregao": "2026-11-10",
-"volume": 56985208
+"ultimo_preco": 58.62,
+"ultimo_pregao": "2026-11-11",
+"volume": 58498383
 },
 "C2ZR34": {
 "isin": "BRC2ZRBDR000",
@@ -3123,13 +3184,13 @@
 },
 "CAON34": {
 "isin": "BRCAONBDR009",
-"negocios": 54,
+"negocios": 58,
 "nome": "CAPITAL ONE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 68.25,
-"ultimo_pregao": "2026-11-10",
-"volume": 84043
+"ultimo_preco": 68.19,
+"ultimo_pregao": "2026-11-11",
+"volume": 578979
 },
 "CAPH34": {
 "isin": "BRCAPHBDR008",
@@ -3143,43 +3204,43 @@
 },
 "CATP34": {
 "isin": "BRCATPBDR003",
-"negocios": 4361,
+"negocios": 4570,
 "nome": "CATERPILLAR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 204.05,
-"ultimo_pregao": "2026-11-10",
-"volume": 20219869
+"ultimo_preco": 209.63,
+"ultimo_pregao": "2026-11-11",
+"volume": 21593488
 },
 "CBTC39": {
 "isin": "BRCBTCBDR009",
-"negocios": 1,
+"negocios": 2,
 "nome": "21SH BITCOIN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 33.73,
-"ultimo_pregao": "2026-11-03",
-"volume": 34
+"ultimo_preco": 32.6,
+"ultimo_pregao": "2026-11-11",
+"volume": 67
 },
 "CEGG34": {
 "isin": "BRCEGGBDR001",
-"negocios": 4818,
+"negocios": 5079,
 "nome": "CONSTELTN EM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 55.53,
-"ultimo_pregao": "2026-11-09",
-"volume": 297252
+"ultimo_preco": 61.58,
+"ultimo_pregao": "2026-11-11",
+"volume": 325486
 },
 "CHCM34": {
 "isin": "BRCHCMBDR001",
-"negocios": 227,
+"negocios": 263,
 "nome": "CHARTER COMM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 12.44,
-"ultimo_pregao": "2026-11-10",
-"volume": 976716
+"ultimo_preco": 12.52,
+"ultimo_pregao": "2026-11-11",
+"volume": 1077129
 },
 "CHME34": {
 "isin": "BRCHMEBDR007",
@@ -3193,33 +3254,33 @@
 },
 "CHPX39": {
 "isin": "BRCHPXBDR000",
-"negocios": 213,
+"negocios": 220,
 "nome": "GX AI SM QTM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 43.35,
-"ultimo_pregao": "2026-11-10",
-"volume": 105921
+"ultimo_preco": 46.83,
+"ultimo_pregao": "2026-11-11",
+"volume": 107900
 },
 "CHVX34": {
 "isin": "BRCHVXBDR008",
-"negocios": 15071,
+"negocios": 15545,
 "nome": "CHEVRON",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 120.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 35331350
+"ultimo_preco": 118.08,
+"ultimo_pregao": "2026-11-11",
+"volume": 39419405
 },
 "CLOV34": {
 "isin": "BRCLOVBDR009",
-"negocios": 9,
+"negocios": 12,
 "nome": "CLOVERHEALTH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 27.24,
-"ultimo_pregao": "2026-11-10",
-"volume": 41785
+"ultimo_preco": 27.69,
+"ultimo_pregao": "2026-11-11",
+"volume": 42613
 },
 "CLXC34": {
 "isin": "BRCLXCBDR000",
@@ -3233,33 +3294,33 @@
 },
 "CMCS34": {
 "isin": "BRCMCSBDR008",
-"negocios": 119,
+"negocios": 121,
 "nome": "COMCAST",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 27.57,
-"ultimo_pregao": "2026-11-10",
-"volume": 1084174
+"ultimo_preco": 27.63,
+"ultimo_pregao": "2026-11-11",
+"volume": 1084312
 },
 "CNIC34": {
 "isin": "BRCNICBDR007",
-"negocios": 16,
+"negocios": 17,
 "nome": "CANAD NATION",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
 "ultimo_preco": 29.4,
-"ultimo_pregao": "2026-11-10",
-"volume": 314646
+"ultimo_pregao": "2026-11-11",
+"volume": 314675
 },
 "COCA34": {
 "isin": "BRCOCABDR002",
-"negocios": 6954,
+"negocios": 8334,
 "nome": "COCA COLA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 91.05,
-"ultimo_pregao": "2026-11-10",
-"volume": 32474561
+"ultimo_preco": 90.28,
+"ultimo_pregao": "2026-11-11",
+"volume": 34503949
 },
 "COLD34": {
 "isin": "BRCOLDBDR007",
@@ -3273,13 +3334,13 @@
 },
 "COLG34": {
 "isin": "BRCOLGBDR000",
-"negocios": 133,
+"negocios": 161,
 "nome": "COLGATE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 78.45,
-"ultimo_pregao": "2026-11-10",
-"volume": 552905
+"ultimo_preco": 78.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 562716
 },
 "COLO39": {
 "isin": "BRCOLOBDR004",
@@ -3293,43 +3354,43 @@
 },
 "COPH34": {
 "isin": "BRCOPHBDR009",
-"negocios": 189,
+"negocios": 240,
 "nome": "COPHILLIPS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 63.44,
-"ultimo_pregao": "2026-11-10",
-"volume": 724441
+"ultimo_preco": 63.36,
+"ultimo_pregao": "2026-11-11",
+"volume": 760060
 },
 "COTY34": {
 "isin": "BRCOTYBDR006",
-"negocios": 28,
+"negocios": 34,
 "nome": "COTY INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 12.05,
-"ultimo_pregao": "2026-11-10",
-"volume": 38793
+"ultimo_preco": 11.37,
+"ultimo_pregao": "2026-11-11",
+"volume": 39936
 },
 "COWC34": {
 "isin": "BRCOWCBDR006",
-"negocios": 414,
+"negocios": 601,
 "nome": "COSTCO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 150.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 1082522
+"ultimo_preco": 150.45,
+"ultimo_pregao": "2026-11-11",
+"volume": 4617453
 },
 "CPRL34": {
 "isin": "BRCPRLBDR004",
-"negocios": 2,
+"negocios": 4,
 "nome": "CANAD KANSAS",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRN",
-"ultimo_preco": 130.64,
-"ultimo_pregao": "2026-11-10",
-"volume": 52387
+"ultimo_preco": 129.92,
+"ultimo_pregao": "2026-11-11",
+"volume": 56039
 },
 "CRIN34": {
 "isin": "BRCRINBDR005",
@@ -3353,13 +3414,13 @@
 },
 "CSCO34": {
 "isin": "BRCSCOBDR004",
-"negocios": 389,
+"negocios": 1005,
 "nome": "CISCO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 109.7,
-"ultimo_pregao": "2026-11-10",
-"volume": 2062940
+"ultimo_preco": 112.36,
+"ultimo_pregao": "2026-11-11",
+"volume": 2497985
 },
 "CSXC34": {
 "isin": "BRCSXCBDR005",
@@ -3373,13 +3434,13 @@
 },
 "CTGP34": {
 "isin": "BRCTGPBDR000",
-"negocios": 2258,
+"negocios": 2353,
 "nome": "CITIGROUP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 113.64,
-"ultimo_pregao": "2026-11-10",
-"volume": 37301037
+"ultimo_preco": 114.98,
+"ultimo_pregao": "2026-11-11",
+"volume": 40825742
 },
 "CTSH34": {
 "isin": "BRCTSHBDR002",
@@ -3393,63 +3454,63 @@
 },
 "CVSH34": {
 "isin": "BRCVSHBDR008",
-"negocios": 98,
+"negocios": 107,
 "nome": "CVS HEALTH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 49.15,
-"ultimo_pregao": "2026-11-10",
-"volume": 266328
+"ultimo_preco": 49.65,
+"ultimo_pregao": "2026-11-11",
+"volume": 325332
 },
 "D1DG34": {
 "isin": "BRD1DGBDR001",
-"negocios": 18577,
+"negocios": 18663,
 "nome": "DATADOG INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 99.77,
-"ultimo_pregao": "2026-11-10",
-"volume": 108646891
+"ultimo_preco": 100.73,
+"ultimo_pregao": "2026-11-11",
+"volume": 109161599
 },
 "D1EL34": {
 "isin": "BRD1ELBDR009",
-"negocios": 13148,
+"negocios": 13999,
 "nome": "DELL TECHNOL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 74.82,
-"ultimo_pregao": "2026-11-10",
-"volume": 64101314
+"ultimo_preco": 84.09,
+"ultimo_pregao": "2026-11-11",
+"volume": 68176657
 },
 "D1EX34": {
 "isin": "BRD1EXBDR004",
-"negocios": 41,
+"negocios": 48,
 "nome": "DEXCOM INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 8.91,
-"ultimo_pregao": "2026-11-10",
-"volume": 8837
+"ultimo_preco": 8.92,
+"ultimo_pregao": "2026-11-11",
+"volume": 11107
 },
 "D1LR34": {
 "isin": "BRD1LRBDR001",
-"negocios": 264,
+"negocios": 556,
 "nome": "DIGITAL REAL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 63.52,
-"ultimo_pregao": "2026-11-10",
-"volume": 97338
+"ultimo_preco": 63.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 115763
 },
 "D1OC34": {
 "isin": "BRD1OCBDR007",
-"negocios": 8,
+"negocios": 9,
 "nome": "DOCUSIGN INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 21.46,
-"ultimo_pregao": "2026-11-10",
-"volume": 126695
+"ultimo_preco": 21.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 133025
 },
 "D1OM34": {
 "isin": "BRD1OMBDR006",
@@ -3463,13 +3524,13 @@
 },
 "D1OW34": {
 "isin": "BRD1OWBDR005",
-"negocios": 18,
+"negocios": 21,
 "nome": "DOW INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 43.6,
-"ultimo_pregao": "2026-11-10",
-"volume": 41646
+"ultimo_preco": 45.4,
+"ultimo_pregao": "2026-11-11",
+"volume": 44851
 },
 "D1TE34": {
 "isin": "BRD1TEBDR002",
@@ -3503,23 +3564,23 @@
 },
 "D2AS34": {
 "isin": "BRD2ASBDR000",
-"negocios": 20,
+"negocios": 174,
 "nome": "DOORDASH INC",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 64.55,
-"ultimo_pregao": "2026-11-10",
-"volume": 493846
+"ultimo_preco": 65.94,
+"ultimo_pregao": "2026-11-11",
+"volume": 503988
 },
 "D2KN34": {
 "isin": "BRD2KNBDR000",
-"negocios": 106,
+"negocios": 109,
 "nome": "DRAFTKINGS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 17.68,
-"ultimo_pregao": "2026-11-10",
-"volume": 399242
+"ultimo_preco": 17.88,
+"ultimo_pregao": "2026-11-11",
+"volume": 400493
 },
 "D2OC34": {
 "isin": "BRD2OCBDR005",
@@ -3533,43 +3594,43 @@
 },
 "D2OX34": {
 "isin": "BRD2OXBDR001",
-"negocios": 75,
+"negocios": 79,
 "nome": "AMDOCS LTD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 28.86,
-"ultimo_pregao": "2026-11-10",
-"volume": 31371
+"ultimo_preco": 29.97,
+"ultimo_pregao": "2026-11-11",
+"volume": 36600
 },
 "D2PZ34": {
 "isin": "BRD2PZBDR003",
-"negocios": 7,
+"negocios": 8,
 "nome": "DOMINOSPIZZA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
 "ultimo_preco": 36.56,
-"ultimo_pregao": "2026-11-09",
-"volume": 8536
+"ultimo_pregao": "2026-11-11",
+"volume": 8573
 },
 "D2TC34": {
 "isin": "BRD2TCBDR004",
-"negocios": 10,
+"negocios": 11,
 "nome": "DYNATRACE IN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 30.18,
-"ultimo_pregao": "2026-11-10",
-"volume": 55445
+"ultimo_preco": 31.11,
+"ultimo_pregao": "2026-11-11",
+"volume": 56036
 },
 "DBAG34": {
 "isin": "BRDBAGBDR008",
-"negocios": 402,
+"negocios": 991,
 "nome": "DEUTSCHE AK",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 205.8,
-"ultimo_pregao": "2026-11-10",
-"volume": 477931
+"ultimo_preco": 207.7,
+"ultimo_pregao": "2026-11-11",
+"volume": 1025415
 },
 "DEAI34": {
 "isin": "BRDEAIBDR008",
@@ -3583,13 +3644,13 @@
 },
 "DEEC34": {
 "isin": "BRDEECBDR003",
-"negocios": 5167,
+"negocios": 6189,
 "nome": "DEERE CO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 130.28,
-"ultimo_pregao": "2026-11-10",
-"volume": 2455343
+"ultimo_preco": 128.05,
+"ultimo_pregao": "2026-11-11",
+"volume": 2726848
 },
 "DEFT31": {
 "isin": "BRDEFTBDR004",
@@ -3603,63 +3664,73 @@
 },
 "DEOP34": {
 "isin": "BRDEOPBDR004",
-"negocios": 75,
+"negocios": 87,
 "nome": "DIAGEO PL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 31.44,
-"ultimo_pregao": "2026-11-10",
-"volume": 120352
+"ultimo_preco": 31.43,
+"ultimo_pregao": "2026-11-11",
+"volume": 124547
 },
 "DGCO34": {
 "isin": "BRDGCOBDR007",
-"negocios": 29,
+"negocios": 33,
 "nome": "DOLLAR GENER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 31.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 77215
+"ultimo_preco": 31.8,
+"ultimo_pregao": "2026-11-11",
+"volume": 77915
 },
 "DHER34": {
 "isin": "BRDHERBDR004",
-"negocios": 121,
+"negocios": 125,
 "nome": "DANAHER CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 47.1,
-"ultimo_pregao": "2026-11-10",
-"volume": 70254
+"ultimo_preco": 46.7,
+"ultimo_pregao": "2026-11-11",
+"volume": 710453
 },
 "DISB34": {
 "isin": "BRDISBBDR006",
-"negocios": 2339,
+"negocios": 2523,
 "nome": "WALT DISNEY",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 43.78,
-"ultimo_pregao": "2026-11-10",
-"volume": 12329933
+"ultimo_preco": 43.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 12674568
+},
+"DLTR34": {
+"isin": "BRDLTRBDR004",
+"negocios": 14,
+"nome": "DOLLAR TREE",
+"primeiro_pregao": "2026-11-11",
+"tipo": "DRN",
+"ultimo_preco": 397.02,
+"ultimo_pregao": "2026-11-11",
+"volume": 10595
 },
 "DOLL39": {
 "isin": "BRDOLLBDR008",
-"negocios": 210,
+"negocios": 240,
 "nome": "BKR DOLL ETF",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 56.3,
-"ultimo_pregao": "2026-11-10",
-"volume": 2684847
+"ultimo_preco": 56.06,
+"ultimo_pregao": "2026-11-11",
+"volume": 3170687
 },
 "DTCR39": {
 "isin": "BRDTCRBDR003",
-"negocios": 93,
+"negocios": 94,
 "nome": "GX DATAINFRA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 71.02,
-"ultimo_pregao": "2026-11-10",
-"volume": 134191
+"ultimo_preco": 72.28,
+"ultimo_pregao": "2026-11-11",
+"volume": 134914
 },
 "DUKB34": {
 "isin": "BRDUKBBDR008",
@@ -3673,43 +3744,43 @@
 },
 "DUOL34": {
 "isin": "BRDUOLBDR009",
-"negocios": 2096,
+"negocios": 2101,
 "nome": "DUOLINGO INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 27.49,
-"ultimo_pregao": "2026-11-10",
-"volume": 4326351
+"ultimo_preco": 28.35,
+"ultimo_pregao": "2026-11-11",
+"volume": 4326838
 },
 "DVAI34": {
 "isin": "BRDVAIBDR002",
-"negocios": 13,
+"negocios": 14,
 "nome": "DAVITA INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 995.52,
-"ultimo_pregao": "2026-11-10",
-"volume": 17376
+"ultimo_preco": 1011.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 18387
 },
 "E1CL34": {
 "isin": "BRE1CLBDR002",
-"negocios": 5,
+"negocios": 9,
 "nome": "ECOLAB INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 86.32,
-"ultimo_pregao": "2026-11-10",
-"volume": 933
+"ultimo_preco": 85.8,
+"ultimo_pregao": "2026-11-11",
+"volume": 13803
 },
 "E1CO34": {
 "isin": "BRE1COBDR006",
-"negocios": 780,
+"negocios": 793,
 "nome": "ECOPETROL SA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 42.28,
-"ultimo_pregao": "2026-11-10",
-"volume": 256529
+"ultimo_preco": 42.6,
+"ultimo_pregao": "2026-11-11",
+"volume": 260603
 },
 "E1DU34": {
 "isin": "BRE1DUBDR001",
@@ -3763,13 +3834,13 @@
 },
 "E1QN34": {
 "isin": "BRE1QNBDR008",
-"negocios": 85,
+"negocios": 89,
 "nome": "EQUINOR ASA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 114.09,
-"ultimo_pregao": "2026-11-10",
-"volume": 104836
+"ultimo_preco": 115.23,
+"ultimo_pregao": "2026-11-11",
+"volume": 109913
 },
 "E1RI34": {
 "isin": "BRE1RIBDR006",
@@ -3783,23 +3854,23 @@
 },
 "E1TN34": {
 "isin": "BRE1TNBDR002",
-"negocios": 325,
+"negocios": 657,
 "nome": "EATON CORP P",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 142.13,
-"ultimo_pregao": "2026-11-10",
-"volume": 1821160
+"ultimo_preco": 144.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 2133295
 },
 "E1XC34": {
 "isin": "BRE1XCBDR007",
-"negocios": 10,
+"negocios": 13,
 "nome": "EXELON CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 63.84,
-"ultimo_pregao": "2026-11-10",
-"volume": 40780
+"ultimo_preco": 63.72,
+"ultimo_pregao": "2026-11-11",
+"volume": 41537
 },
 "E1XR34": {
 "isin": "BRE1XRBDR005",
@@ -3823,23 +3894,23 @@
 },
 "E2EF34": {
 "isin": "BRE2EFBDR008",
-"negocios": 50,
+"negocios": 54,
 "nome": "EURONETWORLD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 2.64,
-"ultimo_pregao": "2026-11-10",
-"volume": 105631
+"ultimo_preco": 2.61,
+"ultimo_pregao": "2026-11-11",
+"volume": 106983
 },
 "E2LS34": {
 "isin": "BRE2LSBDR006",
-"negocios": 2,
+"negocios": 3,
 "nome": "EQUITY LIFES",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 31.53,
-"ultimo_pregao": "2026-11-03",
-"volume": 63
+"ultimo_preco": 34.44,
+"ultimo_pregao": "2026-11-11",
+"volume": 2474
 },
 "E2NO34": {
 "isin": "BRE2NOBDR001",
@@ -3853,13 +3924,13 @@
 },
 "E2NP34": {
 "isin": "BRE2NPBDR008",
-"negocios": 179,
+"negocios": 188,
 "nome": "ENPHASE ENER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 6.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 177096
+"ultimo_preco": 6.28,
+"ultimo_pregao": "2026-11-11",
+"volume": 180546
 },
 "E2PA34": {
 "isin": "BRE2PABDR005",
@@ -3883,53 +3954,53 @@
 },
 "E2TS34": {
 "isin": "BRE2TSBDR009",
-"negocios": 21,
+"negocios": 32,
 "nome": "ETSY INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 32.7,
-"ultimo_pregao": "2026-11-09",
-"volume": 3474
+"ultimo_preco": 32.36,
+"ultimo_pregao": "2026-11-11",
+"volume": 9931
 },
 "EART39": {
 "isin": "BREARTBDR005",
-"negocios": 46,
+"negocios": 67,
 "nome": "GX RAREARTH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 34.17,
-"ultimo_pregao": "2026-11-10",
-"volume": 113721
+"ultimo_preco": 34.69,
+"ultimo_pregao": "2026-11-11",
+"volume": 128242
 },
 "EBAY34": {
 "isin": "BREBAYBDR009",
-"negocios": 3,
+"negocios": 4,
 "nome": "EBAY",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 345.84,
-"ultimo_pregao": "2026-11-10",
-"volume": 20998
+"ultimo_preco": 339.66,
+"ultimo_pregao": "2026-11-11",
+"volume": 24395
 },
 "EIDO39": {
 "isin": "BREIDOBDR009",
-"negocios": 3,
+"negocios": 5,
 "nome": "MSCIINDONESI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 28.71,
-"ultimo_pregao": "2026-11-10",
-"volume": 37577
+"ultimo_preco": 28.35,
+"ultimo_pregao": "2026-11-11",
+"volume": 52821
 },
 "ELCI34": {
 "isin": "BRELCIBDR007",
-"negocios": 22,
+"negocios": 27,
 "nome": "ESTEE LAUDER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 26.19,
-"ultimo_pregao": "2026-11-09",
-"volume": 40270
+"ultimo_preco": 26.05,
+"ultimo_pregao": "2026-11-11",
+"volume": 41702
 },
 "EPHE39": {
 "isin": "BREPHEBDR006",
@@ -3953,43 +4024,43 @@
 },
 "EQIX34": {
 "isin": "BREQIXBDR002",
-"negocios": 241,
+"negocios": 258,
 "nome": "EQUINIX INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 73.15,
-"ultimo_pregao": "2026-11-10",
-"volume": 1620084
+"ultimo_preco": 74.56,
+"ultimo_pregao": "2026-11-11",
+"volume": 1671159
 },
 "ETHA39": {
 "isin": "BRETHABDR006",
-"negocios": 115,
+"negocios": 123,
 "nome": "BKR ETHEREUM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 86.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 465610
+"ultimo_preco": 87.66,
+"ultimo_pregao": "2026-11-11",
+"volume": 472150
 },
 "EVEB31": {
 "isin": "BREVEBBDR007",
-"negocios": 862,
+"negocios": 1041,
 "nome": "EVE BRASIL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DR1",
-"ultimo_preco": 11.59,
-"ultimo_pregao": "2026-11-10",
-"volume": 1023475
+"ultimo_preco": 10.81,
+"ultimo_pregao": "2026-11-11",
+"volume": 1462164
 },
 "EVTC31": {
 "isin": "BREVTCBDR003",
-"negocios": 67,
+"negocios": 1144,
 "nome": "EVERTEC INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DR1",
-"ultimo_preco": 183.24,
-"ultimo_pregao": "2026-11-10",
-"volume": 84937
+"ultimo_preco": 182.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 351880
 },
 "EWJV39": {
 "isin": "BREWJVBDR002",
@@ -4003,23 +4074,23 @@
 },
 "EXGR34": {
 "isin": "BREXGRBDR004",
-"negocios": 111,
+"negocios": 163,
 "nome": "EXPEDIA GROU",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRN",
-"ultimo_preco": 707.16,
-"ultimo_pregao": "2026-11-10",
-"volume": 381174
+"ultimo_preco": 720.06,
+"ultimo_pregao": "2026-11-11",
+"volume": 449773
 },
 "EXXO34": {
 "isin": "BREXXOBDR006",
-"negocios": 13939,
+"negocios": 14839,
 "nome": "EXXON MOBIL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 117.23,
-"ultimo_pregao": "2026-11-10",
-"volume": 45273401
+"ultimo_preco": 115.7,
+"ultimo_pregao": "2026-11-11",
+"volume": 49561706
 },
 "F1AN34": {
 "isin": "BRF1ANBDR001",
@@ -4053,63 +4124,63 @@
 },
 "F1IS34": {
 "isin": "BRF1ISBDR003",
-"negocios": 27,
+"negocios": 28,
 "nome": "FISERV INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 174.25,
-"ultimo_pregao": "2026-11-10",
-"volume": 423446
+"ultimo_preco": 173.12,
+"ultimo_pregao": "2026-11-11",
+"volume": 423965
 },
 "F1MC34": {
 "isin": "BRF1MCBDR009",
-"negocios": 69,
+"negocios": 72,
 "nome": "FMC CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 15.73,
-"ultimo_pregao": "2026-11-10",
-"volume": 54593
+"ultimo_preco": 15.72,
+"ultimo_pregao": "2026-11-11",
+"volume": 55150
 },
 "F1NI34": {
 "isin": "BRF1NIBDR004",
-"negocios": 106,
+"negocios": 121,
 "nome": "FIDELITY NAT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 9.96,
-"ultimo_pregao": "2026-11-10",
-"volume": 79362
+"ultimo_preco": 10.46,
+"ultimo_pregao": "2026-11-11",
+"volume": 88182
 },
 "F1SL34": {
 "isin": "BRF1SLBDR007",
-"negocios": 163,
+"negocios": 215,
 "nome": "FASTLY INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 8.75,
-"ultimo_pregao": "2026-11-10",
-"volume": 555434
+"ultimo_preco": 9.58,
+"ultimo_pregao": "2026-11-11",
+"volume": 728530
 },
 "F1TN34": {
 "isin": "BRF1TNBDR001",
-"negocios": 388,
+"negocios": 424,
 "nome": "FORTINET INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 57.47,
-"ultimo_pregao": "2026-11-10",
-"volume": 42884328
+"ultimo_preco": 59.63,
+"ultimo_pregao": "2026-11-11",
+"volume": 43271299
 },
 "F2IC34": {
 "isin": "BRF2ICBDR005",
-"negocios": 35,
+"negocios": 37,
 "nome": "FAIR ISAAC C",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 89.1,
-"ultimo_pregao": "2026-11-10",
-"volume": 1696671
+"ultimo_preco": 89.64,
+"ultimo_pregao": "2026-11-11",
+"volume": 1763222
 },
 "F2IV34": {
 "isin": "BRF2IVBDR005",
@@ -4123,13 +4194,13 @@
 },
 "F2NV34": {
 "isin": "BRF2NVBDR005",
-"negocios": 48,
+"negocios": 54,
 "nome": "FRANCONEVADA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 7.99,
-"ultimo_pregao": "2026-11-10",
-"volume": 66532
+"ultimo_preco": 7.79,
+"ultimo_pregao": "2026-11-11",
+"volume": 67142
 },
 "F2RS34": {
 "isin": "BRF2RSBDR002",
@@ -4143,13 +4214,13 @@
 },
 "F2VR34": {
 "isin": "BRF2VRBDR006",
-"negocios": 20,
+"negocios": 24,
 "nome": "FIVERR INTL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 2.33,
-"ultimo_pregao": "2026-11-09",
-"volume": 24118
+"ultimo_preco": 2.23,
+"ultimo_pregao": "2026-11-11",
+"volume": 24695
 },
 "FASL34": {
 "isin": "BRFASLBDR007",
@@ -4163,23 +4234,23 @@
 },
 "FCXO34": {
 "isin": "BRFCXOBDR007",
-"negocios": 10377,
+"negocios": 12655,
 "nome": "FREEPORT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 112.08,
-"ultimo_pregao": "2026-11-10",
-"volume": 30781045
+"ultimo_preco": 115.32,
+"ultimo_pregao": "2026-11-11",
+"volume": 33886243
 },
 "FDMO34": {
 "isin": "BRFDMOBDR008",
-"negocios": 73,
+"negocios": 76,
 "nome": "FORD MOTORS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 68.83,
-"ultimo_pregao": "2026-11-10",
-"volume": 482154
+"ultimo_preco": 68.32,
+"ultimo_pregao": "2026-11-11",
+"volume": 484195
 },
 "FDXB34": {
 "isin": "BRFDXBBDR002",
@@ -4203,23 +4274,23 @@
 },
 "FOXC34": {
 "isin": "BRFOXCBDR007",
-"negocios": 6,
+"negocios": 7,
 "nome": "FOX CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 368.22,
-"ultimo_pregao": "2026-11-05",
-"volume": 44494
+"ultimo_preco": 376.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 58037
 },
 "FSLR34": {
 "isin": "BRFSLRBDR001",
-"negocios": 1395,
+"negocios": 1408,
 "nome": "FIRST SOLAR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 50.15,
-"ultimo_pregao": "2026-11-10",
-"volume": 4538837
+"ultimo_preco": 49.55,
+"ultimo_pregao": "2026-11-11",
+"volume": 4555290
 },
 "G1AM34": {
 "isin": "BRG1AMBDR002",
@@ -4243,13 +4314,13 @@
 },
 "G1DS34": {
 "isin": "BRG1DSBDR003",
-"negocios": 55,
+"negocios": 65,
 "nome": "GDS HOLDINGS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 11.77,
-"ultimo_pregao": "2026-11-10",
-"volume": 50262
+"ultimo_preco": 12.61,
+"ultimo_pregao": "2026-11-11",
+"volume": 70272
 },
 "G1FI34": {
 "isin": "BRG1FIBDR009",
@@ -4273,13 +4344,13 @@
 },
 "G1LW34": {
 "isin": "BRG1LWBDR008",
-"negocios": 14169,
+"negocios": 15259,
 "nome": "CORNING INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 145.51,
-"ultimo_pregao": "2026-11-10",
-"volume": 27794156
+"ultimo_preco": 168.58,
+"ultimo_pregao": "2026-11-11",
+"volume": 29861625
 },
 "G1MI34": {
 "isin": "BRG1MIBDR005",
@@ -4303,13 +4374,13 @@
 },
 "G1RM34": {
 "isin": "BRG1RMBDR006",
-"negocios": 4,
+"negocios": 5,
 "nome": "GARMIN LTD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 101.0,
-"ultimo_pregao": "2026-11-09",
-"volume": 51245
+"ultimo_preco": 102.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 63497
 },
 "G1SK34": {
 "isin": "BRG1SKBDR008",
@@ -4333,33 +4404,33 @@
 },
 "G2DD34": {
 "isin": "BRG2DDBDR003",
-"negocios": 2,
+"negocios": 3,
 "nome": "GODADDY INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 61.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 6581
+"ultimo_preco": 62.76,
+"ultimo_pregao": "2026-11-11",
+"volume": 6644
 },
 "G2DI33": {
 "isin": "BRG2DIBDR002",
-"negocios": 1527,
+"negocios": 1584,
 "nome": "G2D INVEST",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DR3",
-"ultimo_preco": 1.11,
-"ultimo_pregao": "2026-11-10",
-"volume": 280268
+"ultimo_preco": 1.12,
+"ultimo_pregao": "2026-11-11",
+"volume": 289217
 },
 "G2EV34": {
 "isin": "BRG2EVBDR003",
-"negocios": 2812,
+"negocios": 3077,
 "nome": "GE VERNOVA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 221.25,
-"ultimo_pregao": "2026-11-10",
-"volume": 7057820
+"ultimo_preco": 225.54,
+"ultimo_pregao": "2026-11-11",
+"volume": 8838223
 },
 "G2ME34": {
 "isin": "BRG2MEBDR002",
@@ -4383,123 +4454,123 @@
 },
 "GDBR34": {
 "isin": "BRGDBRBDR002",
-"negocios": 17,
+"negocios": 25,
 "nome": "GEN DYNAMICS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 2049.7,
-"ultimo_pregao": "2026-11-10",
-"volume": 51827
+"ultimo_preco": 2035.65,
+"ultimo_pregao": "2026-11-11",
+"volume": 68114
 },
 "GDXB39": {
 "isin": "BRGDXBBDR000",
-"negocios": 437,
+"negocios": 1538,
 "nome": "VE GOLD ETF",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 161.52,
-"ultimo_pregao": "2026-11-10",
-"volume": 18393088
+"ultimo_preco": 157.94,
+"ultimo_pregao": "2026-11-11",
+"volume": 19734582
 },
 "GEOO34": {
 "isin": "BRGEOOBDR000",
-"negocios": 269,
+"negocios": 341,
 "nome": "GEAEROSPACE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 95.79,
-"ultimo_pregao": "2026-11-10",
-"volume": 1192190
+"ultimo_preco": 94.95,
+"ultimo_pregao": "2026-11-11",
+"volume": 1228478
 },
 "GILD34": {
 "isin": "BRGILDBDR000",
-"negocios": 1102,
+"negocios": 1126,
 "nome": "GILEAD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 79.68,
-"ultimo_pregao": "2026-11-10",
-"volume": 169608
+"ultimo_preco": 84.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 261152
 },
 "GMCO34": {
 "isin": "BRGMCOBDR008",
-"negocios": 237,
+"negocios": 239,
 "nome": "GENERAL MOT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 124.12,
-"ultimo_pregao": "2026-11-10",
-"volume": 1062838
+"ultimo_preco": 122.52,
+"ultimo_pregao": "2026-11-11",
+"volume": 1068331
 },
 "GOEX39": {
 "isin": "BRGOEXBDR001",
-"negocios": 1,
+"negocios": 2,
 "nome": "GX GOLD EXP",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRE",
-"ultimo_preco": 40.47,
-"ultimo_pregao": "2026-11-04",
-"volume": 40
+"ultimo_preco": 43.74,
+"ultimo_pregao": "2026-11-11",
+"volume": 215
 },
 "GOGL34": {
 "isin": "BRGOGLBDR001",
-"negocios": 54923,
+"negocios": 62707,
 "nome": "ALPHABET",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 133.54,
-"ultimo_pregao": "2026-11-10",
-"volume": 426297867
+"ultimo_preco": 136.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 475371533
 },
 "GOGL35": {
 "isin": "BRGOGLBDR019",
-"negocios": 346,
+"negocios": 1136,
 "nome": "ALPHABET",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 134.49,
-"ultimo_pregao": "2026-11-10",
-"volume": 2204597
+"ultimo_preco": 134.71,
+"ultimo_pregao": "2026-11-11",
+"volume": 3088169
 },
 "GPRK34": {
 "isin": "BRGPRKBDR007",
-"negocios": 14,
+"negocios": 16,
 "nome": "GEOPARK LTD",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 51.7,
-"ultimo_pregao": "2026-11-10",
-"volume": 29309
+"ultimo_preco": 52.47,
+"ultimo_pregao": "2026-11-11",
+"volume": 34556
 },
 "GPRO34": {
 "isin": "BRGPROBDR009",
-"negocios": 83,
+"negocios": 173,
 "nome": "GOPRO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 4.7,
-"ultimo_pregao": "2026-11-10",
-"volume": 18378
+"ultimo_preco": 3.75,
+"ultimo_pregao": "2026-11-11",
+"volume": 93316
 },
 "GROP31": {
 "isin": "BRGROPBDR009",
-"negocios": 122,
+"negocios": 127,
 "nome": "POTASSIO BR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DR1",
-"ultimo_preco": 10.2,
-"ultimo_pregao": "2026-11-10",
-"volume": 119920
+"ultimo_preco": 9.77,
+"ultimo_pregao": "2026-11-11",
+"volume": 121790
 },
 "GSGI34": {
 "isin": "BRGSGIBDR008",
-"negocios": 4111,
+"negocios": 4191,
 "nome": "GOLDMANSACHS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 168.99,
-"ultimo_pregao": "2026-11-10",
-"volume": 25888256
+"ultimo_preco": 171.35,
+"ultimo_pregao": "2026-11-11",
+"volume": 27261678
 },
 "H1AS34": {
 "isin": "BRH1ASBDR008",
@@ -4523,23 +4594,23 @@
 },
 "H1CA34": {
 "isin": "BRH1CABDR002",
-"negocios": 1889,
+"negocios": 2037,
 "nome": "HCA HEALTHCA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 143.38,
-"ultimo_pregao": "2026-11-10",
-"volume": 486707
+"ultimo_preco": 140.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 509059
 },
 "H1DB34": {
 "isin": "BRH1DBBDR008",
-"negocios": 40,
+"negocios": 42,
 "nome": "HDFC BANK LT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 29.01,
-"ultimo_pregao": "2026-11-10",
-"volume": 32286
+"ultimo_preco": 28.6,
+"ultimo_pregao": "2026-11-11",
+"volume": 41446
 },
 "H1EI34": {
 "isin": "BRH1EIBDR001",
@@ -4583,23 +4654,23 @@
 },
 "H1II34": {
 "isin": "BRH1IIBDR002",
-"negocios": 7,
+"negocios": 9,
 "nome": "HUNTINGTON I",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 21.48,
-"ultimo_pregao": "2026-11-10",
-"volume": 19643
+"ultimo_preco": 23.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 21983
 },
 "H1LT34": {
 "isin": "BRH1LTBDR003",
-"negocios": 4,
+"negocios": 6,
 "nome": "HILTON WORLD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 83.45,
-"ultimo_pregao": "2026-11-04",
-"volume": 587
+"ultimo_preco": 87.76,
+"ultimo_pregao": "2026-11-11",
+"volume": 763
 },
 "H1OG34": {
 "isin": "BRH1OGBDR004",
@@ -4613,13 +4684,13 @@
 },
 "H1PE34": {
 "isin": "BRH1PEBDR006",
-"negocios": 82,
+"negocios": 140,
 "nome": "HEWLETT PACK",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 265.91,
-"ultimo_pregao": "2026-11-10",
-"volume": 1534804
+"ultimo_preco": 279.99,
+"ultimo_pregao": "2026-11-11",
+"volume": 1555296
 },
 "H1RL34": {
 "isin": "BRH1RLBDR007",
@@ -4633,13 +4704,13 @@
 },
 "H1SB34": {
 "isin": "BRH1SBBDR006",
-"negocios": 284,
+"negocios": 308,
 "nome": "HSBC HOLDING",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 126.24,
-"ultimo_pregao": "2026-11-10",
-"volume": 406814
+"ultimo_preco": 125.19,
+"ultimo_pregao": "2026-11-11",
+"volume": 447555
 },
 "H1SI34": {
 "isin": "BRH1SIBDR001",
@@ -4653,53 +4724,53 @@
 },
 "H1ST34": {
 "isin": "BRH1STBDR008",
-"negocios": 81,
+"negocios": 86,
 "nome": "HOST HOTELS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 144.76,
-"ultimo_pregao": "2026-11-10",
-"volume": 18524
+"ultimo_preco": 144.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 19245
 },
 "H1UM34": {
 "isin": "BRH1UMBDR009",
-"negocios": 15,
+"negocios": 17,
 "nome": "HUMANA INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 54.25,
-"ultimo_pregao": "2026-11-10",
-"volume": 402846
+"ultimo_preco": 54.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 403008
 },
 "H2TA34": {
 "isin": "BRH2TABDR004",
-"negocios": 6,
+"negocios": 7,
 "nome": "HEALTH REALT",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRN",
-"ultimo_preco": 24.6,
-"ultimo_pregao": "2026-11-09",
-"volume": 388
+"ultimo_preco": 26.68,
+"ultimo_pregao": "2026-11-11",
+"volume": 495
 },
 "H2UB34": {
 "isin": "BRH2UBBDR000",
-"negocios": 29,
+"negocios": 32,
 "nome": "HUBSPOT INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 21.93,
-"ultimo_pregao": "2026-11-10",
-"volume": 200154
+"ultimo_preco": 22.38,
+"ultimo_pregao": "2026-11-11",
+"volume": 200221
 },
 "HALI34": {
 "isin": "BRHALIBDR004",
-"negocios": 1,
+"negocios": 9,
 "nome": "HALLIBURTON",
 "primeiro_pregao": "2026-11-10",
 "tipo": "DRN",
-"ultimo_preco": 175.88,
-"ultimo_pregao": "2026-11-10",
-"volume": 52764
+"ultimo_preco": 182.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 374254
 },
 "HIWP34": {
 "isin": "BRHIWPBDR009",
@@ -4723,13 +4794,13 @@
 },
 "HOME34": {
 "isin": "BRHOMEBDR002",
-"negocios": 204,
+"negocios": 233,
 "nome": "HOME DEPOT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 71.36,
-"ultimo_pregao": "2026-11-10",
-"volume": 1489910
+"ultimo_preco": 69.36,
+"ultimo_pregao": "2026-11-11",
+"volume": 3253267
 },
 "HONB34": {
 "isin": "BRHONBBDR006",
@@ -4743,23 +4814,23 @@
 },
 "HOND34": {
 "isin": "BRHONDBDR002",
-"negocios": 40,
+"negocios": 47,
 "nome": "HONDA MO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 195.66,
-"ultimo_pregao": "2026-11-10",
-"volume": 346465
+"ultimo_preco": 186.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 355378
 },
 "HPQB34": {
 "isin": "BRHPQBBDR006",
-"negocios": 101,
+"negocios": 106,
 "nome": "HP COMPANY",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 158.67,
-"ultimo_pregao": "2026-11-10",
-"volume": 118873
+"ultimo_preco": 161.76,
+"ultimo_pregao": "2026-11-11",
+"volume": 127656
 },
 "HSHY34": {
 "isin": "BRHSHYBDR001",
@@ -4793,13 +4864,13 @@
 },
 "I1CE34": {
 "isin": "BRI1CEBDR003",
-"negocios": 7,
+"negocios": 2424,
 "nome": "INTERCONTINE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 79.84,
-"ultimo_pregao": "2026-11-05",
-"volume": 201543
+"ultimo_preco": 84.16,
+"ultimo_pregao": "2026-11-11",
+"volume": 962059
 },
 "I1DX34": {
 "isin": "BRI1DXBDR001",
@@ -4813,23 +4884,23 @@
 },
 "I1FO34": {
 "isin": "BRI1FOBDR005",
-"negocios": 15,
+"negocios": 16,
 "nome": "INFOSYS LTD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 34.53,
-"ultimo_pregao": "2026-11-09",
-"volume": 2695
+"ultimo_preco": 34.3,
+"ultimo_pregao": "2026-11-11",
+"volume": 2866
 },
 "I1LM34": {
 "isin": "BRI1LMBDR007",
-"negocios": 32,
+"negocios": 33,
 "nome": "ILLUMINA INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 239.05,
-"ultimo_pregao": "2026-11-10",
-"volume": 778971
+"ultimo_preco": 240.05,
+"ultimo_pregao": "2026-11-11",
+"volume": 780411
 },
 "I1NC34": {
 "isin": "BRI1NCBDR004",
@@ -4883,13 +4954,13 @@
 },
 "I1RM34": {
 "isin": "BRI1RMBDR004",
-"negocios": 14,
+"negocios": 15,
 "nome": "IRON MOUNTAI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 52.1,
-"ultimo_pregao": "2026-11-10",
-"volume": 1039
+"ultimo_preco": 52.7,
+"ultimo_pregao": "2026-11-11",
+"volume": 1092
 },
 "I1RP34": {
 "isin": "BRI1RPBDR007",
@@ -4903,13 +4974,13 @@
 },
 "I1SR34": {
 "isin": "BRI1SRBDR001",
-"negocios": 163,
+"negocios": 165,
 "nome": "INTUITIVE SU",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 125.01,
-"ultimo_pregao": "2026-11-10",
-"volume": 904671
+"ultimo_preco": 124.83,
+"ultimo_pregao": "2026-11-11",
+"volume": 905661
 },
 "I1VZ34": {
 "isin": "BRI1VZBDR008",
@@ -4933,13 +5004,13 @@
 },
 "I2ND34": {
 "isin": "BRI2NDBDR000",
-"negocios": 39,
+"negocios": 50,
 "nome": "INDIE SEMICO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 12.25,
-"ultimo_pregao": "2026-11-10",
-"volume": 58620
+"ultimo_preco": 12.69,
+"ultimo_pregao": "2026-11-11",
+"volume": 67981
 },
 "I2NG34": {
 "isin": "BRI2NGBDR003",
@@ -4953,13 +5024,13 @@
 },
 "I2NV34": {
 "isin": "BRI2NVBDR002",
-"negocios": 360,
+"negocios": 1169,
 "nome": "INVITATIONHO",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 30.42,
-"ultimo_pregao": "2026-11-10",
-"volume": 49087
+"ultimo_preco": 30.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 73401
 },
 "I2RS34": {
 "isin": "BRI2RSBDR009",
@@ -4973,13 +5044,13 @@
 },
 "IBIT39": {
 "isin": "BRIBITBDR003",
-"negocios": 14664,
+"negocios": 15449,
 "nome": "BKR BITCOIN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 77.55,
-"ultimo_pregao": "2026-11-10",
-"volume": 15476667
+"ultimo_preco": 78.26,
+"ultimo_pregao": "2026-11-11",
+"volume": 17150366
 },
 "IBKR34": {
 "isin": "BRIBKRBDR003",
@@ -4993,13 +5064,13 @@
 },
 "IBMB34": {
 "isin": "BRIBMBBDR003",
-"negocios": 240,
+"negocios": 246,
 "nome": "IBM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 1365.95,
-"ultimo_pregao": "2026-11-10",
-"volume": 2270422
+"ultimo_preco": 1379.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 2451406
 },
 "ICLR34": {
 "isin": "BRICLRBDR009",
@@ -5013,43 +5084,43 @@
 },
 "INBR34": {
 "isin": "BRINBRBDR023",
-"negocios": 113767,
+"negocios": 126755,
 "nome": "INTER CO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 22.09,
-"ultimo_pregao": "2026-11-10",
-"volume": 213401204
+"ultimo_preco": 22.41,
+"ultimo_pregao": "2026-11-11",
+"volume": 300178574
 },
 "INGG34": {
 "isin": "BRINGGBDR009",
-"negocios": 26,
+"negocios": 31,
 "nome": "ING GROEP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 186.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 10198
+"ultimo_preco": 187.34,
+"ultimo_pregao": "2026-11-11",
+"volume": 11319
 },
 "INTU34": {
 "isin": "BRINTUBDR003",
-"negocios": 62,
+"negocios": 71,
 "nome": "INTUIT INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 42.84,
-"ultimo_pregao": "2026-11-10",
-"volume": 1383220
+"ultimo_preco": 43.44,
+"ultimo_pregao": "2026-11-11",
+"volume": 1460244
 },
 "ITLC34": {
 "isin": "BRITLCBDR005",
-"negocios": 26609,
+"negocios": 29379,
 "nome": "INTEL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 54.29,
-"ultimo_pregao": "2026-11-10",
-"volume": 208236272
+"ultimo_preco": 58.25,
+"ultimo_pregao": "2026-11-11",
+"volume": 239821009
 },
 "J1CI34": {
 "isin": "BRJ1CIBDR003",
@@ -5063,63 +5134,63 @@
 },
 "J1EF34": {
 "isin": "BRJ1EFBDR005",
-"negocios": 4,
+"negocios": 5,
 "nome": "JEFFERIES FI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 53.81,
-"ultimo_pregao": "2026-11-10",
-"volume": 16724
+"ultimo_preco": 54.57,
+"ultimo_pregao": "2026-11-11",
+"volume": 26547
 },
 "J2AZ34": {
 "isin": "BRJ2AZBDR009",
-"negocios": 94,
+"negocios": 114,
 "nome": "JAZZ PHARMAC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 90.99,
-"ultimo_pregao": "2026-11-10",
-"volume": 8557
+"ultimo_preco": 91.62,
+"ultimo_pregao": "2026-11-11",
+"volume": 10380
 },
 "J2BL34": {
 "isin": "BRJ2BLBDR007",
-"negocios": 352,
+"negocios": 372,
 "nome": "JABIL INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 174.99,
-"ultimo_pregao": "2026-11-10",
-"volume": 99203
+"ultimo_preco": 180.98,
+"ultimo_pregao": "2026-11-11",
+"volume": 103024
 },
 "JBSS32": {
 "isin": "BRJBSSBDR002",
-"negocios": 193775,
+"negocios": 221773,
 "nome": "JBS N.V.",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DR2",
-"ultimo_preco": 68.69,
-"ultimo_pregao": "2026-11-10",
-"volume": 1068472600
+"ultimo_preco": 69.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 1229713480
 },
 "JDCO34": {
 "isin": "BRJDCOBDR001",
-"negocios": 226,
+"negocios": 232,
 "nome": "JD COM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 26.44,
-"ultimo_pregao": "2026-11-10",
-"volume": 1431456
+"ultimo_preco": 25.83,
+"ultimo_pregao": "2026-11-11",
+"volume": 1458143
 },
 "JEPI39": {
 "isin": "BRJEPIBDR003",
-"negocios": 521,
+"negocios": 588,
 "nome": "JPM JEPI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
 "ultimo_preco": 54.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 1161235
+"ultimo_pregao": "2026-11-11",
+"volume": 1337516
 },
 "JIVE39": {
 "isin": "BRJIVEBDR001",
@@ -5133,13 +5204,13 @@
 },
 "JNJB34": {
 "isin": "BRJNJBBDR002",
-"negocios": 4891,
+"negocios": 5253,
 "nome": "JOHNSON",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 103.11,
-"ultimo_pregao": "2026-11-10",
-"volume": 4778377
+"ultimo_preco": 103.98,
+"ultimo_pregao": "2026-11-11",
+"volume": 5164710
 },
 "JPIN39": {
 "isin": "BRJPINBDR004",
@@ -5153,13 +5224,13 @@
 },
 "JPMC34": {
 "isin": "BRJPMCBDR009",
-"negocios": 8842,
+"negocios": 9786,
 "nome": "JPMORGAN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 193.2,
-"ultimo_pregao": "2026-11-10",
-"volume": 53339062
+"ultimo_preco": 190.46,
+"ultimo_pregao": "2026-11-11",
+"volume": 55323422
 },
 "JQUA39": {
 "isin": "BRJQUABDR004",
@@ -5173,53 +5244,53 @@
 },
 "JTEK39": {
 "isin": "BRJTEKBDR001",
-"negocios": 359,
+"negocios": 363,
 "nome": "JPM TECHLEAD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 50.2,
-"ultimo_pregao": "2026-11-10",
-"volume": 1552572
+"ultimo_preco": 51.89,
+"ultimo_pregao": "2026-11-11",
+"volume": 1563988
 },
 "K1BF34": {
 "isin": "BRK1BFBDR008",
-"negocios": 69,
+"negocios": 73,
 "nome": "KB FINANCIAL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 153.3,
-"ultimo_pregao": "2026-11-10",
-"volume": 17575
+"ultimo_preco": 156.91,
+"ultimo_pregao": "2026-11-11",
+"volume": 18499
 },
 "K1LA34": {
 "isin": "BRK1LABDR008",
-"negocios": 13310,
+"negocios": 13356,
 "nome": "KLA CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 42.39,
-"ultimo_pregao": "2026-11-10",
-"volume": 25154124
+"ultimo_preco": 43.93,
+"ultimo_pregao": "2026-11-11",
+"volume": 25666877
 },
 "K1RC34": {
 "isin": "BRK1RCBDR001",
-"negocios": 3,
+"negocios": 4,
 "nome": "KROGER CO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 64.64,
-"ultimo_pregao": "2026-11-05",
-"volume": 24685
+"ultimo_preco": 63.59,
+"ultimo_pregao": "2026-11-11",
+"volume": 37403
 },
 "K1SG34": {
 "isin": "BRK1SGBDR000",
-"negocios": 29,
+"negocios": 42,
 "nome": "KEYSIGHT TEC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 810.4,
-"ultimo_pregao": "2026-11-10",
-"volume": 35082
+"ultimo_preco": 845.64,
+"ultimo_pregao": "2026-11-11",
+"volume": 46169
 },
 "K1SS34": {
 "isin": "BRK1SSBDR005",
@@ -5233,53 +5304,53 @@
 },
 "K1TC34": {
 "isin": "BRK1TCBDR007",
-"negocios": 8,
+"negocios": 9,
 "nome": "KT CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 104.85,
-"ultimo_pregao": "2026-11-10",
-"volume": 20430
+"ultimo_preco": 104.49,
+"ultimo_pregao": "2026-11-11",
+"volume": 20743
 },
 "K2CG34": {
 "isin": "BRK2CGBDR002",
-"negocios": 57,
+"negocios": 100,
 "nome": "KINGSOFT CHL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 7.76,
-"ultimo_pregao": "2026-11-10",
-"volume": 16616
+"ultimo_preco": 8.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 25781
 },
 "KHCB34": {
 "isin": "BRKHCBBDR007",
-"negocios": 51,
+"negocios": 58,
 "nome": "KRAFT HEINZ",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 33.67,
-"ultimo_pregao": "2026-11-09",
-"volume": 132208
+"ultimo_preco": 33.92,
+"ultimo_pregao": "2026-11-11",
+"volume": 133920
 },
 "KMBB34": {
 "isin": "BRKMBBBDR009",
-"negocios": 5,
+"negocios": 6,
 "nome": "KIMBERLY CL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 614.25,
-"ultimo_pregao": "2026-11-05",
-"volume": 167404
+"ultimo_preco": 603.26,
+"ultimo_pregao": "2026-11-11",
+"volume": 168007
 },
 "KMIC34": {
 "isin": "BRKMICBDR002",
-"negocios": 708,
+"negocios": 710,
 "nome": "KINDER MORGA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 55.56,
-"ultimo_pregao": "2026-11-06",
-"volume": 110772
+"ultimo_preco": 57.88,
+"ultimo_pregao": "2026-11-11",
+"volume": 111524
 },
 "L1DO34": {
 "isin": "BRL1DOBDR005",
@@ -5323,13 +5394,13 @@
 },
 "L1MN34": {
 "isin": "BRL1MNBDR008",
-"negocios": 85,
+"negocios": 89,
 "nome": "LUMEN TECH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 26.56,
-"ultimo_pregao": "2026-11-10",
-"volume": 118930
+"ultimo_preco": 26.54,
+"ultimo_pregao": "2026-11-11",
+"volume": 119172
 },
 "L1NC34": {
 "isin": "BRL1NCBDR009",
@@ -5343,23 +5414,23 @@
 },
 "L1OE34": {
 "isin": "BRL1OEBDR003",
-"negocios": 8,
+"negocios": 10,
 "nome": "LOEWS CORP",
 "primeiro_pregao": "2026-11-09",
 "tipo": "DRN",
-"ultimo_preco": 607.2,
-"ultimo_pregao": "2026-11-09",
-"volume": 37783
+"ultimo_preco": 620.62,
+"ultimo_pregao": "2026-11-11",
+"volume": 52057
 },
 "L1RC34": {
 "isin": "BRL1RCBDR000",
-"negocios": 7433,
+"negocios": 7802,
 "nome": "LAM RESEARCH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 27.92,
-"ultimo_pregao": "2026-11-10",
-"volume": 41287881
+"ultimo_preco": 29.92,
+"ultimo_pregao": "2026-11-11",
+"volume": 44890761
 },
 "L1TM34": {
 "isin": "BRL1TMBDR005",
@@ -5373,13 +5444,13 @@
 },
 "L1UL34": {
 "isin": "BRL1ULBDR005",
-"negocios": 41,
+"negocios": 45,
 "nome": "LULULEMON AT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 153.61,
-"ultimo_pregao": "2026-11-10",
-"volume": 294151
+"ultimo_preco": 147.77,
+"ultimo_pregao": "2026-11-11",
+"volume": 370375
 },
 "L1VS34": {
 "isin": "BRL1VSBDR008",
@@ -5413,13 +5484,13 @@
 },
 "L1YG34": {
 "isin": "BRL1YGBDR007",
-"negocios": 30,
+"negocios": 34,
 "nome": "LLOYDS BANKI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 28.86,
-"ultimo_pregao": "2026-11-10",
-"volume": 187793
+"ultimo_preco": 29.05,
+"ultimo_pregao": "2026-11-11",
+"volume": 188024
 },
 "L2IV34": {
 "isin": "BRL2IVBDR007",
@@ -5453,13 +5524,13 @@
 },
 "LILY34": {
 "isin": "BRLILYBDR006",
-"negocios": 9838,
+"negocios": 10554,
 "nome": "LILLY",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 267.4,
-"ultimo_pregao": "2026-11-10",
-"volume": 65048777
+"ultimo_preco": 266.4,
+"ultimo_pregao": "2026-11-11",
+"volume": 69992832
 },
 "LKFT34": {
 "isin": "BRLKFTBDR004",
@@ -5473,13 +5544,13 @@
 },
 "LMTB34": {
 "isin": "BRLMTBBDR009",
-"negocios": 52,
+"negocios": 57,
 "nome": "LOCKHEED",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 3367.74,
-"ultimo_pregao": "2026-11-10",
-"volume": 1347189
+"ultimo_preco": 3391.51,
+"ultimo_pregao": "2026-11-11",
+"volume": 1370851
 },
 "LOWC34": {
 "isin": "BRLOWCBDR007",
@@ -5503,33 +5574,33 @@
 },
 "M1CH34": {
 "isin": "BRM1CHBDR000",
-"negocios": 173,
+"negocios": 242,
 "nome": "MICROCHIP TE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 168.57,
-"ultimo_pregao": "2026-11-10",
-"volume": 851294
+"ultimo_preco": 173.74,
+"ultimo_pregao": "2026-11-11",
+"volume": 865386
 },
 "M1CK34": {
 "isin": "BRM1CKBDR004",
-"negocios": 762,
+"negocios": 1025,
 "nome": "MCKESSON COR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 94.59,
-"ultimo_pregao": "2026-11-10",
-"volume": 239743
+"ultimo_preco": 94.14,
+"ultimo_pregao": "2026-11-11",
+"volume": 281260
 },
 "M1DB34": {
 "isin": "BRM1DBBDR001",
-"negocios": 11,
+"negocios": 15,
 "nome": "MONGODB INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 90.9,
-"ultimo_pregao": "2026-11-10",
-"volume": 134648
+"ultimo_preco": 94.68,
+"ultimo_pregao": "2026-11-11",
+"volume": 154715
 },
 "M1HK34": {
 "isin": "BRM1HKBDR003",
@@ -5563,13 +5634,13 @@
 },
 "M1LC34": {
 "isin": "BRM1LCBDR002",
-"negocios": 4,
+"negocios": 5,
 "nome": "MELCO RESORT",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRN",
 "ultimo_preco": 12.43,
-"ultimo_pregao": "2026-11-10",
-"volume": 83
+"ultimo_pregao": "2026-11-11",
+"volume": 95
 },
 "M1LM34": {
 "isin": "BRM1LMBDR001",
@@ -5583,23 +5654,23 @@
 },
 "M1MC34": {
 "isin": "BRM1MCBDR000",
-"negocios": 125,
+"negocios": 2283,
 "nome": "MARSH E MCLE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 72.38,
-"ultimo_pregao": "2026-11-10",
-"volume": 1201464
+"ultimo_preco": 72.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 1897524
 },
 "M1NS34": {
 "isin": "BRM1NSBDR004",
-"negocios": 92,
+"negocios": 105,
 "nome": "MONSTER BEVE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 31.9,
-"ultimo_pregao": "2026-11-10",
-"volume": 722495
+"ultimo_preco": 31.5,
+"ultimo_pregao": "2026-11-11",
+"volume": 774111
 },
 "M1PC34": {
 "isin": "BRM1PCBDR003",
@@ -5613,23 +5684,23 @@
 },
 "M1RN34": {
 "isin": "BRM1RNBDR006",
-"negocios": 11265,
+"negocios": 14354,
 "nome": "MODERNA INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 69.77,
-"ultimo_pregao": "2026-11-10",
-"volume": 88361423
+"ultimo_preco": 68.8,
+"ultimo_pregao": "2026-11-11",
+"volume": 99191117
 },
 "M1SC34": {
 "isin": "BRM1SCBDR007",
-"negocios": 4,
+"negocios": 12,
 "nome": "MSCI INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 82.93,
-"ultimo_pregao": "2026-11-10",
-"volume": 23117
+"ultimo_preco": 88.55,
+"ultimo_pregao": "2026-11-11",
+"volume": 411893
 },
 "M1SI34": {
 "isin": "BRM1SIBDR004",
@@ -5643,13 +5714,13 @@
 },
 "M1TA34": {
 "isin": "BRM1TABDR009",
-"negocios": 33075,
+"negocios": 36032,
 "nome": "META PLAT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 127.61,
-"ultimo_pregao": "2026-11-10",
-"volume": 412038030
+"ultimo_preco": 125.36,
+"ultimo_pregao": "2026-11-11",
+"volume": 484582860
 },
 "M1TC34": {
 "isin": "BRM1TCBDR005",
@@ -5673,73 +5744,73 @@
 },
 "M1UF34": {
 "isin": "BRM1UFBDR006",
-"negocios": 15,
+"negocios": 18,
 "nome": "MITSUBISHI U",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 120.96,
-"ultimo_pregao": "2026-11-10",
-"volume": 25708
+"ultimo_preco": 122.64,
+"ultimo_pregao": "2026-11-11",
+"volume": 28509
 },
 "M2KS34": {
 "isin": "BRM2KSBDR008",
-"negocios": 10,
+"negocios": 15,
 "nome": "MKS INC",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 64.56,
-"ultimo_pregao": "2026-11-09",
-"volume": 2466
+"ultimo_preco": 71.15,
+"ultimo_pregao": "2026-11-11",
+"volume": 6919
 },
 "M2PM34": {
 "isin": "BRM2PMBDR000",
-"negocios": 402,
+"negocios": 431,
 "nome": "MP MATERIALS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 40.86,
-"ultimo_pregao": "2026-11-10",
-"volume": 623565
+"ultimo_preco": 41.12,
+"ultimo_pregao": "2026-11-11",
+"volume": 643384
 },
 "M2PR34": {
 "isin": "BRM2PRBDR009",
-"negocios": 59,
+"negocios": 67,
 "nome": "MONOLI POWER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 124.8,
-"ultimo_pregao": "2026-11-10",
-"volume": 293472
+"ultimo_preco": 137.15,
+"ultimo_pregao": "2026-11-11",
+"volume": 309348
 },
 "M2PT34": {
 "isin": "BRM2PTBDR005",
-"negocios": 109,
+"negocios": 119,
 "nome": "MEDICAL P TR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 4.95,
-"ultimo_pregao": "2026-11-10",
-"volume": 31278
+"ultimo_preco": 5.11,
+"ultimo_pregao": "2026-11-11",
+"volume": 33951
 },
 "M2RV34": {
 "isin": "BRM2RVBDR007",
-"negocios": 21034,
+"negocios": 21856,
 "nome": "MARVELL TEC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 86.99,
-"ultimo_pregao": "2026-11-10",
-"volume": 189081400
+"ultimo_preco": 93.84,
+"ultimo_pregao": "2026-11-11",
+"volume": 199332978
 },
 "M2ST34": {
 "isin": "BRM2STBDR009",
-"negocios": 16750,
+"negocios": 18125,
 "nome": "STRATEGY INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 9.71,
-"ultimo_pregao": "2026-11-10",
-"volume": 329510320
+"ultimo_preco": 9.7,
+"ultimo_pregao": "2026-11-11",
+"volume": 352668897
 },
 "MACY34": {
 "isin": "BRMACYBDR000",
@@ -5753,53 +5824,53 @@
 },
 "MCDC34": {
 "isin": "BRMCDCBDR000",
-"negocios": 1434,
+"negocios": 1844,
 "nome": "MCDONALDS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 78.64,
-"ultimo_pregao": "2026-11-10",
-"volume": 8492319
+"ultimo_preco": 76.22,
+"ultimo_pregao": "2026-11-11",
+"volume": 9053200
 },
 "MCOR34": {
 "isin": "BRMCORBDR005",
-"negocios": 37,
+"negocios": 38,
 "nome": "MOODYS CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 88.56,
-"ultimo_pregao": "2026-11-10",
-"volume": 713392
+"ultimo_preco": 87.66,
+"ultimo_pregao": "2026-11-11",
+"volume": 713567
 },
 "MDLZ34": {
 "isin": "BRMDLZBDR002",
-"negocios": 37,
+"negocios": 41,
 "nome": "MONDELEZ INT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 61.56,
-"ultimo_pregao": "2026-11-10",
-"volume": 61907
+"ultimo_preco": 62.04,
+"ultimo_pregao": "2026-11-11",
+"volume": 62275
 },
 "MDTC34": {
 "isin": "BRMDTCBDR004",
-"negocios": 5,
+"negocios": 510,
 "nome": "MEDTRONIC",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 71.33,
-"ultimo_pregao": "2026-11-10",
-"volume": 8879
+"ultimo_preco": 70.84,
+"ultimo_pregao": "2026-11-11",
+"volume": 186014
 },
 "MELI34": {
 "isin": "BRMELIBDR006",
-"negocios": 88467,
+"negocios": 99125,
 "nome": "MERCADOLIBRE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 69.27,
-"ultimo_pregao": "2026-11-10",
-"volume": 1109386073
+"ultimo_preco": 69.42,
+"ultimo_pregao": "2026-11-11",
+"volume": 1212618023
 },
 "METB34": {
 "isin": "BRMETBBDR004",
@@ -5823,93 +5894,93 @@
 },
 "MMMC34": {
 "isin": "BRMMMCBDR000",
-"negocios": 110,
+"negocios": 118,
 "nome": "3M",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 264.75,
-"ultimo_pregao": "2026-11-10",
-"volume": 514850
+"ultimo_preco": 261.91,
+"ultimo_pregao": "2026-11-11",
+"volume": 517761
 },
 "MOOO34": {
 "isin": "BRMOOOBDR007",
-"negocios": 83,
+"negocios": 88,
 "nome": "ALTRIA GROUP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 85.68,
-"ultimo_pregao": "2026-11-10",
-"volume": 181135
+"ultimo_preco": 86.04,
+"ultimo_pregao": "2026-11-11",
+"volume": 184994
 },
 "MOSC34": {
 "isin": "BRMOSCBDR003",
-"negocios": 4926,
+"negocios": 4941,
 "nome": "MOSAIC CO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 21.31,
-"ultimo_pregao": "2026-11-10",
-"volume": 2323476
+"ultimo_preco": 20.6,
+"ultimo_pregao": "2026-11-11",
+"volume": 2411050
 },
 "MRCK34": {
 "isin": "BRMRCKBDR003",
-"negocios": 607,
+"negocios": 894,
 "nome": "MERCK",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 102.01,
-"ultimo_pregao": "2026-11-10",
-"volume": 2267467
+"ultimo_preco": 102.41,
+"ultimo_pregao": "2026-11-11",
+"volume": 5746894
 },
 "MSBR34": {
 "isin": "BRMSBRBDR008",
-"negocios": 2618,
+"negocios": 2785,
 "nome": "MORGAN STAN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 210.32,
-"ultimo_pregao": "2026-11-10",
-"volume": 3242211
+"ultimo_preco": 211.76,
+"ultimo_pregao": "2026-11-11",
+"volume": 3532988
 },
 "MSCD34": {
 "isin": "BRMSCDBDR006",
-"negocios": 976,
+"negocios": 1667,
 "nome": "MASTERCARD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 118.95,
-"ultimo_pregao": "2026-11-10",
-"volume": 27976386
+"ultimo_preco": 119.35,
+"ultimo_pregao": "2026-11-11",
+"volume": 30183685
 },
 "MSFT34": {
 "isin": "BRMSFTBDR005",
-"negocios": 35402,
+"negocios": 40581,
 "nome": "MICROSOFT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 124.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 465957594
+"ultimo_preco": 120.55,
+"ultimo_pregao": "2026-11-11",
+"volume": 506621726
 },
 "MUTC34": {
 "isin": "BRMUTCBDR008",
-"negocios": 25219,
+"negocios": 29493,
 "nome": "MICRON TECHN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 675.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 695033935
+"ultimo_preco": 751.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 844980564
 },
 "N1BI34": {
 "isin": "BRN1BIBDR009",
-"negocios": 456,
+"negocios": 583,
 "nome": "NEUROCRINE B",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 47.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 235711
+"ultimo_preco": 48.15,
+"ultimo_pregao": "2026-11-11",
+"volume": 361608
 },
 "N1CL34": {
 "isin": "BRN1CLBDR001",
@@ -5923,23 +5994,23 @@
 },
 "N1DA34": {
 "isin": "BRN1DABDR002",
-"negocios": 92,
+"negocios": 98,
 "nome": "NASDAQ INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 305.6,
-"ultimo_pregao": "2026-11-10",
-"volume": 139269
+"ultimo_preco": 305.37,
+"ultimo_pregao": "2026-11-11",
+"volume": 166949
 },
 "N1EM34": {
 "isin": "BRN1EMBDR005",
-"negocios": 2440,
+"negocios": 2952,
 "nome": "NEWMONT GOLD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 661.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 6404747
+"ultimo_preco": 685.98,
+"ultimo_pregao": "2026-11-11",
+"volume": 6789740
 },
 "N1GG34": {
 "isin": "BRN1GGBDR002",
@@ -5983,33 +6054,33 @@
 },
 "N1OW34": {
 "isin": "BRN1OWBDR003",
-"negocios": 951,
+"negocios": 1102,
 "nome": "SERVICENOW",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 11.34,
-"ultimo_pregao": "2026-11-10",
-"volume": 3667252
+"ultimo_preco": 11.47,
+"ultimo_pregao": "2026-11-11",
+"volume": 4174327
 },
 "N1RG34": {
 "isin": "BRN1RGBDR009",
-"negocios": 500,
+"negocios": 509,
 "nome": "NRG ENERGY I",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 53.65,
-"ultimo_pregao": "2026-11-10",
-"volume": 199488
+"ultimo_preco": 54.8,
+"ultimo_pregao": "2026-11-11",
+"volume": 254258
 },
 "N1TA34": {
 "isin": "BRN1TABDR008",
-"negocios": 9643,
+"negocios": 9669,
 "nome": "NETAPP INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 69.52,
-"ultimo_pregao": "2026-11-10",
-"volume": 30320160
+"ultimo_preco": 72.88,
+"ultimo_pregao": "2026-11-11",
+"volume": 30730504
 },
 "N1UE34": {
 "isin": "BRN1UEBDR008",
@@ -6023,33 +6094,43 @@
 },
 "N1VO34": {
 "isin": "BRN1VOBDR005",
-"negocios": 1766,
+"negocios": 1854,
 "nome": "NOVO NORDISK",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 28.2,
-"ultimo_pregao": "2026-11-10",
-"volume": 4298454
+"ultimo_preco": 28.45,
+"ultimo_pregao": "2026-11-11",
+"volume": 4385659
 },
 "N1VS34": {
 "isin": "BRN1VSBDR006",
-"negocios": 38,
+"negocios": 64,
 "nome": "NOVARTIS AG",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 91.98,
-"ultimo_pregao": "2026-11-10",
-"volume": 158055
+"ultimo_preco": 89.46,
+"ultimo_pregao": "2026-11-11",
+"volume": 189333
 },
 "N1WG34": {
 "isin": "BRN1WGBDR009",
-"negocios": 491,
+"negocios": 630,
 "nome": "NATWEST GROU",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
 "ultimo_preco": 89.19,
-"ultimo_pregao": "2026-11-10",
-"volume": 134263
+"ultimo_pregao": "2026-11-11",
+"volume": 148416
+},
+"N1WL34": {
+"isin": "BRN1WLBDR009",
+"negocios": 9,
+"nome": "NEWELL BRAND",
+"primeiro_pregao": "2026-11-11",
+"tipo": "DRN",
+"ultimo_preco": 32.76,
+"ultimo_pregao": "2026-11-11",
+"volume": 1979
 },
 "N1WS34": {
 "isin": "BRN1WSBDR004",
@@ -6063,33 +6144,33 @@
 },
 "N1XP34": {
 "isin": "BRN1XPBDR008",
-"negocios": 17,
+"negocios": 19,
 "nome": "NXP SEMICOND",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 73.36,
-"ultimo_pregao": "2026-11-10",
-"volume": 20467
+"ultimo_preco": 75.39,
+"ultimo_pregao": "2026-11-11",
+"volume": 20618
 },
 "N2ET34": {
 "isin": "BRN2ETBDR008",
-"negocios": 10393,
+"negocios": 10458,
 "nome": "CLOUDFLARE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 95.24,
-"ultimo_pregao": "2026-11-10",
-"volume": 83957936
+"ultimo_preco": 97.23,
+"ultimo_pregao": "2026-11-11",
+"volume": 84510790
 },
 "N2LY34": {
 "isin": "BRN2LYBDR003",
-"negocios": 35,
+"negocios": 42,
 "nome": "ANNALY CAPTL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 105.45,
-"ultimo_pregao": "2026-11-10",
-"volume": 388381
+"ultimo_preco": 102.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 429434
 },
 "N2VC34": {
 "isin": "BRN2VCBDR008",
@@ -6103,83 +6184,83 @@
 },
 "NETE34": {
 "isin": "BRNETEBDR006",
-"negocios": 12,
+"negocios": 13,
 "nome": "NETEASE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 71.04,
-"ultimo_pregao": "2026-11-09",
-"volume": 3378
+"ultimo_preco": 68.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 3446
 },
 "NEXT34": {
 "isin": "BRNEXTBDR006",
-"negocios": 258,
+"negocios": 597,
 "nome": "NEXTERA ENER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 120.78,
-"ultimo_pregao": "2026-11-10",
-"volume": 3041671
+"ultimo_preco": 119.63,
+"ultimo_pregao": "2026-11-11",
+"volume": 3131980
 },
 "NFLX34": {
 "isin": "BRNFLXBDR000",
-"negocios": 13159,
+"negocios": 16586,
 "nome": "NETFLIX",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 7.07,
-"ultimo_pregao": "2026-11-10",
-"volume": 65142052
+"ultimo_preco": 7.25,
+"ultimo_pregao": "2026-11-11",
+"volume": 70496581
 },
 "NIKE34": {
 "isin": "BRNIKEBDR006",
-"negocios": 2217,
+"negocios": 2782,
 "nome": "NIKE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 107.9,
-"ultimo_pregao": "2026-11-10",
-"volume": 12185529
+"ultimo_preco": 106.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 13460955
 },
 "NOCG34": {
 "isin": "BRNOCGBDR006",
-"negocios": 43,
+"negocios": 46,
 "nome": "NORTHROP GRU",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 61.78,
-"ultimo_pregao": "2026-11-10",
-"volume": 150822
+"ultimo_preco": 61.38,
+"ultimo_pregao": "2026-11-11",
+"volume": 152110
 },
 "NOKI34": {
 "isin": "BRNOKIBDR005",
-"negocios": 5516,
+"negocios": 5541,
 "nome": "NOKIA CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 45.3,
-"ultimo_pregao": "2026-11-10",
-"volume": 3152347
+"ultimo_preco": 47.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 3441836
 },
 "NTST34": {
 "isin": "BRNTSTBDR004",
-"negocios": 3,
+"negocios": 4,
 "nome": "NETSTREIT CO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 51.0,
-"ultimo_pregao": "2026-11-05",
-"volume": 1535
+"ultimo_preco": 52.15,
+"ultimo_pregao": "2026-11-11",
+"volume": 1639
 },
 "NVDC34": {
 "isin": "BRNVDCBDR008",
-"negocios": 194967,
+"negocios": 233075,
 "nome": "NVIDIA CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 19.9,
-"ultimo_pregao": "2026-11-10",
-"volume": 2115899893
+"ultimo_preco": 20.35,
+"ultimo_pregao": "2026-11-11",
+"volume": 2464618713
 },
 "O1KE34": {
 "isin": "BRO1KEBDR008",
@@ -6193,13 +6274,13 @@
 },
 "O1KT34": {
 "isin": "BRO1KTBDR006",
-"negocios": 174,
+"negocios": 186,
 "nome": "OKTA INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 49.8,
-"ultimo_pregao": "2026-11-10",
-"volume": 28169548
+"ultimo_preco": 52.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 28188576
 },
 "O1MC34": {
 "isin": "BRO1MCBDR008",
@@ -6223,13 +6304,13 @@
 },
 "O2HI34": {
 "isin": "BRO2HIBDR003",
-"negocios": 2,
+"negocios": 3,
 "nome": "OMEGA HEALTH",
 "primeiro_pregao": "2026-11-10",
 "tipo": "DRN",
-"ultimo_preco": 90.54,
-"ultimo_pregao": "2026-11-10",
-"volume": 17663
+"ultimo_preco": 88.77,
+"ultimo_pregao": "2026-11-11",
+"volume": 44294
 },
 "O2LE34": {
 "isin": "BRO2LEBDR004",
@@ -6243,53 +6324,53 @@
 },
 "O2NS34": {
 "isin": "BRO2NSBDR000",
-"negocios": 39,
+"negocios": 44,
 "nome": "ON SEMICONDU",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 48.55,
-"ultimo_pregao": "2026-11-10",
-"volume": 154930
+"ultimo_preco": 50.75,
+"ultimo_pregao": "2026-11-11",
+"volume": 161217
 },
 "ORBX39": {
 "isin": "BRORBXBDR004",
-"negocios": 77,
+"negocios": 82,
 "nome": "GX SPACETECH",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRE",
-"ultimo_preco": 26.16,
-"ultimo_pregao": "2026-11-10",
-"volume": 1668138
+"ultimo_preco": 26.84,
+"ultimo_pregao": "2026-11-11",
+"volume": 1723186
 },
 "ORCL34": {
 "isin": "BRORCLBDR007",
-"negocios": 7578,
+"negocios": 8972,
 "nome": "ORACLE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 110.39,
-"ultimo_pregao": "2026-11-10",
-"volume": 107910999
+"ultimo_preco": 119.8,
+"ultimo_pregao": "2026-11-11",
+"volume": 117859102
 },
 "ORLY34": {
 "isin": "BRORLYBDR001",
-"negocios": 248,
+"negocios": 269,
 "nome": "OREILLY AUT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
 "ultimo_preco": 1.62,
-"ultimo_pregao": "2026-11-10",
-"volume": 53942
+"ultimo_pregao": "2026-11-11",
+"volume": 54116
 },
 "OXYP34": {
 "isin": "BROXYPBDR000",
-"negocios": 114,
+"negocios": 151,
 "nome": "OCCIDENT PTR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 52.9,
-"ultimo_pregao": "2026-11-10",
-"volume": 183556
+"ultimo_preco": 56.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 629129
 },
 "P1AC34": {
 "isin": "BRP1ACBDR002",
@@ -6313,13 +6394,13 @@
 },
 "P1DD34": {
 "isin": "BRP1DDBDR004",
-"negocios": 172,
+"negocios": 190,
 "nome": "PDD HOLDING",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 44.22,
-"ultimo_pregao": "2026-11-10",
-"volume": 733400
+"ultimo_preco": 43.88,
+"ultimo_pregao": "2026-11-11",
+"volume": 735900
 },
 "P1DT34": {
 "isin": "BRP1DTBDR000",
@@ -6333,23 +6414,23 @@
 },
 "P1EA34": {
 "isin": "BRP1EABDR008",
-"negocios": 336,
+"negocios": 611,
 "nome": "HEALTHPEAK P",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 109.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 36858
+"ultimo_preco": 112.31,
+"ultimo_pregao": "2026-11-11",
+"volume": 104360
 },
 "P1GR34": {
 "isin": "BRP1GRBDR007",
-"negocios": 91,
+"negocios": 131,
 "nome": "THE PROGRESS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
 "ultimo_preco": 64.08,
-"ultimo_pregao": "2026-11-10",
-"volume": 69349
+"ultimo_pregao": "2026-11-11",
+"volume": 75749
 },
 "P1HC34": {
 "isin": "BRP1HCBDR007",
@@ -6373,13 +6454,13 @@
 },
 "P1LD34": {
 "isin": "BRP1LDBDR007",
-"negocios": 147,
+"negocios": 160,
 "nome": "PROLOGIS INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 61.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 582195
+"ultimo_preco": 60.3,
+"ultimo_pregao": "2026-11-11",
+"volume": 592988
 },
 "P1RG34": {
 "isin": "BRP1RGBDR007",
@@ -6423,23 +6504,23 @@
 },
 "P2AN34": {
 "isin": "BRP2ANBDR007",
-"negocios": 1114,
+"negocios": 1472,
 "nome": "PALOALTO NET",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 30.49,
-"ultimo_pregao": "2026-11-10",
-"volume": 42650352
+"ultimo_preco": 31.37,
+"ultimo_pregao": "2026-11-11",
+"volume": 43631442
 },
 "P2AT34": {
 "isin": "BRP2ATBDR004",
-"negocios": 58,
+"negocios": 62,
 "nome": "UIPATH INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 8.82,
-"ultimo_pregao": "2026-11-10",
-"volume": 88327
+"ultimo_preco": 9.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 89790
 },
 "P2AX34": {
 "isin": "BRP2AXBDR006",
@@ -6453,13 +6534,13 @@
 },
 "P2CF34": {
 "isin": "BRP2CFBDR009",
-"negocios": 63,
+"negocios": 67,
 "nome": "GP AEROPACIF",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 9.31,
-"ultimo_pregao": "2026-11-10",
-"volume": 74582
+"ultimo_preco": 9.26,
+"ultimo_pregao": "2026-11-11",
+"volume": 74795
 },
 "P2CY34": {
 "isin": "BRP2CYBDR000",
@@ -6473,13 +6554,13 @@
 },
 "P2EN34": {
 "isin": "BRP2ENBDR009",
-"negocios": 7,
+"negocios": 8,
 "nome": "PENN NATIONL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 10.39,
-"ultimo_pregao": "2026-11-10",
-"volume": 206
+"ultimo_preco": 10.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 216
 },
 "P2IN34": {
 "isin": "BRP2INBDR000",
@@ -6493,13 +6574,13 @@
 },
 "P2LT34": {
 "isin": "BRP2LTBDR001",
-"negocios": 10969,
+"negocios": 12646,
 "nome": "PALANTIRTECH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 314.25,
-"ultimo_pregao": "2026-11-10",
-"volume": 265092528
+"ultimo_preco": 321.99,
+"ultimo_pregao": "2026-11-11",
+"volume": 269961280
 },
 "P2ST34": {
 "isin": "BRP2STBDR006",
@@ -6523,43 +6604,43 @@
 },
 "PAGS34": {
 "isin": "BRPAGSBDR006",
-"negocios": 4600,
+"negocios": 4737,
 "nome": "PAGSEGURO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
 "ultimo_preco": 8.63,
-"ultimo_pregao": "2026-11-10",
-"volume": 4707578
+"ultimo_pregao": "2026-11-11",
+"volume": 5361214
 },
 "PEPB34": {
 "isin": "BRPEPBBDR005",
-"negocios": 1085,
+"negocios": 1621,
 "nome": "PEPSICO INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 53.41,
-"ultimo_pregao": "2026-11-10",
-"volume": 3031405
+"ultimo_preco": 53.06,
+"ultimo_pregao": "2026-11-11",
+"volume": 3759303
 },
 "PFIZ34": {
 "isin": "BRPFIZBDR006",
-"negocios": 2068,
+"negocios": 2668,
 "nome": "PFIZER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 41.88,
-"ultimo_pregao": "2026-11-10",
-"volume": 2312789
+"ultimo_preco": 40.89,
+"ultimo_pregao": "2026-11-11",
+"volume": 2640449
 },
 "PGCO34": {
 "isin": "BRPGCOBDR001",
-"negocios": 551,
+"negocios": 649,
 "nome": "PG",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 67.85,
-"ultimo_pregao": "2026-11-10",
-"volume": 1653352
+"ultimo_preco": 66.52,
+"ultimo_pregao": "2026-11-11",
+"volume": 1723298
 },
 "PHGN34": {
 "isin": "BRPHGNBDR002",
@@ -6573,13 +6654,13 @@
 },
 "PHMO34": {
 "isin": "BRPHMOBDR008",
-"negocios": 147,
+"negocios": 157,
 "nome": "PHILIP MORRI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 68.06,
-"ultimo_pregao": "2026-11-10",
-"volume": 537289
+"ultimo_preco": 68.25,
+"ultimo_pregao": "2026-11-11",
+"volume": 538841
 },
 "PNCS34": {
 "isin": "BRPNCSBDR008",
@@ -6593,93 +6674,93 @@
 },
 "PRXB31": {
 "isin": "BRPRXBBDR001",
-"negocios": 22,
+"negocios": 35,
 "nome": "PROSUS N.V.",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DR1",
-"ultimo_preco": 21.4,
-"ultimo_pregao": "2026-11-09",
-"volume": 6074
+"ultimo_preco": 22.52,
+"ultimo_pregao": "2026-11-11",
+"volume": 31826
 },
 "PYPL34": {
 "isin": "BRPYPLBDR002",
-"negocios": 823,
+"negocios": 864,
 "nome": "PAYPAL HOLD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 16.66,
-"ultimo_pregao": "2026-11-10",
-"volume": 5657263
+"ultimo_preco": 16.19,
+"ultimo_pregao": "2026-11-11",
+"volume": 5697455
 },
 "Q1UA34": {
 "isin": "BRQ1UABDR003",
-"negocios": 90,
+"negocios": 95,
 "nome": "QUANTA SERVI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 269.73,
-"ultimo_pregao": "2026-11-10",
-"volume": 591691
+"ultimo_preco": 281.96,
+"ultimo_pregao": "2026-11-11",
+"volume": 604521
 },
 "Q2SC34": {
 "isin": "BRQ2SCBDR001",
-"negocios": 35,
+"negocios": 39,
 "nome": "QUANTUMSCAPE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 8.03,
-"ultimo_pregao": "2026-11-10",
-"volume": 60115
+"ultimo_preco": 8.02,
+"ultimo_pregao": "2026-11-11",
+"volume": 60381
 },
 "QCOM34": {
 "isin": "BRQCOMBDR007",
-"negocios": 2106,
+"negocios": 2566,
 "nome": "QUALCOMM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 80.21,
-"ultimo_pregao": "2026-11-10",
-"volume": 44723600
+"ultimo_preco": 81.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 53973871
 },
 "QTOP39": {
 "isin": "BRQTOPBDR004",
-"negocios": 3,
+"negocios": 5,
 "nome": "NASDAQ TOP30",
 "primeiro_pregao": "2026-11-09",
 "tipo": "DRE",
-"ultimo_preco": 65.94,
-"ultimo_pregao": "2026-11-10",
-"volume": 9555
+"ultimo_preco": 66.48,
+"ultimo_pregao": "2026-11-11",
+"volume": 19788
 },
 "QUBT34": {
 "isin": "BRQUBTBDR001",
-"negocios": 210,
+"negocios": 237,
 "nome": "QUANTUM COMP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 35.18,
-"ultimo_pregao": "2026-11-10",
-"volume": 553616
+"ultimo_preco": 34.04,
+"ultimo_pregao": "2026-11-11",
+"volume": 604571
 },
 "R1CL34": {
 "isin": "BRR1CLBDR007",
-"negocios": 264,
+"negocios": 690,
 "nome": "ROYAL CARIBB",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 68.18,
-"ultimo_pregao": "2026-11-10",
-"volume": 52948
+"ultimo_preco": 66.57,
+"ultimo_pregao": "2026-11-11",
+"volume": 88638
 },
 "R1DY34": {
 "isin": "BRR1DYBDR008",
-"negocios": 3,
+"negocios": 4,
 "nome": "DR REDDYS LA",
 "primeiro_pregao": "2026-11-09",
 "tipo": "DRN",
-"ultimo_preco": 13.84,
-"ultimo_pregao": "2026-11-09",
-"volume": 1307
+"ultimo_preco": 13.72,
+"ultimo_pregao": "2026-11-11",
+"volume": 1321
 },
 "R1EG34": {
 "isin": "BRR1EGBDR003",
@@ -6713,23 +6794,23 @@
 },
 "R1IN34": {
 "isin": "BRR1INBDR000",
-"negocios": 299,
+"negocios": 335,
 "nome": "REALTY INCOM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 55.25,
-"ultimo_pregao": "2026-11-10",
-"volume": 532174
+"ultimo_preco": 55.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 607483
 },
 "R1JF34": {
 "isin": "BRR1JFBDR004",
-"negocios": 105,
+"negocios": 202,
 "nome": "RAYMOND JAME",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 78.08,
-"ultimo_pregao": "2026-11-10",
-"volume": 9927
+"ultimo_preco": 77.92,
+"ultimo_pregao": "2026-11-11",
+"volume": 17488
 },
 "R1KU34": {
 "isin": "BRR1KUBDR001",
@@ -6763,43 +6844,43 @@
 },
 "R1OP34": {
 "isin": "BRR1OPBDR003",
-"negocios": 5,
+"negocios": 6,
 "nome": "ROPER TECHNO",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRN",
-"ultimo_preco": 258.93,
-"ultimo_pregao": "2026-11-06",
-"volume": 6926
+"ultimo_preco": 264.16,
+"ultimo_pregao": "2026-11-11",
+"volume": 22776
 },
 "R1SG34": {
 "isin": "BRR1SGBDR003",
-"negocios": 3,
+"negocios": 4,
 "nome": "REPUBLIC SER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 84.06,
-"ultimo_pregao": "2026-11-06",
-"volume": 45999
+"ultimo_preco": 86.13,
+"ultimo_pregao": "2026-11-11",
+"volume": 63225
 },
 "R1VT34": {
 "isin": "BRR1VTBDR000",
-"negocios": 5,
+"negocios": 6,
 "nome": "REVVITY INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 31.53,
-"ultimo_pregao": "2026-11-09",
-"volume": 1262
+"ultimo_preco": 31.8,
+"ultimo_pregao": "2026-11-11",
+"volume": 1580
 },
 "R1YA34": {
 "isin": "BRR1YABDR004",
-"negocios": 4,
+"negocios": 5,
 "nome": "RYANAIR HOLD",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRN",
-"ultimo_preco": 41.63,
-"ultimo_pregao": "2026-11-09",
-"volume": 22641
+"ultimo_preco": 41.56,
+"ultimo_pregao": "2026-11-11",
+"volume": 22683
 },
 "R2AR34": {
 "isin": "BRR2ARBDR006",
@@ -6813,23 +6894,23 @@
 },
 "R2BL34": {
 "isin": "BRR2BLBDR007",
-"negocios": 118,
+"negocios": 134,
 "nome": "ROBLOX CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 28.69,
-"ultimo_pregao": "2026-11-10",
-"volume": 846535
+"ultimo_preco": 29.02,
+"ultimo_pregao": "2026-11-11",
+"volume": 960103
 },
 "R2GE34": {
 "isin": "BRR2GEBDR001",
-"negocios": 4,
+"negocios": 5,
 "nome": "REPLIGEN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 31.98,
-"ultimo_pregao": "2026-11-09",
-"volume": 2473
+"ultimo_preco": 31.34,
+"ultimo_pregao": "2026-11-11",
+"volume": 2504
 },
 "R2HH34": {
 "isin": "BRR2HHBDR002",
@@ -6853,73 +6934,73 @@
 },
 "R2PD34": {
 "isin": "BRR2PDBDR004",
-"negocios": 169,
+"negocios": 174,
 "nome": "RAPID7 INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 6.74,
-"ultimo_pregao": "2026-11-10",
-"volume": 4970355
+"ultimo_preco": 6.98,
+"ultimo_pregao": "2026-11-11",
+"volume": 4970572
 },
 "REGN34": {
 "isin": "BRREGNBDR005",
-"negocios": 51,
+"negocios": 61,
 "nome": "REGENERON PH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 85.42,
-"ultimo_pregao": "2026-11-10",
-"volume": 258431
+"ultimo_preco": 89.15,
+"ultimo_pregao": "2026-11-11",
+"volume": 273468
 },
 "RGTI34": {
 "isin": "BRRGTIBDR003",
-"negocios": 496,
+"negocios": 599,
 "nome": "RIGETTI COMP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 68.04,
-"ultimo_pregao": "2026-11-10",
-"volume": 2014424
+"ultimo_preco": 62.18,
+"ultimo_pregao": "2026-11-11",
+"volume": 2242305
 },
 "RIGG34": {
 "isin": "BRRIGGBDR000",
-"negocios": 4098,
+"negocios": 4104,
 "nome": "TRANSOCEAN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 28.99,
-"ultimo_pregao": "2026-11-10",
-"volume": 2304324
+"ultimo_preco": 29.79,
+"ultimo_pregao": "2026-11-11",
+"volume": 2312518
 },
 "RIOT34": {
 "isin": "BRRIOTBDR007",
-"negocios": 268,
+"negocios": 295,
 "nome": "RIO TINTO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 471.91,
-"ultimo_pregao": "2026-11-10",
-"volume": 3558272
+"ultimo_preco": 473.51,
+"ultimo_pregao": "2026-11-11",
+"volume": 3965674
 },
 "ROST34": {
 "isin": "BRROSTBDR006",
-"negocios": 6,
+"negocios": 8,
 "nome": "ROSS STORES",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 82.17,
-"ultimo_pregao": "2026-11-09",
-"volume": 76081
+"ultimo_preco": 83.52,
+"ultimo_pregao": "2026-11-11",
+"volume": 542346
 },
 "ROXO34": {
 "isin": "BRROXOBDR007",
-"negocios": 263980,
+"negocios": 279158,
 "nome": "NU HOLDINGS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 11.27,
-"ultimo_pregao": "2026-11-10",
-"volume": 977069028
+"ultimo_preco": 11.39,
+"ultimo_pregao": "2026-11-11",
+"volume": 1117915526
 },
 "RSSL39": {
 "isin": "BRRSSLBDR004",
@@ -6933,13 +7014,13 @@
 },
 "RYTT34": {
 "isin": "BRRYTTBDR003",
-"negocios": 154,
+"negocios": 171,
 "nome": "RAYTHEONTECH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 190.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 9974416
+"ultimo_preco": 187.02,
+"ultimo_pregao": "2026-11-11",
+"volume": 10668889
 },
 "S1AK34": {
 "isin": "BRS1AKBDR002",
@@ -6953,23 +7034,23 @@
 },
 "S1BS34": {
 "isin": "BRS1BSBDR003",
-"negocios": 9096,
+"negocios": 10789,
 "nome": "SIBANYE STIL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 26.1,
-"ultimo_pregao": "2026-11-10",
-"volume": 1904944
+"ultimo_preco": 25.5,
+"ultimo_pregao": "2026-11-11",
+"volume": 2163756
 },
 "S1HW34": {
 "isin": "BRS1HWBDR002",
-"negocios": 20,
+"negocios": 24,
 "nome": "THE SHERWIN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 199.06,
-"ultimo_pregao": "2026-11-10",
-"volume": 208179
+"ultimo_preco": 196.77,
+"ultimo_pregao": "2026-11-11",
+"volume": 210537
 },
 "S1JM34": {
 "isin": "BRS1JMBDR009",
@@ -7023,23 +7104,23 @@
 },
 "S1NP34": {
 "isin": "BRS1NPBDR004",
-"negocios": 16724,
+"negocios": 16737,
 "nome": "SYNOPSYS INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 63.67,
-"ultimo_pregao": "2026-11-10",
-"volume": 40548484
+"ultimo_preco": 64.09,
+"ultimo_pregao": "2026-11-11",
+"volume": 40584839
 },
 "S1PO34": {
 "isin": "BRS1POBDR002",
-"negocios": 257,
+"negocios": 268,
 "nome": "SPOTIFY TECH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 847.34,
-"ultimo_pregao": "2026-11-10",
-"volume": 1849156
+"ultimo_preco": 841.34,
+"ultimo_pregao": "2026-11-11",
+"volume": 1952951
 },
 "S1RE34": {
 "isin": "BRS1REBDR009",
@@ -7053,13 +7134,13 @@
 },
 "S1RP34": {
 "isin": "BRS1RPBDR005",
-"negocios": 11,
+"negocios": 18,
 "nome": "SAREPTA THER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 4.74,
-"ultimo_pregao": "2026-11-10",
-"volume": 1027
+"ultimo_preco": 4.58,
+"ultimo_pregao": "2026-11-11",
+"volume": 6667
 },
 "S1SL34": {
 "isin": "BRS1SLBDR002",
@@ -7073,23 +7154,23 @@
 },
 "S1TT34": {
 "isin": "BRS1TTBDR003",
-"negocios": 2,
+"negocios": 3,
 "nome": "STATE STREET",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRN",
-"ultimo_preco": 971.96,
-"ultimo_pregao": "2026-11-10",
-"volume": 1890
+"ultimo_preco": 920.64,
+"ultimo_pregao": "2026-11-11",
+"volume": 2811
 },
 "S1TX34": {
 "isin": "BRS1TXBDR005",
-"negocios": 13289,
+"negocios": 13428,
 "nome": "SEAGATE HOLD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 50.01,
-"ultimo_pregao": "2026-11-10",
-"volume": 61080149
+"ultimo_preco": 55.89,
+"ultimo_pregao": "2026-11-11",
+"volume": 63221447
 },
 "S1WK34": {
 "isin": "BRS1WKBDR006",
@@ -7113,13 +7194,13 @@
 },
 "S1YK34": {
 "isin": "BRS1YKBDR002",
-"negocios": 78,
+"negocios": 229,
 "nome": "STRYKER CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 90.18,
-"ultimo_pregao": "2026-11-09",
-"volume": 682728
+"ultimo_preco": 88.29,
+"ultimo_pregao": "2026-11-11",
+"volume": 738431
 },
 "S1YM34": {
 "isin": "BRS1YMBDR008",
@@ -7153,33 +7234,33 @@
 },
 "S2EA34": {
 "isin": "BRS2EABDR003",
-"negocios": 993,
+"negocios": 1435,
 "nome": "SEA LTD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 17.15,
-"ultimo_pregao": "2026-11-10",
-"volume": 1790230
+"ultimo_preco": 16.45,
+"ultimo_pregao": "2026-11-11",
+"volume": 2170099
 },
 "S2ED34": {
 "isin": "BRS2EDBDR007",
-"negocios": 562,
+"negocios": 606,
 "nome": "SOLAR TECH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 4.11,
-"ultimo_pregao": "2026-11-10",
-"volume": 638448
+"ultimo_preco": 4.19,
+"ultimo_pregao": "2026-11-11",
+"volume": 657135
 },
 "S2FM34": {
 "isin": "BRS2FMBDR005",
-"negocios": 17,
+"negocios": 18,
 "nome": "SPROUTS FARM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 91.59,
-"ultimo_pregao": "2026-11-10",
-"volume": 474486
+"ultimo_preco": 93.66,
+"ultimo_pregao": "2026-11-11",
+"volume": 580977
 },
 "S2GI34": {
 "isin": "BRS2GIBDR001",
@@ -7193,23 +7274,23 @@
 },
 "S2GM34": {
 "isin": "BRS2GMBDR003",
-"negocios": 3020,
+"negocios": 3702,
 "nome": "SIGMA LITHM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 10.12,
-"ultimo_pregao": "2026-11-10",
-"volume": 4386935
+"ultimo_preco": 9.58,
+"ultimo_pregao": "2026-11-11",
+"volume": 5305470
 },
 "S2HO34": {
 "isin": "BRS2HOBDR007",
-"negocios": 370,
+"negocios": 410,
 "nome": "SHOPIFY INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 6.82,
-"ultimo_pregao": "2026-11-10",
-"volume": 1729018
+"ultimo_preco": 6.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 1796103
 },
 "S2MP34": {
 "isin": "BRS2MPBDR004",
@@ -7223,103 +7304,113 @@
 },
 "S2NA34": {
 "isin": "BRS2NABDR004",
-"negocios": 7,
+"negocios": 8,
 "nome": "SNAP INC",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRN",
-"ultimo_preco": 4.51,
-"ultimo_pregao": "2026-11-10",
-"volume": 188
+"ultimo_preco": 4.71,
+"ultimo_pregao": "2026-11-11",
+"volume": 235
 },
 "S2NW34": {
 "isin": "BRS2NWBDR008",
-"negocios": 11050,
+"negocios": 11100,
 "nome": "SNOWFLAKE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 41.35,
-"ultimo_pregao": "2026-11-10",
-"volume": 28544005
+"ultimo_preco": 42.36,
+"ultimo_pregao": "2026-11-11",
+"volume": 28786963
+},
+"S2RE34": {
+"isin": "BRS2REBDR007",
+"negocios": 1,
+"nome": "GP AEROSURES",
+"primeiro_pregao": "2026-11-11",
+"tipo": "DRN",
+"ultimo_preco": 74.91,
+"ultimo_pregao": "2026-11-11",
+"volume": 449
 },
 "S2TA34": {
 "isin": "BRS2TABDR001",
-"negocios": 37,
+"negocios": 45,
 "nome": "STAG INDUSTR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 42.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 47572
+"ultimo_preco": 41.48,
+"ultimo_pregao": "2026-11-11",
+"volume": 54553
 },
 "S2TW34": {
 "isin": "BRS2TWBDR005",
-"negocios": 12,
+"negocios": 22,
 "nome": "STARWOOD PRO",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 22.26,
-"ultimo_pregao": "2026-11-10",
-"volume": 69243
+"ultimo_preco": 22.32,
+"ultimo_pregao": "2026-11-11",
+"volume": 103302
 },
 "S2UI34": {
 "isin": "BRS2UIBDR002",
-"negocios": 4,
+"negocios": 8,
 "nome": "SUN COMMUN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 33.45,
-"ultimo_pregao": "2026-11-10",
-"volume": 4862
+"ultimo_preco": 32.43,
+"ultimo_pregao": "2026-11-11",
+"volume": 7175
 },
 "SAPP34": {
 "isin": "BRSAPPBDR007",
-"negocios": 129,
+"negocios": 147,
 "nome": "SAP SE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 93.24,
-"ultimo_pregao": "2026-11-10",
-"volume": 375368
+"ultimo_preco": 95.4,
+"ultimo_pregao": "2026-11-11",
+"volume": 399246
 },
 "SBUB34": {
 "isin": "BRSBUBBDR005",
-"negocios": 89,
+"negocios": 98,
 "nome": "STARBUCKS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 612.38,
-"ultimo_pregao": "2026-11-10",
-"volume": 544099
+"ultimo_preco": 609.99,
+"ultimo_pregao": "2026-11-11",
+"volume": 599278
 },
 "SCHW34": {
 "isin": "BRSCHWBDR006",
-"negocios": 706,
+"negocios": 1126,
 "nome": "SCHWAB",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 65.49,
-"ultimo_pregao": "2026-11-10",
-"volume": 354447
+"ultimo_preco": 64.2,
+"ultimo_pregao": "2026-11-11",
+"volume": 396480
 },
 "SHLD39": {
 "isin": "BRSHLDBDR007",
-"negocios": 21,
+"negocios": 28,
 "nome": "GX DEFENSE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 43.08,
-"ultimo_pregao": "2026-11-10",
-"volume": 68727
+"ultimo_preco": 42.72,
+"ultimo_pregao": "2026-11-11",
+"volume": 155146
 },
 "SIMN34": {
 "isin": "BRSIMNBDR002",
-"negocios": 45,
+"negocios": 52,
 "nome": "SIMON PROP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 81.6,
-"ultimo_pregao": "2026-11-10",
-"volume": 243427
+"ultimo_preco": 81.92,
+"ultimo_pregao": "2026-11-11",
+"volume": 252201
 },
 "SIVR39": {
 "isin": "BRSIVRBDR004",
@@ -7333,33 +7424,43 @@
 },
 "SK1D34": {
 "isin": "BRSK1DBDR004",
-"negocios": 5,
+"negocios": 6,
 "nome": "SKYDANCECORP",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRN",
-"ultimo_preco": 44.4,
-"ultimo_pregao": "2026-11-10",
-"volume": 2370
+"ultimo_preco": 44.72,
+"ultimo_pregao": "2026-11-11",
+"volume": 2415
 },
 "SKHY34": {
 "isin": "BRSKHYBDR005",
-"negocios": 10291,
+"negocios": 17790,
 "nome": "SK HYNIX",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 45.25,
-"ultimo_pregao": "2026-11-10",
-"volume": 24859081
+"ultimo_preco": 49.53,
+"ultimo_pregao": "2026-11-11",
+"volume": 27727138
+},
+"SLBG34": {
+"isin": "BRSLBGBDR003",
+"negocios": 3,
+"nome": "SLB N.V",
+"primeiro_pregao": "2026-11-11",
+"tipo": "DRN",
+"ultimo_preco": 141.48,
+"ultimo_pregao": "2026-11-11",
+"volume": 2250
 },
 "SNEC34": {
 "isin": "BRSNECBDR002",
-"negocios": 118,
+"negocios": 132,
 "nome": "SONY GROUP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 149.86,
-"ultimo_pregao": "2026-11-10",
-"volume": 394543
+"ultimo_preco": 148.16,
+"ultimo_pregao": "2026-11-11",
+"volume": 413406
 },
 "SOLN39": {
 "isin": "BRSOLNBDR002",
@@ -7373,83 +7474,83 @@
 },
 "SPCX34": {
 "isin": "BRSPCXBDR007",
-"negocios": 31977,
+"negocios": 36588,
 "nome": "SPACE X",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 52.82,
-"ultimo_pregao": "2026-11-10",
-"volume": 515729748
+"ultimo_preco": 51.8,
+"ultimo_pregao": "2026-11-11",
+"volume": 572951454
 },
 "SPGI34": {
 "isin": "BRSPGIBDR009",
-"negocios": 254,
+"negocios": 266,
 "nome": "SP GLOBAL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 73.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 30285060
+"ultimo_preco": 73.54,
+"ultimo_pregao": "2026-11-11",
+"volume": 30871474
 },
 "SSFO34": {
 "isin": "BRSSFOBDR003",
-"negocios": 719,
+"negocios": 748,
 "nome": "SALESFOR INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 53.58,
-"ultimo_pregao": "2026-11-10",
-"volume": 3349711
+"ultimo_preco": 55.09,
+"ultimo_pregao": "2026-11-11",
+"volume": 3876414
 },
 "STMN34": {
 "isin": "BRSTMNBDR009",
-"negocios": 14,
+"negocios": 26,
 "nome": "STMICROEL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 249.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 176412
+"ultimo_preco": 259.75,
+"ultimo_pregao": "2026-11-11",
+"volume": 549604
 },
 "STOC34": {
 "isin": "BRSTOCBDR024",
-"negocios": 21223,
+"negocios": 23052,
 "nome": "STONE CO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 42.85,
-"ultimo_pregao": "2026-11-10",
-"volume": 61539613
+"ultimo_preco": 43.25,
+"ultimo_pregao": "2026-11-11",
+"volume": 71492842
 },
 "STZB34": {
 "isin": "BRSTZBBDR006",
-"negocios": 57,
+"negocios": 59,
 "nome": "CONSTELLATIO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 68.08,
-"ultimo_pregao": "2026-11-10",
-"volume": 701990
+"ultimo_preco": 66.49,
+"ultimo_pregao": "2026-11-11",
+"volume": 702255
 },
 "T1AL34": {
 "isin": "BRT1ALBDR009",
-"negocios": 18,
+"negocios": 21,
 "nome": "TAL EDUCATIO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 5.49,
-"ultimo_pregao": "2026-11-10",
-"volume": 8620
+"ultimo_preco": 5.6,
+"ultimo_pregao": "2026-11-11",
+"volume": 9398
 },
 "T1AM34": {
 "isin": "BRT1AMBDR007",
-"negocios": 61,
+"negocios": 67,
 "nome": "ATLASSIAN CO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 41.16,
-"ultimo_pregao": "2026-11-10",
-"volume": 560150
+"ultimo_preco": 42.56,
+"ultimo_pregao": "2026-11-11",
+"volume": 857743
 },
 "T1CH34": {
 "isin": "BRT1CHBDR003",
@@ -7463,13 +7564,13 @@
 },
 "T1DG34": {
 "isin": "BRT1DGBDR003",
-"negocios": 447,
+"negocios": 584,
 "nome": "TRANSDIGM GR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 138.33,
-"ultimo_pregao": "2026-11-10",
-"volume": 10936967
+"ultimo_preco": 138.75,
+"ultimo_pregao": "2026-11-11",
+"volume": 12528261
 },
 "T1EC34": {
 "isin": "BRT1ECBDR000",
@@ -7493,53 +7594,53 @@
 },
 "T1EV34": {
 "isin": "BRT1EVBDR000",
-"negocios": 5,
+"negocios": 6,
 "nome": "TEVA PHARMAC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 118.9,
-"ultimo_pregao": "2026-11-10",
-"volume": 41429
+"ultimo_preco": 120.6,
+"ultimo_pregao": "2026-11-11",
+"volume": 46253
 },
 "T1LK34": {
 "isin": "BRT1LKBDR008",
-"negocios": 15,
+"negocios": 20,
 "nome": "PT TELEKOMUN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 31.41,
-"ultimo_pregao": "2026-11-09",
-"volume": 135169
+"ultimo_preco": 31.83,
+"ultimo_pregao": "2026-11-11",
+"volume": 135422
 },
 "T1MU34": {
 "isin": "BRT1MUBDR005",
-"negocios": 26,
+"negocios": 27,
 "nome": "T-MOBILE US",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 64.9,
-"ultimo_pregao": "2026-11-09",
-"volume": 168854
+"ultimo_preco": 67.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 169524
 },
 "T1OW34": {
 "isin": "BRT1OWBDR007",
-"negocios": 175,
+"negocios": 241,
 "nome": "AMERICAN TOW",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 49.89,
-"ultimo_pregao": "2026-11-10",
-"volume": 334841
+"ultimo_preco": 44.27,
+"ultimo_pregao": "2026-11-11",
+"volume": 366588
 },
 "T1RI34": {
 "isin": "BRT1RIBDR009",
-"negocios": 225,
+"negocios": 227,
 "nome": "TRIPADVISOR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 38.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 1984366
+"ultimo_preco": 40.4,
+"ultimo_pregao": "2026-11-11",
+"volume": 1984446
 },
 "T1SC34": {
 "isin": "BRT1SCBDR000",
@@ -7553,13 +7654,13 @@
 },
 "T1SO34": {
 "isin": "BRT1SOBDR005",
-"negocios": 8,
+"negocios": 9,
 "nome": "THE SOUTHERN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 65.28,
-"ultimo_pregao": "2026-11-10",
-"volume": 19806
+"ultimo_preco": 65.39,
+"ultimo_pregao": "2026-11-11",
+"volume": 19871
 },
 "T1SS34": {
 "isin": "BRT1SSBDR006",
@@ -7573,43 +7674,43 @@
 },
 "T1TW34": {
 "isin": "BRT1TWBDR006",
-"negocios": 1247,
+"negocios": 1677,
 "nome": "TAKE-TWO INT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 314.33,
-"ultimo_pregao": "2026-11-10",
-"volume": 9282237
+"ultimo_preco": 330.98,
+"ultimo_pregao": "2026-11-11",
+"volume": 15201317
 },
 "T1WL34": {
 "isin": "BRT1WLBDR003",
-"negocios": 23,
+"negocios": 28,
 "nome": "TWILIO INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 47.97,
-"ultimo_pregao": "2026-11-10",
-"volume": 763014
+"ultimo_preco": 49.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 766917
 },
 "T2DH34": {
 "isin": "BRT2DHBDR009",
-"negocios": 26,
+"negocios": 27,
 "nome": "TELADOCHEALT",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 49.35,
-"ultimo_pregao": "2026-11-10",
-"volume": 880237
+"ultimo_preco": 50.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 881237
 },
 "T2ER34": {
 "isin": "BRT2ERBDR006",
-"negocios": 198,
+"negocios": 348,
 "nome": "TERADYNE INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 75.85,
-"ultimo_pregao": "2026-11-10",
-"volume": 1691077
+"ultimo_preco": 82.32,
+"ultimo_pregao": "2026-11-11",
+"volume": 2215663
 },
 "T2ND34": {
 "isin": "BRT2NDBDR007",
@@ -7623,13 +7724,13 @@
 },
 "T2TD34": {
 "isin": "BRT2TDBDR004",
-"negocios": 70,
+"negocios": 87,
 "nome": "TRADE DESK",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 85.67,
-"ultimo_pregao": "2026-11-10",
-"volume": 329245
+"ultimo_preco": 88.88,
+"ultimo_pregao": "2026-11-11",
+"volume": 395701
 },
 "TAKP34": {
 "isin": "BRTAKPBDR006",
@@ -7643,93 +7744,93 @@
 },
 "TBIL39": {
 "isin": "BRTBILBDR007",
-"negocios": 881,
+"negocios": 940,
 "nome": "GX T BILL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRE",
-"ultimo_preco": 55.97,
-"ultimo_pregao": "2026-11-10",
-"volume": 16509008
+"ultimo_preco": 55.78,
+"ultimo_pregao": "2026-11-11",
+"volume": 17311138
 },
 "TEXA34": {
 "isin": "BRTEXABDR003",
-"negocios": 103,
+"negocios": 134,
 "nome": "TEXAS INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 112.16,
-"ultimo_pregao": "2026-11-10",
-"volume": 1433746
+"ultimo_preco": 121.1,
+"ultimo_pregao": "2026-11-11",
+"volume": 1491459
 },
 "TGTB34": {
 "isin": "BRTGTBBDR004",
-"negocios": 5,
+"negocios": 10,
 "nome": "TARGET CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 868.64,
-"ultimo_pregao": "2026-11-05",
-"volume": 102337
+"ultimo_preco": 903.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 106857
 },
 "TJXC34": {
 "isin": "BRTJXCBDR008",
-"negocios": 46,
+"negocios": 51,
 "nome": "TJX COMPANIE",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 50.81,
-"ultimo_pregao": "2026-11-10",
-"volume": 76241
+"ultimo_preco": 50.63,
+"ultimo_pregao": "2026-11-11",
+"volume": 360630
 },
 "TMCO34": {
 "isin": "BRTMCOBDR001",
-"negocios": 265,
+"negocios": 281,
 "nome": "TOYOTAMO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 75.11,
-"ultimo_pregao": "2026-11-10",
-"volume": 1032339
+"ultimo_preco": 73.99,
+"ultimo_pregao": "2026-11-11",
+"volume": 1042760
 },
 "TMOS34": {
 "isin": "BRTMOSBDR007",
-"negocios": 70,
+"negocios": 79,
 "nome": "THERMFISCHER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 83.2,
-"ultimo_pregao": "2026-11-10",
-"volume": 399983
+"ultimo_preco": 83.76,
+"ultimo_pregao": "2026-11-11",
+"volume": 1106229
 },
 "TRVC34": {
 "isin": "BRTRVCBDR005",
-"negocios": 11,
+"negocios": 12,
 "nome": "TRAVELERS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 69.65,
-"ultimo_pregao": "2026-11-10",
-"volume": 308284
+"ultimo_preco": 69.09,
+"ultimo_pregao": "2026-11-11",
+"volume": 318371
 },
 "TSLA34": {
 "isin": "BRTSLABDR008",
-"negocios": 20435,
+"negocios": 23718,
 "nome": "TESLA INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 65.96,
-"ultimo_pregao": "2026-11-10",
-"volume": 500250984
+"ultimo_preco": 67.52,
+"ultimo_pregao": "2026-11-11",
+"volume": 544796680
 },
 "TSMC34": {
 "isin": "BRTSMCBDR002",
-"negocios": 47742,
+"negocios": 59362,
 "nome": "TAIWANSMFAC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 277.6,
-"ultimo_pregao": "2026-11-10",
-"volume": 530394120
+"ultimo_preco": 287.08,
+"ultimo_pregao": "2026-11-11",
+"volume": 586701592
 },
 "TSNF34": {
 "isin": "BRTSNFBDR003",
@@ -7743,43 +7844,43 @@
 },
 "TXSA34": {
 "isin": "BRTXSABDR003",
-"negocios": 2066,
+"negocios": 2069,
 "nome": "TERNIUMSA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 285.88,
-"ultimo_pregao": "2026-11-10",
-"volume": 1015172
+"ultimo_preco": 290.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 1019187
 },
 "U1AI34": {
 "isin": "BRU1AIBDR002",
-"negocios": 3,
+"negocios": 4,
 "nome": "UNDER ARMOUR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 28.01,
-"ultimo_pregao": "2026-11-03",
-"volume": 82
+"ultimo_preco": 27.72,
+"ultimo_pregao": "2026-11-11",
+"volume": 193
 },
 "U1AL34": {
 "isin": "BRU1ALBDR006",
-"negocios": 124,
+"negocios": 135,
 "nome": "UNITED AIRLI",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 332.7,
-"ultimo_pregao": "2026-11-10",
-"volume": 12410155
+"ultimo_preco": 330.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 13703240
 },
 "U1BE34": {
 "isin": "BRU1BEBDR009",
-"negocios": 1205,
+"negocios": 1288,
 "nome": "UBER TECH IN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 98.64,
-"ultimo_pregao": "2026-11-10",
-"volume": 23852387
+"ultimo_preco": 97.26,
+"ultimo_pregao": "2026-11-11",
+"volume": 25544002
 },
 "U1HS34": {
 "isin": "BRU1HSBDR006",
@@ -7793,13 +7894,13 @@
 },
 "U1LT34": {
 "isin": "BRU1LTBDR006",
-"negocios": 9,
+"negocios": 15,
 "nome": "ULTA BEAUTY",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 183.42,
-"ultimo_pregao": "2026-11-09",
-"volume": 7157
+"ultimo_preco": 182.59,
+"ultimo_pregao": "2026-11-11",
+"volume": 21987
 },
 "U1MH34": {
 "isin": "BRU1MHBDR009",
@@ -7813,133 +7914,133 @@
 },
 "U1RI34": {
 "isin": "BRU1RIBDR006",
-"negocios": 621,
+"negocios": 667,
 "nome": "UNITED RENTA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 220.1,
-"ultimo_pregao": "2026-11-10",
-"volume": 163859
+"ultimo_preco": 228.58,
+"ultimo_pregao": "2026-11-11",
+"volume": 175257
 },
 "U2PS34": {
 "isin": "BRU2PSBDR007",
-"negocios": 35,
+"negocios": 42,
 "nome": "UPSTART HOLD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 5.61,
-"ultimo_pregao": "2026-11-10",
-"volume": 48784
+"ultimo_preco": 5.81,
+"ultimo_pregao": "2026-11-11",
+"volume": 49532
 },
 "U2PW34": {
 "isin": "BRU2PWBDR009",
-"negocios": 25,
+"negocios": 26,
 "nome": "UPWORK INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
 "ultimo_preco": 10.91,
-"ultimo_pregao": "2026-11-09",
-"volume": 75772
+"ultimo_pregao": "2026-11-11",
+"volume": 76438
 },
 "U2ST34": {
 "isin": "BRU2STBDR009",
-"negocios": 261,
+"negocios": 290,
 "nome": "UNITY SOFTWR",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 14.11,
-"ultimo_pregao": "2026-11-10",
-"volume": 867126
+"ultimo_preco": 13.74,
+"ultimo_pregao": "2026-11-11",
+"volume": 920694
 },
 "UBSG34": {
 "isin": "BRUBSGBDR004",
-"negocios": 36,
+"negocios": 38,
 "nome": "UBS GROUP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
 "ultimo_preco": 69.16,
-"ultimo_pregao": "2026-11-10",
-"volume": 92088
+"ultimo_pregao": "2026-11-11",
+"volume": 92641
 },
 "ULEV34": {
 "isin": "BRULEVBDR002",
-"negocios": 114,
+"negocios": 130,
 "nome": "UNILEVER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 73.88,
-"ultimo_pregao": "2026-11-10",
-"volume": 109847
+"ultimo_preco": 73.24,
+"ultimo_pregao": "2026-11-11",
+"volume": 117483
 },
 "UNHH34": {
 "isin": "BRUNHHBDR000",
-"negocios": 6169,
+"negocios": 6232,
 "nome": "UNITEDHEALTH",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 32.23,
-"ultimo_pregao": "2026-11-10",
-"volume": 5078770
+"ultimo_preco": 31.88,
+"ultimo_pregao": "2026-11-11",
+"volume": 7095526
 },
 "UPAC34": {
 "isin": "BRUPACBDR001",
-"negocios": 26,
+"negocios": 569,
 "nome": "UNIONPACIFIC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 70.32,
-"ultimo_pregao": "2026-11-10",
-"volume": 107087
+"ultimo_preco": 69.79,
+"ultimo_pregao": "2026-11-11",
+"volume": 595877
 },
 "UPSS34": {
 "isin": "BRUPSSBDR009",
-"negocios": 68,
+"negocios": 72,
 "nome": "UPS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 38.6,
-"ultimo_pregao": "2026-11-10",
-"volume": 684772
+"ultimo_preco": 39.29,
+"ultimo_pregao": "2026-11-11",
+"volume": 1803226
 },
 "USBC34": {
 "isin": "BRUSBCBDR003",
-"negocios": 280,
+"negocios": 283,
 "nome": "US BANCORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 87.29,
-"ultimo_pregao": "2026-11-10",
-"volume": 79843
+"ultimo_preco": 85.13,
+"ultimo_pregao": "2026-11-11",
+"volume": 80855
 },
 "V1IP34": {
 "isin": "BRV1IPBDR009",
-"negocios": 7,
+"negocios": 8,
 "nome": "VIPSHOP HOLD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 38.29,
-"ultimo_pregao": "2026-11-06",
-"volume": 30765
+"ultimo_preco": 36.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 38145
 },
 "V1MC34": {
 "isin": "BRV1MCBDR009",
-"negocios": 6,
+"negocios": 10,
 "nome": "VULCAN MATER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 26.7,
-"ultimo_pregao": "2026-11-10",
-"volume": 1339
+"ultimo_preco": 26.43,
+"ultimo_pregao": "2026-11-11",
+"volume": 9422
 },
 "V1OD34": {
 "isin": "BRV1ODBDR003",
-"negocios": 23,
+"negocios": 26,
 "nome": "VODAFONE GRO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 42.92,
-"ultimo_pregao": "2026-11-10",
-"volume": 65492
+"ultimo_preco": 42.44,
+"ultimo_pregao": "2026-11-11",
+"volume": 71609
 },
 "V1RS34": {
 "isin": "BRV1RSBDR004",
@@ -7953,23 +8054,23 @@
 },
 "V1RT34": {
 "isin": "BRV1RTBDR002",
-"negocios": 456,
+"negocios": 593,
 "nome": "VERTIV HOLDS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 107.91,
-"ultimo_pregao": "2026-11-10",
-"volume": 2901555
+"ultimo_preco": 115.4,
+"ultimo_pregao": "2026-11-11",
+"volume": 3192846
 },
 "V1ST34": {
 "isin": "BRV1STBDR000",
-"negocios": 1036,
+"negocios": 1178,
 "nome": "VISTRA CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 51.07,
-"ultimo_pregao": "2026-11-10",
-"volume": 8320718
+"ultimo_preco": 52.27,
+"ultimo_pregao": "2026-11-11",
+"volume": 8655886
 },
 "V1TA34": {
 "isin": "BRV1TABDR008",
@@ -7983,13 +8084,13 @@
 },
 "V2EE34": {
 "isin": "BRV2EEBDR000",
-"negocios": 5,
+"negocios": 19,
 "nome": "VEEVASYSTEMS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 56.17,
-"ultimo_pregao": "2026-11-09",
-"volume": 306313
+"ultimo_preco": 57.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 350473
 },
 "V2RN34": {
 "isin": "BRV2RNBDR003",
@@ -8003,23 +8104,23 @@
 },
 "V2TX34": {
 "isin": "BRV2TXBDR008",
-"negocios": 47,
+"negocios": 53,
 "nome": "VTEX",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 21.04,
-"ultimo_pregao": "2026-11-10",
-"volume": 494490
+"ultimo_preco": 21.72,
+"ultimo_pregao": "2026-11-11",
+"volume": 497653
 },
 "VERZ34": {
 "isin": "BRVERZBDR008",
-"negocios": 2164,
+"negocios": 2198,
 "nome": "VERIZON",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 43.3,
-"ultimo_pregao": "2026-11-10",
-"volume": 2473888
+"ultimo_preco": 43.02,
+"ultimo_pregao": "2026-11-11",
+"volume": 2522071
 },
 "VFCO34": {
 "isin": "BRVFCOBDR001",
@@ -8033,53 +8134,53 @@
 },
 "VISA34": {
 "isin": "BRVISABDR000",
-"negocios": 4244,
+"negocios": 4580,
 "nome": "VISA INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 118.98,
-"ultimo_pregao": "2026-11-10",
-"volume": 35386156
+"ultimo_preco": 118.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 37324223
 },
 "VLOE34": {
 "isin": "BRVLOEBDR005",
-"negocios": 51,
+"negocios": 56,
 "nome": "VALERO ENER",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 120.4,
-"ultimo_pregao": "2026-11-10",
-"volume": 262765
+"ultimo_preco": 125.28,
+"ultimo_pregao": "2026-11-11",
+"volume": 271620
 },
 "VLYB34": {
 "isin": "BRVLYBBDR000",
-"negocios": 5,
+"negocios": 7,
 "nome": "VALLEY NTION",
 "primeiro_pregao": "2026-11-05",
 "tipo": "DRN",
-"ultimo_preco": 80.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 7571
+"ultimo_preco": 79.6,
+"ultimo_pregao": "2026-11-11",
+"volume": 7730
 },
 "VMRK34": {
 "isin": "BRVMRKBDR003",
-"negocios": 8,
+"negocios": 9,
 "nome": "VIVMARK RESI",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
-"ultimo_preco": 60.36,
-"ultimo_pregao": "2026-11-10",
-"volume": 19291
+"ultimo_preco": 59.94,
+"ultimo_pregao": "2026-11-11",
+"volume": 19351
 },
 "VRTX34": {
 "isin": "BRVRTXBDR001",
-"negocios": 45,
+"negocios": 49,
 "nome": "VERTEX PHARM",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 96.32,
-"ultimo_pregao": "2026-11-10",
-"volume": 303862
+"ultimo_preco": 94.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 304239
 },
 "W1AB34": {
 "isin": "BRW1ABBDR005",
@@ -8093,33 +8194,33 @@
 },
 "W1BO34": {
 "isin": "BRW1BOBDR006",
-"negocios": 40,
+"negocios": 45,
 "nome": "WEIBO CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 8.91,
-"ultimo_pregao": "2026-11-09",
-"volume": 7763
+"ultimo_preco": 8.74,
+"ultimo_pregao": "2026-11-11",
+"volume": 8130
 },
 "W1DA34": {
 "isin": "BRW1DABDR001",
-"negocios": 6,
+"negocios": 8,
 "nome": "WORKDAY INC",
 "primeiro_pregao": "2026-11-04",
 "tipo": "DRN",
 "ultimo_preco": 65.9,
-"ultimo_pregao": "2026-11-10",
-"volume": 318492
+"ultimo_pregao": "2026-11-11",
+"volume": 338328
 },
 "W1DC34": {
 "isin": "BRW1DCBDR007",
-"negocios": 2453,
+"negocios": 2552,
 "nome": "WESTERN DIG",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 1610.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 71073254
+"ultimo_preco": 1746.07,
+"ultimo_pregao": "2026-11-11",
+"volume": 73473500
 },
 "W1EC34": {
 "isin": "BRW1ECBDR005",
@@ -8133,63 +8234,63 @@
 },
 "W1EL34": {
 "isin": "BRW1ELBDR006",
-"negocios": 75,
+"negocios": 81,
 "nome": "WELLTOWER IN",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 86.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 95927
+"ultimo_preco": 85.23,
+"ultimo_pregao": "2026-11-11",
+"volume": 118006
 },
 "W1HR34": {
 "isin": "BRW1HRBDR006",
-"negocios": 16,
+"negocios": 23,
 "nome": "WHIRLPOOL CO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 42.84,
-"ultimo_pregao": "2026-11-10",
-"volume": 56473
+"ultimo_preco": 41.72,
+"ultimo_pregao": "2026-11-11",
+"volume": 65622
 },
 "W1IX34": {
 "isin": "BRW1IXBDR002",
-"negocios": 45,
+"negocios": 49,
 "nome": "WIX.COM LTD",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 12.29,
-"ultimo_pregao": "2026-11-10",
-"volume": 251107
+"ultimo_preco": 12.64,
+"ultimo_pregao": "2026-11-11",
+"volume": 268916
 },
 "W1MB34": {
 "isin": "BRW1MBBDR000",
-"negocios": 19,
+"negocios": 22,
 "nome": "WILLIAMS COS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 367.5,
-"ultimo_pregao": "2026-11-09",
-"volume": 52683
+"ultimo_preco": 383.76,
+"ultimo_pregao": "2026-11-11",
+"volume": 64151
 },
 "W1MC34": {
 "isin": "BRW1MCBDR008",
-"negocios": 37,
+"negocios": 39,
 "nome": "WASTE MANAG",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 81.92,
-"ultimo_pregao": "2026-11-09",
-"volume": 330172
+"ultimo_preco": 82.96,
+"ultimo_pregao": "2026-11-11",
+"volume": 355060
 },
 "W1PP34": {
 "isin": "BRW1PPBDR003",
-"negocios": 12,
+"negocios": 13,
 "nome": "WPP PLC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 30.54,
-"ultimo_pregao": "2026-11-09",
-"volume": 31517
+"ultimo_preco": 30.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 31548
 },
 "W1RB34": {
 "isin": "BRW1RBBDR009",
@@ -8203,13 +8304,13 @@
 },
 "W1SO34": {
 "isin": "BRW1SOBDR000",
-"negocios": 4,
+"negocios": 6,
 "nome": "WATSCO INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 67.06,
-"ultimo_pregao": "2026-11-09",
-"volume": 13859
+"ultimo_preco": 70.28,
+"ultimo_pregao": "2026-11-11",
+"volume": 24640
 },
 "W1YC34": {
 "isin": "BRW1YCBDR003",
@@ -8231,35 +8332,45 @@
 "ultimo_pregao": "2026-11-04",
 "volume": 455
 },
+"W2YF34": {
+"isin": "BRW2YFBDR004",
+"negocios": 2,
+"nome": "WAYFAIR INC",
+"primeiro_pregao": "2026-11-11",
+"tipo": "DRN",
+"ultimo_preco": 17.9,
+"ultimo_pregao": "2026-11-11",
+"volume": 21588
+},
 "WALM34": {
 "isin": "BRWALMBDR005",
-"negocios": 12333,
+"negocios": 12820,
 "nome": "WAL MART",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 43.64,
-"ultimo_pregao": "2026-11-10",
-"volume": 18303801
+"ultimo_preco": 43.3,
+"ultimo_pregao": "2026-11-11",
+"volume": 21397182
 },
 "WFCO34": {
 "isin": "BRWFCOBDR009",
-"negocios": 242,
+"negocios": 255,
 "nome": "WELLS FARGO",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 119.02,
-"ultimo_pregao": "2026-11-10",
-"volume": 2326331
+"ultimo_preco": 119.0,
+"ultimo_pregao": "2026-11-11",
+"volume": 2345299
 },
 "WUNI34": {
 "isin": "BRWUNIBDR007",
-"negocios": 65,
+"negocios": 70,
 "nome": "WESTERNUNION",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 39.08,
-"ultimo_pregao": "2026-11-10",
-"volume": 354850
+"ultimo_preco": 38.08,
+"ultimo_pregao": "2026-11-11",
+"volume": 355158
 },
 "X1YL34": {
 "isin": "BRX1YLBDR003",
@@ -8273,23 +8384,23 @@
 },
 "X1YZ34": {
 "isin": "BRX1YZBDR003",
-"negocios": 32,
+"negocios": 34,
 "nome": "BLOCK INC.",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 18.99,
-"ultimo_pregao": "2026-11-10",
-"volume": 137575
+"ultimo_preco": 19.26,
+"ultimo_pregao": "2026-11-11",
+"volume": 138639
 },
 "XPBR31": {
 "isin": "BRXPBRBDR001",
-"negocios": 106468,
+"negocios": 122653,
 "nome": "XP INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DR1",
-"ultimo_preco": 82.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 890960357
+"ultimo_preco": 85.24,
+"ultimo_pregao": "2026-11-11",
+"volume": 999135910
 },
 "XRAY34": {
 "isin": "BRXRAYBDR005",
@@ -8303,33 +8414,33 @@
 },
 "XRXB34": {
 "isin": "BRXRXBBDR005",
-"negocios": 277,
+"negocios": 285,
 "nome": "XEROX CORP",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 6.0,
-"ultimo_pregao": "2026-11-10",
-"volume": 382936
+"ultimo_preco": 5.85,
+"ultimo_pregao": "2026-11-11",
+"volume": 386545
 },
 "Y2PF34": {
 "isin": "BRY2PFBDR000",
-"negocios": 59,
+"negocios": 63,
 "nome": "YPF SA",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
 "ultimo_preco": 207.48,
-"ultimo_pregao": "2026-11-10",
-"volume": 55286
+"ultimo_pregao": "2026-11-11",
+"volume": 56531
 },
 "Z1BH34": {
 "isin": "BRZ1BHBDR007",
-"negocios": 9,
+"negocios": 10,
 "nome": "ZIMMER BIOME",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 151.5,
-"ultimo_pregao": "2026-11-10",
-"volume": 14577
+"ultimo_preco": 150.15,
+"ultimo_pregao": "2026-11-11",
+"volume": 16078
 },
 "Z1BR34": {
 "isin": "BRZ1BRBDR006",
@@ -8343,23 +8454,23 @@
 },
 "Z1OM34": {
 "isin": "BRZ1OMBDR000",
-"negocios": 33,
+"negocios": 35,
 "nome": "ZOOM COMMS",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 20.28,
-"ultimo_pregao": "2026-11-10",
-"volume": 893009
+"ultimo_preco": 21.72,
+"ultimo_pregao": "2026-11-11",
+"volume": 893605
 },
 "Z1TA34": {
 "isin": "BRZ1TABDR004",
-"negocios": 33,
+"negocios": 34,
 "nome": "ZETA GLOBAL",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 97.84,
-"ultimo_pregao": "2026-11-10",
-"volume": 281403
+"ultimo_preco": 95.88,
+"ultimo_pregao": "2026-11-11",
+"volume": 281787
 },
 "Z1TO34": {
 "isin": "BRZ1TOBDR005",
@@ -8393,13 +8504,13 @@
 },
 "Z2IT34": {
 "isin": "BRZ2ITBDR005",
-"negocios": 54,
+"negocios": 61,
 "nome": "ZOOMINFO TC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 2.34,
-"ultimo_pregao": "2026-11-10",
-"volume": 65807
+"ultimo_preco": 2.33,
+"ultimo_pregao": "2026-11-11",
+"volume": 79211
 },
 "Z2LL34": {
 "isin": "BRZ2LLBDR006",
@@ -8413,13 +8524,13 @@
 },
 "Z2SC34": {
 "isin": "BRZ2SCBDR000",
-"negocios": 146,
+"negocios": 164,
 "nome": "ZSCALER INC",
 "primeiro_pregao": "2026-11-03",
 "tipo": "DRN",
-"ultimo_preco": 36.31,
-"ultimo_pregao": "2026-11-10",
-"volume": 20626774
+"ultimo_preco": 36.04,
+"ultimo_pregao": "2026-11-11",
+"volume": 20754864
 }
 }
 }

@@ -1,6 +1,15 @@
 {
 "eventos": [
 {
+"chave": "27626",
+"data": "2026-11-12",
+"dataset": "acoes",
+"de": null,
+"fonte": "B3",
+"para": "AZTE1",
+"tipo": "ticker_novo"
+},
+{
 "chave": "25917",
 "data": "2026-11-11",
 "dataset": "acoes",
