@@ -20428,48 +20428,6 @@
 ]
 },
 {
-"cnpj": "67.010.660/0001-24",
-"codigo_cvm": "20451",
-"detalhe_b3": true,
-"divergente_b3_cvm": false,
-"emissor": "RDNI",
-"escriturador_b3": {
-"bruto_on": "BRADESCO",
-"bruto_pn": "",
-"on": "Banco Bradesco",
-"pn": null
-},
-"escriturador_cvm": {
-"anterior": null,
-"anterior_fim": null,
-"anterior_inicio": null,
-"anterior_ultimo_ano": null,
-"atual": "Banco Bradesco",
-"inicio": "2006-12-01",
-"inicio_aproximado": false,
-"n_escrituradores": 1
-},
-"indicador_mercado": "8",
-"liquidez": {
-"categoria": "sem_ticker",
-"criterio_texto": "A B3 não informa código de negociação."
-},
-"listagem": {
-"desde": "2007-01-30",
-"desde_incerto": false,
-"fonte_desde": "CVM FCA",
-"mercado": "Bolsa",
-"segmento_cvm": "Novo Mercado",
-"segmento_divergente": false
-},
-"pregao": "RNI",
-"razao_social": "RNI NEGÓCIOS IMOBILIÁRIOS S.A.",
-"segmento": "BN",
-"setor": "Incorporações",
-"situacao_cvm": "ATIVO",
-"tickers": []
-},
-{
 "cnpj": "03.025.305/0001-46",
 "codigo_cvm": "23167",
 "detalhe_b3": true,

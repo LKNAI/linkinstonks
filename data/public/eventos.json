@@ -1,6 +1,15 @@
 {
 "eventos": [
 {
+"chave": "20451",
+"data": "2026-11-14",
+"dataset": "acoes",
+"de": "RNI",
+"fonte": "B3",
+"para": null,
+"tipo": "deslistagem"
+},
+{
 "chave": "27626",
 "data": "2026-11-12",
 "dataset": "acoes",

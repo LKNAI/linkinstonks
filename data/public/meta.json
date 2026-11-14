@@ -1,15 +1,15 @@
 {
   "datasets": {
     "acoes": {
-      "atualizado_em": "2026-11-12",
-      "contagem": 567
+      "atualizado_em": "2026-11-14",
+      "contagem": 566
     },
     "acoes_liquidez": {
-      "atualizado_em": "2026-11-13",
-      "contagem": 322
+      "atualizado_em": "2026-11-14",
+      "contagem": 321
     },
     "bdrs": {
-      "atualizado_em": "2026-11-13",
+      "atualizado_em": "2026-11-14",
       "contagem": 1151
     }
   },
@@ -17,17 +17,17 @@
     "b3_bdr_api": {
       "contagem": 325,
       "status": "ok",
-      "ultimo_sucesso": "2026-11-13"
+      "ultimo_sucesso": "2026-11-14"
     },
     "b3_cotahist": {
       "status": "ok",
-      "ultimo_pregao": "2026-11-12",
-      "ultimo_sucesso": "2026-11-13"
+      "ultimo_pregao": "2026-11-13",
+      "ultimo_sucesso": "2026-11-14"
     },
     "b3_cotahist_acoes": {
       "status": "ok",
-      "ultimo_pregao": "2026-11-12",
-      "ultimo_sucesso": "2026-11-13"
+      "ultimo_pregao": "2026-11-13",
+      "ultimo_sucesso": "2026-11-14"
     },
     "b3_finservices": {
       "contagem": 1070,
@@ -35,9 +35,9 @@
       "ultimo_sucesso": "2026-11-08"
     },
     "b3_listed": {
-      "contagem": 3553,
+      "contagem": 3552,
       "status": "ok",
-      "ultimo_sucesso": "2026-11-12"
+      "ultimo_sucesso": "2026-11-14"
     },
     "bradesco": {
       "contagem": 48,
@@ -46,11 +46,11 @@
     },
     "cvm_cad": {
       "status": "ok",
-      "ultimo_sucesso": "2026-11-12"
+      "ultimo_sucesso": "2026-11-14"
     },
     "cvm_fca": {
       "status": "ok",
-      "ultimo_sucesso": "2026-11-12"
+      "ultimo_sucesso": "2026-11-14"
     }
   },
   "schema_version": "1.1"
