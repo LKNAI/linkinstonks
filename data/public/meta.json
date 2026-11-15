@@ -1,7 +1,7 @@
 {
   "datasets": {
     "acoes": {
-      "atualizado_em": "2026-11-14",
+      "atualizado_em": "2026-11-15",
       "contagem": 566
     },
     "acoes_liquidez": {
@@ -32,25 +32,25 @@
     "b3_finservices": {
       "contagem": 1070,
       "status": "ok",
-      "ultimo_sucesso": "2026-11-08"
+      "ultimo_sucesso": "2026-11-15"
     },
     "b3_listed": {
       "contagem": 3552,
       "status": "ok",
-      "ultimo_sucesso": "2026-11-14"
+      "ultimo_sucesso": "2026-11-15"
     },
     "bradesco": {
-      "contagem": 48,
-      "status": "ok",
+      "mensagem": "Expecting value: line 1 column 1 (char 0)",
+      "status": "desatualizado",
       "ultimo_sucesso": "2026-11-08"
     },
     "cvm_cad": {
       "status": "ok",
-      "ultimo_sucesso": "2026-11-14"
+      "ultimo_sucesso": "2026-11-15"
     },
     "cvm_fca": {
       "status": "ok",
-      "ultimo_sucesso": "2026-11-14"
+      "ultimo_sucesso": "2026-11-15"
     }
   },
   "schema_version": "1.1"

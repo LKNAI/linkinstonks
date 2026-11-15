@@ -7022,7 +7022,7 @@
 "criterio_texto": "Negociou em 121 de 127 pregões nos últimos 6 meses."
 },
 "listagem": {
-"desde": "2023-05-02",
+"desde": "2025-05-28",
 "desde_incerto": false,
 "fonte_desde": "CVM FCA",
 "mercado": "Bolsa",
@@ -7037,7 +7037,7 @@
 "tickers": [
 {
 "classe": "ON",
-"negociacao_desde": null,
+"negociacao_desde": "2025-05-28",
 "ticker": "CTAX3"
 }
 ]
@@ -20919,7 +20919,7 @@
 "razao_social": "ROSSI RESIDENCIAL S.A.",
 "segmento": "NM",
 "setor": "Incorporações",
-"situacao_cvm": "SUSPENSO(A) - DECISÃO ADM",
+"situacao_cvm": "ATIVO",
 "tickers": [
 {
 "classe": "ON",

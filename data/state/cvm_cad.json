@@ -9460,6 +9460,11 @@
       "data_cancelamento": "",
       "situacao": "ATIVO"
     },
+    "59588111000103": {
+      "codigo_cvm": "28126",
+      "data_cancelamento": "",
+      "situacao": "ATIVO"
+    },
     "59693110000129": {
       "codigo_cvm": "27910",
       "data_cancelamento": "",
@@ -10078,7 +10083,7 @@
     "61065751000180": {
       "codigo_cvm": "16306",
       "data_cancelamento": "",
-      "situacao": "SUSPENSO(A) - DECISÃO ADM"
+      "situacao": "ATIVO"
     },
     "61066940000178": {
       "codigo_cvm": "9016",
@@ -10977,8 +10982,8 @@
     },
     "67010660000124": {
       "codigo_cvm": "20451",
-      "data_cancelamento": "",
-      "situacao": "ATIVO"
+      "data_cancelamento": "2026-11-11",
+      "situacao": "CANCELADA"
     },
     "67203208000189": {
       "codigo_cvm": "20486",
@@ -12661,5 +12666,5 @@
       "situacao": "CANCELADA"
     }
   },
-  "etag": "\"6aeea479-16ce97\""
+  "etag": "\"6af7e011-16d11a\""
 }
