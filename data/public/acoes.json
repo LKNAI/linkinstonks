@@ -19334,11 +19334,6 @@
 "situacao_cvm": "ATIVO",
 "tickers": [
 {
-"classe": "Outros",
-"negociacao_desde": null,
-"ticker": "PRNR1"
-},
-{
 "classe": "ON",
 "negociacao_desde": "2020-02-17",
 "ticker": "PRNR3"

@@ -1,6 +1,15 @@
 {
 "eventos": [
 {
+"chave": "24236",
+"data": "2026-11-17",
+"dataset": "acoes",
+"de": "PRNR1",
+"fonte": "B3",
+"para": null,
+"tipo": "ticker_removido"
+},
+{
 "chave": "20451",
 "data": "2026-11-14",
 "dataset": "acoes",
