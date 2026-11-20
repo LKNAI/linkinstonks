@@ -1,6 +1,15 @@
 {
 "eventos": [
 {
+"chave": "ANTH34",
+"data": "2026-11-20",
+"dataset": "bdrs",
+"de": null,
+"fonte": "B3",
+"para": "Anthropic",
+"tipo": "novo_bdr"
+},
+{
 "chave": "24236",
 "data": "2026-11-17",
 "dataset": "acoes",
