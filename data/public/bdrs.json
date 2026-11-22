@@ -5552,8 +5552,8 @@
 },
 {
 "categoria": "",
-"depositaria": "Não identificado",
-"fonte_depositaria": "",
+"depositaria": "Banco B3",
+"fonte_depositaria": "Banco B3 (finservices)",
 "isin": "BRANTHBDR007",
 "meses_negocios_suspeitos": [],
 "negocios_24m": 0,
@@ -5583,7 +5583,7 @@
 0,
 0
 ],
-"nome": "Anthropic",
+"nome": "Anthropic PBC",
 "perfil": {
 "faixa": "dados_insuficientes",
 "negocios_janela": 0,

@@ -8917,8 +8917,8 @@
     },
     "51430503000138": {
       "codigo_cvm": "27600",
-      "data_cancelamento": "",
-      "situacao": "ATIVO"
+      "data_cancelamento": "2026-11-17",
+      "situacao": "CANCELADA"
     },
     "51466753000128": {
       "codigo_cvm": "12084",
@@ -9047,8 +9047,8 @@
     },
     "52810883000107": {
       "codigo_cvm": "27561",
-      "data_cancelamento": "",
-      "situacao": "ATIVO"
+      "data_cancelamento": "2026-11-18",
+      "situacao": "CANCELADA"
     },
     "52841191000118": {
       "codigo_cvm": "27650",
@@ -12666,5 +12666,5 @@
       "situacao": "CANCELADA"
     }
   },
-  "etag": "\"6af7e011-16d11a\""
+  "etag": "\"6b011a67-16d137\""
 }
