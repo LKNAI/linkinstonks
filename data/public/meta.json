@@ -5,11 +5,11 @@
       "contagem": 566
     },
     "acoes_liquidez": {
-      "atualizado_em": "2026-11-20",
+      "atualizado_em": "2026-11-24",
       "contagem": 321
     },
     "bdrs": {
-      "atualizado_em": "2026-11-22",
+      "atualizado_em": "2026-11-24",
       "contagem": 1152
     }
   },
@@ -17,17 +17,17 @@
     "b3_bdr_api": {
       "contagem": 325,
       "status": "ok",
-      "ultimo_sucesso": "2026-11-22"
+      "ultimo_sucesso": "2026-11-24"
     },
     "b3_cotahist": {
       "status": "ok",
-      "ultimo_pregao": "2026-11-19",
-      "ultimo_sucesso": "2026-11-22"
+      "ultimo_pregao": "2026-11-23",
+      "ultimo_sucesso": "2026-11-24"
     },
     "b3_cotahist_acoes": {
       "status": "ok",
-      "ultimo_pregao": "2026-11-19",
-      "ultimo_sucesso": "2026-11-20"
+      "ultimo_pregao": "2026-11-23",
+      "ultimo_sucesso": "2026-11-24"
     },
     "b3_finservices": {
       "contagem": 1071,
@@ -35,9 +35,9 @@
       "ultimo_sucesso": "2026-11-22"
     },
     "b3_listed": {
-      "contagem": 3556,
+      "contagem": 3563,
       "status": "ok",
-      "ultimo_sucesso": "2026-11-20"
+      "ultimo_sucesso": "2026-11-24"
     },
     "bradesco": {
       "mensagem": "Expecting value: line 1 column 1 (char 0)",
@@ -46,11 +46,11 @@
     },
     "cvm_cad": {
       "status": "ok",
-      "ultimo_sucesso": "2026-11-20"
+      "ultimo_sucesso": "2026-11-24"
     },
     "cvm_fca": {
       "status": "ok",
-      "ultimo_sucesso": "2026-11-20"
+      "ultimo_sucesso": "2026-11-24"
     }
   },
   "schema_version": "1.1"
