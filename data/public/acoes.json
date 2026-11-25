@@ -1474,12 +1474,12 @@
 "cnpj": "07.526.557/0001-00",
 "codigo_cvm": "23264",
 "detalhe_b3": true,
-"divergente_b3_cvm": false,
+"divergente_b3_cvm": true,
 "emissor": "ABEV",
 "escriturador_b3": {
-"bruto_on": "BRADESCO",
+"bruto_on": "ITAUBANCO - ACOES",
 "bruto_pn": "",
-"on": "Banco Bradesco",
+"on": "Itaú Unibanco",
 "pn": null
 },
 "escriturador_cvm": {

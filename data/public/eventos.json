@@ -1,6 +1,42 @@
 {
 "eventos": [
 {
+"chave": "JPIE39",
+"data": "2026-11-25",
+"dataset": "bdrs",
+"de": null,
+"fonte": "B3",
+"para": "JPMorgan Income ETF",
+"tipo": "novo_bdr"
+},
+{
+"chave": "JPHY39",
+"data": "2026-11-25",
+"dataset": "bdrs",
+"de": null,
+"fonte": "B3",
+"para": "JPMorgan Active High Yield ETF",
+"tipo": "novo_bdr"
+},
+{
+"chave": "23264",
+"data": "2026-11-25",
+"dataset": "acoes",
+"de": "Banco Bradesco",
+"fonte": "B3",
+"para": "Itaú Unibanco",
+"tipo": "troca_escriturador"
+},
+{
+"chave": "23264",
+"data": "2026-11-25",
+"dataset": "acoes",
+"de": "Itaú Unibanco",
+"fonte": "B3/CVM",
+"para": "Banco Bradesco",
+"tipo": "divergencia_b3_cvm"
+},
+{
 "chave": "ANTH34",
 "data": "2026-11-20",
 "dataset": "bdrs",

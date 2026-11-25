@@ -15,3 +15,7 @@
 {"chave": "20451", "data": "2026-11-14", "dataset": "acoes", "de": "RNI", "fonte": "B3", "para": null, "tipo": "deslistagem"}
 {"chave": "24236", "data": "2026-11-17", "dataset": "acoes", "de": "PRNR1", "fonte": "B3", "para": null, "tipo": "ticker_removido"}
 {"chave": "ANTH34", "data": "2026-11-20", "dataset": "bdrs", "de": null, "fonte": "B3", "para": "Anthropic", "tipo": "novo_bdr"}
+{"chave": "23264", "data": "2026-11-25", "dataset": "acoes", "de": "Banco Bradesco", "fonte": "B3", "para": "Itaú Unibanco", "tipo": "troca_escriturador"}
+{"chave": "23264", "data": "2026-11-25", "dataset": "acoes", "de": "Itaú Unibanco", "fonte": "B3/CVM", "para": "Banco Bradesco", "tipo": "divergencia_b3_cvm"}
+{"chave": "JPHY39", "data": "2026-11-25", "dataset": "bdrs", "de": null, "fonte": "B3", "para": "JPMorgan Active High Yield ETF", "tipo": "novo_bdr"}
+{"chave": "JPIE39", "data": "2026-11-25", "dataset": "bdrs", "de": null, "fonte": "B3", "para": "JPMorgan Income ETF", "tipo": "novo_bdr"}
