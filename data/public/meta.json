@@ -5,11 +5,11 @@
       "contagem": 566
     },
     "acoes_liquidez": {
-      "atualizado_em": "2026-11-26",
+      "atualizado_em": "2026-11-27",
       "contagem": 321
     },
     "bdrs": {
-      "atualizado_em": "2026-11-26",
+      "atualizado_em": "2026-11-27",
       "contagem": 1154
     }
   },
@@ -17,17 +17,17 @@
     "b3_bdr_api": {
       "contagem": 325,
       "status": "ok",
-      "ultimo_sucesso": "2026-11-26"
+      "ultimo_sucesso": "2026-11-27"
     },
     "b3_cotahist": {
       "status": "ok",
-      "ultimo_pregao": "2026-11-25",
-      "ultimo_sucesso": "2026-11-26"
+      "ultimo_pregao": "2026-11-26",
+      "ultimo_sucesso": "2026-11-27"
     },
     "b3_cotahist_acoes": {
       "status": "ok",
-      "ultimo_pregao": "2026-11-25",
-      "ultimo_sucesso": "2026-11-26"
+      "ultimo_pregao": "2026-11-26",
+      "ultimo_sucesso": "2026-11-27"
     },
     "b3_finservices": {
       "contagem": 1071,
@@ -35,7 +35,7 @@
       "ultimo_sucesso": "2026-11-22"
     },
     "b3_listed": {
-      "contagem": 3565,
+      "contagem": 3566,
       "status": "ok",
       "ultimo_sucesso": "2026-11-25"
     },
