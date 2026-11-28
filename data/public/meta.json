@@ -1,33 +1,33 @@
 {
   "datasets": {
     "acoes": {
-      "atualizado_em": "2026-11-25",
-      "contagem": 566
+      "atualizado_em": "2026-11-28",
+      "contagem": 567
     },
     "acoes_liquidez": {
-      "atualizado_em": "2026-11-27",
+      "atualizado_em": "2026-11-28",
       "contagem": 321
     },
     "bdrs": {
-      "atualizado_em": "2026-11-27",
-      "contagem": 1154
+      "atualizado_em": "2026-11-28",
+      "contagem": 1155
     }
   },
   "fontes": {
     "b3_bdr_api": {
       "contagem": 325,
       "status": "ok",
-      "ultimo_sucesso": "2026-11-27"
+      "ultimo_sucesso": "2026-11-28"
     },
     "b3_cotahist": {
       "status": "ok",
-      "ultimo_pregao": "2026-11-26",
-      "ultimo_sucesso": "2026-11-27"
+      "ultimo_pregao": "2026-11-27",
+      "ultimo_sucesso": "2026-11-28"
     },
     "b3_cotahist_acoes": {
       "status": "ok",
-      "ultimo_pregao": "2026-11-26",
-      "ultimo_sucesso": "2026-11-27"
+      "ultimo_pregao": "2026-11-27",
+      "ultimo_sucesso": "2026-11-28"
     },
     "b3_finservices": {
       "contagem": 1071,
@@ -35,9 +35,9 @@
       "ultimo_sucesso": "2026-11-22"
     },
     "b3_listed": {
-      "contagem": 3566,
+      "contagem": 3568,
       "status": "ok",
-      "ultimo_sucesso": "2026-11-25"
+      "ultimo_sucesso": "2026-11-28"
     },
     "bradesco": {
       "mensagem": "Expecting value: line 1 column 1 (char 0)",
@@ -46,11 +46,11 @@
     },
     "cvm_cad": {
       "status": "ok",
-      "ultimo_sucesso": "2026-11-25"
+      "ultimo_sucesso": "2026-11-28"
     },
     "cvm_fca": {
       "status": "ok",
-      "ultimo_sucesso": "2026-11-25"
+      "ultimo_sucesso": "2026-11-28"
     }
   },
   "schema_version": "1.1"

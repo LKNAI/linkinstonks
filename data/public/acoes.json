@@ -18416,12 +18416,12 @@
 "cnpj": "60.398.369/0004-79",
 "codigo_cvm": "9393",
 "detalhe_b3": true,
-"divergente_b3_cvm": false,
+"divergente_b3_cvm": true,
 "emissor": "PMAM",
 "escriturador_b3": {
-"bruto_on": "BRADESCO",
+"bruto_on": "ITAU CORRETORA ACOES",
 "bruto_pn": "",
-"on": "Banco Bradesco",
+"on": "Itaú Corretora",
 "pn": null
 },
 "escriturador_cvm": {
@@ -24777,6 +24777,39 @@
 "razao_social": "VIX LOGISTICA S/A",
 "segmento": "BN",
 "setor": "Não Classificados",
+"situacao_cvm": "ATIVO",
+"tickers": []
+},
+{
+"cnpj": "42.276.907/0001-28",
+"codigo_cvm": "28045",
+"detalhe_b3": true,
+"divergente_b3_cvm": false,
+"emissor": "VLIM",
+"escriturador_b3": {
+"bruto_on": "EMPRESA",
+"bruto_pn": "",
+"on": "Própria empresa",
+"pn": null
+},
+"escriturador_cvm": null,
+"indicador_mercado": "8",
+"liquidez": {
+"categoria": "sem_ticker",
+"criterio_texto": "A B3 não informa código de negociação."
+},
+"listagem": {
+"desde": "2026-11-27",
+"desde_incerto": true,
+"fonte_desde": "B3",
+"mercado": null,
+"segmento_cvm": null,
+"segmento_divergente": false
+},
+"pregao": "VLI",
+"razao_social": "VLI MULTIMODAL S.A.",
+"segmento": "BN",
+"setor": "Exploração de Rodovias",
 "situacao_cvm": "ATIVO",
 "tickers": []
 },

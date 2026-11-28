@@ -1,6 +1,42 @@
 {
 "eventos": [
 {
+"chave": "JEMA39",
+"data": "2026-11-28",
+"dataset": "bdrs",
+"de": null,
+"fonte": "B3",
+"para": "JPMorgan ActiveBuilders Emerging Markets Equity ETF",
+"tipo": "novo_bdr"
+},
+{
+"chave": "9393",
+"data": "2026-11-28",
+"dataset": "acoes",
+"de": "Banco Bradesco",
+"fonte": "B3",
+"para": "Itaú Corretora",
+"tipo": "troca_escriturador"
+},
+{
+"chave": "28045",
+"data": "2026-11-28",
+"dataset": "acoes",
+"de": null,
+"fonte": "B3",
+"para": "VLI",
+"tipo": "nova_listagem"
+},
+{
+"chave": "9393",
+"data": "2026-11-28",
+"dataset": "acoes",
+"de": "Itaú Corretora",
+"fonte": "B3/CVM",
+"para": "Banco Bradesco",
+"tipo": "divergencia_b3_cvm"
+},
+{
 "chave": "JPIE39",
 "data": "2026-11-25",
 "dataset": "bdrs",
